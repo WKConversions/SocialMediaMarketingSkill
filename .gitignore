@@ -13,3 +13,5 @@ __pycache__/
 lab/**/ref/
 lab/**/*.png
 lab/**/*.jpg
+lab/**/cache/
+*.npy
