@@ -1,0 +1,209 @@
+{
+  "name": "Prime",
+  "version": 1,
+  "description": "One word at a time, white Difference-blend captions (each letter shows the negative of the footage behind it), a heavy tight lowercase grotesk for most words and a large swash formal script for the payoff word of each line. Reproduced from Toby de Boer's reel (analysis/reference_spec.json). Font paths are relative to this file; sizes are fractions of frame height; em values are relative to the layout's sans font size.",
+  "reference": {
+    "source": "Instagram reel by Toby de Boer (@tobydeboer), 1916x1078, 24 fps, 6.8 s",
+    "spec": "../analysis/reference_spec.json",
+    "fonts": "../analysis/fonts_choice.json"
+  },
+
+  "render": {
+    "supersample": 2,
+    "blend_space": "display-referred sRGB (like After Effects 8/16 bpc and CSS mix-blend-mode)",
+    "video_codec": "libx264",
+    "crf": 18,
+    "preset": "medium",
+    "pix_fmt": "yuv420p",
+    "color_matrix": "bt709"
+  },
+
+  "classes": {
+    "sans": {
+      "font": "../fonts/inter/Inter-Variable.ttf",
+      "axes": {"wght": 750, "opsz": 32},
+      "features": ["kern", "ss07"],
+      "tracking_em": -0.075,
+      "word_space_em": 0.055,
+      "case": "lower",
+      "size_rel_sans": 1.0,
+      "shear_deg": 0.0,
+      "stroke_em": 0.0,
+      "note": "Stand-in for Helvetica Now Display Bold / Neue Haas Display 75. ss07 gives the square i/j dots of the reference. Tracking -0.075 em = AE tracking -75. word_space_em widens spaces so 'but i' / 'in the' keep the reference's ~0.18 em word gap despite the tight tracking."
+    },
+    "script": {
+      "font": "../fonts/pinyonscript/PinyonScript-Regular.ttf",
+      "axes": {},
+      "features": ["kern"],
+      "tracking_em": 0.0,
+      "case": "as_is",
+      "size_rel_sans": 1.9,
+      "shear_deg": -3.0,
+      "stroke_em": 0.0023,
+      "swash_capital": {
+        "font": "../fonts/imperialscript/ImperialScript-Regular.ttf",
+        "height_x_ratio": 2.6,
+        "advance_scale": 1.0
+      },
+      "note": "Stand-in for Kuenstler Script / a heavy-shaded roundhand. Lowercase from Pinyon Script (size = 1.9 x sans size gives the reference's ~1.25-1.4x sans x-height); the swash capital is drawn from Imperial Script at 2.6x the lowercase x-height (~3x the sans cap height)."
+    }
+  },
+
+  "blends": {
+    "difference": {"mode": "difference", "fill": "#FFFFFF", "opacity": 1.0,
+                   "note": "default: out = |1 - B| inside the letters"},
+    "difference_pink": {"mode": "difference", "fill": "#E28B8B", "opacity": 1.0,
+                        "note": "'at my Prime': difference with a pink fill, out = |C - B| (fitted C = 0.886, 0.545, 0.545)"},
+    "normal": {"mode": "normal", "fill": "#FFFFFF", "opacity": 1.0,
+               "note": "'Win' / 'but i': plain opaque white for a bright, celebratory shot"}
+  },
+
+  "entrances": {
+    "cut": {"type": "cut"},
+    "blur_in": {
+      "type": "blur_in",
+      "duration_s": 0.2917,
+      "opacity": [0.20, 0.29, 0.41, 0.56, 0.76, 0.80, 0.93, 1.0],
+      "blur_em": [0.0344, 0.0326, 0.0326, 0.0282, 0.0211, 0.0159, 0.0088, 0.0],
+      "note": "'They' f086-f093: opacity rises while an extra Gaussian blur shrinks to 0 (curves sampled evenly over duration_s; blur sigma in sans em)"
+    },
+    "blur_in_line2": {
+      "type": "blur_in",
+      "duration_s": 0.25,
+      "opacity": [0.08, 0.18, 0.52, 0.80, 0.94, 0.96, 1.0],
+      "blur_em": [0.0555, 0.0493, 0.0379, 0.0282, 0.0211, 0.0141, 0.0],
+      "note": "'don't' f090-f096"
+    },
+    "blur_in_line3": {
+      "type": "blur_in",
+      "duration_s": 0.125,
+      "opacity": [0.55, 1.0, 1.0, 1.0],
+      "blur_em": [0.030, 0.0132, 0.0079, 0.0],
+      "note": "'wanna' f095-f098"
+    },
+    "glitch": {
+      "type": "glitch",
+      "duration_s": 0.167,
+      "footage_hold_frames": 2,
+      "rgb_split_em": 0.0,
+      "slice_count": 0,
+      "slice_shift_em": 0.0,
+      "note": "What reads as a 'glitch' in the reference (f001-f008, f060, f100) is NOT an RGB split (measured channel offsets < 0.5 px): it is the footage running on 2s (held frame pairs) while the difference letters invert moving lights. So for Prime the glitch entrance only holds footage frames in pairs; RGB split and slice displacement are supported but set to 0."
+    },
+    "glitch_rgb": {
+      "type": "glitch",
+      "duration_s": 0.1,
+      "footage_hold_frames": 2,
+      "rgb_split_em": 0.05,
+      "slice_count": 4,
+      "slice_shift_em": 0.06,
+      "note": "Optional exaggerated digital glitch (NOT in the reference): channel split + horizontal slice shifts of the letters, decaying to 0 over duration_s."
+    }
+  },
+
+  "timing": {
+    "hold_until_next_start": true,
+    "max_gap_s": 0.6,
+    "tail_after_end_s": 0.25,
+    "min_hold_s": 0.167,
+    "emphasis_extra_hold_s": 0.1,
+    "first_unit_lead_in_s": 0.25,
+    "last_unit_hold_to_clip_end": true,
+    "frame_rounding": "nearest",
+    "note": "A caption shows from its start frame until the next caption starts (no gaps, no overlaps, as in the reference). If the pause before the next caption is longer than max_gap_s, it leaves tail_after_end_s (+ emphasis_extra_hold_s for script words) after its spoken end and the screen is empty. A first caption that starts within first_unit_lead_in_s is pulled to frame 0."
+  },
+
+  "zoom": {
+    "enabled": true,
+    "origin": [0.5, 0.5],
+    "presets": {
+      "opening_punch": {"to": 1.135, "tau_s": 0.168},
+      "punch_in": {"to": 1.12, "tau_s": 0.167},
+      "settle_out": {"to": 1.0, "tau_s": 0.15},
+      "none": null
+    },
+    "note": "The captions are composited first and the digital zoom is applied to the composite about the frame centre, so the text scales with the footage (measured to 0.2%). Each event eases exponentially from the current scale: s(t) = s0 + (to - s0)(1 - exp(-(t - t0)/tau)). Script words punch in +11..13% (tau ~4 frames at 24 fps); the word after a punch settles back."
+  },
+
+  "subject_mask": {
+    "pattern": "m{frame:05d}.png",
+    "frame_base": 1,
+    "threshold_lo": 0.35,
+    "threshold_hi": 0.65,
+    "feather_px": 1.5,
+    "note": "behind_subject captions are multiplied by (1 - mask) so the person occludes them. The reference itself never occludes; this is an optional depth effect."
+  },
+
+  "layout_auto": {"portrait": "talking_head", "landscape": "montage"},
+
+  "layouts": {
+    "montage": {
+      "description": "Reference layout: 16:9 montage, every caption centred in the frame.",
+      "sans_size_frac_of_height": 0.1053,
+      "max_width_frac": 0.9,
+      "positions": {
+        "default": {
+          "sans": {"x": 0.5, "y": 0.5376, "anchor": "baseline"},
+          "script": {"x": 0.515, "y": 0.51, "anchor": "ink_center"}
+        }
+      },
+      "stack": {
+        "anchor": {"x": 0.30, "y": 0.51, "of": "block_ink_center"},
+        "line_align": ["self", "ink_left_of_first", "ink_center_of_first"],
+        "baseline_step_em": [0.0, 0.64, 0.61],
+        "entrances": ["blur_in", "blur_in_line2", "blur_in_line3"],
+        "note": "'They / don't / wanna': left-anchored block, don't left-aligned to the swash, wanna centred under They, very tight leading, staggered blur-ins, all three cut out together."
+      }
+    },
+    "talking_head": {
+      "description": "Vertical selfie talking head: words centred horizontally across the chin/collar/jacket area (below the mouth) so the difference letters react to the moving, lit jacket. Never over the eyes or mouth.",
+      "sans_size_frac_of_height": 0.068,
+      "max_width_frac": 0.88,
+      "positions": {
+        "default": {
+          "sans": {"x": 0.5, "y": 0.765, "anchor": "baseline"},
+          "script": {"x": 0.5, "y": 0.79, "anchor": "baseline"}
+        },
+        "top_of_head": {
+          "sans": {"x": 0.5, "anchor": "subject_top", "y_offset": 0.03, "fallback_y": 0.40},
+          "script": {"x": 0.5, "anchor": "subject_top", "y_offset": 0.015, "fallback_y": 0.40,
+                     "size_scale": 1.3, "fit_width": [0.72, 0.8]},
+          "note": "Depth test: a large word sitting on top of the head with the hair overlapping its lower part (use with behind_subject). Baseline = median top of the subject mask over the word's frames + y_offset."
+        }
+      },
+      "stack": {
+        "anchor": {"x": 0.5, "y": 0.80, "of": "block_ink_center"},
+        "line_align": ["self", "ink_left_of_first", "ink_center_of_first"],
+        "baseline_step_em": [0.0, 0.64, 0.61],
+        "entrances": ["blur_in", "blur_in_line2", "blur_in_line3"]
+      }
+    }
+  },
+
+  "plan_rules": {
+    "emphasis": {
+      "target_ratio": 0.18,
+      "min_spacing_s": 0.9,
+      "min_word_len": 4,
+      "always_last": true,
+      "never_adjacent": true,
+      "capitalise": true,
+      "number_words_lowercase": true,
+      "note": "Script = the payoff content word that completes a line (noun, number word, strong verb, final adverb), ~1 in 5-6 words, never function words, never adjacent, and always the last word. Auto-pick ranks content words by spoken duration x length."
+    },
+    "grouping": {
+      "function_word_chunk": 2,
+      "max_unit_words": 3,
+      "min_unit_s": 0.167,
+      "note": "Runs of function words are grouped right-to-left in pairs ('at my', 'at a', 'in the', 'but i'); anything still shorter than min_unit_s joins its non-script neighbour."
+    },
+    "variants": {
+      "first_emphasis_phrase": {"blend": "difference_pink", "include_preceding_function_units": 1},
+      "opening_entrance": "glitch",
+      "after_script_entrance": "glitch",
+      "script_entrances": {"first": "cut", "middle": "blur_in", "last": "cut"},
+      "behind_subject": {"max_units": 1, "pick": "first_script", "position": "top_of_head"},
+      "zoom": {"first_unit": "opening_punch", "script": "punch_in", "script_last": "none", "after_punch": "settle_out"}
+    }
+  }
+}
