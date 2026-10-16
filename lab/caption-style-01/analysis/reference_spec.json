@@ -1,0 +1,4047 @@
+{
+ "source": {
+  "file": "/home/user/SocialMediaMarketingSkill/lab/caption-style-01/ref/reference.mp4",
+  "creator": "Toby de Boer (@tobydeboer), Instagram reel DeOv0aupBd_",
+  "width": 1916,
+  "height": 1078,
+  "fps": 24,
+  "frames": 163,
+  "duration_s": 6.79,
+  "frame_numbering": "fNNN = frame NNN, 1-based; time = (N-1)/24 s",
+  "transcript": "i'm not even yet at my Prime / i'm not at a hundred yet / i'm still charging / They don't wanna see me Win / but i know in the end i'm winning and Regardless"
+ },
+ "method_summary": [
+  "Shot cuts: consecutive-frame histogram distance + luma correlation + gradient-structure correlation (tools/cuts.py, cuts2.py), every candidate confirmed on contact sheets.",
+  "Glyph masks: iterative two-model segmentation (pixel = B or 1-B with smooth B) on tight boxes; sans masks cleaned with an Inter Display ExtraBold rendering registered to the frame (tools/textmask.py, refmask.py, rendermask.py).",
+  "Per-frame geometry: similarity registration (scale + translation) of each word's mask against every frame by normalised correlation of gradient magnitude (tools/register.py). Scores 0.8-0.99 inside a word's lifetime, <0.65 outside -> exact first/last frames.",
+  "Background motion: ORB + RANSAC similarity between consecutive frames with caption boxes masked (tools/bgmotion.py).",
+  "Blend tests: (a) edge pairs, pixel just inside a glyph vs its mirror just outside, fitted I_in = a + b*I_out per channel (difference -> a~1, b~-1; normal -> a~1, b~0) (tools/blendtest.py); (b) inpainted-background opacity fit (alpha_est.py); (c) chroma-flip test (chroma_test.py); (d) clean-plate tests for at my / Prime (prime.py); (e) 'un-difference' visual check: replacing glyph pixels by 1-I makes difference text disappear (spec_difference_evidence.png).",
+  "Entrance animation of the They block: alpha profile across thick glyph edges, background read 10-12 px outside, erf fit -> opacity and blur sigma per frame (tools/edgeprofile.py)."
+ ],
+ "shots": {
+  "shot_cut_frames": [
+   1,
+   9,
+   11,
+   17,
+   23,
+   37,
+   41,
+   50,
+   53,
+   70,
+   86,
+   100,
+   106,
+   111,
+   122,
+   132,
+   137,
+   148
+  ],
+  "description": {
+   "1": "dark trading room, LED strip (colour changes every 2 frames)",
+   "9": "blurred chart (fast pan)",
+   "11": "watch close-up (hand moves through frame)",
+   "17": "face, dark",
+   "23": "bedroom with desk, man doing push-ups (static camera)",
+   "37": "living room wide",
+   "41": "man at window, rice fields",
+   "50": "blurred red/green candles",
+   "53": "overhead desk (lights change blue/cyan/red, then off at f060)",
+   "70": "man at monitors, dark (handheld)",
+   "86": "night market, passers-by",
+   "100": "man at curved monitor, side view",
+   "106": "close-up, hand at face",
+   "111": "pool, arms open (bright sky)",
+   "122": "low angle, Burj Khalifa",
+   "132": "foggy spire (frames held in pairs: f132=f133, f135=f136)",
+   "137": "red neon room",
+   "148": "penthouse lounge, bright window"
+  },
+  "lighting_jumps_not_counted_as_cuts": {
+   "3": "LED colour jump, same locked set-up",
+   "5": "LED colour jump",
+   "7": "LED colour jump",
+   "55": "desk light colour change",
+   "57": "desk light colour change",
+   "60": "desk lights off, same set-up (zoom reverses here)"
+  },
+  "notes": "Several clips are on 2s (12 fps footage held for 2 frames: f001-f008, f053-f059, f086-f099); captions and the digital zoom still update every frame at 24 fps."
+ },
+ "typography": {
+  "sans": {
+   "class": "bold lowercase neo-grotesk, tight tracking, all lowercase (incl. 'i', \"i'm\" with a straight apostrophe)",
+   "best_available_match": "Inter Display ExtraBold (IoU 0.84-0.91 against clean masks; Inter Display Bold 0.74-0.93, FreeSans/Liberation Bold 0.70-0.85)",
+   "font_size_px_at_1078p": 108,
+   "font_size_frac_of_height": 0.1,
+   "tracking_em": -0.07,
+   "tracking_range_em": [
+    -0.09,
+    -0.06
+   ],
+   "x_height_px": 58,
+   "ascender_height_px": 80,
+   "baseline_y_px": 579,
+   "baseline_y_frac": 0.537,
+   "layout": "single line, horizontally centred on x = W/2 (ink-bbox centre 0.499-0.503 W), vertically: the ascender-to-baseline box is centred on H/2 (ascender top ~499 px, baseline ~579 px); words with descenders therefore sit with their ink centre slightly lower (0.51-0.52 H)",
+   "font_fit_details": {
+    "InterDisplay-Bold": {
+     "w26": {
+      "text": "winning",
+      "iou": 0.7382,
+      "size_px": 107.75,
+      "tracking_em": -0.04,
+      "target_hw": [
+       102,
+       366
+      ],
+      "render_hw": [
+       101,
+       361
+      ]
+     },
+     "w27": {
+      "text": "and",
+      "iou": 0.8697,
+      "size_px": 109.75,
+      "tracking_em": -0.05,
+      "target_hw": [
+       81,
+       173
+      ],
+      "render_hw": [
+       80,
+       170
+      ]
+     },
+     "w25": {
+      "text": "i'm",
+      "iou": 0.8051,
+      "size_px": 109.18,
+      "tracking_em": -0.07,
+      "target_hw": [
+       80,
+       129
+      ],
+      "render_hw": [
+       80,
+       127
+      ]
+     },
+     "w04": {
+      "text": "yet",
+      "iou": 0.8786,
+      "size_px": 115.85,
+      "tracking_em": -0.07,
+      "target_hw": [
+       100,
+       149
+      ],
+      "render_hw": [
+       100,
+       150
+      ]
+     },
+     "w13": {
+      "text": "still",
+      "iou": 0.8605,
+      "size_px": 109.25,
+      "tracking_em": -0.06,
+      "target_hw": [
+       82,
+       146
+      ],
+      "render_hw": [
+       82,
+       145
+      ]
+     },
+     "w08": {
+      "text": "not",
+      "iou": 0.9312,
+      "size_px": 112.24,
+      "tracking_em": -0.08,
+      "target_hw": [
+       76,
+       147
+      ],
+      "render_hw": [
+       75,
+       146
+      ]
+     }
+    },
+    "InterDisplay-ExtraBold": {
+     "w26": {
+      "text": "winning",
+      "iou": 0.8383,
+      "size_px": 107.51,
+      "tracking_em": -0.06,
+      "target_hw": [
+       102,
+       366
+      ],
+      "render_hw": [
+       101,
+       362
+      ]
+     },
+     "w27": {
+      "text": "and",
+      "iou": 0.8879,
+      "size_px": 109.75,
+      "tracking_em": -0.07,
+      "target_hw": [
+       81,
+       173
+      ],
+      "render_hw": [
+       80,
+       171
+      ]
+     },
+     "w25": {
+      "text": "i'm",
+      "iou": 0.8451,
+      "size_px": 108.24,
+      "tracking_em": -0.08,
+      "target_hw": [
+       80,
+       129
+      ],
+      "render_hw": [
+       79,
+       129
+      ]
+     },
+     "w04": {
+      "text": "yet",
+      "iou": 0.8953,
+      "size_px": 115.85,
+      "tracking_em": -0.09,
+      "target_hw": [
+       100,
+       149
+      ],
+      "render_hw": [
+       100,
+       152
+      ]
+     },
+     "w13": {
+      "text": "still",
+      "iou": 0.905,
+      "size_px": 109.25,
+      "tracking_em": -0.08,
+      "target_hw": [
+       82,
+       146
+      ],
+      "render_hw": [
+       82,
+       146
+      ]
+     },
+     "w08": {
+      "text": "not",
+      "iou": 0.9135,
+      "size_px": 112.24,
+      "tracking_em": -0.09,
+      "target_hw": [
+       76,
+       147
+      ],
+      "render_hw": [
+       75,
+       150
+      ]
+     }
+    },
+    "InterDisplay-SemiBold": {
+     "w26": {
+      "text": "winning",
+      "iou": 0.6647,
+      "size_px": 108.24,
+      "tracking_em": -0.02,
+      "target_hw": [
+       102,
+       366
+      ],
+      "render_hw": [
+       101,
+       365
+      ]
+     },
+     "w27": {
+      "text": "and",
+      "iou": 0.7744,
+      "size_px": 109.75,
+      "tracking_em": -0.03,
+      "target_hw": [
+       81,
+       173
+      ],
+      "render_hw": [
+       80,
+       170
+      ]
+     },
+     "w25": {
+      "text": "i'm",
+      "iou": 0.7376,
+      "size_px": 109.75,
+      "tracking_em": -0.07,
+      "target_hw": [
+       80,
+       129
+      ],
+      "render_hw": [
+       79,
+       123
+      ]
+     },
+     "w04": {
+      "text": "yet",
+      "iou": 0.7935,
+      "size_px": 115.85,
+      "tracking_em": -0.07,
+      "target_hw": [
+       100,
+       149
+      ],
+      "render_hw": [
+       100,
+       145
+      ]
+     },
+     "w13": {
+      "text": "still",
+      "iou": 0.7686,
+      "size_px": 110.24,
+      "tracking_em": -0.04,
+      "target_hw": [
+       82,
+       146
+      ],
+      "render_hw": [
+       81,
+       145
+      ]
+     },
+     "w08": {
+      "text": "not",
+      "iou": 0.8305,
+      "size_px": 112.76,
+      "tracking_em": -0.07,
+      "target_hw": [
+       76,
+       147
+      ],
+      "render_hw": [
+       76,
+       143
+      ]
+     }
+    },
+    "Inter-Bold": {
+     "w26": {
+      "text": "winning",
+      "iou": 0.7371,
+      "size_px": 103.25,
+      "tracking_em": -0.05,
+      "target_hw": [
+       102,
+       366
+      ],
+      "render_hw": [
+       102,
+       364
+      ]
+     },
+     "w27": {
+      "text": "and",
+      "iou": 0.9073,
+      "size_px": 109.75,
+      "tracking_em": -0.09,
+      "target_hw": [
+       81,
+       173
+      ],
+      "render_hw": [
+       80,
+       170
+      ]
+     },
+     "w25": {
+      "text": "i'm",
+      "iou": 0.7455,
+      "size_px": 104.24,
+      "tracking_em": -0.1,
+      "target_hw": [
+       80,
+       129
+      ],
+      "render_hw": [
+       79,
+       125
+      ]
+     },
+     "w04": {
+      "text": "yet",
+      "iou": 0.8138,
+      "size_px": 112.24,
+      "tracking_em": -0.09,
+      "target_hw": [
+       100,
+       149
+      ],
+      "render_hw": [
+       99,
+       149
+      ]
+     },
+     "w13": {
+      "text": "still",
+      "iou": 0.8244,
+      "size_px": 105.25,
+      "tracking_em": -0.07,
+      "target_hw": [
+       82,
+       146
+      ],
+      "render_hw": [
+       82,
+       143
+      ]
+     },
+     "w08": {
+      "text": "not",
+      "iou": 0.8903,
+      "size_px": 110.76,
+      "tracking_em": -0.09,
+      "target_hw": [
+       76,
+       147
+      ],
+      "render_hw": [
+       76,
+       149
+      ]
+     }
+    },
+    "FreeSansBold": {
+     "w26": {
+      "text": "winning",
+      "iou": 0.6996,
+      "size_px": 108.24,
+      "tracking_em": -0.05,
+      "target_hw": [
+       102,
+       366
+      ],
+      "render_hw": [
+       101,
+       363
+      ]
+     },
+     "w27": {
+      "text": "and",
+      "iou": 0.8402,
+      "size_px": 108.24,
+      "tracking_em": -0.06,
+      "target_hw": [
+       81,
+       173
+      ],
+      "render_hw": [
+       80,
+       170
+      ]
+     },
+     "w25": {
+      "text": "i'm",
+      "iou": 0.815,
+      "size_px": 109.25,
+      "tracking_em": -0.08,
+      "target_hw": [
+       80,
+       129
+      ],
+      "render_hw": [
+       80,
+       124
+      ]
+     },
+     "w04": {
+      "text": "yet",
+      "iou": 0.7958,
+      "size_px": 111.75,
+      "tracking_em": -0.06,
+      "target_hw": [
+       100,
+       149
+      ],
+      "render_hw": [
+       99,
+       144
+      ]
+     },
+     "w13": {
+      "text": "still",
+      "iou": 0.8392,
+      "size_px": 109.18,
+      "tracking_em": -0.06,
+      "target_hw": [
+       82,
+       146
+      ],
+      "render_hw": [
+       82,
+       145
+      ]
+     },
+     "w08": {
+      "text": "not",
+      "iou": 0.8506,
+      "size_px": 109.75,
+      "tracking_em": -0.08,
+      "target_hw": [
+       76,
+       147
+      ],
+      "render_hw": [
+       75,
+       141
+      ]
+     }
+    },
+    "LiberationSans-Bold": {
+     "w26": {
+      "text": "winning",
+      "iou": 0.6961,
+      "size_px": 109.18,
+      "tracking_em": -0.06,
+      "target_hw": [
+       102,
+       366
+      ],
+      "render_hw": [
+       102,
+       366
+      ]
+     },
+     "w27": {
+      "text": "and",
+      "iou": 0.8469,
+      "size_px": 110.76,
+      "tracking_em": -0.07,
+      "target_hw": [
+       81,
+       173
+      ],
+      "render_hw": [
+       81,
+       171
+      ]
+     },
+     "w25": {
+      "text": "i'm",
+      "iou": 0.8075,
+      "size_px": 110.76,
+      "tracking_em": -0.08,
+      "target_hw": [
+       80,
+       129
+      ],
+      "render_hw": [
+       80,
+       124
+      ]
+     },
+     "w04": {
+      "text": "yet",
+      "iou": 0.7694,
+      "size_px": 114.75,
+      "tracking_em": -0.07,
+      "target_hw": [
+       100,
+       149
+      ],
+      "render_hw": [
+       100,
+       147
+      ]
+     },
+     "w13": {
+      "text": "still",
+      "iou": 0.8049,
+      "size_px": 111.25,
+      "tracking_em": -0.08,
+      "target_hw": [
+       82,
+       146
+      ],
+      "render_hw": [
+       82,
+       144
+      ]
+     },
+     "w08": {
+      "text": "not",
+      "iou": 0.8136,
+      "size_px": 114.75,
+      "tracking_em": -0.1,
+      "target_hw": [
+       76,
+       147
+      ],
+      "render_hw": [
+       77,
+       147
+      ]
+     }
+    }
+   }
+  },
+  "script": {
+   "class": "large high-contrast formal/copperplate script, ~20-25 deg slant, hairline joins, swash capitals (P, T, W, R) with big entry loops; lowercase 'hundred' has straight looped-less ascenders",
+   "words": [
+    "Prime",
+    "hundred",
+    "They",
+    "Win",
+    "Regardless"
+   ],
+   "capitalisation": "4/5 script words get a swash capital (Prime, They, Win, Regardless); 'hundred' stays lowercase",
+   "sizes_px_at_entrance": {
+    "Prime": {
+     "ink_h": 272,
+     "ink_w": 753
+    },
+    "They": {
+     "ink_h": 272,
+     "ink_w": 414
+    },
+    "Win": {
+     "ink_h": 249,
+     "ink_w": 462
+    },
+    "Regardless": {
+     "ink_h": 213,
+     "ink_w": 642,
+     "x_height": 63,
+     "ascender": 131
+    },
+    "hundred": {
+     "ink_h": 133,
+     "ink_w": 576,
+     "x_height": 74,
+     "ascender": 137
+    }
+   },
+   "size_relation_to_sans": "swash capitals are ~3x the sans ascender height (250-272 px vs 80 px); script lowercase x-height is 1.1-1.3x the sans x-height (63-74 px vs 58 px)",
+   "layout": "centred like the sans line; ink centre x 0.51-0.54 W (swash overhang pushes it right), y 0.49-0.52 H",
+   "font_identification": "not identified; candidates to audition: a Didone copperplate script with swash caps (e.g. 'Kugile', 'Bodoni Script', 'Snell Roundhand', 'Pinyon Script', 'Great Vibes' are weaker matches)"
+  },
+  "see_also": "analysis/fonts_choice.json (separate font-matching step: Inter variable wght 750 opsz 32 ss07, 113.5 px, -0.075 em; Pinyon Script for the script) - consistent with the metrics measured here (x-height 58-59 px, tracking -0.07 em)",
+  "outline_box_shadow": "none (no stroke, no box, no drop shadow, no glow; edges are 1-px anti-aliased, sigma ~0.5-0.7 px)"
+ },
+ "blend": {
+  "default": "white text (#FFFFFF, 100% opacity) in Difference blend mode over the footage: out = |1 - B| = 1 - B per channel (Exclusion gives the identical result for pure white).",
+  "why_it_looks_interactive": "every glyph shows the photographic negative of whatever is behind it, so a hand, watch, monitor, sky edge or LED strip moving behind a letter changes the letter's colour in real time (watch face -> navy letters; skin -> light blue; red LED -> cyan; teal monitor -> salmon; bright sky -> near-black). There is NO occlusion anywhere: the text is always on top; 'even' f011-f015 and 'They' f088-f095 only look occluded because the passing object is inverted inside the letters.",
+  "per_word": {
+   "w01": {
+    "text": "i'm",
+    "blend": "difference",
+    "fill_rgb": [
+     255,
+     255,
+     255
+    ]
+   },
+   "w02": {
+    "text": "not",
+    "blend": "difference",
+    "fill_rgb": [
+     255,
+     255,
+     255
+    ]
+   },
+   "w03": {
+    "text": "even",
+    "blend": "difference",
+    "fill_rgb": [
+     255,
+     255,
+     255
+    ]
+   },
+   "w04": {
+    "text": "yet",
+    "blend": "difference",
+    "fill_rgb": [
+     255,
+     255,
+     255
+    ]
+   },
+   "w05": {
+    "text": "at my",
+    "blend": "difference",
+    "fill_rgb": [
+     226,
+     139,
+     139
+    ]
+   },
+   "w06": {
+    "text": "Prime",
+    "blend": "difference",
+    "fill_rgb": [
+     226,
+     139,
+     139
+    ]
+   },
+   "w07": {
+    "text": "i'm",
+    "blend": "difference",
+    "fill_rgb": [
+     255,
+     255,
+     255
+    ]
+   },
+   "w08": {
+    "text": "not",
+    "blend": "difference",
+    "fill_rgb": [
+     255,
+     255,
+     255
+    ]
+   },
+   "w09": {
+    "text": "at a",
+    "blend": "difference",
+    "fill_rgb": [
+     255,
+     255,
+     255
+    ]
+   },
+   "w10": {
+    "text": "hundred",
+    "blend": "difference",
+    "fill_rgb": [
+     255,
+     255,
+     255
+    ]
+   },
+   "w11": {
+    "text": "yet",
+    "blend": "difference",
+    "fill_rgb": [
+     255,
+     255,
+     255
+    ]
+   },
+   "w12": {
+    "text": "i'm",
+    "blend": "difference",
+    "fill_rgb": [
+     255,
+     255,
+     255
+    ]
+   },
+   "w13": {
+    "text": "still",
+    "blend": "difference",
+    "fill_rgb": [
+     255,
+     255,
+     255
+    ]
+   },
+   "w14": {
+    "text": "charging",
+    "blend": "difference",
+    "fill_rgb": [
+     255,
+     255,
+     255
+    ]
+   },
+   "w15": {
+    "text": "They",
+    "blend": "difference",
+    "fill_rgb": [
+     255,
+     255,
+     255
+    ]
+   },
+   "w16": {
+    "text": "don't",
+    "blend": "difference",
+    "fill_rgb": [
+     255,
+     255,
+     255
+    ]
+   },
+   "w17": {
+    "text": "wanna",
+    "blend": "difference",
+    "fill_rgb": [
+     255,
+     255,
+     255
+    ]
+   },
+   "w18": {
+    "text": "see",
+    "blend": "difference",
+    "fill_rgb": [
+     255,
+     255,
+     255
+    ]
+   },
+   "w19": {
+    "text": "me",
+    "blend": "difference",
+    "fill_rgb": [
+     255,
+     255,
+     255
+    ]
+   },
+   "w20": {
+    "text": "Win",
+    "blend": "normal",
+    "fill_rgb": [
+     255,
+     255,
+     255
+    ]
+   },
+   "w21": {
+    "text": "but i",
+    "blend": "normal",
+    "fill_rgb": [
+     255,
+     255,
+     255
+    ]
+   },
+   "w22": {
+    "text": "know",
+    "blend": "difference",
+    "fill_rgb": [
+     255,
+     255,
+     255
+    ]
+   },
+   "w23": {
+    "text": "in the",
+    "blend": "difference",
+    "fill_rgb": [
+     255,
+     255,
+     255
+    ]
+   },
+   "w24": {
+    "text": "end",
+    "blend": "difference",
+    "fill_rgb": [
+     255,
+     255,
+     255
+    ]
+   },
+   "w25": {
+    "text": "i'm",
+    "blend": "difference",
+    "fill_rgb": [
+     255,
+     255,
+     255
+    ]
+   },
+   "w26": {
+    "text": "winning",
+    "blend": "difference",
+    "fill_rgb": [
+     255,
+     255,
+     255
+    ]
+   },
+   "w27": {
+    "text": "and",
+    "blend": "difference",
+    "fill_rgb": [
+     255,
+     255,
+     255
+    ]
+   },
+   "w28": {
+    "text": "Regardless",
+    "blend": "difference",
+    "fill_rgb": [
+     255,
+     255,
+     255
+    ]
+   }
+  },
+  "evidence": "spec_difference_evidence.png; edge-pair fits: difference words give b = -0.75..-1.1 with a = 0.89..0.97 (e.g. know a=(0.93,0.88,0.88) b=(-1.02,-0.99,-1.01); hundred b~-0.9; in the b~-0.96); normal words give b~0 (Win a=(0.97,0.98,1.0) b=(-0.04,-0.05,-0.2); but i a=(0.98,0.99,0.99) b=(0.01,0.01,-0.02)). Words over almost-black backgrounds (yet f017-022, not f041-043, at a, still, i'm f063/f137, winning, and) cannot separate the two models numerically (both predict white) but show inverted bright objects inside the glyphs where they exist (yet/i'm f060-064: inverted laptop inside 'e' and 'm'), and belong to the same difference style.",
+  "measured_effective_white": "interior of difference text over black reads ~ (249,245,250) and the best |C-B| fits give C = 0.87-1.0; 'end' fits C ~ (213,222,227). Treat as white + the final grade/compression; optional: multiply text by 0.95 to match.",
+  "exceptions": {
+   "Win (f111-116) and 'but i' (f117-121)": "Normal blend, opaque white (they stay white over the bright sky)",
+   "at my (f023-027) and Prime (f028-036)": "Difference blend with a pink fill instead of white (see prime_solution)"
+  }
+ },
+ "prime_solution": {
+  "best_model": "Difference blend with a solid pink fill: out_c = |C_c - B_c|, C = (0.886, 0.545, 0.545) = RGB(226,139,139) = #E28B8B (at my: (0.87,0.605,0.555) = #DE9A8E; use #E28B8B for both)",
+  "rmse_by_hypothesis_Prime_f028_vs_clean_plate_f027": {
+   "affine_per_channel": 0.0623,
+   "tint_x_difference": 0.1024,
+   "difference_with_colour": 0.0572,
+   "normal_colour_opacity": 0.2322,
+   "multiply_colour": 0.4265,
+   "screen_colour": 0.4269,
+   "exclusion_colour": 0.2656,
+   "difference_then_colour_overlay": 0.1379,
+   "colour_blend_over_inverted": 0.2891,
+   "white_difference": 0.3708,
+   "white_normal": 0.6974
+  },
+  "rmse_by_hypothesis_at_my_f027_vs_plate_f028": {
+   "affine_per_channel": 0.0959,
+   "tint_x_difference": 0.1395,
+   "difference_with_colour": 0.0833,
+   "normal_colour_opacity": 0.2337,
+   "multiply_colour": 0.3292,
+   "screen_colour": 0.4799,
+   "exclusion_colour": 0.3062,
+   "difference_then_colour_overlay": 0.1531,
+   "colour_blend_over_inverted": 0.2695,
+   "white_difference": 0.3461,
+   "white_normal": 0.7679
+  },
+  "fitted_parameters": {
+   "affine_per_channel": {
+    "a": [
+     0.9017,
+     0.4665,
+     0.5165
+    ],
+    "b": [
+     -1.0523,
+     -0.6664,
+     -0.8767
+    ]
+   },
+   "tint_x_difference": {
+    "T": [
+     0.8633999824523926,
+     0.4077000021934509,
+     0.4120999872684479
+    ]
+   },
+   "difference_with_colour": {
+    "C": [
+     0.89,
+     0.55,
+     0.54
+    ]
+   },
+   "normal_colour_opacity": {
+    "alpha": 1.0,
+    "C": [
+     0.575,
+     0.246,
+     0.26
+    ]
+   },
+   "multiply_colour": {
+    "C": [
+     0.5879999995231628,
+     0.19599999487400055,
+     0.2529999911785126
+    ]
+   },
+   "screen_colour": {
+    "C": [
+     0.61,
+     0.11,
+     0.12
+    ]
+   },
+   "exclusion_colour": {
+    "C": [
+     0.919,
+     0.518,
+     0.459
+    ]
+   },
+   "difference_then_colour_overlay": {
+    "beta": 0.55,
+    "C": [
+     0.481,
+     0.0,
+     0.0
+    ]
+   },
+   "colour_blend_over_inverted": {
+    "C": [
+     0.5,
+     0.52,
+     0.08
+    ]
+   },
+   "white_difference": {},
+   "white_normal": {}
+  },
+  "spatial_check": {
+   "Prime": {
+    "C_all": [
+     0.885,
+     0.545,
+     0.545
+    ],
+    "bins": {
+     "x0_y0": {
+      "C": [
+       0.92,
+       0.52,
+       0.55
+      ],
+      "n": 2681
+     },
+     "x0_y1": {
+      "C": [
+       0.925,
+       0.525,
+       0.555
+      ],
+      "n": 2713
+     },
+     "x1_y0": {
+      "C": [
+       0.855,
+       0.53,
+       0.51
+      ],
+      "n": 1519
+     },
+     "x1_y1": {
+      "C": [
+       0.875,
+       0.6,
+       0.56
+      ],
+      "n": 1477
+     },
+     "x2_y1": {
+      "C": [
+       0.87,
+       0.59,
+       0.56
+      ],
+      "n": 4328
+     },
+     "x3_y1": {
+      "C": [
+       0.87,
+       0.52,
+       0.525
+      ],
+      "n": 4174
+     },
+     "bg_dark(<0.3)": {
+      "C": [
+       0.905,
+       0.51,
+       0.535
+      ],
+      "n": 9016
+     },
+     "bg_bright(>0.5)": {
+      "C": [
+       0.88,
+       0.635,
+       0.59
+      ],
+      "n": 4761
+     }
+    }
+   },
+   "at my": {
+    "C_all": [
+     0.87,
+     0.605,
+     0.555
+    ],
+    "bins": {
+     "x0_y0": {
+      "C": [
+       0.875,
+       0.535,
+       0.51
+      ],
+      "n": 1049
+     },
+     "x0_y1": {
+      "C": [
+       0.85,
+       0.52,
+       0.51
+      ],
+      "n": 832
+     },
+     "x1_y0": {
+      "C": [
+       0.88,
+       0.665,
+       0.58
+      ],
+      "n": 1556
+     },
+     "x1_y1": {
+      "C": [
+       0.86,
+       0.555,
+       0.525
+      ],
+      "n": 959
+     },
+     "x2_y0": {
+      "C": [
+       0.87,
+       0.6,
+       0.555
+      ],
+      "n": 1256
+     },
+     "x2_y1": {
+      "C": [
+       0.865,
+       0.595,
+       0.545
+      ],
+      "n": 1346
+     },
+     "x3_y0": {
+      "C": [
+       0.9,
+       0.72,
+       0.64
+      ],
+      "n": 1186
+     },
+     "x3_y1": {
+      "C": [
+       0.86,
+       0.615,
+       0.55
+      ],
+      "n": 980
+     },
+     "bg_dark(<0.3)": {
+      "C": [
+       0.87,
+       0.64,
+       0.58
+      ],
+      "n": 3140
+     },
+     "bg_bright(>0.5)": {
+      "C": [
+       0.885,
+       0.62,
+       0.565
+      ],
+      "n": 4366
+     }
+    }
+   }
+  },
+  "interpretation": "dark background -> light pink letters (P over the dark wall); bright background (white desk, window) -> |0.55-0.8| gives dark red/maroon and, where G/B exceed 0.55, dark teal-black strokes; this is exactly what is seen. A tint-times-inverse (T*(1-B), rmse 0.102), difference then red overlay (0.138), normal colour (0.232), exclusion (0.266), colour-blend (0.289), multiply (0.427) and screen (0.427) all fit worse. Fill is uniform (no gradient: per-region fits agree within ~0.04).",
+  "plates": "Prime f028 vs f027 warped by the measured background similarity (s=0.9986); at my f027 vs f028; man doing push-ups and the overlapping other word excluded.",
+  "images": [
+   "spec_prime_Prime.png",
+   "spec_prime_at_my.png"
+  ]
+ },
+ "digital_zoom": {
+  "finding": "The captions are part of the composite that receives each shot's digital zoom: caption scale changes frame-by-frame by exactly the same factor as the footage (text vs background per-frame ratios agree within ~0.1-0.3%, e.g. f001->002 1.0278 vs 1.0257, f053->054 1.0197 vs 1.0197, f060->061 0.9594 vs 0.9595, f111->112 1.0244 vs 1.0245), and caption centroids move as if scaled about the frame centre (zoom fixed point measured at (941-966, 518-568)).",
+  "renderer_rule": "Render captions over the footage first (with the blend), then apply the shot's zoom to the composite: scale about frame centre (W/2, H/2), s(k) = 1 + A*(1 - exp(-k/tau)), k = frames since segment start, tau ~ 3.5-5.5 frames.",
+  "pattern": "Punch-in zooms (A = +11..+23%) start on the first frame of every emphasis/script word with a cut or new phrase (Prime f028, hundred f050, They f086, Win f111) and also on the very first frame (f001). Settle-out zooms (footage starts ~111-121% and eases back to 100%) on several other cuts (even/watch f011, yet f060, charging f070, know f122). Remaining shots drift +-0.1-0.3%/frame. 'Regardless' gets no punch (only -1.4% drift).",
+  "segments": [
+   {
+    "segment": "opening i'm/not",
+    "first_frame": 1,
+    "last_frame": 8,
+    "total_scale": 1.1116,
+    "per_frame_increment_pct": [
+     2.92,
+     2.56,
+     1.38,
+     1.26,
+     1.17,
+     0.88,
+     0.51
+    ],
+    "exp_ease_fit": {
+     "A": 0.1355,
+     "tau_frames": 4.03,
+     "rmse": 0.0012
+    }
+   },
+   {
+    "segment": "even (watch clip)",
+    "first_frame": 11,
+    "last_frame": 16,
+    "total_scale": 0.8841,
+    "per_frame_increment_pct": [
+     -1.69,
+     -4.01,
+     -2.9,
+     -1.82,
+     -1.72
+    ],
+    "exp_ease_fit": {
+     "A": -0.317,
+     "tau_frames": 10.65,
+     "rmse": 0.0055
+    }
+   },
+   {
+    "segment": "yet (face)",
+    "first_frame": 17,
+    "last_frame": 22,
+    "total_scale": 0.962,
+    "per_frame_increment_pct": [
+     -0.98,
+     -0.93,
+     -0.8,
+     -0.52,
+     -0.62
+    ],
+    "exp_ease_fit": null
+   },
+   {
+    "segment": "at my",
+    "first_frame": 23,
+    "last_frame": 28,
+    "total_scale": 0.9829,
+    "per_frame_increment_pct": [
+     -0.29,
+     -0.07,
+     -1.12,
+     -0.1,
+     -0.14
+    ],
+    "exp_ease_fit": null
+   },
+   {
+    "segment": "Prime punch-in",
+    "first_frame": 28,
+    "last_frame": 36,
+    "total_scale": 1.0978,
+    "per_frame_increment_pct": [
+     2.43,
+     2.22,
+     1.39,
+     0.98,
+     0.79,
+     0.61,
+     0.55,
+     0.43
+    ],
+    "exp_ease_fit": {
+     "A": 0.1099,
+     "tau_frames": 3.73,
+     "rmse": 0.0009
+    }
+   },
+   {
+    "segment": "i'm (living room)",
+    "first_frame": 37,
+    "last_frame": 40,
+    "total_scale": 1.006,
+    "per_frame_increment_pct": [
+     0.2,
+     0.19,
+     0.2
+    ],
+    "exp_ease_fit": null
+   },
+   {
+    "segment": "not/at a",
+    "first_frame": 41,
+    "last_frame": 49,
+    "total_scale": 1.0173,
+    "per_frame_increment_pct": [
+     0.13,
+     0.14,
+     0.21,
+     0.13,
+     0.29,
+     0.2,
+     0.33,
+     0.28
+    ],
+    "exp_ease_fit": null
+   },
+   {
+    "segment": "hundred punch-in",
+    "first_frame": 50,
+    "last_frame": 59,
+    "total_scale": 1.2102,
+    "per_frame_increment_pct": [
+     4.89,
+     5.11,
+     2.83,
+     1.97,
+     1.47,
+     1.09,
+     0.86,
+     0.63,
+     0.56
+    ],
+    "exp_ease_fit": {
+     "A": 0.2267,
+     "tau_frames": 3.47,
+     "rmse": 0.0028
+    }
+   },
+   {
+    "segment": "yet/i'm/still settle-out",
+    "first_frame": 60,
+    "last_frame": 69,
+    "total_scale": 0.8269,
+    "per_frame_increment_pct": [
+     -4.07,
+     -4.67,
+     -2.92,
+     -2.28,
+     -1.57,
+     -0.79,
+     -1.03,
+     -1.03,
+     -0.36
+    ],
+    "exp_ease_fit": {
+     "A": -0.186,
+     "tau_frames": 3.33,
+     "rmse": 0.0028
+    }
+   },
+   {
+    "segment": "charging settle-out",
+    "first_frame": 70,
+    "last_frame": 85,
+    "total_scale": 0.8239,
+    "per_frame_increment_pct": [
+     -2.15,
+     -4.03,
+     -2.83,
+     -2.07,
+     -1.59,
+     -1.27,
+     -1.14,
+     -0.78,
+     -0.73,
+     -0.67,
+     -0.53,
+     -0.46,
+     -0.43,
+     -0.26,
+     -0.23
+    ],
+    "exp_ease_fit": {
+     "A": -0.1846,
+     "tau_frames": 4.87,
+     "rmse": 0.0034
+    }
+   },
+   {
+    "segment": "They block punch-in",
+    "first_frame": 86,
+    "last_frame": 99,
+    "total_scale": 1.1201,
+    "per_frame_increment_pct": [
+     1.46,
+     2.49,
+     1.65,
+     1.17,
+     0.92,
+     0.72,
+     0.59,
+     0.55,
+     0.48,
+     0.38,
+     0.31,
+     0.37,
+     0.32
+    ],
+    "exp_ease_fit": {
+     "A": 0.1313,
+     "tau_frames": 5.55,
+     "rmse": 0.0022
+    }
+   },
+   {
+    "segment": "see",
+    "first_frame": 100,
+    "last_frame": 105,
+    "total_scale": 1.0173,
+    "per_frame_increment_pct": [
+     0.22,
+     0.1,
+     0.16,
+     0.97,
+     0.26
+    ],
+    "exp_ease_fit": null
+   },
+   {
+    "segment": "me",
+    "first_frame": 106,
+    "last_frame": 110,
+    "total_scale": 1.0114,
+    "per_frame_increment_pct": [
+     0.06,
+     0.38,
+     0.4,
+     0.29
+    ],
+    "exp_ease_fit": null
+   },
+   {
+    "segment": "Win/but i punch-in",
+    "first_frame": 111,
+    "last_frame": 121,
+    "total_scale": 1.1205,
+    "per_frame_increment_pct": [
+     2.44,
+     2.74,
+     1.64,
+     1.17,
+     0.87,
+     0.74,
+     0.58,
+     0.48,
+     0.63,
+     0.18
+    ],
+    "exp_ease_fit": {
+     "A": 0.1318,
+     "tau_frames": 4.14,
+     "rmse": 0.0017
+    }
+   },
+   {
+    "segment": "know/in the settle-out",
+    "first_frame": 122,
+    "last_frame": 131,
+    "total_scale": 0.8927,
+    "per_frame_increment_pct": [
+     -2.64,
+     -2.59,
+     -1.74,
+     -1.25,
+     -0.88,
+     -0.74,
+     -0.55,
+     -0.54,
+     -0.31
+    ],
+    "exp_ease_fit": {
+     "A": -0.1156,
+     "tau_frames": 3.47,
+     "rmse": 0.001
+    }
+   },
+   {
+    "segment": "end",
+    "first_frame": 132,
+    "last_frame": 136,
+    "total_scale": 1.0,
+    "per_frame_increment_pct": [
+     0.0,
+     0.0,
+     0.0,
+     -0.01
+    ],
+    "exp_ease_fit": null
+   },
+   {
+    "segment": "red room",
+    "first_frame": 137,
+    "last_frame": 147,
+    "total_scale": 0.9864,
+    "per_frame_increment_pct": [
+     -0.02,
+     -0.16,
+     -0.28,
+     -0.1,
+     -0.07,
+     -0.12,
+     -0.11,
+     -0.36,
+     -0.1,
+     -0.04
+    ],
+    "exp_ease_fit": null
+   },
+   {
+    "segment": "Regardless",
+    "first_frame": 148,
+    "last_frame": 163,
+    "total_scale": 0.9865,
+    "per_frame_increment_pct": [
+     -0.09,
+     -0.09,
+     -0.07,
+     -0.09,
+     -0.14,
+     -0.11,
+     -0.08,
+     -0.1,
+     -0.11,
+     -0.14,
+     -0.1,
+     -0.07,
+     -0.08,
+     -0.09,
+     0.0
+    ],
+    "exp_ease_fit": null
+   }
+  ],
+  "image": "spec_zoom.png"
+ },
+ "entrances_exits": {
+  "default": "hard cut in and hard cut out on exact frame boundaries; the next word replaces the previous on the very next frame (no gaps, no overlaps) - 16 of 28 words start exactly on a shot cut",
+  "fades": "No word fades except the stacked They/don't/wanna block. 'end' (f132-136) is NOT a fade: its opacity is constant (edge-profile alpha identical across frames; per-letter colours fit |C-B| with constant C ~0.85); the apparent fade-in is the blurred blue spire moving out from behind the letters (f132-133 letters over blue -> salmon, f135-136 over pale fog -> dark).",
+  "they_block_entrance": "staggered blur-in: each line fades in while a gaussian blur shrinks to 0. They: f086-f092 (opacity 0.20,0.29,0.41,0.56,0.76,0.80,0.93,...1.0; extra blur sigma 3.9,3.7,3.7,3.2,2.4,1.8,1.0,...0 px). don't: f090-f095 (opacity 0.08,0.18,0.52,0.80,0.94,0.93 then 1.0; blur 6.3,5.6,4.3,3.2,2.4,1.6 -> 0). wanna: f095-f096/97 (0.55, 1.0; blur 3.4, 1.5, 0.9 -> 0). Stagger = 4-5 frames (They f086, don't f090, wanna f094/95). Opacity ramps roughly linearly (ease-out at the end); first frame already ~15-20%.",
+  "they_block_exit": "hard cut at the shot cut f100 (all three lines together)",
+  "image": "spec_they_block.png"
+ },
+ "glitch": {
+  "finding": "There is no glitch effect. Per-channel registration of the text edges at the suspected frames gives R-G and B-G offsets below 0.5 px (f001 -0.12/-0.08 px, f003 -0.12/+0.27, f005 0.02/0.19, f060 0.00/0.01, f100 -0.37/-0.49 = same as non-glitch frames), no block displacement, no noise. What looks like an RGB glitch is the Difference blend inverting high-saturation objects behind the letters: the cyan LED strip shows red/orange inside 'i' and 'n' (f001-f008), the red LED shows cyan (f003-f004), a laptop/keyboard shows as a dark negative inside 'e' of yet and 'm' of i'm (f060-f064), the teal monitor shows salmon inside 'ee' of see with dark negative text lines (f100-f105). In addition, the opening frames carry the +11% punch-in zoom and the footage is on 2s with LED colour jumps every 2 frames, which reads as stutter.",
+  "how_to_reproduce": "do nothing extra: render difference text over footage with saturated moving light sources; optionally hold footage frames in pairs (12 fps) for the opening stutter"
+ },
+ "they_block_layout": {
+  "frames": "They f086-f099, don't f090-f099, wanna f095-f099 (hard cut out at f100)",
+  "anchor": "left half of frame: block ink bbox centre at (0.28 W, 0.51 H) at f098, (0.30 W, 0.51 H) at the block's own start zoom (f086); the block is NOT centred like the other captions",
+  "lines": {
+   "They": {
+    "bbox_f098": [
+     308,
+     352,
+     770,
+     656
+    ],
+    "bbox_at_entrance_zoom": [
+     375.8,
+     371.5,
+     789.6,
+     643.8
+    ]
+   },
+   "don't": {
+    "bbox_f098": [
+     303,
+     585,
+     557,
+     673
+    ],
+    "bbox_at_entrance_zoom": [
+     371.3,
+     580.2,
+     598.8,
+     659.0
+    ]
+   },
+   "wanna": {
+    "bbox_f098": [
+     364,
+     683,
+     708,
+     747
+    ],
+    "bbox_at_entrance_zoom": [
+     426.0,
+     668.0,
+     734.1,
+     725.3
+    ]
+   }
+  },
+  "geometry_at_entrance_zoom_px": {
+   "They": "script, ink 376-790 x 372-644 (h 272, same size as Prime)",
+   "don't": "sans, ink 371-599 x 580-659 (ascender-to-baseline 79 px = standard sans size)",
+   "wanna": "sans, ink 426-734 x 668-725 (x-height 57 px = standard sans size)"
+  },
+  "alignment": "don't is left-aligned with the left edge of the They swash (x 303 vs 308 at f098); wanna is centred under They (centre x 536 vs 539) i.e. indented ~60 px; ragged composition",
+  "leading": "very tight: don't ascenders (y 585) rise above They's x-height baseline (~600) and sit beside the y-descender; sans baseline-to-baseline 74 px at f098 (= 0.61 em, 66 px at entrance zoom); no gap between don't and wanna (10 px)",
+  "blend": "all three Difference, white",
+  "fade_order": "They -> don't -> wanna, each a blur+fade-in, starts f086 / f090 / f094-95"
+ },
+ "emphasis_rule": {
+  "observed": "Script words: Prime, hundred, They, Win, Regardless = 5 of 32 spoken words (28 caption units; ~1 in 6), roughly one per spoken line, ~1 every 1.3 s. They are the payoff content word of the line (noun/number/verb/adverb, usually the last word of the phrase: Prime, hundred, Win, Regardless) or the antagonist pronoun that opens a line (They). Function words, 'i'/'i'm' and the main verb chain are never script. The last word of the video is script and is held longest (16 frames). Consecutive script words never occur back-to-back.",
+  "rule_for_new_transcript": "1) Split the transcript into spoken lines/phrases. 2) In each line pick at most one word (two only for a long contrastive line, e.g. a pronoun at the start AND the payoff at the end): prefer the final content word that completes the claim (noun, number word, strong verb, or a sentence-final adverb like 'regardless'); a subject pronoun opening an 'us vs them' line may also be picked. 3) Target ~15-20% of words (about 1 per 1-1.5 s), never function words, never two adjacent words. 4) Always make the final word of the video script. 5) Script words: swash capital initial (keep lowercase for number words like 'hundred'), ~3x height, centred (or stacked block, see below), on-screen 9-16 frames, and start a punch-in zoom of +10-13% (exp ease tau ~4 frames) on their first frame when they start a shot. 6) Optional colour accent: the first emphasis phrase got a pink fill (#E28B8B, still difference) for the whole shot ('at my Prime').",
+  "stacked_variant": "Use the left-anchored stacked block (script word + 2 sans lines with staggered blur-ins) for one short 3-word clause per video, starting on a shot cut ('They / don't / wanna').",
+  "normal_blend_variant": "Use plain white Normal blend for the climax word and its follow-up when the shot is bright and celebratory ('Win', 'but i')."
+ },
+ "words": [
+  {
+   "id": "w01",
+   "text": "i'm",
+   "font_class": "sans",
+   "first_frame": 1,
+   "last_frame": 4,
+   "n_frames": 4,
+   "t_start_s": 0.0,
+   "t_end_s": 0.167,
+   "shot": 1,
+   "entrance": "cut",
+   "exit": "cut",
+   "blend": "difference",
+   "fill_rgb": [
+    255,
+    255,
+    255
+   ],
+   "opacity": 1.0,
+   "ink_bbox_first_frame": [
+    891.6,
+    500.5,
+    1021.0,
+    577.8
+   ],
+   "ink_bbox_last_frame": [
+    887.5,
+    498.1,
+    1025.9,
+    580.8
+   ],
+   "center_x_frac": 0.4991,
+   "center_y_frac": 0.5001,
+   "height_px": 77.3,
+   "width_px": 129.4,
+   "scale_last_over_first": 1.0702,
+   "scale_track": [
+    1.0,
+    1.0292,
+    1.0555,
+    1.0702
+   ],
+   "registration_score_mean": 0.821,
+   "occluded_by_foreground": false,
+   "spans_cut": false,
+   "cuts_inside": [],
+   "lighting_jumps_inside": [
+    3
+   ],
+   "effective_fill_rgb_measured": [
+    241,
+    235,
+    232
+   ],
+   "blend_test": {
+    "edge_pair_fit_I_in_eq_a_plus_b_I_out": [
+     [
+      0.929,
+      -0.859
+     ],
+     [
+      0.906,
+      -0.86
+     ],
+     [
+      0.91,
+      -0.999
+     ]
+    ],
+    "rmse_difference": 0.1639,
+    "rmse_normal": 0.2528,
+    "alpha_if_difference": 0.912,
+    "alpha_if_normal": 0.84,
+    "corr_inside_vs_outside_luma": -0.695,
+    "bg_luma_p5_p95": [
+     0.004,
+     0.473
+    ]
+   },
+   "edge_profile": {
+    "alpha_per_frame_min_max": [
+     0.896,
+     0.918
+    ],
+    "blur_sigma_px_median": 0.56
+   }
+  },
+  {
+   "id": "w02",
+   "text": "not",
+   "font_class": "sans",
+   "first_frame": 5,
+   "last_frame": 8,
+   "n_frames": 4,
+   "t_start_s": 0.167,
+   "t_end_s": 0.333,
+   "shot": 1,
+   "entrance": "cut",
+   "exit": "cut",
+   "blend": "difference",
+   "fill_rgb": [
+    255,
+    255,
+    255
+   ],
+   "opacity": 1.0,
+   "ink_bbox_first_frame": [
+    881.6,
+    503.0,
+    1039.3,
+    583.3
+   ],
+   "ink_bbox_last_frame": [
+    880.5,
+    502.5,
+    1042.2,
+    584.9
+   ],
+   "center_x_frac": 0.5013,
+   "center_y_frac": 0.5038,
+   "height_px": 80.3,
+   "width_px": 157.7,
+   "scale_last_over_first": 1.0258,
+   "scale_track": [
+    1.0,
+    1.0117,
+    1.0206,
+    1.0258
+   ],
+   "registration_score_mean": 0.867,
+   "occluded_by_foreground": false,
+   "spans_cut": false,
+   "cuts_inside": [],
+   "lighting_jumps_inside": [
+    7
+   ],
+   "effective_fill_rgb_measured": [
+    255,
+    246,
+    238
+   ],
+   "blend_test": {
+    "edge_pair_fit_I_in_eq_a_plus_b_I_out": [
+     [
+      0.965,
+      -0.758
+     ],
+     [
+      0.938,
+      -0.827
+     ],
+     [
+      0.916,
+      -0.927
+     ]
+    ],
+    "rmse_difference": 0.1384,
+    "rmse_normal": 0.2341,
+    "alpha_if_difference": 0.942,
+    "alpha_if_normal": 0.848,
+    "corr_inside_vs_outside_luma": -0.758,
+    "bg_luma_p5_p95": [
+     0.003,
+     0.549
+    ]
+   },
+   "edge_profile": {
+    "alpha_per_frame_min_max": [
+     0.911,
+     0.929
+    ],
+    "blur_sigma_px_median": 0.61
+   }
+  },
+  {
+   "id": "w03",
+   "text": "even",
+   "font_class": "sans",
+   "first_frame": 9,
+   "last_frame": 16,
+   "n_frames": 8,
+   "t_start_s": 0.333,
+   "t_end_s": 0.667,
+   "shot": 2,
+   "entrance": "cut",
+   "exit": "cut",
+   "blend": "difference",
+   "fill_rgb": [
+    255,
+    255,
+    255
+   ],
+   "opacity": 1.0,
+   "ink_bbox_first_frame": [
+    836.6,
+    518.7,
+    1081.3,
+    585.0
+   ],
+   "ink_bbox_last_frame": [
+    840.0,
+    519.0,
+    1075.9,
+    582.9
+   ],
+   "center_x_frac": 0.5005,
+   "center_y_frac": 0.5119,
+   "height_px": 66.3,
+   "width_px": 244.7,
+   "scale_last_over_first": 0.9638,
+   "scale_track": [
+    1.0,
+    1.0028,
+    1.0902,
+    1.0717,
+    1.0287,
+    0.9989,
+    0.9807,
+    0.9638
+   ],
+   "registration_score_mean": 0.896,
+   "occluded_by_foreground": false,
+   "spans_cut": true,
+   "cuts_inside": [
+    11
+   ],
+   "lighting_jumps_inside": [],
+   "effective_fill_rgb_measured": [
+    233,
+    224,
+    227
+   ],
+   "blend_test": {
+    "edge_pair_fit_I_in_eq_a_plus_b_I_out": [
+     [
+      0.911,
+      -0.986
+     ],
+     [
+      0.865,
+      -0.964
+     ],
+     [
+      0.866,
+      -0.936
+     ]
+    ],
+    "rmse_difference": 0.1723,
+    "rmse_normal": 0.5341,
+    "alpha_if_difference": 0.946,
+    "alpha_if_normal": 0.491,
+    "corr_inside_vs_outside_luma": -0.904,
+    "bg_luma_p5_p95": [
+     0.025,
+     0.78
+    ]
+   },
+   "edge_profile": {
+    "alpha_per_frame_min_max": [
+     0.744,
+     1.119
+    ],
+    "blur_sigma_px_median": 0.55
+   }
+  },
+  {
+   "id": "w04",
+   "text": "yet",
+   "font_class": "sans",
+   "first_frame": 17,
+   "last_frame": 22,
+   "n_frames": 6,
+   "t_start_s": 0.667,
+   "t_end_s": 0.917,
+   "shot": 4,
+   "entrance": "cut",
+   "exit": "cut",
+   "blend": "difference",
+   "fill_rgb": [
+    255,
+    255,
+    255
+   ],
+   "opacity": 1.0,
+   "ink_bbox_first_frame": [
+    881.8,
+    503.5,
+    1033.5,
+    604.4
+   ],
+   "ink_bbox_last_frame": [
+    884.2,
+    504.7,
+    1030.2,
+    601.7
+   ],
+   "center_x_frac": 0.4998,
+   "center_y_frac": 0.5139,
+   "height_px": 100.9,
+   "width_px": 151.7,
+   "scale_last_over_first": 0.962,
+   "scale_track": [
+    1.0,
+    0.9902,
+    0.981,
+    0.9731,
+    0.968,
+    0.962
+   ],
+   "registration_score_mean": 0.972,
+   "occluded_by_foreground": false,
+   "spans_cut": false,
+   "cuts_inside": [],
+   "lighting_jumps_inside": [],
+   "effective_fill_rgb_measured": [
+    255,
+    249,
+    247
+   ],
+   "blend_test": {
+    "edge_pair_fit_I_in_eq_a_plus_b_I_out": [
+     [
+      0.984,
+      0.049
+     ],
+     [
+      0.962,
+      0.061
+     ],
+     [
+      0.947,
+      0.063
+     ]
+    ],
+    "rmse_difference": 0.0329,
+    "rmse_normal": 0.0313,
+    "alpha_if_difference": 0.974,
+    "alpha_if_normal": 0.964,
+    "corr_inside_vs_outside_luma": 0.029,
+    "bg_luma_p5_p95": [
+     0.0,
+     0.025
+    ]
+   },
+   "edge_profile": {
+    "alpha_per_frame_min_max": [
+     0.975,
+     0.981
+    ],
+    "blur_sigma_px_median": 0.53
+   }
+  },
+  {
+   "id": "w05",
+   "text": "at my",
+   "font_class": "sans",
+   "first_frame": 23,
+   "last_frame": 27,
+   "n_frames": 5,
+   "t_start_s": 0.917,
+   "t_end_s": 1.125,
+   "shot": 5,
+   "entrance": "cut",
+   "exit": "cut",
+   "blend": "difference",
+   "fill_rgb": [
+    226,
+    139,
+    139
+   ],
+   "opacity": 1.0,
+   "ink_bbox_first_frame": [
+    833.6,
+    505.7,
+    1087.0,
+    599.6
+   ],
+   "ink_bbox_last_frame": [
+    835.7,
+    506.3,
+    1085.2,
+    598.7
+   ],
+   "center_x_frac": 0.5012,
+   "center_y_frac": 0.5127,
+   "height_px": 93.9,
+   "width_px": 253.4,
+   "scale_last_over_first": 0.9843,
+   "scale_track": [
+    1.0,
+    0.9971,
+    0.9964,
+    0.9852,
+    0.9843
+   ],
+   "registration_score_mean": 0.59,
+   "occluded_by_foreground": false,
+   "spans_cut": false,
+   "cuts_inside": [],
+   "lighting_jumps_inside": []
+  },
+  {
+   "id": "w06",
+   "text": "Prime",
+   "font_class": "script",
+   "first_frame": 28,
+   "last_frame": 36,
+   "n_frames": 9,
+   "t_start_s": 1.125,
+   "t_end_s": 1.5,
+   "shot": 5,
+   "entrance": "cut",
+   "exit": "cut",
+   "blend": "difference",
+   "fill_rgb": [
+    226,
+    139,
+    139
+   ],
+   "opacity": 1.0,
+   "ink_bbox_first_frame": [
+    622.0,
+    396.0,
+    1375.0,
+    668.0
+   ],
+   "ink_bbox_last_frame": [
+    589.1,
+    382.0,
+    1415.8,
+    680.6
+   ],
+   "center_x_frac": 0.5211,
+   "center_y_frac": 0.4935,
+   "height_px": 272,
+   "width_px": 753,
+   "scale_last_over_first": 1.0978,
+   "scale_track": [
+    1.0,
+    1.0243,
+    1.047,
+    1.0616,
+    1.072,
+    1.0805,
+    1.0871,
+    1.0931,
+    1.0978
+   ],
+   "registration_score_mean": 0.633,
+   "occluded_by_foreground": false,
+   "spans_cut": false,
+   "cuts_inside": [],
+   "lighting_jumps_inside": []
+  },
+  {
+   "id": "w07",
+   "text": "i'm",
+   "font_class": "sans",
+   "first_frame": 37,
+   "last_frame": 40,
+   "n_frames": 4,
+   "t_start_s": 1.5,
+   "t_end_s": 1.667,
+   "shot": 6,
+   "entrance": "cut",
+   "exit": "cut",
+   "blend": "difference",
+   "fill_rgb": [
+    255,
+    255,
+    255
+   ],
+   "opacity": 1.0,
+   "ink_bbox_first_frame": [
+    887.8,
+    499.8,
+    1024.5,
+    580.2
+   ],
+   "ink_bbox_last_frame": [
+    887.6,
+    499.7,
+    1024.7,
+    580.4
+   ],
+   "center_x_frac": 0.499,
+   "center_y_frac": 0.5009,
+   "height_px": 80.4,
+   "width_px": 136.7,
+   "scale_last_over_first": 1.0032,
+   "scale_track": [
+    1.0,
+    1.0009,
+    1.0025,
+    1.0032
+   ],
+   "registration_score_mean": 0.741,
+   "occluded_by_foreground": false,
+   "spans_cut": false,
+   "cuts_inside": [],
+   "lighting_jumps_inside": [],
+   "effective_fill_rgb_measured": [
+    235,
+    223,
+    232
+   ],
+   "blend_test": {
+    "edge_pair_fit_I_in_eq_a_plus_b_I_out": [
+     [
+      0.812,
+      -0.737
+     ],
+     [
+      0.737,
+      -0.628
+     ],
+     [
+      0.78,
+      -0.621
+     ]
+    ],
+    "rmse_difference": 0.1532,
+    "rmse_normal": 0.2663,
+    "alpha_if_difference": 0.753,
+    "alpha_if_normal": 0.437,
+    "corr_inside_vs_outside_luma": -0.624,
+    "bg_luma_p5_p95": [
+     0.094,
+     0.678
+    ]
+   },
+   "edge_profile": {
+    "alpha_per_frame_min_max": [
+     0.707,
+     0.71
+    ],
+    "blur_sigma_px_median": 1.85
+   }
+  },
+  {
+   "id": "w08",
+   "text": "not",
+   "font_class": "sans",
+   "first_frame": 41,
+   "last_frame": 43,
+   "n_frames": 3,
+   "t_start_s": 1.667,
+   "t_end_s": 1.792,
+   "shot": 7,
+   "entrance": "cut",
+   "exit": "cut",
+   "blend": "difference",
+   "fill_rgb": [
+    255,
+    255,
+    255
+   ],
+   "opacity": 1.0,
+   "ink_bbox_first_frame": [
+    886.2,
+    504.1,
+    1032.7,
+    579.9
+   ],
+   "ink_bbox_last_frame": [
+    886.1,
+    504.1,
+    1032.9,
+    580.0
+   ],
+   "center_x_frac": 0.5008,
+   "center_y_frac": 0.5028,
+   "height_px": 75.8,
+   "width_px": 146.5,
+   "scale_last_over_first": 1.0027,
+   "scale_track": [
+    1.0,
+    1.0013,
+    1.0027
+   ],
+   "registration_score_mean": 0.979,
+   "occluded_by_foreground": false,
+   "spans_cut": false,
+   "cuts_inside": [],
+   "lighting_jumps_inside": [],
+   "effective_fill_rgb_measured": [
+    247,
+    237,
+    240
+   ],
+   "blend_test": {
+    "edge_pair_fit_I_in_eq_a_plus_b_I_out": [
+     [
+      0.929,
+      -0.095
+     ],
+     [
+      0.875,
+      -0.014
+     ],
+     [
+      0.877,
+      -0.033
+     ]
+    ],
+    "rmse_difference": 0.0303,
+    "rmse_normal": 0.032,
+    "alpha_if_difference": 0.931,
+    "alpha_if_normal": 0.887,
+    "corr_inside_vs_outside_luma": -0.048,
+    "bg_luma_p5_p95": [
+     0.025,
+     0.068
+    ]
+   },
+   "edge_profile": {
+    "alpha_per_frame_min_max": [
+     0.921,
+     0.935
+    ],
+    "blur_sigma_px_median": 0.46
+   }
+  },
+  {
+   "id": "w09",
+   "text": "at a",
+   "font_class": "sans",
+   "first_frame": 44,
+   "last_frame": 49,
+   "n_frames": 6,
+   "t_start_s": 1.792,
+   "t_end_s": 2.042,
+   "shot": 7,
+   "entrance": "cut",
+   "exit": "cut",
+   "blend": "difference",
+   "fill_rgb": [
+    255,
+    255,
+    255
+   ],
+   "opacity": 1.0,
+   "ink_bbox_first_frame": [
+    875.3,
+    504.2,
+    1039.4,
+    579.8
+   ],
+   "ink_bbox_last_frame": [
+    874.3,
+    503.7,
+    1040.4,
+    580.3
+   ],
+   "center_x_frac": 0.4997,
+   "center_y_frac": 0.5028,
+   "height_px": 75.6,
+   "width_px": 164.1,
+   "scale_last_over_first": 1.0124,
+   "scale_track": [
+    1.0,
+    1.0013,
+    1.0042,
+    1.0062,
+    1.0096,
+    1.0124
+   ],
+   "registration_score_mean": 0.933,
+   "occluded_by_foreground": false,
+   "spans_cut": false,
+   "cuts_inside": [],
+   "lighting_jumps_inside": [],
+   "effective_fill_rgb_measured": [
+    249,
+    237,
+    238
+   ],
+   "blend_test": {
+    "edge_pair_fit_I_in_eq_a_plus_b_I_out": [
+     [
+      0.925,
+      -0.025
+     ],
+     [
+      0.878,
+      -0.026
+     ],
+     [
+      0.88,
+      -0.04
+     ]
+    ],
+    "rmse_difference": 0.056,
+    "rmse_normal": 0.0349,
+    "alpha_if_difference": 0.932,
+    "alpha_if_normal": 0.887,
+    "corr_inside_vs_outside_luma": -0.071,
+    "bg_luma_p5_p95": [
+     0.016,
+     0.082
+    ]
+   },
+   "edge_profile": {
+    "alpha_per_frame_min_max": [
+     0.917,
+     0.927
+    ],
+    "blur_sigma_px_median": 0.59
+   }
+  },
+  {
+   "id": "w10",
+   "text": "hundred",
+   "font_class": "script",
+   "first_frame": 50,
+   "last_frame": 59,
+   "n_frames": 10,
+   "t_start_s": 2.042,
+   "t_end_s": 2.458,
+   "shot": 8,
+   "entrance": "cut",
+   "exit": "cut",
+   "blend": "difference",
+   "fill_rgb": [
+    255,
+    255,
+    255
+   ],
+   "opacity": 1.0,
+   "ink_bbox_first_frame": [
+    687.3,
+    485.5,
+    1263.2,
+    618.0
+   ],
+   "ink_bbox_last_frame": [
+    635.1,
+    476.8,
+    1332.0,
+    637.1
+   ],
+   "center_x_frac": 0.509,
+   "center_y_frac": 0.5118,
+   "height_px": 132.5,
+   "width_px": 575.9,
+   "scale_last_over_first": 1.2102,
+   "scale_track": [
+    1.0,
+    1.0489,
+    1.1025,
+    1.1336,
+    1.156,
+    1.173,
+    1.1858,
+    1.1959,
+    1.2035,
+    1.2102
+   ],
+   "registration_score_mean": 0.923,
+   "occluded_by_foreground": false,
+   "spans_cut": true,
+   "cuts_inside": [
+    53
+   ],
+   "lighting_jumps_inside": [
+    55,
+    57
+   ],
+   "effective_fill_rgb_measured": [
+    245,
+    241,
+    240
+   ],
+   "blend_test": {
+    "edge_pair_fit_I_in_eq_a_plus_b_I_out": [
+     [
+      0.953,
+      -0.902
+     ],
+     [
+      0.924,
+      -0.69
+     ],
+     [
+      0.91,
+      -0.751
+     ]
+    ],
+    "rmse_difference": 0.0997,
+    "rmse_normal": 0.1542,
+    "alpha_if_difference": 0.933,
+    "alpha_if_normal": 0.872,
+    "corr_inside_vs_outside_luma": -0.683,
+    "bg_luma_p5_p95": [
+     0.001,
+     0.307
+    ]
+   },
+   "edge_profile": {
+    "alpha_per_frame_min_max": [
+     0.91,
+     0.933
+    ],
+    "blur_sigma_px_median": 0.59
+   }
+  },
+  {
+   "id": "w11",
+   "text": "yet",
+   "font_class": "sans",
+   "first_frame": 60,
+   "last_frame": 62,
+   "n_frames": 3,
+   "t_start_s": 2.458,
+   "t_end_s": 2.583,
+   "shot": 9,
+   "entrance": "cut",
+   "exit": "cut",
+   "blend": "difference",
+   "fill_rgb": [
+    255,
+    255,
+    255
+   ],
+   "opacity": 1.0,
+   "ink_bbox_first_frame": [
+    875.5,
+    500.3,
+    1049.6,
+    616.4
+   ],
+   "ink_bbox_last_frame": [
+    879.9,
+    501.9,
+    1039.1,
+    608.0
+   ],
+   "center_x_frac": 0.5024,
+   "center_y_frac": 0.5179,
+   "height_px": 116.1,
+   "width_px": 174.1,
+   "scale_last_over_first": 0.9145,
+   "scale_track": [
+    1.0,
+    0.9593,
+    0.9145
+   ],
+   "registration_score_mean": 0.949,
+   "occluded_by_foreground": false,
+   "spans_cut": false,
+   "cuts_inside": [],
+   "lighting_jumps_inside": [],
+   "effective_fill_rgb_measured": [
+    255,
+    246,
+    246
+   ],
+   "blend_test": {
+    "edge_pair_fit_I_in_eq_a_plus_b_I_out": [
+     [
+      0.976,
+      -0.439
+     ],
+     [
+      0.945,
+      -0.58
+     ],
+     [
+      0.939,
+      -0.549
+     ]
+    ],
+    "rmse_difference": 0.0893,
+    "rmse_normal": 0.0975,
+    "alpha_if_difference": 0.961,
+    "alpha_if_normal": 0.937,
+    "corr_inside_vs_outside_luma": -0.488,
+    "bg_luma_p5_p95": [
+     0.0,
+     0.211
+    ]
+   },
+   "edge_profile": {
+    "alpha_per_frame_min_max": [
+     0.956,
+     0.964
+    ],
+    "blur_sigma_px_median": 0.53
+   }
+  },
+  {
+   "id": "w12",
+   "text": "i'm",
+   "font_class": "sans",
+   "first_frame": 63,
+   "last_frame": 64,
+   "n_frames": 2,
+   "t_start_s": 2.583,
+   "t_end_s": 2.667,
+   "shot": 9,
+   "entrance": "cut",
+   "exit": "cut",
+   "blend": "difference",
+   "fill_rgb": [
+    255,
+    255,
+    255
+   ],
+   "opacity": 1.0,
+   "ink_bbox_first_frame": [
+    888.6,
+    497.7,
+    1028.0,
+    581.5
+   ],
+   "ink_bbox_last_frame": [
+    889.6,
+    498.4,
+    1025.8,
+    580.3
+   ],
+   "center_x_frac": 0.5002,
+   "center_y_frac": 0.5006,
+   "height_px": 83.8,
+   "width_px": 139.4,
+   "scale_last_over_first": 0.9772,
+   "scale_track": [
+    1.0,
+    0.9772
+   ],
+   "registration_score_mean": 0.852,
+   "occluded_by_foreground": false,
+   "spans_cut": false,
+   "cuts_inside": [],
+   "lighting_jumps_inside": [],
+   "effective_fill_rgb_measured": [
+    255,
+    247,
+    249
+   ],
+   "blend_test": {
+    "edge_pair_fit_I_in_eq_a_plus_b_I_out": [
+     [
+      0.968,
+      -0.082
+     ],
+     [
+      0.943,
+      -0.121
+     ],
+     [
+      0.936,
+      -0.115
+     ]
+    ],
+    "rmse_difference": 0.121,
+    "rmse_normal": 0.0778,
+    "alpha_if_difference": 0.956,
+    "alpha_if_normal": 0.945,
+    "corr_inside_vs_outside_luma": -0.163,
+    "bg_luma_p5_p95": [
+     0.0,
+     0.159
+    ]
+   },
+   "edge_profile": {
+    "alpha_per_frame_min_max": [
+     0.937,
+     0.944
+    ],
+    "blur_sigma_px_median": 0.94
+   }
+  },
+  {
+   "id": "w13",
+   "text": "still",
+   "font_class": "sans",
+   "first_frame": 65,
+   "last_frame": 69,
+   "n_frames": 5,
+   "t_start_s": 2.667,
+   "t_end_s": 2.875,
+   "shot": 9,
+   "entrance": "cut",
+   "exit": "cut",
+   "blend": "difference",
+   "fill_rgb": [
+    255,
+    255,
+    255
+   ],
+   "opacity": 1.0,
+   "ink_bbox_first_frame": [
+    882.0,
+    498.4,
+    1031.1,
+    582.2
+   ],
+   "ink_bbox_last_frame": [
+    884.1,
+    499.4,
+    1028.5,
+    580.5
+   ],
+   "center_x_frac": 0.4992,
+   "center_y_frac": 0.5012,
+   "height_px": 83.8,
+   "width_px": 149.1,
+   "scale_last_over_first": 0.9683,
+   "scale_track": [
+    1.0,
+    0.9921,
+    0.9819,
+    0.9718,
+    0.9683
+   ],
+   "registration_score_mean": 0.959,
+   "occluded_by_foreground": false,
+   "spans_cut": false,
+   "cuts_inside": [],
+   "lighting_jumps_inside": [],
+   "effective_fill_rgb_measured": [
+    255,
+    252,
+    252
+   ],
+   "blend_test": {
+    "edge_pair_fit_I_in_eq_a_plus_b_I_out": [
+     [
+      0.972,
+      -0.179
+     ],
+     [
+      0.951,
+      -0.246
+     ],
+     [
+      0.944,
+      -0.209
+     ]
+    ],
+    "rmse_difference": 0.0558,
+    "rmse_normal": 0.0484,
+    "alpha_if_difference": 0.967,
+    "alpha_if_normal": 0.951,
+    "corr_inside_vs_outside_luma": -0.199,
+    "bg_luma_p5_p95": [
+     0.0,
+     0.068
+    ]
+   },
+   "edge_profile": {
+    "alpha_per_frame_min_max": [
+     0.971,
+     0.981
+    ],
+    "blur_sigma_px_median": 0.56
+   }
+  },
+  {
+   "id": "w14",
+   "text": "charging",
+   "font_class": "sans",
+   "first_frame": 70,
+   "last_frame": 85,
+   "n_frames": 16,
+   "t_start_s": 2.875,
+   "t_end_s": 3.542,
+   "shot": 10,
+   "entrance": "cut",
+   "exit": "cut",
+   "blend": "difference",
+   "fill_rgb": [
+    255,
+    255,
+    255
+   ],
+   "opacity": 1.0,
+   "ink_bbox_first_frame": [
+    722.4,
+    489.1,
+    1201.9,
+    617.7
+   ],
+   "ink_bbox_last_frame": [
+    759.7,
+    495.4,
+    1154.9,
+    601.4
+   ],
+   "center_x_frac": 0.5022,
+   "center_y_frac": 0.5134,
+   "height_px": 128.6,
+   "width_px": 479.5,
+   "scale_last_over_first": 0.8239,
+   "scale_track": [
+    1.0,
+    0.9785,
+    0.9391,
+    0.9126,
+    0.8937,
+    0.8794,
+    0.8683,
+    0.8584,
+    0.8517,
+    0.8455,
+    0.8398,
+    0.8354,
+    0.8316,
+    0.828,
+    0.8259,
+    0.8239
+   ],
+   "registration_score_mean": 0.873,
+   "occluded_by_foreground": false,
+   "spans_cut": false,
+   "cuts_inside": [],
+   "lighting_jumps_inside": [],
+   "effective_fill_rgb_measured": [
+    255,
+    246,
+    246
+   ],
+   "blend_test": {
+    "edge_pair_fit_I_in_eq_a_plus_b_I_out": [
+     [
+      0.97,
+      -0.774
+     ],
+     [
+      0.945,
+      -0.89
+     ],
+     [
+      0.946,
+      -0.918
+     ]
+    ],
+    "rmse_difference": 0.1145,
+    "rmse_normal": 0.1799,
+    "alpha_if_difference": 0.955,
+    "alpha_if_normal": 0.912,
+    "corr_inside_vs_outside_luma": -0.742,
+    "bg_luma_p5_p95": [
+     0.0,
+     0.403
+    ]
+   },
+   "edge_profile": {
+    "alpha_per_frame_min_max": [
+     0.927,
+     0.991
+    ],
+    "blur_sigma_px_median": 0.63
+   }
+  },
+  {
+   "id": "w15",
+   "text": "They",
+   "font_class": "script",
+   "first_frame": 86,
+   "last_frame": 99,
+   "n_frames": 14,
+   "t_start_s": 3.542,
+   "t_end_s": 4.125,
+   "shot": 11,
+   "entrance": "blur+fade in, 7 frames (f086-f092): opacity ~0.20,0.29,0.41,0.56,0.76,0.80,0.93 then 1.0; extra gaussian blur sigma ~3.9->0 px",
+   "exit": "cut (shot cut at f100)",
+   "blend": "difference",
+   "fill_rgb": [
+    255,
+    255,
+    255
+   ],
+   "opacity": 1.0,
+   "ink_bbox_first_frame": [
+    375.8,
+    371.5,
+    789.6,
+    643.8
+   ],
+   "ink_bbox_f098": [
+    308,
+    352,
+    770,
+    656
+   ],
+   "center_x_frac": 0.3041,
+   "center_y_frac": 0.4709,
+   "height_px": 272.3,
+   "width_px": 413.8,
+   "scale_last_over_first": 1.1201,
+   "occluded_by_foreground": false,
+   "spans_cut": false,
+   "cuts_inside": [],
+   "lighting_jumps_inside": [],
+   "entrance_curve": {
+    "86": {
+     "opacity": 0.19,
+     "extra_blur_sigma_px": null
+    },
+    "87": {
+     "opacity": 0.29,
+     "extra_blur_sigma_px": null
+    },
+    "88": {
+     "opacity": 0.41,
+     "extra_blur_sigma_px": 3.7
+    },
+    "89": {
+     "opacity": 0.56,
+     "extra_blur_sigma_px": 3.2
+    },
+    "90": {
+     "opacity": 0.76,
+     "extra_blur_sigma_px": 2.4
+    },
+    "91": {
+     "opacity": 0.81,
+     "extra_blur_sigma_px": 1.8
+    },
+    "92": {
+     "opacity": 0.92,
+     "extra_blur_sigma_px": 1.1
+    },
+    "93": {
+     "opacity": 0.92,
+     "extra_blur_sigma_px": 1.1
+    },
+    "94": {
+     "opacity": 0.86,
+     "extra_blur_sigma_px": 1.0
+    },
+    "95": {
+     "opacity": 0.86,
+     "extra_blur_sigma_px": 1.3
+    },
+    "96": {
+     "opacity": 0.94,
+     "extra_blur_sigma_px": 0.7
+    },
+    "97": {
+     "opacity": 0.94,
+     "extra_blur_sigma_px": 0.6
+    },
+    "98": {
+     "opacity": 1.0,
+     "extra_blur_sigma_px": 0.0
+    },
+    "99": {
+     "opacity": 1.0,
+     "extra_blur_sigma_px": 0.6
+    }
+   },
+   "part_of_block": "They/don't/wanna"
+  },
+  {
+   "id": "w16",
+   "text": "don't",
+   "font_class": "sans",
+   "first_frame": 90,
+   "last_frame": 99,
+   "n_frames": 10,
+   "t_start_s": 3.708,
+   "t_end_s": 4.125,
+   "shot": 11,
+   "entrance": "blur+fade in, ~6 frames (f090-f095): opacity ~0.08,0.18,0.52,0.80,0.94,0.93 then 1.0; extra blur sigma ~6.3->0 px",
+   "exit": "cut (shot cut at f100)",
+   "blend": "difference",
+   "fill_rgb": [
+    255,
+    255,
+    255
+   ],
+   "opacity": 1.0,
+   "ink_bbox_first_frame": [
+    330.6,
+    583.1,
+    573.9,
+    667.3
+   ],
+   "ink_bbox_f098": [
+    303,
+    585,
+    557,
+    673
+   ],
+   "center_x_frac": 0.236,
+   "center_y_frac": 0.58,
+   "height_px": 84.2,
+   "width_px": 243.3,
+   "scale_last_over_first": 1.0474,
+   "occluded_by_foreground": false,
+   "spans_cut": false,
+   "cuts_inside": [],
+   "lighting_jumps_inside": [],
+   "entrance_curve": {
+    "86": {
+     "opacity": 0.0,
+     "extra_blur_sigma_px": null
+    },
+    "87": {
+     "opacity": 0.0,
+     "extra_blur_sigma_px": null
+    },
+    "88": {
+     "opacity": 0.03,
+     "extra_blur_sigma_px": null
+    },
+    "89": {
+     "opacity": 0.03,
+     "extra_blur_sigma_px": null
+    },
+    "90": {
+     "opacity": 0.08,
+     "extra_blur_sigma_px": null
+    },
+    "91": {
+     "opacity": 0.18,
+     "extra_blur_sigma_px": null
+    },
+    "92": {
+     "opacity": 0.51,
+     "extra_blur_sigma_px": 4.3
+    },
+    "93": {
+     "opacity": 0.8,
+     "extra_blur_sigma_px": 3.1
+    },
+    "94": {
+     "opacity": 0.94,
+     "extra_blur_sigma_px": 2.2
+    },
+    "95": {
+     "opacity": 0.93,
+     "extra_blur_sigma_px": 1.5
+    },
+    "96": {
+     "opacity": 0.98,
+     "extra_blur_sigma_px": 0.7
+    },
+    "97": {
+     "opacity": 0.98,
+     "extra_blur_sigma_px": 0.4
+    },
+    "98": {
+     "opacity": 1.0,
+     "extra_blur_sigma_px": 0.0
+    },
+    "99": {
+     "opacity": 1.0,
+     "extra_blur_sigma_px": 0.0
+    }
+   },
+   "part_of_block": "They/don't/wanna"
+  },
+  {
+   "id": "w17",
+   "text": "wanna",
+   "font_class": "sans",
+   "first_frame": 95,
+   "last_frame": 99,
+   "n_frames": 5,
+   "t_start_s": 3.917,
+   "t_end_s": 4.125,
+   "shot": 11,
+   "entrance": "blur+fade in, ~2-3 frames (f095-f096/97): opacity ~0.55 then 1.0; extra blur sigma ~3.4 -> 1.5 -> 0 px (a <=15% very blurred ghost may already exist f092-f094; unreliable)",
+   "exit": "cut (shot cut at f100)",
+   "blend": "difference",
+   "fill_rgb": [
+    255,
+    255,
+    255
+   ],
+   "opacity": 1.0,
+   "ink_bbox_first_frame": [
+    370.3,
+    681.5,
+    710.7,
+    744.8
+   ],
+   "ink_bbox_f098": [
+    364,
+    683,
+    708,
+    747
+   ],
+   "center_x_frac": 0.2821,
+   "center_y_frac": 0.6615,
+   "height_px": 63.3,
+   "width_px": 340.4,
+   "scale_last_over_first": 1.0139,
+   "occluded_by_foreground": false,
+   "spans_cut": false,
+   "cuts_inside": [],
+   "lighting_jumps_inside": [],
+   "entrance_curve": {
+    "86": {
+     "opacity": 0.03,
+     "extra_blur_sigma_px": null
+    },
+    "87": {
+     "opacity": 0.03,
+     "extra_blur_sigma_px": null
+    },
+    "88": {
+     "opacity": 0.05,
+     "extra_blur_sigma_px": null
+    },
+    "89": {
+     "opacity": 0.05,
+     "extra_blur_sigma_px": null
+    },
+    "90": {
+     "opacity": 0.08,
+     "extra_blur_sigma_px": null
+    },
+    "91": {
+     "opacity": 0.09,
+     "extra_blur_sigma_px": null
+    },
+    "92": {
+     "opacity": 0.17,
+     "extra_blur_sigma_px": null
+    },
+    "93": {
+     "opacity": 0.17,
+     "extra_blur_sigma_px": null
+    },
+    "94": {
+     "opacity": 0.09,
+     "extra_blur_sigma_px": null
+    },
+    "95": {
+     "opacity": 0.56,
+     "extra_blur_sigma_px": 3.4
+    },
+    "96": {
+     "opacity": 1.0,
+     "extra_blur_sigma_px": 1.5
+    },
+    "97": {
+     "opacity": 1.0,
+     "extra_blur_sigma_px": 0.8
+    },
+    "98": {
+     "opacity": 1.0,
+     "extra_blur_sigma_px": 0.0
+    },
+    "99": {
+     "opacity": 1.0,
+     "extra_blur_sigma_px": 0.0
+    }
+   },
+   "part_of_block": "They/don't/wanna"
+  },
+  {
+   "id": "w18",
+   "text": "see",
+   "font_class": "sans",
+   "first_frame": 100,
+   "last_frame": 105,
+   "n_frames": 6,
+   "t_start_s": 4.125,
+   "t_end_s": 4.375,
+   "shot": 12,
+   "entrance": "cut",
+   "exit": "cut",
+   "blend": "difference",
+   "fill_rgb": [
+    255,
+    255,
+    255
+   ],
+   "opacity": 1.0,
+   "ink_bbox_first_frame": [
+    874.6,
+    520.3,
+    1042.0,
+    581.7
+   ],
+   "ink_bbox_last_frame": [
+    873.2,
+    520.1,
+    1043.6,
+    582.6
+   ],
+   "center_x_frac": 0.5002,
+   "center_y_frac": 0.5111,
+   "height_px": 61.4,
+   "width_px": 167.4,
+   "scale_last_over_first": 1.0173,
+   "scale_track": [
+    1.0,
+    1.0022,
+    1.0032,
+    1.0048,
+    1.0146,
+    1.0173
+   ],
+   "registration_score_mean": 0.783,
+   "occluded_by_foreground": false,
+   "spans_cut": false,
+   "cuts_inside": [],
+   "lighting_jumps_inside": [],
+   "effective_fill_rgb_measured": [
+    235,
+    210,
+    217
+   ],
+   "blend_test": {
+    "edge_pair_fit_I_in_eq_a_plus_b_I_out": [
+     [
+      0.83,
+      -0.568
+     ],
+     [
+      0.73,
+      -0.683
+     ],
+     [
+      0.766,
+      -0.72
+     ]
+    ],
+    "rmse_difference": 0.1395,
+    "rmse_normal": 0.2456,
+    "alpha_if_difference": 0.764,
+    "alpha_if_normal": 0.49,
+    "corr_inside_vs_outside_luma": -0.518,
+    "bg_luma_p5_p95": [
+     0.085,
+     0.569
+    ]
+   },
+   "edge_profile": {
+    "alpha_per_frame_min_max": [
+     0.752,
+     0.765
+    ],
+    "blur_sigma_px_median": 0.73
+   }
+  },
+  {
+   "id": "w19",
+   "text": "me",
+   "font_class": "sans",
+   "first_frame": 106,
+   "last_frame": 110,
+   "n_frames": 5,
+   "t_start_s": 4.375,
+   "t_end_s": 4.583,
+   "shot": 13,
+   "entrance": "cut",
+   "exit": "cut",
+   "blend": "difference",
+   "fill_rgb": [
+    255,
+    255,
+    255
+   ],
+   "opacity": 1.0,
+   "ink_bbox_first_frame": [
+    884.3,
+    520.1,
+    1033.5,
+    579.8
+   ],
+   "ink_bbox_last_frame": [
+    883.5,
+    519.8,
+    1034.4,
+    580.2
+   ],
+   "center_x_frac": 0.5005,
+   "center_y_frac": 0.5102,
+   "height_px": 59.7,
+   "width_px": 149.2,
+   "scale_last_over_first": 1.0114,
+   "scale_track": [
+    1.0,
+    1.0006,
+    1.0044,
+    1.0084,
+    1.0114
+   ],
+   "registration_score_mean": 0.955,
+   "occluded_by_foreground": false,
+   "spans_cut": false,
+   "cuts_inside": [],
+   "lighting_jumps_inside": [],
+   "effective_fill_rgb_measured": [
+    222,
+    224,
+    228
+   ],
+   "blend_test": {
+    "edge_pair_fit_I_in_eq_a_plus_b_I_out": [
+     [
+      0.892,
+      -1.103
+     ],
+     [
+      0.899,
+      -1.155
+     ],
+     [
+      0.884,
+      -0.931
+     ]
+    ],
+    "rmse_difference": 0.0682,
+    "rmse_normal": 0.1391,
+    "alpha_if_difference": 0.822,
+    "alpha_if_normal": 0.633,
+    "corr_inside_vs_outside_luma": -0.852,
+    "bg_luma_p5_p95": [
+     0.068,
+     0.294
+    ]
+   },
+   "edge_profile": {
+    "alpha_per_frame_min_max": [
+     0.766,
+     0.867
+    ],
+    "blur_sigma_px_median": 0.49
+   }
+  },
+  {
+   "id": "w20",
+   "text": "Win",
+   "font_class": "script",
+   "first_frame": 111,
+   "last_frame": 116,
+   "n_frames": 6,
+   "t_start_s": 4.583,
+   "t_end_s": 4.833,
+   "shot": 14,
+   "entrance": "cut",
+   "exit": "cut",
+   "blend": "normal",
+   "fill_rgb": [
+    255,
+    255,
+    255
+   ],
+   "opacity": 1.0,
+   "ink_bbox_first_frame": [
+    800.0,
+    404.5,
+    1261.7,
+    653.4
+   ],
+   "ink_bbox_last_frame": [
+    786.4,
+    392.6,
+    1290.4,
+    664.3
+   ],
+   "center_x_frac": 0.538,
+   "center_y_frac": 0.4907,
+   "height_px": 248.9,
+   "width_px": 461.7,
+   "scale_last_over_first": 1.0917,
+   "scale_track": [
+    1.0,
+    1.0244,
+    1.0525,
+    1.0698,
+    1.0823,
+    1.0917
+   ],
+   "registration_score_mean": 0.868,
+   "occluded_by_foreground": false,
+   "spans_cut": false,
+   "cuts_inside": [],
+   "lighting_jumps_inside": [],
+   "effective_fill_rgb_measured": [
+    244,
+    246,
+    241
+   ],
+   "blend_test": {
+    "edge_pair_fit_I_in_eq_a_plus_b_I_out": [
+     [
+      0.969,
+      -0.041
+     ],
+     [
+      0.981,
+      -0.045
+     ],
+     [
+      0.996,
+      -0.196
+     ]
+    ],
+    "rmse_difference": 0.2661,
+    "rmse_normal": 0.0737,
+    "alpha_if_difference": 1.122,
+    "alpha_if_normal": 0.953,
+    "corr_inside_vs_outside_luma": -0.243,
+    "bg_luma_p5_p95": [
+     0.025,
+     0.7
+    ]
+   },
+   "edge_profile": {
+    "alpha_per_frame_min_max": [
+     1.139,
+     1.147
+    ],
+    "blur_sigma_px_median": 0.67
+   }
+  },
+  {
+   "id": "w21",
+   "text": "but i",
+   "font_class": "sans",
+   "first_frame": 117,
+   "last_frame": 121,
+   "n_frames": 5,
+   "t_start_s": 4.833,
+   "t_end_s": 5.042,
+   "shot": 14,
+   "entrance": "cut",
+   "exit": "cut",
+   "blend": "normal",
+   "fill_rgb": [
+    255,
+    255,
+    255
+   ],
+   "opacity": 1.0,
+   "ink_bbox_first_frame": [
+    858.9,
+    496.4,
+    1060.4,
+    584.3
+   ],
+   "ink_bbox_last_frame": [
+    858.1,
+    496.2,
+    1063.3,
+    585.8
+   ],
+   "center_x_frac": 0.5009,
+   "center_y_frac": 0.5013,
+   "height_px": 87.9,
+   "width_px": 201.5,
+   "scale_last_over_first": 1.0188,
+   "scale_track": [
+    1.0,
+    1.0058,
+    1.0106,
+    1.017,
+    1.0188
+   ],
+   "registration_score_mean": 0.948,
+   "occluded_by_foreground": false,
+   "spans_cut": false,
+   "cuts_inside": [],
+   "lighting_jumps_inside": [],
+   "effective_fill_rgb_measured": [
+    249,
+    251,
+    251
+   ],
+   "blend_test": {
+    "edge_pair_fit_I_in_eq_a_plus_b_I_out": [
+     [
+      0.978,
+      0.01
+     ],
+     [
+      0.985,
+      0.008
+     ],
+     [
+      0.994,
+      -0.019
+     ]
+    ],
+    "rmse_difference": 0.2003,
+    "rmse_normal": 0.0171,
+    "alpha_if_difference": 1.23,
+    "alpha_if_normal": 0.982,
+    "corr_inside_vs_outside_luma": -0.134,
+    "bg_luma_p5_p95": [
+     0.038,
+     0.417
+    ]
+   },
+   "edge_profile": {
+    "alpha_per_frame_min_max": [
+     1.187,
+     1.199
+    ],
+    "blur_sigma_px_median": 0.57
+   }
+  },
+  {
+   "id": "w22",
+   "text": "know",
+   "font_class": "sans",
+   "first_frame": 122,
+   "last_frame": 125,
+   "n_frames": 4,
+   "t_start_s": 5.042,
+   "t_end_s": 5.208,
+   "shot": 15,
+   "entrance": "cut",
+   "exit": "cut",
+   "blend": "difference",
+   "fill_rgb": [
+    255,
+    255,
+    255
+   ],
+   "opacity": 1.0,
+   "ink_bbox_first_frame": [
+    819.2,
+    496.3,
+    1107.9,
+    587.7
+   ],
+   "ink_bbox_last_frame": [
+    826.7,
+    498.0,
+    1095.8,
+    583.2
+   ],
+   "center_x_frac": 0.5029,
+   "center_y_frac": 0.5028,
+   "height_px": 91.4,
+   "width_px": 288.7,
+   "scale_last_over_first": 0.9319,
+   "scale_track": [
+    1.0,
+    0.9736,
+    0.9484,
+    0.9319
+   ],
+   "registration_score_mean": 0.897,
+   "occluded_by_foreground": false,
+   "spans_cut": false,
+   "cuts_inside": [],
+   "lighting_jumps_inside": [],
+   "effective_fill_rgb_measured": [
+    236,
+    226,
+    224
+   ],
+   "blend_test": {
+    "edge_pair_fit_I_in_eq_a_plus_b_I_out": [
+     [
+      0.932,
+      -1.023
+     ],
+     [
+      0.878,
+      -0.986
+     ],
+     [
+      0.879,
+      -1.005
+     ]
+    ],
+    "rmse_difference": 0.1192,
+    "rmse_normal": 0.4466,
+    "alpha_if_difference": 0.922,
+    "alpha_if_normal": 0.656,
+    "corr_inside_vs_outside_luma": -0.972,
+    "bg_luma_p5_p95": [
+     0.06,
+     0.79
+    ]
+   },
+   "edge_profile": {
+    "alpha_per_frame_min_max": [
+     0.894,
+     0.922
+    ],
+    "blur_sigma_px_median": 0.54
+   }
+  },
+  {
+   "id": "w23",
+   "text": "in the",
+   "font_class": "sans",
+   "first_frame": 126,
+   "last_frame": 131,
+   "n_frames": 6,
+   "t_start_s": 5.208,
+   "t_end_s": 5.458,
+   "shot": 15,
+   "entrance": "cut",
+   "exit": "cut",
+   "blend": "difference",
+   "fill_rgb": [
+    255,
+    255,
+    255
+   ],
+   "opacity": 1.0,
+   "ink_bbox_first_frame": [
+    834.1,
+    498.6,
+    1084.2,
+    583.0
+   ],
+   "ink_bbox_last_frame": [
+    837.6,
+    499.5,
+    1080.3,
+    581.4
+   ],
+   "center_x_frac": 0.5006,
+   "center_y_frac": 0.5017,
+   "height_px": 84.4,
+   "width_px": 250.1,
+   "scale_last_over_first": 0.9701,
+   "scale_track": [
+    1.0,
+    0.9912,
+    0.9839,
+    0.9785,
+    0.9732,
+    0.9701
+   ],
+   "registration_score_mean": 0.94,
+   "occluded_by_foreground": false,
+   "spans_cut": false,
+   "cuts_inside": [],
+   "lighting_jumps_inside": [],
+   "effective_fill_rgb_measured": [
+    232,
+    227,
+    226
+   ],
+   "blend_test": {
+    "edge_pair_fit_I_in_eq_a_plus_b_I_out": [
+     [
+      0.887,
+      -0.948
+     ],
+     [
+      0.866,
+      -0.954
+     ],
+     [
+      0.875,
+      -0.988
+     ]
+    ],
+    "rmse_difference": 0.1322,
+    "rmse_normal": 0.5302,
+    "alpha_if_difference": 0.944,
+    "alpha_if_normal": 0.492,
+    "corr_inside_vs_outside_luma": -0.967,
+    "bg_luma_p5_p95": [
+     0.073,
+     0.791
+    ]
+   },
+   "edge_profile": {
+    "alpha_per_frame_min_max": [
+     0.923,
+     0.952
+    ],
+    "blur_sigma_px_median": 0.47
+   }
+  },
+  {
+   "id": "w24",
+   "text": "end",
+   "font_class": "sans",
+   "first_frame": 132,
+   "last_frame": 136,
+   "n_frames": 5,
+   "t_start_s": 5.458,
+   "t_end_s": 5.667,
+   "shot": 16,
+   "entrance": "cut",
+   "exit": "cut",
+   "blend": "difference",
+   "fill_rgb": [
+    255,
+    255,
+    255
+   ],
+   "opacity": 1.0,
+   "ink_bbox_first_frame": [
+    869.2,
+    497.8,
+    1045.6,
+    581.6
+   ],
+   "ink_bbox_last_frame": [
+    868.3,
+    497.3,
+    1045.6,
+    581.5
+   ],
+   "center_x_frac": 0.4997,
+   "center_y_frac": 0.5006,
+   "height_px": 83.8,
+   "width_px": 176.4,
+   "scale_last_over_first": 1.0051,
+   "scale_track": [
+    1.0,
+    0.9999,
+    1.0227,
+    1.0051,
+    1.0051
+   ],
+   "registration_score_mean": 0.666,
+   "occluded_by_foreground": false,
+   "spans_cut": false,
+   "cuts_inside": [],
+   "lighting_jumps_inside": [],
+   "effective_fill_rgb_measured": [
+    213,
+    222,
+    227
+   ],
+   "blend_test": {
+    "edge_pair_fit_I_in_eq_a_plus_b_I_out": [
+     [
+      0.721,
+      -0.73
+     ],
+     [
+      0.801,
+      -0.881
+     ],
+     [
+      0.813,
+      -0.871
+     ]
+    ],
+    "rmse_difference": 0.1445,
+    "rmse_normal": 0.174,
+    "alpha_if_difference": 0.717,
+    "alpha_if_normal": -0.153,
+    "corr_inside_vs_outside_luma": -0.826,
+    "bg_luma_p5_p95": [
+     0.396,
+     0.641
+    ]
+   },
+   "edge_profile": {
+    "alpha_per_frame_min_max": [
+     1.351,
+     1.352
+    ],
+    "blur_sigma_px_median": 0.53
+   }
+  },
+  {
+   "id": "w25",
+   "text": "i'm",
+   "font_class": "sans",
+   "first_frame": 137,
+   "last_frame": 139,
+   "n_frames": 3,
+   "t_start_s": 5.667,
+   "t_end_s": 5.792,
+   "shot": 17,
+   "entrance": "cut",
+   "exit": "cut",
+   "blend": "difference",
+   "fill_rgb": [
+    255,
+    255,
+    255
+   ],
+   "opacity": 1.0,
+   "ink_bbox_first_frame": [
+    893.9,
+    499.0,
+    1023.0,
+    579.1
+   ],
+   "ink_bbox_last_frame": [
+    894.1,
+    499.1,
+    1022.8,
+    579.0
+   ],
+   "center_x_frac": 0.5002,
+   "center_y_frac": 0.5,
+   "height_px": 80.1,
+   "width_px": 129.1,
+   "scale_last_over_first": 0.9982,
+   "scale_track": [
+    1.0,
+    0.9998,
+    0.9982
+   ],
+   "registration_score_mean": 0.969,
+   "occluded_by_foreground": false,
+   "spans_cut": false,
+   "cuts_inside": [],
+   "lighting_jumps_inside": [],
+   "effective_fill_rgb_measured": [
+    255,
+    249,
+    255
+   ],
+   "blend_test": {
+    "edge_pair_fit_I_in_eq_a_plus_b_I_out": [
+     [
+      0.976,
+      0.011
+     ],
+     [
+      0.959,
+      0.004
+     ],
+     [
+      0.978,
+      0.003
+     ]
+    ],
+    "rmse_difference": 0.0835,
+    "rmse_normal": 0.0152,
+    "alpha_if_difference": 0.975,
+    "alpha_if_normal": 0.971,
+    "corr_inside_vs_outside_luma": 0.037,
+    "bg_luma_p5_p95": [
+     0.0,
+     0.026
+    ]
+   },
+   "edge_profile": {
+    "alpha_per_frame_min_max": [
+     0.967,
+     0.969
+    ],
+    "blur_sigma_px_median": 0.45
+   }
+  },
+  {
+   "id": "w26",
+   "text": "winning",
+   "font_class": "sans",
+   "first_frame": 140,
+   "last_frame": 144,
+   "n_frames": 5,
+   "t_start_s": 5.792,
+   "t_end_s": 6.0,
+   "shot": 17,
+   "entrance": "cut",
+   "exit": "cut",
+   "blend": "difference",
+   "fill_rgb": [
+    255,
+    255,
+    255
+   ],
+   "opacity": 1.0,
+   "ink_bbox_first_frame": [
+    772.8,
+    500.0,
+    1139.2,
+    602.1
+   ],
+   "ink_bbox_last_frame": [
+    773.5,
+    500.1,
+    1138.5,
+    601.8
+   ],
+   "center_x_frac": 0.499,
+   "center_y_frac": 0.5112,
+   "height_px": 102.1,
+   "width_px": 366.4,
+   "scale_last_over_first": 0.996,
+   "scale_track": [
+    1.0,
+    0.999,
+    0.9983,
+    0.9971,
+    0.996
+   ],
+   "registration_score_mean": 0.982,
+   "occluded_by_foreground": false,
+   "spans_cut": false,
+   "cuts_inside": [],
+   "lighting_jumps_inside": [],
+   "effective_fill_rgb_measured": [
+    255,
+    250,
+    255
+   ],
+   "blend_test": {
+    "edge_pair_fit_I_in_eq_a_plus_b_I_out": [
+     [
+      0.975,
+      0.102
+     ],
+     [
+      0.958,
+      -0.028
+     ],
+     [
+      0.972,
+      0.039
+     ]
+    ],
+    "rmse_difference": 0.0195,
+    "rmse_normal": 0.0135,
+    "alpha_if_difference": 0.978,
+    "alpha_if_normal": 0.968,
+    "corr_inside_vs_outside_luma": 0.005,
+    "bg_luma_p5_p95": [
+     0.0,
+     0.022
+    ]
+   },
+   "edge_profile": {
+    "alpha_per_frame_min_max": [
+     0.981,
+     0.982
+    ],
+    "blur_sigma_px_median": 0.48
+   }
+  },
+  {
+   "id": "w27",
+   "text": "and",
+   "font_class": "sans",
+   "first_frame": 145,
+   "last_frame": 147,
+   "n_frames": 3,
+   "t_start_s": 6.0,
+   "t_end_s": 6.125,
+   "shot": 17,
+   "entrance": "cut",
+   "exit": "cut",
+   "blend": "difference",
+   "fill_rgb": [
+    255,
+    255,
+    255
+   ],
+   "opacity": 1.0,
+   "ink_bbox_first_frame": [
+    869.8,
+    498.8,
+    1043.3,
+    580.1
+   ],
+   "ink_bbox_last_frame": [
+    869.9,
+    498.9,
+    1043.2,
+    580.0
+   ],
+   "center_x_frac": 0.4992,
+   "center_y_frac": 0.5004,
+   "height_px": 81.3,
+   "width_px": 173.5,
+   "scale_last_over_first": 0.9986,
+   "scale_track": [
+    1.0,
+    0.999,
+    0.9986
+   ],
+   "registration_score_mean": 0.986,
+   "occluded_by_foreground": false,
+   "spans_cut": false,
+   "cuts_inside": [],
+   "lighting_jumps_inside": [],
+   "effective_fill_rgb_measured": [
+    252,
+    246,
+    254
+   ],
+   "blend_test": {
+    "edge_pair_fit_I_in_eq_a_plus_b_I_out": [
+     [
+      0.974,
+      0.037
+     ],
+     [
+      0.957,
+      0.062
+     ],
+     [
+      0.972,
+      0.059
+     ]
+    ],
+    "rmse_difference": 0.022,
+    "rmse_normal": 0.0151,
+    "alpha_if_difference": 0.978,
+    "alpha_if_normal": 0.968,
+    "corr_inside_vs_outside_luma": 0.028,
+    "bg_luma_p5_p95": [
+     0.0,
+     0.038
+    ]
+   },
+   "edge_profile": {
+    "alpha_per_frame_min_max": [
+     0.975,
+     0.977
+    ],
+    "blur_sigma_px_median": 0.49
+   }
+  },
+  {
+   "id": "w28",
+   "text": "Regardless",
+   "font_class": "script",
+   "first_frame": 148,
+   "last_frame": 163,
+   "n_frames": 16,
+   "t_start_s": 6.125,
+   "t_end_s": 6.792,
+   "shot": 18,
+   "entrance": "cut",
+   "exit": "end_of_video (hard end)",
+   "blend": "difference",
+   "fill_rgb": [
+    255,
+    255,
+    255
+   ],
+   "opacity": 1.0,
+   "ink_bbox_first_frame": [
+    656.0,
+    451.3,
+    1298.3,
+    663.8
+   ],
+   "ink_bbox_last_frame": [
+    660.0,
+    452.7,
+    1293.6,
+    662.2
+   ],
+   "center_x_frac": 0.51,
+   "center_y_frac": 0.5172,
+   "height_px": 212.5,
+   "width_px": 642.3,
+   "scale_last_over_first": 0.9865,
+   "scale_track": [
+    1.0,
+    0.9991,
+    0.9982,
+    0.9975,
+    0.9966,
+    0.9952,
+    0.9941,
+    0.9933,
+    0.9924,
+    0.9913,
+    0.9899,
+    0.9889,
+    0.9882,
+    0.9874,
+    0.9865,
+    0.9865
+   ],
+   "registration_score_mean": 0.836,
+   "occluded_by_foreground": false,
+   "spans_cut": false,
+   "cuts_inside": [],
+   "lighting_jumps_inside": [],
+   "effective_fill_rgb_measured": [
+    245,
+    232,
+    230
+   ],
+   "blend_test": {
+    "edge_pair_fit_I_in_eq_a_plus_b_I_out": [
+     [
+      0.852,
+      -0.578
+     ],
+     [
+      0.849,
+      -0.761
+     ],
+     [
+      0.869,
+      -0.88
+     ]
+    ],
+    "rmse_difference": 0.1788,
+    "rmse_normal": 0.3022,
+    "alpha_if_difference": 0.854,
+    "alpha_if_normal": 0.695,
+    "corr_inside_vs_outside_luma": -0.703,
+    "bg_luma_p5_p95": [
+     0.021,
+     0.791
+    ]
+   },
+   "edge_profile": {
+    "alpha_per_frame_min_max": [
+     0.705,
+     0.713
+    ],
+    "blur_sigma_px_median": 0.49
+   }
+  }
+ ],
+ "renderer_recipe": [
+  "1. Per word: draw the text as a white (#FFFFFF) mask, anti-aliased, no stroke/shadow. Sans: Inter Display ExtraBold stand-in, 108 px (0.100*H), tracking -0.07 em, lowercase, centred, baseline at 0.537*H. Script: formal swash script, capitals ~250-272 px tall, centred.",
+  "2. Composite onto the footage with Difference: out = |fill - footage| (fill white -> 1-footage); pink #E28B8B fill for the 'at my Prime' shot; Normal white for 'Win'/'but i'.",
+  "3. Hard-cut words in/out on exact frames; next word appears on the very next frame.",
+  "4. Apply the shot's digital zoom to the composited frame (captions included), about the frame centre, exponential ease; punch-in +11..+13% (tau ~4 f) starting on each script word's first frame.",
+  "5. Stacked block variant: left-anchored, They/don't/wanna with 4-5 frame staggered blur(sigma 4-6 px -> 0)+fade(0 -> 1) entrances over 5-7 frames.",
+  "6. No glitch layer, no occlusion matte (optional feature only: the reference never occludes)."
+ ],
+ "helper_images": [
+  "spec_timeline.png",
+  "spec_zoom.png",
+  "spec_difference_evidence.png",
+  "spec_prime_Prime.png",
+  "spec_prime_at_my.png",
+  "spec_they_block.png"
+ ],
+ "tools": "/home/user/SocialMediaMarketingSkill/lab/caption-style-01/tools/",
+ "confidence_notes": [
+  "Font families are not identified; Inter Display ExtraBold is a geometric stand-in (IoU ~0.87).",
+  "Opacity of words over near-black backgrounds cannot be distinguished between difference and normal numerically; they are assigned Difference by style consistency and by inverted bright objects where present.",
+  "They-block opacity/blur curves come from edge profiles over a busy, moving background (passers-by): +-0.1 opacity, +-1 px sigma. wanna before f095 is uncertain.",
+  "Absolute zoom level of each shot is unknown; only relative per-frame changes are measured (they are precise to ~0.2%)."
+ ]
+}

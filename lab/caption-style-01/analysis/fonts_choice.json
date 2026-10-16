@@ -1,0 +1,33 @@
+{
+ "sans": {
+  "file": "/home/user/SocialMediaMarketingSkill/lab/caption-style-01/fonts/inter/Inter-Variable.ttf",
+  "axes": {
+   "wght": 750,
+   "opsz": 32
+  },
+  "features": [
+   "ss07"
+  ],
+  "size": 113.5,
+  "track_em": -0.075,
+  "metrics_px": {
+   "x_height": 59.0,
+   "cap_H": 83.0,
+   "asc_l": 83.0,
+   "desc_g": 24.0
+  }
+ },
+ "script": {
+  "file": "/home/user/SocialMediaMarketingSkill/lab/caption-style-01/fonts/pinyonscript/PinyonScript-Regular.ttf",
+  "size_per_xheight": 2.6072289156626507,
+  "metrics_px_at_216": {
+   "x_height": 72.0,
+   "asc_h": 169.0,
+   "desc_g": 83.0,
+   "cap_P": 149.0,
+   "cap_W": 153.0,
+   "cap_R": 148.0,
+   "cap_T": 161.0
+  }
+ }
+}
