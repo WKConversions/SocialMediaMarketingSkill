@@ -1,0 +1,15 @@
+# Media and generated files stay out of git
+*.mp4
+*.mov
+*.webm
+*.mkv
+*.wav
+*.m4a
+lab/**/frames/
+lab/**/masks/
+lab/**/footage/
+__pycache__/
+# Third-party reference material and generated images stay local
+lab/**/ref/
+lab/**/*.png
+lab/**/*.jpg
