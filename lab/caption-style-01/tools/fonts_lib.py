@@ -78,10 +78,27 @@ def render_word(font, text, tracking_px=0.0, color=255, pad=20, features=None):
     return crop, base - (y0 - pad)
 
 
+def ink(font, text, features=None):
+    """ink box (x0, top, x1, bottom) relative to pen origin at baseline; floats in px."""
+    size = font.size
+    W = int(font.getlength(text) + 4 * size)
+    im = Image.new('L', (W, 4 * size), 0)
+    d = ImageDraw.Draw(im)
+    ox, oy = 2 * size, 3 * size
+    d.text((ox, oy), text, font=font, fill=255, anchor='ls', features=features)
+    a = np.asarray(im).astype(np.float32) / 255
+    cols = a.sum(axis=0); rows = a.sum(axis=1)
+    xs = np.nonzero(cols > 0.02)[0]; ys = np.nonzero(rows > 0.02)[0]
+    # sub-pixel edges from partial coverage of the outermost columns
+    x0 = xs.min() + (1 - min(1, a[:, xs.min()].max())) - ox
+    x1 = xs.max() + min(1, a[:, xs.max()].max()) - ox
+    return x0, oy - ys.min(), x1, ys.max() + 1 - oy
+
+
 def glyph_metrics(font, ch):
-    l, t, r, b = font.getbbox(ch, anchor='ls')
+    x0, top, x1, bottom = ink(font, ch)
     adv = font.getlength(ch)
-    return dict(lsb=l, rsb=adv - r, w=r - l, top=-t, bottom=b, adv=adv)
+    return dict(lsb=x0, rsb=adv - x1, w=x1 - x0, top=top, bottom=bottom, adv=adv)
 
 
 def ref_crop(n, box):

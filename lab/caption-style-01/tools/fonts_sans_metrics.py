@@ -11,8 +11,7 @@ def stem_width(font, ch='l'):
     d = ImageDraw.Draw(im)
     d.text((S // 2, S), ch, font=font, fill=255, anchor='ls')
     a = np.asarray(im) > 127
-    xh = font.getbbox('x', anchor='ls')
-    y = S - int(0.5 * (-xh[1]))
+    y = S - int(0.5 * ink(font, 'x')[1])
     row = a[y]
     xs = np.nonzero(row)[0]
     # first run width
@@ -26,9 +25,9 @@ def stem_width(font, ch='l'):
 
 def metrics(path, axes):
     f = load(path, S, axes)
-    xb = f.getbbox('x', anchor='ls'); xh = -xb[1]
-    lb = f.getbbox('l', anchor='ls'); asc = -lb[1]
-    gb = f.getbbox('g', anchor='ls'); desc = gb[3]
+    xh = ink(f, 'x')[1]
+    asc = ink(f, 'l')[1]
+    desc = ink(f, 'g')[3]
     stem = stem_width(f, 'l')
     n = glyph_metrics(f, 'n'); i = glyph_metrics(f, 'i'); l = glyph_metrics(f, 'l')
     k = xh / REF['xh']  # scale factor render px -> ref px is 1/k
@@ -49,7 +48,8 @@ if __name__ == '__main__':
     for fam in CANDS_SANS:
         p = font_path(fam)
         ax = axes_info(p)
-        names = [a[0] for a in ax]
+        names = [a[0].decode() if isinstance(a[0], bytes) else a[0] for a in ax]
+        ax = [(nm,) + tuple(a[1:]) for nm, a in zip(names, ax)]
         wmin = min([a[1] for a in ax if a[0] in ('Weight',)] or [400])
         wmax = max([a[3] for a in ax if a[0] in ('Weight',)] or [400])
         best = None
