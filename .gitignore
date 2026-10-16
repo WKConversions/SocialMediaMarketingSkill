@@ -17,3 +17,4 @@ lab/**/cache/
 *.npy
 lab/**/downloads/
 lab/**/cache_*.json
+lab/**/*.render.json
