@@ -16,3 +16,4 @@ lab/**/*.jpg
 lab/**/cache/
 *.npy
 lab/**/downloads/
+lab/**/cache_*.json
