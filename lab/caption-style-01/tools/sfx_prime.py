@@ -18,13 +18,20 @@ SR = 48000
 rng = np.random.default_rng(7)
 
 # (time s, class, extras) taken from the quick render's caption plan
+# Hand-placed so it never becomes a pattern: about a third of the word changes stay silent, no sound type
+# twice in a row, accents on phrase starts and the script words. (time s, kind, options)
 EVENTS = [
-    (0.14, "sans", {}),
-    (0.94, "script", {"shimmer": True, "size": 1.0}),
-    (1.49, "sans", {}), (1.80, "sans", {}), (2.16, "sans", {}), (2.43, "sans", {}), (2.73, "sans", {}),
-    (2.93, "script", {"shimmer": False, "size": 0.8}),
-    (3.34, "sans", {}), (3.98, "sans", {}),
-    (4.27, "script", {"shimmer": True, "size": 1.25, "tail": True}),
+    (0.14, "shutter_dslr", {}),                                   # dit is een (opening)
+    (0.94, "script", {"burst": (5, 0.055, 0.022), "shimmer": True, "size": 1.0, "whoosh": True}),  # Testvideo
+    (1.49, None, {}),                                             # om te: silent
+    (1.80, "shutter_mirrorless", {}),                             # kijken
+    (2.16, None, {}),                                             # of jij: silent
+    (2.43, "film_ratchet", {}),                                   # goed
+    (2.73, None, {}),                                             # kan: silent
+    (2.93, "script", {"burst": (3, 0.045, 0.03), "shimmer": False, "size": 0.85}),  # Editen
+    (3.34, "shutter_double", {}),                                 # wat ik
+    (3.98, "shutter_mirrorless", {"pitch": 0.9}),                 # graag zou
+    (4.27, "script", {"burst": (6, 0.02, 0.06), "shimmer": True, "size": 1.25, "tail": True, "whoosh": True}),  # Willen: decelerating
 ]
 
 
@@ -106,6 +113,63 @@ def shimmer(size=1.0):
     return x / np.abs(x).max()
 
 
+# ---- camera family: shutters, clicks, ratchets, stutter bursts -------------------------------
+
+def mech_click(pitch=1.0, bright=1.0, decay=1.0):
+    """One mechanical click: a bright noise snap, a few short metal resonances and a small body thunk."""
+    n = int(0.06 * SR)
+    t = np.arange(n) / SR
+    snap = bandpass_noise(n, 1800 * pitch, 9000 * min(1.6, pitch * bright)) * np.exp(-t / (0.0022 * decay))
+    ring = sum(a * np.sin(2 * np.pi * f * pitch * t) * np.exp(-t / (d * decay))
+               for f, a, d in [(1150, 0.5, 0.009), (2650, 0.35, 0.006), (4300, 0.25 * bright, 0.004)])
+    body = np.sin(2 * np.pi * 190 * pitch * t) * np.exp(-t / (0.008 * decay)) * 0.5
+    x = snap + ring + body
+    return x / np.abs(x).max()
+
+
+def seq(clicks):
+    """clicks: list of (time s, sound, gain dB) -> one mono buffer."""
+    end = max(c[0] + len(c[1]) / SR for c in clicks)
+    out = np.zeros(int(end * SR) + 1)
+    for t0, snd, g in clicks:
+        i = int(t0 * SR)
+        out[i:i + len(snd)] += snd * db(g)
+    return out / np.abs(out).max()
+
+
+def shutter_dslr(p=1.0):
+    gap = rng.uniform(0.038, 0.055)                     # mirror up ... shutter/mirror down
+    return seq([(0, mech_click(p * 0.85, 0.8, 1.3), 0), (gap, mech_click(p * 1.1, 1.0, 1.0), -3)])
+
+
+def shutter_mirrorless(p=1.0):
+    return mech_click(p * 1.25, 1.3, 0.7)
+
+
+def shutter_double(p=1.0):
+    g = rng.uniform(0.07, 0.1)
+    return seq([(0, shutter_dslr(p), 0), (g, shutter_dslr(p * 1.04), -4)])
+
+
+def film_ratchet(p=1.0, teeth=5):
+    clicks, t = [], 0.0
+    for k in range(teeth):
+        clicks.append((t, mech_click(p * rng.uniform(1.3, 1.5), 0.7, 0.5), -2 * k * 0.6 + rng.uniform(-1.5, 0)))
+        t += rng.uniform(0.016, 0.024)
+    return seq(clicks)
+
+
+def stutter(n=5, first_gap=0.06, last_gap=0.025, p=1.0):
+    """Continuous-shooting burst; gaps go from first_gap to last_gap (accelerating if first > last)."""
+    clicks, t = [], 0.0
+    for k in range(n):
+        clicks.append((t, shutter_mirrorless(p * rng.uniform(0.95, 1.06)) if k % 2 else mech_click(p * rng.uniform(0.9, 1.05)),
+                       rng.uniform(-3, 0)))
+        if k < n - 1:
+            t += first_gap + (last_gap - first_gap) * k / max(1, n - 2)
+    return seq(clicks)
+
+
 def reverb(x, decay=0.45, length=1.4, wet=0.3):
     n = int(length * SR)
     t = np.arange(n) / SR
@@ -144,17 +208,25 @@ def write_wav(path, x):
 def main(out_path, duration, kit_dir):
     duration = float(duration)
     track = np.zeros((int(duration * SR) + SR, 2))
-    for i, (t, cls, ex) in enumerate(EVENTS):
-        if cls == "sans":
-            place(track, tick(rng.uniform(0.9, 1.12)), t, -15, pan=rng.uniform(-0.15, 0.15))
-        else:
-            size = ex.get("size", 1.0)
-            w = whoosh(0.3)
-            place(track, reverb(w, decay=0.25, wet=0.25), t - 0.3, -12 + 2 * (size - 1), pan=0.0)
-            h = hit(size)
-            place(track, reverb(h, decay=0.6 if ex.get("tail") else 0.3, wet=0.35 if ex.get("tail") else 0.2), t, -5 + 3 * (size - 1))
-            if ex.get("shimmer"):
-                place(track, reverb(shimmer(size), decay=0.5, wet=0.4), t + 0.01, -14)
+    makers = {"shutter_dslr": shutter_dslr, "shutter_mirrorless": shutter_mirrorless,
+              "shutter_double": shutter_double, "film_ratchet": film_ratchet}
+    for t, kind, ex in EVENTS:
+        if kind is None:
+            continue
+        pan = rng.uniform(-0.3, 0.3)
+        if kind != "script":
+            snd = makers[kind](ex.get("pitch", 1.0) * rng.uniform(0.94, 1.06))
+            place(track, reverb(snd, decay=0.12, wet=0.12), t + rng.uniform(-0.008, 0.004), -9 + rng.uniform(-2, 1.5), pan)
+            continue
+        size = ex.get("size", 1.0)
+        n, g0, g1 = ex["burst"]
+        burst = stutter(n, g0, g1, p=rng.uniform(0.95, 1.05))
+        place(track, reverb(burst, decay=0.15, wet=0.15), t - len(burst) / SR + 0.012, -10, pan)   # burst lands on the word
+        if ex.get("whoosh"):
+            place(track, reverb(whoosh(0.3), decay=0.25, wet=0.25), t - 0.3, -17)
+        place(track, reverb(hit(size), decay=0.6 if ex.get("tail") else 0.3, wet=0.35 if ex.get("tail") else 0.2), t, -6 + 3 * (size - 1))
+        if ex.get("shimmer"):
+            place(track, reverb(shimmer(size), decay=0.5, wet=0.4), t + 0.01, -16)
     track = track[: int(duration * SR)]
     fade = int(0.12 * SR)
     track[-fade:] *= np.linspace(1, 0, fade)[:, None]
@@ -163,6 +235,11 @@ def main(out_path, duration, kit_dir):
     import os
     os.makedirs(kit_dir, exist_ok=True)
     write_wav(f"{kit_dir}/tick.wav", tick() * db(-6))
+    for name, fn in [("shutter_dslr", shutter_dslr), ("shutter_mirrorless", shutter_mirrorless),
+                     ("shutter_double", shutter_double), ("film_ratchet", film_ratchet)]:
+        write_wav(f"{kit_dir}/{name}.wav", reverb(fn(), decay=0.12, wet=0.12) * db(-4))
+    write_wav(f"{kit_dir}/stutter_accel.wav", reverb(stutter(5, 0.055, 0.022), decay=0.15, wet=0.15) * db(-4))
+    write_wav(f"{kit_dir}/stutter_decel.wav", reverb(stutter(6, 0.02, 0.06), decay=0.15, wet=0.15) * db(-4))
     write_wav(f"{kit_dir}/whoosh.wav", reverb(whoosh(0.3), decay=0.25, wet=0.25) * db(-3))
     write_wav(f"{kit_dir}/hit.wav", reverb(hit(1.0), wet=0.2) * db(-3))
     write_wav(f"{kit_dir}/hit_tail.wav", reverb(hit(1.25), decay=0.6, wet=0.35) * db(-3))
