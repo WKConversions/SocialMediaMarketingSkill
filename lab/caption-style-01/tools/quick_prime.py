@@ -6,7 +6,7 @@ with an Imperial Script capital for emphasis words, hard cuts between words,
 a ~12% punch-in zoom on every script word, and one script word behind the
 speaker's head using the subject masks.
 
-Usage: python3 quick_prime.py CLIP.mp4 MASK_DIR OUT.mp4
+Usage: python3 quick_prime.py CLIP.mp4 MASK_DIR OUT.mp4 [PLAN.json]
 """
 import subprocess
 import sys
@@ -107,7 +107,7 @@ def main(clip, mask_dir, out):
                             "-i", clip, "-map", "0:v", "-map", "1:a", "-vf", "scale=out_color_matrix=bt709",
                             "-c:v", "libx264", "-crf", "16", "-preset", "medium", "-pix_fmt", "yuv420p",
                             "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709",
-                            "-c:a", "copy", "-shortest", "-movflags", "+faststart", out], stdin=subprocess.PIPE)
+                            "-c:a", "copy", "-movflags", "+faststart", out], stdin=subprocess.PIPE)
     n = 0
     while True:
         buf = dec.stdout.read(W * H * 3)
@@ -145,5 +145,14 @@ def main(clip, mask_dir, out):
     print(f"rendered {n} frames -> {out}")
 
 
+def load_plan(path):
+    """Plan JSON (shared with sfx_prime.py): text, start, end, class, fill (WHITE/PINK); always centred."""
+    import json
+    fills = {"WHITE": WHITE, "PINK": PINK}
+    return [(p["text"], p["start"], p["end"], p["class"], fills[p["fill"]], CENTRE, False) for p in json.load(open(path))]
+
+
 if __name__ == "__main__":
+    if len(sys.argv) > 4:
+        PLAN[:] = load_plan(sys.argv[4])
     main(*sys.argv[1:4])

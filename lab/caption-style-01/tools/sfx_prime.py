@@ -8,7 +8,7 @@ sparkle or chime sounds; keep everything mechanical/physical (camera clicks, who
   hit      sub-bass drop with a short attack, audible on phone speakers
 Writes each sound to a kit folder and a full SFX track aligned to the plan.
 
-Usage: python3 sfx_prime.py OUT_TRACK.wav DURATION_S KIT_DIR
+Usage: python3 sfx_prime.py OUT_TRACK.wav DURATION_S KIT_DIR [PLAN.json]
 """
 import sys
 import wave
@@ -296,5 +296,13 @@ def main(out_path, duration, kit_dir):
     print("sfx track:", out_path, f"peak {20*np.log10(np.abs(track).max()+1e-9):.1f} dBFS")
 
 
+def load_events(path):
+    """Use the same plan file as the caption renderer, so sounds always sit on the caption frames."""
+    import json
+    return [(p["start"], p["sfx"], p.get("sfx_opts", {})) for p in json.load(open(path))]
+
+
 if __name__ == "__main__":
+    if len(sys.argv) > 4:
+        EVENTS[:] = load_events(sys.argv[4])
     main(*sys.argv[1:4])

@@ -1,0 +1,138 @@
+[
+ {
+  "text": "dit is een",
+  "start": 0.036,
+  "end": 0.478,
+  "class": "sans",
+  "fill": "WHITE",
+  "sfx": "user_full",
+  "sfx_opts": {}
+ },
+ {
+  "text": "Testvideo",
+  "start": 0.478,
+  "end": 1.16,
+  "class": "script",
+  "fill": "PINK",
+  "sfx": "script",
+  "sfx_opts": {
+   "burst": [
+    4,
+    0.07,
+    0.035
+   ],
+   "size": 1.0,
+   "whoosh": true
+  }
+ },
+ {
+  "text": "om te",
+  "start": 1.16,
+  "end": 1.421,
+  "class": "sans",
+  "fill": "WHITE",
+  "sfx": null,
+  "sfx_opts": {}
+ },
+ {
+  "text": "kijken",
+  "start": 1.421,
+  "end": 1.723,
+  "class": "sans",
+  "fill": "WHITE",
+  "sfx": "user_click",
+  "sfx_opts": {}
+ },
+ {
+  "text": "of jij",
+  "start": 1.723,
+  "end": 2.124,
+  "class": "sans",
+  "fill": "WHITE",
+  "sfx": null,
+  "sfx_opts": {}
+ },
+ {
+  "text": "goed",
+  "start": 2.124,
+  "end": 2.365,
+  "class": "sans",
+  "fill": "WHITE",
+  "sfx": "user_full",
+  "sfx_opts": {
+   "pitch": 0.96
+  }
+ },
+ {
+  "text": "kan",
+  "start": 2.365,
+  "end": 2.566,
+  "class": "sans",
+  "fill": "WHITE",
+  "sfx": null,
+  "sfx_opts": {}
+ },
+ {
+  "text": "Editen",
+  "start": 2.566,
+  "end": 3.289,
+  "class": "script",
+  "fill": "WHITE",
+  "sfx": "script",
+  "sfx_opts": {
+   "burst": [
+    3,
+    0.055,
+    0.04
+   ],
+   "size": 0.85
+  }
+ },
+ {
+  "text": "wat ik",
+  "start": 3.289,
+  "end": 3.51,
+  "class": "sans",
+  "fill": "WHITE",
+  "sfx": "user_double",
+  "sfx_opts": {}
+ },
+ {
+  "text": "graag",
+  "start": 3.51,
+  "end": 3.791,
+  "class": "sans",
+  "fill": "WHITE",
+  "sfx": "user_click",
+  "sfx_opts": {
+   "pitch": 1.04
+  }
+ },
+ {
+  "text": "zou",
+  "start": 3.791,
+  "end": 3.951,
+  "class": "sans",
+  "fill": "WHITE",
+  "sfx": null,
+  "sfx_opts": {}
+ },
+ {
+  "text": "Willen",
+  "start": 3.951,
+  "end": 9.99,
+  "class": "script",
+  "fill": "WHITE",
+  "sfx": "script",
+  "sfx_opts": {
+   "burst": [
+    5,
+    0.03,
+    0.07
+   ],
+   "size": 1.25,
+   "tail": true,
+   "whoosh": true
+  }
+ }
+]

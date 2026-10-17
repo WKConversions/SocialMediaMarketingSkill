@@ -12,6 +12,15 @@ these on every video unless the client says otherwise for a specific project.
 - Small transcription errors in drafts are acceptable; don't spend extra time perfecting a draft
   transcript. Use the larger transcription model for final client videos.
 
+## Timing
+- Word timings come from forced alignment of the transcript to the audio (tools/align_words.py),
+  never from Whisper's word timestamps alone: those were 100-400 ms early on the first test.
+- Captions appear one frame before the word is spoken; sounds sit on the caption frames. Captions
+  and sounds read the same plan file so they can't drift apart.
+- Verify sync on the finished file (re-align the final audio, detect caption changes in the final
+  video) before sending anything.
+- Trim dead air before the first word to about 0.1 s.
+
 ## Sound
 - Never use magical, glowy, sparkle, shimmer or chime sounds, anywhere.
 - Caption sound = the client's own camera shutter (`lab/caption-style-01/assets/sfx/camera_shutter.wav`).
