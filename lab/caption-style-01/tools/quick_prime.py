@@ -25,19 +25,19 @@ WHITE = (1.0, 1.0, 1.0)
 PINK = (226 / 255, 139 / 255, 139 / 255)   # the reference's "Prime" fill
 
 # (text, start s, end s, class, fill, y_centre px, behind_subject)
-LOW = 1500                   # chin / lit jacket: Difference has something to react to
+CENTRE = H // 2              # Prime keeps every word in the centre of the frame, like the reference
 PLAN = [
-    ("dit is een", 0.14, 0.94, "sans", WHITE, LOW, False),
-    ("Testvideo", 0.94, 1.49, "script", PINK, 670, True),
-    ("om te", 1.49, 1.80, "sans", WHITE, LOW, False),
-    ("kijken", 1.80, 2.16, "sans", WHITE, LOW, False),
-    ("of jij", 2.16, 2.43, "sans", WHITE, LOW, False),
-    ("goed", 2.43, 2.73, "sans", WHITE, LOW, False),
-    ("kan", 2.73, 2.93, "sans", WHITE, LOW, False),
-    ("Editen", 2.93, 3.34, "script", WHITE, LOW - 20, False),
-    ("wat ik", 3.34, 3.98, "sans", WHITE, LOW, False),
-    ("graag zou", 3.98, 4.27, "sans", WHITE, LOW, False),
-    ("Willen", 4.27, 9.99, "script", WHITE, LOW - 20, False),
+    ("dit is een", 0.14, 0.94, "sans", WHITE, CENTRE, False),
+    ("Testvideo", 0.94, 1.49, "script", PINK, CENTRE, False),
+    ("om te", 1.49, 1.80, "sans", WHITE, CENTRE, False),
+    ("kijken", 1.80, 2.16, "sans", WHITE, CENTRE, False),
+    ("of jij", 2.16, 2.43, "sans", WHITE, CENTRE, False),
+    ("goed", 2.43, 2.73, "sans", WHITE, CENTRE, False),
+    ("kan", 2.73, 2.93, "sans", WHITE, CENTRE, False),
+    ("Editen", 2.93, 3.34, "script", WHITE, CENTRE, False),
+    ("wat ik", 3.34, 3.98, "sans", WHITE, CENTRE, False),
+    ("graag zou", 3.98, 4.27, "sans", WHITE, CENTRE, False),
+    ("Willen", 4.27, 9.99, "script", WHITE, CENTRE, False),
 ]
 SANS_PX = 112
 SANS_TRACK_EM = -0.07
