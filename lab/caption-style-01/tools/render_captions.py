@@ -11,6 +11,14 @@
 * plan.json is the per-caption plan: {"layout": ..., "words": [{"text", "start", "end", "class",
   "blend", "entrance", "behind_subject", "position"?, "zoom"?, "stack"?}, ...]} (a bare list works).
 
+Placement: layouts give named positions per class (e.g. talking_head: default = the reference's centred
+layout, chin = fallback, top_of_head = depth test). layout["safe_zone"] keeps every caption's ink box inside
+the zone on every frame it is visible, after the digital zoom (words are shrunk to fit the width, moved to
+fit the height). Script classes may set "stem_boost" (heavier shaded downstrokes, hairlines untouched).
+Timing: style["timing"] (hold until the next caption, max gap, min hold, min flash, lead-in, tail).
+Occlusion (opt-in, behind_subject): segmentation mask thresholded, eroded, edge decided by footage luma
+(subject_mask.edge_luma_gate) and feathered.
+
 Compositing happens per frame in float, display-referred sRGB (as After Effects / CSS mix-blend-mode):
     difference: out = B*(1-a) + |T - B|*a        normal: out = B*(1-a) + T*a
 with a = anti-aliased text alpha x entrance opacity x (1 - subject mask) for behind_subject words.
@@ -63,6 +71,25 @@ def interp_curve(values, u):
 
 def log(msg):
     print(msg, flush=True)
+
+
+def rank_filter(a, radius, op):
+    """Separable square max (op=np.maximum) or min (op=np.minimum) filter of `radius` px on a 2-D array."""
+    r = int(round(radius))
+    if r <= 0:
+        return a
+    fill = a.min() if op is np.maximum else a.max()
+    out = a
+    for axis in (0, 1):
+        n = out.shape[axis]
+        pad = [(0, 0), (0, 0)]
+        pad[axis] = (r, r)
+        p = np.pad(out, pad, constant_values=fill)
+        res = p.take(range(0, n), axis=axis)
+        for k in range(1, 2 * r + 1):
+            res = op(res, p.take(range(k, k + n), axis=axis))
+        out = res
+    return out
 
 
 # ------------------------------------------------------------------------------------------ video IO
@@ -126,6 +153,56 @@ def open_encoder(out, src, start, dur, info, rcfg):
 
 
 # ------------------------------------------------------------------------------------------ typesetting
+def stem_boost(a, size_px, cfg):
+    """Heavier shaded downstrokes without clogging the hairlines (roundhand contrast).
+
+    A morphological opening with a round pen keeps only strokes at least `open_em` wide (the stems);
+    those are grown by `grow_em` in total and merged back, so hairlines and joins stay as drawn.
+    `thin_em` (optional) first erodes everything by that total width, for finer hairlines. Widths are
+    in em of the font size being drawn (`size_px`, supersampled pixels). Uses Euclidean distance
+    transforms (scipy) for round, anti-aliased results; falls back to square rank filters."""
+    ys, xs = np.nonzero(a > 0)
+    if len(xs) == 0:
+        return a
+    r_thin = cfg.get('thin_em', 0.0) * size_px / 2
+    r_open = cfg.get('open_em', 0.03) * size_px / 2
+    r_grow = cfg.get('grow_em', 0.0) * size_px / 2
+    m = int(math.ceil(r_open + r_grow + 3))
+    y0, y1 = max(ys.min() - m, 0), min(ys.max() + 1 + m, a.shape[0])
+    x0, x1 = max(xs.min() - m, 0), min(xs.max() + 1 + m, a.shape[1])
+    crop = a[y0:y1, x0:x1].astype(np.float32) / 255.0
+    try:
+        from scipy.ndimage import distance_transform_edt as edt
+    except ImportError:                                   # square pen fallback
+        u8 = (crop * 255).astype(np.uint8)
+        base = rank_filter(u8, r_thin, np.minimum) if r_thin >= 0.5 else u8
+        stems = rank_filter(rank_filter(base, r_open, np.minimum), r_open, np.maximum)
+        out = np.maximum(base, rank_filter(stems, r_grow, np.maximum)) if r_grow >= 0.5 else base
+    else:
+        # signed distance to the glyph edge (sub-pixel via the anti-aliased coverage)
+        inside = crop >= 0.5
+        sd = np.where(inside, edt(inside) - 0.5, -(edt(~inside) - 0.5)) + (crop - 0.5)
+        if r_thin >= 0.25:
+            sd = sd - r_thin
+        base = np.clip(sd + 0.5, 0, 1)
+        # strokes just above the threshold get little extra weight, strokes ramp_em wider get all of it
+        # (a hard threshold leaves 'beads' where a medium stroke briefly crosses it)
+        r_ramp = cfg.get('ramp_em', 0.0) * size_px / 2
+        levels = max(1, int(cfg.get('ramp_levels', 4))) if r_ramp > 0 else 1
+        grown = np.zeros_like(base)
+        for j in range(levels):
+            t = r_open + (r_ramp * j / max(levels - 1, 1) if levels > 1 else 0.0)
+            core = sd >= t                                # centres of a round pen of radius t
+            if not core.any():
+                break
+            g = r_grow * (j + 1) / levels
+            grown = np.maximum(grown, np.clip(t + g - edt(~core) + 0.5, 0, 1))
+        out = (np.maximum(base, grown) * 255 + 0.5).astype(np.uint8)
+    res = a.copy()
+    res[y0:y1, x0:x1] = out
+    return res
+
+
 class Rendered:
     """A word rendered once: float alpha (1x), baseline row and ink box inside the alpha."""
 
@@ -254,6 +331,9 @@ class Typesetter:
         if shear:
             k = math.tan(math.radians(shear))
             im = im.transform(im.size, Image.AFFINE, (1, k, -k * by, 0, 1, 0), resample=Image.BICUBIC)
+        boost = c.get('stem_boost')
+        if boost:
+            im = Image.fromarray(stem_boost(np.asarray(im), S, boost))
         a = np.asarray(im)
         ys, xs = np.nonzero(a > 0)
         if len(xs) == 0:
@@ -296,7 +376,13 @@ class Masks:
             return None
         return np.asarray(Image.open(p).convert('L'))
 
-    def get(self, frame, size):
+    def get(self, frame, size, rgb=None):
+        """Soft occlusion matte (1 = subject) for `frame` at `size`.
+
+        Steps (all from style["subject_mask"]): threshold the segmentation mask, erode it by erode_px
+        (segmentation masks run a few px proud of the hair), optionally let the footage decide the edge
+        (edge_luma_gate: inside a band_px rim of the mask, only pixels brighter than the dark background
+        count as subject, so the letters tuck exactly under the lit hair), then feather by feather_px."""
         if frame in self._cache:
             return self._cache[frame]
         m = self.raw(frame)
@@ -306,12 +392,20 @@ class Masks:
             im = Image.fromarray(m)
             if im.size != size:
                 im = im.resize(size, Image.BILINEAR)
-            f = self.cfg.get('feather_px', 0)
-            if f:
-                im = im.filter(ImageFilter.GaussianBlur(f))
             a = np.asarray(im, np.float32) / 255.0
             lo, hi = self.cfg.get('threshold_lo', 0.0), self.cfg.get('threshold_hi', 1.0)
-            out = np.clip((a - lo) / max(hi - lo, 1e-6), 0, 1)
+            soft = np.clip((a - lo) / max(hi - lo, 1e-6), 0, 1)
+            out = rank_filter(soft, self.cfg.get('erode_px', 0), np.minimum)
+            gate = self.cfg.get('edge_luma_gate')
+            if gate and rgb is not None:
+                core = rank_filter(soft, gate.get('band_px', 12), np.minimum)
+                L = rgb[..., 0] * 0.2126 + rgb[..., 1] * 0.7152 + rgb[..., 2] * 0.0722
+                g = np.clip((L - gate.get('luma_lo', 0.06)) / max(gate.get('luma_hi', 0.14) - gate.get('luma_lo', 0.06), 1e-6), 0, 1)
+                out = np.maximum(core, soft * g)
+            f = self.cfg.get('feather_px', 0)
+            if f:
+                out = np.asarray(Image.fromarray((out * 255 + 0.5).astype(np.uint8)).filter(ImageFilter.GaussianBlur(f)),
+                                 np.float32) / 255.0
         self._cache = {frame: out}      # keep only the current frame
         return out
 
@@ -347,6 +441,17 @@ def frame_spans(units, fps, total_frames, t0_frame, timing):
     starts = {i: rnd(units[i]['start'] * fr) for i in order}
     if order and timing.get('first_unit_lead_in_s') is not None and units[order[0]]['start'] <= timing['first_unit_lead_in_s']:
         starts[order[0]] = 0
+    # a caption squeezed to fewer than min_flash_s frames by the next one starts a little earlier,
+    # taking frames from its predecessor as long as that keeps min_hold_s
+    min_flash = rnd(timing.get('min_flash_s', 0.0) * fr)
+    if min_flash > 1:
+        seq = [i for i in order if not units[i].get('stack')]
+        for n in range(1, len(seq) - 1):
+            i, prev, nxt = seq[n], seq[n - 1], seq[n + 1]
+            short = min_flash - (starts[nxt] - starts[i])
+            if short > 0:
+                room = starts[i] - (starts[prev] + min_hold)
+                starts[i] -= max(0, min(short, room))
     spans = {}
     for n, i in enumerate(order):
         u = units[i]
@@ -396,12 +501,45 @@ def resolve_layout(style, plan, args, W, H):
     return name, style['layouts'][name]
 
 
-def place_units(units, spans, ts, style, layout, W, H, masks):
+class SafeZone:
+    """Keeps every caption's ink box inside layout["safe_zone"] (fractions of the frame) on every frame
+    it is visible, *after* the digital zoom (which scales the composite about `origin`)."""
+
+    def __init__(self, cfg, zooms, origin, W, H):
+        self.cfg = cfg or {}
+        self.zooms, self.W, self.H = zooms, W, H
+        self.ox, self.oy = origin[0] * W, origin[1] * H
+
+    def zoom_range(self, span):
+        z = self.zooms[span[0]:max(span[1], span[0] + 1)]
+        return (float(z.min()), float(z.max())) if len(z) else (1.0, 1.0)
+
+    def max_width(self, span):
+        if not self.cfg:
+            return float('inf')
+        s = self.zoom_range(span)[1]
+        return (self.cfg.get('right', 1.0) - self.cfg.get('left', 0.0)) * self.W / max(s, 1e-6)
+
+    def shift_y(self, top, bottom, span):
+        """Vertical shift that brings the box [top, bottom] (pre-zoom rows) inside the zone at all zooms."""
+        if not self.cfg:
+            return 0.0
+        lo, hi = self.cfg.get('top', 0.0) * self.H, self.cfg.get('bottom', 1.0) * self.H
+        dy = 0.0
+        for s in self.zoom_range(span):
+            dy = min(dy, (self.oy + (hi - self.oy) / s) - bottom)      # bottom edge too low
+        for s in self.zoom_range(span):
+            dy = max(dy, (self.oy + (lo - self.oy) / s) - top)         # top edge too high
+        return dy
+
+
+def place_units(units, spans, ts, style, layout, W, H, masks, safe=None):
     """Compute where each caption sits (static per caption)."""
     sans_px = layout['sans_size_frac_of_height'] * H
     pad_px = max_blur_px(style, sans_px) * 3 + 2
     placed = [None] * len(units)
     stacks = {}
+    safe = safe or SafeZone(None, None, (0.5, 0.5), W, H)
     for i, u in enumerate(units):
         if u.get('stack'):
             stacks.setdefault(u['stack'], []).append(i)
@@ -412,7 +550,11 @@ def place_units(units, spans, ts, style, layout, W, H, masks):
         size = sans_px * style['classes'][cls].get('size_rel_sans', 1.0) * pos.get('size_scale', 1.0)
         r = ts.render(u['text'], cls, size, pad_px)
         fit = pos.get('fit_width')
-        maxw = layout.get('max_width_frac', 1.0) * W
+        mw = layout.get('max_width_frac', 1.0)
+        mw = mw.get(cls, mw.get('default', 1.0)) if isinstance(mw, dict) else mw
+        maxw = min(mw * W, safe.max_width(spans[i]))
+        if fit:
+            fit = [fit[0], min(fit[1], maxw / W)]
         target = None
         if fit and r.ink_w < fit[0] * W:
             target = fit[0] * W
@@ -421,8 +563,12 @@ def place_units(units, spans, ts, style, layout, W, H, masks):
         elif r.ink_w > maxw:
             target = maxw
         if target:
+            target = min(target, maxw)
             size *= target / max(r.ink_w, 1)
             r = ts.render(u['text'], cls, size, pad_px)
+            if r.ink_w > maxw + 1:                      # glyph rounding: one corrective step
+                size *= maxw / r.ink_w
+                r = ts.render(u['text'], cls, size, pad_px)
         cx = pos.get('x', 0.5) * W
         x = cx - (r.ink[0] + r.ink[2]) / 2.0
         anchor = pos.get('anchor', 'baseline')
@@ -440,7 +586,10 @@ def place_units(units, spans, ts, style, layout, W, H, masks):
             y = pos.get('y', 0.5) * H - (r.ink[1] + r.ink[3]) / 2.0
         else:
             y = pos.get('y', 0.5) * H - r.baseline
-        placed[i] = Placed(r, int(round(x)), int(round(y)))
+        dy = safe.shift_y(y + r.ink[1], y + r.ink[3], spans[i])
+        if abs(dy) >= 0.5:
+            u['_safe_shift_px'] = round(dy, 1)
+        placed[i] = Placed(r, int(round(x)), int(round(y + dy)))
     for gid, idx in stacks.items():
         idx.sort(key=lambda i: units[i]['start'])
         st = layout['stack']
@@ -469,6 +618,8 @@ def place_units(units, spans, ts, style, layout, W, H, masks):
         by1 = max(p[1] + r.ink[3] for p, r in zip(pos, lines))
         ax, ay = st['anchor']['x'] * W, st['anchor']['y'] * H
         ox, oy = ax - (bx0 + bx1) / 2.0, ay - (by0 + by1) / 2.0
+        block_span = (min(spans[i][0] for i in idx), max(spans[i][1] for i in idx))
+        oy += safe.shift_y(by0 + oy, by1 + oy, block_span)
         for k, i in enumerate(idx):
             placed[i] = Placed(lines[k], int(round(pos[k][0] + ox)), int(round(pos[k][1] + oy)))
             if not units[i].get('entrance') or units[i]['entrance'] == 'auto':
@@ -678,9 +829,11 @@ def main(argv=None):
         log('[render] warning: behind_subject words but no --masks folder; they will be drawn in front')
     spans = frame_spans(units, fps, info['frames'], 0, style.get('timing', {}))
     ts = Typesetter(style, style_dir)
-    placed, sans_px = place_units(units, spans, ts, style, layout, W, H, masks)
-    zooms = zoom_curve(units, spans, style, n_frames, t0_frame, fps)
     origin = style.get('zoom', {}).get('origin', [0.5, 0.5])
+    zooms_all = zoom_curve(units, spans, style, info['frames'], 0, fps)      # absolute frame index
+    zooms = zooms_all[t0_frame:t0_frame + n_frames]
+    safe = SafeZone(layout.get('safe_zone'), zooms_all, origin, W, H)
+    placed, sans_px = place_units(units, spans, ts, style, layout, W, H, masks, safe)
     blends = style['blends']
     entrances = style.get('entrances', {})
     for i, u in enumerate(units):
@@ -691,7 +844,8 @@ def main(argv=None):
         p = placed[i]
         log(f'  {u["text"]:>12s} [{u["class"]:6s}] frames {spans[i][0]:3d}-{spans[i][1] - 1:3d} blend={u["blend"]} '
             f'entrance={u["entrance"]} behind={u["behind_subject"]} zoom={u.get("zoom")} '
-            f'ink {p.r.ink_w}px at x={p.x + p.r.ink[0]} baseline y={p.y + p.r.baseline:.0f}')
+            f'ink {p.r.ink_w}x{p.r.ink[3] - p.r.ink[1]}px at x={p.x + p.r.ink[0]} baseline y={p.y + p.r.baseline:.0f} '
+            f'({(p.y + p.r.baseline) / H:.3f} H)' + (f' safe-zone shift {u["_safe_shift_px"]}px' if u.get('_safe_shift_px') else ''))
 
     os.makedirs(os.path.dirname(os.path.abspath(args.out)) or '.', exist_ok=True)
     dur = n_frames / fr
@@ -720,12 +874,13 @@ def main(argv=None):
             if src_f not in history:
                 src_f = f
         frame = np.frombuffer(history[src_f], np.uint8).reshape(H, W, 3).astype(np.float32) / 255.0
+        plate = frame.copy() if masks is not None and any(units[i]['behind_subject'] for i in visible) else None
         rec = dict(frame=f, t=round(f / fr, 4), zoom=round(float(zooms[k]), 5), source_frame=src_f, words=[])
         for i in sorted(visible, key=lambda i: (units[i].get('behind_subject') is not True, units[i]['start'])):
             u, p, st = units[i], placed[i], states[i]
             a = unit_alpha(p, st)
             if u['behind_subject'] and masks is not None:
-                m = masks.get(src_f, (W, H))
+                m = masks.get(src_f, (W, H), plate)
                 if m is not None:
                     hh, ww = a.shape
                     sub = np.zeros_like(a)
@@ -766,7 +921,12 @@ def main(argv=None):
                        width=W, height=H, fps=fr, first_frame=t0_frame,
                        units=[dict(text=u['text'], cls=u['class'], blend=u['blend'], entrance=u['entrance'],
                                    behind_subject=u['behind_subject'], zoom=u.get('zoom'), first=spans[i][0],
-                                   last=spans[i][1] - 1, subject_top=u.get('_subject_top'))
+                                   last=spans[i][1] - 1, subject_top=u.get('_subject_top'),
+                                   zoom_range=[round(v, 4) for v in safe.zoom_range(spans[i])],
+                                   safe_shift_px=u.get('_safe_shift_px', 0.0),
+                                   box=[placed[i].x + placed[i].r.ink[0], placed[i].y + placed[i].r.ink[1],
+                                        placed[i].x + placed[i].r.ink[2], placed[i].y + placed[i].r.ink[3]],
+                                   baseline_y=round(placed[i].y + placed[i].r.baseline, 1))
                               for i, u in enumerate(units)],
                        frames=report), fh, indent=1)
     if args.contact_sheet:

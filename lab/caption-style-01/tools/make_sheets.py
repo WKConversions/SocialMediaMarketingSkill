@@ -132,9 +132,10 @@ def main():
         (69, 'REF f069 "still": sans over a dark room -> near-white letters',
          dark_pick[1], f'OURS f{dark_pick[1]:03d} "{dark_pick[2]}": sans over the darkest background'),
         (123, 'REF f123 "know": sans over sky and jacket -> letters invert per region',
-         bright_pick[1], f'OURS f{bright_pick[1]:03d} "{bright_pick[2]}": sans over the brightest background (lit chin/jacket)'),
+         bright_pick[1], f'OURS f{bright_pick[1]:03d} "{bright_pick[2]}": sans over the brightest background'),
         (32, 'REF f032 "Prime": swash script, pink #E28B8B difference',
-         pink_frame, f'OURS f{pink_frame:03d} "{pink["text"]}": script, pink difference, behind the head (depth test)'),
+         pink_frame, f'OURS f{pink_frame:03d} "{pink["text"]}": script, {"pink " if pink["blend"] != "difference" else ""}difference'
+                     + (', behind the subject (depth test)' if pink['behind_subject'] else ', in front, inverting what is behind it')),
         (13, 'REF f013 "even": watch/hand moving behind the letters',
          moving_pick[1], f'OURS f{moving_pick[1]:03d} "{moving_pick[2]}": most motion behind a caption'),
         (3, 'REF f003 "i\'m": "glitch" = footage on 2s + inverted LED jump (no RGB split)',
@@ -163,12 +164,25 @@ def main():
                     labelled(crop, our_lab, size=20)])
         rows.append(row)
     title = Image.new('RGB', (rows[0].width, 60), (22, 22, 22))
-    ImageDraw.Draw(title).text((10, 12), 'Prime caption style: reference (Toby de Boer reel, 16:9) vs ours on the client clip (9:16)',
+    from math import gcd
+    g = gcd(W, H)
+    aspect = f'{W // g}:{H // g}' if W // g < 50 else f'{W / H:.2f}:1'
+    ImageDraw.Draw(title).text((10, 12), f'Prime caption style: reference (Toby de Boer reel, 16:9) vs ours on '
+                               f'{os.path.basename(rep["video"])} ({W}x{H}, {aspect}, layout {rep.get("layout")})',
                                fill=(255, 255, 255), font=font(30))
     vcat([title] + rows).save(args.comparison)
     print('comparison:', args.comparison, [p[2] for p in pairs])
 
     # ---------- interaction strip: 6 consecutive frames of one caption while the footage moves behind it
+    def letter_change(r0, r1, text):
+        # mean |change| of our output inside the letters (pixels the caption altered) between two frames
+        b = [int(v) for v in word_rec(r0, text)['box']]
+        sl = (slice(max(b[1], 0), b[3]), slice(max(b[0], 0), b[2]))
+        o0, o1 = out_f[r0['frame']][sl].astype(np.float32), out_f[r1['frame']][sl].astype(np.float32)
+        m = (np.abs(o0 - src[r0['frame']][sl].astype(np.float32)).mean(2) > 60) & \
+            (np.abs(o1 - src[r1['frame']][sl].astype(np.float32)).mean(2) > 60)
+        return float(np.abs(o1 - o0).mean(2)[m].mean()) if m.sum() > 200 else 0.0
+
     best = None
     for u in units:
         if u['behind_subject']:
@@ -178,7 +192,7 @@ def main():
             win = rs[k:k + 6]
             if win[-1]['frame'] - win[0]['frame'] != 5:
                 continue
-            m = sum(motion_under(r, u['text']) for r in win[:-1])
+            m = sum(letter_change(a, b, u['text']) for a, b in zip(win[:-1], win[1:]))
             if best is None or m > best[0]:
                 best = (m, u['text'], [r['frame'] for r in win])
     _, text, fids = best
@@ -207,11 +221,22 @@ def main():
             d.rectangle([q * qw + 3, 4, (q + 1) * qw - 3, 40], fill=tuple(int(v) for v in c))
         swatches.append(sw)
     strip = vcat([hcat(tiles_out, gap=6), hcat(swatches, gap=6), hcat(tiles_src, gap=6)], gap=6)
-    title = Image.new('RGB', (strip.width, 92), (22, 22, 22))
+    zs = [next(x for x in frames if x['frame'] == f)['zoom'] for f in fids]
+    zlab = f'zoom {min(zs):.3f}-{max(zs):.3f}' if max(zs) - min(zs) >= 0.0005 else f'zoom {zs[0]:.3f}'
+    lines = [(f'Interaction: "{text}" over 6 consecutive frames ({zlab}, so almost only the footage moves)', 26, True, (255, 255, 255)),
+             ('row 1: our output | row 2: mean colour inside the letters, left->right quarters | row 3: the footage behind', 20, False, (200, 200, 200)),
+             (f'mean change inside the letters: {best[0] / 5:.1f} levels per frame', 20, False, (200, 200, 200))]
+    fitted = []
+    for txt, size, bold, col in lines:          # shrink each line until it fits the strip width
+        while size > 10 and font(size, bold).getlength(txt) > strip.width - 20:
+            size -= 1
+        fitted.append((txt, font(size, bold), col, size))
+    title = Image.new('RGB', (strip.width, sum(f[3] + 12 for f in fitted) + 8), (22, 22, 22))
     d = ImageDraw.Draw(title)
-    d.text((10, 8), f'Interaction: "{text}" over 6 consecutive frames (zoom = 1.0, so only the footage moves)', fill=(255, 255, 255), font=font(26))
-    d.text((10, 50), 'row 1: our output | row 2: mean colour inside the letters, left->right quarters | row 3: the footage behind',
-           fill=(200, 200, 200), font=font(20, False))
+    y = 8
+    for txt, fnt, col, size in fitted:
+        d.text((10, y), txt, fill=col, font=fnt)
+        y += size + 12
     vcat([title, strip], gap=0).save(args.interaction)
     print('interaction:', args.interaction, text, fids)
 

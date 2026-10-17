@@ -80,8 +80,12 @@ def hit(size=1.0):
     phase = 2 * np.pi * np.cumsum(freq) / SR
     sub = np.sin(phase) * np.exp(-t / (0.28 * size))
     sub = np.tanh(2.2 * sub) / np.tanh(2.2)          # harmonics so phones can hear it
-    knock = bandpass_noise(n, 120, 900) * np.exp(-t / 0.012)
-    x = sub + 0.35 * knock
+    # phone speakers barely play below ~150 Hz: add a mid-range thud and a click on top of the sub
+    thud_f = 110 + 90 * np.exp(-t / 0.03)
+    thud = np.sin(2 * np.pi * np.cumsum(thud_f) / SR) * np.exp(-t / 0.09)
+    knock = bandpass_noise(n, 150, 1200) * np.exp(-t / 0.015)
+    click = bandpass_noise(n, 2500, 6000) * np.exp(-t / 0.004)
+    x = 0.8 * sub + 0.9 * thud + 0.5 * knock + 0.35 * click
     return x / np.abs(x).max()
 
 
@@ -142,15 +146,15 @@ def main(out_path, duration, kit_dir):
     track = np.zeros((int(duration * SR) + SR, 2))
     for i, (t, cls, ex) in enumerate(EVENTS):
         if cls == "sans":
-            place(track, tick(rng.uniform(0.9, 1.12)), t, -29, pan=rng.uniform(-0.15, 0.15))
+            place(track, tick(rng.uniform(0.9, 1.12)), t, -15, pan=rng.uniform(-0.15, 0.15))
         else:
             size = ex.get("size", 1.0)
             w = whoosh(0.3)
-            place(track, reverb(w, decay=0.25, wet=0.25), t - 0.3, -23 + 2 * (size - 1), pan=0.0)
+            place(track, reverb(w, decay=0.25, wet=0.25), t - 0.3, -12 + 2 * (size - 1), pan=0.0)
             h = hit(size)
-            place(track, reverb(h, decay=0.6 if ex.get("tail") else 0.3, wet=0.35 if ex.get("tail") else 0.2), t, -15 + 4 * (size - 1))
+            place(track, reverb(h, decay=0.6 if ex.get("tail") else 0.3, wet=0.35 if ex.get("tail") else 0.2), t, -5 + 3 * (size - 1))
             if ex.get("shimmer"):
-                place(track, reverb(shimmer(size), decay=0.5, wet=0.4), t + 0.01, -26)
+                place(track, reverb(shimmer(size), decay=0.5, wet=0.4), t + 0.01, -14)
     track = track[: int(duration * SR)]
     fade = int(0.12 * SR)
     track[-fade:] *= np.linspace(1, 0, fade)[:, None]
