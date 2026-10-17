@@ -23,12 +23,15 @@ these on every video unless the client says otherwise for a specific project.
 
 ## Sound
 - Never use magical, glowy, sparkle, shimmer or chime sounds, anywhere.
-- Caption sound = the client's own camera shutter (`lab/caption-style-01/assets/sfx/camera_shutter.wav`).
-  Use it around caption moments: the full shutter, its final click alone, a double, and stutter
-  bursts built from its clicks into emphasis words.
-- Never let it become a pattern: leave about a third of word changes silent, never the same variant
-  twice in a row, and vary pitch, level and stereo position slightly on every use.
-- Align the loudest click of the shutter with the frame the caption appears on.
+- Caption sound = the client's own camera shutter (`lab/caption-style-01/assets/sfx/camera_shutter.wav`):
+  its final click on body words, the full shutter plus a short hit on script (emphasis) words.
+- A sound plays ONLY on the frame where a new caption appears. Its first audible sample starts on
+  that frame (not its loudest click). Nothing before a caption (no whooshes, no stutter run-ups,
+  no pre-roll) and nothing in between captions; tails stay short and fade out cleanly.
+- Don't spam: roughly half the captions get a sound (the first caption, the script words and a
+  few others); vary pitch and level slightly so it doesn't sound like a loop.
+- Verify on the rendered track that every sound onset matches a caption frame and that there are
+  no other sounds.
 - The effects must be clearly audible on a phone speaker; mix the voice to about -15 LUFS and the
   finished video to about -14 LUFS.
 

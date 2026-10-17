@@ -94,6 +94,7 @@ def hit(size=1.0):
     knock = bandpass_noise(n, 150, 1200) * np.exp(-t / 0.015)
     click = bandpass_noise(n, 2500, 6000) * np.exp(-t / 0.004)
     x = 0.8 * sub + 0.9 * thud + 0.5 * knock + 0.35 * click
+    x *= np.exp(-t / (0.12 * size)) ** 0.5 * np.clip((dur - t) / 0.08, 0, 1)   # fade fully out: no cut-off click
     return x / np.abs(x).max()
 
 
@@ -243,6 +244,20 @@ def place(track, sound, t0, gain_db, pan=0.0):
     track[i0:end] += sound[: end - i0] * db(gain_db)
 
 
+FPS = 30
+
+
+def onset(sound, rel_db=-30):
+    """Index of the first sample within rel_db of the sound's peak."""
+    mono = np.abs(sound if sound.ndim == 1 else sound.mean(axis=1))
+    return int(np.argmax(mono > mono.max() * db(rel_db)))
+
+
+def place_onset(track, sound, t, gain_db, pan=0.0):
+    """Place a sound so that its first audible sample lands exactly at time t."""
+    place(track, sound, t - onset(sound) / SR, gain_db, pan)
+
+
 def write_wav(path, x):
     x = np.clip(x, -1, 1)
     if x.ndim == 1:
@@ -258,22 +273,25 @@ def write_wav(path, x):
 def main(out_path, duration, kit_dir):
     duration = float(duration)
     track = np.zeros((int(duration * SR) + SR, 2))
-    makers = {"user_full": user_full, "user_click": user_click, "user_double": user_double}
+    # Client rule: a sound plays only on the frame a new caption appears, never before it and never
+    # in between. Each sound's first audible sample is placed on that frame (not its loudest click).
+    makers = {"user_full": user_full, "user_click": user_click}
+    last_kind = None
     for t, kind, ex in EVENTS:
         if kind is None:
             continue
-        pan = rng.uniform(-0.25, 0.25)
-        if kind != "script":
-            snd, sync = makers[kind](ex.get("pitch", 1.0) * rng.uniform(0.96, 1.04))
-            place(track, snd, t - sync, -6 + rng.uniform(-2, 1), pan)
-            continue
-        size = ex.get("size", 1.0)
-        n, g0, g1 = ex["burst"]
-        burst, last = user_stutter(n, g0, g1, p=rng.uniform(0.97, 1.03))
-        place(track, burst, t - last, -7, pan)                       # the burst's last click lands on the word
-        if ex.get("whoosh"):
-            place(track, reverb(whoosh(0.3), decay=0.25, wet=0.25), t - 0.3, -18)
-        place(track, reverb(hit(size), decay=0.6 if ex.get("tail") else 0.3, wet=0.35 if ex.get("tail") else 0.2), t, -6 + 3 * (size - 1))
+        frame_t = np.ceil(t * FPS - 1e-6) / FPS            # the caption becomes visible on this frame
+        pan = rng.uniform(-0.2, 0.2)
+        p = ex.get("pitch", 1.0) * rng.uniform(0.97, 1.03)
+        if kind == "script":
+            snd, _ = user_full(p)
+            place_onset(track, snd, frame_t, -6, pan)
+            size = ex.get("size", 1.0)
+            h = reverb(hit(size * 0.7), decay=0.25 if ex.get("tail") else 0.12, wet=0.18 if ex.get("tail") else 0.08, length=0.6)
+            place_onset(track, h, frame_t, -6 + 3 * (size - 1))
+        else:
+            snd, _ = makers[kind](p)
+            place_onset(track, snd, frame_t, -7 + rng.uniform(-1.5, 1), pan)
     track = track[: int(duration * SR)]
     fade = int(0.12 * SR)
     track[-fade:] *= np.linspace(1, 0, fade)[:, None]
