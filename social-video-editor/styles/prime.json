@@ -1,0 +1,154 @@
+{
+  "name": "Prime",
+  "description": "One caption at a time in the centre of the frame, white (first emphasis word pink) in a Difference blend so the letters invert whatever moves behind them. Body words in a heavy, tight, lowercase Inter; about one word in five is an emphasis word in Pinyon Script with an Imperial Script capital and a punch-in zoom. Every caption lands with the client's camera shutter (its biggest wave on the caption's first frame); emphasis words add a short hit. Approved by the client as v11 (lab/caption-style-01/out/user_v11.mp4).",
+  "units": "Pixel sizes are for a frame whose short side is reference_short_side_px; they scale with the output frame. Positions are fractions of the frame.",
+  "reference_short_side_px": 1080,
+
+  "fonts": {
+    "sans": {"file": "assets/fonts/inter/Inter-Variable.ttf", "axes": {"opsz": 32, "wght": 780}},
+    "script": {"file": "assets/fonts/pinyonscript/PinyonScript-Regular.ttf", "axes": {}},
+    "script_capital": {"file": "assets/fonts/imperialscript/ImperialScript-Regular.ttf", "axes": {}},
+    "note": "Free stand-ins chosen in lab/caption-style-01/analysis/fonts_choice.json: Inter for the reference's heavy grotesk, Pinyon Script lowercase with Imperial Script capitals for its swash script."
+  },
+
+  "colours": {
+    "white": "#FFFFFF",
+    "pink": "#E28B8B"
+  },
+
+  "classes": {
+    "sans": {
+      "font": "sans",
+      "size_px": 112,
+      "tracking_em": -0.07,
+      "case": "lower",
+      "note": "Glyphs are placed one by one: advance from pair widths (kerning) plus tracking."
+    },
+    "script": {
+      "font": "script",
+      "capital_font": "script_capital",
+      "draw_px": 200,
+      "capital_scale": 1.08,
+      "capital_overlap_em": 0.06,
+      "ink_height_px": 270,
+      "case": "capitalise",
+      "note": "Drawn at draw_px, cropped to its ink and scaled so the whole word is ink_height_px tall (capital included). The capital is drawn in Imperial Script at capital_scale x the size and the lowercase continues capital_overlap_em (of the size) into it."
+    }
+  },
+
+  "layout": {
+    "placement": "centre",
+    "x": 0.5,
+    "y": 0.5,
+    "anchor": "ink_box_centre",
+    "max_width_px": 960,
+    "note": "Every caption's ink box is centred on (x, y) of the frame, on every kind of footage, exactly like the reference reel. Nothing is ever placed behind the speaker. Words wider than max_width_px are scaled down to fit."
+  },
+
+  "blend": {
+    "mode": "difference",
+    "note": "out = B * (1 - a) + |C - B| * a in display-referred RGB, with a the anti-aliased text alpha and C the caption colour."
+  },
+
+  "render": {
+    "supersample": 2,
+    "video_codec": "libx264",
+    "crf": 16,
+    "preset": "medium",
+    "pix_fmt": "yuv420p",
+    "colour": "bt709"
+  },
+
+  "zoom": {
+    "on": "script",
+    "amount": 0.12,
+    "tau_s": 0.1333333,
+    "origin": [0.5, 0.5],
+    "min_visible": 0.0005,
+    "note": "Punch-in while an emphasis caption is on screen: scale(t) = 1 + amount * (1 - exp(-(t - start) / tau_s)) about the frame centre, applied to the composite (text scales with the footage). Snaps back to 1 when the next caption appears."
+  },
+
+  "timing": {
+    "caption_lead_frames": 1,
+    "hold_until_next_caption": true,
+    "note": "A caption starts caption_lead_frames before its first word (so it is visible 0-1 frame before the word is heard) and stays until the next caption starts; the last one stays to the end of the clip."
+  },
+
+  "grouping": {
+    "max_words": 3,
+    "min_frames": 5,
+    "note": "Emphasis words and content words stand alone; each run of function words between them is one caption (split evenly if longer than max_words). A caption that would be on screen for fewer than min_frames frames is merged into a neighbouring non-emphasis caption (function-word neighbours first), as long as the result has at most max_words words.",
+    "function_words": {
+      "nl": ["de", "het", "een", "en", "of", "maar", "want", "dus", "dat", "die", "dit", "deze", "wat", "wie", "waar", "wanneer", "hoe", "om", "te", "van", "voor", "met", "naar", "op", "in", "uit", "aan", "bij", "tot", "door", "over", "onder", "als", "dan", "ook", "nog", "al", "wel", "niet", "geen", "zo", "er", "hier", "daar", "ik", "je", "jij", "u", "hij", "zij", "ze", "we", "wij", "jullie", "mij", "me", "mijn", "jouw", "zijn", "haar", "ons", "onze", "hun", "hen", "men", "is", "ben", "bent", "was", "waren", "wordt", "worden", "word", "heb", "hebt", "heeft", "hadden", "had", "kan", "kun", "kunt", "kon", "konden", "zal", "zult", "zullen", "zou", "zouden", "moet", "moeten", "mag", "mogen", "wil", "wilt", "gaat", "ga", "gaan", "doe", "doet", "even"],
+      "en": ["a", "an", "the", "and", "or", "but", "so", "that", "this", "these", "those", "what", "who", "where", "when", "how", "to", "of", "for", "with", "from", "in", "on", "at", "by", "as", "than", "then", "also", "too", "not", "no", "i", "i'm", "im", "me", "my", "you", "your", "he", "she", "it", "its", "we", "us", "our", "they", "them", "their", "is", "am", "are", "was", "were", "be", "been", "being", "have", "has", "had", "do", "does", "did", "can", "could", "will", "would", "shall", "should", "may", "might", "must", "just", "very", "really", "yet", "still", "even", "out", "up", "off", "why", "don't", "doesn't", "didn't", "can't", "won't", "isn't", "aren't", "wasn't", "weren't", "i've", "i'll", "i'd", "you're", "you've", "you'll", "you'd", "he's", "she's", "it's", "we're", "we've", "they're", "they've", "that's", "there's", "what's", "let's", "gonna", "wanna"]
+    }
+  },
+
+  "emphasis": {
+    "every_n_words": 5,
+    "min_letters": 4,
+    "prefer_last_word": true,
+    "never_adjacent": true,
+    "fills": {"first": "pink", "others": "white"},
+    "sans_fill": "white",
+    "note": "About one word in every_n_words becomes an emphasis (script) word. Candidates are content words (not in the function-word list) with at least min_letters letters, ranked by letters x spoken duration: long words said slowly carry the meaning. The last word of the video goes first when it is a candidate (the payoff). Never two emphasis words in a row. The first emphasis word is pink, the others white; script words are capitalised, sans words lowercase."
+  },
+
+  "sfx": {
+    "sample_rate": 48000,
+    "seed": 7,
+    "track_fade_out_s": 0.12,
+    "shutter": {
+      "file": "assets/sfx/camera_shutter.wav",
+      "slice_s": [0.095, 0.30],
+      "fade_in_s": 0.004,
+      "fade_out_s": 0.03,
+      "align": "biggest_wave",
+      "every_caption": true,
+      "gain_db": -6.0,
+      "gain_jitter_db": [-1.5, 1.0],
+      "pitch_jitter": [0.98, 1.02],
+      "pan_jitter": [-0.2, 0.2],
+      "note": "The client's own shutter with all its clicks, on EVERY caption. Its biggest wave (loudest sample) lands exactly on the caption's first visible frame; the softer clicks come just before. Pitch, level and pan vary slightly per use so it never sounds like a loop."
+    },
+    "hit": {
+      "on": "script",
+      "align": "onset",
+      "onset_rel_db": -30,
+      "gain_db": -6.0,
+      "gain_db_per_size": 3.0,
+      "roles": {
+        "first": {"size": 1.0, "tail": false},
+        "middle": {"size": 0.85, "tail": false},
+        "last": {"size": 1.25, "tail": true}
+      },
+      "synth": {
+        "size_scale": 0.7,
+        "duration_s": 0.6,
+        "sub": {"f_start_hz": 95, "f_end_hz": 44, "glide_s": 0.06, "decay_s": 0.28, "drive": 2.2, "level": 0.8},
+        "thud": {"f_hz": 110, "f_glide_hz": 90, "glide_s": 0.03, "decay_s": 0.09, "level": 0.9},
+        "knock": {"band_hz": [150, 1200], "decay_s": 0.015, "level": 0.5},
+        "click": {"band_hz": [2500, 6000], "decay_s": 0.004, "level": 0.35},
+        "body_decay_s": 0.12,
+        "fade_out_s": 0.08
+      },
+      "reverb": {
+        "short": {"decay_s": 0.12, "wet": 0.08, "length_s": 0.6, "wet_gain": 3.0},
+        "tail": {"decay_s": 0.25, "wet": 0.18, "length_s": 0.6, "wet_gain": 3.0}
+      },
+      "note": "A short synthesised sub drop + mid thud + knock + click on emphasis words, starting (first audible sample within onset_rel_db of its peak) on the caption frame. Size by role among the emphasis words; the last one rings out (tail reverb). Level = gain_db + gain_db_per_size * (size - 1)."
+    },
+    "forbidden": "No magical, glowy, sparkle, shimmer or chime sounds, no whooshes or run-ups: sounds only where a new caption appears."
+  },
+
+  "mix": {
+    "sample_rate": 48000,
+    "voice_highpass_hz": 80,
+    "voice_lufs": -15.0,
+    "final_lufs": -14.0,
+    "limiter": {"limit": 0.79, "level": false, "latency": true},
+    "audio_codec": "aac",
+    "audio_bitrate": "256k",
+    "note": "Voice gets a fixed gain to voice_lufs (measured, not loudnorm); effects are added on top; the limiter MUST compensate its latency (without it every sound is 5 ms late)."
+  }
+}

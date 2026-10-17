@@ -1,0 +1,427 @@
+{
+ "language": "en",
+ "language_probability": 1.0,
+ "model": "large-v3-turbo",
+ "words": [
+  {
+   "word": "Use",
+   "raw": "Use",
+   "start": 0.0,
+   "end": 0.14,
+   "prob": 0.739
+  },
+  {
+   "word": "the",
+   "raw": "the",
+   "start": 0.14,
+   "end": 0.24,
+   "prob": 0.998
+  },
+  {
+   "word": "click",
+   "raw": "click",
+   "start": 0.24,
+   "end": 0.4,
+   "prob": 0.903
+  },
+  {
+   "word": "sound",
+   "raw": "sound",
+   "start": 0.4,
+   "end": 0.6,
+   "prob": 0.994
+  },
+  {
+   "word": "effect",
+   "raw": "effect",
+   "start": 0.6,
+   "end": 0.84,
+   "prob": 0.992
+  },
+  {
+   "word": "for",
+   "raw": "for",
+   "start": 0.84,
+   "end": 0.98,
+   "prob": 0.953
+  },
+  {
+   "word": "when",
+   "raw": "when",
+   "start": 0.98,
+   "end": 1.14,
+   "prob": 0.996
+  },
+  {
+   "word": "things",
+   "raw": "things",
+   "start": 1.14,
+   "end": 1.38,
+   "prob": 0.998
+  },
+  {
+   "word": "pop",
+   "raw": "pop",
+   "start": 1.38,
+   "end": 1.64,
+   "prob": 0.997
+  },
+  {
+   "word": "up",
+   "raw": "up",
+   "start": 1.64,
+   "end": 1.78,
+   "prob": 0.988
+  },
+  {
+   "word": "on",
+   "raw": "on",
+   "start": 1.78,
+   "end": 1.94,
+   "prob": 0.997
+  },
+  {
+   "word": "the",
+   "raw": "the",
+   "start": 1.94,
+   "end": 2.04,
+   "prob": 0.998
+  },
+  {
+   "word": "screen",
+   "raw": "screen.",
+   "start": 2.04,
+   "end": 2.36,
+   "prob": 1.0
+  },
+  {
+   "word": "Use",
+   "raw": "Use",
+   "start": 2.52,
+   "end": 2.66,
+   "prob": 0.992
+  },
+  {
+   "word": "the",
+   "raw": "the",
+   "start": 2.66,
+   "end": 2.76,
+   "prob": 0.988
+  },
+  {
+   "word": "flash",
+   "raw": "flash",
+   "start": 2.76,
+   "end": 3.0,
+   "prob": 0.984
+  },
+  {
+   "word": "sound",
+   "raw": "sound",
+   "start": 3.0,
+   "end": 3.16,
+   "prob": 0.982
+  },
+  {
+   "word": "effect",
+   "raw": "effect",
+   "start": 3.16,
+   "end": 3.34,
+   "prob": 0.996
+  },
+  {
+   "word": "for",
+   "raw": "for",
+   "start": 3.34,
+   "end": 3.48,
+   "prob": 0.997
+  },
+  {
+   "word": "quick",
+   "raw": "quick",
+   "start": 3.48,
+   "end": 3.68,
+   "prob": 0.993
+  },
+  {
+   "word": "cuts",
+   "raw": "cuts.",
+   "start": 3.68,
+   "end": 4.04,
+   "prob": 0.998
+  },
+  {
+   "word": "Use",
+   "raw": "Use",
+   "start": 4.2,
+   "end": 4.34,
+   "prob": 0.997
+  },
+  {
+   "word": "the",
+   "raw": "the",
+   "start": 4.34,
+   "end": 4.46,
+   "prob": 0.996
+  },
+  {
+   "word": "whoosh",
+   "raw": "whoosh",
+   "start": 4.46,
+   "end": 4.7,
+   "prob": 0.882
+  },
+  {
+   "word": "sound",
+   "raw": "sound",
+   "start": 4.7,
+   "end": 4.88,
+   "prob": 0.998
+  },
+  {
+   "word": "effect",
+   "raw": "effect",
+   "start": 4.88,
+   "end": 5.1,
+   "prob": 0.997
+  },
+  {
+   "word": "when",
+   "raw": "when",
+   "start": 5.1,
+   "end": 5.26,
+   "prob": 0.952
+  },
+  {
+   "word": "you",
+   "raw": "you",
+   "start": 5.26,
+   "end": 5.34,
+   "prob": 0.999
+  },
+  {
+   "word": "want",
+   "raw": "want",
+   "start": 5.34,
+   "end": 5.44,
+   "prob": 0.843
+  },
+  {
+   "word": "to",
+   "raw": "to",
+   "start": 5.44,
+   "end": 5.54,
+   "prob": 0.952
+  },
+  {
+   "word": "transition",
+   "raw": "transition",
+   "start": 5.54,
+   "end": 5.84,
+   "prob": 0.995
+  },
+  {
+   "word": "from",
+   "raw": "from",
+   "start": 5.84,
+   "end": 6.02,
+   "prob": 0.994
+  },
+  {
+   "word": "scene",
+   "raw": "scene",
+   "start": 6.02,
+   "end": 6.26,
+   "prob": 0.994
+  },
+  {
+   "word": "to",
+   "raw": "to",
+   "start": 6.26,
+   "end": 6.42,
+   "prob": 0.988
+  },
+  {
+   "word": "scene",
+   "raw": "scene.",
+   "start": 6.42,
+   "end": 6.72,
+   "prob": 0.999
+  },
+  {
+   "word": "Use",
+   "raw": "Use",
+   "start": 7.3,
+   "end": 7.62,
+   "prob": 0.997
+  },
+  {
+   "word": "the",
+   "raw": "the",
+   "start": 7.62,
+   "end": 7.72,
+   "prob": 0.999
+  },
+  {
+   "word": "glitch",
+   "raw": "glitch",
+   "start": 7.72,
+   "end": 7.88,
+   "prob": 0.988
+  },
+  {
+   "word": "sound",
+   "raw": "sound",
+   "start": 7.88,
+   "end": 8.06,
+   "prob": 0.99
+  },
+  {
+   "word": "effect",
+   "raw": "effect",
+   "start": 8.06,
+   "end": 8.3,
+   "prob": 0.998
+  },
+  {
+   "word": "whenever",
+   "raw": "whenever",
+   "start": 8.3,
+   "end": 8.5,
+   "prob": 0.975
+  },
+  {
+   "word": "you",
+   "raw": "you",
+   "start": 8.5,
+   "end": 8.64,
+   "prob": 0.998
+  },
+  {
+   "word": "want",
+   "raw": "want",
+   "start": 8.64,
+   "end": 8.76,
+   "prob": 0.993
+  },
+  {
+   "word": "text",
+   "raw": "text",
+   "start": 8.76,
+   "end": 8.98,
+   "prob": 0.773
+  },
+  {
+   "word": "to",
+   "raw": "to",
+   "start": 8.98,
+   "end": 9.1,
+   "prob": 0.967
+  },
+  {
+   "word": "pop",
+   "raw": "pop",
+   "start": 9.1,
+   "end": 9.24,
+   "prob": 0.996
+  },
+  {
+   "word": "up",
+   "raw": "up",
+   "start": 9.24,
+   "end": 9.36,
+   "prob": 0.971
+  },
+  {
+   "word": "on",
+   "raw": "on",
+   "start": 9.36,
+   "end": 9.52,
+   "prob": 0.99
+  },
+  {
+   "word": "the",
+   "raw": "the",
+   "start": 9.52,
+   "end": 9.64,
+   "prob": 0.995
+  },
+  {
+   "word": "screen",
+   "raw": "screen.",
+   "start": 9.64,
+   "end": 9.86,
+   "prob": 0.999
+  },
+  {
+   "word": "And",
+   "raw": "And",
+   "start": 10.0,
+   "end": 10.14,
+   "prob": 0.965
+  },
+  {
+   "word": "use",
+   "raw": "use",
+   "start": 10.14,
+   "end": 10.28,
+   "prob": 0.995
+  },
+  {
+   "word": "the",
+   "raw": "the",
+   "start": 10.28,
+   "end": 10.38,
+   "prob": 0.999
+  },
+  {
+   "word": "riser",
+   "raw": "riser",
+   "start": 10.38,
+   "end": 10.72,
+   "prob": 0.996
+  },
+  {
+   "word": "when",
+   "raw": "when",
+   "start": 10.72,
+   "end": 10.86,
+   "prob": 0.988
+  },
+  {
+   "word": "you",
+   "raw": "you",
+   "start": 10.86,
+   "end": 10.94,
+   "prob": 0.999
+  },
+  {
+   "word": "want",
+   "raw": "want",
+   "start": 10.94,
+   "end": 11.14,
+   "prob": 0.999
+  },
+  {
+   "word": "to",
+   "raw": "to",
+   "start": 11.14,
+   "end": 11.3,
+   "prob": 0.995
+  },
+  {
+   "word": "build",
+   "raw": "build",
+   "start": 11.3,
+   "end": 11.62,
+   "prob": 0.999
+  },
+  {
+   "word": "tension",
+   "raw": "tension.",
+   "start": 11.62,
+   "end": 11.98,
+   "prob": 0.99
+  }
+ ]
+}

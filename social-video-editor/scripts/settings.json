@@ -1,0 +1,50 @@
+{
+  "note": "Pipeline settings that are the same for every style: models, trimming, output format and the verification tolerances. Everything about how a style looks and sounds lives in styles/<style>.json.",
+
+  "transcribe": {
+    "model": "large-v3-turbo",
+    "compute_type": "int8",
+    "beam_size": 5,
+    "note": "faster-whisper. Only the text and language are used; word timings come from forced alignment."
+  },
+
+  "align": {
+    "models": {
+      "nl": "jonatasgrosman/wav2vec2-large-xlsr-53-dutch",
+      "en": "jonatasgrosman/wav2vec2-large-xlsr-53-english"
+    },
+    "chunk_s": 30,
+    "note": "wav2vec2 CTC forced alignment of the transcript (~20 ms resolution). Audio longer than chunk_s is run through the model in overlapping windows."
+  },
+
+  "trim": {
+    "lead_s": 0.1,
+    "tail_s": 0.4,
+    "note": "The clip starts on the first frame at most lead_s before the first word and ends on the first frame at least tail_s after the last word ends (or at the end of the recording)."
+  },
+
+  "output": {
+    "fps": 30,
+    "vertical": [1080, 1920],
+    "horizontal": [1920, 1080],
+    "scaler": "lanczos",
+    "note": "Sources taller than wide become 1080x1920, others 1920x1080 (centre-cropped if the aspect differs). bt709 SDR in, bt709 out."
+  },
+
+  "verify": {
+    "caption_lead_frames": [0, 2],
+    "align_tolerance_s": 0.02,
+    "shutter_tolerance_ms": 1.0,
+    "shutter_window_s": 0.15,
+    "shutter_min_similarity": 0.5,
+    "lufs_tolerance": 1.0,
+    "max_peak_dbfs": 0.0,
+    "av_tolerance_frames": 1,
+    "detect_scale": 4,
+    "detect_neighbours": 6,
+    "onset_threshold_db": -30,
+    "onset_merge_s": 0.06,
+    "onset_window_s": [-0.13, 0.015],
+    "note": "caption_lead_frames: the caption's first frame comes 0-2 frames before its first word in the FINAL audio (re-aligned), +- align_tolerance_s (one CTC frame). shutter_tolerance_ms: biggest wave vs caption frame in the FINAL audio. onset_*: sound events in the final audio minus the voice; each must start within onset_window_s of a caption frame."
+  }
+}
