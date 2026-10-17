@@ -13,10 +13,6 @@ trimmed to exactly the video's duration.
 from common import PipelineError, loudness, run
 
 
-def voice_chain(cfg, gain_db):
-    return f"aresample={cfg['sample_rate']},highpass=f={cfg['voice_highpass_hz']},volume={gain_db:.3f}dB"
-
-
 def voice_gain(voice_wav, cfg):
     """Gain (dB) that brings the high-passed voice to the style's voice loudness."""
     measured = loudness(voice_wav, f"aresample={cfg['sample_rate']},highpass=f={cfg['voice_highpass_hz']}")["lufs"]
@@ -25,16 +21,30 @@ def voice_gain(voice_wav, cfg):
     return cfg["voice_lufs"] - measured, measured
 
 
+def graph(cfg, gain_db, duration, voice="1:a", effects="2:a"):
+    """The mix as an ffmpeg filter graph with output [a]. The verification runs the same graph with
+    silence as the effects, to know exactly what the voice alone sounds like after the limiter."""
+    sr, lim = cfg["sample_rate"], cfg["limiter"]
+    return (f"[{voice}]aresample={sr},highpass=f={cfg['voice_highpass_hz']},volume={gain_db:.3f}dB,apad[v];"
+            f"[{effects}]aresample={sr},apad[f];"
+            f"[v][f]amix=inputs=2:normalize=0:duration=longest,"
+            f"alimiter=limit={lim['limit']}:level={int(lim['level'])}:latency={int(lim['latency'])},"
+            f"atrim=end_sample={int(round(duration * sr))},aresample={sr}[a]")
+
+
 def mix(video, voice_wav, sfx_wav, out_path, cfg, duration):
     gain, measured = voice_gain(voice_wav, cfg)
-    lim = cfg["limiter"]
-    graph = (f"[1:a]{voice_chain(cfg, gain)},apad[v];"
-             f"[2:a]aresample={cfg['sample_rate']},apad[f];"
-             f"[v][f]amix=inputs=2:normalize=0:duration=longest,"
-             f"alimiter=limit={lim['limit']}:level={int(lim['level'])}:latency={int(lim['latency'])},"
-             f"atrim=end_sample={int(round(duration * cfg['sample_rate']))},aresample={cfg['sample_rate']}[a]")
+    g = graph(cfg, gain, duration)
     run(["ffmpeg", "-v", "error", "-nostdin", "-y", "-i", video, "-i", voice_wav, "-i", sfx_wav,
-         "-filter_complex", graph, "-map", "0:v", "-map", "[a]", "-c:v", "copy",
+         "-filter_complex", g, "-map", "0:v", "-map", "[a]", "-c:v", "copy",
          "-c:a", cfg["audio_codec"], "-b:a", cfg["audio_bitrate"], "-ar", str(cfg["sample_rate"]),
          "-movflags", "+faststart", out_path], "mix")
-    return dict(voice_measured_lufs=measured, voice_gain_db=round(gain, 3), filter=graph)
+    return dict(voice_measured_lufs=measured, voice_gain_db=round(gain, 3), filter=g)
+
+
+def voice_alone(voice_wav, out_wav, cfg, gain_db, duration):
+    """The voice through the identical chain and limiter with silent effects (float WAV, no codec)."""
+    run(["ffmpeg", "-v", "error", "-nostdin", "-y", "-i", voice_wav,
+         "-f", "lavfi", "-i", f"anullsrc=r={cfg['sample_rate']}:cl=stereo",
+         "-filter_complex", graph(cfg, gain_db, duration, "0:a", "1:a"), "-map", "[a]", "-c:a", "pcm_f32le", out_wav],
+        "voice rebuild")

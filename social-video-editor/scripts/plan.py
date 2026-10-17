@@ -28,6 +28,15 @@ import numpy as np
 from common import PipelineError, first_frame
 
 EDGE_PUNCT = re.compile(r"^[^\w]+|[^\w]+$")
+GUIDE = [
+    "Edit this file, then run: edit_video.py INPUT --style STYLE --out DIR --plan THIS_FILE",
+    "wording: change a caption's text; its words stay as spoken (they are the timing source)",
+    "emphasis: class script or sans, fill pink or white; script captions get the punch-in zoom and a hit sound",
+    "grouping: move word objects between captions; remove start from a changed caption to re-derive it",
+    "timing: start is seconds in the clip; a caption shows until the next caption starts",
+    "always enforced: every caption gets the shutter, script captions a hit, sans captions none; captions start "
+    "on different frames; text case follows the class",
+]
 
 
 def display_word(raw):
@@ -157,7 +166,7 @@ def build(words, language, transcript, style, style_name, clip, emphasis=None):
                              words=[words[i] for i in u],
                              start=caption_start(words[u[0]]["start"], lead, clip.fps),
                              **{"class": cls}))
-    plan = dict(about=" ".join(__doc__.split("\n\n")[1].split()), style=style_name, language=language, transcript=transcript,
+    plan = dict(about=GUIDE, style=style_name, language=language, transcript=transcript,
                 clip=clip.to_dict(), captions=captions)
     rng = np.random.default_rng(style["sfx"]["seed"])
     for c in captions:
@@ -197,7 +206,6 @@ def normalise(plan, style):
                 if c["class"] == "script" else style["emphasis"]["sans_fill"]
         if c["fill"] not in style["colours"]:
             raise PipelineError(f"caption {k + 1}: unknown fill {c['fill']!r} (style colours: {', '.join(style['colours'])})")
-        c.setdefault("zoom", c["class"] == style["zoom"]["on"])
         # every caption gets the shutter; script captions add a hit, sans captions never do
         c.setdefault("sfx", {})
         if not c["sfx"].get("shutter"):
@@ -222,7 +230,7 @@ def normalise(plan, style):
     for k, c in enumerate(caps):
         c["end"] = caps[k + 1]["start"] if k + 1 < len(caps) else round(n_frames / fps, 3)
     # keep the keys in a readable order
-    order = ["text", "class", "fill", "start", "end", "zoom", "sfx", "words"]
+    order = ["text", "class", "fill", "start", "end", "sfx", "words"]
     plan["captions"] = [{kk: c[kk] for kk in order + [x for x in c if x not in order]} for c in caps]
     return notes
 

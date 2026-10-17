@@ -103,7 +103,8 @@ def probe(path):
 
 def decode_audio(path, sr, channels=1, filters=None):
     """Decode audio with ffmpeg to float32 (n,) mono or (n, channels). Never through PyAV: the installed
-    PyAV crashes faster-whisper's own decoder (metadata_errors)."""
+    PyAV crashes faster-whisper's own decoder (metadata_errors). Mono uses ffmpeg's downmix, which does not
+    keep the level (stereo -> 0.707 x (L + R)); for level-exact analysis decode stereo and average."""
     cmd = ["ffmpeg", "-v", "error", "-nostdin", "-i", path, "-vn"]
     if filters:
         cmd += ["-af", filters]

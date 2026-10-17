@@ -35,17 +35,21 @@
   "verify": {
     "caption_lead_frames": [0, 2],
     "align_tolerance_s": 0.02,
-    "shutter_tolerance_ms": 1.0,
+    "detect_scale": 4,
+    "detect_neighbours": 6,
     "shutter_window_s": 0.15,
-    "shutter_min_similarity": 0.5,
+    "shutter_tolerance_ms": 1.0,
+    "shutter_level_range": [0.5, 1.5],
+    "onset_hop_s": 0.002,
+    "onset_rms_s": 0.02,
+    "onset_before_s": [0.006, 0.03],
+    "onset_rise_db": 10,
+    "onset_floor_db": -30,
+    "allowed_onset_s": [-0.1, 0.05],
+    "effects_min_correlation": 0.95,
     "lufs_tolerance": 1.0,
     "max_peak_dbfs": 0.0,
     "av_tolerance_frames": 1,
-    "detect_scale": 4,
-    "detect_neighbours": 6,
-    "onset_threshold_db": -30,
-    "onset_merge_s": 0.06,
-    "onset_window_s": [-0.13, 0.015],
-    "note": "caption_lead_frames: the caption's first frame comes 0-2 frames before its first word in the FINAL audio (re-aligned), +- align_tolerance_s (one CTC frame). shutter_tolerance_ms: biggest wave vs caption frame in the FINAL audio. onset_*: sound events in the final audio minus the voice; each must start within onset_window_s of a caption frame."
+    "note": "caption_lead_frames: each caption's first frame (detected in the final frames, compared at 1/detect_scale size against the clean clip with each caption within detect_neighbours frames) comes 0-2 frames before its first word in the re-aligned final audio, +- align_tolerance_s (one CTC frame). shutter_*: biggest wave within shutter_tolerance_ms of the caption frame (cross-correlation over +-shutter_window_s); the shutter's level in the final relative to the plan within shutter_level_range. onset_*: a sound starts where the effects' level (RMS over onset_rms_s, every onset_hop_s) rises onset_rise_db above its level onset_before_s earlier, above onset_floor_db re its loudest moment; every onset must lie within allowed_onset_s of a caption frame (the shutter's clicks run from about -55 to +30 ms), and the effects part of the final must match the effects track (correlation >= effects_min_correlation)."
   }
 }

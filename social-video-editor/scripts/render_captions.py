@@ -126,7 +126,7 @@ def layers(plan, style, width, height):
         out.append(Layer(text=c["text"], x0=int(lay["x"] * width - w / 2), y0=int(lay["y"] * height - h / 2), alpha=a,
                          colour=hex_rgb(style["colours"][c["fill"]]), first=first_frame(c["start"], fps),
                          last=first_frame(caps[k + 1]["start"], fps) if k + 1 < len(caps) else plan["clip"]["frames"],
-                         start=c["start"], zoom=bool(c["zoom"])))
+                         start=c["start"], zoom=c["class"] == style["zoom"]["on"]))
     return out
 
 
