@@ -20,3 +20,4 @@ lab/**/cache_*.json
 lab/**/*.render.json
 lab/**/*.metrics.json
 !lab/**/assets/sfx/*.wav
+lab/**/*_check_words.json
