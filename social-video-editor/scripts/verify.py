@@ -17,21 +17,34 @@ Everything is measured on final.mp4 itself (timing on its clean voice track, as 
               effects pull the aligner by up to ~100 ms (the mix alignment is reported for information).
   on screen   every caption is on screen for at least the style's grouping.min_frames frames (from the
               caption changes found in the final frames)
-  placement   measured in the final frames, not taken from the style: the ink (pixels that differ from the
-              clean clip frame, zoomed like the final) has its box centre within centre_tolerance_px of the
-              frame centre in every captioned frame (client rule: always centred)
-  blend       of those ink pixels, most match the style's blend (difference: |C - B|) and more of them than
-              match a normal blend (C), per caption (client rule: the letters react to what moves behind)
+  placement   client rule: always centred. The style must ask for it (placement centre on the ink box at
+              x = y = 0.5), each caption layer's ink box (every pixel it inks, the faintest hairline of a swash
+              included) must be centred on the frame (within half a pixel: whole-pixel placement), and in
+              every captioned final frame that layer must be where the final shows it: of the layer composited
+              on the clean frame like the final (zoom included) at every shift within +-placement_search_px,
+              the one that fits the final frame best must be within centre_tolerance_px of no shift. (Not
+              the box of the pixels that visibly differ: the thin, low-alpha hairlines of a lopsided script
+              word vanish in that, and a centred word then measured up to 7.5 px off.)
+  blend       of the pixels that visibly differ from the clean frame (zoomed like the final), most match the
+              style's blend (difference: |C - B|) and more of them than match a normal blend (C), per caption
+              (client rule: the letters react to what moves behind)
   shutter     per caption, its own shutter alone (rebuilt at its planned pitch, level and pan with its biggest
               wave on the caption's first frame) is cross-correlated with the effects part of the final, both
               high-passed; the best lag (searched over +- shutter_max_lag_s, far less than the spacing of two
               captions, so a neighbour's shutter is never measured instead) is how far the biggest wave sits
               from the frame and must be within shutter_tolerance_ms; the match must be clear and the
-              shutter in the final at about its planned level
+              shutter in the final at about its planned level. On a script caption the hit starts on the same
+              frame, so the loudest sample of the two together can be the hit's (reported as
+              loudest_with_hit_ms); the shutter itself is still exactly on the frame.
+  complete    every shutter plays in full: its first click (first sample within trim.first_click_rel_db of
+              its biggest wave), where the shutter is found in the final, lies inside the video. A first
+              caption on frame 0 or 1 would cut it off; edit_video.py moves the trim start back, or refuses
+              to render, so that this cannot happen
   no extras   the final audio minus the voice (rebuilt through the identical chain and limiter with silent
-              effects) must be the effects track (correlation); in that track every sound onset must sit at
-              a caption frame (the shutter's clicks and the hit), every caption frame must have one, and
-              between caption sounds the level may only fade: no whooshes, run-ups or other sounds
+              effects) must be the effects track (correlation); in that track (with silence before t = 0, so
+              a sound at the very start is found too) every sound onset must sit at a caption frame (the
+              shutter's clicks and the hit), every caption frame must have one, and between caption sounds
+              the level may only fade: no whooshes, run-ups or other sounds
 """
 import math
 
@@ -39,10 +52,11 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
+from PIL import Image
 
 import mix
 import sfx
-from align import align
+from align import align, shifted
 from common import decode_audio, file_frames, loudness, probe
 from plan import pauses_not_cut, spoken_words
 from render_captions import apply_zoom, layers, visible, zoom_at
@@ -101,25 +115,90 @@ def predict(bg, sl, k, style, fps):
     return out
 
 
-def ink_geometry(fin, ref, layer, cfg):
-    """Where the caption is in a finished frame and how it is blended, measured against the clean frame `ref`
-    (zoomed like the final). Ink = pixels that differ from ref by more than ink_threshold in any channel,
-    counted in rows and columns with at least ink_min_pixels of them (codec noise stays well below). Returns
-    the ink box centre's offset from the frame centre (px) and the share of ink pixels that match the layer's
-    blend and a normal blend within blend_tolerance; None if nothing differs."""
-    d = np.abs(fin.astype(np.int16) - ref).max(axis=2)
-    ink = d > cfg["ink_threshold"]
-    rows, cols = np.nonzero(ink.sum(axis=1) >= cfg["ink_min_pixels"])[0], np.nonzero(ink.sum(axis=0) >= cfg["ink_min_pixels"])[0]
-    if not len(rows) or not len(cols):
+def ink_blend(fin, ref, layer, cfg):
+    """How the caption is blended in a finished frame, measured against the clean frame `ref` (zoomed like the
+    final). Ink = pixels that differ from ref by more than ink_threshold in any channel (codec noise stays
+    well below). Returns the share of ink pixels that match the layer's blend and a normal blend within
+    blend_tolerance; None if nothing differs."""
+    ink = np.abs(fin.astype(np.int16) - ref).max(axis=2) > cfg["ink_threshold"]
+    if not ink.any():
         return None
-    H, W = ink.shape
     f, r = fin[ink].astype(np.float32), ref[ink].astype(np.float32) / 255.0
-    colour = layer.colour * 255
     blended = np.abs(f - layer.blend(r, layer.colour) * 255).max(axis=1)
-    normal = np.abs(f - colour).max(axis=1)
-    return dict(dx=(cols[0] + cols[-1] + 1) / 2 - W / 2, dy=(rows[0] + rows[-1] + 1) / 2 - H / 2,
-                blend_match=float((blended < cfg["blend_tolerance"]).mean()),
+    normal = np.abs(f - layer.colour * 255).max(axis=1)
+    return dict(blend_match=float((blended < cfg["blend_tolerance"]).mean()),
                 normal_match=float((normal < cfg["blend_tolerance"]).mean()), pixels=int(ink.sum()))
+
+
+def layer_box_offset(layer, width, height):
+    """Offset (px) of the centre of the layer's ink box (every pixel its alpha touches, the faintest hairline
+    included: the typesetter crops the alpha to exactly that) from the frame centre."""
+    h, w = layer.alpha.shape
+    return layer.x0 + w / 2 - width / 2, layer.y0 + h / 2 - height / 2
+
+
+def zoomed_alpha(layer, s, origin, width, height):
+    """The layer's alpha as it lands in the final frame under zoom s: the same bicubic resampling about the zoom
+    origin as render_captions.apply_zoom, computed for the layer's own box only. Returns (x0, y0, alpha) in
+    final-frame pixels (the alpha unchanged when there is no zoom)."""
+    h, w = layer.alpha.shape
+    if s == 1.0:
+        return layer.x0, layer.y0, layer.alpha
+    m = 4                                                    # zero margin, wider than the bicubic support
+    canvas = np.zeros((h + 2 * m, w + 2 * m), np.float32)
+    canvas[m:m + h, m:m + w] = layer.alpha
+    bx0, by0 = origin[0] * width - width / (2 * s), origin[1] * height - height / (2 * s)   # apply_zoom's box
+    X0, X1 = math.floor((layer.x0 - 2 - bx0) * s), math.ceil((layer.x0 + w + 2 - bx0) * s)
+    Y0, Y1 = math.floor((layer.y0 - 2 - by0) * s), math.ceil((layer.y0 + h + 2 - by0) * s)
+    cx0, cy0 = layer.x0 - m, layer.y0 - m
+    img = Image.fromarray(canvas, "F").resize((X1 - X0, Y1 - Y0), Image.BICUBIC,
+                                              box=(bx0 + X0 / s - cx0, by0 + Y0 / s - cy0, bx0 + X1 / s - cx0, by0 + Y1 / s - cy0))
+    return X0, Y0, np.asarray(img, np.float32)
+
+
+def framed(img, y0, x0, h, w):
+    """img[y0:y0 + h, x0:x0 + w] as float 0..1 with zeros outside the frame, and the mask of the pixels inside."""
+    H, W = img.shape[:2]
+    out = np.zeros((h, w) + img.shape[2:], np.float32)
+    mask = np.zeros((h, w), bool)
+    ys, ye, xs, xe = max(0, y0), min(H, y0 + h), max(0, x0), min(W, x0 + w)
+    if ye > ys and xe > xs:
+        out[ys - y0:ye - y0, xs - x0:xe - x0] = img[ys:ye, xs:xe] / 255.0
+        mask[ys - y0:ye - y0, xs - x0:xe - x0] = True
+    return out, mask
+
+
+def correlate_shifts(G, A, R):
+    """c[R + dy, R + dx] = sum over the layer of A[i, j] * G[R + dy + i, R + dx + j], for |dx|, |dy| <= R
+    (G is A's box grown by R on every side, so no shift wraps around)."""
+    c = np.fft.irfft2(np.fft.rfft2(G) * np.conj(np.fft.rfft2(A, s=G.shape)), s=G.shape)
+    return c[:2 * R + 1, :2 * R + 1]
+
+
+def placement(fin, ref, layer, s, zcfg, R):
+    """Where the caption layer sits in a finished frame, as the shift of the expected render that fits the frame
+    best. The expected frame for a shift (dx, dy) is the clean frame zoomed like the final (ref) with the
+    layer's alpha, zoomed the same way (zoomed_alpha) and moved by (dx, dy), composited in its blend:
+    ref + A * D with D = blend(ref, C) - ref. Its squared error against the final frame over the layer's box
+    grown by R, E(dx, dy) = E_none + 2 corr(A, D.(ref - fin)) + corr(A^2, D.D), is computed for every shift
+    within +-R px at once (pixels outside the frame left out). The final zooms the composite, this composites
+    on the zoomed frame: the two differ by under 1% of the codec's own error (Tears of Steel, script words at
+    full zoom), and synthetic 1-3 px offsets are found exactly with and without zoom. Returns the best shift
+    (final-frame px) and fit = E_none / E_best, how much better the caption there explains the frame than no
+    caption (about 1 where the caption cannot be seen, e.g. white over mid grey in a difference blend)."""
+    H, W = fin.shape[:2]
+    X0, Y0, A = zoomed_alpha(layer, s, zcfg["origin"], W, H)
+    h, w = A.shape
+    F, mask = framed(fin, Y0 - R, X0 - R, h + 2 * R, w + 2 * R)
+    B, _ = framed(ref, Y0 - R, X0 - R, h + 2 * R, w + 2 * R)
+    D = layer.blend(B, layer.colour) - B
+    P = B - F
+    A = A.astype(np.float64)
+    E = float((P * P).sum()) + 2 * correlate_shifts((D * P).sum(axis=2) * mask, A, R) \
+        + correlate_shifts((D * D).sum(axis=2) * mask, A * A, R)
+    j = np.unravel_index(int(np.argmin(E)), E.shape)
+    e_none = float((P * P).sum())
+    return dict(dx=int(j[1]) - R, dy=int(j[0]) - R, fit=e_none / max(float(E[j]), 1e-12))
 
 
 def looks(lays):
@@ -131,8 +210,9 @@ def looks(lays):
 
 def detect_captions(final, clip, plan, style, cfg, scaler):
     """For every final frame: the look (see looks()) on screen (-1 = none) and the decision margin between the
-    best and the second-best look, and for frames with a caption its ink geometry (ink_geometry, against the
-    clean frame zoomed for the caption found); the expected look per frame; the layers and their looks."""
+    best and the second-best look, and for frames with a caption its blend (ink_blend) and placement
+    (placement), both against the clean frame zoomed for the caption found; the expected look per frame; the
+    layers and their looks."""
     f, fps = cfg["detect_scale"], clip.fps
     lays = layers(plan, style, clip.width, clip.height)
     look = looks(lays)
@@ -165,8 +245,10 @@ def detect_captions(final, clip, plan, style, cfg, scaler):
         geo = None
         if best >= 0:
             s = zoom_at(lays[best], k / fps, style["zoom"])
-            ref = apply_zoom(bg, s, style["zoom"]["origin"]) if s > 1.0 + style["zoom"]["min_visible"] else bg
-            geo = ink_geometry(full, ref, lays[best], cfg)
+            s = s if s > 1.0 + style["zoom"]["min_visible"] else 1.0          # as render_captions.finished_frame
+            ref = apply_zoom(bg, s, style["zoom"]["origin"]) if s > 1.0 else bg
+            geo = dict(caption=best, blend=ink_blend(full, ref, lays[best], cfg),
+                       place=placement(full, ref, lays[best], s, style["zoom"], cfg["placement_search_px"]))
         geometry.append(geo)
     next(frames, None)
     expected = [-1 if (ly := visible(lays, k)) is None else look[lays.index(ly)] for k in range(clip.n_frames)]
@@ -192,14 +274,15 @@ def window(x, a, b):
     return out
 
 
-def shutter_offsets(effects, captions, frames, style, fps, sr, cfg):
+def shutter_offsets(effects, captions, frames, style, fps, sr, cfg, click_rel_db):
     """Where each caption's shutter is in the FINAL audio. effects: the effects part of the final (mono).
     Each caption's own shutter is rebuilt alone (planned pitch, level and pan) with its biggest wave on the
     caption's first frame, and slid against the effects over lags up to shutter_max_lag_s; both are
     high-passed (shutter_highpass_hz) so the hit's sub-bass under a script caption does not pull the match.
     Returns per caption: offset of the biggest wave from the frame (the best lag), the normalised correlation
-    there, and the shutter's level in the final relative to the plan (1.0 = all there, full band); and per
-    caption the template as found (for the proof image)."""
+    there, the shutter's level in the final relative to the plan (1.0 = all there, full band), and where its
+    first click (sfx.onset: its first sample within click_rel_db of the biggest wave) is in the final (s;
+    negative = cut off at the start of the video); and per caption the template as found (for the proof)."""
     base, anchor = sfx.load_shutter(style["sfx"]["shutter"], sr)
     L = int(round(cfg["shutter_max_lag_s"] * sr))
     fir = highpass_fir(cfg["shutter_highpass_hz"], sr)
@@ -218,7 +301,7 @@ def shutter_offsets(effects, captions, frames, style, fps, sr, cfg):
         corr = xc[j] / (np.linalg.norm(th) * np.linalg.norm(seg[j:j + len(th)]) + 1e-12)
         level = np.dot(window(effects, s0 + lag, s0 + lag + len(tmpl)), tmpl) / np.dot(tmpl, tmpl)
         rows.append(dict(offset_ms=round(lag / sr * 1000, 3), lag_samples=lag, correlation=round(float(corr), 3),
-                         level=round(float(level), 3)))
+                         level=round(float(level), 3), first_click_s=round((s0 + lag + sfx.onset(snd, click_rel_db)) / sr, 4)))
         found.append(dict(start=s0 + lag, sound=tmpl, peak=peak))
     return rows, found
 
@@ -238,8 +321,11 @@ def level_db(x, sr, win_s, hop_s, highpass_hz=0):
 def onsets(track, sr, cfg):
     """Times (s) where a sound starts in the effects track: the level above onset_highpass_hz (so the hit's
     sub-bass cycles do not count) rises onset_rise_db over what it was shortly before, above a floor
-    relative to the loudest moment."""
-    t, env = level_db(track, sr, cfg["onset_rms_s"], cfg["onset_hop_s"], cfg["onset_highpass_hz"])
+    relative to the loudest moment. The track is measured with silence before t = 0 (the RMS window plus the
+    look-back), so a sound that is already playing on the first sample is found too, rising from nothing."""
+    pad = int(math.ceil((cfg["onset_rms_s"] + cfg["onset_before_s"][1]) / cfg["onset_hop_s"])) * int(cfg["onset_hop_s"] * sr)
+    t, env = level_db(np.r_[np.zeros(pad), track], sr, cfg["onset_rms_s"], cfg["onset_hop_s"], cfg["onset_highpass_hz"])
+    t = t - pad / sr
     b0, b1 = (int(round(x / cfg["onset_hop_s"])) for x in cfg["onset_before_s"])
     rising = np.zeros(len(env), bool)
     for j in range(b1, len(env)):
@@ -302,7 +388,7 @@ def _plot_shutter_proof(final48, found, caps, sr, fps, path):
         ax.axvline(0, color=ORANGE, lw=1.8, zorder=2)
         pk = c["shutter_offset_ms"]
         ax.plot([pk], [snd[fd["peak"]]], "o", ms=8, color=ORANGE, mec=SURFACE, mew=2, zorder=5)
-        ax.set_title(f'{c["text"]}\nbiggest wave {pk:+.1f} ms', fontsize=10, color=INK)
+        ax.set_title(f'{c["text"]}{" (+ hit)" if c["hit"] else ""}\nbiggest wave {pk:+.1f} ms', fontsize=10, color=INK)
         ax.set_xlim(-120, 120)
         ax.set_ylim(-lim, lim)
         ax.set_xlabel("ms from caption frame")
@@ -432,31 +518,46 @@ def verify(final, clip, plan, style, settings, work, out_dir, voice_wav, mix_inf
     chk.add(f"every caption on screen for at least {min_f} frames (final frames)", min(on_screen) >= min_f,
             shortest_frames=min(on_screen), too_short=[(ly.text, s) for ly, s in zip(lays, on_screen) if s < min_f])
 
-    # placement and blend, measured in the final frames of each caption (not taken from the style)
-    geo = [[g for g in geometry[firsts_seen[i]:firsts_seen[i + 1]] if g] for i in range(len(lays))]
-    centre = [dict(frames_measured=len(g), worst_dx_px=max((abs(x["dx"]) for x in g), default=None),
-                   worst_dy_px=max((abs(x["dy"]) for x in g), default=None),
-                   blend_match=round(float(np.mean([x["blend_match"] for x in g])), 2) if g else None,
-                   normal_match=round(float(np.mean([x["normal_match"] for x in g])), 2) if g else None) for g in geo]
-    tol_px = cfg["centre_tolerance_px"]
-    off = [(ly.text, c["worst_dx_px"], c["worst_dy_px"]) for ly, c in zip(lays, centre)
-           if not c["frames_measured"] or max(c["worst_dx_px"], c["worst_dy_px"]) > tol_px]
+    # placement and blend, measured in the final frames of each caption (only frames where that caption's look
+    # was found)
+    geo = [[g for g in geometry[firsts_seen[i]:firsts_seen[i + 1]] if g and look[g["caption"]] == look[i]]
+           for i in range(len(lays))]
+    centre = []
+    for ly, g in zip(lays, geo):
+        placed = [x["place"] for x in g if x["place"]["fit"] >= cfg["placement_min_fit"]]
+        blends = [x["blend"] for x in g if x["blend"]]
+        centre.append(dict(frames_measured=len(placed),
+                           layer_box_offset_px=[round(v, 1) for v in layer_box_offset(ly, clip.width, clip.height)],
+                           worst_shift_px=[max(abs(p["dx"]) for p in placed), max(abs(p["dy"]) for p in placed)] if placed else None,
+                           min_fit=round(min(p["fit"] for p in placed), 1) if placed else None,
+                           blend_match=round(float(np.mean([x["blend_match"] for x in blends])), 2) if blends else None,
+                           normal_match=round(float(np.mean([x["normal_match"] for x in blends])), 2) if blends else None))
+    lay = style["layout"]
+    asks_centre = (lay["placement"], lay["anchor"], lay["x"], lay["y"]) == ("centre", "ink_box_centre", 0.5, 0.5)
+    tol_px, R = cfg["centre_tolerance_px"], cfg["placement_search_px"]
+    off = [(ly.text, c["layer_box_offset_px"], c["worst_shift_px"]) for ly, c in zip(lays, centre)
+           if not c["frames_measured"] or max(map(abs, c["layer_box_offset_px"])) > 0.5 or max(c["worst_shift_px"]) > tol_px]
     measured = [c for c in centre if c["frames_measured"]]
-    chk.add(f"every caption centred in the frame (ink box centre within {tol_px} px, final frames)", not off,
-            frames_measured=sum(c["frames_measured"] for c in centre),
-            worst_dx_px=max((c["worst_dx_px"] for c in measured), default=None),
-            worst_dy_px=max((c["worst_dy_px"] for c in measured), default=None), off_centre_or_not_found=off)
+    chk.add(f"every caption centred in the frame (layer ink box centred, best-fit shift in the final frames within {tol_px} px)",
+            asks_centre and not off, style_layout=f"{lay['placement']}, {lay['anchor']} at ({lay['x']}, {lay['y']})",
+            frames_measured=sum(c["frames_measured"] for c in centre), search_px=R,
+            worst_dx_px=max((c["worst_shift_px"][0] for c in measured), default=None),
+            worst_dy_px=max((c["worst_shift_px"][1] for c in measured), default=None),
+            worst_layer_box_offset_px=max(abs(v) for c in centre for v in c["layer_box_offset_px"]),
+            min_fit=min((c["min_fit"] for c in measured), default=None), off_centre_or_not_found=off)
     mode = style["blend"]["mode"]
-    not_blended = [ly.text for ly, c in zip(lays, centre) if not c["frames_measured"]
+    blended = [c for c in centre if c["blend_match"] is not None]
+    not_blended = [ly.text for ly, c in zip(lays, centre) if c["blend_match"] is None
                    or c["blend_match"] < cfg["blend_min_match"] or c["blend_match"] <= c["normal_match"]]
     chk.add(f"captions drawn in a {mode} blend (final frames)", not not_blended,
-            min_blend_match=min((c["blend_match"] for c in measured), default=None),
-            max_normal_match=max((c["normal_match"] for c in measured), default=None),
+            min_blend_match=min((c["blend_match"] for c in blended), default=None),
+            max_normal_match=max((c["normal_match"] for c in blended), default=None),
             required=cfg["blend_min_match"], not_blended=not_blended)
 
     # the voice alone through the identical chain and limiter (silent effects): the clean voice track on the
     # final timeline. The rest of the final audio is the effects.
-    mix.voice_alone(voice_wav, f"{work}/voice_alone.wav", style["mix"], mix_info["voice_gain_db"], clip.duration)
+    mix.voice_alone(voice_wav, f"{work}/voice_alone.wav", style["mix"], mix_info["voice_gain_db"], clip.duration,
+                    clip.voice_start_s)
     voice = decode_audio(f"{work}/voice_alone.wav", sr, channels=2).mean(axis=1)
     m = min(len(mono), len(voice))
     effects = mono[:m] - voice[:m]
@@ -466,8 +567,12 @@ def verify(final, clip, plan, style, settings, work, out_dir, voice_wav, mix_inf
     # of the final mix itself is reported alongside for information.
     words, firsts = spoken_words(plan)
     al = dict(model_name=align_model, chunk_s=settings["align"]["chunk_s"], phases=settings["align"]["phases"])
-    realigned = align(decode_audio(f"{work}/voice_alone.wav", 16000), [w["word"] for w in words], **al)
-    in_mix = align(decode_audio(final, 16000), [w["word"] for w in words], **al)
+    # both aligned from where the voice starts (silent before clip.voice_start_s when the start was moved back
+    # for the first caption's shutter: the timings then do not depend on the move)
+    v0 = int(round(clip.voice_start_s * 16000))
+    texts = [w["word"] for w in words]
+    realigned = shifted(align(decode_audio(f"{work}/voice_alone.wav", 16000)[v0:], texts, **al), clip.voice_start_s)
+    in_mix = shifted(align(decode_audio(final, 16000)[v0:], texts, **al), clip.voice_start_s)
     lo, hi = cfg["caption_lead_frames"]
     tol = cfg["align_tolerance_s"]
     caps = []
@@ -476,7 +581,8 @@ def verify(final, clip, plan, style, settings, work, out_dir, voice_wav, mix_inf
         w = realigned[firsts[i]]
         caps.append(dict(index=i + 1, text=c["text"], **{"class": c["class"]}, fill=c["fill"], planned_first_frame=ly.first,
                          detected_first_frame=f, change_visible=visible_change[i], frames_on_screen=on_screen[i],
-                         ink_centre_worst_dx_px=centre[i]["worst_dx_px"], ink_centre_worst_dy_px=centre[i]["worst_dy_px"],
+                         placement_worst_shift_px=centre[i]["worst_shift_px"], placement_min_fit=centre[i]["min_fit"],
+                         layer_box_offset_px=centre[i]["layer_box_offset_px"],
                          blend_match=centre[i]["blend_match"], normal_blend_match=centre[i]["normal_match"],
                          detect_margin=round(margins[f], 2),
                          first_word=w["word"],
@@ -489,10 +595,17 @@ def verify(final, clip, plan, style, settings, work, out_dir, voice_wav, mix_inf
             for_information_leads_in_final_mix=[c["lead_frames_in_mix"] for c in caps])
 
     # the shutter's biggest wave on every caption frame
-    offs, found = shutter_offsets(effects, plan["captions"], [c["detected_first_frame"] for c in caps], style, fps, sr, cfg)
-    for c, o in zip(caps, offs):
+    click_db = settings["trim"]["first_click_rel_db"]
+    offs, found = shutter_offsets(effects, plan["captions"], [c["detected_first_frame"] for c in caps], style, fps, sr, cfg,
+                                  click_db)
+    for c, o, fd in zip(caps, offs, found):
         c.update(shutter_offset_ms=o["offset_ms"], shutter_lag_samples=o["lag_samples"],
-                 shutter_correlation=o["correlation"], shutter_level=o["level"])
+                 shutter_correlation=o["correlation"], shutter_level=o["level"], shutter_first_click_s=o["first_click_s"])
+        if c["hit"]:
+            # for information: the loudest sample of shutter + hit together, over the shutter's span
+            a = max(0, fd["start"])
+            j = a + int(np.argmax(np.abs(effects[a:fd["start"] + len(fd["sound"])])))
+            c["loudest_with_hit_ms"] = round((j - sfx.frame_sample(c["detected_first_frame"], fps, sr)) / sr * 1000, 3)
     worst = max(abs(o["offset_ms"]) for o in offs)
     lv0, lv1 = cfg["shutter_level_range"]
     unclear = [c["text"] for c in caps if c["shutter_correlation"] < cfg["shutter_min_correlation"]
@@ -501,6 +614,13 @@ def verify(final, clip, plan, style, settings, work, out_dir, voice_wav, mix_inf
             captions=len(caps), worst_offset_ms=worst, tolerance_ms=cfg["shutter_tolerance_ms"],
             min_correlation=min(c["shutter_correlation"] for c in caps), levels=[c["shutter_level"] for c in caps],
             unclear_or_wrong_level=unclear)
+    # every shutter in full: a first caption on frame 0 or 1 would cut its first clicks off at the start
+    cut = [dict(caption=c["index"], text=c["text"], frame=c["detected_first_frame"],
+                first_click_ms=round(c["shutter_first_click_s"] * 1000, 1)) for c in caps if c["shutter_first_click_s"] < 0]
+    chk.add("every shutter complete (no clicks cut off at the start of the video)", not cut,
+            first_shutter_first_click_ms=round(caps[0]["shutter_first_click_s"] * 1000, 1), first_click_rel_db=click_db,
+            cut_off="; ".join(f"caption {x['caption']} ({x['text']!r}, frame {x['frame']}): its first click would be at "
+                              f"{x['first_click_ms']} ms, before the video starts" for x in cut) or "none")
 
     # no other sounds: the effects part of the final IS the effects track, and in that track every sound
     # starts at a caption frame and only fades in between (measured on the clean track: no codec noise or
@@ -512,10 +632,12 @@ def verify(final, clip, plan, style, settings, work, out_dir, voice_wav, mix_inf
     frame_ts = [c["detected_first_frame"] / fps for c in caps]
     stray = [t for t in starts if not any(ft + w0 <= t <= ft + w1 for ft in frame_ts)]
     silent = [c["text"] for c, ft in zip(caps, frame_ts) if not any(ft + w0 <= t <= ft + w1 for t in starts)]
+    cut_texts = {x["text"] for x in cut}
     rising = swells(track, sr, cfg, frame_ts)
     chk.add("no sounds except at caption frames", match >= cfg["effects_min_correlation"] and not stray and not silent
             and not rising, effects_vs_track_correlation=round(match, 4), onsets=len(starts), stray_onsets_s=stray,
-            captions_without_onset=silent, rising_between_captions=rising)
+            captions_without_onset=[t + " (its shutter is cut off at the start of the video)" if t in cut_texts else t
+                                    for t in silent], rising_between_captions=rising)
 
     # PREFERENCES.md 'Editing' (cut pauses > ~0.3 s) is not applied to Prime v11: report what it would cut,
     # measured on the clean voice of the final timeline
@@ -538,7 +660,11 @@ def verify(final, clip, plan, style, settings, work, out_dir, voice_wav, mix_inf
     plot_shutter_proof(mono, found, caps, sr, fps, f"{out_dir}/proof_shutter_alignment.png")
     plot_timeline(mono, effects, caps, realigned, starts, sr, fps, video_s, f"{out_dir}/proof_timeline.png")
 
-    return dict(ok=chk.ok, final=final, checks=chk.items, warnings=warnings, captions=caps, loudness=loud,
+    notes = [f"Script captions ({', '.join(repr(c['text']) for c in caps if c['hit'])}) play the shutter and the hit "
+             "together, the hit starting on the same frame: the loudest sample of the two combined (loudest_with_hit_ms) "
+             "includes the hit and can sit off the frame. The shutter itself (located alone, by cross-correlation: "
+             "shutter_offset_ms) has its biggest wave exactly on the caption frame."] if any(c["hit"] for c in caps) else []
+    return dict(ok=chk.ok, final=final, checks=chk.items, warnings=warnings, notes=notes, captions=caps, loudness=loud,
                 durations=dict(video_s=round(video_s, 6), audio_s=round(audio_s, 6), frames=n, fps=fps),
                 caption_changes_detected=changes, sound_onsets_s=starts, audio_edges=edges, pauses_not_cut=pauses,
                 words_final_voice=realigned, words_final_mix=in_mix, mix=mix_info,

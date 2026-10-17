@@ -108,6 +108,15 @@ def onset(sound, rel_db):
     return int(np.argmax(mono > mono.max() * db(rel_db)))
 
 
+def shutter_click_lead_s(cfg, pitch, sr, rel_db):
+    """How long (s) before its biggest wave the shutter's first click comes (its first sample within rel_db of
+    the biggest wave), played at pitch. With the biggest wave on a caption's first frame, that caption must
+    appear at least this long after the start of the video or the clicks before it are cut off."""
+    base, anchor = load_shutter(cfg, sr)
+    snd, peak = repitch(base, pitch, anchor)
+    return (peak - onset(snd, rel_db)) / sr
+
+
 def write_wav(path, x, sr):
     """16-bit stereo WAV."""
     x = np.clip(x, -1, 1)

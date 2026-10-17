@@ -185,6 +185,8 @@ class Clip:
     range: str             # tv / pc
     audio_rate: int
     tonemap: dict = None   # HDR source: zscale input transfer/primaries/matrix for the tone-map to bt709 SDR
+    voice_start_frame: int = 0  # the voice is silent before this clip frame (frames the start was moved back by so
+                                # the first caption's shutter plays in full: the voice still starts where it did)
 
     @property
     def n_frames(self):
@@ -197,6 +199,11 @@ class Clip:
     @property
     def start_s(self):
         return self.start_frame / self.fps
+
+    @property
+    def voice_start_s(self):
+        """Clip time (s) from which the voice is heard (0 unless the start was moved back for the first shutter)."""
+        return self.voice_start_frame / self.fps
 
     @classmethod
     def make(cls, info, settings, start_s=None, end_s=None, first_word=None, last_word_end=None):

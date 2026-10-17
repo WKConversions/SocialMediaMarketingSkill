@@ -104,6 +104,12 @@ def align(audio, words, model_name, chunk_s=30, phases=5):
     return out
 
 
+def shifted(words, dt):
+    """Aligned words moved by dt seconds: the timings of audio that starts dt into a longer timeline (a clip whose
+    voice starts dt in, after frames the start was moved back by, is aligned from the voice start)."""
+    return [dict(w, start=round(w["start"] + dt, 3), end=round(w["end"] + dt, 3)) for w in words]
+
+
 def _align_once(audio, words, model_name, chunk_s):
     """One forced alignment on the model's own frame grid -> [(start, end, score)] per word."""
     proc, model = load_model(model_name)

@@ -45,7 +45,9 @@ GUIDE = [
     "grouping: move word objects between captions; remove start from a changed caption to re-derive it",
     "timing: start is seconds in the clip; a caption shows until the next caption starts",
     "always enforced: every caption gets the shutter, script captions a hit, sans captions none; text case and "
-    "colour follow the class; every caption is on screen for at least the style's grouping.min_frames frames",
+    "colour follow the class; every caption is on screen for at least the style's grouping.min_frames frames; "
+    "caption 1 appears late enough for its whole shutter (frame 2 or later at 30 fps: its first click comes ~52 ms "
+    "before the biggest wave on the caption frame); when planning, the trim start moves back for that (see notes)",
     "quality: how sure the transcript and its timing were when this plan was made; if that stopped the run, check "
     "the words and their times (or run again with --lang), then render with --plan (it is not checked again)",
 ]

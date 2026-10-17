@@ -14,20 +14,30 @@ the plan can be edited] -> render captions -> effects track -> mix -> verify -> 
   --start/--end S    trim window in seconds of the source, instead of the automatic one around the words;
                      only this window (plus trim.window_margin_s) is transcribed and aligned
 
+The first caption's shutter plays in full: its first click comes ~52 ms before its biggest wave, which sits
+on the caption's first frame, so the first caption needs frame 2 or later (settings trim.first_click_rel_db).
+If it lands earlier (a --start just before a word), the start moves back by the missing frames when the
+recording has them (logged, and listed in plan.json "notes"); the voice stays silent over those frames
+(clip.voice_start_frame) and starts where it did, so nothing from before the requested start is heard, and
+the voice is aligned from where it starts (the planning here and the verification alike), so its timing
+does not depend on the move. Otherwise nothing is rendered (exit 2).
+
 Writes OUT_DIR/final.mp4, OUT_DIR/report.json, OUT_DIR/proof_shutter_alignment.png, OUT_DIR/proof_timeline.png
 and intermediates in OUT_DIR/work/. Exit code: 0 = every check passed; 1 = the video was made but a rule
 is broken (see report.json); 2 = the pipeline could not run, or the plan needs a look before rendering
-(plan.json is written and lists the problems): a caption too short for the style, or a transcript or
-alignment that looks unreliable (settings.json "quality"). Fix the plan, or run again with --lang, then
-render it with --plan.
+(plan.json is written and lists the problems): a caption too short for the style, a first caption too
+early for its whole shutter, or a transcript or alignment that looks unreliable (settings.json "quality").
+Fix the plan, or run again with --lang or another --start, then render it with --plan.
 """
 import argparse
+import dataclasses
 import math
 import os
 import sys
 import time
 
-from common import Clip, PipelineError, decode_audio, load_json, load_settings, load_style, probe, save_json
+import sfx
+from common import EPS, Clip, PipelineError, decode_audio, first_frame, load_json, load_settings, load_style, probe, save_json
 
 T0 = time.time()
 
@@ -56,7 +66,7 @@ def parse_args(argv):
 
 def make_plan(args, info, style, settings, work):
     """Transcribe, align, trim and plan. Returns (plan, clip, alignment model)."""
-    from align import align
+    from align import align, shifted
     from plan import build
     from transcribe import SR, transcribe
 
@@ -93,19 +103,70 @@ def make_plan(args, info, style, settings, work):
         f"-> {clip.width}x{clip.height} @ {clip.fps}")
     log("aligning the transcript to the clip")
     seg = audio[int(round(clip.start_s * SR)):int(round(clip.end_frame / clip.fps * SR))]
-    clip_words = align(seg, [w["word"] for w in kept], **al)
+    voice_words = align(seg, [w["word"] for w in kept], **al)       # timed from where the voice starts
     forced = {w for w in args.emphasis.split(",") if w.strip()} if args.emphasis else None
-    plan = build(clip_words, lang, text, style, args.style, clip, forced)
+    moved = []
+    while True:
+        clip_words = shifted(voice_words, clip.voice_start_s)
+        plan = build(clip_words, lang, text, style, args.style, clip, forced)
+        # the first caption's shutter must play in full: move the start back by the frames it is short of. The
+        # voice is silent over them and still starts where it did, so its alignment (from the voice start) stands
+        f0, need, lead = first_caption_frames(plan, style, settings)
+        back = min(need - f0, clip.start_frame)
+        if f0 >= need or back <= 0:
+            break
+        clip = dataclasses.replace(clip, start_frame=clip.start_frame - back, voice_start_frame=clip.voice_start_frame + back)
+        moved.append(f"trim: caption 1 ({plan['captions'][0]['text']!r}) would appear on frame {f0}, but its shutter's first "
+                     f"click comes {lead * 1000:.0f} ms before the biggest wave on that frame (it needs frame {need}): the "
+                     f"start moved back {back} frame(s), to source frame {clip.start_frame} ({clip.start_s:.3f} s); the "
+                     f"voice is silent over the first {clip.voice_start_frame} frame(s) and starts where it did "
+                     f"({clip.start_s + clip.voice_start_s:.3f} s)")
+        log(moved[-1])
+    if moved:
+        plan["notes"] = moved
+        log(f"trim: source frames {clip.start_frame}-{clip.end_frame - 1} ({clip.n_frames} frames, {clip.duration:.3f} s), "
+            f"voice from clip frame {clip.voice_start_frame}")
     plan["models"] = dict(transcribe=settings["transcribe"]["model"], align=models[lang])
     plan["quality"], problems = transcript_quality(prob, clip_words, kept, clip, settings["quality"])
+    problems += first_caption_problems(plan, clip, style, settings)
     if problems:
         plan["problems"] = plan.get("problems", []) + problems
     return plan, clip, models[lang]
 
 
+def first_caption_frames(plan, style, settings):
+    """(frame caption 1 appears on, first frame on which its shutter plays in full, the shutter's first-click
+    lead in s). The shutter's biggest wave sits on the caption's first frame and its first click (settings
+    trim.first_click_rel_db) comes `lead` earlier, at the caption's planned pitch: about 52 ms, frame 2 at 30 fps."""
+    c, fps = plan["captions"][0], plan["clip"]["fps"]
+    lead = sfx.shutter_click_lead_s(style["sfx"]["shutter"], c["sfx"]["shutter"]["pitch"], style["sfx"]["sample_rate"],
+                                    settings["trim"]["first_click_rel_db"])
+    return first_frame(c["start"], fps), max(0, math.ceil(lead * fps - EPS)), lead
+
+
+def first_caption_problems(plan, clip, style, settings):
+    """The plan problem (as a list, empty if none) of a first caption too early for its whole shutter."""
+    f0, need, lead = first_caption_frames(plan, style, settings)
+    if f0 >= need:
+        return []
+    c = plan["captions"][0]
+    if clip.start_frame >= need - f0:
+        start = math.floor((clip.start_frame - (need - f0)) / clip.fps * 1000) / 1000     # rounded down: on that frame
+        fix = f"plan it again with --start {start:.3f} or earlier (when it plans, edit_video.py moves the start back by itself)"
+    else:
+        fix = (f"the recording has {'no' if not clip.start_frame else f'only {clip.start_frame}'} earlier frame(s) to move "
+               f"the start back to (the first word starts {clip.start_s + c['words'][0]['start']:.3f} s into it): start "
+               "the clip after this word with --start, or use a recording with a moment of silence before the first word")
+    return [f"caption 1 ({c['text']!r}) appears on frame {f0}, but its shutter's biggest wave sits on that frame and its "
+            f"first click comes {lead * 1000:.0f} ms earlier: the caption needs frame {need} or later, or the shutter's "
+            f"first clicks are cut off at the start of the video. Not rendered: {fix}"]
+
+
 def kept_from(src_words, clip):
-    """The source-window words whose middle lies in the clip (the words aligned again on the clip)."""
-    return [w for w in src_words if clip.start_s <= (w["start"] + w["end"]) / 2 < clip.end_frame / clip.fps]
+    """The source-window words whose middle lies in the clip where the voice is heard (the words aligned again
+    on the clip)."""
+    return [w for w in src_words
+            if clip.start_s + clip.voice_start_s <= (w["start"] + w["end"]) / 2 < clip.end_frame / clip.fps]
 
 
 def transcript_quality(prob, clip_words, kept, clip, cfg):
@@ -151,6 +212,9 @@ def main(argv=None):
             raise PipelineError(f"the plan was made for {clip.source}, not {info['path']}")
         clip.source = plan["clip"]["source"] = info["path"]
         align_model = plan.get("models", {}).get("align") or settings["align"]["models"][plan["language"]]
+        problems = first_caption_problems(plan, clip, style, settings)
+        if problems:
+            plan["problems"] = plan.get("problems", []) + problems
     else:
         plan, clip, align_model = make_plan(args, info, style, settings, work)
     plan["pauses_not_cut"] = pauses_not_cut(spoken_words(plan)[0], settings["editing"])
@@ -164,13 +228,13 @@ def main(argv=None):
         log(f"  pause {p['length_s']:.2f} s between {p['after']!r} and {p['before']!r}: {p['status']}")
     if plan.get("problems"):
         raise PipelineError(f"not rendered: check {out}/plan.json and run again with --plan (or, for a transcript "
-                            "problem, with --lang):\n  " + "\n  ".join(plan["problems"]))
+                            "problem, with --lang; for a first caption too early, with another --start):\n  "
+                            + "\n  ".join(plan["problems"]))
     if args.plan_only:
         return 0
 
     import mix
     import render_captions
-    import sfx
     from verify import verify
 
     sr = style["mix"]["sample_rate"]
@@ -182,7 +246,8 @@ def main(argv=None):
     fx = sfx.build(plan, style, f"{work}/sfx.wav")
     log(f"effects track: {len(fx['placed'])} shutters, {sum('hit' in p for p in fx['placed'])} hits, peak {fx['peak_dbfs']} dBFS")
     final = f"{out}/final.mp4"
-    mixed = mix.mix(f"{work}/captions.mp4", voice_wav, f"{work}/sfx.wav", final, style["mix"], clip.duration)
+    mixed = mix.mix(f"{work}/captions.mp4", voice_wav, f"{work}/sfx.wav", final, style["mix"], clip.duration,
+                    clip.voice_start_s)
     log(f"mix: voice {mixed['voice_measured_lufs']} LUFS + {mixed['voice_gain_db']} dB -> {final}")
     log("verifying the final file")
     report = verify(final, clip, plan, style, settings, work, out, voice_wav, mixed, align_model)
@@ -191,6 +256,8 @@ def main(argv=None):
     save_json(f"{out}/report.json", report)
     for w in report["warnings"]:
         log("warning: " + w)
+    for note in report["notes"]:
+        log("note: " + note)
     log(f"{'PASSED' if report['ok'] else 'FAILED'}: {sum(c['ok'] for c in report['checks'])}/{len(report['checks'])} "
         f"checks -> {out}/report.json")
     return 0 if report["ok"] else 1
