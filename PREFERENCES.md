@@ -38,6 +38,11 @@ these on every video unless the client says otherwise for a specific project.
 - The effects must be clearly audible on a phone speaker; mix the voice to about -15 LUFS and the
   finished video to about -14 LUFS.
 
+## Music
+- When the client supplies a track: its first audible sample lands on frame 0 (trim the file's leading
+  silence; measure the offset over the whole mix, not the first second). Duck it under the voice
+  (sidechain), let it breathe in pauses and on the end card, fade it out over the last ~1.2 s.
+
 ## Sound effects per moment (from the client's sound reference, lab/sfx-01/NOTES.md)
 - caption appears: the client's camera shutter (see above)
 - element pops up on screen (canvas cards, icons, numbers): click

@@ -26,3 +26,4 @@ social-video-editor/test_out/
 social-video-editor/**/__pycache__/
 lab/**/broll/**/downloads/
 lab/**/views/
+*.mp3
