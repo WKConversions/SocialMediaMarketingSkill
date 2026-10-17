@@ -1,13 +1,12 @@
 {
   "name": "Prime",
-  "version": 1,
+  "version": 2,
   "description": "One word at a time, white Difference-blend captions (each letter shows the negative of the footage behind it), a heavy tight lowercase grotesk for most words and a large swash formal script for the payoff word of each line. Reproduced from Toby de Boer's reel (analysis/reference_spec.json). Font paths are relative to this file; sizes are fractions of frame height; em values are relative to the layout's sans font size.",
   "reference": {
     "source": "Instagram reel by Toby de Boer (@tobydeboer), 1916x1078, 24 fps, 6.8 s",
     "spec": "../analysis/reference_spec.json",
     "fonts": "../analysis/fonts_choice.json"
   },
-
   "render": {
     "supersample": 2,
     "blend_space": "display-referred sRGB (like After Effects 8/16 bpc and CSS mix-blend-mode)",
@@ -17,12 +16,17 @@
     "pix_fmt": "yuv420p",
     "color_matrix": "bt709"
   },
-
   "classes": {
     "sans": {
       "font": "../fonts/inter/Inter-Variable.ttf",
-      "axes": {"wght": 750, "opsz": 32},
-      "features": ["kern", "ss07"],
+      "axes": {
+        "wght": 750,
+        "opsz": 32
+      },
+      "features": [
+        "kern",
+        "ss07"
+      ],
       "tracking_em": -0.075,
       "word_space_em": 0.055,
       "case": "lower",
@@ -34,51 +38,117 @@
     "script": {
       "font": "../fonts/pinyonscript/PinyonScript-Regular.ttf",
       "axes": {},
-      "features": ["kern"],
+      "features": [
+        "kern"
+      ],
       "tracking_em": 0.0,
       "case": "as_is",
-      "size_rel_sans": 1.9,
+      "size_rel_sans": 2.2,
       "shear_deg": -3.0,
       "stroke_em": 0.0023,
       "swash_capital": {
         "font": "../fonts/imperialscript/ImperialScript-Regular.ttf",
-        "height_x_ratio": 2.6,
+        "height_x_ratio": 2.9,
         "advance_scale": 1.0
       },
-      "note": "Stand-in for Kuenstler Script / a heavy-shaded roundhand. Lowercase from Pinyon Script (size = 1.9 x sans size gives the reference's ~1.25-1.4x sans x-height); the swash capital is drawn from Imperial Script at 2.6x the lowercase x-height (~3x the sans cap height)."
+      "note": "Stand-in for Kuenstler Script / a heavy-shaded roundhand. Lowercase from Pinyon Script at 2.2 x the sans size (x-height ~1.6x the sans x-height); the swash capital is drawn from Imperial Script at 2.9x the lowercase x-height, about 3x the sans ascender like the reference (Prime/They 3.4, Win 3.1, Regardless 2.7). stem_boost thickens only the shaded stems.",
+      "stem_boost": {
+        "open_em": 0.03,
+        "grow_em": 0.014,
+        "thin_em": 0.0,
+        "note": "Heavier shaded downstrokes, hairlines untouched: strokes at least open_em wide are grown by grow_em (total width, em of the script size). Brings Pinyon's stems toward the reference's 18 px stems at an 83 px x-height without clogging the hairlines the way a uniform stroke_em does.",
+        "ramp_em": 0.02,
+        "ramp_levels": 4
+      }
     }
   },
-
   "blends": {
-    "difference": {"mode": "difference", "fill": "#FFFFFF", "opacity": 1.0,
-                   "note": "default: out = |1 - B| inside the letters"},
-    "difference_pink": {"mode": "difference", "fill": "#E28B8B", "opacity": 1.0,
-                        "note": "'at my Prime': difference with a pink fill, out = |C - B| (fitted C = 0.886, 0.545, 0.545)"},
-    "normal": {"mode": "normal", "fill": "#FFFFFF", "opacity": 1.0,
-               "note": "'Win' / 'but i': plain opaque white for a bright, celebratory shot"}
+    "difference": {
+      "mode": "difference",
+      "fill": "#FFFFFF",
+      "opacity": 1.0,
+      "note": "default: out = |1 - B| inside the letters"
+    },
+    "difference_pink": {
+      "mode": "difference",
+      "fill": "#E28B8B",
+      "opacity": 1.0,
+      "note": "'at my Prime': difference with a pink fill, out = |C - B| (fitted C = 0.886, 0.545, 0.545)"
+    },
+    "normal": {
+      "mode": "normal",
+      "fill": "#FFFFFF",
+      "opacity": 1.0,
+      "note": "'Win' / 'but i': plain opaque white for a bright, celebratory shot"
+    }
   },
-
   "entrances": {
-    "cut": {"type": "cut"},
+    "cut": {
+      "type": "cut"
+    },
     "blur_in": {
       "type": "blur_in",
       "duration_s": 0.2917,
-      "opacity": [0.20, 0.29, 0.41, 0.56, 0.76, 0.80, 0.93, 1.0],
-      "blur_em": [0.0344, 0.0326, 0.0326, 0.0282, 0.0211, 0.0159, 0.0088, 0.0],
+      "opacity": [
+        0.2,
+        0.29,
+        0.41,
+        0.56,
+        0.76,
+        0.8,
+        0.93,
+        1.0
+      ],
+      "blur_em": [
+        0.0344,
+        0.0326,
+        0.0326,
+        0.0282,
+        0.0211,
+        0.0159,
+        0.0088,
+        0.0
+      ],
       "note": "'They' f086-f093: opacity rises while an extra Gaussian blur shrinks to 0 (curves sampled evenly over duration_s; blur sigma in sans em)"
     },
     "blur_in_line2": {
       "type": "blur_in",
       "duration_s": 0.25,
-      "opacity": [0.08, 0.18, 0.52, 0.80, 0.94, 0.96, 1.0],
-      "blur_em": [0.0555, 0.0493, 0.0379, 0.0282, 0.0211, 0.0141, 0.0],
+      "opacity": [
+        0.08,
+        0.18,
+        0.52,
+        0.8,
+        0.94,
+        0.96,
+        1.0
+      ],
+      "blur_em": [
+        0.0555,
+        0.0493,
+        0.0379,
+        0.0282,
+        0.0211,
+        0.0141,
+        0.0
+      ],
       "note": "'don't' f090-f096"
     },
     "blur_in_line3": {
       "type": "blur_in",
       "duration_s": 0.125,
-      "opacity": [0.55, 1.0, 1.0, 1.0],
-      "blur_em": [0.030, 0.0132, 0.0079, 0.0],
+      "opacity": [
+        0.55,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "blur_em": [
+        0.03,
+        0.0132,
+        0.0079,
+        0.0
+      ],
       "note": "'wanna' f095-f098"
     },
     "glitch": {
@@ -94,48 +164,66 @@
       "type": "glitch",
       "duration_s": 0.1,
       "footage_hold_frames": 2,
-      "rgb_split_em": 0.05,
-      "slice_count": 4,
-      "slice_shift_em": 0.06,
-      "note": "Optional exaggerated digital glitch (NOT in the reference): channel split + horizontal slice shifts of the letters, decaying to 0 over duration_s."
+      "rgb_split_em": 0.035,
+      "slice_count": 3,
+      "slice_shift_em": 0.04,
+      "note": "Optional digital glitch for A/B tests (NOT in the reference): small channel split + horizontal slice shifts of the letters for ~3 frames, decaying to 0. Use on the opening word only."
     }
   },
-
   "timing": {
     "hold_until_next_start": true,
     "max_gap_s": 0.6,
     "tail_after_end_s": 0.25,
     "min_hold_s": 0.167,
     "emphasis_extra_hold_s": 0.1,
-    "first_unit_lead_in_s": 0.25,
+    "first_unit_lead_in_s": 0.3,
     "last_unit_hold_to_clip_end": true,
     "frame_rounding": "nearest",
-    "note": "A caption shows from its start frame until the next caption starts (no gaps, no overlaps, as in the reference). If the pause before the next caption is longer than max_gap_s, it leaves tail_after_end_s (+ emphasis_extra_hold_s for script words) after its spoken end and the screen is empty. A first caption that starts within first_unit_lead_in_s is pulled to frame 0."
+    "note": "A caption shows from its start frame until the next caption starts (no gaps, no overlaps, as in the reference). If the pause before the next caption is longer than max_gap_s, it leaves tail_after_end_s (+ emphasis_extra_hold_s for script words) after its spoken end and the screen is empty. A first caption that starts within first_unit_lead_in_s is pulled to frame 0. A caption squeezed below min_flash_s by the next one starts up to a few frames early, taking them from its predecessor (which keeps min_hold_s).",
+    "min_flash_s": 0.1
   },
-
   "zoom": {
     "enabled": true,
-    "origin": [0.5, 0.5],
+    "origin": [
+      0.5,
+      0.5
+    ],
     "presets": {
-      "opening_punch": {"to": 1.135, "tau_s": 0.168},
-      "punch_in": {"to": 1.12, "tau_s": 0.167},
-      "settle_out": {"to": 1.0, "tau_s": 0.15},
+      "opening_punch": {
+        "to": 1.135,
+        "tau_s": 0.168
+      },
+      "punch_in": {
+        "to": 1.12,
+        "tau_s": 0.167
+      },
+      "settle_out": {
+        "to": 1.0,
+        "tau_s": 0.15
+      },
       "none": null
     },
     "note": "The captions are composited first and the digital zoom is applied to the composite about the frame centre, so the text scales with the footage (measured to 0.2%). Each event eases exponentially from the current scale: s(t) = s0 + (to - s0)(1 - exp(-(t - t0)/tau)). Script words punch in +11..13% (tau ~4 frames at 24 fps); the word after a punch settles back."
   },
-
   "subject_mask": {
     "pattern": "m{frame:05d}.png",
     "frame_base": 1,
     "threshold_lo": 0.35,
     "threshold_hi": 0.65,
-    "feather_px": 1.5,
-    "note": "behind_subject captions are multiplied by (1 - mask) so the person occludes them. The reference itself never occludes; this is an optional depth effect."
+    "feather_px": 1.0,
+    "note": "Opt-in depth variant: behind_subject captions are multiplied by (1 - matte) so the person occludes them. The reference never occludes anything, so plans leave behind_subject off unless asked (plan_rules.variants.behind_subject.enabled). Matte = thresholded mask, eroded erode_px, edge decided by the footage's luma (edge_luma_gate), feathered feather_px.",
+    "erode_px": 5,
+    "edge_luma_gate": {
+      "band_px": 14,
+      "luma_lo": 0.06,
+      "luma_hi": 0.14,
+      "note": "Inside a band_px rim of the (eroded) mask only pixels brighter than the dark sky count as subject, so the hair itself decides the edge (segmentation masks sit 3-12 px proud of the hair)."
+    }
   },
-
-  "layout_auto": {"portrait": "talking_head", "landscape": "montage"},
-
+  "layout_auto": {
+    "portrait": "talking_head",
+    "landscape": "montage"
+  },
   "layouts": {
     "montage": {
       "description": "Reference layout: 16:9 montage, every caption centred in the frame.",
@@ -143,43 +231,130 @@
       "max_width_frac": 0.9,
       "positions": {
         "default": {
-          "sans": {"x": 0.5, "y": 0.5376, "anchor": "baseline"},
-          "script": {"x": 0.515, "y": 0.51, "anchor": "ink_center"}
+          "sans": {
+            "x": 0.5,
+            "y": 0.5376,
+            "anchor": "baseline"
+          },
+          "script": {
+            "x": 0.515,
+            "y": 0.51,
+            "anchor": "ink_center"
+          }
         }
       },
       "stack": {
-        "anchor": {"x": 0.30, "y": 0.51, "of": "block_ink_center"},
-        "line_align": ["self", "ink_left_of_first", "ink_center_of_first"],
-        "baseline_step_em": [0.0, 0.64, 0.61],
-        "entrances": ["blur_in", "blur_in_line2", "blur_in_line3"],
+        "anchor": {
+          "x": 0.3,
+          "y": 0.51,
+          "of": "block_ink_center"
+        },
+        "line_align": [
+          "self",
+          "ink_left_of_first",
+          "ink_center_of_first"
+        ],
+        "baseline_step_em": [
+          0.0,
+          0.64,
+          0.61
+        ],
+        "entrances": [
+          "blur_in",
+          "blur_in_line2",
+          "blur_in_line3"
+        ],
         "note": "'They / don't / wanna': left-anchored block, don't left-aligned to the swash, wanna centred under They, very tight leading, staggered blur-ins, all three cut out together."
+      },
+      "safe_zone": {
+        "left": 0.02,
+        "right": 0.98,
+        "top": 0.03,
+        "bottom": 0.97
       }
     },
     "talking_head": {
-      "description": "Vertical selfie talking head: words centred horizontally across the chin/collar/jacket area (below the mouth) so the difference letters react to the moving, lit jacket. Never over the eyes or mouth.",
+      "description": "Vertical selfie talking head. Default = the reference's own layout: words centred, ascender-to-baseline box on the frame's middle (sans baseline 0.515 H, script baseline 0.53 H), which on a centred face lands on the forehead/hairline above the eyes, where the lit skin and hair move behind the letters. 'chin' is the fallback for clips where H/2 falls on the eyes; 'top_of_head' is the opt-in depth test. Every caption's zoomed ink box is kept inside safe_zone (bottom 0.75 H clears the Reels username/caption/audio UI).",
       "sans_size_frac_of_height": 0.068,
-      "max_width_frac": 0.88,
+      "max_width_frac": {
+        "sans": 0.88,
+        "script": 0.9
+      },
       "positions": {
         "default": {
-          "sans": {"x": 0.5, "y": 0.765, "anchor": "baseline"},
-          "script": {"x": 0.5, "y": 0.79, "anchor": "baseline"}
+          "sans": {
+            "x": 0.5,
+            "y": 0.515,
+            "anchor": "baseline"
+          },
+          "script": {
+            "x": 0.5,
+            "y": 0.53,
+            "anchor": "baseline"
+          },
+          "note": "Reference layout (ascender-to-baseline box ~centred on H/2); 0.515 rather than 0.524 so j/g descenders clear the eyes."
+        },
+        "chin": {
+          "sans": {
+            "x": 0.5,
+            "y": 0.765,
+            "anchor": "baseline"
+          },
+          "script": {
+            "x": 0.5,
+            "y": 0.75,
+            "anchor": "baseline"
+          },
+          "note": "Fallback for clips where the frame middle falls on the eyes: across the chin / collar (the safe zone clamps it above 0.75 H)."
         },
         "top_of_head": {
-          "sans": {"x": 0.5, "anchor": "subject_top", "y_offset": 0.03, "fallback_y": 0.40},
-          "script": {"x": 0.5, "anchor": "subject_top", "y_offset": 0.015, "fallback_y": 0.40,
-                     "size_scale": 1.3, "fit_width": [0.72, 0.8]},
-          "note": "Depth test: a large word sitting on top of the head with the hair overlapping its lower part (use with behind_subject). Baseline = median top of the subject mask over the word's frames + y_offset."
+          "sans": {
+            "x": 0.5,
+            "anchor": "subject_top",
+            "y_offset": 0.03,
+            "fallback_y": 0.4
+          },
+          "script": {
+            "x": 0.5,
+            "anchor": "subject_top",
+            "y_offset": 0.012,
+            "fallback_y": 0.4,
+            "size_scale": 1.0
+          },
+          "note": "Opt-in depth test (with behind_subject): baseline = median top of the subject mask over the word's frames + y_offset, so only the baseline zone of the letters tucks behind the hair."
         }
       },
       "stack": {
-        "anchor": {"x": 0.5, "y": 0.80, "of": "block_ink_center"},
-        "line_align": ["self", "ink_left_of_first", "ink_center_of_first"],
-        "baseline_step_em": [0.0, 0.64, 0.61],
-        "entrances": ["blur_in", "blur_in_line2", "blur_in_line3"]
+        "anchor": {
+          "x": 0.5,
+          "y": 0.48,
+          "of": "block_ink_center"
+        },
+        "line_align": [
+          "self",
+          "ink_left_of_first",
+          "ink_center_of_first"
+        ],
+        "baseline_step_em": [
+          0.0,
+          0.64,
+          0.61
+        ],
+        "entrances": [
+          "blur_in",
+          "blur_in_line2",
+          "blur_in_line3"
+        ]
+      },
+      "safe_zone": {
+        "left": 0.04,
+        "right": 0.96,
+        "top": 0.1,
+        "bottom": 0.75,
+        "note": "Fractions of the frame; enforced after the digital zoom (max zoom over the caption's frames). Words that would cross it are shrunk (width) or moved (height)."
       }
     }
   },
-
   "plan_rules": {
     "emphasis": {
       "target_ratio": 0.18,
@@ -195,15 +370,50 @@
       "function_word_chunk": 2,
       "max_unit_words": 3,
       "min_unit_s": 0.167,
-      "note": "Runs of function words are grouped right-to-left in pairs ('at my', 'at a', 'in the', 'but i'); anything still shorter than min_unit_s joins its non-script neighbour."
+      "note": "Only runs of function words are grouped (right-to-left pairs: 'at my', 'at a', 'in the', 'but i'). A caption shorter than min_unit_s joins a neighbouring function-word caption; content words are never merged (merge_content_words false), so a lone function word next to content words stands alone if it lasts at least min_unit_s_alone (the reference shows 'i'm' for 2 frames).",
+      "merge_content_words": false,
+      "min_unit_s_alone": 0.075
     },
     "variants": {
-      "first_emphasis_phrase": {"blend": "difference_pink", "include_preceding_function_units": 1},
+      "first_emphasis_phrase": {
+        "blend": "difference_pink",
+        "include_preceding_function_units": 1
+      },
       "opening_entrance": "glitch",
       "after_script_entrance": "glitch",
-      "script_entrances": {"first": "cut", "middle": "blur_in", "last": "cut"},
-      "behind_subject": {"max_units": 1, "pick": "first_script", "position": "top_of_head"},
-      "zoom": {"first_unit": "opening_punch", "script": "punch_in", "script_last": "none", "after_punch": "settle_out"}
+      "script_entrances": {
+        "first": "cut",
+        "middle": "blur_in",
+        "last": "cut"
+      },
+      "behind_subject": {
+        "enabled": false,
+        "max_units": 1,
+        "pick": "first_script",
+        "position": "top_of_head",
+        "note": "Off by default (the reference never occludes). build_plan.py --behind WORD or enabled=true turns the depth test on."
+      },
+      "zoom": {
+        "first_unit": "opening_punch",
+        "script": "punch_in",
+        "script_last": "none",
+        "after_punch": "settle_out"
+      }
+    },
+    "sync": {
+      "enabled": true,
+      "band_hz": [
+        250,
+        3500
+      ],
+      "hop_s": 0.01,
+      "floor_percentile": 10,
+      "voiced_db_above_floor": 15,
+      "min_voiced_s": 0.03,
+      "min_shift_s": 0.15,
+      "lead_s": 0.04,
+      "note": "Whisper sometimes stretches a word back over a pause. If a word's whisper span starts in silence (speech-band energy below floor + voiced_db_above_floor for min_voiced_s) and the first voiced onset is more than min_shift_s later, the caption starts at that onset minus lead_s (text leading the sound by a frame reads as in sync). min_shift_s 0.15 ignores the 50-100 ms unvoiced bursts of k/t/p onsets. skip_first: the opening caption is pulled to frame 0 anyway (timing.first_unit_lead_in_s), as the reference opens on a caption at f001.",
+      "skip_first": true
     }
   }
 }

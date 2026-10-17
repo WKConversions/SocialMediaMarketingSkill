@@ -50,8 +50,8 @@
    "class": "script",
    "blend": "difference_pink",
    "entrance": "cut",
-   "behind_subject": true,
-   "position": "top_of_head",
+   "behind_subject": false,
+   "position": "default",
    "zoom": "punch_in"
   },
   {
@@ -153,24 +153,24 @@
     "wat",
     "ik"
    ],
-   "start": 3.337,
+   "start": 3.72,
    "end": 3.977,
    "class": "sans",
    "blend": "difference",
    "entrance": "glitch",
    "behind_subject": false,
    "position": "default",
-   "zoom": "settle_out"
+   "zoom": "settle_out",
+   "start_whisper": 3.337
   },
   {
    "id": "u11",
-   "text": "graag zou",
+   "text": "graag",
    "words": [
-    "graag",
-    "zou"
+    "graag"
    ],
    "start": 3.977,
-   "end": 4.267,
+   "end": 4.187,
    "class": "sans",
    "blend": "difference",
    "entrance": "cut",
@@ -180,6 +180,21 @@
   },
   {
    "id": "u12",
+   "text": "zou",
+   "words": [
+    "zou"
+   ],
+   "start": 4.187,
+   "end": 4.267,
+   "class": "sans",
+   "blend": "difference",
+   "entrance": "cut",
+   "behind_subject": false,
+   "position": "default",
+   "zoom": null
+  },
+  {
+   "id": "u13",
    "text": "Willen",
    "words": [
     "willen"

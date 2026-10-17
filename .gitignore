@@ -18,3 +18,4 @@ lab/**/cache/
 lab/**/downloads/
 lab/**/cache_*.json
 lab/**/*.render.json
+lab/**/*.metrics.json
