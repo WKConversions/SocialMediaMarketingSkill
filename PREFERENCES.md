@@ -40,8 +40,9 @@ these on every video unless the client says otherwise for a specific project.
 
 ## Music
 - When the client supplies a track: its first audible sample lands on frame 0 (trim the file's leading
-  silence; measure the offset over the whole mix, not the first second). Duck it under the voice
-  (sidechain), let it breathe in pauses and on the end card, fade it out over the last ~1.2 s.
+  silence; measure the offset over the whole mix, not the first second). It must be CLEARLY audible:
+  about 6-7 dB under the voice while he speaks (measured on stems), gentle ducking (ratio ~2.5), up
+  in pauses and on the end card, fade out over the last ~1.2 s. -13 dB plus heavy ducking was inaudible.
 
 ## Sound effects per moment (from the client's sound reference, lab/sfx-01/NOTES.md)
 - caption appears: the client's camera shutter (see above)
