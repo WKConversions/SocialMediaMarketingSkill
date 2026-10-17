@@ -1,6 +1,7 @@
 """Mix the voice and the effects track under the captioned video.
 
-    voice:   clip audio -> aresample -> highpass -> volume (voice_lufs - measured loudness) -> apad
+    voice:   clip audio -> aresample -> highpass -> fade in/out at the clip's edges -> volume (voice_lufs -
+             measured loudness) -> apad
     effects: effects track -> aresample -> apad
     amix (normalize=0, duration=longest) -> alimiter (level off, latency compensation ON) -> atrim to the
     video duration -> aresample; AAC; the video stream is copied.
@@ -8,7 +9,9 @@
 Lessons kept from the lab: the voice gets a measured fixed gain, not single-pass loudnorm (which cut a
 short clip's audio to 1.8 s and resampled it to 192 kHz); the limiter must compensate its latency or every
 sound lands 5 ms late; no -shortest (it cut the last frames): both inputs are padded and the result is
-trimmed to exactly the video's duration.
+trimmed to exactly the video's duration. The voice is cut sample-accurately at the trim points, so it fades
+in over a few ms and out over a few tens of ms (style mix.voice_fade): the video starts and ends in silence
+and loops without a tick, and a phone's stop-tap in the last frames is faded out, not cut off mid-sound.
 """
 from common import PipelineError, loudness, run
 
@@ -24,8 +27,11 @@ def voice_gain(voice_wav, cfg):
 def graph(cfg, gain_db, duration, voice="1:a", effects="2:a"):
     """The mix as an ffmpeg filter graph with output [a]. The verification runs the same graph with
     silence as the effects, to know exactly what the voice alone sounds like after the limiter."""
-    sr, lim = cfg["sample_rate"], cfg["limiter"]
-    return (f"[{voice}]aresample={sr},highpass=f={cfg['voice_highpass_hz']},volume={gain_db:.3f}dB,apad[v];"
+    sr, lim, fade = cfg["sample_rate"], cfg["limiter"], cfg["voice_fade"]
+    return (f"[{voice}]aresample={sr},highpass=f={cfg['voice_highpass_hz']},"
+            f"afade=t=in:d={fade['in_s']}:curve={fade['curve']},"
+            f"afade=t=out:st={duration - fade['out_s']:.6f}:d={fade['out_s']}:curve={fade['curve']},"
+            f"volume={gain_db:.3f}dB,apad[v];"
             f"[{effects}]aresample={sr},apad[f];"
             f"[v][f]amix=inputs=2:normalize=0:duration=longest,"
             f"alimiter=limit={lim['limit']}:level={int(lim['level'])}:latency={int(lim['latency'])},"

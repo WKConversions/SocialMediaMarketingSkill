@@ -6,10 +6,11 @@ Typesetting (style["classes"], fonts from style["fonts"], sizes scale with the f
   script  lowercase in the script font, the capital in a swash font (scaled, slightly overlapped), cropped
           to its ink and scaled to a fixed ink height.
 Everything is drawn supersampled, cropped to the ink and downsampled. Words wider than the layout's
-max width are scaled down to fit. Each caption's ink box is centred on the layout point (Prime: the frame
-centre, on every kind of footage).
+max width are scaled down to fit. Each caption's ink box is centred on the frame (style layout: placement
+centre, anchor ink_box_centre; common.validate_style refuses anything else), on every kind of footage.
 
-Compositing per frame in float, display-referred RGB (like After Effects / CSS mix-blend-mode):
+Compositing per frame in float, display-referred RGB (like After Effects / CSS mix-blend-mode), in the
+style's blend mode (common.BLENDS):
     difference: out = B * (1 - a) + |C - B| * a
 so the letters show the negative of whatever moves behind them. A caption is visible from its first
 frame (ceil(start * fps)) until the next caption's first frame. While a zoom caption is visible the
@@ -25,7 +26,7 @@ from dataclasses import dataclass
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
-from common import PipelineError, first_frame, hex_rgb, skill_path
+from common import BLENDS, PipelineError, first_frame, hex_rgb, skill_path
 
 AXIS_TAGS = {"optical size": "opsz", "weight": "wght", "width": "wdth", "slant": "slnt", "italic": "ital"}
 
@@ -99,14 +100,15 @@ class Typesetter:
         return np.asarray(img, np.float32) / 255.0
 
 
-@dataclass
+@dataclass(eq=False)
 class Layer:
-    """One caption placed on the frame."""
+    """One caption placed on the frame. Compared by identity: two captions can have the same text."""
     text: str
     x0: int
     y0: int
     alpha: np.ndarray
     colour: np.ndarray
+    blend: object           # common.BLENDS function: (background, colour) -> fully inked pixel
     first: int              # first visible frame
     last: int               # first frame of the next caption (exclusive)
     start: float            # planned start (s): phase of the zoom
@@ -115,23 +117,22 @@ class Layer:
 
 def layers(plan, style, width, height):
     ts = Typesetter(style, min(width, height) / style["reference_short_side_px"])
-    lay = style["layout"]
-    if lay["placement"] != "centre":
-        raise PipelineError(f"unsupported placement {lay['placement']!r}")
+    lay = style["layout"]                        # placement centre on the ink box (common.validate_style)
+    blend = BLENDS[style["blend"]["mode"]]
     fps, caps = plan["clip"]["fps"], plan["captions"]
     out = []
     for k, c in enumerate(caps):
         a = ts.alpha(c["text"], c["class"])
         h, w = a.shape
         out.append(Layer(text=c["text"], x0=int(lay["x"] * width - w / 2), y0=int(lay["y"] * height - h / 2), alpha=a,
-                         colour=hex_rgb(style["colours"][c["fill"]]), first=first_frame(c["start"], fps),
+                         colour=hex_rgb(style["colours"][c["fill"]]), blend=blend, first=first_frame(c["start"], fps),
                          last=first_frame(caps[k + 1]["start"], fps) if k + 1 < len(caps) else plan["clip"]["frames"],
                          start=c["start"], zoom=c["class"] == style["zoom"]["on"]))
     return out
 
 
 def composite(frame, layer):
-    """Difference-blend one caption into an (H, W, 3) uint8 frame; returns a new frame."""
+    """Blend one caption into an (H, W, 3) uint8 frame in its blend mode; returns a new frame."""
     H, W = frame.shape[:2]
     h, w = layer.alpha.shape
     ys = slice(max(0, layer.y0), min(H, layer.y0 + h))
@@ -139,7 +140,7 @@ def composite(frame, layer):
     a = layer.alpha[ys.start - layer.y0: ys.stop - layer.y0, xs.start - layer.x0: xs.stop - layer.x0][..., None]
     bg = frame[ys, xs].astype(np.float32) / 255.0
     out = frame.copy()
-    out[ys, xs] = (np.clip(bg * (1 - a) + np.abs(layer.colour - bg) * a, 0, 1) * 255 + 0.5).astype(np.uint8)
+    out[ys, xs] = (np.clip(bg * (1 - a) + layer.blend(bg, layer.colour) * a, 0, 1) * 255 + 0.5).astype(np.uint8)
     return out
 
 

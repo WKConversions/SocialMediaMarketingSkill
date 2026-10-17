@@ -18,11 +18,31 @@ EPS = 1e-6
 
 # ffprobe colour-matrix names -> ffmpeg scale filter names
 MATRICES = {"bt709": "bt709", "smpte170m": "smpte170m", "bt470bg": "bt470", "fcc": "fcc", "smpte240m": "smpte240m"}
-HDR_TRANSFERS = {"arib-std-b67", "smpte2084"}
+# HDR transfers (iPhone HDR video is HLG; Dolby Vision 8.4 decodes as its HLG base layer) -> zscale names
+HDR_TRANSFERS = {"arib-std-b67": "arib-std-b67", "smpte2084": "smpte2084"}
+ZSCALE_PRIMARIES = {"bt2020": "bt2020", "bt709": "bt709", "smpte432": "smpte432", "smpte431": "smpte431"}
+ZSCALE_MATRICES = {"bt2020nc": "bt2020nc", "bt2020c": "bt2020c", "bt709": "bt709"}
 
 
 class PipelineError(RuntimeError):
     """A step failed or a rule is broken; the CLI prints it and exits non-zero."""
+
+
+# caption blend modes: (background B, caption colour C), both float RGB 0..1 -> the fully inked pixel
+BLENDS = {"difference": lambda bg, colour: np.abs(colour - bg)}
+
+# style fields that name the one behaviour the pipeline implements: (path, allowed values)
+SUPPORTED = [
+    (("layout", "placement"), {"centre"}),
+    (("layout", "anchor"), {"ink_box_centre"}),
+    (("layout", "x"), {0.5}),
+    (("layout", "y"), {0.5}),
+    (("blend", "mode"), set(BLENDS)),
+    (("timing", "hold_until_next_caption"), {True}),
+    (("sfx", "shutter", "align"), {"biggest_wave"}),
+    (("sfx", "shutter", "every_caption"), {True}),
+    (("sfx", "hit", "align"), {"onset"}),
+]
 
 
 def skill_path(rel):
@@ -41,12 +61,33 @@ def save_json(path, obj):
 
 
 def load_style(name):
-    """A style by name (styles/<name>.json) or by path."""
+    """A style by name (styles/<name>.json) or by path, validated (validate_style)."""
     path = name if name.endswith(".json") else skill_path(f"styles/{name}.json")
     if not os.path.exists(path):
         known = sorted(f[:-5] for f in os.listdir(skill_path("styles")) if f.endswith(".json"))
         raise PipelineError(f"unknown style {name!r}; known styles: {', '.join(known)}")
-    return load_json(path)
+    style = load_json(path)
+    validate_style(style, path)
+    return style
+
+
+def validate_style(style, path):
+    """Refuse a style that asks for something the pipeline does not implement, instead of silently rendering
+    something else: every SUPPORTED field must hold one of its values (True is not 1), and the classes that
+    zoom and get a hit must exist."""
+    def field(*keys):
+        node = style
+        for k in keys:
+            node = node.get(k) if isinstance(node, dict) else None
+        return node
+
+    bad = [f"{'.'.join(keys)} = {field(*keys)!r} (supported: {', '.join(repr(v) for v in allowed)})"
+           for keys, allowed in SUPPORTED
+           if not any(field(*keys) == v and type(field(*keys)) is type(v) for v in allowed)]
+    bad += [f"{'.'.join(keys)} = {field(*keys)!r} is not one of the style's classes"
+            for keys in (("zoom", "on"), ("sfx", "hit", "on")) if field(*keys) not in style.get("classes", {})]
+    if bad:
+        raise PipelineError(f"style {path} asks for what the pipeline does not implement:\n  " + "\n  ".join(bad))
 
 
 def load_settings():
@@ -143,6 +184,7 @@ class Clip:
     matrix: str            # source colour matrix for the YUV -> RGB conversion
     range: str             # tv / pc
     audio_rate: int
+    tonemap: dict = None   # HDR source: zscale input transfer/primaries/matrix for the tone-map to bt709 SDR
 
     @property
     def n_frames(self):
@@ -161,8 +203,6 @@ class Clip:
         """Trim window from explicit times (--start/--end) or around the words (settings.trim)."""
         if info["audio"] is None:
             raise PipelineError("the input has no audio track; there is nothing to caption")
-        if info["color_transfer"] in HDR_TRANSFERS:
-            raise PipelineError(f"HDR source ({info['color_transfer']}); export or record it as SDR (bt709) first")
         out = settings["output"]
         fps = int(out["fps"])
         total = int(math.floor(min(info["duration"], info["audio"]["duration"]) * fps + EPS))
@@ -179,9 +219,14 @@ class Clip:
             cw, ch = int(round(sh * w / h / 2)) * 2, sh
         else:
             cw, ch = sw, int(round(sw * h / w / 2)) * 2
+        tonemap = None
+        if info["color_transfer"] in HDR_TRANSFERS:
+            tonemap = dict(transfer=HDR_TRANSFERS[info["color_transfer"]],
+                           primaries=ZSCALE_PRIMARIES.get(info["color_primaries"], "bt2020"),
+                           matrix=ZSCALE_MATRICES.get(info["color_space"], "bt2020nc"))
         return cls(source=info["path"], start_frame=start, end_frame=end, fps=fps, width=int(w), height=int(h),
                    crop=(cw, ch), matrix=MATRICES.get(info["color_space"], "bt709"),
-                   range="pc" if info["color_range"] == "pc" else "tv", audio_rate=info["audio"]["rate"])
+                   range="pc" if info["color_range"] == "pc" else "tv", audio_rate=info["audio"]["rate"], tonemap=tonemap)
 
     def to_dict(self):
         d = asdict(self)
@@ -195,11 +240,21 @@ class Clip:
         return cls(**{k: (tuple(v) if k == "crop" else v) for k, v in d.items() if k in keys})
 
     def video_filter(self, scaler="lanczos"):
-        """Frame-accurate trim at the output rate, centre crop, scale, YUV -> RGB with the source's matrix."""
+        """Frame-accurate trim at the output rate, centre crop, scale, YUV -> RGB with the source's matrix.
+        An HDR source (HLG/PQ) is scaled in its own signal, then tone-mapped to bt709 SDR (zscale to linear
+        light at 100 nits, bt709 primaries, Mobius curve: near-linear up to the knee, so an SDR-like picture keeps
+        its tones and only highlights are compressed; bt709 transfer)."""
         cw, ch = self.crop
-        return (f"fps={self.fps},trim=start_frame={self.start_frame}:end_frame={self.end_frame},setpts=PTS-STARTPTS,"
-                f"crop={cw}:{ch},scale={self.width}:{self.height}:flags={scaler}:in_color_matrix={self.matrix}"
-                f":in_range={self.range},format=rgb24")
+        head = (f"fps={self.fps},trim=start_frame={self.start_frame}:end_frame={self.end_frame},setpts=PTS-STARTPTS,"
+                f"crop={cw}:{ch},")
+        if not self.tonemap:
+            return head + (f"scale={self.width}:{self.height}:flags={scaler}:in_color_matrix={self.matrix}"
+                           f":in_range={self.range},format=rgb24")
+        tm = self.tonemap
+        rng = "full" if self.range == "pc" else "limited"
+        return head + (f"scale={self.width}:{self.height}:flags={scaler},format=yuv444p16le,"
+                       f"zscale=tin={tm['transfer']}:pin={tm['primaries']}:min={tm['matrix']}:rin={rng}:t=linear:npl=100,"
+                       f"format=gbrpf32le,zscale=p=bt709,tonemap=tonemap=mobius:desat=0,zscale=t=bt709,format=rgb24")
 
     def frames(self, scaler="lanczos"):
         """Yield the clip's frames as (H, W, 3) uint8 RGB."""

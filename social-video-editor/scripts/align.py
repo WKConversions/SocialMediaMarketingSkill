@@ -61,21 +61,27 @@ def emissions(audio, proc, model, chunk_s):
 
 
 def viterbi(emission, tokens, blank):
-    """Standard CTC trellis (as in the torchaudio forced-alignment tutorial), in numpy."""
+    """Standard CTC trellis (as in the torchaudio forced-alignment tutorial), in numpy. Only the current row of
+    scores is kept, plus one bit per cell for the choice made there (enter the next token or stay), so a
+    10-minute clip needs ~35 MB instead of a T x J float64 trellis (~2 GB). The path is the same."""
     T, J = emission.shape[0], len(tokens)
-    trellis = np.full((T + 1, J + 1), -np.inf)
-    trellis[0, 0] = 0
-    trellis[1:, 0] = np.cumsum(emission[:, blank])
+    tokens = np.asarray(tokens)
+    row = np.full(J + 1, -np.inf)
+    row[0] = 0.0
+    full = np.empty(T + 1)                              # score with the whole transcript emitted, after each frame
+    full[0] = row[J]
+    entered = np.empty((T, (J + 7) // 8), np.uint8)     # bit j - 1 of frame t: token j entered at frame t
     for t in range(T):
-        stay = trellis[t, 1:] + emission[t, blank]
-        move = trellis[t, :-1] + emission[t, tokens]
-        trellis[t + 1, 1:] = np.maximum(stay, move)
+        stay = row[1:] + emission[t, blank]
+        move = row[:-1] + emission[t, tokens]
+        entered[t] = np.packbits(move > stay)
+        row[1:] = np.maximum(stay, move)
+        row[0] += emission[t, blank]
+        full[t + 1] = row[J]
     path, j = [], J
-    t = int(np.argmax(trellis[:, J]))
+    t = int(np.argmax(full))
     while j > 0 and t > 0:
-        stay = trellis[t - 1, j] + emission[t - 1, blank]
-        move = trellis[t - 1, j - 1] + emission[t - 1, tokens[j - 1]]
-        if move > stay:
+        if (entered[t - 1, (j - 1) >> 3] >> (7 - ((j - 1) & 7))) & 1:
             path.append((j - 1, t - 1, float(np.exp(emission[t - 1, tokens[j - 1]]))))
             j -= 1
         t -= 1

@@ -16,6 +16,8 @@ STAMP="$VENV/.requirements.sha256"
 for tool in "$PYTHON" ffmpeg ffprobe; do
   command -v "$tool" >/dev/null || { echo "setup: $tool not found" >&2; exit 1; }
 done
+ffmpeg -hide_banner -filters 2>/dev/null | grep -q " zscale " \
+  || echo "setup: warning: this ffmpeg has no zscale filter (libzimg): HDR (HLG/PQ) recordings cannot be tone-mapped" >&2
 "$PYTHON" -c 'import sys; sys.exit(sys.version_info[:2] != (3, 13))' \
   || echo "setup: warning: built and tested with Python 3.13; pinned wheels may not exist for $("$PYTHON" -V)" >&2
 

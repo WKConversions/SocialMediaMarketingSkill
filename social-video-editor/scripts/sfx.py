@@ -1,13 +1,16 @@
 """The caption effects track, placed from the plan so every sound sits on its caption's first frame.
 
 Rules (client, PREFERENCES.md): a sound only where a new caption appears and on EVERY caption; the caption
-sound is the client's own camera shutter with all its clicks, and the shutter's biggest wave (its loudest
-sample) lands exactly on the first frame the caption is visible (ceil(start * fps) / fps, not the planned
-word time); the softer clicks come just before. Script captions add a short synthesised hit that starts
-on that frame. Pitch, level and pan of each use come from the plan. No magical/glowy/chime sounds.
+sound is the client's own camera shutter with all its clicks, and the shutter's biggest wave lands exactly
+on the first frame the caption is visible (ceil(start * fps) / fps, not the planned word time); the softer
+clicks come just before. Script captions add a short synthesised hit that starts on that frame. Pitch,
+level and pan of each use come from the plan. No magical/glowy/chime sounds.
 
-Writes the effects track and a shutter-only track (the verification cross-correlates the final audio
-against it).
+The biggest wave is one fixed point of the file: its loudest sample (~194.5 ms in). Each use is repitched
+on a sample grid that passes through that sample, so it keeps its exact value, stays the loudest sample of
+the sound as played (linear interpolation never overshoots it) and lands exactly on the caption's frame
+sample, whatever the pitch. (A grid from sample 0 can miss the spike, and the loudest played sample then
+jumps to a neighbouring half-cycle up to ~2 ms away.)
 """
 import wave
 
@@ -22,19 +25,23 @@ def db(x):
 
 # ---------------------------------------------------------------------------------------- shutter
 def load_shutter(cfg, sr):
-    """The client's shutter: the slice with the clicks, short fades, peak-normalised (mono)."""
+    """The client's shutter: the slice with the clicks, short fades, peak-normalised (mono).
+    Returns (sound, anchor): anchor = index of the biggest wave, the file's loudest sample."""
     x = decode_audio(skill_path(cfg["file"]), sr).astype(float)
     a, b = (int(t * sr) for t in cfg["slice_s"])
     x = x[a:b].copy()
     fi, fo = int(cfg["fade_in_s"] * sr), int(cfg["fade_out_s"] * sr)
     x[:fi] *= np.linspace(0, 1, fi)
     x[-fo:] *= np.linspace(1, 0, fo)
-    return x / np.abs(x).max()
+    return x / np.abs(x).max(), int(np.argmax(np.abs(x)))
 
 
-def repitch(x, factor):
-    idx = np.arange(0, len(x) - 1, factor)
-    return np.interp(idx, np.arange(len(x)), x)
+def repitch(x, factor, anchor):
+    """Resample by factor (> 1 = higher and shorter) on a grid through sample `anchor`, which keeps its
+    exact value. Returns (sound, index of the anchor in it)."""
+    before = int(anchor // factor)
+    pos = anchor + factor * np.arange(-before, int((len(x) - 1 - anchor) // factor) + 1)
+    return np.interp(pos, np.arange(len(x)), x), before
 
 
 # ---------------------------------------------------------------------------------------- hit
@@ -79,11 +86,15 @@ def reverb(x, cfg, rng, sr):
 
 
 # ---------------------------------------------------------------------------------------- placement
-def place(track, sound, t0, gain_db, sr, pan=0.0):
-    """Add a mono (equal-power panned) or stereo sound so that its sample 0 lands at time t0."""
+def pan_gains(pan):
+    """Equal-power pan of a mono sound: (left, right) gains, both 1 in the centre."""
+    return np.sqrt(1 - pan), np.sqrt(1 + pan)
+
+
+def place(track, sound, i0, gain_db, pan=0.0):
+    """Add a mono (equal-power panned) or stereo sound so that its sample 0 lands on track sample i0."""
     if sound.ndim == 1:
-        sound = np.stack([sound * np.sqrt(0.5 * (1 - pan)), sound * np.sqrt(0.5 * (1 + pan))], axis=1) * np.sqrt(2)
-    i0 = int(round(t0 * sr))
+        sound = np.stack([sound * g for g in pan_gains(pan)], axis=1)
     if i0 < 0:
         sound, i0 = sound[-i0:], 0
     end = min(len(track), i0 + len(sound))
@@ -109,36 +120,38 @@ def write_wav(path, x, sr):
         w.writeframes((x * 32767).astype("<i2").tobytes())
 
 
-def build(plan, style, out_track, out_shutter_only):
-    """Write the effects track and the shutter-only track; return what was placed where."""
+def frame_sample(frame, fps, sr):
+    """The audio sample at which a video frame starts."""
+    return int(round(frame * sr / fps))
+
+
+def build(plan, style, out_track):
+    """Write the effects track; return what was placed where."""
     cfg = style["sfx"]
     sr, fps = cfg["sample_rate"], plan["clip"]["fps"]
-    n = int(plan["clip"]["frames"] / fps * sr)
+    n = frame_sample(plan["clip"]["frames"], fps, sr)
     track = np.zeros((n + sr, 2))
-    shutter_only = np.zeros_like(track)
-    shutter = load_shutter(cfg["shutter"], sr)
+    shutter, anchor = load_shutter(cfg["shutter"], sr)
     placed = []
     for k, c in enumerate(plan["captions"]):
-        f = first_frame(c["start"], fps)
-        t = f / fps                                            # the caption becomes visible on this frame
+        f = first_frame(c["start"], fps)                       # the caption becomes visible on this frame
+        i = frame_sample(f, fps, sr)
         sh = c["sfx"]["shutter"]
-        snd = repitch(shutter, sh["pitch"])
-        peak = int(np.argmax(np.abs(snd)))                     # the biggest wave lands on the caption frame
-        for tr in (track, shutter_only):
-            place(tr, snd, t - peak / sr, sh["gain_db"], sr, sh["pan"])
-        entry = dict(caption=k, text=c["text"], frame=f, time=round(t, 6), shutter_peak_sample=int(round(t * sr)))
+        snd, peak = repitch(shutter, sh["pitch"], anchor)
+        place(track, snd, i - peak, sh["gain_db"], sh["pan"])  # the biggest wave on the caption frame
+        entry = dict(caption=k, text=c["text"], frame=f, frame_sample=i, shutter_start_sample=i - peak,
+                     shutter_peak_sample=i - peak + int(np.argmax(np.abs(snd))))
         h = c["sfx"]["hit"]
         if h:
             hc = cfg["hit"]
             rng = np.random.default_rng([cfg["seed"], k])
             snd_h = reverb(hit(h["size"] * hc["synth"]["size_scale"], hc["synth"], rng, sr),
                            hc["reverb"]["tail" if h["tail"] else "short"], rng, sr)
-            place(track, snd_h, t - onset(snd_h, hc["onset_rel_db"]) / sr, h["gain_db"], sr)
+            place(track, snd_h, i - onset(snd_h, hc["onset_rel_db"]), h["gain_db"])
             entry["hit"] = h["role"]
         placed.append(entry)
-    track, shutter_only = track[:n], shutter_only[:n]
+    track = track[:n]
     fade = int(cfg["track_fade_out_s"] * sr)
     track[-fade:] *= np.linspace(1, 0, fade)[:, None]
     write_wav(out_track, track, sr)
-    write_wav(out_shutter_only, shutter_only, sr)
     return dict(sample_rate=sr, peak_dbfs=round(float(20 * np.log10(np.abs(track).max() + 1e-12)), 2), placed=placed)

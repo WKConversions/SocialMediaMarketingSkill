@@ -42,12 +42,12 @@
     "y": 0.5,
     "anchor": "ink_box_centre",
     "max_width_px": 960,
-    "note": "Every caption's ink box is centred on (x, y) of the frame, on every kind of footage, exactly like the reference reel. Nothing is ever placed behind the speaker. Words wider than max_width_px are scaled down to fit."
+    "note": "Every caption's ink box is centred on the frame, on every kind of footage, exactly like the reference reel. Nothing is ever placed behind the speaker. Words wider than max_width_px are scaled down to fit. placement centre with anchor ink_box_centre at x = y = 0.5 is the only layout the pipeline implements; any other value is refused when the style is loaded, and the verification measures the ink box centre in the final frames."
   },
 
   "blend": {
     "mode": "difference",
-    "note": "out = B * (1 - a) + |C - B| * a in display-referred RGB, with a the anti-aliased text alpha and C the caption colour."
+    "note": "out = B * (1 - a) + |C - B| * a in display-referred RGB, with a the anti-aliased text alpha and C the caption colour. difference is the only mode implemented (common.BLENDS); the verification measures it in the final frames."
   },
 
   "render": {
@@ -71,13 +71,13 @@
   "timing": {
     "caption_lead_frames": 1,
     "hold_until_next_caption": true,
-    "note": "A caption starts caption_lead_frames before its first word (so it is visible 0-1 frame before the word is heard) and stays until the next caption starts; the last one stays to the end of the clip."
+    "note": "A caption starts caption_lead_frames before its first word (so it is visible 0-1 frame before the word is heard) and stays until the next caption starts; the last one stays to the end of the clip. hold_until_next_caption true is the only timing implemented; any other value is refused when the style is loaded."
   },
 
   "grouping": {
     "max_words": 3,
     "min_frames": 5,
-    "note": "Emphasis words and content words stand alone; each run of function words between them is one caption (split evenly if longer than max_words). A caption that would be on screen for fewer than min_frames frames is merged into a neighbouring non-emphasis caption (function-word neighbours first), as long as the result has at most max_words words.",
+    "note": "Emphasis words and content words stand alone; each run of function words between them is one caption (split evenly if longer than max_words). A caption that would be on screen for fewer than min_frames frames is merged into a neighbouring non-emphasis caption (function-word neighbours first), as long as the result has at most max_words words; when both neighbours are full it takes over the nearest word of one of them if both then last min_frames. Emphasis captions never merge, so the emphasis choice keeps room around them (see emphasis). Every caption must end up on screen for at least min_frames frames: a plan that breaks this is written out with its problems listed and is not rendered.",
     "function_words": {
       "nl": ["de", "het", "een", "en", "of", "maar", "want", "dus", "dat", "die", "dit", "deze", "wat", "wie", "waar", "wanneer", "hoe", "om", "te", "van", "voor", "met", "naar", "op", "in", "uit", "aan", "bij", "tot", "door", "over", "onder", "als", "dan", "ook", "nog", "al", "wel", "niet", "geen", "zo", "er", "hier", "daar", "ik", "je", "jij", "u", "hij", "zij", "ze", "we", "wij", "jullie", "mij", "me", "mijn", "jouw", "zijn", "haar", "ons", "onze", "hun", "hen", "men", "is", "ben", "bent", "was", "waren", "wordt", "worden", "word", "heb", "hebt", "heeft", "hadden", "had", "kan", "kun", "kunt", "kon", "konden", "zal", "zult", "zullen", "zou", "zouden", "moet", "moeten", "mag", "mogen", "wil", "wilt", "gaat", "ga", "gaan", "doe", "doet", "even"],
       "en": ["a", "an", "the", "and", "or", "but", "so", "that", "this", "these", "those", "what", "who", "where", "when", "how", "to", "of", "for", "with", "from", "in", "on", "at", "by", "as", "than", "then", "also", "too", "not", "no", "i", "i'm", "im", "me", "my", "you", "your", "he", "she", "it", "its", "we", "us", "our", "they", "them", "their", "is", "am", "are", "was", "were", "be", "been", "being", "have", "has", "had", "do", "does", "did", "can", "could", "will", "would", "shall", "should", "may", "might", "must", "just", "very", "really", "yet", "still", "even", "out", "up", "off", "why", "don't", "doesn't", "didn't", "can't", "won't", "isn't", "aren't", "wasn't", "weren't", "i've", "i'll", "i'd", "you're", "you've", "you'll", "you'd", "he's", "she's", "it's", "we're", "we've", "they're", "they've", "that's", "there's", "what's", "let's", "gonna", "wanna"]
@@ -91,7 +91,7 @@
     "never_adjacent": true,
     "fills": {"first": "pink", "others": "white"},
     "sans_fill": "white",
-    "note": "About one word in every_n_words becomes an emphasis (script) word. Candidates are content words (not in the function-word list) with at least min_letters letters, ranked by letters x spoken duration: long words said slowly carry the meaning. The last word of the video goes first when it is a candidate (the payoff). Never two emphasis words in a row. The first emphasis word is pink, the others white; script words are capitalised, sans words lowercase."
+    "note": "About one word in every_n_words becomes an emphasis (script) word. Candidates are content words (not in the function-word list) with at least min_letters letters, ranked by letters x spoken duration: long words said slowly carry the meaning. The last word of the video goes first when it is a candidate (the payoff). Never two emphasis words in a row, and never so close together (or to the clip's start or end) that the emphasis caption or the caption(s) between would be on screen for fewer than grouping.min_frames frames: emphasis captions stand alone, so a short caption between two of them could not be merged away. An emphasis word next to a caption that grouping still cannot bring to min_frames is passed over for the next candidate (words forced with --emphasis are kept and the plan reports the problem). The first emphasis caption is pink, the others white, sans captions white; the colours are re-derived from the classes on every load of a plan, unless a caption sets fill_override. Script words are capitalised, sans words lowercase."
   },
 
   "sfx": {
@@ -109,7 +109,7 @@
       "gain_jitter_db": [-1.5, 1.0],
       "pitch_jitter": [0.98, 1.02],
       "pan_jitter": [-0.2, 0.2],
-      "note": "The client's own shutter with all its clicks, on EVERY caption. Its biggest wave (loudest sample) lands exactly on the caption's first visible frame; the softer clicks come just before. Pitch, level and pan vary slightly per use so it never sounds like a loop."
+      "note": "The client's own shutter with all its clicks, on EVERY caption. Its biggest wave (the file's loudest sample, ~194.5 ms in) lands exactly on the caption's first visible frame; the softer clicks come just before. Pitch, level and pan vary slightly per use so it never sounds like a loop; each use is repitched on a sample grid through the biggest wave, so that sample keeps its value, stays the loudest of the sound as played and sits on the frame whatever the pitch."
     },
     "hit": {
       "on": "script",
@@ -138,7 +138,7 @@
       },
       "note": "A short synthesised sub drop + mid thud + knock + click on emphasis words, starting (first audible sample within onset_rel_db of its peak) on the caption frame. Size by role among the emphasis words; the last one rings out (tail reverb). Level = gain_db + gain_db_per_size * (size - 1)."
     },
-    "forbidden": "No magical, glowy, sparkle, shimmer or chime sounds, no whooshes or run-ups: sounds only where a new caption appears."
+    "note": "No magical, glowy, sparkle, shimmer or chime sounds, no whooshes or run-ups: sounds only where a new caption appears. shutter.align, shutter.every_caption and hit.align name the only placement the pipeline implements; any other value is refused when the style is loaded."
   },
 
   "mix": {
@@ -146,9 +146,10 @@
     "voice_highpass_hz": 80,
     "voice_lufs": -15.0,
     "final_lufs": -14.0,
+    "voice_fade": {"in_s": 0.005, "out_s": 0.03, "curve": "qua"},
     "limiter": {"limit": 0.79, "level": false, "latency": true},
     "audio_codec": "aac",
     "audio_bitrate": "256k",
-    "note": "Voice gets a fixed gain to voice_lufs (measured, not loudnorm); effects are added on top; the limiter MUST compensate its latency (without it every sound is 5 ms late)."
+    "note": "Voice gets a fixed gain to voice_lufs (measured, not loudnorm); effects are added on top; the limiter MUST compensate its latency (without it every sound is 5 ms late). The voice fades in over voice_fade.in_s and out over voice_fade.out_s at the clip's edges (ffmpeg afade curve, qua = quadratic), so the video starts and ends in silence and loops without a tick: a recording's stop-tap in the last frames is faded out instead of cut off mid-sound."
   }
 }
