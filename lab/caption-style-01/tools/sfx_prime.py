@@ -1,10 +1,11 @@
 """Synthesised caption sound effects for the Prime style, placed on a caption plan.
 
-Sounds (all generated, so no licensing questions):
+Sounds (all generated, so no licensing questions). Client rule: never any magical, glowy,
+sparkle or chime sounds; keep everything mechanical/physical (camera clicks, whooshes, hits).
+
   tick     very short, soft high click on body (sans) words
   whoosh   noise swell rising into a script word (pre-roll before the word)
   hit      sub-bass drop with a short attack, audible on phone speakers
-  shimmer  glassy high partials for the glossy/pink word
 Writes each sound to a kit folder and a full SFX track aligned to the plan.
 
 Usage: python3 sfx_prime.py OUT_TRACK.wav DURATION_S KIT_DIR
@@ -21,17 +22,17 @@ rng = np.random.default_rng(7)
 # Hand-placed so it never becomes a pattern: about a third of the word changes stay silent, no sound type
 # twice in a row, accents on phrase starts and the script words. (time s, kind, options)
 EVENTS = [
-    (0.14, "shutter_dslr", {}),                                   # dit is een (opening)
-    (0.94, "script", {"burst": (5, 0.055, 0.022), "shimmer": True, "size": 1.0, "whoosh": True}),  # Testvideo
-    (1.49, None, {}),                                             # om te: silent
-    (1.80, "shutter_mirrorless", {}),                             # kijken
-    (2.16, None, {}),                                             # of jij: silent
-    (2.43, "film_ratchet", {}),                                   # goed
-    (2.73, None, {}),                                             # kan: silent
-    (2.93, "script", {"burst": (3, 0.045, 0.03), "shimmer": False, "size": 0.85}),  # Editen
-    (3.34, "shutter_double", {}),                                 # wat ik
-    (3.98, "shutter_mirrorless", {"pitch": 0.9}),                 # graag zou
-    (4.27, "script", {"burst": (6, 0.02, 0.06), "shimmer": True, "size": 1.25, "tail": True, "whoosh": True}),  # Willen: decelerating
+    (0.14, "user_full", {}),                                       # dit is een (opening)
+    (0.94, "script", {"burst": (4, 0.07, 0.035), "size": 1.0, "whoosh": True}),    # Testvideo: accelerating
+    (1.49, None, {}),                                              # om te: silent
+    (1.80, "user_click", {}),                                      # kijken
+    (2.16, None, {}),                                              # of jij: silent
+    (2.43, "user_full", {"pitch": 0.96}),                          # goed
+    (2.73, None, {}),                                              # kan: silent
+    (2.93, "script", {"burst": (3, 0.055, 0.04), "size": 0.85}),   # Editen
+    (3.34, "user_double", {}),                                     # wat ik
+    (3.98, "user_click", {"pitch": 1.04}),                         # graag zou
+    (4.27, "script", {"burst": (5, 0.03, 0.07), "size": 1.25, "tail": True, "whoosh": True}),  # Willen: decelerating
 ]
 
 
@@ -96,23 +97,6 @@ def hit(size=1.0):
     return x / np.abs(x).max()
 
 
-def shimmer(size=1.0):
-    dur = 1.1
-    n = int(dur * SR)
-    t = np.arange(n) / SR
-    x = np.zeros(n)
-    partials = [2093, 2637, 3136, 4186, 5274, 6272]   # C7 E7 G7 C8 E8 G8
-    for k, fr in enumerate(partials):
-        delay = int(rng.uniform(0, 0.07) * SR) + k * int(0.012 * SR)
-        tt = t[: n - delay]
-        vib = 1 + 0.002 * np.sin(2 * np.pi * 5.5 * tt)
-        tone = np.sin(2 * np.pi * fr * vib * tt) * np.exp(-tt / rng.uniform(0.25, 0.5)) * (1 - np.exp(-tt / 0.003))
-        x[delay:] += tone * (0.9 ** k)
-    air = bandpass_noise(n, 6000, 14000) * np.exp(-t / 0.18) * 0.25
-    x = x + air
-    return x / np.abs(x).max()
-
-
 # ---- camera family: shutters, clicks, ratchets, stutter bursts -------------------------------
 
 def mech_click(pitch=1.0, bright=1.0, decay=1.0):
@@ -170,6 +154,72 @@ def stutter(n=5, first_gap=0.06, last_gap=0.025, p=1.0):
     return seq(clicks)
 
 
+# ---- the client's own camera shutter (assets/sfx/camera_shutter.wav) is the caption sound ----------
+
+SHUTTER_PATH = "/home/user/SocialMediaMarketingSkill/lab/caption-style-01/assets/sfx/camera_shutter.wav"
+SHUTTER_SYNC_S = 0.192      # loudest click inside the file: this point lands on the caption frame
+
+
+def _load_shutter():
+    import subprocess
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", SHUTTER_PATH, "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"],
+                         capture_output=True, check=True).stdout
+    x = np.frombuffer(raw, np.float32).astype(float)
+    a, b = int(0.095 * SR), int(0.30 * SR)            # trim the silence around the ~100 ms of clicks
+    x = x[a:b].copy()
+    x[: int(0.004 * SR)] *= np.linspace(0, 1, int(0.004 * SR))
+    x[-int(0.03 * SR):] *= np.linspace(1, 0, int(0.03 * SR))
+    return x / np.abs(x).max(), SHUTTER_SYNC_S - 0.095
+
+
+_SHUTTER, _SHUTTER_SYNC = _load_shutter()
+
+
+def _repitch(x, factor):
+    idx = np.arange(0, len(x) - 1, factor)
+    return np.interp(idx, np.arange(len(x)), x)
+
+
+def user_full(p=1.0):
+    """The whole shutter. Returns (sound, sync offset in s)."""
+    return _repitch(_SHUTTER, p), _SHUTTER_SYNC / p
+
+
+def user_click(p=1.0):
+    """Only the final, loudest click of the shutter."""
+    a = int((0.185 - 0.095) * SR)
+    x = _SHUTTER[a:].copy()
+    x[: int(0.003 * SR)] *= np.linspace(0, 1, int(0.003 * SR))
+    return _repitch(x / np.abs(x).max(), p), 0.012 / p
+
+
+def user_double(p=1.0):
+    one, sync = user_full(p)
+    two, _ = user_click(p * 1.03)
+    gap = int(rng.uniform(0.075, 0.095) * SR)
+    out = np.zeros(max(len(one), gap + len(two)))
+    out[: len(one)] += one
+    out[gap: gap + len(two)] += two * db(-5)
+    return out / np.abs(out).max(), sync
+
+
+def user_stutter(n=4, first_gap=0.06, last_gap=0.03, p=1.0):
+    """A burst built from the client's shutter clicks; returns (sound, time of the last click)."""
+    clicks, t = [], 0.0
+    for k in range(n):
+        snd, sync = (user_click if k % 2 else user_full)(p * rng.uniform(0.96, 1.05))
+        clicks.append((t - sync, snd, rng.uniform(-3, 0)))
+        if k < n - 1:
+            t += first_gap + (last_gap - first_gap) * k / max(1, n - 2)
+    lead = -min(c[0] for c in clicks)
+    end = max(c[0] + lead + len(c[1]) / SR for c in clicks)
+    out = np.zeros(int(end * SR) + 1)
+    for t0, snd, g in clicks:
+        i = int((t0 + lead) * SR)
+        out[i:i + len(snd)] += snd * db(g)
+    return out / np.abs(out).max(), t + lead
+
+
 def reverb(x, decay=0.45, length=1.4, wet=0.3):
     n = int(length * SR)
     t = np.arange(n) / SR
@@ -208,25 +258,22 @@ def write_wav(path, x):
 def main(out_path, duration, kit_dir):
     duration = float(duration)
     track = np.zeros((int(duration * SR) + SR, 2))
-    makers = {"shutter_dslr": shutter_dslr, "shutter_mirrorless": shutter_mirrorless,
-              "shutter_double": shutter_double, "film_ratchet": film_ratchet}
+    makers = {"user_full": user_full, "user_click": user_click, "user_double": user_double}
     for t, kind, ex in EVENTS:
         if kind is None:
             continue
-        pan = rng.uniform(-0.3, 0.3)
+        pan = rng.uniform(-0.25, 0.25)
         if kind != "script":
-            snd = makers[kind](ex.get("pitch", 1.0) * rng.uniform(0.94, 1.06))
-            place(track, reverb(snd, decay=0.12, wet=0.12), t + rng.uniform(-0.008, 0.004), -9 + rng.uniform(-2, 1.5), pan)
+            snd, sync = makers[kind](ex.get("pitch", 1.0) * rng.uniform(0.96, 1.04))
+            place(track, snd, t - sync, -6 + rng.uniform(-2, 1), pan)
             continue
         size = ex.get("size", 1.0)
         n, g0, g1 = ex["burst"]
-        burst = stutter(n, g0, g1, p=rng.uniform(0.95, 1.05))
-        place(track, reverb(burst, decay=0.15, wet=0.15), t - len(burst) / SR + 0.012, -10, pan)   # burst lands on the word
+        burst, last = user_stutter(n, g0, g1, p=rng.uniform(0.97, 1.03))
+        place(track, burst, t - last, -7, pan)                       # the burst's last click lands on the word
         if ex.get("whoosh"):
-            place(track, reverb(whoosh(0.3), decay=0.25, wet=0.25), t - 0.3, -17)
+            place(track, reverb(whoosh(0.3), decay=0.25, wet=0.25), t - 0.3, -18)
         place(track, reverb(hit(size), decay=0.6 if ex.get("tail") else 0.3, wet=0.35 if ex.get("tail") else 0.2), t, -6 + 3 * (size - 1))
-        if ex.get("shimmer"):
-            place(track, reverb(shimmer(size), decay=0.5, wet=0.4), t + 0.01, -16)
     track = track[: int(duration * SR)]
     fade = int(0.12 * SR)
     track[-fade:] *= np.linspace(1, 0, fade)[:, None]
@@ -238,12 +285,14 @@ def main(out_path, duration, kit_dir):
     for name, fn in [("shutter_dslr", shutter_dslr), ("shutter_mirrorless", shutter_mirrorless),
                      ("shutter_double", shutter_double), ("film_ratchet", film_ratchet)]:
         write_wav(f"{kit_dir}/{name}.wav", reverb(fn(), decay=0.12, wet=0.12) * db(-4))
+    write_wav(f"{kit_dir}/client_shutter_click.wav", user_click()[0] * db(-4))
+    write_wav(f"{kit_dir}/client_shutter_double.wav", user_double()[0] * db(-4))
+    write_wav(f"{kit_dir}/client_shutter_stutter.wav", user_stutter(4, 0.07, 0.035)[0] * db(-4))
     write_wav(f"{kit_dir}/stutter_accel.wav", reverb(stutter(5, 0.055, 0.022), decay=0.15, wet=0.15) * db(-4))
     write_wav(f"{kit_dir}/stutter_decel.wav", reverb(stutter(6, 0.02, 0.06), decay=0.15, wet=0.15) * db(-4))
     write_wav(f"{kit_dir}/whoosh.wav", reverb(whoosh(0.3), decay=0.25, wet=0.25) * db(-3))
     write_wav(f"{kit_dir}/hit.wav", reverb(hit(1.0), wet=0.2) * db(-3))
     write_wav(f"{kit_dir}/hit_tail.wav", reverb(hit(1.25), decay=0.6, wet=0.35) * db(-3))
-    write_wav(f"{kit_dir}/shimmer.wav", reverb(shimmer(), decay=0.5, wet=0.4) * db(-6))
     print("sfx track:", out_path, f"peak {20*np.log10(np.abs(track).max()+1e-9):.1f} dBFS")
 
 
