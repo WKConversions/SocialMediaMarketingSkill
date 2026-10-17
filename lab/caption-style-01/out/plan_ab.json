@@ -1,0 +1,212 @@
+{
+ "style": "Prime",
+ "layout": "talking_head",
+ "language": "nl",
+ "source": {
+  "video": "footage/user/clip.mp4",
+  "words": "footage/user/clip_words.json"
+ },
+ "rules": "built by tools/build_plan.py from style.plan_rules",
+ "words": [
+  {
+   "id": "u01",
+   "text": "dit",
+   "words": [
+    "Dit"
+   ],
+   "start": 0.137,
+   "end": 0.637,
+   "class": "sans",
+   "blend": "difference",
+   "entrance": "glitch_rgb",
+   "behind_subject": false,
+   "position": "default",
+   "zoom": "opening_punch"
+  },
+  {
+   "id": "u02",
+   "text": "is een",
+   "words": [
+    "is",
+    "een"
+   ],
+   "start": 0.637,
+   "end": 0.937,
+   "class": "sans",
+   "blend": "difference_pink",
+   "entrance": "cut",
+   "behind_subject": false,
+   "position": "default",
+   "zoom": "settle_out"
+  },
+  {
+   "id": "u03",
+   "text": "Testvideo",
+   "words": [
+    "testvideo"
+   ],
+   "start": 0.937,
+   "end": 1.487,
+   "class": "script",
+   "blend": "difference_pink",
+   "entrance": "cut",
+   "behind_subject": true,
+   "position": "top_of_head",
+   "zoom": "punch_in"
+  },
+  {
+   "id": "u04",
+   "text": "om te",
+   "words": [
+    "om",
+    "te"
+   ],
+   "start": 1.487,
+   "end": 1.797,
+   "class": "sans",
+   "blend": "difference",
+   "entrance": "glitch",
+   "behind_subject": false,
+   "position": "default",
+   "zoom": "settle_out"
+  },
+  {
+   "id": "u05",
+   "text": "kijken",
+   "words": [
+    "kijken"
+   ],
+   "start": 1.797,
+   "end": 2.147,
+   "class": "sans",
+   "blend": "difference",
+   "entrance": "cut",
+   "behind_subject": false,
+   "position": "default",
+   "zoom": null
+  },
+  {
+   "id": "u06",
+   "text": "of jij",
+   "words": [
+    "of",
+    "jij"
+   ],
+   "start": 2.157,
+   "end": 2.427,
+   "class": "sans",
+   "blend": "difference",
+   "entrance": "cut",
+   "behind_subject": false,
+   "position": "default",
+   "zoom": null
+  },
+  {
+   "id": "u07",
+   "text": "goed",
+   "words": [
+    "goed"
+   ],
+   "start": 2.427,
+   "end": 2.727,
+   "class": "sans",
+   "blend": "difference",
+   "entrance": "cut",
+   "behind_subject": false,
+   "position": "default",
+   "zoom": null
+  },
+  {
+   "id": "u08",
+   "text": "kan",
+   "words": [
+    "kan"
+   ],
+   "start": 2.727,
+   "end": 2.927,
+   "class": "sans",
+   "blend": "difference",
+   "entrance": "cut",
+   "behind_subject": false,
+   "position": "default",
+   "zoom": null
+  },
+  {
+   "id": "u09",
+   "text": "Editen",
+   "words": [
+    "editen"
+   ],
+   "start": 2.927,
+   "end": 3.337,
+   "class": "script",
+   "blend": "difference",
+   "entrance": "blur_in",
+   "behind_subject": false,
+   "position": "default",
+   "zoom": "punch_in"
+  },
+  {
+   "id": "u10",
+   "text": "wat ik",
+   "words": [
+    "wat",
+    "ik"
+   ],
+   "start": 3.72,
+   "end": 3.977,
+   "class": "sans",
+   "blend": "difference",
+   "entrance": "glitch",
+   "behind_subject": false,
+   "position": "default",
+   "zoom": "settle_out",
+   "start_whisper": 3.337
+  },
+  {
+   "id": "u11",
+   "text": "graag",
+   "words": [
+    "graag"
+   ],
+   "start": 3.977,
+   "end": 4.187,
+   "class": "sans",
+   "blend": "difference",
+   "entrance": "cut",
+   "behind_subject": false,
+   "position": "default",
+   "zoom": null
+  },
+  {
+   "id": "u12",
+   "text": "zou",
+   "words": [
+    "zou"
+   ],
+   "start": 4.187,
+   "end": 4.267,
+   "class": "sans",
+   "blend": "difference",
+   "entrance": "cut",
+   "behind_subject": false,
+   "position": "default",
+   "zoom": null
+  },
+  {
+   "id": "u13",
+   "text": "Willen",
+   "words": [
+    "willen"
+   ],
+   "start": 4.267,
+   "end": 4.607,
+   "class": "script",
+   "blend": "difference",
+   "entrance": "cut",
+   "behind_subject": false,
+   "position": "default",
+   "zoom": null
+  }
+ ]
+}

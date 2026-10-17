@@ -1,0 +1,151 @@
+{
+ "style": "Prime",
+ "layout": "montage",
+ "language": "en",
+ "source": {
+  "video": "footage/demo/tos_bridge.mp4",
+  "words": "footage/demo/tos_bridge_words.json"
+ },
+ "rules": "built by tools/build_plan.py from style.plan_rules",
+ "words": [
+  {
+   "id": "u01",
+   "text": "why don't",
+   "words": [
+    "Why",
+    "don't"
+   ],
+   "start": 0.26,
+   "end": 0.7,
+   "class": "sans",
+   "blend": "difference",
+   "entrance": "glitch",
+   "behind_subject": false,
+   "position": "default",
+   "zoom": "opening_punch"
+  },
+  {
+   "id": "u02",
+   "text": "you just",
+   "words": [
+    "you",
+    "just"
+   ],
+   "start": 0.7,
+   "end": 1.16,
+   "class": "sans",
+   "blend": "difference",
+   "entrance": "cut",
+   "behind_subject": false,
+   "position": "default",
+   "zoom": "settle_out"
+  },
+  {
+   "id": "u03",
+   "text": "admit",
+   "words": [
+    "admit"
+   ],
+   "start": 1.16,
+   "end": 1.46,
+   "class": "sans",
+   "blend": "difference",
+   "entrance": "cut",
+   "behind_subject": false,
+   "position": "default",
+   "zoom": null
+  },
+  {
+   "id": "u04",
+   "text": "that you're",
+   "words": [
+    "that",
+    "you're"
+   ],
+   "start": 1.46,
+   "end": 2.32,
+   "class": "sans",
+   "blend": "difference_pink",
+   "entrance": "cut",
+   "behind_subject": false,
+   "position": "default",
+   "zoom": null
+  },
+  {
+   "id": "u05",
+   "text": "Freaked",
+   "words": [
+    "freaked"
+   ],
+   "start": 2.32,
+   "end": 2.6,
+   "class": "script",
+   "blend": "difference_pink",
+   "entrance": "cut",
+   "behind_subject": false,
+   "position": "default",
+   "zoom": "punch_in"
+  },
+  {
+   "id": "u06",
+   "text": "out",
+   "words": [
+    "out"
+   ],
+   "start": 2.6,
+   "end": 2.8,
+   "class": "sans",
+   "blend": "difference",
+   "entrance": "glitch",
+   "behind_subject": false,
+   "position": "default",
+   "zoom": "settle_out"
+  },
+  {
+   "id": "u07",
+   "text": "by my",
+   "words": [
+    "by",
+    "my"
+   ],
+   "start": 2.8,
+   "end": 3.26,
+   "class": "sans",
+   "blend": "difference",
+   "entrance": "cut",
+   "behind_subject": false,
+   "position": "default",
+   "zoom": null
+  },
+  {
+   "id": "u08",
+   "text": "robot",
+   "words": [
+    "robot"
+   ],
+   "start": 3.26,
+   "end": 3.64,
+   "class": "sans",
+   "blend": "difference",
+   "entrance": "cut",
+   "behind_subject": false,
+   "position": "default",
+   "zoom": null
+  },
+  {
+   "id": "u09",
+   "text": "Hand",
+   "words": [
+    "hand"
+   ],
+   "start": 3.64,
+   "end": 3.98,
+   "class": "script",
+   "blend": "difference",
+   "entrance": "cut",
+   "behind_subject": false,
+   "position": "default",
+   "zoom": null
+  }
+ ]
+}
