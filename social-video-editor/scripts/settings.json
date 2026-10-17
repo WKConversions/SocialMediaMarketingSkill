@@ -14,7 +14,8 @@
       "en": "jonatasgrosman/wav2vec2-large-xlsr-53-english"
     },
     "chunk_s": 30,
-    "note": "wav2vec2 CTC forced alignment of the transcript (~20 ms resolution). Audio longer than chunk_s is run through the model in overlapping windows."
+    "phases": 5,
+    "note": "wav2vec2 CTC forced alignment of the transcript. One model frame is 20 ms; the alignment is repeated with the audio shifted by 1/phases of a frame and averaged, so timings do not depend on where the clip starts. Audio longer than chunk_s is run through the model in overlapping windows."
   },
 
   "trim": {

@@ -1,10 +1,13 @@
-"""Word timings by CTC forced alignment (wav2vec2), accurate to about one model frame (~20 ms).
+"""Word timings by CTC forced alignment (wav2vec2).
 
 Aligns a known transcript to the audio letter by letter: the start of a word is the first model frame that
-emits its first letter. Times follow the lab convention (frame index x clip duration / number of frames),
-which is what the approved v11 was timed with. Long audio goes through the model in overlapping windows
-(settings.align.chunk_s) so memory stays bounded; each model frame is taken from the window where it is
-furthest from an edge.
+emits its first letter. One model frame is 20 ms, so a single pass puts every word on a 20 ms grid that
+depends on where the audio happens to start. To make the timing independent of that, the alignment is run
+`phases` times with the audio shifted by a fraction of a model frame and the times are averaged (about
+4 ms resolution with 5 phases). Times within a pass follow the lab convention the approved v11 was timed
+with (frame index x audio duration / number of frames).
+Long audio goes through the model in overlapping windows (chunk_s) so memory stays bounded; each model
+frame is taken from the window where it is furthest from an edge.
 """
 import os
 import re
@@ -79,11 +82,25 @@ def viterbi(emission, tokens, blank):
     return path[::-1]       # (token index, frame, prob) for each token's emitting frame
 
 
-def align(audio, words, model_name, chunk_s=30):
+def align(audio, words, model_name, chunk_s=30, phases=5):
     """audio: 16 kHz mono float32; words: list of strings (as spoken, any case/punctuation).
-    Returns [{"word", "start", "end", "score"}] in seconds from the start of the audio."""
-    proc, model = load_model(model_name)
+    Returns [{"word", "start", "end", "score"}] in seconds from the start of the audio, averaged over
+    `phases` sub-frame shifts of the model's frame grid."""
     audio = audio / (np.abs(audio).max() + 1e-9) * 0.9
+    runs = []
+    for k in range(phases):
+        d = STRIDE * k // phases
+        runs.append([(s + d / SR, e + d / SR, sc) for s, e, sc in _align_once(audio[d:], words, model_name, chunk_s)])
+    out = []
+    for i, w in enumerate(words):
+        s, e, sc = (float(np.mean([r[i][j] for r in runs])) for j in range(3))
+        out.append(dict(word=w, start=round(s, 3), end=round(e, 3), score=round(sc, 3)))
+    return out
+
+
+def _align_once(audio, words, model_name, chunk_s):
+    """One forced alignment on the model's own frame grid -> [(start, end, score)] per word."""
+    proc, model = load_model(model_name)
     emission = emissions(audio, proc, model, chunk_s)
     frame_s = len(audio) / SR / emission.shape[0]
     vocab = proc.tokenizer.get_vocab()
@@ -115,18 +132,16 @@ def align(audio, words, model_name, chunk_s=30):
         s[0], s[1] = min(s[0], frame), max(s[1], frame)
         s[2].append(prob)
     out = []
-    for wi, w in enumerate(words):
+    for wi in range(len(words)):
         if wi in spans:
             f0, f1, probs = spans[wi]
-            out.append(dict(word=w, start=round(f0 * frame_s, 3), end=round((f1 + 1) * frame_s, 3),
-                            score=round(float(np.mean(probs)), 3)))
+            out.append([f0 * frame_s, (f1 + 1) * frame_s, float(np.mean(probs))])
         else:
-            out.append(dict(word=w, start=None, end=None, score=0.0))
+            out.append([None, None, 0.0])
     # words the model cannot spell (numbers, symbols) sit between their neighbours
     for i, o in enumerate(out):
-        if o["start"] is None:
-            prev_end = next((out[j]["end"] for j in range(i - 1, -1, -1) if out[j]["end"] is not None), 0.0)
-            next_start = next((out[j]["start"] for j in range(i + 1, len(out)) if out[j]["start"] is not None),
-                              round(len(audio) / SR, 3))
-            o["start"], o["end"] = prev_end, max(prev_end, next_start)
+        if o[0] is None:
+            prev_end = next((out[j][1] for j in range(i - 1, -1, -1) if out[j][1] is not None), 0.0)
+            next_start = next((out[j][0] for j in range(i + 1, len(out)) if out[j][0] is not None), len(audio) / SR)
+            o[0], o[1] = prev_end, max(prev_end, next_start)
     return out
