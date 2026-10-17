@@ -25,5 +25,5 @@ Ignore its captions. Measurements: `analysis/measurements.json` (frame numbers a
 - "Views" from one 4K camera: wide / medium / close crops, switched on phrase boundaries.
 - Incoming view shown in negative for 1-2 frames on a switch; occasional in-shot negative strobe.
 - Short bursts of quick view switches at energetic moments, then calm holds.
-- Photosensitivity: keep flashes to at most 3 per second (WCAG 2.3.1 guideline) unless the client
-  explicitly wants more; the reference exceeds it in its bursts.
+- Photosensitivity: the client is fine with more than 3 flashes per second (WCAG 2.3.1 would cap it
+  at 3; the reference exceeds it in its bursts). Mention it once for client brands with sensitive audiences.

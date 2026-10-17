@@ -38,5 +38,17 @@ these on every video unless the client says otherwise for a specific project.
 - The effects must be clearly audible on a phone speaker; mix the voice to about -15 LUFS and the
   finished video to about -14 LUFS.
 
+## Sound effects per moment (from the client's sound reference, lab/sfx-01/NOTES.md)
+- caption appears: the client's camera shutter (see above)
+- element pops up on screen (canvas cards, icons, numbers): click
+- quick cut / view switch: flash, on the cut frame
+- scene to scene (into/out of canvas mode, whip transitions): whoosh, peaking on the cut
+- big text graphic pops up (canvas titles, big words): glitch, starting on its first frame
+- build tension into a key point or reveal: riser, peaking on the moment
+
+## Transitions and flashes
+- Negative (inverted) flash frames, 1-3 frames, on view switches and as in-shot flicker.
+- The client is fine with more than 3 flashes per second (no photosensitivity cap requested).
+
 ## Working style
 - Show a first viewable version fast (within 20 minutes); polish afterwards.
