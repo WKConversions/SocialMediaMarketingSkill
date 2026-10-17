@@ -42,7 +42,7 @@ CAPTIONS = [
     ("complete", 2.143, "sans", "W"), ("motion design", 2.604, "sans", "W"), ("overnemen", 3.686, "sans", "W"),
     ("complete", 4.227, "sans", "W"), ("marketing", 4.667, "sans", "W"), ("complete", 5.188, "sans", "W"),
     ("social media", 5.729, "sans", "W"), ("we kunnen je", 6.330, "sans", "W"), ("complete", 6.851, "sans", "W"),
-    ("Branding", 7.392, "script", "W"), ("maken", 7.932, "sans", "W"), ("we kunnen een", 8.700, "sans", "W"),
+    ("Branding", 7.392, "script", "W"), ("maken", 7.932, "sans", "W"), ("we kunnen een", 8.600, "sans", "W"),
     ("website", 8.954, "sans", "W"), ("voor je maken", 9.355, "sans", "W"), ("we kunnen een", 10.016, "sans", "W"),
     ("bedrijf", 10.496, "sans", "W"), ("van", 10.917, "sans", "W"), ("0", 11.197, "sans", "W"),
     ("naar", 11.578, "sans", "W"), ("100", 12.239, "sans", "W"), ("Opbouwen", 12.680, "script", "W"),

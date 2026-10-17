@@ -4,7 +4,7 @@
    before its first word.
 2. Shutter: its biggest wave must sit on each caption's first frame (cross-correlation against the
    shutter-only track, high-passed above 2 kHz).
-Usage: python verify_v13.py FINAL.mp4 CAPTIONS.json SHUTTER_ONLY.wav
+Usage: python verify_v13.py FINAL.mp4 CAPTIONS.json SHUTTER_ONLY.wav [VOICE_ON_SAME_TIMELINE.wav]
 """
 import json
 import subprocess
@@ -34,9 +34,10 @@ def hp(x, fc=2000):
     return np.fft.irfft(X, len(x))
 
 
-def main(final, captions_path, shutter_only):
+def main(final, captions_path, shutter_only, voice=None):
+    """voice: the clean voice track on the same timeline (sound effects in the mix confuse the aligner)."""
     caps = json.load(open(captions_path))
-    align_words.main(final, TRANSCRIPT, "/tmp/claude-0/v13_final_words.json")
+    align_words.main(voice or final, TRANSCRIPT, "/tmp/claude-0/v13_final_words.json")
     words = json.load(open("/tmp/claude-0/v13_final_words.json"))
     # walk the transcript in order so repeated words ("complete", "we kunnen") map to the right occurrence
     wi, bad = 0, 0
@@ -70,4 +71,4 @@ def main(final, captions_path, shutter_only):
 
 
 if __name__ == "__main__":
-    main(*sys.argv[1:4])
+    main(*sys.argv[1:5])

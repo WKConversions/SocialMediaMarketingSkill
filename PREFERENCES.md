@@ -17,8 +17,8 @@ these on every video unless the client says otherwise for a specific project.
   never from Whisper's word timestamps alone: those were 100-400 ms early on the first test.
 - Captions appear one frame before the word is spoken; sounds sit on the caption frames. Captions
   and sounds read the same plan file so they can't drift apart.
-- Verify sync on the finished file (re-align the final audio, detect caption changes in the final
-  video) before sending anything.
+- Verify sync on the finished file before sending anything. Re-align the CLEAN voice track on the
+  final timeline, not the final mix: sound effects in the mix shift the aligner by up to ~100 ms.
 - Trim dead air before the first word to about 0.1 s.
 
 ## Sound
@@ -49,6 +49,12 @@ these on every video unless the client says otherwise for a specific project.
 ## Transitions and flashes
 - Negative (inverted) flash frames, 1-3 frames, on view switches and as in-shot flicker.
 - The client is fine with more than 3 flashes per second (no photosensitivity cap requested).
+
+## Editing
+- Cut pauses longer than ~0.3 s; hide each jump cut with a view switch (wide/medium/close from the 4K
+  source), 1-2 negative frames and a flash sound.
+- Canvas moments for lists, numbers and steps the client says: services check off as they're named,
+  numbers count up to the spoken value, titles glitch in on the word they come from.
 
 ## Working style
 - Show a first viewable version fast (within 20 minutes); polish afterwards.
