@@ -23,15 +23,18 @@ these on every video unless the client says otherwise for a specific project.
 
 ## Sound
 - Never use magical, glowy, sparkle, shimmer or chime sounds, anywhere.
-- Caption sound = the client's own camera shutter (`lab/caption-style-01/assets/sfx/camera_shutter.wav`):
-  its final click on body words, the full shutter plus a short hit on script (emphasis) words.
-- A sound plays ONLY on the frame where a new caption appears. Its first audible sample starts on
-  that frame (not its loudest click). Nothing before a caption (no whooshes, no stutter run-ups,
-  no pre-roll) and nothing in between captions; tails stay short and fade out cleanly.
+- Caption sound = the client's own camera shutter (`lab/caption-style-01/assets/sfx/camera_shutter.wav`),
+  the full sound with all its clicks; script (emphasis) words add a short hit.
+- ALIGNMENT RULE: the biggest wave of the shutter (its loudest sample, ~194 ms into the file) lands
+  exactly on the first frame a caption is visible. Not its first click, not the planned word time:
+  the caption's first frame. The softer clicks before it may come just before.
+- A sound plays only where a new caption appears: no whooshes, no run-ups, nothing in between.
+- The mix limiter must use latency compensation (ffmpeg alimiter latency=1); without it every sound
+  is 5 ms late.
 - Don't spam: roughly half the captions get a sound (the first caption, the script words and a
   few others); vary pitch and level slightly so it doesn't sound like a loop.
-- Verify on the rendered track that every sound onset matches a caption frame and that there are
-  no other sounds.
+- Verify on the FINAL video file that each biggest wave sits at 0 ms from its caption frame and that
+  there are no other sounds (tools/plot_shutter.py --align makes the proof image).
 - The effects must be clearly audible on a phone speaker; mix the voice to about -15 LUFS and the
   finished video to about -14 LUFS.
 

@@ -148,6 +148,40 @@ def plot_video(sfx_path, final_path, plan_path, out_png):
     fig.savefig(out_png, dpi=110)
 
 
+def plot_alignment(shutter_only_path, plan_path, out_png, fps=30):
+    sr = 48000
+    x = load(shutter_only_path, sr)
+    plan = [p for p in json.load(open(plan_path)) if p.get("sfx")]
+    fig, axes = plt.subplots(1, len(plan), figsize=(3.1 * len(plan), 3.6), sharey=True)
+    fig.suptitle("Biggest wave of the shutter vs. the first frame of each caption", x=0.02, ha="left",
+                 fontsize=14, color=INK, weight="bold")
+    rows = []
+    for a, p in zip(np.atleast_1d(axes), plan):
+        ft = np.ceil(p["start"] * fps - 1e-6) / fps
+        i0, i1 = int((ft - 0.12) * sr), int((ft + 0.12) * sr)
+        seg = x[max(0, i0):i1]
+        tt = (np.arange(max(0, i0), max(0, i0) + len(seg)) / sr - ft) * 1000
+        a.plot(tt, seg, color=BLUE, lw=0.7)
+        pk = int(np.argmax(np.abs(seg)))
+        off = tt[pk]
+        rows.append((p["text"], off))
+        a.axvline(0, color=ORANGE, lw=1.8)
+        a.plot([off], [seg[pk]], "o", ms=8, color=ORANGE, mec=SURFACE, mew=2, zorder=5)
+        a.set_title(f'{p["text"]}\nbiggest wave {off:+.1f} ms', fontsize=10, color=INK)
+        a.set_xlim(-120, 120)
+        a.set_xlabel("ms from caption frame")
+    np.atleast_1d(axes)[0].set_ylabel("shutter sound")
+    fig.text(0.02, 0.01, "orange line = first frame the caption is visible;  dot = biggest wave of the shutter", fontsize=9, color=INK2)
+    fig.tight_layout(rect=(0, 0.04, 1, 0.9))
+    fig.savefig(out_png, dpi=110)
+    return rows
+
+
+if __name__ == "__main__" and len(sys.argv) == 5 and sys.argv[1] == "--align":
+    for name, off in plot_alignment(sys.argv[2], sys.argv[3], sys.argv[4]):
+        print(f"{name:11s} biggest wave {off:+.1f} ms from caption frame")
+    sys.exit(0)
+
 if __name__ == "__main__":
     shutter, sfx, final, plan, out_dir = sys.argv[1:6]
     info = plot_sample(shutter, f"{out_dir}/shutter_analysis.png")

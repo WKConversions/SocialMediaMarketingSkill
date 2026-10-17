@@ -181,6 +181,18 @@ def _repitch(x, factor):
     return np.interp(idx, np.arange(len(x)), x)
 
 
+def shutter_peak(p=1.0):
+    """The full shutter (all clicks). Returns (sound, index of its biggest wave). Client rule: that
+    biggest wave is the point that lands on the first frame of a caption."""
+    snd = _repitch(_SHUTTER, p)
+    return snd, int(np.argmax(np.abs(snd)))
+
+
+def place_peak(track, sound, peak_idx, t, gain_db, pan=0.0):
+    """Place a sound so that sample `peak_idx` lands exactly at time t."""
+    place(track, sound, t - peak_idx / SR, gain_db, pan)
+
+
 def user_full(p=1.0):
     """The whole shutter. Returns (sound, sync offset in s)."""
     return _repitch(_SHUTTER, p), _SHUTTER_SYNC / p
@@ -273,25 +285,23 @@ def write_wav(path, x):
 def main(out_path, duration, kit_dir):
     duration = float(duration)
     track = np.zeros((int(duration * SR) + SR, 2))
-    # Client rule: a sound plays only on the frame a new caption appears, never before it and never
-    # in between. Each sound's first audible sample is placed on that frame (not its loudest click).
-    makers = {"user_full": user_full, "user_click": user_click}
-    last_kind = None
+    # Client rules: a sound only where a new caption appears, and the biggest wave of the shutter lands
+    # exactly on the first frame of that caption. Script words add a short hit starting on that frame.
+    shutter_only = np.zeros_like(track)
     for t, kind, ex in EVENTS:
         if kind is None:
             continue
         frame_t = np.ceil(t * FPS - 1e-6) / FPS            # the caption becomes visible on this frame
         pan = rng.uniform(-0.2, 0.2)
-        p = ex.get("pitch", 1.0) * rng.uniform(0.97, 1.03)
+        gain = -6 + rng.uniform(-1.5, 1)
+        snd, pk = shutter_peak(ex.get("pitch", 1.0) * rng.uniform(0.98, 1.02))
+        place_peak(track, snd, pk, frame_t, gain, pan)
+        place_peak(shutter_only, snd, pk, frame_t, gain, pan)
         if kind == "script":
-            snd, _ = user_full(p)
-            place_onset(track, snd, frame_t, -6, pan)
             size = ex.get("size", 1.0)
             h = reverb(hit(size * 0.7), decay=0.25 if ex.get("tail") else 0.12, wet=0.18 if ex.get("tail") else 0.08, length=0.6)
             place_onset(track, h, frame_t, -6 + 3 * (size - 1))
-        else:
-            snd, _ = makers[kind](p)
-            place_onset(track, snd, frame_t, -7 + rng.uniform(-1.5, 1), pan)
+    write_wav(out_path.replace(".wav", "_shutter_only.wav"), shutter_only[: int(duration * SR)])
     track = track[: int(duration * SR)]
     fade = int(0.12 * SR)
     track[-fade:] *= np.linspace(1, 0, fade)[:, None]
