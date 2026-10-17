@@ -51,8 +51,12 @@ these on every video unless the client says otherwise for a specific project.
 - The client is fine with more than 3 flashes per second (no photosensitivity cap requested).
 
 ## Editing
-- Cut pauses longer than ~0.3 s; hide each jump cut with a view switch (wide/medium/close from the 4K
-  source), 1-2 negative frames and a flash sound.
+- Respect the client's framing: they frame themselves correctly. The original framing is the base view;
+  view switches use gentle centred crops only (1.08x, at most 1.15x), never a big push into the face.
+  Punch-in on script words is small (about 4%).
+- Pacing must be CONSTANT through the whole video: every pause longer than ~0.22 s becomes the same
+  short pause (~0.18 s), inside clips and between clips (tools: lab/edit-04/tools/pacing.py). Hide the
+  jump cuts with real footage, gentle view switches, 1-2 negative frames and a flash sound.
 - Canvas moments for lists, numbers and steps the client says: services check off as they're named,
   numbers count up to the spoken value, titles glitch in on the word they come from.
 

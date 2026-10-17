@@ -24,3 +24,5 @@ lab/**/*_check_words.json
 social-video-editor/test_out/
 !social-video-editor/assets/sfx/*.wav
 social-video-editor/**/__pycache__/
+lab/**/broll/**/downloads/
+lab/**/views/

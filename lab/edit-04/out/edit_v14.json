@@ -1,0 +1,437 @@
+{
+ "views": [
+  {
+   "start": 0.0,
+   "end": 4.07,
+   "view": "wide"
+  },
+  {
+   "start": 4.07,
+   "end": 5.34,
+   "view": "medium"
+  },
+  {
+   "start": 5.34,
+   "end": 5.89,
+   "view": "close"
+  },
+  {
+   "start": 5.89,
+   "end": 9.87,
+   "view": "wide"
+  },
+  {
+   "start": 9.87,
+   "end": 11.13,
+   "view": "medium"
+  },
+  {
+   "start": 11.13,
+   "end": 13.67,
+   "view": "wide"
+  },
+  {
+   "start": 13.67,
+   "end": 15.67,
+   "view": "medium"
+  },
+  {
+   "start": 15.67,
+   "end": 16.9,
+   "view": "close"
+  },
+  {
+   "start": 16.9,
+   "end": 17.57,
+   "view": "wide"
+  },
+  {
+   "start": 17.57,
+   "end": 18.8,
+   "view": "medium"
+  },
+  {
+   "start": 18.8,
+   "end": 23.2,
+   "view": "wide"
+  },
+  {
+   "start": 23.2,
+   "end": 23.74,
+   "view": "wide"
+  },
+  {
+   "start": 23.74,
+   "end": 24.41,
+   "view": "medium"
+  },
+  {
+   "start": 24.41,
+   "end": 26.0,
+   "view": "wide"
+  }
+ ],
+ "inserts": [
+  {
+   "start": 0.0,
+   "end": 0.5,
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-04/broll/v14_ci_fireworks.mp4",
+   "src": 0.0
+  },
+  {
+   "start": 1.1,
+   "end": 2.71,
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-04/broll/v14_harper_fireworks.mp4",
+   "src": 0.0
+  },
+  {
+   "start": 2.71,
+   "end": 4.07,
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-04/broll/v14_ci_date.mp4",
+   "src": 0.0
+  },
+  {
+   "start": 5.89,
+   "end": 7.93,
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-04/broll/v14_sun_page.mp4",
+   "src": 0.0
+  },
+  {
+   "start": 7.93,
+   "end": 9.87,
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-04/broll/v14_opper_crowd.mp4",
+   "src": 0.0
+  },
+  {
+   "start": 12.06,
+   "end": 13.67,
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-04/broll/v14_jumbo_headline.mp4",
+   "src": 0.0
+  }
+ ],
+ "canvases": [
+  {
+   "start": 18.8,
+   "end": 20.03,
+   "kind": "equation"
+  },
+  {
+   "start": 20.03,
+   "end": 23.2,
+   "kind": "showcase"
+  }
+ ],
+ "captions": [
+  {
+   "text": "Nobody",
+   "start": 0.08,
+   "cls": "script",
+   "fill": "WHITE"
+  },
+  {
+   "text": "trusted",
+   "start": 0.54,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "the opening",
+   "start": 1.1,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "of the",
+   "start": 1.74,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "Brooklyn Bridge",
+   "start": 1.98,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "in",
+   "start": 2.71,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "1883",
+   "start": 2.9,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "so,",
+   "start": 4.15,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "how did they",
+   "start": 4.52,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "gain",
+   "start": 5.08,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "Trust?",
+   "start": 5.34,
+   "cls": "script",
+   "fill": ""
+  },
+  {
+   "text": "instead of",
+   "start": 5.89,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "going to the",
+   "start": 6.37,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "national news",
+   "start": 6.95,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "and",
+   "start": 8.01,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "argue",
+   "start": 8.3,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "with the",
+   "start": 8.94,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "people",
+   "start": 9.34,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "why they",
+   "start": 9.96,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "should",
+   "start": 10.32,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "trust it",
+   "start": 10.52,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "they",
+   "start": 11.22,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "let",
+   "start": 11.64,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "Animals",
+   "start": 12.06,
+   "cls": "script",
+   "fill": ""
+  },
+  {
+   "text": "cross the",
+   "start": 12.66,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "bridge",
+   "start": 13.24,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "to",
+   "start": 13.75,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "explain",
+   "start": 14.05,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "and",
+   "start": 14.61,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "showcase",
+   "start": 14.79,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "that it's",
+   "start": 15.77,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "Trustworthy",
+   "start": 16.19,
+   "cls": "script",
+   "fill": ""
+  },
+  {
+   "text": "we at",
+   "start": 16.96,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "WKC",
+   "start": 17.57,
+   "cls": "script",
+   "fill": "PINK"
+  },
+  {
+   "text": "do the same",
+   "start": 18.1,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "marketing",
+   "start": 18.89,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "is sales",
+   "start": 19.5,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "we showcase",
+   "start": 20.11,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "your product",
+   "start": 20.81,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "we showcase",
+   "start": 21.5,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "why it's",
+   "start": 22.23,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "trustworthy",
+   "start": 22.57,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "and that's",
+   "start": 23.26,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "Exactly",
+   "start": 23.74,
+   "cls": "script",
+   "fill": ""
+  },
+  {
+   "text": "what the",
+   "start": 24.41,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "people",
+   "start": 24.77,
+   "cls": "sans",
+   "fill": ""
+  },
+  {
+   "text": "are looking for",
+   "start": 25.15,
+   "cls": "sans",
+   "fill": ""
+  }
+ ],
+ "negative_frames": [
+  0,
+  1,
+  15,
+  33,
+  81,
+  122,
+  160,
+  177,
+  238,
+  296,
+  334,
+  362,
+  410,
+  470,
+  507,
+  527,
+  528,
+  564,
+  601,
+  696,
+  712,
+  732,
+  780,
+  781
+ ],
+ "end_card_s": 1.3,
+ "website": null,
+ "logo": null
+}
