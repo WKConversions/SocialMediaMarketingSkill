@@ -2,7 +2,7 @@
 """Edit a talking-to-camera social video in a caption style, end to end, and verify the finished file.
 
     python edit_video.py INPUT.mov --style prime --out OUT_DIR [--lang auto|nl|en] [--plan-only]
-                         [--plan PLAN.json] [--emphasis "word,word"] [--start S --end S]
+                         [--plan PLAN.json] [--emphasis "word,word"] [--start S --end S] [--music NAME]
 
 Steps: probe -> transcribe (faster-whisper) -> forced alignment (wav2vec2) -> trim (frame-accurate, 30 fps,
 1080x1920 / 1920x1080, bt709) -> caption plan, written to OUT_DIR/plan.json -> [--plan-only stops here so
@@ -13,6 +13,10 @@ the plan can be edited] -> render captions -> effects track -> mix -> verify -> 
   --emphasis a,b     these words become the emphasis (script) words instead of the automatic choice
   --start/--end S    trim window in seconds of the source, instead of the automatic one around the words;
                      only this window (plus trim.window_margin_s) is transcribed and aligned
+  --music NAME       a music bed from music/library.json (only where its "suits" list fits the video): its
+                     first audible sample on frame 0, set to the approved level for the part of the track
+                     used (~7 dB under the voice), ducked under the voice, faded out over the last 1.2 s,
+                     and the total brought to the style's final loudness; verification subtracts the bed
 
 The first caption's shutter plays in full: its first click comes ~52 ms before its biggest wave, which sits
 on the caption's first frame, so the first caption needs frame 2 or later (settings trim.first_click_rel_db).
@@ -58,6 +62,7 @@ def parse_args(argv):
     ap.add_argument("--emphasis", help='comma-separated emphasis words, e.g. "testvideo,editen,willen"')
     ap.add_argument("--start", type=float, help="trim start (s, source time)")
     ap.add_argument("--end", type=float, help="trim end (s, source time)")
+    ap.add_argument("--music", help="background music from music/library.json (e.g. tyler-gone-gone); only where it suits")
     a = ap.parse_args(argv)
     if a.plan and (a.emphasis or a.start is not None or a.end is not None or a.plan_only):
         ap.error("--plan cannot be combined with --emphasis/--start/--end/--plan-only: edit the plan instead")
@@ -246,8 +251,13 @@ def main(argv=None):
     fx = sfx.build(plan, style, f"{work}/sfx.wav")
     log(f"effects track: {len(fx['placed'])} shutters, {sum('hit' in p for p in fx['placed'])} hits, peak {fx['peak_dbfs']} dBFS")
     final = f"{out}/final.mp4"
+    music = mix.load_music(args.music) if args.music else None
     mixed = mix.mix(f"{work}/captions.mp4", voice_wav, f"{work}/sfx.wav", final, style["mix"], clip.duration,
-                    clip.voice_start_s)
+                    clip.voice_start_s, music=music)
+    if music:
+        log(f"music: {music['title']} ({music['artist']}) from frame 0, {mixed['music_gain_db']} dB "
+            f"(level-matched to the approved mix), ducked; "
+            f"master {mixed['master_db']} dB")
     log(f"mix: voice {mixed['voice_measured_lufs']} LUFS + {mixed['voice_gain_db']} dB -> {final}")
     log("verifying the final file")
     report = verify(final, clip, plan, style, settings, work, out, voice_wav, mixed, align_model)

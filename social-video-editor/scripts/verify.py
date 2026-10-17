@@ -559,8 +559,17 @@ def verify(final, clip, plan, style, settings, work, out_dir, voice_wav, mix_inf
     mix.voice_alone(voice_wav, f"{work}/voice_alone.wav", style["mix"], mix_info["voice_gain_db"], clip.duration,
                     clip.voice_start_s)
     voice = decode_audio(f"{work}/voice_alone.wav", sr, channels=2).mean(axis=1)
-    m = min(len(mono), len(voice))
-    effects = mono[:m] - voice[:m]
+    if mix_info.get("music"):
+        # with a music bed: subtract voice + music rebuilt through the identical chain (same ducking, same master
+        # gain), so what remains is the effects; the clean voice above is still what gets re-aligned
+        mix.voice_alone(voice_wav, f"{work}/bed_alone.wav", style["mix"], mix_info["voice_gain_db"], clip.duration,
+                        clip.voice_start_s, music=dict(mix.load_music(mix_info["music"]), gain_db=mix_info["music_gain_db"]),
+                        master_db=mix_info["master_db"])
+        bed = decode_audio(f"{work}/bed_alone.wav", sr, channels=2).mean(axis=1)
+    else:
+        bed = voice
+    m = min(len(mono), len(bed))
+    effects = mono[:m] - bed[:m]
 
     # timing: re-align the CLEAN voice track on the final timeline (client rule: effects in the mix pull the
     # aligner by up to ~100 ms); every caption must appear 0-2 frames before its first word. The alignment

@@ -1,0 +1,48 @@
+{
+  "note": "Background music the client approved, with the exact timing and levels that were approved. Audio files live in assets/music/ and are NOT committed (the repo is public and these are commercial tracks); on a new machine, ask the client for the file and put it at the 'file' path. Use a track only where 'suits' fits the video, never on 'avoid'. Measured values come from the approved mix.",
+  "tracks": {
+    "tyler-gone-gone": {
+      "title": "GONE, GONE / THANK YOU (instrumental)",
+      "artist": "Tyler, The Creator",
+      "file": "assets/music/tyler-gone-gone-thank-you-instrumental.mp3",
+      "rights": "Commercial track supplied by the client. Not cleared for paid ads; business accounts may get it muted. Prefer adding it through the platform's music library when posting from a business account.",
+      "start_offset_s": 0.1026,
+      "start_rule": "The file has 103.6 ms of silence before its first hit; trimming 0.1026 s puts the first audible sample on frame 0 (the hook frame). Measured offset in the approved mix: 0.00 ms.",
+      "tempo_bpm": 76,
+      "beat_s": 0.789,
+      "duration_s": 100.13,
+      "integrated_lufs": -14.4,
+      "mix": {
+        "level_lu_vs_voice": -2.7,
+        "level_rule": "Before ducking, the part of the track a video uses is set to the voice's loudness minus 2.7 LU (voice -15 LUFS -> music -17.7 LUFS). That is the approved mix: its 27.3 s segment measured -14.7 LUFS, with -3 dB pre-gain. A fixed gain is not enough: the track's first 10 s are -17.9 LUFS, 3 dB quieter than the rest, so a short video would sit 9 dB under the voice instead of ~7.",
+        "pre_gain_db": -3.0,
+        "duck": {
+          "threshold": 0.08,
+          "ratio": 2.5,
+          "attack_ms": 20,
+          "release_ms": 300
+        },
+        "fade_out_s": 1.2,
+        "measured_under_voice_db": 6.8,
+        "master_to_final_lufs": true
+      },
+      "approved_in": "Brooklyn Bridge -> WKC story edit (lab/edit-04, wkc_bridge_v1_music.mp4), 2026-10-17: the client asked for it to be clearly audible; -13 dB with heavy ducking was inaudible.",
+      "suits": [
+        "storytelling and history-to-now narratives",
+        "serious but positive brand or agency promos (WKC)",
+        "calm, confident talking-head pacing; 76 BPM, a beat every 0.79 s",
+        "videos that open on a strong hook frame (the track starts on a hit)"
+      ],
+      "avoid": [
+        "fast hype or comedy edits",
+        "paid ads or accounts where commercial music is not cleared",
+        "videos whose voice is quiet or busy with dialogue (the bed sits only ~7 dB under the voice)"
+      ],
+      "loudness_profile_lufs": {
+        "first_10s": -17.9,
+        "first_26s": -14.8,
+        "first_60s": -14.3
+      }
+    }
+  }
+}

@@ -27,3 +27,6 @@ social-video-editor/**/__pycache__/
 lab/**/broll/**/downloads/
 lab/**/views/
 *.mp3
+
+# commercial music the client supplies: never committed (public repo); see social-video-editor/music/library.json
+social-video-editor/assets/music/

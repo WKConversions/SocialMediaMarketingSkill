@@ -1,4 +1,4 @@
-"""Mix the voice and the effects track under the captioned video.
+"""Mix the voice, the effects track and (optionally) a music bed under the captioned video.
 
     voice:   clip audio -> aresample -> highpass -> fade in/out at the clip's edges -> volume (voice_lufs -
              measured loudness) -> apad
@@ -15,7 +15,48 @@ and loops without a tick, and a phone's stop-tap in the last frames is faded out
 When the start was moved back so the first caption's shutter plays in full (Clip.voice_start_frame), the
 voice is silent over those frames and fades in where it did before the move.
 """
+import json
+import os
+
 from common import PipelineError, loudness, run
+
+SKILL = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def load_music(name):
+    """A track from music/library.json (timing and levels the client approved); the audio file must exist."""
+    lib = json.load(open(os.path.join(SKILL, "music", "library.json")))["tracks"]
+    if name not in lib:
+        raise PipelineError(f"unknown music {name!r}; known: {', '.join(lib)}")
+    t = dict(lib[name], name=name)
+    t["path"] = os.path.join(SKILL, t["file"])
+    if not os.path.exists(t["path"]):
+        raise PipelineError(f"music file missing: put {t['title']} by {t['artist']} at {t['path']} "
+                            "(audio files are not in git; ask the client for it)")
+    return t
+
+
+def music_gain(music, duration, cfg):
+    """Gain (dB) that puts the part of the track this video uses at the approved level relative to the voice.
+    Tracks are not equally loud all the way through (this one's first 10 s are 3 dB quieter than the rest), so
+    a fixed pre-gain would leave a short video's bed too soft; clamped to pre_gain_db +-6 dB."""
+    m, start = music["mix"], music["start_offset_s"]
+    if "level_lu_vs_voice" not in m:
+        return m["pre_gain_db"]
+    seg = loudness(music["path"], f"atrim=start={start}:end={start + duration:.6f}")["lufs"]
+    if seg == float("-inf"):
+        return m["pre_gain_db"]
+    gain = cfg["voice_lufs"] + m["level_lu_vs_voice"] - seg
+    return round(max(m["pre_gain_db"] - 6.0, min(m["pre_gain_db"] + 6.0, gain)), 2)
+
+
+def music_chain(music, duration, sr, music_in, sidechain):
+    """Music bed: first audible sample on frame 0, level-matched gain, ducked under the voice, faded out at the end."""
+    m, d = music["mix"], music["mix"]["duck"]
+    return (f"[{music_in}]aresample={sr},atrim=start={music['start_offset_s']},asetpts=PTS-STARTPTS,"
+            f"volume={music.get('gain_db', m['pre_gain_db'])}dB,afade=t=out:st={duration - m['fade_out_s']:.6f}:d={m['fade_out_s']}[mus];"
+            f"[mus][{sidechain}]sidechaincompress=threshold={d['threshold']}:ratio={d['ratio']}:"
+            f"attack={d['attack_ms']}:release={d['release_ms']}[md];")
 
 
 def voice_fade_in(cfg, voice_start_s):
@@ -34,33 +75,60 @@ def voice_gain(voice_wav, cfg, voice_start_s=0.0):
     return cfg["voice_lufs"] - measured, measured
 
 
-def graph(cfg, gain_db, duration, voice="1:a", effects="2:a", voice_start_s=0.0):
+def graph(cfg, gain_db, duration, voice="1:a", effects="2:a", voice_start_s=0.0, music=None, music_in="3:a", master_db=0.0):
     """The mix as an ffmpeg filter graph with output [a]. The verification runs the same graph with
-    silence as the effects, to know exactly what the voice alone sounds like after the limiter."""
+    silence as the effects, to know exactly what the voice (and music bed) alone sound like after the limiter.
+    With music: the voice is split to key the music's ducking, the bed is mixed in, and master_db brings the
+    total to the style's final loudness (without music master_db stays 0, exactly the approved Prime chain)."""
     sr, lim, fade = cfg["sample_rate"], cfg["limiter"], cfg["voice_fade"]
-    return (f"[{voice}]aresample={sr},highpass=f={cfg['voice_highpass_hz']},"
-            f"{voice_fade_in(cfg, voice_start_s)},"
-            f"afade=t=out:st={duration - fade['out_s']:.6f}:d={fade['out_s']}:curve={fade['curve']},"
-            f"volume={gain_db:.3f}dB,apad[v];"
-            f"[{effects}]aresample={sr},apad[f];"
-            f"[v][f]amix=inputs=2:normalize=0:duration=longest,"
-            f"alimiter=limit={lim['limit']}:level={int(lim['level'])}:latency={int(lim['latency'])},"
-            f"atrim=end_sample={int(round(duration * sr))},aresample={sr}[a]")
+    g = (f"[{voice}]aresample={sr},highpass=f={cfg['voice_highpass_hz']},"
+         f"{voice_fade_in(cfg, voice_start_s)},"
+         f"afade=t=out:st={duration - fade['out_s']:.6f}:d={fade['out_s']}:curve={fade['curve']},"
+         f"volume={gain_db:.3f}dB,apad" + (",asplit=2[v][vsc];" if music else "[v];") +
+         f"[{effects}]aresample={sr},apad[f];")
+    if music:
+        g += music_chain(music, duration, sr, music_in, "vsc")
+        g += "[v][f][md]amix=inputs=3:normalize=0:duration=longest,"
+    else:
+        g += "[v][f]amix=inputs=2:normalize=0:duration=longest,"
+    if abs(master_db) > 1e-9:
+        g += f"volume={master_db:.3f}dB,"
+    g += (f"alimiter=limit={lim['limit']}:level={int(lim['level'])}:latency={int(lim['latency'])},"
+          f"atrim=end_sample={int(round(duration * sr))},aresample={sr}[a]")
+    return g
 
 
-def mix(video, voice_wav, sfx_wav, out_path, cfg, duration, voice_start_s=0.0):
+def mix(video, voice_wav, sfx_wav, out_path, cfg, duration, voice_start_s=0.0, music=None):
     gain, measured = voice_gain(voice_wav, cfg, voice_start_s)
-    g = graph(cfg, gain, duration, voice_start_s=voice_start_s)
-    run(["ffmpeg", "-v", "error", "-nostdin", "-y", "-i", video, "-i", voice_wav, "-i", sfx_wav,
-         "-filter_complex", g, "-map", "0:v", "-map", "[a]", "-c:v", "copy",
-         "-c:a", cfg["audio_codec"], "-b:a", cfg["audio_bitrate"], "-ar", str(cfg["sample_rate"]),
-         "-movflags", "+faststart", out_path], "mix")
-    return dict(voice_measured_lufs=measured, voice_gain_db=round(gain, 3), voice_start_s=round(voice_start_s, 6), filter=g)
+    if music:
+        music = dict(music, gain_db=music_gain(music, duration, cfg))
+
+    def render(master_db):
+        g = graph(cfg, gain, duration, voice_start_s=voice_start_s, music=music, master_db=master_db)
+        run(["ffmpeg", "-v", "error", "-nostdin", "-y", "-i", video, "-i", voice_wav, "-i", sfx_wav]
+            + (["-i", music["path"]] if music else []) +
+            ["-filter_complex", g, "-map", "0:v", "-map", "[a]", "-c:v", "copy",
+             "-c:a", cfg["audio_codec"], "-b:a", cfg["audio_bitrate"], "-ar", str(cfg["sample_rate"]),
+             "-movflags", "+faststart", out_path], "mix")
+        return g
+
+    master = 0.0
+    g = render(master)
+    if music and music["mix"].get("master_to_final_lufs"):
+        # the bed adds loudness: one correction pass brings the total to the style's final target
+        first = loudness(out_path)["lufs"]
+        master = max(-6.0, min(6.0, cfg["final_lufs"] - first))
+        g = render(master)
+    return dict(voice_measured_lufs=measured, voice_gain_db=round(gain, 3), voice_start_s=round(voice_start_s, 6), filter=g,
+                music=music["name"] if music else None, music_gain_db=music["gain_db"] if music else None,
+                master_db=round(master, 3))
 
 
-def voice_alone(voice_wav, out_wav, cfg, gain_db, duration, voice_start_s=0.0):
-    """The voice through the identical chain and limiter with silent effects (float WAV, no codec)."""
+def voice_alone(voice_wav, out_wav, cfg, gain_db, duration, voice_start_s=0.0, music=None, master_db=0.0):
+    """The voice (plus the music bed when given) through the identical chain and limiter with silent effects
+    (float WAV, no codec). Without music it is the clean voice used for re-alignment."""
     run(["ffmpeg", "-v", "error", "-nostdin", "-y", "-i", voice_wav,
-         "-f", "lavfi", "-i", f"anullsrc=r={cfg['sample_rate']}:cl=stereo",
-         "-filter_complex", graph(cfg, gain_db, duration, "0:a", "1:a", voice_start_s), "-map", "[a]",
+         "-f", "lavfi", "-i", f"anullsrc=r={cfg['sample_rate']}:cl=stereo"] + (["-i", music["path"]] if music else []) +
+        ["-filter_complex", graph(cfg, gain_db, duration, "0:a", "1:a", voice_start_s, music=music, music_in="2:a",
+                                  master_db=master_db), "-map", "[a]",
          "-c:a", "pcm_f32le", out_wav], "voice rebuild")

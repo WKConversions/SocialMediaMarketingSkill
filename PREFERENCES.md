@@ -41,8 +41,16 @@ these on every video unless the client says otherwise for a specific project.
 ## Music
 - When the client supplies a track: its first audible sample lands on frame 0 (trim the file's leading
   silence; measure the offset over the whole mix, not the first second). It must be CLEARLY audible:
-  about 6-7 dB under the voice while he speaks (measured on stems), gentle ducking (ratio ~2.5), up
-  in pauses and on the end card, fade out over the last ~1.2 s. -13 dB plus heavy ducking was inaudible.
+  about 6-7 dB under the voice while the client speaks (measured on stems), gentle ducking (ratio ~2.5),
+  up in pauses and on the end card, fade out over the last ~1.2 s. -13 dB plus heavy ducking was inaudible.
+- Approved tracks are saved in `social-video-editor/music/library.json` with their start offset, level,
+  ducking and when they suit (and when not). Use one with `edit_video.py ... --music NAME`, only on
+  videos its `suits` list fits. The level follows the part of the track the video actually uses (a
+  track's intro can be quieter than the rest), so a short video gets the same ~7 dB under the voice as
+  the approved edit. The audio files are not in git (the repo is public); they live in
+  `social-video-editor/assets/music/`.
+- Saved so far: `tyler-gone-gone` (GONE, GONE / THANK YOU instrumental) for storytelling and
+  serious-but-positive promos, approved on the Brooklyn Bridge -> WKC story.
 
 ## Sound effects per moment (from the client's sound reference, lab/sfx-01/NOTES.md)
 - caption appears: the client's camera shutter (see above)
