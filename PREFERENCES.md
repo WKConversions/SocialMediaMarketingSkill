@@ -28,11 +28,11 @@ these on every video unless the client says otherwise for a specific project.
 - ALIGNMENT RULE: the biggest wave of the shutter (its loudest sample, ~194 ms into the file) lands
   exactly on the first frame a caption is visible. Not its first click, not the planned word time:
   the caption's first frame. The softer clicks before it may come just before.
-- A sound plays only where a new caption appears: no whooshes, no run-ups, nothing in between.
+- Sounds play only where a new caption appears: no whooshes, no run-ups, nothing in between.
 - The mix limiter must use latency compensation (ffmpeg alimiter latency=1); without it every sound
   is 5 ms late.
-- Don't spam: roughly half the captions get a sound (the first caption, the script words and a
-  few others); vary pitch and level slightly so it doesn't sound like a loop.
+- EVERY new caption gets the shutter, without exception (body words: the shutter; script words: the
+  shutter plus a short hit). Vary pitch and level slightly per use so it doesn't sound like a loop.
 - Verify on the FINAL video file that each biggest wave sits at 0 ms from its caption frame and that
   there are no other sounds (tools/plot_shutter.py --align makes the proof image).
 - The effects must be clearly audible on a phone speaker; mix the voice to about -15 LUFS and the

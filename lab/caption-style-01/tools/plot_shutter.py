@@ -152,11 +152,12 @@ def plot_alignment(shutter_only_path, plan_path, out_png, fps=30):
     sr = 48000
     x = load(shutter_only_path, sr)
     plan = [p for p in json.load(open(plan_path)) if p.get("sfx")]
-    fig, axes = plt.subplots(1, len(plan), figsize=(3.1 * len(plan), 3.6), sharey=True)
+    cols = min(6, len(plan)); rows_n = int(np.ceil(len(plan) / cols))
+    fig, axes = plt.subplots(rows_n, cols, figsize=(3.1 * cols, 3.3 * rows_n + 0.6), sharey=True, squeeze=False)
     fig.suptitle("Biggest wave of the shutter vs. the first frame of each caption", x=0.02, ha="left",
                  fontsize=14, color=INK, weight="bold")
     rows = []
-    for a, p in zip(np.atleast_1d(axes), plan):
+    for a, p in zip(axes.ravel(), plan):
         ft = np.ceil(p["start"] * fps - 1e-6) / fps
         i0, i1 = int((ft - 0.12) * sr), int((ft + 0.12) * sr)
         seg = x[max(0, i0):i1]
@@ -170,7 +171,10 @@ def plot_alignment(shutter_only_path, plan_path, out_png, fps=30):
         a.set_title(f'{p["text"]}\nbiggest wave {off:+.1f} ms', fontsize=10, color=INK)
         a.set_xlim(-120, 120)
         a.set_xlabel("ms from caption frame")
-    np.atleast_1d(axes)[0].set_ylabel("shutter sound")
+    for r in range(rows_n):
+        axes[r][0].set_ylabel("shutter sound")
+    for a in axes.ravel()[len(plan):]:
+        a.set_visible(False)
     fig.text(0.02, 0.01, "orange line = first frame the caption is visible;  dot = biggest wave of the shutter", fontsize=9, color=INK2)
     fig.tight_layout(rect=(0, 0.04, 1, 0.9))
     fig.savefig(out_png, dpi=110)
