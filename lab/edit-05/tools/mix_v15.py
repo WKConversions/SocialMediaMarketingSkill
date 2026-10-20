@@ -21,6 +21,9 @@ def main(video, out):
     dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", video],
                                capture_output=True, text=True).stdout)
     music = mix.load_music("tyler-gone-gone")
+    # measured on v1: the level match put the bed 4.8 dB under the voice while speaking (speech-RMS); the approved
+    # bridge mix measures 6.7 dB the same way -> 1.9 dB down
+    music["mix"] = dict(music["mix"], level_lu_vs_voice=music["mix"]["level_lu_vs_voice"] - 1.9)
     info = mix.mix(video, f"{E}/out/voice.wav", f"{E}/out/v15_sfx.wav", out, cfg, dur, 0.0, music=music)
     mix.voice_alone(f"{E}/out/voice.wav", f"{E}/out/v15_voice_alone.wav", cfg, info["voice_gain_db"], dur)
     bed = dict(music, gain_db=info["music_gain_db"])
