@@ -2,6 +2,7 @@
 """Reel cover in the client's "story" cover style (reference: the Brooklyn Bridge cover, "How did they / gain trust").
 
     python cover.py FRAME.png OUT_DIR --white "Would they" --red "believe you?" [--zoom 1.0] [--head-top 0.07]
+    python cover.py PRINT.jpg OUT_DIR --white ... --red ... --still --center 0.5,0.38 --zoom 1.2   (archival image)
 
 Client rules: use a moment where the client is explaining or has a neutral face (eyes open, looking at the camera,
 no blink); keep their own framing (no zoom on the head); keep the face natural (no coloured or heavily graded skin).
@@ -115,19 +116,9 @@ def text_block(canvas, white, red, weight, top_frac=0.606, bottom_frac=0.83, wid
     return canvas, px
 
 
-def main():
-    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("frame")
-    ap.add_argument("out")
-    ap.add_argument("--white", required=True)
-    ap.add_argument("--red", required=True)
-    ap.add_argument("--weight", type=int, default=760)
-    ap.add_argument("--zoom", type=float, default=1.0, help="1.0 = the client's own framing (full frame width); client: no zoom on the head")
-    ap.add_argument("--head-top", type=float, default=0.07, help="where the top of the hair sits, fraction of the 3:4 height")
-    args = ap.parse_args()
-    os.makedirs(args.out, exist_ok=True)
-    src = Image.open(args.frame).convert("RGB")
-    x = np.asarray(src).astype(np.float32) / 255
+def speaker_canvas(x, args):
+    """The speaker cut out, kept natural, on the dark backdrop; returns the 9:16 picture and where the fade starts."""
+    src = Image.fromarray((x * 255).astype(np.uint8))
     mask = subject_mask(src)
     top, chin, cx = head_box(mask)
     m = mask ** 2.0           # tight edge: the hair's edge pixels carry the (dehazed, dark) ceiling
@@ -160,15 +151,78 @@ def main():
     img = Image.fromarray((comp * 255 + 0.5).astype(np.uint8))
     box = (x_left, fy0 + pad_t, x_left + crop_w, fy0 + pad_t + full_h)
     cover = np.asarray(img.resize((1080, 1920), Image.LANCZOS, box=box)).astype(np.float32) / 255
+    chin_y = 240 + (args.head_top + (chin - top) / crop_h) * 1440             # chin in the 9:16 frame
+    return cover, chin_y - 0.04 * 1440, f"head {top}-{chin}px"
+
+
+def grade_print(x):
+    """An archival print made moody for the cover: darker, contrasty, paper a little muted, colour kept."""
+    luma = np.array([0.2126, 0.7152, 0.0722], np.float32)
+    lum = (x @ luma)[..., None]
+    x = lum + (x - lum) * 0.92
+    x = np.clip((x - 0.06) / 0.94, 0, 1)
+    x = x * x * (3 - 2 * x) * 0.40 + x * 0.60                               # contrast
+    x = x * 0.70                                                            # low key
+    lum = (x @ luma)[..., None]
+    x = x + ((1 - lum) ** 3) * np.array([-0.010, 0.0, 0.020], np.float32)   # cool shadows (blue-gold, like the edit)
+    return np.clip(x, 0, 1)
+
+
+def still_canvas(x, args):
+    """An archival print (no speaker) framed by --center/--zoom; beyond its edges a dark, blurred copy of itself."""
+    H0, W0 = x.shape[:2]
+    cx, cy = (float(v) for v in args.center.split(","))
+    w = W0 / args.zoom
+    full_h = w * 1920 / 1080
+    x0, y0 = cx * W0 - w / 2, cy * H0 - full_h / 2
+    img = Image.fromarray((grade_print(x) * 255 + 0.5).astype(np.uint8))
+    bg = img.resize((1080, int(1080 * H0 / W0)), Image.BILINEAR)
+    k = max(1920 / bg.height, 1.0)
+    bg = bg.resize((int(bg.width * k) + 1, int(bg.height * k) + 1), Image.BILINEAR)
+    bg = bg.crop(((bg.width - 1080) // 2, (bg.height - 1920) // 2, (bg.width - 1080) // 2 + 1080, (bg.height - 1920) // 2 + 1920))
+    bg = np.asarray(bg.filter(ImageFilter.GaussianBlur(40))).astype(np.float32) / 255 * 0.22
+    pad = int(max(W0, H0))
+    big = Image.new("RGB", (W0 + 2 * pad, H0 + 2 * pad))
+    big.paste(img, (pad, pad))
+    alpha = Image.new("L", big.size, 0)
+    alpha.paste(255, (pad, pad, pad + W0, pad + H0))
+    box = (x0 + pad, y0 + pad, x0 + pad + w, y0 + pad + full_h)
+    fg = np.asarray(big.resize((1080, 1920), Image.LANCZOS, box=box)).astype(np.float32) / 255
+    a = np.asarray(alpha.resize((1080, 1920), Image.BILINEAR, box=box).filter(ImageFilter.GaussianBlur(30))).astype(np.float32)[..., None] / 255
+    out = fg * a + bg * (1 - a)
+    # soft light on the subject (e.g. the balloon), the rest falls away into the dark
+    lx, ly = (float(v) for v in args.light.split(","))
+    yy, xx = np.mgrid[:1920, :1080].astype(np.float32)
+    spot = np.exp(-(((xx - lx * 1080) / (0.60 * 1080)) ** 2 + ((yy - 240 - ly * 1440) / (0.42 * 1440)) ** 2))
+    out = out * (0.72 + 0.42 * spot)[..., None]
+    return np.clip(out, 0, 1), 240 + args.fade_from * 1440, f"print {W0}x{H0}"
+
+
+def main():
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("frame")
+    ap.add_argument("out")
+    ap.add_argument("--white", required=True)
+    ap.add_argument("--red", required=True)
+    ap.add_argument("--weight", type=int, default=760)
+    ap.add_argument("--zoom", type=float, default=1.0, help="1.0 = the client's own framing (full frame width); client: no zoom on the head")
+    ap.add_argument("--head-top", type=float, default=0.07, help="where the top of the hair sits, fraction of the 3:4 height")
+    ap.add_argument("--still", action="store_true", help="an archival image instead of the speaker (no cut-out)")
+    ap.add_argument("--center", default="0.5,0.5", help="--still: centre of the 3:4 window in the image (fractions)")
+    ap.add_argument("--fade-from", type=float, default=0.42, help="--still: where the dark fade starts, fraction of the 3:4 height")
+    ap.add_argument("--light", default="0.5,0.33", help="--still: centre of the soft light (the subject), fractions of the 3:4 frame")
+    args = ap.parse_args()
+    os.makedirs(args.out, exist_ok=True)
+    x = np.asarray(Image.open(args.frame).convert("RGB")).astype(np.float32) / 255
+    cover, fade_y, info = (still_canvas if args.still else speaker_canvas)(x, args)
     # vignette and the dark fade under the text (bottom of the 3:4 area and below)
     yy, xx = np.mgrid[:1920, :1080].astype(np.float32)
     u, v = (xx - 540) / 540, (yy - 960) / 960
     cover *= (1 - 0.32 * (u ** 2 * 0.8 + v ** 2 * 0.35))[..., None]
-    chin_y = 240 + (args.head_top + (chin - top) / crop_h) * 1440             # chin in the 9:16 frame
-    fade = np.clip((yy - (chin_y - 0.04 * 1440)) / (0.22 * 1440), 0, 1) ** 1.4
-    cover *= (1 - 0.93 * fade)[..., None]                                       # clothes sink into black under the text
+    fade = np.clip((yy - fade_y) / (0.22 * 1440), 0, 1) ** 1.4
+    cover *= (1 - 0.93 * fade)[..., None]                                       # the text sits on near-black
     rng = np.random.default_rng(1)
-    cover += rng.normal(0, 0.014, cover.shape[:2]).astype(np.float32)[..., None]   # fine grain (hides the phone's smoothing)
+    cover += rng.normal(0, 0.014, cover.shape[:2]).astype(np.float32)[..., None]   # fine grain
     canvas = Image.fromarray((np.clip(cover, 0, 1) * 255 + 0.5).astype(np.uint8))
     canvas = canvas.filter(ImageFilter.UnsharpMask(radius=1.5, percent=35, threshold=3))
     grid = canvas.crop((0, 240, 1080, 1680))
@@ -176,7 +230,7 @@ def main():
     canvas.paste(grid, (0, 240))
     canvas.save(os.path.join(args.out, "cover_9x16.png"))
     grid.save(os.path.join(args.out, "cover_3x4.png"))
-    print(f"cover: head {top}-{chin}px, text {px}px -> {args.out}/cover_9x16.png, cover_3x4.png")
+    print(f"cover: {info}, text {px}px -> {args.out}/cover_9x16.png, cover_3x4.png")
 
 
 if __name__ == "__main__":
