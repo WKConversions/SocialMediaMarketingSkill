@@ -1,0 +1,579 @@
+{
+ "views": [
+  {
+   "start": 0.0,
+   "end": 1.367,
+   "view": "wide"
+  },
+  {
+   "start": 1.367,
+   "end": 2.11,
+   "view": "wide"
+  },
+  {
+   "start": 2.11,
+   "end": 5.43,
+   "view": "medium"
+  },
+  {
+   "start": 5.43,
+   "end": 6.51,
+   "view": "medium"
+  },
+  {
+   "start": 6.51,
+   "end": 7.14,
+   "view": "close"
+  },
+  {
+   "start": 7.14,
+   "end": 9.167,
+   "view": "wide"
+  },
+  {
+   "start": 9.167,
+   "end": 9.95,
+   "view": "medium"
+  },
+  {
+   "start": 9.95,
+   "end": 10.43,
+   "view": "wide"
+  },
+  {
+   "start": 10.43,
+   "end": 15.5,
+   "view": "close"
+  },
+  {
+   "start": 15.5,
+   "end": 16.24,
+   "view": "medium"
+  },
+  {
+   "start": 16.24,
+   "end": 20.533,
+   "view": "close"
+  },
+  {
+   "start": 20.533,
+   "end": 21.0,
+   "view": "medium"
+  },
+  {
+   "start": 21.0,
+   "end": 21.7667,
+   "view": "close"
+  }
+ ],
+ "inserts": [
+  {
+   "start": 0.0,
+   "end": 1.367,
+   "slot": "hook",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-05/broll/quick/versailles_loc/versailles_loc.jpg",
+   "colour": true,
+   "mode": "fill",
+   "center": [
+    0.235,
+    0.17
+   ],
+   "zoom": 0.42,
+   "move": "push"
+  },
+  {
+   "start": 2.92,
+   "end": 4.433,
+   "slot": "rise",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-05/broll/quick/versailles_loc/versailles_loc.jpg",
+   "colour": true,
+   "mode": "fill",
+   "center": [
+    0.27,
+    0.4
+   ],
+   "zoom": 0.8,
+   "move": "rise"
+  },
+  {
+   "start": 7.7,
+   "end": 9.167,
+   "slot": "demo",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-05/broll/quick/versailles_loc/versailles_loc.jpg",
+   "colour": true,
+   "mode": "fill",
+   "center": [
+    0.56,
+    0.5
+   ],
+   "zoom": 0.62,
+   "move": "push"
+  },
+  {
+   "start": 18.1,
+   "end": 19.29,
+   "slot": "crowd",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-05/broll/quick/versailles_loc/versailles_loc.jpg",
+   "colour": true,
+   "mode": "fill",
+   "center": [
+    0.3,
+    0.72
+   ],
+   "zoom": 0.5,
+   "move": "push"
+  },
+  {
+   "start": 19.29,
+   "end": 20.533,
+   "slot": "ascent",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-05/broll/quick/versailles_loc/versailles_loc.jpg",
+   "colour": true,
+   "mode": "fit",
+   "move": "push"
+  }
+ ],
+ "canvases": [
+  {
+   "start": 11.1,
+   "end": 15.5,
+   "kind": "outreach"
+  },
+  {
+   "start": 16.8,
+   "end": 18.1,
+   "kind": "showcase"
+  }
+ ],
+ "captions": [
+  {
+   "text": "In 1783",
+   "start": 0.08,
+   "cls": "sans",
+   "fill": "",
+   "word": "in"
+  },
+  {
+   "text": "people saw",
+   "start": 1.4517,
+   "cls": "sans",
+   "fill": "",
+   "word": "people"
+  },
+  {
+   "text": "the first",
+   "start": 1.9527,
+   "cls": "sans",
+   "fill": "",
+   "word": "the"
+  },
+  {
+   "text": "hot air",
+   "start": 2.5147,
+   "cls": "sans",
+   "fill": "",
+   "word": "hot"
+  },
+  {
+   "text": "Balloon",
+   "start": 2.9157,
+   "cls": "script",
+   "fill": "",
+   "word": "balloon"
+  },
+  {
+   "text": "rise",
+   "start": 3.4377,
+   "cls": "sans",
+   "fill": "",
+   "word": "rise"
+  },
+  {
+   "text": "into the",
+   "start": 3.6977,
+   "cls": "sans",
+   "fill": "",
+   "word": "into"
+  },
+  {
+   "text": "Sky",
+   "start": 4.0787,
+   "cls": "script",
+   "fill": "",
+   "word": "sky"
+  },
+  {
+   "text": "The Montgolfier",
+   "start": 4.5077,
+   "cls": "sans",
+   "fill": "",
+   "word": "the"
+  },
+  {
+   "text": "brothers",
+   "start": 5.4307,
+   "cls": "sans",
+   "fill": "",
+   "word": "brothers"
+  },
+  {
+   "text": "didn't just",
+   "start": 5.9127,
+   "cls": "sans",
+   "fill": "",
+   "word": "didn't"
+  },
+  {
+   "text": "Explain",
+   "start": 6.5147,
+   "cls": "script",
+   "fill": "",
+   "word": "explain"
+  },
+  {
+   "text": "their product",
+   "start": 7.1377,
+   "cls": "sans",
+   "fill": "",
+   "word": "their"
+  },
+  {
+   "text": "but they also",
+   "start": 7.8007,
+   "cls": "sans",
+   "fill": "",
+   "word": "but"
+  },
+  {
+   "text": "Demonstrated",
+   "start": 8.3017,
+   "cls": "script",
+   "fill": "",
+   "word": "demonstrated"
+  },
+  {
+   "text": "it",
+   "start": 8.9847,
+   "cls": "sans",
+   "fill": "",
+   "word": "it"
+  },
+  {
+   "text": "at WK",
+   "start": 9.2667,
+   "cls": "script",
+   "fill": "PINK",
+   "word": "at"
+  },
+  {
+   "text": "Conversions",
+   "start": 9.9477,
+   "cls": "sans",
+   "fill": "",
+   "word": "conversions"
+  },
+  {
+   "text": "we do",
+   "start": 10.4277,
+   "cls": "sans",
+   "fill": "",
+   "word": "we"
+  },
+  {
+   "text": "the same",
+   "start": 10.6687,
+   "cls": "sans",
+   "fill": "",
+   "word": "the"
+  },
+  {
+   "text": "Imagine",
+   "start": 11.203,
+   "cls": "script",
+   "fill": "",
+   "word": "imagine"
+  },
+  {
+   "text": "sending an",
+   "start": 11.643,
+   "cls": "sans",
+   "fill": "",
+   "word": "sending"
+  },
+  {
+   "text": "outreach",
+   "start": 12.083,
+   "cls": "sans",
+   "fill": "",
+   "word": "outreach"
+  },
+  {
+   "text": "message",
+   "start": 12.564,
+   "cls": "sans",
+   "fill": "",
+   "word": "message"
+  },
+  {
+   "text": "saying",
+   "start": 13.125,
+   "cls": "sans",
+   "fill": "",
+   "word": "saying"
+  },
+  {
+   "text": "we can do",
+   "start": 13.545,
+   "cls": "sans",
+   "fill": "",
+   "word": "we"
+  },
+  {
+   "text": "this,",
+   "start": 14.026,
+   "cls": "sans",
+   "fill": "",
+   "word": "this"
+  },
+  {
+   "text": "this,",
+   "start": 14.326,
+   "cls": "sans",
+   "fill": "",
+   "word": "this"
+  },
+  {
+   "text": "this",
+   "start": 14.587,
+   "cls": "sans",
+   "fill": "",
+   "word": "this"
+  },
+  {
+   "text": "and this",
+   "start": 14.827,
+   "cls": "sans",
+   "fill": "",
+   "word": "and"
+  },
+  {
+   "text": "for you",
+   "start": 15.147,
+   "cls": "sans",
+   "fill": "",
+   "word": "for"
+  },
+  {
+   "text": "they have to",
+   "start": 15.5747,
+   "cls": "sans",
+   "fill": "",
+   "word": "they"
+  },
+  {
+   "text": "Believe",
+   "start": 16.2367,
+   "cls": "script",
+   "fill": "",
+   "word": "believe"
+  },
+  {
+   "text": "you",
+   "start": 16.5767,
+   "cls": "sans",
+   "fill": "",
+   "word": "you"
+  },
+  {
+   "text": "what if",
+   "start": 16.8977,
+   "cls": "sans",
+   "fill": "",
+   "word": "what"
+  },
+  {
+   "text": "you could",
+   "start": 17.1777,
+   "cls": "sans",
+   "fill": "",
+   "word": "you"
+  },
+  {
+   "text": "Show",
+   "start": 17.4977,
+   "cls": "script",
+   "fill": "",
+   "word": "show"
+  },
+  {
+   "text": "them",
+   "start": 17.8187,
+   "cls": "sans",
+   "fill": "",
+   "word": "them"
+  },
+  {
+   "text": "like the",
+   "start": 18.192,
+   "cls": "sans",
+   "fill": "",
+   "word": "like"
+  },
+  {
+   "text": "people did",
+   "start": 18.533,
+   "cls": "sans",
+   "fill": "",
+   "word": "people"
+  },
+  {
+   "text": "to show the",
+   "start": 19.293,
+   "cls": "sans",
+   "fill": "",
+   "word": "to"
+  },
+  {
+   "text": "hot air",
+   "start": 19.854,
+   "cls": "sans",
+   "fill": "",
+   "word": "hot"
+  },
+  {
+   "text": "Balloon",
+   "start": 20.194,
+   "cls": "script",
+   "fill": "",
+   "word": "balloon"
+  },
+  {
+   "text": "would they",
+   "start": 20.622,
+   "cls": "sans",
+   "fill": "",
+   "word": "would"
+  },
+  {
+   "text": "Believe",
+   "start": 21.002,
+   "cls": "script",
+   "fill": "",
+   "word": "believe"
+  },
+  {
+   "text": "you?",
+   "start": 21.323,
+   "cls": "sans",
+   "fill": "",
+   "word": "you"
+  }
+ ],
+ "cap_frames": [
+  2,
+  43,
+  58,
+  75,
+  87,
+  103,
+  110,
+  122,
+  135,
+  162,
+  177,
+  195,
+  214,
+  234,
+  249,
+  269,
+  278,
+  298,
+  312,
+  320,
+  336,
+  349,
+  362,
+  376,
+  393,
+  406,
+  420,
+  429,
+  437,
+  444,
+  454,
+  467,
+  487,
+  497,
+  506,
+  515,
+  524,
+  534,
+  545,
+  555,
+  578,
+  595,
+  605,
+  618,
+  630,
+  639
+ ],
+ "negative_frames": [
+  0,
+  1,
+  41,
+  63,
+  88,
+  133,
+  163,
+  195,
+  214,
+  231,
+  275,
+  276,
+  298,
+  313,
+  333,
+  465,
+  487,
+  504,
+  543,
+  579,
+  616,
+  630,
+  653,
+  654
+ ],
+ "end_card_s": 1.3,
+ "beats": {
+  "outreach_title": 335,
+  "bubble": 395,
+  "rows": [
+   422,
+   431,
+   439,
+   448
+  ],
+  "sent": 456,
+  "showcase_title": 506
+ },
+ "services": [
+  "Hero explainers",
+  "Product explainers",
+  "Social content",
+  "Social ads"
+ ],
+ "website": "/home/user/SocialMediaMarketingSkill/lab/edit-05/broll/wkc/scroll.mp4",
+ "logo": "/home/user/SocialMediaMarketingSkill/lab/edit-05/broll/wkc/logo.png",
+ "logo_on_dark_ok": true,
+ "brand_colours": [
+  "#3f8ce8",
+  "#050f19",
+  "#1266c9",
+  "#f7f7f8",
+  "#f6f6f6",
+  "#2f7ad4",
+  "#e6f0fd",
+  "#575e68",
+  "#e2e3e6"
+ ]
+}

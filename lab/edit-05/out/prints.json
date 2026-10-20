@@ -1,0 +1,7 @@
+{
+ "hook":   {"file": "/home/user/SocialMediaMarketingSkill/lab/edit-05/broll/quick/versailles_loc/versailles_loc.jpg", "colour": true, "mode": "fill", "center": [0.235, 0.17], "zoom": 0.42, "move": "push"},
+ "rise":   {"file": "/home/user/SocialMediaMarketingSkill/lab/edit-05/broll/quick/versailles_loc/versailles_loc.jpg", "colour": true, "mode": "fill", "center": [0.27, 0.40], "zoom": 0.80, "move": "rise"},
+ "demo":   {"file": "/home/user/SocialMediaMarketingSkill/lab/edit-05/broll/quick/versailles_loc/versailles_loc.jpg", "colour": true, "mode": "fill", "center": [0.56, 0.50], "zoom": 0.62, "move": "push"},
+ "crowd":  {"file": "/home/user/SocialMediaMarketingSkill/lab/edit-05/broll/quick/versailles_loc/versailles_loc.jpg", "colour": true, "mode": "fill", "center": [0.30, 0.72], "zoom": 0.50, "move": "push"},
+ "ascent": {"file": "/home/user/SocialMediaMarketingSkill/lab/edit-05/broll/quick/versailles_loc/versailles_loc.jpg", "colour": true, "mode": "fit", "move": "push"}
+}

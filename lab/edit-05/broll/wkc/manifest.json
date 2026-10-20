@@ -1,0 +1,102 @@
+{
+  "source_url": "https://wkconversions.com",
+  "captured": "2026-10-20",
+  "viewport": {
+    "css": [
+      390,
+      844
+    ],
+    "device_scale_factor": 2.76923,
+    "is_mobile": true,
+    "has_touch": true
+  },
+  "scroll_video": "/home/user/SocialMediaMarketingSkill/lab/edit-05/broll/wkc/scroll.mp4",
+  "hero_png": "/home/user/SocialMediaMarketingSkill/lab/edit-05/broll/wkc/hero.png",
+  "fullpage_png": "/home/user/SocialMediaMarketingSkill/lab/edit-05/broll/wkc/fullpage.png",
+  "logo_png": "/home/user/SocialMediaMarketingSkill/lab/edit-05/broll/wkc/logo.png",
+  "logo_variants": {
+    "on_dark_f6f6f6": "/home/user/SocialMediaMarketingSkill/lab/edit-05/broll/wkc/logo.png",
+    "ink_050f19_for_light_bg": "/home/user/SocialMediaMarketingSkill/lab/edit-05/broll/wkc/logo_ink.png",
+    "vector_svg": "/home/user/SocialMediaMarketingSkill/lab/edit-05/broll/wkc/logo.svg"
+  },
+  "logo_on_dark_ok": true,
+  "brand_colours": [
+    "#3f8ce8",
+    "#050f19",
+    "#1266c9",
+    "#f7f7f8",
+    "#f6f6f6",
+    "#2f7ad4",
+    "#e6f0fd",
+    "#575e68",
+    "#e2e3e6"
+  ],
+  "brand_colour_roles": {
+    "#3f8ce8": "--accent: primary button bg, eyebrow pill, icon tiles",
+    "#050f19": "--ink: headings, body text, header pill bg, dark button",
+    "#1266c9": "--accent-ink: H1 accent words 'makes it click.'",
+    "#f7f7f8": "--page: page background (with #d6d9de dot grid)",
+    "#f6f6f6": "--on-dark: logo/text on dark",
+    "#2f7ad4": "--accent-2",
+    "#e6f0fd": "--accent-soft",
+    "#575e68": "--txt-2: body copy grey",
+    "#e2e3e6": "--line: outline button border"
+  },
+  "fonts": [
+    "Inter Tight (display/headings, 800, tight tracking)",
+    "Inter (body 400, buttons 600)"
+  ],
+  "headline": "Motion design that makes it click.",
+  "eyebrow": "Motion design & video editing for SaaS, e-commerce and brands",
+  "subhead": "We design, animate and edit videos that explain what you do in seconds: website hero explainers, service and product explainers, social media content and social ads. Motion design is our speciality.",
+  "ctas": [
+    "Start a project",
+    "See what we do"
+  ],
+  "services": [
+    "Explainer and onboarding animation",
+    "Product and UI walkthroughs",
+    "Website hero and service explainers",
+    "Brand and logo animation",
+    "Kinetic typography",
+    "Social media content and ads",
+    "Short-form social edits",
+    "Personal social media videos",
+    "Product demos and walkthroughs",
+    "YouTube videos",
+    "Subtitled, sound-off ready versions",
+    "Platform-ready exports"
+  ],
+  "services_groups": {
+    "Motion design": "Animation that explains fast and sells faster.",
+    "Video editing": "Edits built from what you already have."
+  },
+  "other_lines": [
+    "Two motion designers. One clear story.",
+    "You know video works. Getting it right is the hard part.",
+    "Two crafts. One team.",
+    "Ready to make your story click?"
+  ],
+  "scroll_video_spec": {
+    "size": [
+      1080,
+      1920
+    ],
+    "fps": 30,
+    "frames": 240,
+    "duration_s": 8.0,
+    "codec": "h264 High, yuv420p, bt709 tv-range tags, crf 14, no audio",
+    "motion": "hold top 0-1.0 s; scroll 1.0-7.5 s with 1.2 s raised-cosine ease in/out, peak 698 px/s (about 23 px/frame); settle 7.5-8.0 s",
+    "range_px": [
+      0,
+      3700
+    ],
+    "range_css_px": [
+      0,
+      1336
+    ],
+    "end_frame": "'You know video works. Getting it right is the hard part.' heading with the first two problem cards",
+    "method": "full-page screenshot strip (header hidden) cropped per frame at integer px, sticky header pill re-composited from a transparent capture so it stays fixed like on a phone"
+  },
+  "notes": "Site reachable; captured with Playwright 1.64 + /opt/pw-browsers/chromium-1194 (executable_path) at 390x844 CSS, DPR 2.769 -> 1080 px wide, iPhone UA. No cookie banner present. Page uses scroll-reveal (.rv) elements: the page was pre-scrolled so all sections are revealed before capture; fonts (Inter, Inter Tight) loaded. Only page animation is a one-shot 2.6 s 'snake' line draw in the hero (waited out) plus a frozen tools marquee; nothing essential, so the scroll was rendered from the screenshot (no stutter). Sticky header pill (#050f19, white WKC logo) is composited fixed on every frame. The hero showreel block shows its poster (3D cubes 'You / Competitor', 'You don't have what makes your competitors stand out.'). fullpage.png is 1080x40772 (stitched from 4 tiles to avoid the GPU texture limit; seams checked); the ClearScaler case video shows native player controls there. Logo is a single-colour hand-lettered 'WKC' SVG path (currentColor); the site shows it #f6f6f6 on the #050f19 pill, so logo.png is the light version (reads on dark: yes; on light: use logo_ink.png). Copy is quoted exactly; note the site's own typo 'Succesfull Collaborations + Partners' is visible in the scroll around 2-4 s. Site names co-founders Raphael Wind and Karl van Kessel. hero.png equals the viewport render (mean pixel diff 0.002)."
+}

@@ -1,0 +1,865 @@
+{
+ "fps": 30,
+ "segments": [
+  {
+   "clip": "c1",
+   "src_start": 0.0,
+   "src_end": 1.3667,
+   "out_start": 0.0,
+   "out_end": 1.3667
+  },
+  {
+   "clip": "c1",
+   "src_start": 1.7,
+   "src_end": 4.7667,
+   "out_start": 1.3667,
+   "out_end": 4.4333
+  },
+  {
+   "clip": "c2",
+   "src_start": 0.0667,
+   "src_end": 3.3333,
+   "out_start": 4.4333,
+   "out_end": 7.7
+  },
+  {
+   "clip": "c2",
+   "src_start": 3.4333,
+   "src_end": 4.9,
+   "out_start": 7.7,
+   "out_end": 9.1667
+  },
+  {
+   "clip": "c3",
+   "src_start": 0.0,
+   "src_end": 1.9333,
+   "out_start": 9.1667,
+   "out_end": 11.1
+  },
+  {
+   "clip": "c3",
+   "src_start": 2.5,
+   "src_end": 4.4333,
+   "out_start": 11.1,
+   "out_end": 13.0333
+  },
+  {
+   "clip": "c3",
+   "src_start": 4.9333,
+   "src_end": 7.4,
+   "out_start": 13.0333,
+   "out_end": 15.5
+  },
+  {
+   "clip": "c3",
+   "src_start": 8.3333,
+   "src_end": 9.0,
+   "out_start": 15.5,
+   "out_end": 16.1667
+  },
+  {
+   "clip": "c3",
+   "src_start": 9.4,
+   "src_end": 10.0333,
+   "out_start": 16.1667,
+   "out_end": 16.8
+  },
+  {
+   "clip": "c3",
+   "src_start": 10.6333,
+   "src_end": 11.9333,
+   "out_start": 16.8,
+   "out_end": 18.1
+  },
+  {
+   "clip": "c3",
+   "src_start": 12.2,
+   "src_end": 14.6333,
+   "out_start": 18.1,
+   "out_end": 20.5333
+  },
+  {
+   "clip": "c4",
+   "src_start": 0.8333,
+   "src_end": 2.0667,
+   "out_start": 20.5333,
+   "out_end": 21.7667
+  }
+ ],
+ "words": [
+  {
+   "word": "in",
+   "clip": "c1",
+   "idx": 0,
+   "score": 1.0,
+   "src_start": 0.08,
+   "src_end": 0.12,
+   "start": 0.08,
+   "end": 0.12
+  },
+  {
+   "word": "seventeen",
+   "clip": "c1",
+   "idx": 1,
+   "score": 1.0,
+   "src_start": 0.221,
+   "src_end": 0.662,
+   "start": 0.221,
+   "end": 0.662
+  },
+  {
+   "word": "eighty",
+   "clip": "c1",
+   "idx": 2,
+   "score": 1.0,
+   "src_start": 0.762,
+   "src_end": 0.983,
+   "start": 0.762,
+   "end": 0.983
+  },
+  {
+   "word": "three",
+   "clip": "c1",
+   "idx": 3,
+   "score": 1.0,
+   "src_start": 1.043,
+   "src_end": 1.264,
+   "start": 1.043,
+   "end": 1.264
+  },
+  {
+   "word": "people",
+   "clip": "c1",
+   "idx": 4,
+   "score": 1.0,
+   "src_start": 1.785,
+   "src_end": 2.046,
+   "start": 1.4517,
+   "end": 1.7127
+  },
+  {
+   "word": "saw",
+   "clip": "c1",
+   "idx": 5,
+   "score": 1.0,
+   "src_start": 2.126,
+   "src_end": 2.246,
+   "start": 1.7927,
+   "end": 1.9127
+  },
+  {
+   "word": "the",
+   "clip": "c1",
+   "idx": 6,
+   "score": 1.0,
+   "src_start": 2.286,
+   "src_end": 2.367,
+   "start": 1.9527,
+   "end": 2.0337
+  },
+  {
+   "word": "first",
+   "clip": "c1",
+   "idx": 7,
+   "score": 0.999,
+   "src_start": 2.447,
+   "src_end": 2.768,
+   "start": 2.1137,
+   "end": 2.4347
+  },
+  {
+   "word": "hot",
+   "clip": "c1",
+   "idx": 8,
+   "score": 1.0,
+   "src_start": 2.848,
+   "src_end": 2.988,
+   "start": 2.5147,
+   "end": 2.6547
+  },
+  {
+   "word": "air",
+   "clip": "c1",
+   "idx": 9,
+   "score": 0.999,
+   "src_start": 3.109,
+   "src_end": 3.189,
+   "start": 2.7757,
+   "end": 2.8557
+  },
+  {
+   "word": "balloon",
+   "clip": "c1",
+   "idx": 10,
+   "score": 0.991,
+   "src_start": 3.249,
+   "src_end": 3.55,
+   "start": 2.9157,
+   "end": 3.2167
+  },
+  {
+   "word": "rise",
+   "clip": "c1",
+   "idx": 11,
+   "score": 0.749,
+   "src_start": 3.771,
+   "src_end": 4.011,
+   "start": 3.4377,
+   "end": 3.6777
+  },
+  {
+   "word": "into",
+   "clip": "c1",
+   "idx": 12,
+   "score": 0.99,
+   "src_start": 4.031,
+   "src_end": 4.232,
+   "start": 3.6977,
+   "end": 3.8987
+  },
+  {
+   "word": "the",
+   "clip": "c1",
+   "idx": 13,
+   "score": 0.996,
+   "src_start": 4.292,
+   "src_end": 4.372,
+   "start": 3.9587,
+   "end": 4.0387
+  },
+  {
+   "word": "sky",
+   "clip": "c1",
+   "idx": 14,
+   "score": 1.0,
+   "src_start": 4.412,
+   "src_end": 4.653,
+   "start": 4.0787,
+   "end": 4.3197
+  },
+  {
+   "word": "the",
+   "clip": "c2",
+   "idx": 0,
+   "score": 0.999,
+   "src_start": 0.141,
+   "src_end": 0.221,
+   "start": 4.5077,
+   "end": 4.5877
+  },
+  {
+   "word": "montgolfier",
+   "clip": "c2",
+   "idx": 1,
+   "score": 0.842,
+   "src_start": 0.281,
+   "src_end": 0.984,
+   "start": 4.6477,
+   "end": 5.3507
+  },
+  {
+   "word": "brothers",
+   "clip": "c2",
+   "idx": 2,
+   "score": 0.999,
+   "src_start": 1.064,
+   "src_end": 1.425,
+   "start": 5.4307,
+   "end": 5.7917
+  },
+  {
+   "word": "didn't",
+   "clip": "c2",
+   "idx": 3,
+   "score": 0.988,
+   "src_start": 1.546,
+   "src_end": 1.807,
+   "start": 5.9127,
+   "end": 6.1737
+  },
+  {
+   "word": "just",
+   "clip": "c2",
+   "idx": 4,
+   "score": 1.0,
+   "src_start": 1.867,
+   "src_end": 2.028,
+   "start": 6.2337,
+   "end": 6.3947
+  },
+  {
+   "word": "explain",
+   "clip": "c2",
+   "idx": 5,
+   "score": 1.0,
+   "src_start": 2.148,
+   "src_end": 2.63,
+   "start": 6.5147,
+   "end": 6.9967
+  },
+  {
+   "word": "their",
+   "clip": "c2",
+   "idx": 6,
+   "score": 0.959,
+   "src_start": 2.771,
+   "src_end": 2.911,
+   "start": 7.1377,
+   "end": 7.2777
+  },
+  {
+   "word": "product",
+   "clip": "c2",
+   "idx": 7,
+   "score": 1.0,
+   "src_start": 2.951,
+   "src_end": 3.232,
+   "start": 7.3177,
+   "end": 7.5987
+  },
+  {
+   "word": "but",
+   "clip": "c2",
+   "idx": 8,
+   "score": 1.0,
+   "src_start": 3.534,
+   "src_end": 3.614,
+   "start": 7.8007,
+   "end": 7.8807
+  },
+  {
+   "word": "they",
+   "clip": "c2",
+   "idx": 9,
+   "score": 1.0,
+   "src_start": 3.654,
+   "src_end": 3.734,
+   "start": 7.9207,
+   "end": 8.0007
+  },
+  {
+   "word": "also",
+   "clip": "c2",
+   "idx": 10,
+   "score": 0.998,
+   "src_start": 3.795,
+   "src_end": 3.975,
+   "start": 8.0617,
+   "end": 8.2417
+  },
+  {
+   "word": "demonstrated",
+   "clip": "c2",
+   "idx": 11,
+   "score": 1.0,
+   "src_start": 4.035,
+   "src_end": 4.638,
+   "start": 8.3017,
+   "end": 8.9047
+  },
+  {
+   "word": "it",
+   "clip": "c2",
+   "idx": 12,
+   "score": 0.999,
+   "src_start": 4.718,
+   "src_end": 4.798,
+   "start": 8.9847,
+   "end": 9.0647
+  },
+  {
+   "word": "at",
+   "clip": "c3",
+   "idx": 0,
+   "score": 0.009,
+   "src_start": 0.1,
+   "src_end": 0.2,
+   "start": 9.2667,
+   "end": 9.3667
+  },
+  {
+   "word": "wk",
+   "clip": "c3",
+   "idx": 1,
+   "score": 0.993,
+   "src_start": 0.25,
+   "src_end": 0.601,
+   "start": 9.4167,
+   "end": 9.7677
+  },
+  {
+   "word": "conversions",
+   "clip": "c3",
+   "idx": 2,
+   "score": 0.904,
+   "src_start": 0.781,
+   "src_end": 1.201,
+   "start": 9.9477,
+   "end": 10.3677
+  },
+  {
+   "word": "we",
+   "clip": "c3",
+   "idx": 3,
+   "score": 0.996,
+   "src_start": 1.261,
+   "src_end": 1.321,
+   "start": 10.4277,
+   "end": 10.4877
+  },
+  {
+   "word": "do",
+   "clip": "c3",
+   "idx": 4,
+   "score": 1.0,
+   "src_start": 1.381,
+   "src_end": 1.441,
+   "start": 10.5477,
+   "end": 10.6077
+  },
+  {
+   "word": "the",
+   "clip": "c3",
+   "idx": 5,
+   "score": 0.999,
+   "src_start": 1.502,
+   "src_end": 1.582,
+   "start": 10.6687,
+   "end": 10.7487
+  },
+  {
+   "word": "same",
+   "clip": "c3",
+   "idx": 6,
+   "score": 1.0,
+   "src_start": 1.622,
+   "src_end": 1.822,
+   "start": 10.7887,
+   "end": 10.9887
+  },
+  {
+   "word": "imagine",
+   "clip": "c3",
+   "idx": 7,
+   "score": 1.0,
+   "src_start": 2.603,
+   "src_end": 2.983,
+   "start": 11.203,
+   "end": 11.583
+  },
+  {
+   "word": "sending",
+   "clip": "c3",
+   "idx": 8,
+   "score": 1.0,
+   "src_start": 3.043,
+   "src_end": 3.303,
+   "start": 11.643,
+   "end": 11.903
+  },
+  {
+   "word": "an",
+   "clip": "c3",
+   "idx": 9,
+   "score": 0.999,
+   "src_start": 3.343,
+   "src_end": 3.383,
+   "start": 11.943,
+   "end": 11.983
+  },
+  {
+   "word": "outreach",
+   "clip": "c3",
+   "idx": 10,
+   "score": 0.994,
+   "src_start": 3.483,
+   "src_end": 3.784,
+   "start": 12.083,
+   "end": 12.384
+  },
+  {
+   "word": "message",
+   "clip": "c3",
+   "idx": 11,
+   "score": 1.0,
+   "src_start": 3.964,
+   "src_end": 4.324,
+   "start": 12.564,
+   "end": 12.924
+  },
+  {
+   "word": "saying",
+   "clip": "c3",
+   "idx": 12,
+   "score": 0.997,
+   "src_start": 5.025,
+   "src_end": 5.385,
+   "start": 13.125,
+   "end": 13.485
+  },
+  {
+   "word": "we",
+   "clip": "c3",
+   "idx": 13,
+   "score": 0.999,
+   "src_start": 5.445,
+   "src_end": 5.526,
+   "start": 13.545,
+   "end": 13.626
+  },
+  {
+   "word": "can",
+   "clip": "c3",
+   "idx": 14,
+   "score": 0.998,
+   "src_start": 5.566,
+   "src_end": 5.686,
+   "start": 13.666,
+   "end": 13.786
+  },
+  {
+   "word": "do",
+   "clip": "c3",
+   "idx": 15,
+   "score": 0.923,
+   "src_start": 5.746,
+   "src_end": 5.826,
+   "start": 13.846,
+   "end": 13.926
+  },
+  {
+   "word": "this",
+   "clip": "c3",
+   "idx": 16,
+   "score": 0.587,
+   "src_start": 5.926,
+   "src_end": 6.126,
+   "start": 14.026,
+   "end": 14.226
+  },
+  {
+   "word": "this",
+   "clip": "c3",
+   "idx": 17,
+   "score": 0.357,
+   "src_start": 6.226,
+   "src_end": 6.426,
+   "start": 14.326,
+   "end": 14.526
+  },
+  {
+   "word": "this",
+   "clip": "c3",
+   "idx": 18,
+   "score": 0.129,
+   "src_start": 6.487,
+   "src_end": 6.647,
+   "start": 14.587,
+   "end": 14.747
+  },
+  {
+   "word": "and",
+   "clip": "c3",
+   "idx": 19,
+   "score": 0.36,
+   "src_start": 6.727,
+   "src_end": 6.787,
+   "start": 14.827,
+   "end": 14.887
+  },
+  {
+   "word": "this",
+   "clip": "c3",
+   "idx": 20,
+   "score": 0.571,
+   "src_start": 6.827,
+   "src_end": 6.987,
+   "start": 14.927,
+   "end": 15.087
+  },
+  {
+   "word": "for",
+   "clip": "c3",
+   "idx": 21,
+   "score": 0.987,
+   "src_start": 7.047,
+   "src_end": 7.147,
+   "start": 15.147,
+   "end": 15.247
+  },
+  {
+   "word": "you",
+   "clip": "c3",
+   "idx": 22,
+   "score": 0.992,
+   "src_start": 7.207,
+   "src_end": 7.307,
+   "start": 15.307,
+   "end": 15.407
+  },
+  {
+   "word": "they",
+   "clip": "c3",
+   "idx": 23,
+   "score": 0.984,
+   "src_start": 8.408,
+   "src_end": 8.569,
+   "start": 15.5747,
+   "end": 15.7357
+  },
+  {
+   "word": "have",
+   "clip": "c3",
+   "idx": 24,
+   "score": 0.79,
+   "src_start": 8.629,
+   "src_end": 8.749,
+   "start": 15.7957,
+   "end": 15.9157
+  },
+  {
+   "word": "to",
+   "clip": "c3",
+   "idx": 25,
+   "score": 0.374,
+   "src_start": 8.809,
+   "src_end": 8.909,
+   "start": 15.9757,
+   "end": 16.0757
+  },
+  {
+   "word": "believe",
+   "clip": "c3",
+   "idx": 26,
+   "score": 0.999,
+   "src_start": 9.47,
+   "src_end": 9.77,
+   "start": 16.2367,
+   "end": 16.5367
+  },
+  {
+   "word": "you",
+   "clip": "c3",
+   "idx": 27,
+   "score": 0.998,
+   "src_start": 9.81,
+   "src_end": 9.93,
+   "start": 16.5767,
+   "end": 16.6967
+  },
+  {
+   "word": "what",
+   "clip": "c3",
+   "idx": 28,
+   "score": 0.997,
+   "src_start": 10.731,
+   "src_end": 10.851,
+   "start": 16.8977,
+   "end": 17.0177
+  },
+  {
+   "word": "if",
+   "clip": "c3",
+   "idx": 29,
+   "score": 0.998,
+   "src_start": 10.891,
+   "src_end": 10.971,
+   "start": 17.0577,
+   "end": 17.1377
+  },
+  {
+   "word": "you",
+   "clip": "c3",
+   "idx": 30,
+   "score": 1.0,
+   "src_start": 11.011,
+   "src_end": 11.091,
+   "start": 17.1777,
+   "end": 17.2577
+  },
+  {
+   "word": "could",
+   "clip": "c3",
+   "idx": 31,
+   "score": 0.999,
+   "src_start": 11.131,
+   "src_end": 11.271,
+   "start": 17.2977,
+   "end": 17.4377
+  },
+  {
+   "word": "show",
+   "clip": "c3",
+   "idx": 32,
+   "score": 1.0,
+   "src_start": 11.331,
+   "src_end": 11.592,
+   "start": 17.4977,
+   "end": 17.7587
+  },
+  {
+   "word": "them",
+   "clip": "c3",
+   "idx": 33,
+   "score": 0.999,
+   "src_start": 11.652,
+   "src_end": 11.812,
+   "start": 17.8187,
+   "end": 17.9787
+  },
+  {
+   "word": "like",
+   "clip": "c3",
+   "idx": 34,
+   "score": 0.997,
+   "src_start": 12.292,
+   "src_end": 12.452,
+   "start": 18.192,
+   "end": 18.352
+  },
+  {
+   "word": "the",
+   "clip": "c3",
+   "idx": 35,
+   "score": 0.898,
+   "src_start": 12.493,
+   "src_end": 12.573,
+   "start": 18.393,
+   "end": 18.473
+  },
+  {
+   "word": "people",
+   "clip": "c3",
+   "idx": 36,
+   "score": 0.994,
+   "src_start": 12.633,
+   "src_end": 12.933,
+   "start": 18.533,
+   "end": 18.833
+  },
+  {
+   "word": "did",
+   "clip": "c3",
+   "idx": 37,
+   "score": 0.987,
+   "src_start": 12.993,
+   "src_end": 13.173,
+   "start": 18.893,
+   "end": 19.073
+  },
+  {
+   "word": "to",
+   "clip": "c3",
+   "idx": 38,
+   "score": 0.998,
+   "src_start": 13.393,
+   "src_end": 13.494,
+   "start": 19.293,
+   "end": 19.394
+  },
+  {
+   "word": "show",
+   "clip": "c3",
+   "idx": 39,
+   "score": 0.999,
+   "src_start": 13.534,
+   "src_end": 13.734,
+   "start": 19.434,
+   "end": 19.634
+  },
+  {
+   "word": "the",
+   "clip": "c3",
+   "idx": 40,
+   "score": 0.993,
+   "src_start": 13.794,
+   "src_end": 13.894,
+   "start": 19.694,
+   "end": 19.794
+  },
+  {
+   "word": "hot",
+   "clip": "c3",
+   "idx": 41,
+   "score": 0.995,
+   "src_start": 13.954,
+   "src_end": 14.074,
+   "start": 19.854,
+   "end": 19.974
+  },
+  {
+   "word": "air",
+   "clip": "c3",
+   "idx": 42,
+   "score": 0.93,
+   "src_start": 14.154,
+   "src_end": 14.234,
+   "start": 20.054,
+   "end": 20.134
+  },
+  {
+   "word": "balloon",
+   "clip": "c3",
+   "idx": 43,
+   "score": 0.526,
+   "src_start": 14.294,
+   "src_end": 14.515,
+   "start": 20.194,
+   "end": 20.415
+  },
+  {
+   "word": "would",
+   "clip": "c4",
+   "idx": 0,
+   "score": 1.0,
+   "src_start": 0.922,
+   "src_end": 1.082,
+   "start": 20.622,
+   "end": 20.782
+  },
+  {
+   "word": "they",
+   "clip": "c4",
+   "idx": 1,
+   "score": 1.0,
+   "src_start": 1.122,
+   "src_end": 1.242,
+   "start": 20.822,
+   "end": 20.942
+  },
+  {
+   "word": "believe",
+   "clip": "c4",
+   "idx": 2,
+   "score": 1.0,
+   "src_start": 1.302,
+   "src_end": 1.583,
+   "start": 21.002,
+   "end": 21.283
+  },
+  {
+   "word": "you",
+   "clip": "c4",
+   "idx": 3,
+   "score": 1.0,
+   "src_start": 1.623,
+   "src_end": 1.743,
+   "start": 21.323,
+   "end": 21.443
+  }
+ ],
+ "duration": 21.7667,
+ "gaps": [
+  0.188,
+  0.188,
+  0.202,
+  0.202,
+  0.214,
+  0.201,
+  0.168,
+  0.161,
+  0.201,
+  0.213,
+  0.207
+ ]
+}
