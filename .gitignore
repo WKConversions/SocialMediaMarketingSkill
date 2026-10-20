@@ -34,3 +34,5 @@ social-video-editor/assets/music/
 # run logs and captured brand files stay local
 *.log
 lab/**/broll/**/*.svg
+*.tif
+*.tiff
