@@ -1,0 +1,149 @@
+{
+ "@context": "http://iiif.io/api/presentation/2/context.json",
+ "@id": "https://apicollections.parismusees.paris.fr/iiif/320048407/manifest",
+ "@type": "sc:Manifest",
+ "label": "Portraits de Joseph-Michel Montgolfier (1740-1799) et de son frère Jacques-Etienne (1745-1799), inventeurs des aérostats",
+ "metadata": [
+  {
+   "label": "Autres titres",
+   "value": [
+    "Portraits de Joseph-Michel Montgolfier (1740-1799) et de son frère Jacques-Etienne (1745-1799), inventeurs des aérostats"
+   ]
+  },
+  {
+   "label": "Auteur",
+   "value": [
+    "Houdon, Jean-Antoine"
+   ]
+  },
+  {
+   "label": "Dénomination",
+   "value": "Médaillon (sculpture)"
+  },
+  {
+   "label": "Type d'objet",
+   "value": "Sculpture"
+  },
+  {
+   "label": "Datation en siècle",
+   "value": "4e quart du 18e siècle"
+  },
+  {
+   "label": "Description",
+   "value": [
+    "<p>Relief circulaire</p>\n"
+   ]
+  },
+  {
+   "label": "Description iconographique",
+   "value": [
+    "<p>Joseph-Michel et Jacques-Etienne Montgolfier. Tête, de profil, col nu.</p>\n"
+   ]
+  },
+  {
+   "label": "Dimensions",
+   "value": "Oeuvre - Diamètre 48 cm"
+  },
+  {
+   "label": "Matériaux et techniques",
+   "value": [
+    "Plâtre",
+    "Patine"
+   ]
+  },
+  {
+   "label": "Date d’acquisition",
+   "value": "<div class=\"pm-date-precision\">\n  \n                            <span class=\"year\">1912</span>\n        \n  </div>\n"
+  },
+  {
+   "label": "Mode d'acquisition",
+   "value": "Don manuel"
+  },
+  {
+   "label": "Numéro d’inventaire",
+   "value": "S906"
+  },
+  {
+   "label": "Institution",
+   "value": "Musée Carnavalet, Histoire de Paris"
+  },
+  {
+   "label": "Catalogue des œuvres de Paris Musées",
+   "value": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/portraits-de-joseph-michel-montgolfier-1740-1799-et-de-son-frere-jacques"
+  }
+ ],
+ "thumbnail": {
+  "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/thumbnail/collections/atoms/images/CAR/lpdp_33377-6.jpg?itok=Q3WIeM2O",
+  "@type": "dctypes:Image",
+  "height": 224,
+  "width": 300
+ },
+ "logo": {
+  "@id": "https://apicollections.parismusees.paris.fr/themes/custom/pm8/logo.svg"
+ },
+ "sequences": [
+  {
+   "@type": "sc:Sequence",
+   "canvases": [
+    {
+     "@id": "https://apicollections.parismusees.paris.fr/iiif/320048407/manifest/canvas/LPDP_33377-6",
+     "@type": "sc:Canvas",
+     "height": 2160,
+     "width": 2889,
+     "label": "LPDP_33377-6",
+     "metadata": [
+      {
+       "label": "Droits",
+       "value": "CC0 Paris Musées / Musée Carnavalet – Histoire de Paris"
+      },
+      {
+       "label": "Copyright",
+       "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }
+     ],
+     "images": [
+      {
+       "@type": "oa:Annotation",
+       "motivation": "sc:painting",
+       "on": "https://apicollections.parismusees.paris.fr/iiif/320048407/manifest/canvas/LPDP_33377-6",
+       "resource": {
+        "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_33377-6.jpg?itok=aAgJnAw8",
+        "@type": "dctypes:Image",
+        "format": "image/jpeg"
+       }
+      }
+     ]
+    },
+    {
+     "@id": "https://apicollections.parismusees.paris.fr/iiif/320048407/manifest/canvas/LPDP_33377-5",
+     "@type": "sc:Canvas",
+     "height": 2160,
+     "width": 2682,
+     "label": "LPDP_33377-5",
+     "metadata": [
+      {
+       "label": "Droits",
+       "value": "CC0 Paris Musées / Musée Carnavalet – Histoire de Paris"
+      },
+      {
+       "label": "Copyright",
+       "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }
+     ],
+     "images": [
+      {
+       "@type": "oa:Annotation",
+       "motivation": "sc:painting",
+       "on": "https://apicollections.parismusees.paris.fr/iiif/320048407/manifest/canvas/LPDP_33377-5",
+       "resource": {
+        "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_33377-5.jpg?itok=fsXmZNCR",
+        "@type": "dctypes:Image",
+        "format": "image/jpeg"
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,156 @@
+{
+ "@context": "http://iiif.io/api/presentation/2/context.json",
+ "@id": "https://apicollections.parismusees.paris.fr/iiif/320051735/manifest",
+ "@type": "sc:Manifest",
+ "label": "Les frères Montgolfier, Joseph (1740-1810) et Etienne (1745-1799), industriels et inventeurs français, 1783",
+ "metadata": [
+  {
+   "label": "Autres titres",
+   "value": [
+    "Les frères Montgolfier, Joseph (1740-1810) et Etienne (1745-1799), industriels et inventeurs français, 1783 (Titre factice)"
+   ]
+  },
+  {
+   "label": "Auteur",
+   "value": [
+    "Gatteaux, Nicolas Marie"
+   ]
+  },
+  {
+   "label": "Dénomination",
+   "value": "Médaille"
+  },
+  {
+   "label": "Type d'objet",
+   "value": "Numismatique"
+  },
+  {
+   "label": "Date de production",
+   "value": "<div class=\"pm-date-precision\">\n      <span class=\"precision\">En</span>\n  \n                            <span class=\"year\">1783</span>\n        \n  </div>\n"
+  },
+  {
+   "label": "Datation en siècle",
+   "value": "18e siècle"
+  },
+  {
+   "label": "Description",
+   "value": [
+    "<p>Relief, droit et revers</p>\n"
+   ]
+  },
+  {
+   "label": "Description iconographique",
+   "value": [
+    "<p>Droit : bustes accolés des frères Montgolfier à gauche ; au revers dans le champ : la Ville de Paris assise à droite adossée à un lion couché, des clefs à ses pieds, regarde l'envol d'une montgolfière, sous laquelle un personnage allégorique tend une torche.</p>\n"
+   ]
+  },
+  {
+   "label": "Dimensions",
+   "value": [
+    "Oeuvre - Diamètre 4.1 cm",
+    "Oeuvre - Poids (type dimension) 37.84 g"
+   ]
+  },
+  {
+   "label": "Inscriptions",
+   "value": [
+    "Légende - <p>Au droit circulaire : \"JOSE.ET.ETIEN. MONTGOLFIER / POUR AVOIR RENDU L'AIR NAVIGABLE\" ; au revers, circulaire : \"ATTONITUS ORBIS TERRARUM\" ; au revers, à l'exergue : \"ITINERE PER AERA FELICITER / TENTATO ANNO / MDCCLXXXIII\".</p>\n",
+    "Signature - <p>Au droit, sous le buste  : \"N.GATTEAUX.\" ; au revers, sur la plinthe : \"GATTEAUX\".</p>\n"
+   ]
+  },
+  {
+   "label": "Date d’acquisition",
+   "value": "<div class=\"pm-date-precision\">\n  \n                      <span class=\"month\">4</span>\n        <span class=\"separator-month-year\">–</span>\n                    <span class=\"year\">1948</span>\n        \n  </div>\n"
+  },
+  {
+   "label": "Mode d'acquisition",
+   "value": "Don manuel"
+  },
+  {
+   "label": "Numéro d’inventaire",
+   "value": "ND383"
+  },
+  {
+   "label": "Institution",
+   "value": "Musée Carnavalet, Histoire de Paris"
+  },
+  {
+   "label": "Catalogue des œuvres de Paris Musées",
+   "value": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/les-freres-montgolfier-joseph-1740-1810-et-etienne-1745-1799-industriels-1"
+  }
+ ],
+ "thumbnail": {
+  "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/thumbnail/collections/atoms/images/CAR/lpdp_70709-47.jpg?itok=b0IQ6J9q",
+  "@type": "dctypes:Image",
+  "height": 224,
+  "width": 300
+ },
+ "logo": {
+  "@id": "https://apicollections.parismusees.paris.fr/themes/custom/pm8/logo.svg"
+ },
+ "sequences": [
+  {
+   "@type": "sc:Sequence",
+   "canvases": [
+    {
+     "@id": "https://apicollections.parismusees.paris.fr/iiif/320051735/manifest/canvas/LPDP_70709-47",
+     "@type": "sc:Canvas",
+     "height": 2160,
+     "width": 2888,
+     "label": "LPDP_70709-47",
+     "metadata": [
+      {
+       "label": "Droits",
+       "value": "CC0 Paris Musées / Musée Carnavalet – Histoire de Paris"
+      },
+      {
+       "label": "Copyright",
+       "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }
+     ],
+     "images": [
+      {
+       "@type": "oa:Annotation",
+       "motivation": "sc:painting",
+       "on": "https://apicollections.parismusees.paris.fr/iiif/320051735/manifest/canvas/LPDP_70709-47",
+       "resource": {
+        "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_70709-47.jpg?itok=lY2-DQN-",
+        "@type": "dctypes:Image",
+        "format": "image/jpeg"
+       }
+      }
+     ]
+    },
+    {
+     "@id": "https://apicollections.parismusees.paris.fr/iiif/320051735/manifest/canvas/LPDP_70716-40",
+     "@type": "sc:Canvas",
+     "height": 2160,
+     "width": 2889,
+     "label": "LPDP_70716-40",
+     "metadata": [
+      {
+       "label": "Droits",
+       "value": "CC0 Paris Musées / Musée Carnavalet – Histoire de Paris"
+      },
+      {
+       "label": "Copyright",
+       "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }
+     ],
+     "images": [
+      {
+       "@type": "oa:Annotation",
+       "motivation": "sc:painting",
+       "on": "https://apicollections.parismusees.paris.fr/iiif/320051735/manifest/canvas/LPDP_70716-40",
+       "resource": {
+        "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_70716-40.jpg?itok=ffMJ00JD",
+        "@type": "dctypes:Image",
+        "format": "image/jpeg"
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
