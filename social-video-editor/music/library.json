@@ -23,8 +23,9 @@
           "release_ms": 300
         },
         "fade_out_s": 1.2,
-        "measured_under_voice_db": 6.8,
-        "master_to_final_lufs": true
+        "master_to_final_lufs": true,
+        "under_voice_db": 6.7,
+        "under_voice_rule": "The bed must sit 6.7 dB under the voice WHILE THE VOICE SPEAKS (50 ms blocks with the voice above -35 dBFS; voice alone vs the bed through the identical chain), as measured on the approved Brooklyn Bridge mix. The loudness match (level_lu_vs_voice) is only the starting point: on the Montgolfier edit (dense speech) it left the bed at 4.8 dB, so mix.py measures and corrects the gain before the final render."
       },
       "approved_in": "Brooklyn Bridge -> WKC story edit (lab/edit-04, wkc_bridge_v1_music.mp4), 2026-10-17: the client asked for it to be clearly audible; -13 dB with heavy ducking was inaudible.",
       "suits": [

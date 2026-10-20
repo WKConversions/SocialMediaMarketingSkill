@@ -18,7 +18,9 @@ voice is silent over those frames and fades in where it did before the move.
 import json
 import os
 
-from common import PipelineError, loudness, run
+import numpy as np
+
+from common import PipelineError, decode_audio, loudness, run
 
 SKILL = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -48,6 +50,30 @@ def music_gain(music, duration, cfg):
         return m["pre_gain_db"]
     gain = cfg["voice_lufs"] + m["level_lu_vs_voice"] - seg
     return round(max(m["pre_gain_db"] - 6.0, min(m["pre_gain_db"] + 6.0, gain)), 2)
+
+
+def music_under_voice_db(voice_wav, cfg, gain_db, duration, voice_start_s, music, tmp_prefix):
+    """How far the music bed sits under the voice WHILE THE VOICE SPEAKS (dB): the voice alone and voice + bed are
+    rendered through the identical chain; the bed is their difference; both are compared in 50 ms blocks where the
+    voice is above -35 dBFS. This is how the approved mix was measured (6.7 dB on the Brooklyn Bridge edit)."""
+    sr = cfg["sample_rate"]
+    v_path, b_path = f"{tmp_prefix}_voice.wav", f"{tmp_prefix}_bed.wav"
+    voice_alone(voice_wav, v_path, cfg, gain_db, duration, voice_start_s)
+    voice_alone(voice_wav, b_path, cfg, gain_db, duration, voice_start_s, music=music)
+    v = decode_audio(v_path, sr, channels=2).mean(axis=1)
+    b = decode_audio(b_path, sr, channels=2).mean(axis=1)
+    for p in (v_path, b_path):
+        os.remove(p)
+    n = min(len(v), len(b))
+    m = b[:n] - v[:n]
+    blk = int(0.05 * sr)
+    k = n // blk
+    vb, mb = v[: k * blk].reshape(k, blk), m[: k * blk].reshape(k, blk)
+    vdb = 10 * np.log10((vb ** 2).mean(axis=1) + 1e-12)
+    act = vdb > -35
+    if act.sum() < 4:
+        return None
+    return 10 * np.log10((vb[act] ** 2).mean() + 1e-12) - 10 * np.log10((mb[act] ** 2).mean() + 1e-12)
 
 
 def music_chain(music, duration, sr, music_in, sidechain):
@@ -100,8 +126,19 @@ def graph(cfg, gain_db, duration, voice="1:a", effects="2:a", voice_start_s=0.0,
 
 def mix(video, voice_wav, sfx_wav, out_path, cfg, duration, voice_start_s=0.0, music=None):
     gain, measured = voice_gain(voice_wav, cfg, voice_start_s)
+    under = None
     if music:
         music = dict(music, gain_db=music_gain(music, duration, cfg))
+        target = music["mix"].get("under_voice_db")
+        if target is not None:
+            # the loudness match is a starting point; how loud the bed sounds under THIS voice depends on the speech
+            # (density, level, ducking), so measure it while the voice speaks and correct to the approved distance
+            first = music_under_voice_db(voice_wav, cfg, gain, duration, voice_start_s, music, out_path + ".music")
+            if first is not None:
+                lo, hi = music["mix"]["pre_gain_db"] - 9.0, music["mix"]["pre_gain_db"] + 6.0
+                music["gain_db"] = round(max(lo, min(hi, music["gain_db"] - (target - first))), 2)
+                under = music_under_voice_db(voice_wav, cfg, gain, duration, voice_start_s, music, out_path + ".music")
+                under = None if under is None else round(under, 2)
 
     def render(master_db):
         g = graph(cfg, gain, duration, voice_start_s=voice_start_s, music=music, master_db=master_db)
@@ -121,6 +158,7 @@ def mix(video, voice_wav, sfx_wav, out_path, cfg, duration, voice_start_s=0.0, m
         g = render(master)
     return dict(voice_measured_lufs=measured, voice_gain_db=round(gain, 3), voice_start_s=round(voice_start_s, 6), filter=g,
                 music=music["name"] if music else None, music_gain_db=music["gain_db"] if music else None,
+                music_under_voice_db=under,
                 master_db=round(master, 3))
 
 

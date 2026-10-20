@@ -79,21 +79,53 @@
     0.17
    ],
    "zoom": 0.42,
-   "move": "push"
+   "move": "push",
+   "source": "LOC 2002736265, Versailles 19 Sept 1783 (vue d'optique, hand-coloured)"
   },
   {
    "start": 2.92,
    "end": 4.433,
    "slot": "rise",
-   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-05/broll/quick/versailles_loc/versailles_loc.jpg",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-05/broll/events/muette_1783_dauphin_coloured_loc/image.jpg",
    "colour": true,
    "mode": "fill",
    "center": [
-    0.27,
+    0.53,
     0.4
    ],
-   "zoom": 0.8,
-   "move": "rise"
+   "zoom": 0.42,
+   "move": "rise",
+   "source": "LOC 2003674133, Premier voyage aerien, La Muette 21 Nov 1783 (first manned flight)"
+  },
+  {
+   "start": 4.433,
+   "end": 5.43,
+   "slot": "brothers",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-05/broll/portraits/houdon_medallion_carnavalet/source.jpg",
+   "colour": true,
+   "mode": "fill",
+   "move": "push",
+   "source": "Houdon, medallion of Joseph and Etienne de Montgolfier, 1783 (Musee Carnavalet, Paris Musees CC0)",
+   "center": [
+    0.3,
+    0.5
+   ],
+   "zoom": 1.0
+  },
+  {
+   "start": 6.51,
+   "end": 7.7,
+   "slot": "explain",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-05/broll/portraits/design_faujas_pl8_machine_loc/source.jpg",
+   "colour": false,
+   "mode": "fill",
+   "center": [
+    0.5,
+    0.36
+   ],
+   "zoom": 0.62,
+   "move": "push",
+   "source": "LOC 2002721988, Machine aerostatique de 70 pieds (Montgolfier balloon, 19 Oct 1783), plate"
   },
   {
    "start": 7.7,
@@ -107,7 +139,8 @@
     0.5
    ],
    "zoom": 0.62,
-   "move": "push"
+   "move": "push",
+   "source": "LOC 2002736265 (launch platform and crowd)"
   },
   {
    "start": 18.1,
@@ -121,16 +154,23 @@
     0.72
    ],
    "zoom": 0.5,
-   "move": "push"
+   "move": "push",
+   "source": "LOC 2002736265 (crowd, date in the caption)"
   },
   {
    "start": 19.29,
    "end": 20.533,
    "slot": "ascent",
-   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-05/broll/quick/versailles_loc/versailles_loc.jpg",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-05/broll/events/versailles_1783_vachez_carnavalet/source.jpg",
    "colour": true,
-   "mode": "fit",
-   "move": "push"
+   "mode": "fill",
+   "center": [
+    0.5,
+    0.42
+   ],
+   "zoom": 0.92,
+   "move": "rise",
+   "source": "Vue de Versailles prise du cote de la chapelle, 1ere experience de Montgolfier, 19 Sept 1783 (Musee Carnavalet, Paris Musees CC0)"
   }
  ],
  "canvases": [
@@ -483,14 +523,14 @@
   177,
   195,
   214,
-  234,
+  233,
   249,
   269,
   278,
   298,
   312,
-  320,
-  336,
+  319,
+  335,
   349,
   362,
   376,
@@ -502,10 +542,10 @@
   444,
   454,
   467,
-  487,
+  486,
   497,
   506,
-  515,
+  514,
   524,
   534,
   545,

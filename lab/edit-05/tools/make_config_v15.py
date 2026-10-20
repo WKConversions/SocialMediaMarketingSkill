@@ -33,13 +33,17 @@ VIEW_PLAN = [(0.0, "wide"), (1.367, "wide"), (2.11, "medium"), (5.43, "medium"),
 SLOTS = [  # (start, end, slot) - real 1783 prints; the slot is filled from out/prints.json
     (0.0, 1.367, "hook"),          # "In 1783": a print of the 1783 ascents with the date on it, the hook frame
     (2.92, 4.433, "rise"),         # "balloon rise into the sky": the balloon rising, panned upwards
-    (4.433, 5.43, "brothers"),     # "The Montgolfier": the brothers (v1: no portrait yet -> the talking head)
+    (4.433, 5.43, "brothers"),     # "The Montgolfier": Houdon's 1783 medallion of both brothers
+    (6.51, 7.70, "explain"),       # "explain their product": a plate of their balloon's design
     (7.70, 9.167, "demo"),         # "but they also demonstrated it": a public demonstration (Annonay / Versailles)
     (18.10, 19.29, "crowd"),       # "like the people did": the crowd watching
     (19.29, 20.533, "ascent"),     # "to show the hot air balloon": the balloon going up before the crowd
 ]
 CANVASES = [(11.10, 15.50, "outreach"), (16.80, 18.10, "showcase")]
 END_CARD = 1.3
+# v1 verification (clean voice re-aligned on the final timeline): these words start 17-28 ms before the caption
+# frame, i.e. on the caption's own frame; one frame earlier puts them back at the one-frame lead
+EARLIER = {("but they also", 0), ("the same", 0), ("Imagine", 0), ("Believe", 0), ("you could", 0)}
 
 
 def main():
@@ -58,6 +62,12 @@ def main():
     canvases = [dict(start=s, end=e, kind=k) for s, e, k in CANVASES]
     wkc = json.load(open(f"{E}/broll/wkc/manifest.json")) if os.path.exists(f"{E}/broll/wkc/manifest.json") else {}
     cap_frame = [max(0, int(-(-c["start"] * FPS // 1)) - 1) for c in caps]
+    seen = {}
+    for k, c in enumerate(caps):
+        n = seen.get(c["text"], 0)
+        seen[c["text"]] = n + 1
+        if (c["text"], n) in EARLIER:
+            cap_frame[k] -= 1
 
     def frame_of(text, nth=0):
         return [f for c, f in zip(caps, cap_frame) if c["text"] == text][nth]
