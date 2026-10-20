@@ -49,7 +49,7 @@ def music_gain(music, duration, cfg):
     if seg == float("-inf"):
         return m["pre_gain_db"]
     gain = cfg["voice_lufs"] + m["level_lu_vs_voice"] - seg
-    return round(max(m["pre_gain_db"] - 6.0, min(m["pre_gain_db"] + 6.0, gain)), 2)
+    return round(float(max(m["pre_gain_db"] - 6.0, min(m["pre_gain_db"] + 6.0, gain))), 2)
 
 
 def music_under_voice_db(voice_wav, cfg, gain_db, duration, voice_start_s, music, tmp_prefix):
@@ -136,9 +136,9 @@ def mix(video, voice_wav, sfx_wav, out_path, cfg, duration, voice_start_s=0.0, m
             first = music_under_voice_db(voice_wav, cfg, gain, duration, voice_start_s, music, out_path + ".music")
             if first is not None:
                 lo, hi = music["mix"]["pre_gain_db"] - 9.0, music["mix"]["pre_gain_db"] + 6.0
-                music["gain_db"] = round(max(lo, min(hi, music["gain_db"] - (target - first))), 2)
+                music["gain_db"] = round(float(max(lo, min(hi, music["gain_db"] - (target - first)))), 2)
                 under = music_under_voice_db(voice_wav, cfg, gain, duration, voice_start_s, music, out_path + ".music")
-                under = None if under is None else round(under, 2)
+                under = None if under is None else round(float(under), 2)
 
     def render(master_db):
         g = graph(cfg, gain, duration, voice_start_s=voice_start_s, music=music, master_db=master_db)
