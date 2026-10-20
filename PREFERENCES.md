@@ -74,5 +74,13 @@ these on every video unless the client says otherwise for a specific project.
 - Canvas moments for lists, numbers and steps the client says: services check off as they're named,
   numbers count up to the spoken value, titles glitch in on the word they come from.
 
+## Covers (story style, scripts/cover.py)
+- Two centred lines in a heavy geometric sans (Montserrat): the setup in white, the payoff in red (#EA1B23), on a
+  dark, moody backdrop with a dark fade under the chin (reference: "How did they / gain trust").
+- Pick a moment where the client is explaining or neutral, eyes open and on the camera.
+- Keep the client's own framing: don't zoom in on the head. Keep the face natural: no coloured or heavily graded
+  skin; the mood comes from the dark backdrop, vignette and fade.
+- Deliver the 9:16 reel cover and the 3:4 grid view.
+
 ## Working style
 - Show a first viewable version fast (within 20 minutes); polish afterwards.
