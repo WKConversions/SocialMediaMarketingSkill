@@ -30,3 +30,7 @@ lab/**/views/
 
 # commercial music the client supplies: never committed (public repo); see social-video-editor/music/library.json
 social-video-editor/assets/music/
+
+# run logs and captured brand files stay local
+*.log
+lab/**/broll/**/*.svg
