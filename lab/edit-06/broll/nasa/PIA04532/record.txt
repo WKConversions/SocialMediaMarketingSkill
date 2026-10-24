@@ -1,0 +1,8 @@
+Jupiter and its Galilean Satellites as viewed from Mars (PIA04532)
+Date: 2003-05-08 (released 2003-05-22)
+Source: https://photojournal.jpl.nasa.gov/catalog/PIA04532 ; https://images.nasa.gov/details/PIA04532 (file: https://images-assets.nasa.gov/image/PIA04532/PIA04532~orig.jpg)
+Licence: Public domain in the US (NASA/JPL media are generally not copyrighted; NASA Media Usage Guidelines: credit NASA, do not imply endorsement). Credit line: NASA/JPL/Malin Space Science Systems
+
+Catalogue text (quoted): Photojournal record (MOC2-368): "When Galileo first turned his telescope toward Jupiter four centuries ago, he saw that the giant planet had four large satellites ... This MGS MOC image, obtained from Mars orbit on 8 May 2003, shows Jupiter and three of the four Galilean satellites: Callisto, Ganymede, and Europa. At the time, Io was behind Jupiter as seen from Mars". Credits: NASA/JPL/Malin Space Science Systems.
+
+What is visible: Very wide strip (4655x961): small banded Jupiter disc right of centre and THREE star-like moon dots spread in a rough line (two far left, one right). Taken by Mars Global Surveyor's camera from Mars orbit: a distant, telescope-like view of a disc with moons beside it. Only three of the four moons are in it (Io was hidden behind Jupiter). Jupiter was colourised using a Cassini image; the moons were not coloured.

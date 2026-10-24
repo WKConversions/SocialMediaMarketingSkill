@@ -1,0 +1,8 @@
+Voyager 1 "Blue Movie" (PIA02855)
+Date: 1979-01-06 to 1979-02-03
+Source: https://photojournal.jpl.nasa.gov/catalog/PIA02855 (file: https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia02/pia02855/PIA02855.gif)
+Licence: Public domain in the US (NASA/JPL media are generally not copyrighted; NASA Media Usage Guidelines: credit NASA, do not imply endorsement). Credit line: NASA/JPL
+
+Catalogue text (quoted): Photojournal record: "This is the original Voyager 'Blue Movie' ... It records the approach of Voyager 1 during a period of over 60 Jupiter days ... This sequence is made from 66 images taken once every Jupiter rotation period (about 10 hours) ... acquired in the Blue filter from Jan. 6 to Feb. 3 1979." Credits: NASA/JPL.
+
+What is visible: Real Voyager 1 approach time-lapse, black-and-white, 600x600: Jupiter grows larger frame by frame as the spacecraft closes in, cloud bands and the Great Red Spot drifting; several frames have the right side cut off (missing data). 66 frames, one per Jupiter rotation. Low resolution, archival look.

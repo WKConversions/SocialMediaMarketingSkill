@@ -1,0 +1,8 @@
+Juno on Jupiter's Doorstep (PIA20701)
+Date: 2016-06-21
+Source: https://photojournal.jpl.nasa.gov/catalog/PIA20701 (file: https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia20/pia20701/PIA20701.tif)
+Licence: Public domain in the US (NASA/JPL media are generally not copyrighted; NASA Media Usage Guidelines: credit NASA, do not imply endorsement). Credit line: NASA/JPL-Caltech/SwRI/MSSS
+
+Catalogue text (quoted): Photojournal record: "NASA's Juno spacecraft obtained this color view on June 21, 2016, at a distance of 6.8 million miles (10.9 million kilometers) from Jupiter. As Juno makes its initial approach, the giant planet's four largest moons -- Io, Europa, Ganymede and Callisto -- are visible". Credits: NASA/JPL-Caltech/SwRI/MSSS.
+
+What is visible: Real single JunoCam colour frame (small, 1075x570): Jupiter as a tiny half-lit disc right of centre with faint bands, and four point-like moons as dots to its left (not in a straight line, because Juno viewed from high above the north pole). Closest in spirit to what Galileo saw: a disc plus four star-like dots. Low resolution; will look soft if enlarged.

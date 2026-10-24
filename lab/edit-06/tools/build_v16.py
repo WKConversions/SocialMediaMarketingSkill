@@ -138,7 +138,7 @@ class PrintShot:
             travel = 0.10 * wh
             cx, cy = self.cx, self.cy - travel / 2 + travel * p     # window moves down -> the balloon climbs
         elif self.move == "spin":                                   # a round chart turning slowly
-            z = 0.84
+            z = 0.78
             cx, cy = self.cx, self.cy
         elif self.move == "down":
             z = 0.90
@@ -150,9 +150,15 @@ class PrintShot:
         cw, ch = ww * z, wh * z
         cx = float(np.clip(cx, cw / 2, self.im.width - cw / 2))
         cy = float(np.clip(cy, ch / 2, self.im.height - ch / 2))
-        out = self.im.resize((W, H), Image.BICUBIC, box=(cx - cw / 2, cy - ch / 2, cx + cw / 2, cy + ch / 2))
         if self.move == "spin":
-            out = out.rotate(-7 * p, resample=Image.BICUBIC)
+            # crop 20% wider, rotate, crop back: no black corners (6 degrees on 9:16 needs ~16% margin)
+            m = 1.2
+            big = self.im.resize((int(W * m), int(H * m)), Image.BICUBIC,
+                                 box=(cx - cw * m / 2, cy - ch * m / 2, cx + cw * m / 2, cy + ch * m / 2))
+            big = big.rotate(-6 * p, resample=Image.BICUBIC)
+            out = big.crop(((big.width - W) // 2, (big.height - H) // 2, (big.width - W) // 2 + W, (big.height - H) // 2 + H))
+            return np.asarray(out).astype(np.float32) / 255
+        out = self.im.resize((W, H), Image.BICUBIC, box=(cx - cw / 2, cy - ch / 2, cx + cw / 2, cy + ch / 2))
         return np.asarray(out).astype(np.float32) / 255
 
 
@@ -223,10 +229,12 @@ def pop(age, frames=3):
 _srng = np.random.default_rng(11)
 STARS = [(float(_srng.uniform(0, W)), float(_srng.uniform(0, 1250)), float(_srng.uniform(0.8, 2.2)), int(_srng.uniform(70, 170)))
          for _ in range(170)]
-# the four Galilean moons: (name, orbit radius in Jupiter radii on screen, period on screen s, start phase, size, colour)
-# real order and period ratios (Io 1.77 d : Europa 3.55 : Ganymede 7.15 : Callisto 16.7), compressed to fit the frame
-MOONS = [("Io", 1.55, 2.4, 2.8, 18, (230, 205, 120)), ("Europa", 2.0, 4.8, 0.5, 17, (226, 218, 200)),
-         ("Ganymede", 2.55, 9.7, 3.4, 22, (178, 166, 152)), ("Callisto", 3.22, 22.6, 6.1, 21, (128, 120, 112))]
+# the four moons as Galileo named them in 1610: together the Medicea Sidera (Medicean Stars), each by number, I-IV
+# counted outward from Jupiter (I = Io, II = Europa, III = Ganymede, IV = Callisto; those names came from Simon Marius
+# in 1614). (label, orbit radius in Jupiter radii on screen, period on screen s, start phase, size, colour): real order,
+# sizes (III > IV > I > II) and period ratios (1.77 : 3.55 : 7.15 : 16.7 days); distances compressed to fit the frame
+MOONS = [("I", 1.55, 2.4, 2.8, 18, (230, 205, 120)), ("II", 2.0, 4.8, 0.5, 17, (226, 218, 200)),
+         ("III", 2.55, 9.7, 3.4, 22, (178, 166, 152)), ("IV", 3.22, 22.6, 6.1, 21, (128, 120, 112))]
 # start positions: dots on both sides of the planet, like Galileo's own diagrams
 
 
@@ -272,6 +280,9 @@ def moons(i, bg, jup):
         d.ellipse((sx - r, sy - r, sx + r, sy + r), fill=(lv, lv, min(255, lv + 20)))
     im = glitch_text(im, ["Jupiter, January 1610"], i, b["moons_title"], 150, px=72)
     d = ImageDraw.Draw(im)
+    if i >= b["moons"][0]:                                                       # Galileo's own name for them
+        lv = int(150 + 80 * min(1.0, (i - b["moons"][0]) / 6))
+        d.text((W / 2, 312), "Medicea Sidera  \u00b7  the Medicean Stars", font=font(40, 560), fill=(lv, lv, min(255, lv + 15)), anchor="mm")
     cx, cy, R = 540, 790, 150
     if R not in _disc_cache:
         _disc_cache[R] = jupiter_disc(jup, R, CFG["canvases"][0].get("jupiter_circle"))
@@ -299,7 +310,7 @@ def moons(i, bg, jup):
             d.ellipse((x - s, y - s, x + s, y + s), fill=col)
         lv = 230 if i - b["moons"][k] < 30 else 150
         if not hidden:
-            d.text((x, y + 50), name, font=font(34, 650), fill=(lv, lv, min(255, lv + 15)), anchor="mm")
+            d.text((x, y + 52), name, font=font(38, 700), fill=(lv, lv, min(255, lv + 15)), anchor="mm")
     return im
 
 

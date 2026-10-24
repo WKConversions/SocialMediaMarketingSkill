@@ -1,0 +1,8 @@
+High Resolution Globe of Jupiter (PIA02873)
+Date: 2000-12-07 (released 2001-01-30)
+Source: https://photojournal.jpl.nasa.gov/catalog/PIA02873 (file: https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia02/pia02873/PIA02873.tif)
+Licence: Public domain in the US (NASA/JPL media are generally not copyrighted; NASA Media Usage Guidelines: credit NASA, do not imply endorsement). Credit line: NASA/JPL/University of Arizona
+
+Catalogue text (quoted): Photojournal record: "This true-color simulated view of Jupiter is composed of 4 images taken by NASA's Cassini spacecraft on December 7, 2000 ... the cylindrical map was projected onto a globe ... Jupiter's moon Europa is casting the shadow on the planet." Credits: NASA/JPL/University of Arizona.
+
+What is visible: Full, evenly lit Jupiter globe centred on black (16:9, 1920x1080): bands, Great Red Spot right of centre, a small black dot left of centre that is Europa's shadow. Simulated full-disc view made by projecting a Cassini cylindrical map onto a globe (real data, reprojected).

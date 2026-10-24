@@ -1,0 +1,8 @@
+Time-lapse of Jupiter's three moon transit (Hubble, heic1504a)
+Date: 2015-01-23/24 (released 2015-02-05)
+Source: https://esahubble.org/videos/heic1504a/ ; https://esahubble.org/news/heic1504/ (file: https://cdn.esahubble.org/archives/videos/ultra_hd/heic1504a.mp4)
+Licence: CC BY 4.0 (ESA/Hubble usage terms: images and videos released under Creative Commons Attribution 4.0; credit must be clearly visible). Credit line: NASA, ESA, Hubble Heritage Team (STScI/AURA)
+
+Catalogue text (quoted): ESA/Hubble video record: "Hubble took a string of images of the event which are stitched together to show the three satellites -- Europa, Callisto and Io -- in action in this time-lapse video. Credit: NASA, ESA, Hubble Heritage Team". Release heic1504: "Missing from this sequence is the Galilean moon Ganymede which was outside Hubble's field of view." Its note [1]: the moons "were among the first observations ever made using a telescope. They revolutionised our understanding of the Universe, and finally laid to rest the theory that the Earth is the centre of the Solar System." (ESA gives 23 Jan 2015; NASA's matching still GSFC_20171208_Archive_e000795 gives 24 Jan 2015 07:10 UT for the end of the event.)
+
+What is visible: Real Hubble WFC3 time-lapse, black-and-white, 3840x2160 (Jupiter in a centred square with a thin grey frame line, black side bars). Jupiter's bands run diagonally; three black moon shadows and the bright moons Io, Callisto and Europa move across and around the disc over ~40 minutes of real time (Europa enters at lower left, Io nears the right limb). The ~9.2 s sequence plays twice: hard jump back to the start at 9.16 s (frame 229). Ganymede is not in frame.

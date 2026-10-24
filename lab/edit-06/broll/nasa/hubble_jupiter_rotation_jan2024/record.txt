@@ -1,0 +1,8 @@
+Hubble: January 2024 Jupiter Rotation Video
+Date: 2024-01-05/06 (released 2024-03)
+Source: https://science.nasa.gov/video-detail/hubble-jupiter-jan2024-stsci-01hppsva1p4cahhx3waqc29wa6/ (file: https://science.nasa.gov/wp-content/uploads/2024/03/hubble-jupiter-jan2024-stsci-01hppsva1p4cahhx3waqc29wa6.mp4)
+Licence: Public domain in the US (NASA/JPL media are generally not copyrighted; NASA Media Usage Guidelines: credit NASA, do not imply endorsement). Credit line: NASA, ESA, Amy Simon (NASA-GSFC) [ESA/Hubble copy heic2404a is CC BY 4.0, credit NASA, ESA, J. DePasquale (STScI), A. Simon (NASA-GSFC)]
+
+Catalogue text (quoted): NASA Science record: "The Hubble Space Telescope images used in this animated science visualization present a full rotation of the giant planet Jupiter. This is not a real-time movie. Instead, Hubble snapshots of the colorful planet, taken January 5-6, 2024, have been photo-mapped onto a sphere, and the model is then rotated in animation." Credit: NASA, ESA, Amy Simon (NASA-GSFC).
+
+What is visible: Colour Jupiter globe centred on black (1920x1080) turning through one full rotation; Great Red Spot comes and goes. Small white title text at top for about the first 4 s ("Hubble Space Telescope - Observations of Jupiter January 5-6, 2024"). Real Hubble snapshots photo-mapped onto a sphere and rotated: a visualisation of real data, not real-time footage.

@@ -1,0 +1,239 @@
+{
+ "items": [
+  {
+   "id": "PIA04866_cassini_portrait",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-06/broll/nasa/PIA04866_cassini_portrait/PIA04866.tif",
+   "kind": "image",
+   "title": "Cassini Jupiter Portrait (PIA04866)",
+   "date": "2000-12-29 (released 2003-11-13)",
+   "use_for": "jupiter",
+   "colour": true,
+   "depicts": "Real Cassini narrow-angle true-colour mosaic of Jupiter, portrait 1920x2400: the lit left part of the globe against black space, banded clouds, Great Red Spot lower centre, white ovals; right side falls into night. No moons in frame. Best portrait-friendly hero shot.",
+   "evidence": "Photojournal record: \"This true color mosaic of Jupiter was constructed from images taken by the narrow angle camera onboard NASA's Cassini spacecraft on December 29, 2000, during its closest approach ... It is the most detailed global color portrait of Jupiter ever produced\". Credits: NASA/JPL/Space Science Institute.",
+   "source_url": "https://photojournal.jpl.nasa.gov/catalog/PIA04866 (file: https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia04/pia04866/PIA04866.tif)",
+   "licence": "Public domain in the US (NASA/JPL media are generally not copyrighted; NASA Media Usage Guidelines: credit NASA, do not imply endorsement). Credit line: NASA/JPL/Space Science Institute",
+   "subject_box": [
+    0.106,
+    0.047,
+    0.796,
+    0.962
+   ],
+   "width": 1920,
+   "height": 2400
+  },
+  {
+   "id": "PIA02873",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-06/broll/nasa/PIA02873/PIA02873.tif",
+   "kind": "image",
+   "title": "High Resolution Globe of Jupiter (PIA02873)",
+   "date": "2000-12-07 (released 2001-01-30)",
+   "use_for": "jupiter",
+   "colour": true,
+   "depicts": "Full, evenly lit Jupiter globe centred on black (16:9, 1920x1080): bands, Great Red Spot right of centre, a small black dot left of centre that is Europa's shadow. Simulated full-disc view made by projecting a Cassini cylindrical map onto a globe (real data, reprojected).",
+   "evidence": "Photojournal record: \"This true-color simulated view of Jupiter is composed of 4 images taken by NASA's Cassini spacecraft on December 7, 2000 ... the cylindrical map was projected onto a globe ... Jupiter's moon Europa is casting the shadow on the planet.\" Credits: NASA/JPL/University of Arizona.",
+   "source_url": "https://photojournal.jpl.nasa.gov/catalog/PIA02873 (file: https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia02/pia02873/PIA02873.tif)",
+   "licence": "Public domain in the US (NASA/JPL media are generally not copyrighted; NASA Media Usage Guidelines: credit NASA, do not imply endorsement). Credit line: NASA/JPL/University of Arizona",
+   "subject_box": [
+    0.258,
+    0.052,
+    0.78,
+    0.959
+   ],
+   "width": 1920,
+   "height": 1080
+  },
+  {
+   "id": "PIA00600",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-06/broll/nasa/PIA00600/PIA00600_orig.jpg",
+   "kind": "image",
+   "title": "Family Portrait of Jupiter's Great Red Spot and the Galilean Satellites (PIA00600)",
+   "date": "1996 (Galileo images; Callisto from Voyager 1979); released 1997-11-18",
+   "use_for": "four_moons",
+   "colour": true,
+   "depicts": "Portrait-format composite (1053x1491) with a thin white frame line: left edge of Jupiter with the Great Red Spot, and the four Galilean moons stacked on the right, top to bottom Io (yellow-orange), Europa (pale, streaked), Ganymede (grey, large), Callisto (dark, bright craters). A montage, not a single photo: moons and planet are pasted together at a common scale.",
+   "evidence": "NASA record: \"This 'family portrait,' a composite of the Jovian system, includes the edge of Jupiter with its Great Red Spot, and Jupiter's four largest moons, known as the Galilean satellites. From top to bottom, the moons shown are Io, Europa, Ganymede and Callisto ... the portrait of Callisto is from the 1979 flyby of NASA's Voyager spacecraft.\" Secondary creator: NASA/JPL/DLR.",
+   "source_url": "https://images.nasa.gov/details/PIA00600 ; https://photojournal.jpl.nasa.gov/catalog/PIA00600 (file: https://images-assets.nasa.gov/image/PIA00600/PIA00600~orig.jpg)",
+   "licence": "Public domain in the US (NASA/JPL media are generally not copyrighted; NASA Media Usage Guidelines: credit NASA, do not imply endorsement). Credit line: NASA/JPL/DLR",
+   "subject_box": [
+    0.01,
+    0.01,
+    0.99,
+    0.99
+   ],
+   "width": 1053,
+   "height": 1491
+  },
+  {
+   "id": "PIA01299",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-06/broll/nasa/PIA01299/PIA01299_orig.jpg",
+   "kind": "image",
+   "title": "The Galilean Satellites (PIA01299)",
+   "date": "released 1998-05-08 (Galileo spacecraft)",
+   "use_for": "four_moons",
+   "colour": true,
+   "depicts": "Wide strip montage (1870x635) inside a white frame line: the four Galilean moons side by side, left to right Io, Europa, Ganymede, Callisto, shown to relative scale. No Jupiter. Composite of separate spacecraft images.",
+   "evidence": "NASA record: \"This composite includes the four largest moons of Jupiter which are known as the Galilean satellites. Shown from left to right are Io, closest to Jupiter, followed by Europa, Ganymede, and Callisto.\" Secondary creator: NASA/JPL/DLR.",
+   "source_url": "https://images.nasa.gov/details/PIA01299 (file: https://images-assets.nasa.gov/image/PIA01299/PIA01299~orig.jpg)",
+   "licence": "Public domain in the US (NASA/JPL media are generally not copyrighted; NASA Media Usage Guidelines: credit NASA, do not imply endorsement). Credit line: NASA/JPL/DLR",
+   "subject_box": [
+    0.02,
+    0.08,
+    0.98,
+    0.92
+   ],
+   "width": 1870,
+   "height": 635
+  },
+  {
+   "id": "PIA20701",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-06/broll/nasa/PIA20701/PIA20701.tif",
+   "kind": "image",
+   "title": "Juno on Jupiter's Doorstep (PIA20701)",
+   "date": "2016-06-21",
+   "use_for": "four_moons",
+   "colour": true,
+   "depicts": "Real single JunoCam colour frame (small, 1075x570): Jupiter as a tiny half-lit disc right of centre with faint bands, and four point-like moons as dots to its left (not in a straight line, because Juno viewed from high above the north pole). Closest in spirit to what Galileo saw: a disc plus four star-like dots. Low resolution; will look soft if enlarged.",
+   "evidence": "Photojournal record: \"NASA's Juno spacecraft obtained this color view on June 21, 2016, at a distance of 6.8 million miles (10.9 million kilometers) from Jupiter. As Juno makes its initial approach, the giant planet's four largest moons -- Io, Europa, Ganymede and Callisto -- are visible\". Credits: NASA/JPL-Caltech/SwRI/MSSS.",
+   "source_url": "https://photojournal.jpl.nasa.gov/catalog/PIA20701 (file: https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia20/pia20701/PIA20701.tif)",
+   "licence": "Public domain in the US (NASA/JPL media are generally not copyrighted; NASA Media Usage Guidelines: credit NASA, do not imply endorsement). Credit line: NASA/JPL-Caltech/SwRI/MSSS",
+   "subject_box": [
+    0.265,
+    0.43,
+    0.635,
+    0.772
+   ],
+   "width": 1075,
+   "height": 570
+  },
+  {
+   "id": "PIA04532",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-06/broll/nasa/PIA04532/PIA04532_orig.jpg",
+   "kind": "image",
+   "title": "Jupiter and its Galilean Satellites as viewed from Mars (PIA04532)",
+   "date": "2003-05-08 (released 2003-05-22)",
+   "use_for": "observation_evidence",
+   "colour": true,
+   "depicts": "Very wide strip (4655x961): small banded Jupiter disc right of centre and THREE star-like moon dots spread in a rough line (two far left, one right). Taken by Mars Global Surveyor's camera from Mars orbit: a distant, telescope-like view of a disc with moons beside it. Only three of the four moons are in it (Io was hidden behind Jupiter). Jupiter was colourised using a Cassini image; the moons were not coloured.",
+   "evidence": "Photojournal record (MOC2-368): \"When Galileo first turned his telescope toward Jupiter four centuries ago, he saw that the giant planet had four large satellites ... This MGS MOC image, obtained from Mars orbit on 8 May 2003, shows Jupiter and three of the four Galilean satellites: Callisto, Ganymede, and Europa. At the time, Io was behind Jupiter as seen from Mars\". Credits: NASA/JPL/Malin Space Science Systems.",
+   "source_url": "https://photojournal.jpl.nasa.gov/catalog/PIA04532 ; https://images.nasa.gov/details/PIA04532 (file: https://images-assets.nasa.gov/image/PIA04532/PIA04532~orig.jpg)",
+   "licence": "Public domain in the US (NASA/JPL media are generally not copyrighted; NASA Media Usage Guidelines: credit NASA, do not imply endorsement). Credit line: NASA/JPL/Malin Space Science Systems",
+   "subject_box": [
+    0.04,
+    0.257,
+    0.938,
+    0.798
+   ],
+   "width": 4655,
+   "height": 961
+  },
+  {
+   "id": "PIA02860",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-06/broll/nasa/PIA02860/PIA02860.tif",
+   "kind": "image",
+   "title": "Io in Front of Jupiter (PIA02860)",
+   "date": "2000-12-12 (released 2000-12-20)",
+   "use_for": "moons_orbiting",
+   "colour": true,
+   "depicts": "Real Cassini true-colour frame: lower half of Jupiter fills the top three-quarters (Great Red Spot left), with the small orange-white moon Io right of centre and Io's black shadow just up-left of it on the clouds; black space along the bottom. A still of one moon in transit, not the full set of four.",
+   "evidence": "Photojournal record: \"Jupiter's four largest satellites, including Io, the golden ornament in front of Jupiter in this image from NASA's Cassini spacecraft, have fascinated Earthlings ever since Galileo Galilei discovered them in 1610 in one of his first astronomical uses of the telescope ... This true-color composite frame, made from narrow angle images taken on Dec. 12, 2000, captures Io and its shadow in transit against the disk of Jupiter.\" Credits: NASA/JPL/University of Arizona.",
+   "source_url": "https://photojournal.jpl.nasa.gov/catalog/PIA02860 (file: https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia02/pia02860/PIA02860.tif)",
+   "licence": "Public domain in the US (NASA/JPL media are generally not copyrighted; NASA Media Usage Guidelines: credit NASA, do not imply endorsement). Credit line: NASA/JPL/University of Arizona",
+   "subject_box": [
+    0.65,
+    0.355,
+    0.78,
+    0.44
+   ],
+   "width": 1020,
+   "height": 986
+  },
+  {
+   "id": "heic1504a_video",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-06/broll/nasa/heic1504a_video/heic1504a_4k.mp4",
+   "kind": "video",
+   "title": "Time-lapse of Jupiter's three moon transit (Hubble, heic1504a)",
+   "date": "2015-01-23/24 (released 2015-02-05)",
+   "use_for": "moons_orbiting",
+   "colour": false,
+   "depicts": "Real Hubble WFC3 time-lapse, black-and-white, 3840x2160 (Jupiter in a centred square with a thin grey frame line, black side bars). Jupiter's bands run diagonally; three black moon shadows and the bright moons Io, Callisto and Europa move across and around the disc over ~40 minutes of real time (Europa enters at lower left, Io nears the right limb). The ~9.2 s sequence plays twice: hard jump back to the start at 9.16 s (frame 229). Ganymede is not in frame.",
+   "evidence": "ESA/Hubble video record: \"Hubble took a string of images of the event which are stitched together to show the three satellites -- Europa, Callisto and Io -- in action in this time-lapse video. Credit: NASA, ESA, Hubble Heritage Team\". Release heic1504: \"Missing from this sequence is the Galilean moon Ganymede which was outside Hubble's field of view.\" Its note [1]: the moons \"were among the first observations ever made using a telescope. They revolutionised our understanding of the Universe, and finally laid to rest the theory that the Earth is the centre of the Solar System.\" (ESA gives 23 Jan 2015; NASA's matching still GSFC_20171208_Archive_e000795 gives 24 Jan 2015 07:10 UT for the end of the event.)",
+   "source_url": "https://esahubble.org/videos/heic1504a/ ; https://esahubble.org/news/heic1504/ (file: https://cdn.esahubble.org/archives/videos/ultra_hd/heic1504a.mp4)",
+   "licence": "CC BY 4.0 (ESA/Hubble usage terms: images and videos released under Creative Commons Attribution 4.0; credit must be clearly visible). Credit line: NASA, ESA, Hubble Heritage Team (STScI/AURA)",
+   "subject_box": [
+    0.235,
+    0.029,
+    0.765,
+    0.971
+   ],
+   "width": 3840,
+   "height": 2160,
+   "duration_s": 18.32
+  },
+  {
+   "id": "hubble_jupiter_rotation_jan2024",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-06/broll/nasa/hubble_jupiter_rotation_jan2024/hubble-jupiter-jan2024-rotation.mp4",
+   "kind": "video",
+   "title": "Hubble: January 2024 Jupiter Rotation Video",
+   "date": "2024-01-05/06 (released 2024-03)",
+   "use_for": "jupiter",
+   "colour": true,
+   "depicts": "Colour Jupiter globe centred on black (1920x1080) turning through one full rotation; Great Red Spot comes and goes. Small white title text at top for about the first 4 s (\"Hubble Space Telescope - Observations of Jupiter January 5-6, 2024\"). Real Hubble snapshots photo-mapped onto a sphere and rotated: a visualisation of real data, not real-time footage.",
+   "evidence": "NASA Science record: \"The Hubble Space Telescope images used in this animated science visualization present a full rotation of the giant planet Jupiter. This is not a real-time movie. Instead, Hubble snapshots of the colorful planet, taken January 5-6, 2024, have been photo-mapped onto a sphere, and the model is then rotated in animation.\" Credit: NASA, ESA, Amy Simon (NASA-GSFC).",
+   "source_url": "https://science.nasa.gov/video-detail/hubble-jupiter-jan2024-stsci-01hppsva1p4cahhx3waqc29wa6/ (file: https://science.nasa.gov/wp-content/uploads/2024/03/hubble-jupiter-jan2024-stsci-01hppsva1p4cahhx3waqc29wa6.mp4)",
+   "licence": "Public domain in the US (NASA/JPL media are generally not copyrighted; NASA Media Usage Guidelines: credit NASA, do not imply endorsement). Credit line: NASA, ESA, Amy Simon (NASA-GSFC) [ESA/Hubble copy heic2404a is CC BY 4.0, credit NASA, ESA, J. DePasquale (STScI), A. Simon (NASA-GSFC)]",
+   "subject_box": [
+    0.289,
+    0.173,
+    0.712,
+    0.886
+   ],
+   "width": 1920,
+   "height": 1080,
+   "duration_s": 31.06
+  },
+  {
+   "id": "PIA02855_voyager1_blue_movie",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-06/broll/nasa/PIA02855_voyager1_blue_movie/PIA02855_10fps_h264.mp4",
+   "kind": "video",
+   "title": "Voyager 1 \"Blue Movie\" (PIA02855)",
+   "date": "1979-01-06 to 1979-02-03",
+   "use_for": "jupiter",
+   "colour": false,
+   "depicts": "Real Voyager 1 approach time-lapse, black-and-white, 600x600: Jupiter grows larger frame by frame as the spacecraft closes in, cloud bands and the Great Red Spot drifting; several frames have the right side cut off (missing data). 66 frames, one per Jupiter rotation. Low resolution, archival look.",
+   "evidence": "Photojournal record: \"This is the original Voyager 'Blue Movie' ... It records the approach of Voyager 1 during a period of over 60 Jupiter days ... This sequence is made from 66 images taken once every Jupiter rotation period (about 10 hours) ... acquired in the Blue filter from Jan. 6 to Feb. 3 1979.\" Credits: NASA/JPL.",
+   "source_url": "https://photojournal.jpl.nasa.gov/catalog/PIA02855 (file: https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia02/pia02855/PIA02855.gif)",
+   "licence": "Public domain in the US (NASA/JPL media are generally not copyrighted; NASA Media Usage Guidelines: credit NASA, do not imply endorsement). Credit line: NASA/JPL",
+   "subject_box": [
+    0.148,
+    0.062,
+    0.985,
+    0.913
+   ],
+   "width": 600,
+   "height": 600,
+   "duration_s": 6.6
+  },
+  {
+   "id": "PIA22906_juno_flyby_movie",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-06/broll/nasa/PIA22906_juno_flyby_movie/PIA22906.mp4",
+   "kind": "video",
+   "title": "Juno Flyby Movie (PIA22906)",
+   "date": "2018-10-29 (released 2018-12-12)",
+   "use_for": "jupiter",
+   "colour": true,
+   "depicts": "Colour JunoCam flyby sequence, 1920x1080: starts on a dark limb, sweeps low over swirling cloud vortices and orange belts, then pulls away until the southern hemisphere is a receding crescent on black. Enhanced colour and contrast, assembled by a citizen scientist from real JunoCam images.",
+   "evidence": "Photojournal record: \"This movie was generated using imagery collected on Oct. 29, 2018, during Juno's 16th perijove ... Citizen scientists Gerald Eichstadt created this movie using data from the spacecraft's JunoCam imager.\" Credits: \"Enhanced image by Gerald Eichstadt based on images provided courtesy of NASA/JPL-Caltech/SwRI/MSSS, Media Usage Guidelines\".",
+   "source_url": "https://photojournal.jpl.nasa.gov/catalog/PIA22906 (file: https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia22/pia22906/PIA22906.mp4)",
+   "licence": "NASA Media Usage Guidelines (as stated on the Photojournal record). Credit line: Enhanced image by Gerald Eichstadt based on images provided courtesy of NASA/JPL-Caltech/SwRI/MSSS",
+   "subject_box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "width": 1920,
+   "height": 1080,
+   "duration_s": 54.72
+  }
+ ]
+}

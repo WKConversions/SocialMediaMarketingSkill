@@ -77,25 +77,46 @@
    "start": 1.1,
    "end": 1.75,
    "slot": "galileo",
-   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-06/broll/archive/sn1610_title/sn1610_title.jpg",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-06/broll/archive/leoni1624_portrait/leoni1624_portrait.jpg",
+   "colour": false,
+   "mode": "fill",
+   "center": [
+    0.5,
+    0.37
+   ],
+   "zoom": 0.55,
+   "move": "push",
+   "source": "Ottavio Leoni, Galileo Galilei, line engraving 1624 (Wellcome Collection 3359i, Public Domain Mark)"
+  },
+  {
+   "start": 8.18,
+   "end": 9.867,
+   "slot": "geocentric",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-06/broll/archive/cellarius_ptolemaic/cellarius_ptolemaic.jpg",
    "colour": true,
    "mode": "fill",
    "center": [
     0.5,
-    0.36
+    0.49
    ],
-   "zoom": 0.5,
-   "move": "push",
-   "source": "Sidereus Nuncius, Venice 1610, title page"
+   "zoom": 1.0,
+   "move": "spin",
+   "source": "Andreas Cellarius, Scenographia Systematis Mundani Ptolemaici, Harmonia Macrocosmica (1708 edition), Library of Congress, public domain"
   },
   {
    "start": 11.333,
    "end": 12.42,
    "slot": "demonstration",
-   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-06/broll/nasa/heic1504a_video/heic1504a_4k.mp4",
-   "kind": "video",
-   "src": 4.0,
-   "source": "ESA/Hubble heic1504a, triple-moon conjunction on Jupiter (2015), NASA, ESA, and the Hubble Heritage Team (STScI/AURA), CC BY 4.0"
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-06/broll/archive/piazza_telescope_woodengr/piazza_telescope_woodengr.jpg",
+   "colour": false,
+   "mode": "fill",
+   "center": [
+    0.6,
+    0.4
+   ],
+   "zoom": 0.76,
+   "move": "push",
+   "source": "Galileo with his telescope in the Piazza San Marco, Venice, wood engraving (Wellcome Collection 46322i, Public Domain Mark)"
   },
   {
    "start": 12.42,
@@ -401,6 +422,7 @@
   189,
   202,
   230,
+  245,
   296,
   319,
   340,

@@ -1,0 +1,8 @@
+Juno Flyby Movie (PIA22906)
+Date: 2018-10-29 (released 2018-12-12)
+Source: https://photojournal.jpl.nasa.gov/catalog/PIA22906 (file: https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia22/pia22906/PIA22906.mp4)
+Licence: NASA Media Usage Guidelines (as stated on the Photojournal record). Credit line: Enhanced image by Gerald Eichstadt based on images provided courtesy of NASA/JPL-Caltech/SwRI/MSSS
+
+Catalogue text (quoted): Photojournal record: "This movie was generated using imagery collected on Oct. 29, 2018, during Juno's 16th perijove ... Citizen scientists Gerald Eichstadt created this movie using data from the spacecraft's JunoCam imager." Credits: "Enhanced image by Gerald Eichstadt based on images provided courtesy of NASA/JPL-Caltech/SwRI/MSSS, Media Usage Guidelines".
+
+What is visible: Colour JunoCam flyby sequence, 1920x1080: starts on a dark limb, sweeps low over swirling cloud vortices and orange belts, then pulls away until the southern hemisphere is a receding crescent on black. Enhanced colour and contrast, assembled by a citizen scientist from real JunoCam images.
