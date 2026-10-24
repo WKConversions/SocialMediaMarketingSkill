@@ -1,0 +1,433 @@
+{
+ "views": [
+  {
+   "start": 0.0,
+   "end": 1.75,
+   "view": "wide"
+  },
+  {
+   "start": 1.75,
+   "end": 2.25,
+   "view": "wide"
+  },
+  {
+   "start": 2.25,
+   "end": 6.3,
+   "view": "medium"
+  },
+  {
+   "start": 6.3,
+   "end": 6.72,
+   "view": "medium"
+  },
+  {
+   "start": 6.72,
+   "end": 7.68,
+   "view": "wide"
+  },
+  {
+   "start": 7.68,
+   "end": 9.867,
+   "view": "close"
+  },
+  {
+   "start": 9.867,
+   "end": 10.63,
+   "view": "medium"
+  },
+  {
+   "start": 10.63,
+   "end": 13.433,
+   "view": "wide"
+  },
+  {
+   "start": 13.433,
+   "end": 14.73,
+   "view": "wide"
+  },
+  {
+   "start": 14.73,
+   "end": 15.37,
+   "view": "close"
+  },
+  {
+   "start": 15.37,
+   "end": 21.3333,
+   "view": "medium"
+  }
+ ],
+ "inserts": [
+  {
+   "start": 0.0,
+   "end": 1.1,
+   "slot": "hook",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-06/broll/nasa/PIA04866/PIA04866.jpg",
+   "colour": true,
+   "raw": true,
+   "mode": "fill",
+   "center": [
+    0.42,
+    0.5
+   ],
+   "zoom": 0.92,
+   "move": "push",
+   "source": "NASA/JPL/University of Arizona PIA04866, Jupiter in true color (Cassini, Dec 2000)"
+  },
+  {
+   "start": 1.1,
+   "end": 1.75,
+   "slot": "galileo",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-06/broll/archive/sn1610_title/sn1610_title.jpg",
+   "colour": true,
+   "mode": "fill",
+   "center": [
+    0.5,
+    0.36
+   ],
+   "zoom": 0.5,
+   "move": "push",
+   "source": "Sidereus Nuncius, Venice 1610, title page"
+  },
+  {
+   "start": 11.333,
+   "end": 12.42,
+   "slot": "demonstration",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-06/broll/nasa/heic1504a_video/heic1504a_4k.mp4",
+   "kind": "video",
+   "src": 4.0,
+   "source": "ESA/Hubble heic1504a, triple-moon conjunction on Jupiter (2015), NASA, ESA, and the Hubble Heritage Team (STScI/AURA), CC BY 4.0"
+  },
+  {
+   "start": 12.42,
+   "end": 13.433,
+   "slot": "observation",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-06/broll/archive/sn1610_jupiter_four/sn1610_jupiter_four.jpg",
+   "colour": true,
+   "mode": "fill",
+   "center": [
+    0.5,
+    0.55
+   ],
+   "zoom": 0.42,
+   "move": "push",
+   "source": "Sidereus Nuncius 1610, Galileo's diagrams of Jupiter and the four moons"
+  }
+ ],
+ "canvases": [
+  {
+   "start": 3.05,
+   "end": 6.3,
+   "kind": "moons",
+   "jupiter": "/home/user/SocialMediaMarketingSkill/lab/edit-06/broll/nasa/PIA04866/PIA04866.jpg",
+   "jupiter_circle": [
+    1294,
+    1200,
+    1086
+   ]
+  },
+  {
+   "start": 16.467,
+   "end": 21.333,
+   "kind": "transform"
+  }
+ ],
+ "captions": [
+  {
+   "text": "In 1610",
+   "start": 0.081,
+   "cls": "sans",
+   "fill": "",
+   "word": "in"
+  },
+  {
+   "text": "Galileo",
+   "start": 1.165,
+   "cls": "script",
+   "fill": "",
+   "word": "galileo"
+  },
+  {
+   "text": "pointed his",
+   "start": 1.747,
+   "cls": "sans",
+   "fill": "",
+   "word": "pointed"
+  },
+  {
+   "text": "telescope",
+   "start": 2.249,
+   "cls": "sans",
+   "fill": "",
+   "word": "telescope"
+  },
+  {
+   "text": "to",
+   "start": 2.811,
+   "cls": "sans",
+   "fill": "",
+   "word": "to"
+  },
+  {
+   "text": "Jupiter",
+   "start": 3.052,
+   "cls": "script",
+   "fill": "",
+   "word": "jupiter"
+  },
+  {
+   "text": "he discovered",
+   "start": 3.5943,
+   "cls": "sans",
+   "fill": "",
+   "word": "he"
+  },
+  {
+   "text": "four moons",
+   "start": 4.2753,
+   "cls": "sans",
+   "fill": "",
+   "word": "four"
+  },
+  {
+   "text": "orbiting",
+   "start": 5.0573,
+   "cls": "sans",
+   "fill": "",
+   "word": "orbiting"
+  },
+  {
+   "text": "another planet",
+   "start": 5.5583,
+   "cls": "sans",
+   "fill": "",
+   "word": "another"
+  },
+  {
+   "text": "and this",
+   "start": 6.32,
+   "cls": "sans",
+   "fill": "",
+   "word": "and"
+  },
+  {
+   "text": "discovery",
+   "start": 6.721,
+   "cls": "sans",
+   "fill": "",
+   "word": "discovery"
+  },
+  {
+   "text": "has challenged",
+   "start": 7.402,
+   "cls": "sans",
+   "fill": "",
+   "word": "has"
+  },
+  {
+   "text": "Centuries",
+   "start": 8.183,
+   "cls": "script",
+   "fill": "",
+   "word": "centuries"
+  },
+  {
+   "text": "of disbelief",
+   "start": 8.985,
+   "cls": "sans",
+   "fill": "",
+   "word": "of"
+  },
+  {
+   "text": "he didn't just",
+   "start": 9.9667,
+   "cls": "sans",
+   "fill": "",
+   "word": "he"
+  },
+  {
+   "text": "make a claim",
+   "start": 10.6287,
+   "cls": "sans",
+   "fill": "",
+   "word": "make"
+  },
+  {
+   "text": "he had",
+   "start": 11.4203,
+   "cls": "sans",
+   "fill": "",
+   "word": "he"
+  },
+  {
+   "text": "something that",
+   "start": 11.7213,
+   "cls": "sans",
+   "fill": "",
+   "word": "something"
+  },
+  {
+   "text": "people could",
+   "start": 12.4233,
+   "cls": "sans",
+   "fill": "",
+   "word": "people"
+  },
+  {
+   "text": "Observe",
+   "start": 12.9053,
+   "cls": "script",
+   "fill": "",
+   "word": "observe"
+  },
+  {
+   "text": "and that",
+   "start": 13.5277,
+   "cls": "sans",
+   "fill": "",
+   "word": "and"
+  },
+  {
+   "text": "is the",
+   "start": 14.2497,
+   "cls": "sans",
+   "fill": "",
+   "word": "is"
+  },
+  {
+   "text": "Power",
+   "start": 14.7307,
+   "cls": "script",
+   "fill": "",
+   "word": "power"
+  },
+  {
+   "text": "of Visualization",
+   "start": 15.3727,
+   "cls": "script",
+   "fill": "PINK",
+   "word": "of"
+  },
+  {
+   "text": "make the",
+   "start": 16.5477,
+   "cls": "sans",
+   "fill": "",
+   "word": "make"
+  },
+  {
+   "text": "complicated",
+   "start": 16.8487,
+   "cls": "sans",
+   "fill": "",
+   "word": "complicated"
+  },
+  {
+   "text": "Understandable",
+   "start": 17.7307,
+   "cls": "script",
+   "fill": "",
+   "word": "understandable"
+  },
+  {
+   "text": "and the",
+   "start": 18.7327,
+   "cls": "sans",
+   "fill": "",
+   "word": "and"
+  },
+  {
+   "text": "unbelievable",
+   "start": 19.0737,
+   "cls": "sans",
+   "fill": "",
+   "word": "unbelievable"
+  },
+  {
+   "text": "easier to",
+   "start": 20.0967,
+   "cls": "sans",
+   "fill": "",
+   "word": "easier"
+  },
+  {
+   "text": "Believe",
+   "start": 20.6577,
+   "cls": "script",
+   "fill": "",
+   "word": "believe"
+  }
+ ],
+ "cap_frames": [
+  2,
+  34,
+  52,
+  67,
+  84,
+  91,
+  107,
+  128,
+  151,
+  166,
+  189,
+  201,
+  222,
+  245,
+  269,
+  299,
+  318,
+  342,
+  351,
+  372,
+  387,
+  405,
+  427,
+  441,
+  461,
+  496,
+  505,
+  531,
+  561,
+  572,
+  602,
+  619
+ ],
+ "negative_frames": [
+  0,
+  1,
+  33,
+  52,
+  68,
+  92,
+  189,
+  202,
+  230,
+  296,
+  319,
+  340,
+  373,
+  403,
+  404,
+  442,
+  461,
+  494,
+  640,
+  641
+ ],
+ "end_card_s": 1.3,
+ "beats": {
+  "moons_title": 94,
+  "moons": [
+   130,
+   133,
+   136,
+   139
+  ],
+  "orbit": 151,
+  "transform_title": 496,
+  "row1": 507,
+  "row1_to": 533,
+  "row2": 574,
+  "row2_to": 621
+ },
+ "logo": "/home/user/SocialMediaMarketingSkill/lab/edit-05/broll/wkc/logo.png"
+}

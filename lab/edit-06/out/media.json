@@ -1,0 +1,53 @@
+{
+ "hook": {
+  "file": "/home/user/SocialMediaMarketingSkill/lab/edit-06/broll/nasa/PIA04866/PIA04866.jpg",
+  "colour": true,
+  "raw": true,
+  "mode": "fill",
+  "center": [
+   0.42,
+   0.5
+  ],
+  "zoom": 0.92,
+  "move": "push",
+  "source": "NASA/JPL/University of Arizona PIA04866, Jupiter in true color (Cassini, Dec 2000)"
+ },
+ "galileo": {
+  "file": "/home/user/SocialMediaMarketingSkill/lab/edit-06/broll/archive/sn1610_title/sn1610_title.jpg",
+  "colour": true,
+  "mode": "fill",
+  "center": [
+   0.5,
+   0.36
+  ],
+  "zoom": 0.5,
+  "move": "push",
+  "source": "Sidereus Nuncius, Venice 1610, title page"
+ },
+ "observation": {
+  "file": "/home/user/SocialMediaMarketingSkill/lab/edit-06/broll/archive/sn1610_jupiter_four/sn1610_jupiter_four.jpg",
+  "colour": true,
+  "mode": "fill",
+  "center": [
+   0.5,
+   0.55
+  ],
+  "zoom": 0.42,
+  "move": "push",
+  "source": "Sidereus Nuncius 1610, Galileo's diagrams of Jupiter and the four moons"
+ },
+ "jupiter_disc": {
+  "file": "/home/user/SocialMediaMarketingSkill/lab/edit-06/broll/nasa/PIA04866/PIA04866.jpg",
+  "circle": [
+   1294,
+   1200,
+   1086
+  ]
+ },
+ "demonstration": {
+  "file": "/home/user/SocialMediaMarketingSkill/lab/edit-06/broll/nasa/heic1504a_video/heic1504a_4k.mp4",
+  "kind": "video",
+  "src": 4.0,
+  "source": "ESA/Hubble heic1504a, triple-moon conjunction on Jupiter (2015), NASA, ESA, and the Hubble Heritage Team (STScI/AURA), CC BY 4.0"
+ }
+}
