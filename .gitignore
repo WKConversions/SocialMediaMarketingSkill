@@ -36,3 +36,5 @@ social-video-editor/assets/music/
 lab/**/broll/**/*.svg
 *.tif
 *.tiff
+lab/**/broll/**/_api/
+lab/**/broll/_verify/
