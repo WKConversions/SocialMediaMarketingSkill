@@ -38,3 +38,4 @@ lab/**/broll/**/*.svg
 *.tiff
 lab/**/broll/**/_api/
 lab/**/broll/_verify/
+*.gif
