@@ -1,0 +1,152 @@
+{
+ "items": [
+  {
+   "id": "rontgen_loc_1900",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-07/broll/people/rontgen_loc_1900/rontgen_loc_1900.jpg",
+   "kind": "image",
+   "title": "Prof. Roentgen (Bain News Service glass negative of a Hanfstaengl portrait)",
+   "date": "1900 (LoC date field; caption card: '[no date recorded on caption card]')",
+   "use_for": "rontgen_portrait",
+   "depicts": "Black-and-white head-and-shoulders photograph of a bearded Wilhelm Röntgen, face turned to the viewer's left, with swept-back hair, full dark beard, wing collar, bow tie and dark jacket, against a pale background. It is a copy negative of a mounted print: pin heads show in both top corners, 'PROF. ROENTGEN' is scratched in white at bottom left, the negative number '1137-4' is at bottom right, and an embossed studio blind stamp sits in the lower right corner of the print. Some white dust specks. Greyscale, 4228x5817.",
+   "evidence": "LoC record: title 'Prof. Roentgen'; date '1900'; summary 'Photograph shows head-and-shoulders portrait of Wilhelm Röntgen, facing left.'; subject 'Röntgen, Wilhelm Conrad,--1845-1923'; notes 'Blind stamp: A. Baumann, Munchen.' and 'Photo originally taken by Erwin Hanfstaengl.'; medium '1 negative : glass ; 5 x 7 in. or smaller.'; reproduction no. 'LC-DIG-ggbain-05679'; call no. 'LC-B2- 1137-4 [P&P]'. Full record saved as loc_record.json.",
+   "source_url": "https://www.loc.gov/item/2014685672/",
+   "licence": "No known restrictions on publication (LoC rights advisory, George Grantham Bain Collection, https://www.loc.gov/rr/print/res/274_bain.html). Downloaded from the master TIFF https://tile.loc.gov/storage-services/master/pnp/ggbain/05600/05679u.tif and converted to JPG at full size.",
+   "width": 4228,
+   "height": 5817,
+   "colour": false,
+   "subject_box": [
+    0.27,
+    0.1,
+    0.8,
+    0.74
+   ]
+  },
+  {
+   "id": "rontgen_nlm_1901",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-07/broll/people/rontgen_nlm_1901/rontgen_nlm_1901.jpg",
+   "kind": "image",
+   "title": "Prof. Röntgen (original silver gelatin portrait photograph, NLM)",
+   "date": "[1901?] (NLM: 'Produced: [1901?]')",
+   "use_for": "rontgen_portrait",
+   "depicts": "Sepia-toned original photographic print: head-and-shoulders portrait of a bearded Wilhelm Röntgen, head turned to the viewer's left, swept-back hair, full beard, white shirt, dark bow tie and dark jacket, plain light background. 'Prof. Röntgen.' is printed in small white lettering at bottom left; a small studio mark and the number '2195' are at bottom right. The print has torn and chipped edges, especially at the top right and bottom. The pose looks like the same sitting as rontgen_loc_1900 (visual comparison only; neither record says so). 4702x6962.",
+   "evidence": "NLM record: title 'Prof. Röntgen'; 'Publication: Produced: [1901?]'; 'Subject(s): Laboratory Personnel Röntgen, Wilhelm Conrad, 1845-1923.'; 'Genre(s): Photograph Portrait'; 'Abstract: Black and white photograph portrait: head and shoulders, head to left.'; 'Extent: 1 photograph : 30 x 20 cm'; 'Technique: silver gelatin DOP, black and white'; NLM Unique ID 101744658. Record page saved as nlm_record.html.",
+   "source_url": "https://collections.nlm.nih.gov/catalog/nlm:nlmuid-101744658-img",
+   "licence": "Public domain. NLM record: 'The National Library of Medicine believes this item to be in the public domain.' (the page links the Public Domain Mark 1.0). File: https://collections.nlm.nih.gov/jpg/nlm:nlmuid-101744658-img; permanent link http://resource.nlm.nih.gov/101744658",
+   "width": 4702,
+   "height": 6962,
+   "colour": false,
+   "subject_box": [
+    0.22,
+    0.05,
+    0.85,
+    0.79
+   ]
+  },
+  {
+   "id": "rontgen_photogravure_wellcome",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-07/broll/people/rontgen_photogravure_wellcome/rontgen_photogravure_wellcome.jpg",
+   "kind": "image",
+   "title": "Wilhelm Conrad Roentgen. Photogravure.",
+   "date": "Undated in record (the print's imprint reads 'Photographische Gesellschaft in Berlin')",
+   "use_for": "rontgen_portrait",
+   "depicts": "Photogravure made from a photograph: a half-length portrait of a bearded Röntgen in a dark buttoned jacket with a bow tie, body turned to the right and gaze lifted towards the viewer's left, against a soft grey background. The image sits on a wide cream margin. Lettering on the margin: a script signature 'Roentgen' at lower right, 'Photographische Gesellschaft in Berlin' at lower left and a small plate number at the bottom left corner of the image. Monochrome, 2598x3268. This is a different pose from the two photographs above.",
+   "evidence": "Wellcome record gyjdkymz: title 'Wilhelm Conrad Roentgen. Photogravure.'; physical description '1 print'; reference 'Wellcome Collection 13483i'; Miro image number V0027091; digital location licence 'Public Domain Mark'. The record gives no date or photographer. Record saved as wellcome_record.json.",
+   "source_url": "https://wellcomecollection.org/works/gyjdkymz",
+   "licence": "Public Domain Mark (Wellcome Collection), https://creativecommons.org/share-your-work/public-domain/pdm/. File: https://iiif.wellcomecollection.org/image/V0027091/full/max/0/default.jpg",
+   "width": 2598,
+   "height": 3268,
+   "colour": false,
+   "subject_box": [
+    0.33,
+    0.17,
+    0.68,
+    0.57
+   ]
+  },
+  {
+   "id": "tube_diagram_nlm",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-07/broll/people/tube_diagram_nlm/tube_diagram_nlm.jpg",
+   "kind": "image",
+   "title": "[Medical Instruments & Apparatus:] Earliest type of roentgen tube (Fig. 36)",
+   "date": "Undated in record (a book figure; the source book is not named)",
+   "use_for": "tube_apparatus",
+   "depicts": "Black line drawing on an off-white page of a pear-shaped glass discharge tube, set horizontally. It has a flat cathode disc at the narrow left end ('a'), a small anode electrode in a side arm on the top ('b') and a downward stem marked as the support ('c', dashed outline). There is a legend 'a - CATHODE / b - ANODE / c - SUPPORT' at lower left and the caption 'Fig. 36.—Earliest type of roentgen tube.' at the bottom. It is a photograph of a printed page, with faint specks. Landscape, 3294x2177.",
+   "evidence": "NLM record: title '[Medical Instruments & Apparatus:] Earliest type of roentgen tube'; 'Abstract: Early types of roentgen tubes.'; 'Collection: Images from the History of Medicine (IHM)'; NLM Image ID A013372; NLM Unique ID 101439038. The printed caption on the image reads 'Fig. 36.—Earliest type of roentgen tube.' The record does not say that Röntgen used this tube himself, only that this was the earliest type of x-ray tube. Record page saved as nlm_record.html.",
+   "source_url": "https://collections.nlm.nih.gov/catalog/nlm:nlmuid-101439038-img",
+   "licence": "Public domain. NLM record: 'The National Library of Medicine believes this item to be in the public domain.' (the page links the Public Domain Mark 1.0). File: https://collections.nlm.nih.gov/jpg/nlm:nlmuid-101439038-img",
+   "width": 3294,
+   "height": 2177,
+   "colour": false,
+   "subject_box": [
+    0.16,
+    0.09,
+    0.85,
+    0.84
+   ]
+  },
+  {
+   "id": "wurzburg_institute_nlm",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-07/broll/people/wurzburg_institute_nlm/wurzburg_institute_nlm.jpg",
+   "kind": "image",
+   "title": "[Exterior view of Röntgen Laboratory Building] - Physics laboratory, University of Würzburg",
+   "date": "Undated in record. Taken after the discovery: a commemorative plaque is already on the wall.",
+   "use_for": "laboratory",
+   "depicts": "Black-and-white photoprint of the corner of a plastered building, heavily overgrown with climbing vines and a tree on the left. There are two tall dark windows on the ground floor, a balustraded balcony or terrace above and a taller building behind on the right, with an iron railing fence along the street. Between the two windows hangs a dark commemorative plaque; it is partly legible as 'IN DIESEM HAUSE ENTDECKTE W.C. RÖNTGEN ...'. A handwritten caption below reads 'Exterior of Physics Laboratory, Univ. of Wurzburg, in which building W.C. Roentgen discovered in the year 1895 the rays which have been named for him.' Portrait orientation, 2349x3136.",
+   "evidence": "NLM record: title '[Exterior view of Röntgen Laboratory Building]'; 'Abstract: Exterior of Physics laboratory, Univ. of Wurzburg, in which building Roentgen discovered the rays in 1895, which have been named for him.'; 'Extent: 1 photoprint.'; 'Provenance: H.I. Goldstein. Gift.'; NLM Image ID B021995; NLM Unique ID 101427409. Record page saved as nlm_record.html.",
+   "source_url": "https://collections.nlm.nih.gov/catalog/nlm:nlmuid-101427409-img",
+   "licence": "Public domain. NLM record: 'The National Library of Medicine believes this item to be in the public domain.' (the page links the Public Domain Mark 1.0). File: https://collections.nlm.nih.gov/jpg/nlm:nlmuid-101427409-img",
+   "width": 2349,
+   "height": 3136,
+   "colour": false,
+   "subject_box": [
+    0.0,
+    0.14,
+    0.98,
+    0.92
+   ]
+  },
+  {
+   "id": "xray_apparatus_radiguet_1898",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-07/broll/people/xray_apparatus_radiguet_1898/xray_apparatus_radiguet_1898.jpg",
+   "kind": "image",
+   "title": "Arthur Radiguet making a radiograph (x-ray) of a recumbent man. Photograph by Radiographie Radiguet, ca. 1898.",
+   "date": "ca. 1898 (record: '[1898?]')",
+   "use_for": "tube_apparatus",
+   "depicts": "Hand-coloured photograph in a decorative red-ruled card mount. An elderly white-bearded man in a dark frock coat (Radiguet) stands at the right with his hands on the apparatus. A man in a waistcoat lies back on a cot at the left, with a glass bulb tube (tinted yellow) clamped on a stand just above his head. On a cloth-covered table is a large box-mounted cylindrical coil whose end plate reads 'RADIGUET PARIS', plus a vertical interrupter unit. In front is a wooden rack of battery cells marked 'N' and 'P'. Wires have been painted in red, blue, green and purple, and lettered labels (B, C, RR, NP, CC) are on the components. Shutters and a draped backdrop are behind. Colour, landscape, 3633x2668.",
+   "evidence": "Wellcome record em9hcd4x: title 'Arthur Radiguet making a radiograph (x-ray) of a recumbent man. Photograph by Radiographie Radiguet, ca. 1898.'; production '[Paris?] : Radiographie Radiguet, [1898?]'; physical description '1 photograph : photoprint, with watercolour and poster paint ; sheet 12 x 16.8 cm'; description quoting Grigg: 'Radiguet made, advertised and sold x-ray equipment in the very year 1896 ... Among his early contributions to radiology was a (kerosene immersed) copper interrupter for coils'; reference 652697i; image L0041628; licence 'Public Domain Mark'. This is a French commercial x-ray outfit of about 1898, not Röntgen's own apparatus. Record saved as wellcome_record.json.",
+   "source_url": "https://wellcomecollection.org/works/em9hcd4x",
+   "licence": "Public Domain Mark (Wellcome Collection), https://creativecommons.org/share-your-work/public-domain/pdm/. File: https://iiif.wellcomecollection.org/image/L0041628/full/max/0/default.jpg",
+   "width": 3633,
+   "height": 2668,
+   "colour": true,
+   "subject_box": [
+    0.13,
+    0.15,
+    0.87,
+    0.84
+   ]
+  },
+  {
+   "id": "xray_apparatus_london_hospital_1900",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-07/broll/people/xray_apparatus_london_hospital_1900/xray_apparatus_london_hospital_1900.jpg",
+   "kind": "image",
+   "title": "The Royal London Hospital, Whitechapel: x-ray apparatus with the male technician. Photograph, ca. 1900.",
+   "date": "ca. 1900 (record production date '1900')",
+   "use_for": "tube_apparatus",
+   "depicts": "Sepia-toned photograph of a bearded technician in a three-piece suit and bow tie. He leans against a wheeled wooden trolley carrying a horizontal cylindrical coil, an interrupter and other electrical fittings. Cables run up to an iron stand on the right, which holds a glass x-ray tube on a horizontal arm (upper right). Radiographs of a chest, a limb and other subjects are pinned to the boarded wall behind, and the floor is tiled. There are scratches and specks on the print. Portrait orientation, 2300x3033.",
+   "evidence": "Wellcome record kgs2wyvg: title 'The Royal London Hospital, Whitechapel: x-ray apparatus with the male technician. Photograph, ca. 1900.'; production date '1900'; physical description '1 photograph : photoprint ; sheet 20.8 x 15.8'; lettering on the label pasted to the mount: 'Form of X ray apparatus used at the London Hospital in the early days. The operator suffered from severe dermatitis and mutilation (see last illustration)'; reference 577003i; image V0029396; licence 'Public Domain Mark'. This is hospital apparatus in London, not Röntgen's. Record saved as wellcome_record.json.",
+   "source_url": "https://wellcomecollection.org/works/kgs2wyvg",
+   "licence": "Public Domain Mark (Wellcome Collection), https://creativecommons.org/share-your-work/public-domain/pdm/. File: https://iiif.wellcomecollection.org/image/V0029396/full/max/0/default.jpg",
+   "width": 2300,
+   "height": 3033,
+   "colour": false,
+   "subject_box": [
+    0.0,
+    0.15,
+    0.9,
+    0.95
+   ]
+  }
+ ],
+ "notes": "ANNA BERTHA RÖNTGEN: not delivered. I found no portrait of her under PD, CC0, PDM or CC-BY that I could verify. Wellcome, NLM and Europeana have none. The only real portraits I found are in the Deutsches Röntgen-Museum (Remscheid) on museum-digital, and every one of them is licensed CC BY-NC-SA, which is outside the allowed licences, so I did not download them. They include: https://rheinland.museum-digital.de/object/26536 'Anna Bertha Röntgen (1888-1900)', photographer Erwin Hanfstaengl, Würzburg; /object/26510 and /object/26511 'Anna Bertha Röntgen, geb. Ludwig (nach 1865)'; /object/26534 'Anna Bertha Röntgen in Kostüm (1885-1887)'; /object/2110 'Porträt der Ehepaare Röntgen und Zehnder (1887-1890)'. Using one would need a licence decision (NC-SA) or written permission from the museum. Wikimedia Commons, Wikidata and the Wikipedia APIs returned HTTP 429 on every try, so I could not check any Commons file of her. Without a readable record I did not guess filenames.\n1896 NEWSPAPER (optional): not delivered. LoC has two 1896 candidates found in search: 'The new Roentgen photography' (1896-01-01, https://www.loc.gov/item/2007680190/) and 'Those roentjen [i.e. Roentgen] rays' (1896, https://www.loc.gov/item/2016679752/). www.loc.gov returned 429 on three tries spaced at least 60 s apart, so their records, rights and content are UNVERIFIED. NLM has an Illustrated London News page 'Overcoming a difficulty of Röntgen apparatus' (https://collections.nlm.nih.gov/catalog/nlm:nlmuid-101460236-img, PD per NLM), but it is dated 1903, not 1896, so I skipped it.\nSKIPPED APPARATUS: NMAH 'Roentgen X-Ray Tube' (nmah_727539; record says 'one of the first x-ray tubes used by physicist Wilhelm Conrad Roentgen', ca 1896, Würzburg). Its metadata is CC0, but its image is not in the Smithsonian Open Access media set, and the object pages returned 403, so the image licence could not be confirmed. I also skipped Wellcome 'Crookes' type discharge tubes' (M0015832EA, CC BY 4.0), a later studio photo of a Maltese-cross tube rather than a period image. Wellcome M0010903 and M0010904 are Röntgen portraits, but the second is dated 1906 by Perscheid and both carry mixed 'In copyright'/CC BY flags, so I avoided them. The Chocolat Carpentier card of Röntgen at an X-ray screen (xa23ye98) is CC BY-NC, so I excluded it.\nDATING CAVEATS: rontgen_photogravure_wellcome, tube_diagram_nlm and wurzburg_institute_nlm are undated in their records. The Würzburg photo shows the commemorative plaque, so it was taken some time after 1895 and is not a view of 1895. rontgen_loc_1900 and rontgen_nlm_1901 appear to be the same Hanfstaengl sitting, so use one or the other in the edit. Neither apparatus photo (Radiguet ca. 1898, London Hospital ca. 1900) shows Röntgen's own equipment; caption them generically ('early x-ray apparatus').\nUSEFUL FOR OTHER SLOTS (not downloaded): Wellcome wjc8ejn2 'The bones of a hand with a ring on one finger, viewed through x-ray. Photoprint from radiograph by W.K. Röntgen, 1895.' (PDM); Wellcome p63529hq 'The door of Röntgen's laboratory, with a platinum plate attached to the handle, viewed under x-ray. Photoprint from radiograph ... 1895' (PDM); NLM 101448275 'The first roentgen photograph. (Mrs. Röntgen's hand.)'; NLM 101427410 '[Röntgen's desk and chair]' ('Prof. Roentgen's desk and chair, with portraits of his parents', PD per NLM, undated).\nEach item folder holds the image plus the saved catalogue record (loc_record.json, nlm_record.html or wellcome_record.json). Requests were made one at a time with at least 3 s between them."
+}
