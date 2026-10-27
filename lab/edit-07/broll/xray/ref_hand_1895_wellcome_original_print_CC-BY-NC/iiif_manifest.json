@@ -1,0 +1,178 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "https://iiif.wellcomecollection.org/presentation/v2/b1190804x",
+  "@type": "sc:Manifest",
+  "label": "The bones of a hand with a ring on one finger, viewed through x-ray. Photoprint from radiograph by W.K. Röntgen, 1895.",
+  "metadata": [
+    {
+      "label": "Description",
+      "value": "<p>The hand is possibly the hand of Röntgen's wife, photographed on 22nd December 1895</p>\n<p>The print is from one of the first radiographs (x-ray photographs) made by the German physicist, Wilhelm Konrad Röntgen (1845-1923). Röntgen discovered the electro-magnetic rays he named \"x-rays\" (also known as \"Röntgen rays\") in Würzburg in November 1895. Röntgen mailed this and other prints to, among others, the British physicist Sir Arthur Schuster, along with an offprint of his article \"Über eine neue Art von Strahlen\" (1895). Dr Nora H. Schuster, Sir Arthur's daughter, presented the prints to the Wellcome Institute Library in 1962</p>"
+    },
+    {
+      "label": "Publication/creation",
+      "value": "[Place of publication not identified] : [publisher not identified]"
+    },
+    {
+      "label": "Physical description",
+      "value": "1 photograph : photoprint from radiograph, albumen ; sheet 18.1 x 13 cm"
+    },
+    {
+      "label": "Contributors",
+      "value": "Röntgen, Wilhelm Conrad, 1845-1923."
+    },
+    {
+      "label": "Type/technique",
+      "value": "Albumen prints; Radiographs; Photographs"
+    },
+    {
+      "label": "Lettering",
+      "value": "Hand mit Ringen"
+    },
+    {
+      "label": "Reference",
+      "value": "Wellcome Library no. 32971i"
+    },
+    {
+      "label": "Attribution",
+      "value": "Wellcome Collection"
+    },
+    {
+      "label": "Full conditions of use",
+      "value": "<span>You have permission to make copies of this work under a <a target=\"_top\" href=\"http://creativecommons.org/licenses/by-nc/4.0/\">Creative Commons, Attribution, Non-commercial license</a>.<br/><br/>Non-commercial use includes private study, academic research, teaching, and other activities that are not primarily intended for, or directed towards, commercial advantage or private monetary compensation. See the <a target=\"_top\" href=\"http://creativecommons.org/licenses/by-nc/4.0/legalcode\">Legal Code</a> for further information.<br/><br/>Image source should be attributed as specified in the full catalogue record. If no source is given the image should be attributed to Wellcome Collection.</span>"
+    }
+  ],
+  "description": "<p>The hand is possibly the hand of Röntgen's wife, photographed on 22nd December 1895</p>\n<p>The print is from one of the first radiographs (x-ray photographs) made by the German physicist, Wilhelm Konrad Röntgen (1845-1923). Röntgen discovered the electro-magnetic rays he named \"x-rays\" (also known as \"Röntgen rays\") in Würzburg in November 1895. Röntgen mailed this and other prints to, among others, the British physicist Sir Arthur Schuster, along with an offprint of his article \"Über eine neue Art von Strahlen\" (1895). Dr Nora H. Schuster, Sir Arthur's daughter, presented the prints to the Wellcome Institute Library in 1962</p>",
+  "thumbnail": {
+  "@id": "https://iiif.wellcomecollection.org/thumbs/b1190804x_V0029523-LS-LS.jp2/full/68,100/0/default.jpg",
+  "@type": "dctypes:Image",
+  "service": {
+    "@context": "http://iiif.io/api/image/2/context.json",
+    "@id": "https://iiif.wellcomecollection.org/thumbs/b1190804x_V0029523-LS-LS.jp2",
+    "profile": "http://iiif.io/api/image/2/level0.json",
+    "protocol": "http://iiif.io/api/image",
+    "width": 694,
+    "height": 1024,
+    "sizes": [
+      {
+        "width": 68,
+        "height": 100
+      },
+      {
+        "width": 136,
+        "height": 200
+      },
+      {
+        "width": 271,
+        "height": 400
+      },
+      {
+        "width": 694,
+        "height": 1024
+      }
+    ]
+  }
+},
+  "license": "http://creativecommons.org/licenses/by-nc/4.0/",
+  "logo": "https://iiif.wellcomecollection.org/logos/wellcome-collection-black.png",
+  "related": {
+    "@id": "https://wellcomecollection.org/works/wjc8ejn2",
+    "format": "text/html",
+    "label": "The bones of a hand with a ring on one finger, viewed through x-ray. Photoprint from radiograph by W.K. Röntgen, 1895."
+  },
+  "seeAlso": {
+    "@id": "https://api.wellcomecollection.org/catalogue/v2/works/wjc8ejn2",
+    "profile": "https://api.wellcomecollection.org/catalogue/v2/context.json",
+    "format": "application/json",
+    "label": "Wellcome Collection Catalogue API"
+  },
+  "service": [
+    {
+      "@context": "http://universalviewer.io/context.json",
+      "@id": "http://wellcomelibrary.org/service/trackingLabels/b1190804x",
+      "profile": "http://universalviewer.io/tracking-extensions-profile",
+      "trackingLabel": "Format: Artwork, Institution: n/a, Identifier: b1190804x, Digicode: digicon, Collection code: n/a"
+    },
+    {
+      "@context": "http://wellcomelibrary.org/ld/iiif-ext/0/context.json",
+      "@id": "https://wellcomelibrary.org/iiif/b1190804x/access-control-hints-service",
+      "profile": "http://wellcomelibrary.org/ld/iiif-ext/access-control-hints",
+      "accessHint": "open"
+    }
+  ],
+  "sequences": [
+    {
+      "@id": "https://iiif.wellcomecollection.org/presentation/v2/b1190804x/sequences/s0",
+      "@type": "sc:Sequence",
+      "label": "Sequence s0",
+      "rendering": {
+        "@id": "https://iiif.wellcomecollection.org/pdf/b1190804x",
+        "label": "View as PDF",
+        "format": "application/pdf"
+      },
+      "canvases": [
+        {
+          "@id": "https://iiif.wellcomecollection.org/presentation/b1190804x/canvases/b1190804x_V0029523-LS-LS.jp2",
+          "@type": "sc:Canvas",
+          "label": "-",
+          "thumbnail": {
+  "@id": "https://iiif.wellcomecollection.org/thumbs/b1190804x_V0029523-LS-LS.jp2/full/68,100/0/default.jpg",
+  "@type": "dctypes:Image",
+  "service": {
+    "@context": "http://iiif.io/api/image/2/context.json",
+    "@id": "https://iiif.wellcomecollection.org/thumbs/b1190804x_V0029523-LS-LS.jp2",
+    "profile": "http://iiif.io/api/image/2/level0.json",
+    "protocol": "http://iiif.io/api/image",
+    "width": 694,
+    "height": 1024,
+    "sizes": [
+      {
+        "width": 68,
+        "height": 100
+      },
+      {
+        "width": 136,
+        "height": 200
+      },
+      {
+        "width": 271,
+        "height": 400
+      },
+      {
+        "width": 694,
+        "height": 1024
+      }
+    ]
+  }
+},
+          "height": 3247,
+          "width": 2200,
+          "images": [
+            {
+              "@id": "https://iiif.wellcomecollection.org/presentation/b1190804x/canvases/b1190804x_V0029523-LS-LS.jp2/painting/anno",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.wellcomecollection.org/image/b1190804x_V0029523-LS-LS.jp2/full/694,1024/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 694,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.wellcomecollection.org/image/b1190804x_V0029523-LS-LS.jp2",
+                  "profile": "http://iiif.io/api/image/2/level1.json",
+                  "protocol": "http://iiif.io/api/image",
+                  "width": 2200,
+                  "height": 3247
+                }
+              },
+              "on": "https://iiif.wellcomecollection.org/presentation/b1190804x/canvases/b1190804x_V0029523-LS-LS.jp2"
+            }
+          ],
+          "within": ""
+        }
+      ]
+    }
+  ],
+  "within": "https://iiif.wellcomecollection.org/presentation/v2/collections/contributors/u3kgy333"
+}

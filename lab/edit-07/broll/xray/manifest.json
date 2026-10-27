@@ -1,0 +1,166 @@
+{
+ "items": [
+  {
+   "id": "hand_1895_nlm_glasser1933",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-07/broll/xray/hand_1895_nlm_glasser1933/hand_1895_nlm_glasser1933.jpg",
+   "kind": "image",
+   "title": "Röntgen's radiograph of a hand with a ring ('Mrs. Röntgen's hand') - NLM scan of a 1933 halftone reproduction",
+   "date": "Radiograph: 22 Dec 1895 (date given in the Wellcome record of the original print, not in the NLM record). This copy: halftone plate published 1933 (Glasser, London: Bale & Danielsson).",
+   "use_for": "hand_xray_1895",
+   "depicts": "Violet-toned halftone of the radiograph, cropped close: three long fingers run top to bottom with a faint fourth at the far left edge. The finger bones show as darker, blurred shapes inside paler soft tissue, with the knuckle joints at mid-height and the darker palm/metacarpal area at the bottom. A large, very dark oval ring sits on the left-most of the three main fingers, about a third of the way down. Printed caption under the image: 'FIG. 39.—The first roentgen photograph. (Mrs. Röntgen's hand.)'. A few white specks and a fine hairline scratch at lower right. Same radiograph and composition as Wellcome's original mounted print lettered 'Hand mit Ringen'.",
+   "evidence": "NLM Digital Collections record: title 'The first roentgen photograph. (Mrs. Röntgen's hand.)'; abstract 'X-ray showing the bones of the hand and fingers, and a ring.'; author 'Glasser, Otto'; publication 'London: Bale & Danielsson, 1933'; 'Is part of: Wilhelm Conrad Röntgen and the early history of the Roentgen rays, fig. 39, p. 130.'; extent '1 photomechanical reproduction', technique 'halftone'; NLM Image ID A030067. COPY TYPE: later reproduction (1933 book plate), not an original print. The 22 Dec 1895 date comes from the Wellcome record of the original print (b1190804x), which says: 'The hand is possibly the hand of Röntgen's wife, photographed on 22nd December 1895'. Note the Wellcome record hedges with 'possibly'; Glasser's 1933 caption states 'Mrs. Röntgen's hand'.",
+   "source_url": "https://collections.nlm.nih.gov/catalog/nlm:nlmuid-101448275-img",
+   "licence": "Public domain. NLM record: 'The National Library of Medicine believes this item to be in the public domain.' (linked to https://creativecommons.org/publicdomain/mark/1.0/). Credit: National Library of Medicine.",
+   "width": 2131,
+   "height": 3255,
+   "colour": true,
+   "subject_box": [
+    0.0,
+    0.0,
+    1.0,
+    0.9
+   ],
+   "download_url": "https://iiif.nlm.nih.gov/iiif/2/nlm:nlmuid-101448275-img/full/full/0/default.jpg",
+   "catalogue_record": "http://resource.nlm.nih.gov/101448275"
+  },
+  {
+   "id": "paper_1895_cover",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-07/broll/xray/paper_1895_cover/paper_1895_cover.jpg",
+   "kind": "image",
+   "title": "Röntgen, 'Eine neue Art von Strahlen' (Würzburg: Stahel, 'Ende 1895') - printed wrapper / title page",
+   "date": "1895 (printed on the page: 'Ende 1895.')",
+   "use_for": "paper_1895",
+   "depicts": "Yellowed paper wrapper of the offprint, colour scan of the whole page. Printed text: 'EINE NEUE ART VON STRAHLEN.' (STRAHLEN in large bold capitals), 'VON DR. W. RÖNTGEN, Ö. O. PROFESSOR AN DER K. UNIVERSITÄT WÜRZBURG.', and at the foot 'WÜRZBURG. VERLAG UND DRUCK DER STAHEL'SCHEN K. HOF- UND UNIVERSITÄTS-BUCH- UND KUNSTHANDLUNG. Ende 1895.' Foxing, a small stain at upper left, worn edges and a remnant of binding tape at lower left.",
+   "evidence": "Wellcome Collection record avjgayxz: 'Eine neue Art von Strahlen / von W. Röntgen.'; 'Würzburg : Verlag der Stahel'schen k. Hof- u. Universitäts -Buch- u. Kunsthandlung, 1895.'; '10 pages ; 23 cm'; Notes: '\"Ende 1895\"' and 'Aus den Sitzungsberichten der Würzburger Physik.-medic. Gesellschaft.'. This is the separately printed offprint (IIIF canvas 3 of 20), not the Sitzungsberichte volume itself.",
+   "source_url": "https://wellcomecollection.org/works/avjgayxz/items?canvas=3",
+   "licence": "Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/). Wellcome: 'This work has been identified as being free of known restrictions under copyright law, including all related and neighbouring rights'. Credit: Wellcome Collection.",
+   "width": 2708,
+   "height": 4417,
+   "colour": true,
+   "subject_box": [
+    0.12,
+    0.18,
+    0.88,
+    0.92
+   ],
+   "download_url": "https://iiif.wellcomecollection.org/image/b30475697_0003.jp2/full/full/0/default.jpg",
+   "catalogue_record": "https://wellcomecollection.org/works/avjgayxz"
+  },
+  {
+   "id": "paper_1895_page1",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-07/broll/xray/paper_1895_page1/paper_1895_page1.jpg",
+   "kind": "image",
+   "title": "Röntgen, 'Ueber eine neue Art von Strahlen (Vorläufige Mittheilung)' - first page of text, 1895 offprint",
+   "date": "1895 (running head printed on the page: 'Aus den Sitzungsberichten der Würzburger Physik.-medic. Gesellschaft 1895.')",
+   "use_for": "paper_1895",
+   "depicts": "Page 1 of the text, colour scan of the whole page. Running head: 'Aus den Sitzungsberichten der Würzburger Physik.-medic. Gesellschaft 1895.'; heading in bold: 'W. C. Röntgen: Ueber eine neue Art von Strahlen.' with '(Vorläufige Mittheilung.)' below. Numbered paragraphs 1 and 2 follow in German Roman type, starting '1. Lässt man durch eine Hittorf'sche Vacuumröhre ... gehen und bedeckt die Röhre mit einem ziemlich eng anliegenden Mantel aus dünnem, schwarzem Carton...'; a footnote on 'Durchlässigkeit' at the bottom. Library marks: handwritten pencil shelf-mark at top right and a circular Wellcome library stamp in the right margin overlapping a few line-ends.",
+   "evidence": "Same Wellcome record avjgayxz (IIIF canvas 5 of 20). The record's related-material note names 'Sitzungsberichte der Würzburger Physikalisch-Medicinische Gesellschaft. (1895)'; the paper's title 'Ueber eine neue Art von Strahlen' and the date 1895 are printed on the page itself.",
+   "source_url": "https://wellcomecollection.org/works/avjgayxz/items?canvas=5",
+   "licence": "Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/), Wellcome Collection. Credit: Wellcome Collection.",
+   "width": 2677,
+   "height": 4344,
+   "colour": true,
+   "subject_box": [
+    0.08,
+    0.1,
+    0.97,
+    0.98
+   ],
+   "download_url": "https://iiif.wellcomecollection.org/image/b30475697_0005.jp2/full/full/0/default.jpg",
+   "catalogue_record": "https://wellcomecollection.org/works/avjgayxz"
+  },
+  {
+   "id": "compass_1895_roentgen",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-07/broll/xray/compass_1895_roentgen/compass_1895_roentgen.jpg",
+   "kind": "image",
+   "title": "Röntgen's radiograph of a compass needle enclosed in a metal case ('Magnetnadel in Metalldose'), 1895 - print sent by Röntgen to Arthur Schuster",
+   "date": "1895",
+   "use_for": "early_radiograph_other",
+   "depicts": "Sepia albumen print on a grey-blue card mount. In Röntgen's handwriting at the top: 'Magnetnadel in Metalldose. S. 14.'; oval stamp at the bottom: 'PHYSIK. INSTITUT DER UNIVERSITÄT WÜRZBURG'. In the print: a round compass card with radial graduation ticks and compass letters (N at top, S at bottom) and a dark diamond-shaped needle on a central pivot, all seen through the dark ring of the closed metal case. Curved dark shapes of the case or holder show at the corners. Pin holes at the top corners of the print and a small stain at lower right.",
+   "evidence": "Wellcome record q3kvkvak: 'A compass whose magnetic needle is entirely surrounded by metal, viewed through x-ray. Photoprint from radiograph by W.K. Röntgen, 1895.'; lettering 'Magnetnadel in Metalldose. S. 14. The lettering is written in Röntgen's hand in black ink on the mount. The mount also bears the stamp: \"Physik. Institut der Universität Würzburg\"'; '1 photograph : photoprint from radiograph, albumen'; 'Röntgen mailed this and other prints to, among others, the British physicist Sir Arthur Schuster, along with an offprint of his article \"Über eine neue Art von Strahlen\" (1895).' Wellcome 32993i. COPY TYPE: original period print.",
+   "source_url": "https://wellcomecollection.org/works/q3kvkvak",
+   "licence": "Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/), as set by Wellcome Collection on this image (catalogue API licence id 'pdm'). Credit line: Wellcome Collection.",
+   "width": 2180,
+   "height": 3330,
+   "colour": true,
+   "subject_box": [
+    0.24,
+    0.31,
+    0.78,
+    0.69
+   ],
+   "download_url": "https://iiif.wellcomecollection.org/image/V0029525/full/full/0/default.jpg",
+   "catalogue_record": "https://wellcomecollection.org/works/q3kvkvak"
+  },
+  {
+   "id": "foot_needle_1896_schuster",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-07/broll/xray/foot_needle_1896_schuster/foot_needle_1896_schuster.jpg",
+   "kind": "image",
+   "title": "Radiograph of a pantomime artist's foot with a needle by one of the toes, Manchester, Jan/Feb 1896 (Arthur Schuster)",
+   "date": "1896 (record lettering: 'Taken Jan or Feb. 1896. Shown at Owens College March 2 1896.'; title says 1896, though the record's production field reads 1895)",
+   "use_for": "early_radiograph_other",
+   "depicts": "Faded sepia albumen print, upright, toes pointing up. The outline of the foot is a pale brown shadow, with the toe bones and metatarsals as darker bands inside it and the ankle running off the bottom edge. A thin dark diagonal line crosses the base of the big toe, which fits the needle the record mentions, though it is not unmistakable. Also visible: a white arrow-shaped scratch and a long fine scratch line pointing at that area, a crack across the lower third and many surface scuffs. Low contrast.",
+   "evidence": "Wellcome record n44h2656: 'The bones of a pantomime artist's foot, viewed through x-ray; revealing a needle by one of the toes. Photoprint from radiograph after Sir Arthur Schuster, 1896.'; lettering 'Photograph of dancing girl's foot. Taken Jan or Feb. 1896. Shown at Owens College March 2 1896. ... \"This print lay on Arthur Schuster's desk for 38 years until the day he died and was his first photograph of a clinical condition ...\"' (pencil note by N.H. Schuster); 'photoprint from radiograph, albumen'. Wellcome 33015i. COPY TYPE: original period print.",
+   "source_url": "https://wellcomecollection.org/works/n44h2656",
+   "licence": "Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/), as set by Wellcome Collection on this image (catalogue API licence id 'pdm'). Credit line: Wellcome Collection.",
+   "width": 2270,
+   "height": 3102,
+   "colour": true,
+   "subject_box": [
+    0.15,
+    0.08,
+    0.82,
+    1.0
+   ],
+   "download_url": "https://iiif.wellcomecollection.org/image/V0029527/full/full/0/default.jpg",
+   "catalogue_record": "https://wellcomecollection.org/works/n44h2656"
+  },
+  {
+   "id": "frog_1896_schuster",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-07/broll/xray/frog_1896_schuster/frog_1896_schuster.jpg",
+   "kind": "image",
+   "title": "Radiograph of a frog showing a healed fracture of a hind leg, shown in Manchester on 3 March 1896 (Arthur Schuster)",
+   "date": "1896 (record lettering: shown 'March 3 1896'; title says 1896, though the record's production field reads 1895)",
+   "use_for": "early_radiograph_other",
+   "depicts": "Grey-toned print of a whole frog seen from above, limbs spread. The spine, pelvis, long leg bones and the fine bones of the webbed feet and front toes show as dark lines inside the paler grey body silhouette. A brown tape mark or stain at the top right corner, a torn top-left corner, creases and spots.",
+   "evidence": "Wellcome record shuarr4t: 'The bones of a frog, viewed through x-ray; revealing a healing fracture on one of the hind legs. Photoprint from radiograph after Sir Arthur Schuster, 1896.'; lettering 'Photograph shown at an ordinary meeting of the Manchester Lit. and Phil. Society on March 3 1896. ... \"leg of a frog which shows it had been broken and had been healed\"'; 'photoprint from radiograph, albumen'. Wellcome 33076i. COPY TYPE: original period print.",
+   "source_url": "https://wellcomecollection.org/works/shuarr4t",
+   "licence": "Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/), as set by Wellcome Collection on this image (catalogue API licence id 'pdm'). Credit line: Wellcome Collection.",
+   "width": 2320,
+   "height": 3232,
+   "colour": true,
+   "subject_box": [
+    0.12,
+    0.05,
+    0.91,
+    0.87
+   ],
+   "download_url": "https://iiif.wellcomecollection.org/image/V0029531/full/full/0/default.jpg",
+   "catalogue_record": "https://wellcomecollection.org/works/shuarr4t"
+  },
+  {
+   "id": "snake_1896_schuster",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-07/broll/xray/snake_1896_schuster/snake_1896_schuster.jpg",
+   "kind": "image",
+   "title": "Radiograph of a snake swallowing a small mammal (probably a mouse), Manchester, 1896 (Arthur Schuster)",
+   "date": "1896",
+   "use_for": "early_radiograph_other",
+   "depicts": "Sepia print of a coiled snake seen from above in a loop. Its whole backbone and ribs show as a dark beaded chain from neck to the thin tail at lower left. In the middle of the loop, inside the snake's body, is the darker skeleton of a small mammal: a spine with limb bones and feet. Speckled, foxed paper background.",
+   "evidence": "Wellcome record ee3ptpxe: 'A snake in the process of swallowing a small mammal, probably a mouse, viewed through x-ray. Photoprint from radiograph after Sir Arthur Schuster, 1896.'; production '1896', England; 'photoprint from radiograph, albumen'; stamp on mount 'E. Ward ...249, Oxford st., Manchester'. Wellcome 33165i. COPY TYPE: original period print.",
+   "source_url": "https://wellcomecollection.org/works/ee3ptpxe",
+   "licence": "Public Domain Mark 1.0 (https://creativecommons.org/publicdomain/mark/1.0/), as set by Wellcome Collection on this image (catalogue API licence id 'pdm'). Credit line: Wellcome Collection.",
+   "width": 2300,
+   "height": 3125,
+   "colour": true,
+   "subject_box": [
+    0.15,
+    0.1,
+    0.84,
+    0.95
+   ],
+   "download_url": "https://iiif.wellcomecollection.org/image/V0029552/full/full/0/default.jpg",
+   "catalogue_record": "https://wellcomecollection.org/works/ee3ptpxe"
+  }
+ ],
+ "notes": "HAND (item 1): The most faithful scan is Wellcome's ORIGINAL mounted albumen print that Röntgen posted to Arthur Schuster. Röntgen wrote 'Hand mit Ringen' on the mount, and it carries the Würzburg Physik. Institut stamp. It is Wellcome work wjc8ejn2 / b1190804x, 2200x3247. Wellcome licenses it CC BY-NC 4.0, which is NOT on the allowed list, so it is left out of the items. A reference copy, not cleared for commercial use, is at /home/user/SocialMediaMarketingSkill/lab/edit-07/broll/xray/ref_hand_1895_wellcome_original_print_CC-BY-NC/ (source https://wellcomecollection.org/works/wjc8ejn2). The listed hand is NLM's public-domain scan of the same radiograph, a later reproduction: Glasser's 1933 book, fig. 39, halftone, 2131x3255, violet-toned and cropped tighter, with the printed caption at the bottom (crop it off). The Wellcome record says only 'possibly the hand of Röntgen's wife, photographed on 22nd December 1895', while Glasser's caption says 'Mrs. Röntgen's hand' and calls it 'The first roentgen photograph'. On-screen wording should not overclaim beyond that. Wellcome's p8sgse95 'hand with a ring ... after Sir Arthur Schuster, 1896' (PDM) is NOT Röntgen's wife's hand: it was made in Manchester and has a pencil note 'Rheumatoid arthritis'. Do not use it as the 1895 image. A CC BY 4.0 copy of the Wellcome scan probably exists on Commons from Wellcome's 2014 release, but the Commons API returned HTTP 429 on all 3 tries, so it was not checked or used.\nPAPER (item 2): Wellcome avjgayxz is the Stahel offprint 'Eine neue Art von Strahlen' (Würzburg, 'Ende 1895', 10 pp.). It is Public Domain Mark. Two pages are listed: the printed wrapper/title page (canvas 3) and text page 1 headed 'Ueber eine neue Art von Strahlen. (Vorläufige Mittheilung.)' (canvas 5). Page 1 carries a Wellcome library stamp and a pencil shelf-mark at the top right.\nEARLY RADIOGRAPHS (item 3): four original albumen prints, all Wellcome Public Domain Mark: Röntgen's own 1895 compass in a metal case; Schuster's 1896 dancer's foot with a needle; frog with a healed leg fracture; snake swallowing a probable mouse. For the foot and frog, the record's production field reads '1895, Germany', but the title and the handwritten lettering both give 1896 (Manchester), so 1896 is used. The needle in the foot is faint and the frog's fracture is not obvious at small sizes, so do not caption those details as clearly visible. Two candidates were dropped: Glyn's hand (Wellcome aewz9crq, record says 1896 but the print is lettered 'G.P.G. c.1896', and it is only 1162x1640), and the second print of the foot (wpkxzq3g, V0029528, darker, with bones hard to read). Other Röntgen 1895 prints at Wellcome, all PDM, if more are wanted: door with platinum plate p63529hq, wire on spool b5dwctu2, metal sample dkgcbz8s, discharge apparatus in lead cage xmycpq6q.\nFOOTAGE (item 4): no free download found. Macintyre's 1897 X-ray film appears only inside Wellcome nw673uz6 'The origins of scientific cinematography. Part 3' (1991 VHS, closed stores, not online), and archive.org has nothing. Smithsonian Open Access (DEMO_KEY) and the Commons API both returned 429 and were not retried beyond 3 tries.\nAll requests ran one at a time, at least 3.2 s apart. Each folder holds the image plus the saved catalogue record JSON (and the IIIF manifest where one was used). Scans are colour scans of monochrome or sepia period prints, so colour=true means a colour scan."
+}
