@@ -369,6 +369,8 @@ def main(out_path):
     views = {(clip, v): Reader(f"{E}/views/{clip}_{v}.mp4") for clip in CLIPS for v in ("wide", "medium", "close")}
     shots = {k: (VideoShot(ins) if ins.get("kind") == "video" else PrintShot(ins)) for k, ins in enumerate(CFG["inserts"])}
     xray = Image.open(CFG["canvases"][0]["xray"]).convert("RGB") if CFG["canvases"][0].get("xray") else None
+    if xray is not None:                       # same neutral sepia as the full-screen X-ray shots (the 1933 halftone is purple)
+        xray = Image.fromarray((grade_print(np.asarray(xray).astype(np.float32) / 255, None, False) * 255).astype(np.uint8))
     logo = Image.open(CFG["logo"]).convert("RGBA") if CFG.get("logo") else None
     masks = {}
     import glob
