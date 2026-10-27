@@ -17,7 +17,8 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 sys.path.insert(0, "/home/user/SocialMediaMarketingSkill/lab/caption-style-01/tools")
 sys.path.insert(0, "/home/user/SocialMediaMarketingSkill/lab/edit-05/tools")
 import quick_prime as qp  # noqa: E402
-from grade import grade_print, grade_talking  # noqa: E402
+from grade import grade_print  # noqa: E402
+from grade_darkroom import grade_darkroom as grade_talking  # noqa: E402  (filmed under red darkroom light)
 
 Image.MAX_IMAGE_PIXELS = None
 LAB = "/home/user/SocialMediaMarketingSkill/lab"
@@ -226,10 +227,16 @@ def pop(age, frames=3):
 
 
 def xray_look(x):
-    """What the scan shows behind its line: the picture as a cool blue negative (a visual effect, not real bones)."""
+    """What the scan shows behind its line: the speaker as glowing cyan edges on black, like a radiograph on a lightbox
+    (a visual effect, not real bones). The dark footage is smoothed first so its noise doesn't sparkle."""
+    from PIL import Image as _I, ImageFilter as _F
     lum = x @ np.array([0.2126, 0.7152, 0.0722], np.float32)
-    inv = np.clip((1 - lum - 0.18) * 1.5, 0, 1) ** 1.3
-    return np.clip(inv[..., None] * np.array([0.62, 0.86, 1.0], np.float32) + np.array([0.0, 0.02, 0.05], np.float32), 0, 1)
+    im = _I.fromarray((np.clip(lum, 0, 1) * 255).astype(np.uint8)).filter(_F.GaussianBlur(2.2))
+    sm = np.asarray(im).astype(np.float32) / 255
+    blur = np.asarray(im.resize((W // 4, H // 4), _I.BILINEAR).filter(_F.GaussianBlur(6)).resize((W, H), _I.BILINEAR)).astype(np.float32) / 255
+    edge = np.clip(sm + 2.0 * (sm - blur), 0, 1)
+    v = np.clip((edge - 0.12) * 2.3, 0, 1) ** 1.1
+    return np.clip(v[..., None] * np.array([0.42, 0.86, 1.0], np.float32) + v[..., None] ** 3 * 0.25, 0, 1)
 
 
 def scan_fx(x, p):
