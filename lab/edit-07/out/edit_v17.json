@@ -1,0 +1,363 @@
+{
+ "fps": 24,
+ "views": [
+  {
+   "start": 0.0,
+   "end": 2.51,
+   "view": "wide"
+  },
+  {
+   "start": 2.51,
+   "end": 3.4,
+   "view": "wide"
+  },
+  {
+   "start": 3.4,
+   "end": 4.458,
+   "view": "medium"
+  },
+  {
+   "start": 4.458,
+   "end": 6.375,
+   "view": "wide"
+  },
+  {
+   "start": 6.375,
+   "end": 8.458,
+   "view": "medium"
+  },
+  {
+   "start": 8.458,
+   "end": 8.95,
+   "view": "wide"
+  },
+  {
+   "start": 8.95,
+   "end": 16.0,
+   "view": "medium"
+  },
+  {
+   "start": 16.0,
+   "end": 16.78,
+   "view": "wide"
+  },
+  {
+   "start": 16.78,
+   "end": 17.18,
+   "view": "close"
+  },
+  {
+   "start": 17.18,
+   "end": 20.2917,
+   "view": "medium"
+  }
+ ],
+ "inserts": [],
+ "canvases": [
+  {
+   "start": 13.375,
+   "end": 16.0,
+   "kind": "reveal"
+  },
+  {
+   "start": 18.292,
+   "end": 20.292,
+   "kind": "show"
+  }
+ ],
+ "scan": [
+  4.458,
+  6.375
+ ],
+ "captions": [
+  {
+   "text": "In 1895",
+   "start": 0.1103,
+   "cls": "sans",
+   "fill": "",
+   "word": "in"
+  },
+  {
+   "text": "Wilhelm",
+   "start": 1.4523,
+   "cls": "sans",
+   "fill": "",
+   "word": "wilhelm"
+  },
+  {
+   "text": "R\u00f6ntgen",
+   "start": 2.0133,
+   "cls": "script",
+   "fill": "",
+   "word": "rontgen"
+  },
+  {
+   "text": "discovered",
+   "start": 2.5143,
+   "cls": "sans",
+   "fill": "",
+   "word": "discovered"
+  },
+  {
+   "text": "something",
+   "start": 3.0153,
+   "cls": "sans",
+   "fill": "",
+   "word": "something"
+  },
+  {
+   "text": "Extraordinary",
+   "start": 3.3963,
+   "cls": "script",
+   "fill": "",
+   "word": "extraordinary"
+  },
+  {
+   "text": "he could",
+   "start": 4.5287,
+   "cls": "sans",
+   "fill": "",
+   "word": "he"
+  },
+  {
+   "text": "see through",
+   "start": 4.8497,
+   "cls": "sans",
+   "fill": "",
+   "word": "see"
+  },
+  {
+   "text": "human skin",
+   "start": 5.5517,
+   "cls": "sans",
+   "fill": "",
+   "word": "human"
+  },
+  {
+   "text": "instead of",
+   "start": 6.4803,
+   "cls": "sans",
+   "fill": "",
+   "word": "instead"
+  },
+  {
+   "text": "explaining",
+   "start": 6.9613,
+   "cls": "sans",
+   "fill": "",
+   "word": "explaining"
+  },
+  {
+   "text": "his discovery",
+   "start": 7.4823,
+   "cls": "sans",
+   "fill": "",
+   "word": "his"
+  },
+  {
+   "text": "he made",
+   "start": 8.5537,
+   "cls": "sans",
+   "fill": "",
+   "word": "he"
+  },
+  {
+   "text": "an image",
+   "start": 8.9547,
+   "cls": "sans",
+   "fill": "",
+   "word": "an"
+  },
+  {
+   "text": "of his",
+   "start": 9.5357,
+   "cls": "sans",
+   "fill": "",
+   "word": "of"
+  },
+  {
+   "text": "wife's hand",
+   "start": 9.9157,
+   "cls": "sans",
+   "fill": "",
+   "word": "wife's"
+  },
+  {
+   "text": "and literally",
+   "start": 10.7437,
+   "cls": "sans",
+   "fill": "",
+   "word": "and"
+  },
+  {
+   "text": "for the",
+   "start": 11.5447,
+   "cls": "sans",
+   "fill": "",
+   "word": "for"
+  },
+  {
+   "text": "first time",
+   "start": 11.8447,
+   "cls": "sans",
+   "fill": "",
+   "word": "first"
+  },
+  {
+   "text": "you could see",
+   "start": 12.4047,
+   "cls": "sans",
+   "fill": "",
+   "word": "you"
+  },
+  {
+   "text": "Bones",
+   "start": 12.8857,
+   "cls": "script",
+   "fill": "",
+   "word": "bones"
+  },
+  {
+   "text": "One image",
+   "start": 13.446,
+   "cls": "sans",
+   "fill": "",
+   "word": "one"
+  },
+  {
+   "text": "made an",
+   "start": 14.307,
+   "cls": "sans",
+   "fill": "",
+   "word": "made"
+  },
+  {
+   "text": "Invisible",
+   "start": 14.627,
+   "cls": "script",
+   "fill": "",
+   "word": "invisible"
+  },
+  {
+   "text": "world",
+   "start": 15.148,
+   "cls": "sans",
+   "fill": "",
+   "word": "world"
+  },
+  {
+   "text": "Visible",
+   "start": 15.488,
+   "cls": "script",
+   "fill": "",
+   "word": "visible"
+  },
+  {
+   "text": "and that's",
+   "start": 16.0783,
+   "cls": "sans",
+   "fill": "",
+   "word": "and"
+  },
+  {
+   "text": "the power",
+   "start": 16.6393,
+   "cls": "sans",
+   "fill": "",
+   "word": "the"
+  },
+  {
+   "text": "of Visualization",
+   "start": 17.1803,
+   "cls": "script",
+   "fill": "PINK",
+   "word": "of"
+  },
+  {
+   "text": "Don't just",
+   "start": 18.386,
+   "cls": "sans",
+   "fill": "",
+   "word": "don't"
+  },
+  {
+   "text": "explain it",
+   "start": 18.907,
+   "cls": "sans",
+   "fill": "",
+   "word": "explain"
+  },
+  {
+   "text": "Show it",
+   "start": 19.5983,
+   "cls": "script",
+   "fill": "",
+   "word": "show"
+  }
+ ],
+ "cap_frames": [
+  2,
+  34,
+  48,
+  60,
+  72,
+  81,
+  108,
+  116,
+  133,
+  155,
+  167,
+  179,
+  205,
+  214,
+  228,
+  237,
+  257,
+  277,
+  284,
+  297,
+  309,
+  322,
+  343,
+  351,
+  363,
+  371,
+  385,
+  399,
+  412,
+  441,
+  453,
+  470
+ ],
+ "negative_frames": [
+  0,
+  1,
+  60,
+  82,
+  107,
+  153,
+  203,
+  215,
+  321,
+  384,
+  403,
+  412,
+  439,
+  487,
+  488
+ ],
+ "end_card_s": 1.3,
+ "beats": {
+  "reveal_title": 323,
+  "hidden": 351,
+  "shown": 371,
+  "show_title": 441,
+  "row": 455,
+  "row_to": 472,
+  "scan": [
+   107,
+   153
+  ]
+ },
+ "logo": "/home/user/SocialMediaMarketingSkill/lab/edit-05/broll/wkc/logo.png"
+}
