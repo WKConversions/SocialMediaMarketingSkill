@@ -1,1 +1,62 @@
-{}
+{
+ "hook": {
+  "file": "/home/user/SocialMediaMarketingSkill/lab/edit-07/broll/xray/compass_1895_roentgen/compass_1895_roentgen.jpg",
+  "colour": true,
+  "mode": "fill",
+  "center": [
+   0.5,
+   0.5
+  ],
+  "zoom": 0.62,
+  "move": "push",
+  "source": "R\u00f6ntgen's radiograph of a compass in a metal box, 1895 (record pending)"
+ },
+ "rontgen": {
+  "file": "/home/user/SocialMediaMarketingSkill/lab/edit-07/broll/people/rontgen_loc_1900/rontgen_loc_1900.jpg",
+  "colour": false,
+  "mode": "fill",
+  "center": [
+   0.47,
+   0.36
+  ],
+  "zoom": 0.62,
+  "move": "push",
+  "source": "Prof. Roentgen, photograph c.1900, Library of Congress (Bain)"
+ },
+ "paper": {
+  "file": "/home/user/SocialMediaMarketingSkill/lab/edit-07/broll/xray/paper_1895_cover/paper_1895_cover.jpg",
+  "colour": true,
+  "mode": "fill",
+  "center": [
+   0.5,
+   0.4
+  ],
+  "zoom": 0.95,
+  "move": "push",
+  "source": "W. R\u00f6ntgen, Eine neue Art von Strahlen, W\u00fcrzburg 1895/96 (record pending)"
+ },
+ "xray": {
+  "file": "/home/user/SocialMediaMarketingSkill/lab/edit-07/broll/xray/hand_1895_nlm_glasser1933/hand_1895_nlm_glasser1933.jpg",
+  "colour": false,
+  "mode": "fill",
+  "center": [
+   0.5,
+   0.44
+  ],
+  "zoom": 0.86,
+  "move": "push",
+  "source": "The first roentgen photograph (Mrs. R\u00f6ntgen's hand), 22 Dec 1895, reproduced in Glasser 1933, NLM (record pending)"
+ },
+ "xray_bones": {
+  "file": "/home/user/SocialMediaMarketingSkill/lab/edit-07/broll/xray/hand_1895_nlm_glasser1933/hand_1895_nlm_glasser1933.jpg",
+  "colour": false,
+  "mode": "fill",
+  "center": [
+   0.42,
+   0.36
+  ],
+  "zoom": 0.52,
+  "move": "push",
+  "source": "same, closer on the bones and the ring"
+ }
+}
