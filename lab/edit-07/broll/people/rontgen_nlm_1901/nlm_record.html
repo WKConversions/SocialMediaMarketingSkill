@@ -1,0 +1,659 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Prof. Röntgen - Digital Collections - National Library of Medicine</title>
+    <script>
+      document.querySelector('html').classList.remove('no-js');
+    </script>
+    <link href="https://collections.nlm.nih.gov/catalog/opensearch.xml" title="Digital Collections - National Library of Medicine" type="application/opensearchdescription+xml" rel="search" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon-b8c01de62c74f0e46699ba411684c7102e20d583c37508a74752f5a737bd2a5c.ico" />
+    <link rel="stylesheet" href="/assets/application-9d9944c8a70a9bce0273facaf2d12ffaa55475ebbf25f99ceacc4223e17cfac0.css" media="all" data-turbo-track="reload" />
+      <script type="importmap" data-turbo-track="reload">{
+  "imports": {
+    "application": "/assets/application-1c4b701ec375046d9dcd62cbb577df29fd0bcd06fb8f2e5d3da4edef1f0b76e4.js",
+    "@hotwired/turbo-rails": "/assets/turbo.min-c85b4c5406dd49df1f63e03a5b07120d39cc3e33bc2448f5e926b80514f9dfc8.js",
+    "@hotwired/stimulus": "/assets/stimulus.min-dd364f16ec9504dfb72672295637a1c8838773b01c0b441bd41008124c407894.js",
+    "@hotwired/stimulus-loading": "/assets/stimulus-loading-3576ce92b149ad5d6959438c6f291e2426c86df3b874c525b30faad51b0d96b3.js",
+    "@github/auto-complete-element": "https://cdn.jsdelivr.net/npm/@github/auto-complete-element@3.8.0/+esm",
+    "@popperjs/core": "https://ga.jspm.io/npm:@popperjs/core@2.11.6/dist/umd/popper.min.js",
+    "bootstrap": "https://ga.jspm.io/npm:bootstrap@5.2.2/dist/js/bootstrap.js",
+    "chart.js": "https://ga.jspm.io/npm:chart.js@4.2.0/dist/chart.js",
+    "@kurkle/color": "https://ga.jspm.io/npm:@kurkle/color@0.3.2/dist/color.esm.js",
+    "blacklight/bookmark_toggle": "/assets/blacklight/bookmark_toggle-97b6e8357b4b80f49f7978d752d5b6e7e7f728fe9415742ab71b74418d689fad.js",
+    "blacklight/button_focus": "/assets/blacklight/button_focus-9e15a08a7a1886d78f54ed5d25655a8a07a535dcdd4de584da5c6c6d47e4188c.js",
+    "blacklight/checkbox_submit": "/assets/blacklight/checkbox_submit-7487e8aab30e3b1509ab58ee473b9a886d755332ade14642ecd98b4cff0c72ef.js",
+    "blacklight/core": "/assets/blacklight/core-65db34d8f13f026bcc00abf2dc79a6d61c981f588e6e43b8ea002108656b0ae2.js",
+    "blacklight": "/assets/blacklight/index-267e64c5525f71bbc998c7dcc67340a3a40ae3464988e067f0a65d7a8f5f58b3.js",
+    "blacklight/modal": "/assets/blacklight/modal-68610e6a319400c036afd544e8c05c9d5cf1b64c06ec2f06c0e94e3952366553.js",
+    "blacklight/modalForm": "/assets/blacklight/modalForm-02d8c117d37bf34110a491a76d0889980cb960ebfe1c1c2445e9de64e8637fee.js",
+    "blacklight/search_context": "/assets/blacklight/search_context-73898e17aacbe00701917cb30c8edf9f3294ca3fa857f99e393bde1000dc4984.js",
+    "blacklight-range-limit": "/assets/blacklight-range-limit/index-c720a19fcc320a3b6c8c7d971ec8b00fd470d7478346681356d611777b93f295.js",
+    "controllers/application": "/assets/controllers/application-368d98631bccbf2349e0d4f8269afb3fe9625118341966de054759d96ea86c7e.js",
+    "controllers/hello_controller": "/assets/controllers/hello_controller-549135e8e7c683a538c3d6d517339ba470fcfb79d62f738a0a089ba41851a554.js",
+    "controllers": "/assets/controllers/index-2db729dddcc5b979110e98de4b6720f83f91a123172e87281d5a58410fc43806.js"
+  }
+}</script>
+<link rel="modulepreload" href="/assets/application-1c4b701ec375046d9dcd62cbb577df29fd0bcd06fb8f2e5d3da4edef1f0b76e4.js">
+<link rel="modulepreload" href="/assets/turbo.min-c85b4c5406dd49df1f63e03a5b07120d39cc3e33bc2448f5e926b80514f9dfc8.js">
+<link rel="modulepreload" href="/assets/stimulus.min-dd364f16ec9504dfb72672295637a1c8838773b01c0b441bd41008124c407894.js">
+<link rel="modulepreload" href="/assets/stimulus-loading-3576ce92b149ad5d6959438c6f291e2426c86df3b874c525b30faad51b0d96b3.js">
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/@github/auto-complete-element@3.8.0/+esm">
+<link rel="modulepreload" href="https://ga.jspm.io/npm:@popperjs/core@2.11.6/dist/umd/popper.min.js">
+<link rel="modulepreload" href="https://ga.jspm.io/npm:bootstrap@5.2.2/dist/js/bootstrap.js">
+<link rel="modulepreload" href="https://ga.jspm.io/npm:chart.js@4.2.0/dist/chart.js">
+<link rel="modulepreload" href="https://ga.jspm.io/npm:@kurkle/color@0.3.2/dist/color.esm.js">
+<link rel="modulepreload" href="/assets/blacklight/bookmark_toggle-97b6e8357b4b80f49f7978d752d5b6e7e7f728fe9415742ab71b74418d689fad.js">
+<link rel="modulepreload" href="/assets/blacklight/button_focus-9e15a08a7a1886d78f54ed5d25655a8a07a535dcdd4de584da5c6c6d47e4188c.js">
+<link rel="modulepreload" href="/assets/blacklight/checkbox_submit-7487e8aab30e3b1509ab58ee473b9a886d755332ade14642ecd98b4cff0c72ef.js">
+<link rel="modulepreload" href="/assets/blacklight/core-65db34d8f13f026bcc00abf2dc79a6d61c981f588e6e43b8ea002108656b0ae2.js">
+<link rel="modulepreload" href="/assets/blacklight/index-267e64c5525f71bbc998c7dcc67340a3a40ae3464988e067f0a65d7a8f5f58b3.js">
+<link rel="modulepreload" href="/assets/blacklight/modal-68610e6a319400c036afd544e8c05c9d5cf1b64c06ec2f06c0e94e3952366553.js">
+<link rel="modulepreload" href="/assets/blacklight/modalForm-02d8c117d37bf34110a491a76d0889980cb960ebfe1c1c2445e9de64e8637fee.js">
+<link rel="modulepreload" href="/assets/blacklight/search_context-73898e17aacbe00701917cb30c8edf9f3294ca3fa857f99e393bde1000dc4984.js">
+<link rel="modulepreload" href="/assets/blacklight-range-limit/index-c720a19fcc320a3b6c8c7d971ec8b00fd470d7478346681356d611777b93f295.js">
+<link rel="modulepreload" href="/assets/controllers/application-368d98631bccbf2349e0d4f8269afb3fe9625118341966de054759d96ea86c7e.js">
+<link rel="modulepreload" href="/assets/controllers/hello_controller-549135e8e7c683a538c3d6d517339ba470fcfb79d62f738a0a089ba41851a554.js">
+<link rel="modulepreload" href="/assets/controllers/index-2db729dddcc5b979110e98de4b6720f83f91a123172e87281d5a58410fc43806.js">
+<script type="module">import "application"</script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="2IyTjM3DqZm610qV1E11JJr_Sif7Xt4hiXPJqoduR6Qi3Ua1BjRzKqXVqK6c4TgMmvuL8TOrNDzFWyMAtOcO8w" />
+    <link rel="alternate" title="xml" type="application/xml" href="https://collections.nlm.nih.gov/catalog/nlm:nlmuid-101744658-img.xml" />
+<link rel="alternate" title="dc_xml" type="text/xml" href="https://collections.nlm.nih.gov/catalog/nlm:nlmuid-101744658-img.dc_xml" />
+<link rel="alternate" title="oai_dc_xml" type="text/xml" href="https://collections.nlm.nih.gov/catalog/nlm:nlmuid-101744658-img.oai_dc_xml" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MT6MLL');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- json Structured Metadata -->
+
+  </head>
+  <body class="blacklight-catalog blacklight-catalog-show">
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MT6MLL" height="0" width="0" style="display:none;visibility:hidden" title="googletagmanager"></iframe></noscript>
+    <!-- End Google Tag Manager -->
+    <nav id="skip-link" role="navigation" aria-label="Skip links">
+      <a class="element-invisible element-focusable rounded-bottom py-2 px-3" data-turbolinks="false" href="#search_field">Skip to search</a>
+      <a class="element-invisible element-focusable rounded-bottom py-2 px-3" data-turbolinks="false" href="#main-container">Skip to main content</a>
+      
+    </nav>
+    <section class="govt-banner">
+  <div class="container-fluid bg-secondary">
+    <div class="container">
+      <div class="accordion" id="uswdsbanner">
+        <div class="accordion-item">
+          <h2 class="accordion-header mb-0" id="headingOne">
+            <button class="accordion-button shadow-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <small> An official website of the United States government. &nbsp; <span class="bluelink">Here’s how you know</span></small>
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#uswdsbanner">
+            <div class="accordion-body">
+              <div class="row">
+                <div class="col-lg-6 col-md-12 col-12">
+                  <p>
+                    <img src="/icon-dot-gov.svg" class="img-fluid float-start pe-2 pb-4" alt="Govt building">
+                    <strong>Official websites use .gov</strong>
+                    <br> A <strong>.gov </strong>website belongs to an official government organization in the United States.
+                  </p>
+                </div>
+                <div class="col-lg-6 col-md-12 col-12">
+                  <p>
+                    <img src="/icon-https.svg" class="img-fluid float-start pe-2 pb-4" alt="Secure accsess">
+                    <strong>Secure .gov websites use HTTPS</strong>
+                    <br> A <strong>lock ( <span class="icon-lock">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 52 64" class="usa-banner__lock-image" role="img" aria-labelledby="banner-lock-title-default banner-lock-description-default" focusable="false">
+                          <title id="banner-lock-title-default">Lock</title>
+                          <desc id="banner-lock-description-default">A locked padlock</desc>
+                          <path fill="#000000" fill-rule="evenodd" d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z" />
+                        </svg>
+                      </span> ) </strong> or <strong>https://</strong> means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container-fluid bg-primary">
+  <div class="container branding">	
+    <div class="row py-2">
+      <div class="col-lg-4 col-md-5 mb-1">
+        <a href="/" id="anch_0"><img src="/images/digital_collections_white.png" class="img-fluid" alt="NLM Digital Collections"></a>
+      </div>
+      <div class="col-lg-8 col-md-7 ">
+        <form class="search-query-form" action="https://collections.nlm.nih.gov/" accept-charset="UTF-8" method="get">
+  
+  <div class="input-group">
+    
+
+      <input value="all_fields" autocomplete="off" type="hidden" name="search_field" id="search_field" />
+
+    <label class="sr-only visually-hidden" for="q">search for</label>
+      <auto-complete src="/catalog/suggest" for="autocomplete-popup" class="search-autocomplete-wrapper">
+        <input placeholder="Search..." class="search-q q form-control rounded-left" aria-label="search for" aria-autocomplete="list" aria-controls="autocomplete-popup" type="search" name="q" id="q" />
+        <ul id="autocomplete-popup" role="listbox" aria-label="search for"></ul>
+      </auto-complete>
+
+    
+    <button class="btn btn-primary search-btn" type="submit" id="search"><span class="visually-hidden-sm me-sm-1 submit-search-text">Search</span><span class="blacklight-icons blacklight-icons-"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+  <path fill="none" d="M0 0h24v24H0V0z"/><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+</svg>
+</span></button>
+  </div>
+</form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-secondary">
+  <div class="container">
+	<nav class="navbar navbar-expand navbar-light p-1">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="/help">Help</a></li>
+        <li class="nav-item"><a class="nav-link" href="/web_service">Web Service</a></li>
+      </ul>
+    </nav>
+  </div>  
+</div>
+
+    <script>
+      (function() {
+        const NONCOOP_DISMISSED_KEY = "nlm-banner-dismissed";
+        let banner, text, noncoopBanner, noncoopText;
+
+        function isNoncoopDismissed() {
+          try { return localStorage.getItem(NONCOOP_DISMISSED_KEY) === "true"; } catch (e) { return false; }
+        }
+
+        function showNoncoopBannerIfAvailable() {
+          if (!noncoopBanner) {
+            noncoopBanner = document.getElementById("noncoop-banner");
+            noncoopText = document.getElementById("noncoop-text");
+            if (!noncoopBanner || !noncoopText) return;
+            noncoopBanner.querySelector(".btn-close").addEventListener("click", function() {
+              try { localStorage.setItem(NONCOOP_DISMISSED_KEY, "true"); } catch (e) {}
+              noncoopBanner.style.display = "none";
+            });
+          }
+
+          if (!isNoncoopDismissed() && typeof noncoopMessageALL !== "undefined" && noncoopMessageALL) {
+            noncoopText.innerHTML = noncoopMessageALL;
+            noncoopBanner.style.display = "block";
+          } else {
+            noncoopBanner.style.display = "none";
+          }
+        }
+
+        function showCoopBannerIfAvailable() {
+          // Cache DOM elements on first call
+          if (!banner) {
+            banner = document.getElementById("coop-banner");
+            text = document.getElementById("coop-text");
+            if (!banner || !text) return;
+          }
+
+          if (typeof coopmsg !== "undefined" && coopmsg) {
+            text.innerHTML = coopmsg;
+            banner.style.display = "block";
+          } else {
+            banner.style.display = "none";
+          }
+        }
+
+        function showBanners() {
+          showNoncoopBannerIfAvailable();
+          showCoopBannerIfAvailable();
+        }
+
+        // Load external script
+        const script = document.createElement("script");
+        script.src = "https://www.nlm.nih.gov/coop_all_uswds.js?v=" + Date.now();
+        script.onload = script.onerror = showBanners;
+        document.head.appendChild(script);
+
+        // Also check on DOMContentLoaded
+        document.addEventListener("DOMContentLoaded", showBanners);
+      })();
+    </script>
+
+    <style>
+      .alert-dark-red {
+        background-color: #f00;
+        color: #fff;
+        border-radius: 0;
+      }
+      .alert-dark-red a {
+        color: #aad4ff;
+        text-decoration: underline;
+      }
+      .alert-dark-red .btn-close {
+        filter: invert(1);
+      }
+      /* USWDS utility classes used inside noncoopMessageALL */
+      #noncoop-text .margin-bottom-0 { margin-bottom: 0; }
+      #noncoop-text .text-underline { text-decoration: underline; }
+      #noncoop-banner { background-color: #162e51; }
+      #noncoop-text ul { margin: 0.25rem 0 0; }
+    </style>
+
+    <div id="noncoop-banner"
+         class="alert text-white rounded-0 mb-0 py-2"
+         role="region"
+         aria-label="Site notice"
+         style="display:none">
+      <div class="container">
+        <div class="row align-items-start">
+          <div class="col" id="noncoop-text"></div>
+          <div class="col-auto">
+            <button type="button" class="btn-close btn-close-white" aria-label="Dismiss banner"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="coop-banner"
+         class="alert alert-dark-red alert-dismissible fade show mb-0"
+         role="alert"
+         style="display:none">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col">
+            <p id="coop-text" class="text-white text-center m-0"></p>
+          </div>
+          <div class="col-auto">
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main id="main-container" class="container mt-4" role="main" aria-label="Main content">
+      
+
+      <div class="row">
+  <div class="col-md-12">
+    <div id="main-flashes">
+      <div class="flash_messages">
+    
+    
+    
+    
+</div>
+
+    </div>
+  </div>
+</div>
+
+
+      <div class="row">
+          <section class="col-lg-12 show-document">
+    
+
+
+
+
+
+<h1 itemprop="name">
+  Prof. Röntgen
+</h1>
+
+<div class="row flex-column-reverse flex-md-row">
+  <div class="col-md-6">
+  <div id="document" data-document-id="nlm-nlmuid-101744658-img" itemscope="itemscope" itemtype="http://schema.org/Thing" class="document">
+  
+    <div class="document-main-section">
+      <header class="documentHeader row">
+  <h1 class="d-none">
+
+    <span itemprop="name">Prof. Röntgen</span>
+</h1>
+</header>
+
+      
+      
+      
+<dl class="document-metadata dl-invert row">    <dt class="blacklight-drep2-ismemberofcollection col-md-3">    Collection:
+</dt>
+  <dd class="col-md-9 blacklight-drep2-ismemberofcollection">    <a href="/?f%5Bdrep2.isMemberOfCollection%5D%5B%5D=DREPIHM">Images from the History of Medicine (IHM)</a>
+</dd>
+
+    <dt class="blacklight-drep-pubconcat col-md-3">    Publication:
+</dt>
+  <dd class="col-md-9 blacklight-drep-pubconcat">    Produced: [1901?]
+</dd>
+
+    <dt class="blacklight-drep2-language col-md-3">    Language(s):
+</dt>
+  <dd class="col-md-9 blacklight-drep2-language">    <a href="/?f%5Bdrep2.language%5D%5B%5D=German">German</a>
+</dd>
+
+    <dt class="blacklight-drep-format col-md-3">    Format:
+</dt>
+  <dd class="col-md-9 blacklight-drep-format">    Still image
+</dd>
+
+    <dt class="blacklight-drep2-subjectaggregate col-md-3">    Subject(s):
+</dt>
+  <dd class="col-md-9 blacklight-drep2-subjectaggregate">    <a href="/?f%5Bdrep2.subjectAggregate%5D%5B%5D=Laboratory+Personnel">Laboratory Personnel</a><br/><a href="/?f%5Bdrep2.subjectAggregate%5D%5B%5D=Ro%CC%88ntgen%2C+Wilhelm+Conrad%2C+1845-1923.">Röntgen, Wilhelm Conrad, 1845-1923.</a>
+</dd>
+
+    <dt class="blacklight-drep2-subjectgenre col-md-3">    Genre(s):
+</dt>
+  <dd class="col-md-9 blacklight-drep2-subjectgenre">    <a href="/?f%5Bdrep2.subjectGenre%5D%5B%5D=Photograph">Photograph</a><br/><a href="/?f%5Bdrep2.subjectGenre%5D%5B%5D=Portrait">Portrait</a>
+</dd>
+
+    <dt class="blacklight-drep-abstract col-md-3">    Abstract:
+</dt>
+  <dd class="col-md-9 blacklight-drep-abstract">    Black and white photograph portrait: head and shoulders, head to left.
+</dd>
+
+    <dt class="blacklight-drep-rights col-md-3">    Copyright:
+</dt>
+  <dd class="col-md-9 blacklight-drep-rights">    The National Library of Medicine believes this item to be in the public domain. (<a target="blank" href="https://creativecommons.org/publicdomain/mark/1.0/">More information</a>)
+</dd>
+
+    <dt class="blacklight-drep-extentimage col-md-3">    Extent:
+</dt>
+  <dd class="col-md-9 blacklight-drep-extentimage">    1 photograph : 30 x 20 cm
+</dd>
+
+    <dt class="blacklight-drep-techniqueimage col-md-3">    Technique:
+</dt>
+  <dd class="col-md-9 blacklight-drep-techniqueimage">    silver gelatin DOP, black and white
+</dd>
+
+    <dt class="blacklight-drep-identifiernlm col-md-3">    NLM Unique ID:
+</dt>
+  <dd class="col-md-9 blacklight-drep-identifiernlm">    101744658 (<a target="blank" href="https://catalog.nlm.nih.gov/nde/search?query=lds04,exact,101744658&amp;tab=LibraryCatalog&amp;search_scope=MyInstitution&amp;mode=advanced&amp;lang=en&amp;vid=01NLM_INST:NDE">See catalog record</a>)
+</dd>
+
+    <dt class="blacklight-drep-identifieroclc col-md-3">    OCLC no.:
+</dt>
+  <dd class="col-md-9 blacklight-drep-identifieroclc">    1091587249
+</dd>
+
+    <dt class="blacklight-drep-permalink col-md-3">    Permanent Link:
+</dt>
+  <dd class="col-md-9 blacklight-drep-permalink">    <a href="http://resource.nlm.nih.gov/101744658">http://resource.nlm.nih.gov/101744658</a>
+</dd>
+
+</dl>
+
+
+        
+    </div>
+
+    
+  
+</div>  </div>
+
+  <div class="col-md-6">
+    <div id="viewer" align="center">
+      <!-- BOOKS -->
+	    <a target="_blank" href="/bookviewer?PID=nlm:nlmuid-101744658-img"><img class="preview_image" src="/preview/nlm:nlmuid-101744658-img" alt='Prof. Röntgen'></img></a>
+        <a target="_blank" class="btn btn-primary" href="/bookviewer?PID=nlm:nlmuid-101744658-img">View Image</a>
+        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">Download</button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" target="_blank" href="/master/nlm:nlmuid-101744658-img">Master Image (TIFF)</a>
+          <a class="dropdown-item" target="_blank" download="nlm:nlmuid-101744658-img.jpg" onclick="createImage('nlm:nlmuid-101744658-img', 'nlm:nlmuid-101744658-img', 'iiif.nlm.nih.gov/iiif/2'); return false;" href="/jpg/nlm:nlmuid-101744658-img">Standard Image (JPG)</a>
+          <a class="dropdown-item" target="_blank" href="/dc/nlm:nlmuid-101744658-img">Metadata (Dublin Core)</a>
+        </div>
+      <!-- SOFTWARE  -->
+	  
+    </div>
+  </div>
+</div>
+
+<!-- VideoJS  -->
+<link href="//vjs.zencdn.net/8.17.0/video-js.css" rel="stylesheet" />
+<script src="//vjs.zencdn.net/8.17.0/video.js"></script>
+
+<!-- Struct  -->
+<script type="text/javascript">
+function getVars( name ){
+	name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+	var regexS = "[\\?&]"+name+"=([^&#]*)";
+	var regex = new RegExp( regexS );
+	var results = regex.exec( window.location.href );
+	if ( results == null ) return "";
+	else return results[1];
+}
+var leaf = getVars('leaf');
+
+if (leaf === "" && window.location.href.includes("leaf")) {
+    window.location.reload(true);
+}
+
+$(document).ready(function(){
+	$("#structOH").load("/displaystruct/nlm:nlmuid-101744658-img", function() {
+		$('li.tree').addClass('mb-3');
+		$('.tree li.tree').removeClass('mb-3');
+		$('.tree-toggle').click(function () {
+			$(this).parent().children('ul.tree').toggle(200);
+			//Plus & Minus
+			var children = $(this).parent('li.parent_li').find(' > ul > li');
+			if ($(this).find(' > i').attr("class")=='icon-minus-sign') {
+				children.hide('fast');
+				$(this).removeAttr('title').attr('title', "Click to Expand");
+				$(this).find(' > i').addClass('icon-plus-sign').removeClass('icon-minus-sign');
+			} else {
+				children.show('fast');
+				$(this).removeAttr('title').attr('title', "Click to Collapse");
+				$(this).find(' > i').addClass('icon-minus-sign').removeClass('icon-plus-sign');
+			}
+		});
+		$('node.tree-toggle').removeAttr('title').attr('title', "Click to Collapse");
+		$('i.icon-plus-sign').addClass('icon-minus-sign').removeClass('icon-plus-sign');	
+	});
+	$("#struct").load("/displaystruct/nlm:nlmuid-101744658-img", function() {
+		// Only Medline+ Magazines: add a thumbnail under each leaf title
+		$('ul.tree').hide();
+		$('li.tree').addClass('mb-3');
+		$('.tree li.tree').removeClass('mb-3');
+		$('.tree-toggle').click(function () {
+			$(this).parent().children('ul.tree').toggle(200);
+			//Plus & Minus
+			var children = $(this).parent('li.parent_li').find(' > ul > li');
+			if ($(this).find(' > i').attr("class")=='icon-minus-sign') {
+				children.hide('fast');
+				$(this).removeAttr('title').attr('title', "Click to Expand");
+				$(this).find(' > i').addClass('icon-plus-sign').removeClass('icon-minus-sign');
+			} else {
+				children.show('fast');
+				$(this).removeAttr('title').attr('title', "Click to Collapse");
+				$(this).find(' > i').addClass('icon-minus-sign').removeClass('icon-plus-sign');
+			}
+			//Enable "open all" and "close all" buttons
+			$('#openall').removeClass('disabled');
+			$('#closeall').removeClass('disabled');
+		});
+
+		//Highliting
+		($(this).find('a')).each(function(index, value){
+			if (value.innerHTML == decodeURI(leaf)){
+				$(this).parent().wrap('<span alt="Search result" class="highlight" id ="hlight"></span>');
+			}
+		});
+
+		//Expand highlighted branches only
+		($(this).find('ul')).each(function(index, value){
+			var x = value.getElementsByTagName("span");
+			var y = x.hlight;
+			if (y){
+				$(this).addClass('expand-highlight');
+				($(this).find(' li ')).each(function(index2, value2){
+					var m = value2.getElementsByTagName("span");
+					var n = m.hlight;
+					if (n){
+						($(this).find('node')).first().removeAttr('title').attr('title', "Click to Collapse");
+						($(this).find('node > i')).first().addClass('icon-minus-sign').removeClass('icon-plus-sign');
+					}
+				});
+			}
+			$('ul.expand-highlight').show();
+		});
+	});
+});
+
+function toggleShowAll() {
+	$('ul.tree').show();
+	$('node.tree-toggle').removeAttr('title').attr('title', "Click to Collapse");
+	$('i.icon-plus-sign').addClass('icon-minus-sign').removeClass('icon-plus-sign');
+	$('#openall').addClass('disabled');
+	$('#closeall').removeClass('disabled');
+}
+
+function toggleHideAll() {
+	$('ul.tree').hide();
+	$('node.tree-toggle').removeAttr('title').attr('title', "Click to Expand");
+	$('i.icon-minus-sign').addClass('icon-plus-sign').removeClass('icon-minus-sign');
+	$('#openall').removeClass('disabled');
+	$('#closeall').addClass('disabled');
+}
+
+// Added keypress "Enter" and mouse click event listeners to the playlist track
+playlist.addEventListener("click", audioListHandler, false);
+playlist.addEventListener("keypress", audioListHandler, false);
+
+// function for the playlist to change audio input based on the datavalue
+function audioListHandler(input) {
+    if(input.which == 13 || input.type === "click") {
+      //base case, if no event gets explicitly handled, no action will be taken
+      input.preventDefault();
+
+      //take the inputand make it the event target that will execute the following code
+      let elm = input.target;
+
+      //Code for changing active status on which button is pressed
+      if(elm.nodeName == "LI") { //check to see if the selected list item tag is "LI"
+          //set a temporary variable to the returned value of the element object with an active class
+          let current = document.getElementsByClassName("active");
+          //if there exists any element with an active class we will remove the active tag
+          if(current.length > 0) { 
+              current[0].classList.remove("active");
+          }
+          //set the event targets class to active because it was clicked on
+          elm.classList.add("active");
+      }
+      //find the "primary audio player" that gets loaded
+      let audio = document.getElementById("primary");
+      //obtain the source tag for where the sound needs to be changed to
+      let source = document.getElementById("sound");
+      //grab the new value of what list item was clicked on and transfer its value to the source of the primary audio player
+      source.src = elm.getAttribute("data-value");
+
+      audio.load(); //preloads the audio without playing
+      audio.play(); //plays the song immediately
+    }
+}
+
+</script>
+
+<!-- SaveJPGWithMeaningfulName -->
+<script src="/scripts/FileSaver.js"></script>
+<script>
+	function createImage(src, name, hostname) {
+		src = "https://".concat(hostname, "/", src, "/full/full/0/default.jpg");
+		if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+			var new_tab = window.open(src, "_blank");
+			if (new_tab == undefined && typeof safari !== "undefined") {
+					//Apple do not allow window.open, see http://bit.ly/1kZffRI
+					window.location.href = src;
+			}
+		} else {
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", src, true);
+			// Ask for the result as an ArrayBuffer.
+			xhr.responseType = "arraybuffer";
+
+			xhr.onload = function(e) {
+					// Obtain a blob: URL for the image data.
+					var arrayBufferView = new Uint8Array(this.response);
+					var blob = new Blob([arrayBufferView], {type: "image/jpeg"});
+					var urlCreator = window.URL || window.webkitURL;
+					var imageUrl = urlCreator.createObjectURL(blob);
+					var fileName = name.concat(".jpg");
+					saveAs(blob, fileName);
+			};
+
+			xhr.send();
+		}
+	}
+</script>
+
+
+  </section>
+
+      </div>
+    </main>
+
+    <div class="bg-secondary border-top border-primary">
+  <div class="container py-2">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <p class="mb-0"><strong>ISSN 3071-5016</strong></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer bg-primary text-white">
+<div class="container-fluid">
+  <div class="container pt-2">
+    <div class="row mt-3">
+	  <div class="col-md-3 col-sm-6 col-6">
+        <p><a href="https://www.nlm.nih.gov/socialmedia/index.html" class="text-white" id="anch_75">Connect with NLM</a></p>
+        <ul class="list-inline social_media">
+          <li class="list-inline-item"><a title="External link: please review our privacy policy." href="https://www.facebook.com/nih.gov"><img src="/images/facebook.svg" class="img-fluid bg-secondary" alt="Facebook"></a></li>
+          <li class="list-inline-item"><a title="External link: please review our privacy policy." href="https://www.linkedin.com/company/national-institutes-of-health"><img src="/images/linkedin.svg" class="img-fluid bg-secondary" alt="LinkedIn"></a></li>
+          <li class="list-inline-item"><a title="External link: please review our privacy policy." href="https://x.com/nih"><img src="/images/twitter.svg" class="img-fluid bg-secondary" alt="Twitter"></a></li>
+          <li class="list-inline-item"><a title="External link: please review our privacy policy." href="https://www.youtube.com/user/NLMNIH"><img src="/images/youtube.svg" class="img-fluid bg-secondary" alt="You Tube"></a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 col-sm-6 col-6">
+        <p class="address_footer text-white">National Library of Medicine<br>
+        <a href="//www.google.com/maps/place/8600+Rockville+Pike,+Bethesda,+MD+20894/@38.9959508,-77.101021,17z/data=!3m1!4b1!4m5!3m4!1s0x89b7c95e25765ddb:0x19156f88b27635b8!8m2!3d38.9959508!4d-77.0988323" class="text-white" id="anch_77">8600 Rockville Pike <br>Bethesda, MD 20894</a></p>
+      </div>	  
+      <div class="col-md-3 col-sm-6 col-6">
+        <p><a href="//www.nlm.nih.gov/web_policies.html" class="text-white" id="anch_78">Web Policies</a><br>
+        <a href="//www.nih.gov/institutes-nih/nih-office-director/office-communications-public-liaison/freedom-information-act-office" class="text-white" id="anch_79">FOIA</a><br>
+        <a href="//www.hhs.gov/vulnerability-disclosure-policy/index.html" class="text-white" id="anch_80">HHS Vulnerability Disclosure</a></p>
+      </div>
+      <div class="col-md-3 col-sm-6 col-6">
+        <p><a class="supportLink text-white" href="//support.nlm.nih.gov?from=https://collections.nlm.nih.gov/catalog/nlm:nlmuid-101744658-img" id="anch_81">NLM Support Center</a> <br>
+        <a href="//www.nlm.nih.gov/accessibility.html" class="text-white" id="anch_82">Accessibility</a><br>
+        <a href="//www.nlm.nih.gov/careers/careers.html" class="text-white" id="anch_83">Careers</a></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <p class="mt-2 text-center"> <a class="text-white" href="//www.nlm.nih.gov/" id="anch_84">NLM</a> | <a class="text-white" href="https://www.nih.gov/" id="anch_85">NIH</a> | <a class="text-white" href="https://www.hhs.gov/" id="anch_86">HHS</a> | <a class="text-white" href="https://www.usa.gov/" id="anch_87">USA.gov</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+</footer>
+
+    <dialog id="blacklight-modal" class="modal" data-turbo="false">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+    </div>
+  </div>
+</dialog>
+
+  </body>
+</html>
