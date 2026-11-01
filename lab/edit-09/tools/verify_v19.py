@@ -53,7 +53,7 @@ def main(final, captions_path, shutter_only, voice):
         print(f"{c['text']:30s} f{c['frame']:4d}   {ws:6.3f}s   {lead * 1000:+5.0f} ms {'' if ok else '  <-- OUT OF RANGE'}")
         wi += 1
     fin, ref = hp(load(final)), hp(load(shutter_only))
-    offs = []
+    offs, weak = [], []
     for c in caps:
         ft = c["frame"] / FPS
         a, b = int(max(0, ft - 0.03) * SR), int((ft + 0.03) * SR)
@@ -66,8 +66,11 @@ def main(final, captions_path, shutter_only, voice):
             if cc > best:
                 best, lb = cc, lag
         offs.append(lb / SR * 1000)
+        if best < 0.3 or np.abs(r).max() < 1e-4:                                 # no clear shutter there: missing or buried
+            weak.append(f"{c['text']} (f{c['frame']}, match {best:.2f})")
     print("\nshutter biggest wave vs caption frame (ms):", " ".join(f"{o:+.1f}" for o in offs))
-    print(f"\ncaptions out of range: {bad}; shutters off by more than 1 ms: {sum(abs(o) > 1 for o in offs)}")
+    print(f"\ncaptions out of range: {bad}; shutters off by more than 1 ms: {sum(abs(o) > 1 for o in offs)}; "
+          f"shutters missing or not found: {len(weak)} {weak}")
 
 
 if __name__ == "__main__":

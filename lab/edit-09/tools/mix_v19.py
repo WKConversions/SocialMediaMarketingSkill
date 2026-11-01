@@ -68,6 +68,9 @@ def under_db(voice, music):
 
 
 def main(video, sfx_wav, out):
+    import os
+    if os.path.getmtime(sfx_wav) < os.path.getmtime(f"{E}/out/v19_events.json"):
+        raise SystemExit(f"{sfx_wav} is older than out/v19_events.json: re-run sfx_v19.py (captions or labels changed)")
     cfg = json.load(open(f"{SKILL}/styles/prime.json"))["mix"]
     ed = json.load(open(f"{E}/out/edit_v19.json"))
     dur = ed["duration"]
