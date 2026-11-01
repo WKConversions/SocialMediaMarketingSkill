@@ -74,19 +74,26 @@
   "kind": "image",
   "mode": "fit",
   "center": [
-   0.63,
+   0.4,
    0.5
   ],
   "focus": [
-   0.55,
+   0.4,
    0.45
   ],
   "push": 0.05,
   "label": "Kitty Hawk, 1902",
   "record": "[Wilbur gliding in level flight, single rear rudder clearly visible; Kitty Hawk, North Carolina] [1902 Oct. 17], LC-DIG-ppprs-00601",
   "licence": "Library of Congress, Wright Brothers Negatives: No known restrictions",
-  "zoom": 1.6,
-  "y": 0.42
+  "zoom": 1.3,
+  "y": 0.43,
+  "crop": [
+   0.3,
+   0.3,
+   0.975,
+   0.96
+  ],
+  "fact_check": "keep=true; crop clear of the emulsion loss (left third, top-left to x 0.46 above y 0.25)"
  },
  "flyer_camp": {
   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-09/broll/photos/08_flyer_1903_front_view/flyer_1903_front_view_LC-DIG-ppprs-00615.jpg",
