@@ -60,6 +60,10 @@ these on every video unless the client says otherwise for a specific project.
 - big text graphic pops up (canvas titles, big words): glitch, starting on its first frame
 - build tension into a key point or reveal: riser, peaking on the moment
 
+## Colour
+- Keep the client's original lighting on the talking head: no colour grading on the speaker when the client films
+  with a deliberate light (e.g. the red-light videos). Archival images keep their print treatment; canvases unchanged.
+
 ## Transitions and flashes
 - Negative (inverted) flash frames, 1-3 frames, on view switches and as in-shot flicker.
 - The client is fine with more than 3 flashes per second (no photosensitivity cap requested).

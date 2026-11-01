@@ -20,7 +20,11 @@ sys.path.insert(0, "/home/user/SocialMediaMarketingSkill/lab/edit-05/tools")
 sys.path.insert(0, "/home/user/SocialMediaMarketingSkill/lab/edit-08/tools")
 import quick_prime as qp  # noqa: E402
 from grade import grade_print  # noqa: E402
-from grade_furnace import grade_furnace as grade_talking  # noqa: E402  (red light read as furnace glow)
+
+
+def grade_talking(x, era="history", rng=None):
+    """Client: keep the original lighting, no colour grading on the speaker (the footage goes through untouched)."""
+    return x
 
 Image.MAX_IMAGE_PIXELS = None
 LAB = "/home/user/SocialMediaMarketingSkill/lab"
