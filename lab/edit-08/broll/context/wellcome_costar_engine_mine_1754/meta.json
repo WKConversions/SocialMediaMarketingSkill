@@ -1,0 +1,29 @@
+{
+ "id": "wellcome_costar_engine_mine_1754",
+ "kind": "image",
+ "title": "A mine: cross-section of a machine for extracting water from the pit and three optical diagrams. Etching by T. Jefferys.",
+ "date": "[1754] (Wellcome)",
+ "use_for": "mine_context",
+ "colour": false,
+ "depicts": "Engraved book plate (Plate CLXXX, 'facing page 2123'). Left half, 'Fig. 1. Costar's Engine for raising Water out of MINES': a tall timber frame set against dark rock, with an endless chain of buckets running up a shaft, water spouting out at the top (A) into a trough (W); at the bottom cranks/pump rods (I, K) stand in water (Z) above two pipes (M) going down into the ground. Right half (unrelated): 'Fig. 2. Mirrours' optical ray diagrams and 'Fig. 3. Mnium' (a moss). Signed 'T. Jefferys sculp'. Crop fig1_costar_engine_crop.jpg (1037x3014) keeps only Fig. 1. English, mid-18th c.: the mine-drainage problem.",
+ "evidence": "Wellcome Collection work as3ap3ap, ref. 29267i: title 'A mine: cross-section of a machine for extracting water from the pit and three optical diagrams. Etching by T. Jefferys.' ; physical '1 print : etching with engraving ; platemark 20 x 11.5 cm' ; production '[London] : [1754]' ; contributor 'Thomas Jefferys' ; lettering 'Minium. Mirrours. Costar's engine for raising water out of mines. ; T. Jefferys sculp. Bears plate number: Pl. 180' ; subjects 'Lead', 'Mines and mineral resources' ; IIIF V0023521 licence 'Public Domain Mark'. (Wellcome's 'Minium' lettering transcription vs the plate's visible 'MNIUM' is a catalogue typo.)",
+ "source_url": "https://wellcomecollection.org/works/as3ap3ap",
+ "licence": "Public Domain Mark 1.0 (Wellcome Collection; image V0023521)",
+ "subject_box": [
+  0.0,
+  0.125,
+  0.488,
+  0.93
+ ],
+ "file": "/home/user/SocialMediaMarketingSkill/lab/edit-08/broll/context/wellcome_costar_engine_mine_1754/wellcome_costar_engine_mine_1754.jpg",
+ "width": 2126,
+ "height": 3745,
+ "derived_files": [
+  {
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-08/broll/context/wellcome_costar_engine_mine_1754/fig1_costar_engine_crop.jpg",
+   "width": 1037,
+   "height": 3014,
+   "note": "crop of the original, made locally"
+  }
+ ]
+}

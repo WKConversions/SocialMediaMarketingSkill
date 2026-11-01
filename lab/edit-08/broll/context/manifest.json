@@ -1,0 +1,146 @@
+{
+ "items": [
+  {
+   "id": "wellcome_pontpean_mine_drainage_machine",
+   "kind": "image",
+   "title": "A mine: cross-section of a machine for extracting water from the pit. Etching by Bénard after L.J. Goussier.",
+   "date": "[between 1700 and 1799] (Wellcome); Minéralogie plate, Diderot/d'Alembert Encyclopédie style (my inference, not stated in the record)",
+   "use_for": "mine_context",
+   "colour": false,
+   "depicts": "Black-and-white engraved plate (Pl. IV). Top: a large undershot water wheel (water enters from the left at 'A', arrow) on a timber frame with six chain sprockets/pulleys; below ground level a deep timber-lined mine shaft in cross-section, hatched rock on both sides, with long vertical pump rods and chains running down the shaft and a stack of pump barrels on the right side (labels E, F, G, H). Scale bar 'Toises' at lower left. Bottom lettering: 'Minéralogie, Élévation de la Machine pour tirer les Eaux, aux Mines de Pontpéan.' Signed 'Goussier Del.' / 'Benard Fecit'. Shows exactly the problem Savery addressed: water having to be pumped out of a deep mine, here by water-wheel power.",
+   "evidence": "Wellcome Collection work xmj3ne6h, ref. 28854i: title 'A mine: cross-section of a machine for extracting water from the pit. Etching by Bénard after L.J. Goussier.' ; physical '1 print : etching with engraving ; platemark 35.5 x 22 cm' ; production '[Paris] : [between 1700 and 1799]' ; lettering 'Minéralogie, élévation de la machine tirer les eaux, aux mines de Pontpéan. Goussier del. Benard fecit. Bears plate number: Pl. 4' ; IIIF V0023513EL licence 'Public Domain Mark', credit 'Wellcome Collection'.",
+   "source_url": "https://wellcomecollection.org/works/xmj3ne6h",
+   "licence": "Public Domain Mark 1.0 (Wellcome Collection; image V0023513EL)",
+   "subject_box": [
+    0.03,
+    0.03,
+    0.97,
+    0.93
+   ],
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-08/broll/context/wellcome_pontpean_mine_drainage_machine/wellcome_pontpean_mine_drainage_machine.jpg",
+   "width": 1225,
+   "height": 2043
+  },
+  {
+   "id": "wellcome_costar_engine_mine_1754",
+   "kind": "image",
+   "title": "A mine: cross-section of a machine for extracting water from the pit and three optical diagrams. Etching by T. Jefferys.",
+   "date": "[1754] (Wellcome)",
+   "use_for": "mine_context",
+   "colour": false,
+   "depicts": "Engraved book plate (Plate CLXXX, 'facing page 2123'). Left half, 'Fig. 1. Costar's Engine for raising Water out of MINES': a tall timber frame set against dark rock, with an endless chain of buckets running up a shaft, water spouting out at the top (A) into a trough (W); at the bottom cranks/pump rods (I, K) stand in water (Z) above two pipes (M) going down into the ground. Right half (unrelated): 'Fig. 2. Mirrours' optical ray diagrams and 'Fig. 3. Mnium' (a moss). Signed 'T. Jefferys sculp'. Crop fig1_costar_engine_crop.jpg (1037x3014) keeps only Fig. 1. English, mid-18th c.: the mine-drainage problem.",
+   "evidence": "Wellcome Collection work as3ap3ap, ref. 29267i: title 'A mine: cross-section of a machine for extracting water from the pit and three optical diagrams. Etching by T. Jefferys.' ; physical '1 print : etching with engraving ; platemark 20 x 11.5 cm' ; production '[London] : [1754]' ; contributor 'Thomas Jefferys' ; lettering 'Minium. Mirrours. Costar's engine for raising water out of mines. ; T. Jefferys sculp. Bears plate number: Pl. 180' ; subjects 'Lead', 'Mines and mineral resources' ; IIIF V0023521 licence 'Public Domain Mark'. (Wellcome's 'Minium' lettering transcription vs the plate's visible 'MNIUM' is a catalogue typo.)",
+   "source_url": "https://wellcomecollection.org/works/as3ap3ap",
+   "licence": "Public Domain Mark 1.0 (Wellcome Collection; image V0023521)",
+   "subject_box": [
+    0.0,
+    0.125,
+    0.488,
+    0.93
+   ],
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-08/broll/context/wellcome_costar_engine_mine_1754/wellcome_costar_engine_mine_1754.jpg",
+   "width": 2126,
+   "height": 3745,
+   "derived_files": [
+    {
+     "file": "/home/user/SocialMediaMarketingSkill/lab/edit-08/broll/context/wellcome_costar_engine_mine_1754/fig1_costar_engine_crop.jpg",
+     "width": 1037,
+     "height": 3014,
+     "note": "crop of the original, made locally"
+    }
+   ]
+  },
+  {
+   "id": "wellcome_mine_galleries_miners_digging",
+   "kind": "image",
+   "title": "A mine: cross-sections of the galleries with miners digging. Etching by R. Bénard after L.J. Goussier.",
+   "date": "[between 1700 and 1799] (Wellcome); Encyclopédie-style Minéralogie plate (my inference)",
+   "use_for": "mine_context",
+   "colour": false,
+   "depicts": "Engraved plate (Pl. III). Top strip: surface landscape with mountains, a cut-away timber winding house with a large vertical drum, probably a horse gin (Fig. 1), a shed and a wooden launder/bridge (Fig. 2). Below: a cut-away of the ground showing a deep vertical shaft lined with timber cribbing, ladders, and side galleries; small figures of miners hacking at the rock with picks on stepped working faces at the bottom (letters P-V) and one miner in a gallery at left (X); inset vignettes of timbering methods (a-m). Lettering 'Minéralogie, Coupe d'une Mine', 'Goussier Del.', 'Benard Fecit'. Good 'how deep mines are' shot; no water pumping shown explicitly.",
+   "evidence": "Wellcome Collection work eb6naajq, ref. 28822i: title 'A mine: cross-sections of the galleries with miners digging. Etching by R. Bénard after L.J. Goussier.' ; physical '1 print : etching with engraving ; platemark 36 x 22.5 cm' ; production '[Paris] : [between 1700 and 1799]' ; lettering 'Minéralogie, coupe d'une mine. Goussier del. Benard fecit. Bears plate number: Pl. 3' ; IIIF V0023511ER licence 'Public Domain Mark'.",
+   "source_url": "https://wellcomecollection.org/works/eb6naajq",
+   "licence": "Public Domain Mark 1.0 (Wellcome Collection; image V0023511ER)",
+   "subject_box": [
+    0.04,
+    0.03,
+    0.96,
+    0.94
+   ],
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-08/broll/context/wellcome_mine_galleries_miners_digging/wellcome_mine_galleries_miners_digging.jpg",
+   "width": 1288,
+   "height": 2156
+  },
+  {
+   "id": "rijks_luyken_bergwercker_1694",
+   "kind": "image",
+   "title": "Mijnwerker ('De Bergwercker'), plate 75 of Het Menselyk Bedryf, Jan and Caspar Luyken",
+   "date": "1694 (Rijksmuseum; first edition of Het Menselyk Bedryf)",
+   "use_for": "mine_context",
+   "colour": false,
+   "depicts": "Small etching on a sheet with wide margin. Heading 'De Bergwercker.' and motto 'Hoe hoog van waarde, 't Is Stof der Aarden.', number 75. In the picture: a miner in a hooded smock sits resting in the foreground with a cup and bread, beside a wheelbarrow and a pick-axe with lumps of ore; behind him, at a rock face with a cave-like mine entrance, other miners work a large horizontal windlass (hoist) on a timber frame and push barrows; mountains and clouds behind. Below, a six-line Dutch verse ('Al leidt het diep verdeckt voor d'oogen ...'). Exactly period (1694, four years before Savery's patent); shows miners and mine-head hoisting, not water pumping. Picture panel only: approx x 0.09-0.90, y 0.157-0.707.",
+   "evidence": "Rijksmuseum RP-P-OB-44.531 (id 200223669): titles 'Mijnwerker' / 'De Bergwercker' / series 'Het Menselyk Bedryf', '75/100' ; 'printmaker: Caspar Luyken, Amsterdam' ; 'printmaker: Jan Luyken, Amsterdam' ; 'after drawing by Jan Luyken' ; date '1694' ; note 'Maakt deel uit van de 100-delige serie beroepsprenten van Jan en Caspar Luyken, getiteld: Het menselyk bedryf. S.l.s.n., 1694 (eerste druk).' ; 'ets', plate 143 x 84 mm ; image access point iiif.micr.io/XwCmU tagged https://creativecommons.org/publicdomain/mark/1.0/ ('downloadbaar').",
+   "source_url": "https://www.rijksmuseum.nl/nl/collectie/object/RP-P-OB-44.531--833f353d1a20f4918f3147c339dd4e63",
+   "licence": "Public Domain Mark 1.0 (Rijksmuseum image; metadata CC0)",
+   "subject_box": [
+    0.09,
+    0.157,
+    0.9,
+    0.707
+   ],
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-08/broll/context/rijks_luyken_bergwercker_1694/rijks_luyken_bergwercker_1694.jpg",
+   "width": 3080,
+   "height": 5040
+  },
+  {
+   "id": "rijks_four_royal_palaces_1723",
+   "kind": "image",
+   "title": "The four royall palaces of England viz: St. James's, Kensington, Hampton Court and Windsor (John Bowles) - use the Hampton Court quadrant",
+   "date": "1723-1733 (Rijksmuseum); the Hampton Court view follows the Kip/Knyff Britannia Illustrata type of c. 1707 (my inference, not in the record)",
+   "use_for": "demonstration_context",
+   "colour": false,
+   "depicts": "Large etched sheet with four bird's-eye views; title band 'The Four ROYALL PALACES of ENGLAND viz: St JAMES'S KENSINGTON HAMPTON COURT and WINDSOR ... Dedicated to his most Sacred MAJESTY GEORGE the Second ... John Bowles'. Bottom-left quadrant (crop hampton_court_quadrant_crop.jpg, 3605x2140): 'THE ROYAL PALACE OF HAMPTON COURT' seen from the east: Wren's east front facing the semicircular Great Fountain Garden with box-scroll parterres, fountains and radiating tree avenues, the Long Water/park with deer in the foreground, the Thames with sailing boats at left, the older courts and further walled gardens behind. Caption text includes 'the inward Court was built by K. William & makes a Piazza'. This is the palace as William III rebuilt it, i.e. the setting of Savery's 1698 demonstration (the building, not the event).",
+   "evidence": "Rijksmuseum RP-P-1918-1768 (id 200397885): title 'Vier koninklijke paleizen van Engeland: St. James's Palace, Kensington Palace, Hampton Court Palace en Windsor Castle' / 'The four royall palaces of England viz: St. James's, Kensington, Hampton Court and Windsor' ; 'publisher: John Bowles (mentioned on object), London' ; 'opgedragen aan: George II Augustus (koning van Groot-Brittannië) (mentioned on object)' ; 'printmaker: anonymous, England' ; date '1723 - 1733' ; 'ets; waarschijnlijk gedrukt van twee platen' ; image access point iiif.micr.io/PmCcx tagged Public Domain Mark 1.0.",
+   "source_url": "https://www.rijksmuseum.nl/nl/collectie/object/RP-P-1918-1768--34f8633c26148611138a89ed82ca6bf8",
+   "licence": "Public Domain Mark 1.0 (Rijksmuseum image; metadata CC0)",
+   "subject_box": [
+    0.012,
+    0.517,
+    0.503,
+    0.977
+   ],
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-08/broll/context/rijks_four_royal_palaces_1723/rijks_four_royal_palaces_1723.jpg",
+   "width": 7342,
+   "height": 4652,
+   "derived_files": [
+    {
+     "file": "/home/user/SocialMediaMarketingSkill/lab/edit-08/broll/context/rijks_four_royal_palaces_1723/hampton_court_quadrant_crop.jpg",
+     "width": 3605,
+     "height": 2140,
+     "note": "crop of the original, made locally"
+    }
+   ]
+  },
+  {
+   "id": "rijks_william_iii_schalcken_1692",
+   "kind": "image",
+   "title": "Portrait of Willem III, Prince of Orange, King of England and Stadtholder (Godfried Schalcken)",
+   "date": "c. 1692 - c. 1697 (Rijksmuseum)",
+   "use_for": "demonstration_context",
+   "colour": true,
+   "depicts": "Oil painting, dark candlelit bust of King William III: long dark curled periwig, pale face looking at the viewer, lace cravat, blue Garter ribbon, ermine-lined mantle over polished steel armour; a tall burning candle at right lights the scene, signed lower left. Painted while he was King of England, within a few years of Savery's 1698 demonstration to him at Hampton Court. Face approx x 0.38-0.57, y 0.16-0.40; candle flame approx x 0.74-0.87, y 0.09-0.30.",
+   "evidence": "Rijksmuseum SK-A-367 (id 200107976): title 'Portrait of Willem III, Prince of Orange, King of England and Stadtholder' ; 'painter: Godfried Schalcken' ; date 'c. 1692 - c. 1697' ; description 'Portret van Willem III (1650-1702), prins van Oranje, stadhouder en sedert 1689 koning van Engeland. Buste in wapenrusting bij een brandende kaars.' ; 'signature: G. Schalcken' ; 'oil on canvas', 76.5 x 65 cm ; image access point iiif.micr.io/CWuDt labelled 'Public Domain' https://creativecommons.org/publicdomain/mark/1.0/.",
+   "source_url": "https://www.rijksmuseum.nl/nl/collectie/object/SK-A-367--aadf7d208dbabdacd672d3ea108931ea",
+   "licence": "Public Domain Mark 1.0 (Rijksmuseum image; metadata CC0)",
+   "subject_box": [
+    0.25,
+    0.08,
+    0.8,
+    0.8
+   ],
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-08/broll/context/rijks_william_iii_schalcken_1692/rijks_william_iii_schalcken_1692.jpg",
+   "width": 4570,
+   "height": 5252
+  }
+ ]
+}

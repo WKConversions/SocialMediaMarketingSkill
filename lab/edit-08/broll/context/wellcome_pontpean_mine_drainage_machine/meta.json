@@ -1,0 +1,21 @@
+{
+ "id": "wellcome_pontpean_mine_drainage_machine",
+ "kind": "image",
+ "title": "A mine: cross-section of a machine for extracting water from the pit. Etching by Bénard after L.J. Goussier.",
+ "date": "[between 1700 and 1799] (Wellcome); Minéralogie plate, Diderot/d'Alembert Encyclopédie style (my inference, not stated in the record)",
+ "use_for": "mine_context",
+ "colour": false,
+ "depicts": "Black-and-white engraved plate (Pl. IV). Top: a large undershot water wheel (water enters from the left at 'A', arrow) on a timber frame with six chain sprockets/pulleys; below ground level a deep timber-lined mine shaft in cross-section, hatched rock on both sides, with long vertical pump rods and chains running down the shaft and a stack of pump barrels on the right side (labels E, F, G, H). Scale bar 'Toises' at lower left. Bottom lettering: 'Minéralogie, Élévation de la Machine pour tirer les Eaux, aux Mines de Pontpéan.' Signed 'Goussier Del.' / 'Benard Fecit'. Shows exactly the problem Savery addressed: water having to be pumped out of a deep mine, here by water-wheel power.",
+ "evidence": "Wellcome Collection work xmj3ne6h, ref. 28854i: title 'A mine: cross-section of a machine for extracting water from the pit. Etching by Bénard after L.J. Goussier.' ; physical '1 print : etching with engraving ; platemark 35.5 x 22 cm' ; production '[Paris] : [between 1700 and 1799]' ; lettering 'Minéralogie, élévation de la machine tirer les eaux, aux mines de Pontpéan. Goussier del. Benard fecit. Bears plate number: Pl. 4' ; IIIF V0023513EL licence 'Public Domain Mark', credit 'Wellcome Collection'.",
+ "source_url": "https://wellcomecollection.org/works/xmj3ne6h",
+ "licence": "Public Domain Mark 1.0 (Wellcome Collection; image V0023513EL)",
+ "subject_box": [
+  0.03,
+  0.03,
+  0.97,
+  0.93
+ ],
+ "file": "/home/user/SocialMediaMarketingSkill/lab/edit-08/broll/context/wellcome_pontpean_mine_drainage_machine/wellcome_pontpean_mine_drainage_machine.jpg",
+ "width": 1225,
+ "height": 2043
+}

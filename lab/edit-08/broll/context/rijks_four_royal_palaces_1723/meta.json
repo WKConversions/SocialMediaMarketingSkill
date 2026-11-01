@@ -1,0 +1,29 @@
+{
+ "id": "rijks_four_royal_palaces_1723",
+ "kind": "image",
+ "title": "The four royall palaces of England viz: St. James's, Kensington, Hampton Court and Windsor (John Bowles) - use the Hampton Court quadrant",
+ "date": "1723-1733 (Rijksmuseum); the Hampton Court view follows the Kip/Knyff Britannia Illustrata type of c. 1707 (my inference, not in the record)",
+ "use_for": "demonstration_context",
+ "colour": false,
+ "depicts": "Large etched sheet with four bird's-eye views; title band 'The Four ROYALL PALACES of ENGLAND viz: St JAMES'S KENSINGTON HAMPTON COURT and WINDSOR ... Dedicated to his most Sacred MAJESTY GEORGE the Second ... John Bowles'. Bottom-left quadrant (crop hampton_court_quadrant_crop.jpg, 3605x2140): 'THE ROYAL PALACE OF HAMPTON COURT' seen from the east: Wren's east front facing the semicircular Great Fountain Garden with box-scroll parterres, fountains and radiating tree avenues, the Long Water/park with deer in the foreground, the Thames with sailing boats at left, the older courts and further walled gardens behind. Caption text includes 'the inward Court was built by K. William & makes a Piazza'. This is the palace as William III rebuilt it, i.e. the setting of Savery's 1698 demonstration (the building, not the event).",
+ "evidence": "Rijksmuseum RP-P-1918-1768 (id 200397885): title 'Vier koninklijke paleizen van Engeland: St. James's Palace, Kensington Palace, Hampton Court Palace en Windsor Castle' / 'The four royall palaces of England viz: St. James's, Kensington, Hampton Court and Windsor' ; 'publisher: John Bowles (mentioned on object), London' ; 'opgedragen aan: George II Augustus (koning van Groot-Brittannië) (mentioned on object)' ; 'printmaker: anonymous, England' ; date '1723 - 1733' ; 'ets; waarschijnlijk gedrukt van twee platen' ; image access point iiif.micr.io/PmCcx tagged Public Domain Mark 1.0.",
+ "source_url": "https://www.rijksmuseum.nl/nl/collectie/object/RP-P-1918-1768--34f8633c26148611138a89ed82ca6bf8",
+ "licence": "Public Domain Mark 1.0 (Rijksmuseum image; metadata CC0)",
+ "subject_box": [
+  0.012,
+  0.517,
+  0.503,
+  0.977
+ ],
+ "file": "/home/user/SocialMediaMarketingSkill/lab/edit-08/broll/context/rijks_four_royal_palaces_1723/rijks_four_royal_palaces_1723.jpg",
+ "width": 7342,
+ "height": 4652,
+ "derived_files": [
+  {
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-08/broll/context/rijks_four_royal_palaces_1723/hampton_court_quadrant_crop.jpg",
+   "width": 3605,
+   "height": 2140,
+   "note": "crop of the original, made locally"
+  }
+ ]
+}

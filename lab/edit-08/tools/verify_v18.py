@@ -51,7 +51,7 @@ def main(final, captions_path, shutter_only, voice=None):
         ok = -0.5 / FPS <= lead <= 2.5 / FPS
         bad += not ok
         print(f"{c['text']:18s} f{c['frame']:4d}   {ws:6.3f}s   {lead*1000:+5.0f} ms {'' if ok else '  <-- OUT OF RANGE'}")
-        wi += 1
+        wi += max(1, len(c["text"].split()))          # step past all of the caption's words (repeated words like 'the')
     fin, ref = hp(load(final)), hp(load(shutter_only))
     offs = []
     for c in caps:

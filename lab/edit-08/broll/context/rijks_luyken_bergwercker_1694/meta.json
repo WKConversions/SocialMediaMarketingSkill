@@ -1,0 +1,21 @@
+{
+ "id": "rijks_luyken_bergwercker_1694",
+ "kind": "image",
+ "title": "Mijnwerker ('De Bergwercker'), plate 75 of Het Menselyk Bedryf, Jan and Caspar Luyken",
+ "date": "1694 (Rijksmuseum; first edition of Het Menselyk Bedryf)",
+ "use_for": "mine_context",
+ "colour": false,
+ "depicts": "Small etching on a sheet with wide margin. Heading 'De Bergwercker.' and motto 'Hoe hoog van waarde, 't Is Stof der Aarden.', number 75. In the picture: a miner in a hooded smock sits resting in the foreground with a cup and bread, beside a wheelbarrow and a pick-axe with lumps of ore; behind him, at a rock face with a cave-like mine entrance, other miners work a large horizontal windlass (hoist) on a timber frame and push barrows; mountains and clouds behind. Below, a six-line Dutch verse ('Al leidt het diep verdeckt voor d'oogen ...'). Exactly period (1694, four years before Savery's patent); shows miners and mine-head hoisting, not water pumping. Picture panel only: approx x 0.09-0.90, y 0.157-0.707.",
+ "evidence": "Rijksmuseum RP-P-OB-44.531 (id 200223669): titles 'Mijnwerker' / 'De Bergwercker' / series 'Het Menselyk Bedryf', '75/100' ; 'printmaker: Caspar Luyken, Amsterdam' ; 'printmaker: Jan Luyken, Amsterdam' ; 'after drawing by Jan Luyken' ; date '1694' ; note 'Maakt deel uit van de 100-delige serie beroepsprenten van Jan en Caspar Luyken, getiteld: Het menselyk bedryf. S.l.s.n., 1694 (eerste druk).' ; 'ets', plate 143 x 84 mm ; image access point iiif.micr.io/XwCmU tagged https://creativecommons.org/publicdomain/mark/1.0/ ('downloadbaar').",
+ "source_url": "https://www.rijksmuseum.nl/nl/collectie/object/RP-P-OB-44.531--833f353d1a20f4918f3147c339dd4e63",
+ "licence": "Public Domain Mark 1.0 (Rijksmuseum image; metadata CC0)",
+ "subject_box": [
+  0.09,
+  0.157,
+  0.9,
+  0.707
+ ],
+ "file": "/home/user/SocialMediaMarketingSkill/lab/edit-08/broll/context/rijks_luyken_bergwercker_1694/rijks_luyken_bergwercker_1694.jpg",
+ "width": 3080,
+ "height": 5040
+}

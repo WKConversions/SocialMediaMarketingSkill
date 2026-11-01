@@ -1,0 +1,21 @@
+{
+ "id": "wellcome_mine_galleries_miners_digging",
+ "kind": "image",
+ "title": "A mine: cross-sections of the galleries with miners digging. Etching by R. Bénard after L.J. Goussier.",
+ "date": "[between 1700 and 1799] (Wellcome); Encyclopédie-style Minéralogie plate (my inference)",
+ "use_for": "mine_context",
+ "colour": false,
+ "depicts": "Engraved plate (Pl. III). Top strip: surface landscape with mountains, a cut-away timber winding house with a large vertical drum, probably a horse gin (Fig. 1), a shed and a wooden launder/bridge (Fig. 2). Below: a cut-away of the ground showing a deep vertical shaft lined with timber cribbing, ladders, and side galleries; small figures of miners hacking at the rock with picks on stepped working faces at the bottom (letters P-V) and one miner in a gallery at left (X); inset vignettes of timbering methods (a-m). Lettering 'Minéralogie, Coupe d'une Mine', 'Goussier Del.', 'Benard Fecit'. Good 'how deep mines are' shot; no water pumping shown explicitly.",
+ "evidence": "Wellcome Collection work eb6naajq, ref. 28822i: title 'A mine: cross-sections of the galleries with miners digging. Etching by R. Bénard after L.J. Goussier.' ; physical '1 print : etching with engraving ; platemark 36 x 22.5 cm' ; production '[Paris] : [between 1700 and 1799]' ; lettering 'Minéralogie, coupe d'une mine. Goussier del. Benard fecit. Bears plate number: Pl. 3' ; IIIF V0023511ER licence 'Public Domain Mark'.",
+ "source_url": "https://wellcomecollection.org/works/eb6naajq",
+ "licence": "Public Domain Mark 1.0 (Wellcome Collection; image V0023511ER)",
+ "subject_box": [
+  0.04,
+  0.03,
+  0.96,
+  0.94
+ ],
+ "file": "/home/user/SocialMediaMarketingSkill/lab/edit-08/broll/context/wellcome_mine_galleries_miners_digging/wellcome_mine_galleries_miners_digging.jpg",
+ "width": 1288,
+ "height": 2156
+}

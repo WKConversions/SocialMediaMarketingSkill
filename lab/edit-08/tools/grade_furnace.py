@@ -27,9 +27,9 @@ def grade_furnace(x, era="history", rng=None):
     x = x * ((1.30 if now else 1.22) + face * 0.22)                         # lift the face out of the dark
     x = np.where(x > 0.75, 0.75 + (1 - np.exp(-(x - 0.75) / 0.25)) * 0.25 * 0.9, x)
     lum = (x @ LUMA)[..., None]
-    x = lum + (x - lum) * (0.86 if now else 0.82)                           # the red is very saturated: calm it a little
+    x = lum + (x - lum) * (0.70 if now else 0.62)                           # this footage is very saturated red: calm it
     x = np.clip(x, 0, 1)
-    x[..., 1] = x[..., 1] + 0.20 * x[..., 0] ** 1.4 * (1 - x[..., 1])        # red -> amber, like firelight
+    x[..., 1] = x[..., 1] + 0.32 * x[..., 0] ** 1.4 * (1 - x[..., 1])        # red -> amber, like firelight
     x = np.clip(x, 0, 1)
     x = x * x * (3 - 2 * x) * 0.35 + x * 0.65                               # contrast
     lum = (x @ LUMA)[..., None]
