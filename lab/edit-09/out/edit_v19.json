@@ -1,0 +1,625 @@
+{
+ "fps": 30,
+ "duration": 39.5,
+ "song_start_s": 9.59,
+ "blocks": [
+  {
+   "v0": 0.0,
+   "v1": 5.6,
+   "start": 5.7,
+   "end": 11.3
+  },
+  {
+   "v0": 5.6,
+   "v1": 13.5333,
+   "start": 13.1,
+   "end": 21.0333
+  },
+  {
+   "v0": 13.5333,
+   "v1": 17.3333,
+   "start": 23.2333,
+   "end": 27.0333
+  },
+  {
+   "v0": 17.3333,
+   "v1": 26.0,
+   "start": 28.8333,
+   "end": 37.5
+  }
+ ],
+ "speaker": [
+  {
+   "clip": "7018",
+   "src_start": 0.0,
+   "src_end": 3.6667,
+   "start": 5.7,
+   "end": 9.3667,
+   "view": "wide"
+  },
+  {
+   "clip": "7019",
+   "src_start": 0.2,
+   "src_end": 2.1333,
+   "start": 9.3667,
+   "end": 11.3,
+   "view": "medium"
+  },
+  {
+   "clip": "7020",
+   "src_start": 0.9,
+   "src_end": 3.1667,
+   "start": 13.1,
+   "end": 15.3667,
+   "view": "wide"
+  },
+  {
+   "clip": "7021",
+   "src_start": 0.0,
+   "src_end": 1.5333,
+   "start": 15.3667,
+   "end": 16.9,
+   "view": "medium"
+  },
+  {
+   "clip": "7021",
+   "src_start": 2.1333,
+   "src_end": 6.2667,
+   "start": 16.9,
+   "end": 21.0333,
+   "view": "wide"
+  },
+  {
+   "clip": "7022",
+   "src_start": 0.1,
+   "src_end": 1.9,
+   "start": 23.2333,
+   "end": 25.0333,
+   "view": "medium"
+  },
+  {
+   "clip": "7023",
+   "src_start": 0.0,
+   "src_end": 0.3,
+   "start": 25.0333,
+   "end": 25.3333,
+   "view": "medium"
+  },
+  {
+   "clip": "7023",
+   "src_start": 1.5,
+   "src_end": 3.2,
+   "start": 25.3333,
+   "end": 27.0333,
+   "view": "wide"
+  },
+  {
+   "clip": "7025",
+   "src_start": 0.1,
+   "src_end": 1.8333,
+   "start": 28.8333,
+   "end": 30.5667,
+   "view": "medium"
+  },
+  {
+   "clip": "7025",
+   "src_start": 2.2667,
+   "src_end": 6.7667,
+   "start": 30.5667,
+   "end": 35.0667,
+   "view": "wide"
+  },
+  {
+   "clip": "7025",
+   "src_start": 7.2,
+   "src_end": 9.6333,
+   "start": 35.0667,
+   "end": 37.5,
+   "view": "medium"
+  }
+ ],
+ "shots": [
+  {
+   "start": 0.0,
+   "end": 3.135,
+   "slot": "glider",
+   "part": "I0",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-09/broll/photos/05_glider_1902_wilbur_level/glider_1902-10-17_wilbur_level_LC-DIG-ppprs-00601.jpg",
+   "kind": "image",
+   "mode": "fit",
+   "center": [
+    0.63,
+    0.5
+   ],
+   "focus": [
+    0.55,
+    0.45
+   ],
+   "push": 0.05,
+   "label": "Kitty Hawk, 1902",
+   "record": "[Wilbur gliding in level flight, single rear rudder clearly visible; Kitty Hawk, North Carolina] [1902 Oct. 17], LC-DIG-ppprs-00601",
+   "licence": "Library of Congress, Wright Brothers Negatives: No known restrictions",
+   "zoom": 1.6,
+   "y": 0.42
+  },
+  {
+   "start": 3.135,
+   "end": 5.7,
+   "slot": "brothers",
+   "part": "I0",
+   "files": [
+    "/home/user/SocialMediaMarketingSkill/lab/edit-09/broll/photos/02_wilbur_portrait_1905/wilbur_wright_c1905_LC-DIG-ppprs-00683.jpg",
+    "/home/user/SocialMediaMarketingSkill/lab/edit-09/broll/photos/03_orville_portrait_1905/orville_wright_1905_LC-DIG-ppprs-00680.jpg"
+   ],
+   "crops": [
+    [
+     0.18,
+     0.24,
+     0.84,
+     0.82
+    ],
+    [
+     0.24,
+     0.3,
+     0.86,
+     0.86
+    ]
+   ],
+   "kind": "image",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "push": 0.04,
+   "label": "Wilbur and Orville Wright",
+   "licence": "Library of Congress: No known restrictions",
+   "record": "LC-DIG-ppprs-00683 (Wilbur, about 1905) and LC-DIG-ppprs-00680 (Orville, 1905)"
+  },
+  {
+   "start": 11.3,
+   "end": 13.1,
+   "slot": "flyer_camp",
+   "part": "I1",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-09/broll/photos/08_flyer_1903_front_view/flyer_1903_front_view_LC-DIG-ppprs-00615.jpg",
+   "kind": "image",
+   "mode": "fit",
+   "crop": [
+    0.03,
+    0.1,
+    0.97,
+    0.8
+   ],
+   "zoom": 1.5,
+   "center": [
+    0.5,
+    0.5
+   ],
+   "y": 0.43,
+   "focus": [
+    0.5,
+    0.42
+   ],
+   "push": 0.06,
+   "label": "The 1903 machine",
+   "record": "[1903 machine, front view] [1903], LC-DIG-ppprs-00615",
+   "licence": "Library of Congress, Wright Brothers Negatives: No known restrictions"
+  },
+  {
+   "start": 19.44,
+   "end": 21.0333,
+   "slot": "patent",
+   "part": "voice",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-09/broll/photos/09_patent_US821393_sheet1/US821393-drawings-page-1.png",
+   "kind": "image",
+   "mode": "fill",
+   "center": [
+    0.5,
+    0.5
+   ],
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "push": 0.06,
+   "gain": 0.8,
+   "label": null,
+   "record": "O. & W. Wright, Flying-Machine, US Patent 821,393 (filed 23 March 1903, patented 22 May 1906), drawing sheet 1",
+   "licence": "Public domain: US patent published 1906"
+  },
+  {
+   "start": 21.0333,
+   "end": 25.3333,
+   "slot": "photo",
+   "part": "I2+voice",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-09/broll/photos/01_first_flight_1903/first_flight_1903_LC-DIG-ppprs-00626.jpg",
+   "kind": "image",
+   "crop": [
+    0.2,
+    0.08,
+    0.97,
+    0.8
+   ],
+   "mode": "fit",
+   "zoom": 1.3,
+   "y": 0.43,
+   "center": [
+    0.53,
+    0.5
+   ],
+   "focus": [
+    0.52,
+    0.4
+   ],
+   "push": 0.07,
+   "label": "17 December 1903",
+   "source": "https://www.loc.gov/item/2001626183/",
+   "licence": "Library of Congress: No known restrictions on publication",
+   "callback": {
+    "mode": "fill",
+    "crop": null,
+    "zoom": 0.5,
+    "center": [
+     0.52,
+     0.47
+    ],
+    "focus": [
+     0.5,
+     0.5
+    ],
+    "push": 0.05,
+    "label": null
+   },
+   "record": "[First flight, 120 feet in 12 seconds, 10:35 a.m.; Kitty Hawk, North Carolina] [1903 Dec. 17], LC-DIG-ppprs-00626"
+  },
+  {
+   "start": 27.0333,
+   "end": 30.5667,
+   "slot": "film",
+   "part": "I3+voice",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-09/broll/film/nara_111-H-1185_fortmyer_1908-1909/source.mp4",
+   "kind": "video",
+   "src": 256.6,
+   "crop": [
+    0.115,
+    0.005,
+    0.885,
+    0.99
+   ],
+   "mode": "fit",
+   "zoom": 1.35,
+   "center": [
+    0.5,
+    0.5
+   ],
+   "y": 0.43,
+   "label": "Fort Myer, 1908\u20131909",
+   "placeholder": true,
+   "record": "NARA 111-H-1185 (NAID 24690), First Army Aeroplane Flight, Fort Myer, Virginia; PENDING fact-check"
+  },
+  {
+   "start": 35.0667,
+   "end": 36.3,
+   "slot": "photo_callback",
+   "part": "voice",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-09/broll/photos/01_first_flight_1903/first_flight_1903_LC-DIG-ppprs-00626.jpg",
+   "kind": "image",
+   "crop": null,
+   "mode": "fill",
+   "zoom": 0.5,
+   "y": 0.43,
+   "center": [
+    0.52,
+    0.47
+   ],
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "push": 0.05,
+   "label": null,
+   "source": "https://www.loc.gov/item/2001626183/",
+   "licence": "Library of Congress: No known restrictions on publication",
+   "callback": {
+    "mode": "fill",
+    "crop": null,
+    "zoom": 0.5,
+    "center": [
+     0.52,
+     0.47
+    ],
+    "focus": [
+     0.5,
+     0.5
+    ],
+    "push": 0.05,
+    "label": null
+   },
+   "record": "[First flight, 120 feet in 12 seconds, 10:35 a.m.; Kitty Hawk, North Carolina] [1903 Dec. 17], LC-DIG-ppprs-00626"
+  }
+ ],
+ "captions": [
+  {
+   "text": "In 1903",
+   "word": "in",
+   "word_t": 5.74,
+   "frame": 172,
+   "end_frame": 205,
+   "fade_out": false
+  },
+  {
+   "text": "two brothers achieved",
+   "word": "two",
+   "word_t": 6.844,
+   "frame": 205,
+   "end_frame": 237,
+   "fade_out": false
+  },
+  {
+   "text": "something extraordinary",
+   "word": "something",
+   "word_t": 7.908,
+   "frame": 237,
+   "end_frame": 283,
+   "fade_out": false
+  },
+  {
+   "text": "They built a machine",
+   "word": "they",
+   "word_t": 9.4487,
+   "frame": 283,
+   "end_frame": 311,
+   "fade_out": false
+  },
+  {
+   "text": "that could fly",
+   "word": "that",
+   "word_t": 10.3937,
+   "frame": 311,
+   "end_frame": 345,
+   "fade_out": true
+  },
+  {
+   "text": "The first flight",
+   "word": "the",
+   "word_t": 13.183,
+   "frame": 395,
+   "end_frame": 423,
+   "fade_out": false
+  },
+  {
+   "text": "took only 12 seconds",
+   "word": "took",
+   "word_t": 14.106,
+   "frame": 423,
+   "end_frame": 461,
+   "fade_out": false
+  },
+  {
+   "text": "But during those 12 seconds",
+   "word": "but",
+   "word_t": 15.3667,
+   "frame": 461,
+   "end_frame": 509,
+   "fade_out": false
+  },
+  {
+   "text": "one photograph explained",
+   "word": "one",
+   "word_t": 16.9707,
+   "frame": 509,
+   "end_frame": 554,
+   "fade_out": false
+  },
+  {
+   "text": "something that couldn't",
+   "word": "something",
+   "word_t": 18.4747,
+   "frame": 554,
+   "end_frame": 583,
+   "fade_out": false
+  },
+  {
+   "text": "have been explained earlier",
+   "word": "have",
+   "word_t": 19.4557,
+   "frame": 583,
+   "end_frame": 637,
+   "fade_out": true
+  },
+  {
+   "text": "A machine",
+   "word": "a",
+   "word_t": 23.3153,
+   "frame": 699,
+   "end_frame": 717,
+   "fade_out": false
+  },
+  {
+   "text": "lifted off the ground",
+   "word": "lifted",
+   "word_t": 23.9013,
+   "frame": 717,
+   "end_frame": 753,
+   "fade_out": false
+  },
+  {
+   "text": "And that's the power",
+   "word": "and",
+   "word_t": 25.1333,
+   "frame": 753,
+   "end_frame": 782,
+   "fade_out": false
+  },
+  {
+   "text": "of visualization",
+   "word": "of",
+   "word_t": 26.0803,
+   "frame": 782,
+   "end_frame": 817,
+   "fade_out": true
+  },
+  {
+   "text": "So the next time",
+   "word": "so",
+   "word_t": 28.9333,
+   "frame": 867,
+   "end_frame": 891,
+   "fade_out": false
+  },
+  {
+   "text": "you take a flight",
+   "word": "you",
+   "word_t": 29.7143,
+   "frame": 891,
+   "end_frame": 919,
+   "fade_out": false
+  },
+  {
+   "text": "note that the reason",
+   "word": "note",
+   "word_t": 30.663,
+   "frame": 919,
+   "end_frame": 943,
+   "fade_out": false
+  },
+  {
+   "text": "you can take that flight",
+   "word": "you",
+   "word_t": 31.443,
+   "frame": 943,
+   "end_frame": 985,
+   "fade_out": false
+  },
+  {
+   "text": "is because someone",
+   "word": "is",
+   "word_t": 32.865,
+   "frame": 985,
+   "end_frame": 1015,
+   "fade_out": false
+  },
+  {
+   "text": "at some point in time",
+   "word": "at",
+   "word_t": 33.866,
+   "frame": 1015,
+   "end_frame": 1054,
+   "fade_out": false
+  },
+  {
+   "text": "visualized the product",
+   "word": "visualized",
+   "word_t": 35.1547,
+   "frame": 1054,
+   "end_frame": 1089,
+   "fade_out": false
+  },
+  {
+   "text": "instead of explaining",
+   "word": "instead",
+   "word_t": 36.3157,
+   "frame": 1089,
+   "end_frame": 1131,
+   "fade_out": true
+  }
+ ],
+ "labels": [
+  {
+   "text": "Kitty Hawk, 1902",
+   "frame": 3,
+   "end_frame": 90,
+   "fade_out": true,
+   "label": true
+  },
+  {
+   "text": "Wilbur and Orville Wright",
+   "frame": 102,
+   "end_frame": 167,
+   "fade_out": true,
+   "label": true
+  },
+  {
+   "text": "The 1903 machine",
+   "frame": 347,
+   "end_frame": 389,
+   "fade_out": true,
+   "label": true
+  },
+  {
+   "text": "17 December 1903",
+   "frame": 639,
+   "end_frame": 756,
+   "fade_out": true,
+   "label": true
+  },
+  {
+   "text": "Fort Myer, 1908\u20131909",
+   "frame": 819,
+   "end_frame": 913,
+   "fade_out": true,
+   "label": true
+  }
+ ],
+ "dissolve": {
+  "interlude": 0.6,
+  "under_voice": 0.4,
+  "within": 0.5
+ },
+ "music_ramps": [
+  {
+   "t0": 5.44,
+   "t1": 5.86,
+   "to": "voice"
+  },
+  {
+   "t0": 11.2587,
+   "t1": 11.6587,
+   "to": "up"
+  },
+  {
+   "t0": 12.883,
+   "t1": 13.303,
+   "to": "voice"
+  },
+  {
+   "t0": 20.9987,
+   "t1": 21.3987,
+   "to": "up"
+  },
+  {
+   "t0": 23.0153,
+   "t1": 23.4353,
+   "to": "voice"
+  },
+  {
+   "t0": 26.9833,
+   "t1": 27.3833,
+   "to": "up"
+  },
+  {
+   "t0": 28.6333,
+   "t1": 29.0533,
+   "to": "voice"
+  },
+  {
+   "t0": 37.2567,
+   "t1": 37.6567,
+   "to": "up"
+  }
+ ],
+ "music": {
+  "down_lead_s": 0.3,
+  "down_len_s": 0.42,
+  "up_after_s": 0.06,
+  "up_len_s": 0.4,
+  "fade_out_s": 1.6
+ },
+ "end_card": {
+  "start": 37.5,
+  "text": [
+   "Some things are better",
+   "shown than explained"
+  ]
+ },
+ "logo": "/home/user/SocialMediaMarketingSkill/lab/edit-05/broll/wkc/logo.png"
+}

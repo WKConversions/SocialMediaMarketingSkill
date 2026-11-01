@@ -40,3 +40,9 @@ lab/**/broll/**/_api/
 lab/**/broll/_verify/
 *.gif
 *.jp2
+# the client's own clip archives, unverified staging downloads and bulky source documents
+lab/**/zip/
+lab/**/broll/**/_staging*/
+*.mpeg4
+lab/**/broll/**/*.pdf
+lab/**/broll/**/*.html

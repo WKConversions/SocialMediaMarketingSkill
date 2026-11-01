@@ -44,6 +44,36 @@
         "first_26s": -14.8,
         "first_60s": -14.3
       }
+    },
+    "sinatra-come-fly-with-me": {
+      "title": "Come Fly With Me",
+      "artist": "Frank Sinatra",
+      "file": "assets/music/sinatra-come-fly-with-me.mp3",
+      "rights": "Commercial recording supplied by the client. Not cleared for paid ads; business accounts may get it muted. Prefer adding it through the platform's music library when posting from a business account.",
+      "start_offset_s": 9.59,
+      "start_rule": "Client: the video starts 0.5 s before Sinatra sings \"Come fly with me, let's fly, let's fly away\". \"Come\" starts at 10.085 s in the file (forced alignment of the vocal line), so the edit starts at 9.59 s; \"away\" ends at ~15.10 s (video 5.51 s), so the speaker starts after that.",
+      "duration_s": 204.49,
+      "has_vocals": true,
+      "mix": {
+        "scheme": "interludes",
+        "scheme_rule": "Jazz/classy style: the song is automated, not side-chain ducked. Up (about the voice's loudness, -0.5 LU) in the opening line, the interludes between his explaining and the end card; while he talks it sits under_voice_db under the voice with a gentle cut at 1-3 kHz (Sinatra's vocal range) so two voices don't fight. Raised-cosine ramps of ~0.4 s in the pauses: down just before his first word, up right after his last.",
+        "pre_gain_db": 0.0,
+        "under_voice_db": 12.0,
+        "up_vs_voice_lu": -0.5,
+        "fade_out_s": 1.6,
+        "master_to_final_lufs": true
+      },
+      "first_used_in": "Wright brothers 1903 -> WKC story edit (lab/edit-09), 2026-11-01.",
+      "suits": [
+        "classy, jazz/classical story edits",
+        "flight, travel and aviation stories (the title line is the hook)",
+        "edits with music interludes between the explaining"
+      ],
+      "avoid": [
+        "a constant bed under dense talking (it has vocals)",
+        "fast hype edits",
+        "paid ads or accounts where commercial music is not cleared"
+      ]
     }
   }
 }

@@ -1,0 +1,203 @@
+{
+ "items": [
+  {
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-09/broll/photos/01_first_flight_1903/first_flight_1903_LC-DIG-ppprs-00626.jpg",
+   "kind": "image",
+   "colour": false,
+   "title": "[First flight, 120 feet in 12 seconds, 10:35 a.m.; Kitty Hawk, North Carolina]",
+   "date": "[1903 Dec. 17]",
+   "evidence": "LoC catalogue record https://www.loc.gov/item/00652085/: title '[First flight, 120 feet in 12 seconds, 10:35 a.m.; Kitty Hawk, North Carolina]'; created/published '[1903 Dec. 17]'; reproduction no. 'LC-DIG-ppprs-00626 (digital file from original); LC-W861-35 (b&w film copy neg.); LC-USZ62-6166A (b&w film copy neg.)'; call no. 'LC-W86- 35 (Cabinet A) [P&P]'; medium '1 photograph : glass negative, dry plate ; plate 18 x 12.5 cm (5 x 7 format).'; notes: Title and subject note from: Wilbur & Orville Wright, pictorial materials: a documentary guide / Arthur G. Renstrom. Washington: Library of Congress, 1982, p. 57. | Attributed to Wilbur and/or Orville Wright. | Forms part of: Glass negatives from the Papers of Wilbur and Orville Wright. | Summary: 'Photograph shows the first powered, controlled, sustained flight. Orville Wright at the controls of the machine, lying prone on the lower wing with hips in the cradle which operated the wing-warping mechanism. Wilbur Wright running alongside to balance the machine, has just released his hold on the forward upright of the right wing.  The starting rail, the wing-rest, a coil box, and other items needed for flight preparation are visible behind the machine. (Orville Wright preset the camera and had John T. Daniels squeeze the rubber bulb, tripping the shutter.)' | File: https://tile.loc.gov/storage-services/master/pnp/ppprs/00600/00626u.tif (master TIFF, converted to JPEG q95 at full size; source.tif kept).",
+   "source_url": "https://www.loc.gov/item/00652085/",
+   "licence": "Library of Congress rights advisory: 'No known restrictions on publication.' Glass negatives made by the Wright brothers (Papers of Wilbur and Orville Wright), published before 1931: public domain in the US; LoC lists no known restrictions, so commercial use is allowed. Credit: Library of Congress, Prints and Photographs Division, LC-DIG-ppprs-00626.",
+   "width": 5000,
+   "height": 3604,
+   "archival_tiff": "https://tile.loc.gov/storage-services/master/pnp/ppprs/00600/00626a.tif",
+   "id": "loc_ppprs00626_first_flight_1903",
+   "use_for": "first_flight_photo_1903",
+   "depicts": "B&w glass-negative scan, landscape. The 1903 Flyer just off the ground (about 2 ft up), centre, seen from the front-left quarter, pilot lying prone on the lower wing; a man in a dark suit and cap (Wilbur, per the catalogue) stands at right watching; the long wooden starting rail runs from lower left towards the machine; a small wooden wing-rest bench in the mid-foreground; coil box and tools on the sand at right. Flat sand and low dunes to a hazy horizon. Plate faults: white broken-off corner bottom left, a pale ghost smudge at the far left edge, two dark stains bottom centre, black plate edge at right. Tonally a bit flat/greyish.",
+   "subject_box": [
+    0.32,
+    0.32,
+    0.9,
+    0.53
+   ]
+  },
+  {
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-09/broll/photos/02_wilbur_portrait_1905/wilbur_wright_c1905_LC-DIG-ppprs-00683.jpg",
+   "kind": "image",
+   "colour": false,
+   "title": "[Wilbur Wright, age 38, head and shoulders, about 1905; one of the earliest published photographs of him]",
+   "date": "[1905]",
+   "evidence": "LoC catalogue record https://www.loc.gov/item/2001696613/: title '[Wilbur Wright, age 38, head and shoulders, about 1905; one of the earliest published photographs of him]'; created/published '[1905]'; reproduction no. 'LC-DIG-ppprs-00683 (digital file from original); LC-W861-92 (b&w film copy neg.)'; call no. 'LC-W86- 92 [P&P]'; medium '1 negative : glass, dry plate ; 5 x 7 in.'; notes: Title based on: Wilbur & Orville Wright, pictorial materials: a documentary guide / Arthur G. Renstrom. Washington: Library of Congress, 1982, p. 11. | Attributed to Wilbur and/or Orville Wright. | Forms part of: Glass negatives from the Papers of Wilbur and Orville Wright. | File: https://tile.loc.gov/storage-services/master/pnp/ppprs/00600/00683u.tif (master TIFF, converted to JPEG q95 at full size; source.tif kept).",
+   "source_url": "https://www.loc.gov/item/2001696613/",
+   "licence": "Library of Congress rights advisory: 'No known restrictions.' Glass negatives made by the Wright brothers (Papers of Wilbur and Orville Wright), published before 1931: public domain in the US; LoC lists no known restrictions, so commercial use is allowed. Credit: Library of Congress, Prints and Photographs Division, LC-DIG-ppprs-00683.",
+   "width": 3635,
+   "height": 5000,
+   "archival_tiff": "https://tile.loc.gov/storage-services/master/pnp/ppprs/00600/00683a.tif",
+   "id": "loc_ppprs00683_wilbur_portrait_c1905",
+   "use_for": "brothers_portrait",
+   "depicts": "B&w head-and-shoulders portrait, vertical, plain dark background. Wilbur Wright, balding, short dark hair at the sides, clean-shaven, looking straight into the lens; high white wing collar, dark tie with small motif, dark pin-striped three-button suit. Clean, sharp face. Emulsion flaking (black blotches) down the right edge and along the top edge; light spots bottom right.",
+   "subject_box": [
+    0.2,
+    0.32,
+    0.87,
+    1.0
+   ]
+  },
+  {
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-09/broll/photos/03_orville_portrait_1905/orville_wright_1905_LC-DIG-ppprs-00680.jpg",
+   "kind": "image",
+   "colour": false,
+   "title": "[Orville Wright, age 34, head and shoulders, with mustache]",
+   "date": "[1905]",
+   "evidence": "LoC catalogue record https://www.loc.gov/item/2001696610/: title '[Orville Wright, age 34, head and shoulders, with mustache]'; created/published '[1905]'; reproduction no. 'LC-DIG-ppprs-00680 (digital file from original); LC-W861-89 (b&w film copy neg.)'; call no. 'LC-W86- 89 [P&P]'; medium '1 negative : glass, dry plate ; 5 x 7 in.'; notes: Title based on: Wilbur & Orville Wright, pictorial materials: a documentary guide / Arthur G. Renstrom. Washington: Library of Congress, 1982, p. 21. | Attributed to Wilbur and/or Orville Wright. | Forms part of: Glass negatives from the Papers of Wilbur and Orville Wright. | File: https://tile.loc.gov/storage-services/master/pnp/ppprs/00600/00680u.tif (master TIFF, converted to JPEG q95 at full size; source.tif kept).",
+   "source_url": "https://www.loc.gov/item/2001696610/",
+   "licence": "Library of Congress rights advisory: 'No known restrictions.' Glass negatives made by the Wright brothers (Papers of Wilbur and Orville Wright), published before 1931: public domain in the US; LoC lists no known restrictions, so commercial use is allowed. Credit: Library of Congress, Prints and Photographs Division, LC-DIG-ppprs-00680.",
+   "width": 3651,
+   "height": 5000,
+   "archival_tiff": "https://tile.loc.gov/storage-services/master/pnp/ppprs/00600/00680a.tif",
+   "id": "loc_ppprs00680_orville_portrait_1905",
+   "use_for": "brothers_portrait",
+   "depicts": "B&w head-and-shoulders portrait, vertical, dark background. Orville Wright with a full dark handlebar moustache, short parted dark hair, eyes towards camera-left; high white collar, diagonally striped tie, dark suit. Face sharp and clean; heavy emulsion deterioration (black/white lacework and blotches) around all four edges, so crop tight on the face.",
+   "subject_box": [
+    0.15,
+    0.34,
+    0.85,
+    1.0
+   ]
+  },
+  {
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-09/broll/photos/04_glider_1902_orville_turn/glider_1902-10-24_orville_right_turn_LC-DIG-ppprs-00599.jpg",
+   "kind": "image",
+   "colour": false,
+   "title": "[Orville making right turn, showing warping of wings, hill visible in front of him; Kitty Hawk, North Carolina]",
+   "date": "[1902 Oct. 24]",
+   "evidence": "LoC catalogue record https://www.loc.gov/item/2001696262/: title '[Orville making right turn, showing warping of wings, hill visible in front of him; Kitty Hawk, North Carolina]'; created/published '[1902 Oct. 24]'; reproduction no. 'LC-DIG-ppprs-00599 (digital file from original); LC-W861-8 (b&w film copy neg.)'; call no. 'LC-W86- 8 [P&P]'; medium '1 negative : glass, dry plate ; 5 x 7 in.'; notes: Title from: Wilbur & Orville Wright, pictorial materials: a documentary guide / Arthur G. Renstrom. Washington: Library of Congress, 1982, p. 55. | Attributed to Wilbur and/or Orville Wright. | Forms part of: Glass negatives from the Papers of Wilbur and Orville Wright. | File: https://tile.loc.gov/storage-services/master/pnp/ppprs/00500/00599u.tif (master TIFF, converted to JPEG q95 at full size; source.tif kept).",
+   "source_url": "https://www.loc.gov/item/2001696262/",
+   "licence": "Library of Congress rights advisory: 'No known restrictions.' Glass negatives made by the Wright brothers (Papers of Wilbur and Orville Wright), published before 1931: public domain in the US; LoC lists no known restrictions, so commercial use is allowed. Credit: Library of Congress, Prints and Photographs Division, LC-DIG-ppprs-00599.",
+   "width": 5000,
+   "height": 3623,
+   "archival_tiff": "https://tile.loc.gov/storage-services/master/pnp/ppprs/00500/00599a.tif",
+   "id": "loc_ppprs00599_glider_1902_orville_turn",
+   "use_for": "glider_1900_1902",
+   "depicts": "B&w landscape. The 1902 glider (biplane, no engine) flying low over the flat sand in the left half of the frame, slightly motion-blurred, wings visibly twisted (warped) in the turn, pilot prone at centre; a large sand hill and dunes on the horizon behind it; rippled sand slope fills the foreground. Quite clean plate: scattered small dark specks, black strip down the right edge.",
+   "subject_box": [
+    0.13,
+    0.36,
+    0.55,
+    0.48
+   ]
+  },
+  {
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-09/broll/photos/05_glider_1902_wilbur_level/glider_1902-10-17_wilbur_level_LC-DIG-ppprs-00601.jpg",
+   "kind": "image",
+   "colour": false,
+   "title": "[Wilbur gliding in level flight, single rear rudder clearly visible; Kitty Hawk, North Carolina]",
+   "date": "[1902 Oct. 17]",
+   "evidence": "LoC catalogue record https://www.loc.gov/item/2001696264/: title '[Wilbur gliding in level flight, single rear rudder clearly visible; Kitty Hawk, North Carolina]'; created/published '[1902 Oct. 17]'; reproduction no. 'LC-DIG-ppprs-00601 (digital file from original); LC-W861-10 (b&w film copy neg.)'; call no. 'LC-W86- 10 [P&P]'; medium '1 negative : glass, dry plate ; 5 x 7 in.'; notes: Title from: Wilbur & Orville Wright, pictorial materials: a documentary guide / Arthur G. Renstrom. Washington: Library of Congress, 1982, p. 54. | Attributed to Wilbur and/or Orville Wright. | Forms part of: Glass negatives from the Papers of Wilbur and Orville Wright. | File: https://tile.loc.gov/storage-services/master/pnp/ppprs/00600/00601u.tif (master TIFF, converted to JPEG q95 at full size; source.tif kept).",
+   "source_url": "https://www.loc.gov/item/2001696264/",
+   "licence": "Library of Congress rights advisory: 'No known restrictions.' Glass negatives made by the Wright brothers (Papers of Wilbur and Orville Wright), published before 1931: public domain in the US; LoC lists no known restrictions, so commercial use is allowed. Credit: Library of Congress, Prints and Photographs Division, LC-DIG-ppprs-00601.",
+   "width": 5000,
+   "height": 3643,
+   "archival_tiff": "https://tile.loc.gov/storage-services/master/pnp/ppprs/00600/00601a.tif",
+   "id": "loc_ppprs00601_glider_1902_wilbur_level",
+   "use_for": "glider_1900_1902",
+   "depicts": "B&w landscape. The 1902 glider in level flight against a pale sky, seen from below/side, pilot lying prone on the lower wing, the single vertical rear rudder clearly visible at right; flat sand with a low ridge along the bottom of the frame. A large white emulsion-loss area covers the left third of the plate; a few dark specks in the sky. Best used cropped to the right two-thirds.",
+   "subject_box": [
+    0.37,
+    0.57,
+    0.71,
+    0.73
+   ]
+  },
+  {
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-09/broll/photos/06_flyer_1903_camp/flyer_1903-11-24_camp_LC-DIG-ppprs-00607.jpg",
+   "kind": "image",
+   "colour": false,
+   "title": "[1903 machine and large camp building where it was housed, and smaller building used as a workshop and living quarters at Kill Devil Hills]",
+   "date": "[1903 Nov. 24]",
+   "evidence": "LoC catalogue record https://www.loc.gov/item/2001696490/: title '[1903 machine and large camp building where it was housed, and smaller building used as a workshop and living quarters at Kill Devil Hills]'; created/published '[1903 Nov. 24]'; reproduction no. 'LC-DIG-ppprs-00607 (digital file from original); LC-W861-16 (b&w film copy neg.)'; call no. 'LC-W86- 16 [P&P]'; medium '1 negative : glass, dry plate ; 5 x 7 in.'; notes: Title based on reference print and information in: Wilbur & Orville Wright, pictorial materials: a documentary guide / Arthur G. Renstrom. Washington: Library of Congress, 1982, p. 55. | Attributed to Wilbur and/or Orville Wright. | Forms part of: Glass negatives from the Papers of Wilbur and Orville Wright. | File: https://tile.loc.gov/storage-services/master/pnp/ppprs/00600/00607u.tif (master TIFF, converted to JPEG q95 at full size; source.tif kept).",
+   "source_url": "https://www.loc.gov/item/2001696490/",
+   "licence": "Library of Congress rights advisory: 'No known restrictions.' Glass negatives made by the Wright brothers (Papers of Wilbur and Orville Wright), published before 1931: public domain in the US; LoC lists no known restrictions, so commercial use is allowed. Credit: Library of Congress, Prints and Photographs Division, LC-DIG-ppprs-00607.",
+   "width": 5000,
+   "height": 3621,
+   "archival_tiff": "https://tile.loc.gov/storage-services/master/pnp/ppprs/00600/00607a.tif",
+   "id": "loc_ppprs00607_flyer_1903_camp",
+   "use_for": "camp_flyer_1903",
+   "depicts": "B&w wide landscape. Left: the 1903 Flyer (biplane with propellers and the double front elevator) standing on the sand; centre: the large wooden hangar with its front open, a man in a dark suit and hat standing in the doorway (not named in the catalogue); right: the smaller wooden building (workshop and living quarters) with a door and window. Flat sand foreground, low dune on the horizon, overcast white sky. Two vertical white strips mask the left and right edges of the plate; some stains lower left. Date: 24 Nov 1903, before the flights.",
+   "subject_box": [
+    0.22,
+    0.37,
+    0.84,
+    0.61
+   ]
+  },
+  {
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-09/broll/photos/07_flyer_1903_launch_track/flyer_1903-12-14_launching_track_LC-DIG-ppprs-00613.jpg",
+   "kind": "image",
+   "colour": false,
+   "title": "[1903 machine on the launching track at Big Kill Devil Hill, prior to the December 14th trial. Four men from the Kill Devil Hills Lifesaving Station helped move it from the shed to the hill, accompanied by two small boys and a dog]",
+   "date": "[1903 Dec. 14]",
+   "evidence": "LoC catalogue record https://www.loc.gov/item/2001696494/: title '[1903 machine on the launching track at Big Kill Devil Hill, prior to the December 14th trial. Four men from the Kill Devil Hills Lifesaving Station helped move it from the shed to the hill, accompanied by two small boys and a dog]'; created/published '[1903 Dec. 14]'; reproduction no. 'LC-DIG-ppprs-00613 (digital file from original); LC-W861-22 (b&w film copy neg.)'; call no. 'LC-W86- 22 [P&P]'; medium '1 negative : glass, dry plate ; 5 x 7 in.'; notes: Title based on: Wilbur & Orville Wright, pictorial materials: a documentary guide / Arthur G. Renstrom. Washington: Library of Congress, 1982, p. 56. | Attributed to Wilbur and/or Orville Wright. | Forms part of: Glass negatives from the Papers of Wilbur and Orville Wright. | File: https://tile.loc.gov/storage-services/master/pnp/ppprs/00600/00613u.tif (master TIFF, converted to JPEG q95 at full size; source.tif kept).",
+   "source_url": "https://www.loc.gov/item/2001696494/",
+   "licence": "Library of Congress rights advisory: 'No known restrictions.' Glass negatives made by the Wright brothers (Papers of Wilbur and Orville Wright), published before 1931: public domain in the US; LoC lists no known restrictions, so commercial use is allowed. Credit: Library of Congress, Prints and Photographs Division, LC-DIG-ppprs-00613.",
+   "width": 5000,
+   "height": 3630,
+   "archival_tiff": "https://tile.loc.gov/storage-services/master/pnp/ppprs/00600/00613a.tif",
+   "id": "loc_ppprs00613_flyer_1903_launch_track_dec14",
+   "use_for": "camp_flyer_1903",
+   "depicts": "B&w wide landscape looking up the slope of Big Kill Devil Hill. The 1903 Flyer sits on the launching track; the wooden rail runs down the slope towards the camera at lower left. To the right of the machine stand four men in dark clothes (the lifesaving-station crew, per the catalogue) and two small boys; a trestle and a box sit on the sand at right (the dog the catalogue mentions can't be clearly made out at preview size). Footprints and drag marks in the foreground sand; overcast sky. Clean plate. This is 14 Dec 1903, the failed trial, NOT the 17 Dec flight.",
+   "subject_box": [
+    0.29,
+    0.31,
+    0.91,
+    0.47
+   ]
+  },
+  {
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-09/broll/photos/08_flyer_1903_front_view/flyer_1903_front_view_LC-DIG-ppprs-00615.jpg",
+   "kind": "image",
+   "colour": false,
+   "title": "[1903 machine, front view]",
+   "date": "[1903]",
+   "evidence": "LoC catalogue record https://www.loc.gov/item/2001696496/: title '[1903 machine, front view]'; created/published '[1903]'; reproduction no. 'LC-DIG-ppprs-00615 (digital file from original); LC-W861-24 (b&w film copy neg.)'; call no. 'LC-W86- 24 [P&P]'; medium '1 negative : glass, dry plate ; 5 x 7 in.'; notes: Title from: Wilbur & Orville Wright, pictorial materials: a documentary guide / Arthur G. Renstrom. Washington: Library of Congress, 1982, p. 55. | Attributed to Wilbur and/or Orville Wright. | Forms part of: Glass negatives from the Papers of Wilbur and Orville Wright. | File: https://tile.loc.gov/storage-services/master/pnp/ppprs/00600/00615u.tif (master TIFF, converted to JPEG q95 at full size; source.tif kept).",
+   "source_url": "https://www.loc.gov/item/2001696496/",
+   "licence": "Library of Congress rights advisory: 'No known restrictions.' Glass negatives made by the Wright brothers (Papers of Wilbur and Orville Wright), published before 1931: public domain in the US; LoC lists no known restrictions, so commercial use is allowed. Credit: Library of Congress, Prints and Photographs Division, LC-DIG-ppprs-00615.",
+   "width": 5000,
+   "height": 3642,
+   "archival_tiff": "https://tile.loc.gov/storage-services/master/pnp/ppprs/00600/00615a.tif",
+   "id": "loc_ppprs00615_flyer_1903_front_view",
+   "use_for": "camp_flyer_1903",
+   "depicts": "B&w landscape, nearly symmetrical head-on view of the 1903 Flyer on the sand: the full biplane wingspan across the frame, the two propellers angled behind the wings, the double front elevator at centre, engine/chain drive and the launching rail beneath. Flat sand and low dunes; overcast sky. Emulsion damage (black blotch with lacework) in the bottom-right corner and along the right edge. The catalogue date is only '[1903]', with no month.",
+   "subject_box": [
+    0.1,
+    0.45,
+    0.88,
+    0.69
+   ]
+  },
+  {
+   "id": "uspto_US821393_sheet1",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-09/broll/photos/09_patent_US821393_sheet1/patent_US821393_sheet1_fig1.png",
+   "kind": "image",
+   "colour": false,
+   "title": "O. & W. Wright, Flying-Machine, US Patent No. 821,393, drawing sheet 1 of 3 (Fig. 1)",
+   "date": "Application filed 23 Mar 1903; patented 22 May 1906",
+   "use_for": "patent_drawing",
+   "depicts": "Patent drawing sheet, vertical, black line art on white (1-bit, 300 dpi). Header: 'No. 821,393. PATENTED MAY 22, 1906. O. & W. WRIGHT. FLYING MACHINE. APPLICATION FILED MAR. 23, 1903. 3 SHEETS-SHEET 1.' Fig. 1: perspective drawing of the biplane, its wingspan running vertically down the sheet, with numbered struts and diagonal bracing wires (8, 12, 15, 19...); the forward horizontal rudder (elevator) on outriggers at right, the vertical tail rudder (22) at left; dashed lines show the wing in its warped position; 'FIG. 1.' lettered at left. Bottom: 'WITNESSES:' with two handwritten signatures, and 'INVENTORS. Orville Wright, Wilbur Wright, BY [attorney signature], ATTORNEY.' The drawing shows the glider-type wing-warping machine with no engine or propellers. It is the patented control system, not the powered 1903 Flyer.",
+   "evidence": "Google Patents US821393A 'Flying-machine.', inventors Orville Wright and Wilbur Wright; filingDate/priorityDate 1903-03-23, publicationDate 1906-05-22 (page metadata). Sheet header read off the image (quoted in 'depicts'). Full-size drawing image from the page's itemprop='full' link; the PDF (10 pages) embeds the same 2320x3408 300 dpi CCITT scans, so the PNG is the highest resolution on offer. Delivered file is an 8-bit greyscale PNG of that 1-bit scan, verified pixel-identical (lossless), which scales without aliasing in the edit; the 1-bit original is US821393-drawings-page-1.png (= source.png) in the same folder.",
+   "source_url": "https://patents.google.com/patent/US821393A/en",
+   "licence": "Public domain: a US patent document issued 1906 (USPTO publication, US government work, no copyright). Google Patents copy of the USPTO scan. Commercial use OK.",
+   "subject_box": [
+    0.2,
+    0.11,
+    0.83,
+    0.87
+   ],
+   "width": 2320,
+   "height": 3408,
+   "file_url": "https://patentimages.storage.googleapis.com/ab/25/a9/1a32992b291214/US821393-drawings-page-1.png"
+  }
+ ],
+ "notes": "9 stills, all b&w, all commercially usable (LoC 'No known restrictions' Wright Brothers glass negatives + a US patent). Items 01-03 were reused from the earlier run; 04-08 were downloaded by a concurrently running duplicate agent into this same folder during this run (I verified each file against its LoC record and looked at every image); 09 (patent) was downloaded by me. LoC JPEGs are full-size 8-bit conversions of the LoC 'u' master TIFF (5000 px long side); 16-bit archival 'a' TIFFs (~245 MB each, larger) exist at the archival_tiff URL if deeper zooms are needed. Dating: only 01 is the 17 Dec 1903 first flight; 07 is 14 Dec 1903 (failed trial); 06 is 24 Nov 1903; 08 is undated 1903; 04/05 are Oct 1902 gliders. The NARA original ink patent drawing could not be fetched (archives.gov 502 x3). A duplicate agent wrote an equivalent manifest (same 9 items) at 16:27; it is kept as manifest.other_agent.json. In 09_ the files source.png and US821393-drawings-page-1.png are the same download."
+}

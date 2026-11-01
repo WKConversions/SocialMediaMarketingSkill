@@ -95,5 +95,29 @@ these on every video unless the client says otherwise for a specific project.
   skin; the mood comes from the dark backdrop, vignette and fade.
 - Deliver the 9:16 reel cover and the 3:4 grid view.
 
+## Classy / jazz style (Wright 1903 edit, lab/edit-09: the client's brief)
+Used when the client asks for a classy, jazz or classical feel; the Prime rules above (Difference-blend captions,
+flashes, negative frames, hits and whooshes) do NOT apply to it.
+- Music with interludes: fragments between the explaining (at sentence pauses, between clips) where the music rises
+  over real images or film of what he just said, then a smooth cross-dissolve back to him. Balance asked for: ~50%
+  explaining on camera, ~30% music + visuals, ~20% visuals under his voice, spread through the video, not in one
+  block (v1: 49 / 34 / 17).
+- No motion design, no bright flashes, no negative frames, no zoom punches: only images and video, cross-dissolves
+  (0.6 s into/out of an interlude, 0.4 s under the voice, 0.5 s between two images).
+- Audio transitions as smooth as the picture: the music is automated, not side-chain ducked (raised-cosine ramps of
+  ~0.4 s in the pauses). A song WITH vocals sits 12 dB under his voice with a gentle 1-3 kHz cut while he talks;
+  every interlude rises to the same loudness (~1.5 LU under his voice), whatever the song is doing there.
+- Captions: one classy serif everywhere, the same spot and size (Playfair Display Italic 500, warm ivory, soft shadow,
+  one line, y 0.735, phrase by phrase, gentle 4-frame fade-in); place/date labels in the interludes use the same style.
+  Matches the client's "Old money life" reference.
+- The same caption shutter, but softer (about 9 dB under the Prime shutter, top end rounded) so it isn't dominant.
+- Tone a little lower than the footage; the client's lighting is already low, so be careful. Grade: near the
+  original colours, lightly sharpened, a little contrast, slightly lower mids, only the strongest reds calmed
+  (lab/edit-09/tools/grade_classy.py). Never shift the skin toward red ("not classy") and never recolour it grey.
+- Archival images as warm silver prints (warm blacks to ivory highlights, never a hard white), wide images across the
+  frame on a near-black field with feathered edges, slow push-in.
+- Cover: keep the white/red Montserrat title exactly; the image classier (a warm silver print melting into black:
+  cover.py --still --tone silver --feather 45).
+
 ## Working style
 - Show a first viewable version fast (within 20 minutes); polish afterwards.

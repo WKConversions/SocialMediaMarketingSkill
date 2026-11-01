@@ -1,0 +1,23 @@
+{
+ "id": "film_nara_16P1316-1_fortmyer_1909",
+ "file": "nara_16-P-1316-1_fortmyer_1909/source.mp4",
+ "kind": "video",
+ "title": "Wright Brothers' Flight (NARA 16-P-1316-1, NAID 2038)",
+ "date": "1909-07-27 (catalogue date; Orville Wright's Army acceptance trials at Fort Myer, Virginia)",
+ "use_for": "flight_film_1908_1909",
+ "depicts": "Silent B&W 16mm film, 1440x1080 picture pillarboxed in a 1920x1080 frame, with burned-in intertitles (later title cards, not 1909 originals). Visible: soldiers pushing the Wright Military Flyer out of its wooden shed and wheeling it to the launching rail; the Flyer on the rail by the derrick (catapult tower); close shots of the two men seated at the controls (intertitle: Orville Wright with passenger Lt. Frank Lahm); crowds and post buildings; the Flyer banking toward the camera over the field, passing low over spectators' heads, cruising above the tree line, a low-level speed run. No clear landing shot. NARA slate 0-6 s; end leader 223-227 s. Audio track is digital silence (-91 dB): no music or narration, no watermark. USABLE RANGES (s, all flight shots are the 1909 Fort Myer trials): 17.0-23.0 soldiers push the Flyer out of the shed; 41.0-47.0 Flyer wheeled across the field past the shed; 77.3-83.0 Flyer on the launching rail, man walks past; 100.5-105.8 close: men seated at the controls (pilot seat, chain drive); 124.6-127.2 catapult tower + Flyer on rail, then short take-off run along the rail (only ~1.4 s of run, 125.8-127.2); 147.0-153.0 BEST: Flyer flies toward camera over the field in front of the tree line and banks, growing larger (a damaged black frame at 153.1 - stop before it); 158.0-162.7 BEST: Flyer passes low over the spectators' heads and away over the barracks; 168.0-172.9 Flyer high over the tree line, passes overhead; 186.8-193.0 Flyer cruising left to right above the tree line, clear silhouette; 212.3-216.9 low-level speed run: Flyer approaches low over the field and banks close past the camera (vertical scratches). Intertitles at ~6-16, 83.1-88.2, 110.7-117.8, 162.9-167.7, 181.8-186.3 (approx.), 204.8-210.1 s - avoid or crop.",
+ "evidence": "NARA catalog NAID 2038, local identifier 16-P-1316-1, title \"Wright Brothers' Flight\"; scope note: \"This film documents the official test flight of the Wright Brothers' military airplane at Fort Myer, Virginia, on July 27, 1909.\"; date note: \"Although this series was created in 1930, this film was produced in 1909.\"; subjects: Wright, Wilbur, 1867-1912; Wright, Orville, 1871-1948; series 'Public Information and Training Motion Picture and Television Productions' (NAID 1550), Records of the Office of the Secretary of Agriculture (RG 16); Access: Unrestricted; Use: Restricted - Possibly (copyright note). Burned-in intertitles read: \"Official Test Flight of Wright Brothers Military Airplane, Fort Myer, July 27, 1909\" / \"Orville Wright takes his place in the pilot's seat next to his passenger, Lt. Frank Lahm.\" / \"Flight lasts 1 hour and 12 minutes - a world record for a pilot with passenger.\" CAUTION: two shots (the bank toward camera at 147-153 s, with the same damaged frame, and the pass over spectators) also appear in NARA 111-H-1185, which NARA's Moving Image Lab found (2022, Unwritten Record blog) to splice September 1908 and early-July 1909 footage; so treat individual shots as 'Fort Myer trials, 1908-1909' rather than certainly 27 July 1909. Not 1903 and not Kitty Hawk.",
+ "source_url": "https://catalog.archives.gov/id/2038",
+ "file_url": "https://catalog.archives.gov/medialz/mopix/016/16-P/16-p-1316-1.mp4",
+ "licence": "Public domain in the US (no known copyright): 1909 footage held in US Department of Agriculture motion-picture records (NARA RG 16), i.e. a US federal-agency film (17 U.S.C. 105), and in any case created/published more than 115 years ago. NARA catalog fields: Access 'Unrestricted'; Use 'Restricted - Possibly' (generic note: 'Some or all of this material may be restricted by copyright or other intellectual property rights and restrictions.' - no rights holder named). NARA does not print an explicit 'public domain' statement on this record.",
+ "duration_s": 226.875,
+ "width": 1920,
+ "height": 1080,
+ "colour": false,
+ "subject_box": [
+  0.125,
+  0.0,
+  0.875,
+  1.0
+ ]
+}

@@ -3,6 +3,7 @@
 
     python cover.py FRAME.png OUT_DIR --white "Would they" --red "believe you?" [--zoom 1.0] [--head-top 0.07]
     python cover.py PRINT.jpg OUT_DIR --white ... --red ... --still --center 0.5,0.38 --zoom 1.2   (archival image)
+    add --tone silver for the classy style (a warm silver print instead of the moody colour print)
 
 Client rules: use a moment where the client is explaining or has a neutral face (eyes open, looking at the camera,
 no blink); keep their own framing (no zoom on the head); keep the face natural (no coloured or heavily graded skin).
@@ -168,6 +169,18 @@ def grade_print(x):
     return np.clip(x, 0, 1)
 
 
+def silver_print(x):
+    """Classy variant (Wright 1903 cover): a fine silver print, the same toning as the classy edit's archival
+    images: levels from the print's own percentiles, gentle S-curve, warm blacks to ivory highlights, low key."""
+    lum = x @ np.array([0.2126, 0.7152, 0.0722], np.float32)
+    lo, hi = np.percentile(lum, [0.5, 99.6])
+    t = np.clip((lum - lo) / max(1e-3, hi - lo), 0, 1)
+    t = (t * t * (3 - 2 * t) * 0.35 + t * 0.65) * 0.82
+    dark, mid, light = (np.array(c, np.float32) for c in ((0.045, 0.038, 0.034), (0.50, 0.44, 0.37), (0.94, 0.90, 0.82)))
+    t3 = t[..., None]
+    return np.where(t3 < 0.5, dark + (mid - dark) * np.clip(t3 * 2, 0, 1), mid + (light - mid) * np.clip(t3 * 2 - 1, 0, 1))
+
+
 def still_canvas(x, args):
     """An archival print (no speaker) framed by --center/--zoom; beyond its edges a dark, blurred copy of itself."""
     H0, W0 = x.shape[:2]
@@ -175,20 +188,21 @@ def still_canvas(x, args):
     w = W0 / args.zoom
     full_h = w * 1920 / 1080
     x0, y0 = cx * W0 - w / 2, cy * H0 - full_h / 2
-    img = Image.fromarray((grade_print(x) * 255 + 0.5).astype(np.uint8))
+    img = Image.fromarray(((silver_print(x) if args.tone == "silver" else grade_print(x)) * 255 + 0.5).astype(np.uint8))
     bg = img.resize((1080, int(1080 * H0 / W0)), Image.BILINEAR)
     k = max(1920 / bg.height, 1.0)
     bg = bg.resize((int(bg.width * k) + 1, int(bg.height * k) + 1), Image.BILINEAR)
     bg = bg.crop(((bg.width - 1080) // 2, (bg.height - 1920) // 2, (bg.width - 1080) // 2 + 1080, (bg.height - 1920) // 2 + 1920))
-    bg = np.asarray(bg.filter(ImageFilter.GaussianBlur(40))).astype(np.float32) / 255 * 0.22
+    bg = np.asarray(bg.filter(ImageFilter.GaussianBlur(40))).astype(np.float32) / 255 * (0.12 if args.tone == "silver" else 0.22)
     pad = int(max(W0, H0))
     big = Image.new("RGB", (W0 + 2 * pad, H0 + 2 * pad))
     big.paste(img, (pad, pad))
     alpha = Image.new("L", big.size, 0)
-    alpha.paste(255, (pad, pad, pad + W0, pad + H0))
+    inset = int(2.5 * args.feather * w / 1080)                             # the fade reaches ~0 AT the print's edge (no hard step)
+    alpha.paste(255, (pad + inset, pad + inset, pad + W0 - inset, pad + H0 - inset))
     box = (x0 + pad, y0 + pad, x0 + pad + w, y0 + pad + full_h)
     fg = np.asarray(big.resize((1080, 1920), Image.LANCZOS, box=box)).astype(np.float32) / 255
-    a = np.asarray(alpha.resize((1080, 1920), Image.BILINEAR, box=box).filter(ImageFilter.GaussianBlur(30))).astype(np.float32)[..., None] / 255
+    a = np.asarray(alpha.resize((1080, 1920), Image.BILINEAR, box=box).filter(ImageFilter.GaussianBlur(args.feather))).astype(np.float32)[..., None] / 255
     out = fg * a + bg * (1 - a)
     # soft light on the subject (e.g. the balloon), the rest falls away into the dark
     lx, ly = (float(v) for v in args.light.split(","))
@@ -210,6 +224,9 @@ def main():
     ap.add_argument("--still", action="store_true", help="an archival image instead of the speaker (no cut-out)")
     ap.add_argument("--center", default="0.5,0.5", help="--still: centre of the 3:4 window in the image (fractions)")
     ap.add_argument("--fade-from", type=float, default=0.42, help="--still: where the dark fade starts, fraction of the 3:4 height")
+    ap.add_argument("--tone", choices=["moody", "silver"], default="moody",
+                    help="--still: 'moody' = darker colour print; 'silver' = warm silver print (classy / jazz edits)")
+    ap.add_argument("--feather", type=float, default=30, help="--still: softness of the print's edges (px); ~90 for a print that melts into the dark")
     ap.add_argument("--light", default="0.5,0.33", help="--still: centre of the soft light (the subject), fractions of the 3:4 frame")
     args = ap.parse_args()
     os.makedirs(args.out, exist_ok=True)

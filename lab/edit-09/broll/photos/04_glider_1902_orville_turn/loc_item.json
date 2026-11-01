@@ -1,0 +1,1797 @@
+{
+ "articles_and_essays": [
+  {
+   "score": 7.6527452,
+   "title": "Finding 250 Years of American Innovation in The Source",
+   "url": "https://blogs.loc.gov/families/2026/07/finding-250-years-of-american-innovation-in-the-source/"
+  }
+ ],
+ "cite_this": {
+  "apa": "Wright, W. &amp; Wright, O., photographer. (1902) <cite>Orville making right turn, showing warping of wings, hill visible in front of him; Kitty Hawk, North Carolina</cite>. North Carolina Kitty Hawk, 1902. [Oct. 24] [Photograph] Retrieved from the Library of Congress, https://www.loc.gov/item/2001696262/.",
+  "chicago": "Wright, Wilbur, and Orville Wright, photographer. <cite>Orville making right turn, showing warping of wings, hill visible in front of him; Kitty Hawk, North Carolina</cite>. North Carolina Kitty Hawk, 1902. [Oct. 24] Photograph. https://www.loc.gov/item/2001696262/.",
+  "mla": "Wright, Wilbur, and Orville Wright, photographer. <cite>Orville making right turn, showing warping of wings, hill visible in front of him; Kitty Hawk, North Carolina</cite>. [Oct. 24] Photograph. Retrieved from the Library of Congress, &lt;www.loc.gov/item/2001696262/&gt;."
+ },
+ "item": {
+  "_version_": 1754109076398145536,
+  "access_restricted": false,
+  "aka": [
+   "http://www.loc.gov/pictures/collection/wri/item/2001696262/",
+   "http://www.loc.gov/item/2001696262/",
+   "http://www.loc.gov/pictures/item/2001696262/",
+   "https://hdl.loc.gov/loc.pnp/ppprs.00599",
+   "http://www.loc.gov/resource/ppprs.00599/",
+   "http://lccn.loc.gov/2001696262"
+  ],
+  "call_number": "LC-W86- 8 [P&P]",
+  "campaigns": [],
+  "contributor_names": [
+   "Wright, Wilbur, 1867-1912, photographer",
+   "Wright, Orville, 1871-1948, photographer"
+  ],
+  "contributors": [
+   {
+    "wright, orville": "https://www.loc.gov/search/?fa=contributor:wright,+orville&fo=json"
+   },
+   {
+    "wright, wilbur": "https://www.loc.gov/search/?fa=contributor:wright,+wilbur&fo=json"
+   }
+  ],
+  "control_number": "",
+  "created": "2016-04-21 09:53:11",
+  "created_published": [
+   "[1902 Oct. 24]"
+  ],
+  "created_published_date": "[1902 Oct. 24]",
+  "date": "1902-01-01",
+  "description": [
+   "1 negative : glass, dry plate ; 5 x 7 in."
+  ],
+  "digital_id": [
+   "ppprs 00599 //hdl.loc.gov/loc.pnp/ppprs.00599"
+  ],
+  "digitized": true,
+  "display_offsite": true,
+  "extract_timestamp": "2021-09-01T23:13:48.229Z",
+  "extract_urls": [
+   "http://www.loc.gov/pictures/collection/wri/item/2001696262/#wri",
+   "http://lccn.loc.gov/2001696262#catalog-split-02"
+  ],
+  "format": [
+   {
+    "photo, print, drawing": "https://www.loc.gov/search/?fa=original_format:photo,+print,+drawing&fo=json"
+   }
+  ],
+  "format_headings": [
+   "Dry plate negatives--1900-1910."
+  ],
+  "genre": [
+   "Dry plate negatives--1900-1910"
+  ],
+  "group": [
+   "wri",
+   "catalog-split-02",
+   "catalog",
+   "wright-brothers-negatives",
+   "main-catalog-split-02",
+   "main-catalog"
+  ],
+  "hassegments": false,
+  "id": "http://www.loc.gov/item/2001696262/",
+  "image_url": [
+   "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00599_150px.jpg#h=109&w=150",
+   "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00599t.gif#h=109&w=150",
+   "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00599r.jpg#h=464&w=640",
+   "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00599v.jpg#h=742&w=1024"
+  ],
+  "index": 1,
+  "item": {
+   "call_number": "LC-W86- 8 [P&P]",
+   "contributor_names": [
+    "Wright, Wilbur, 1867-1912, photographer ",
+    "Wright, Orville, 1871-1948, photographer "
+   ],
+   "contributors": [
+    "Wright, Wilbur, 1867-1912, photographer.",
+    "Wright, Orville, 1871-1948, photographer."
+   ],
+   "control_number": "2001696262",
+   "created": "2016-04-21 09:53:11",
+   "created_published": "[1902 Oct. 24]",
+   "created_published_date": "[1902 Oct. 24]",
+   "creators": [
+    {
+     "link": "//www.loc.gov/pictures/related/?fi=name&q=Wright%2C%20Wilbur%2C%201867-1912&co=wri",
+     "role": "photographer",
+     "title": "Wright, Wilbur, 1867-1912"
+    },
+    {
+     "link": "//www.loc.gov/pictures/related/?fi=name&q=Wright%2C%20Orville%2C%201871-1948&co=wri",
+     "role": "photographer",
+     "title": "Wright, Orville, 1871-1948"
+    }
+   ],
+   "date": "[1902 Oct. 24]",
+   "digital_id": [
+    "ppprs 00599 //hdl.loc.gov/loc.pnp/ppprs.00599"
+   ],
+   "display_offsite": true,
+   "format": [
+    "still image"
+   ],
+   "formats": [
+    {
+     "link": "//www.loc.gov/pictures/related/?fi=format&q=Dry%20plate%20negatives--1900-1910.&co=wri",
+     "title": "Dry plate negatives--1900-1910."
+    }
+   ],
+   "genre": [
+    "Dry plate negatives--1900-1910"
+   ],
+   "id": "2001696262",
+   "language": [
+    "eng"
+   ],
+   "link": "//www.loc.gov/pictures/item/2001696262/",
+   "location": [
+    "North Carolina--Kitty Hawk"
+   ],
+   "marc": "//www.loc.gov/pictures/item/2001696262/marc/",
+   "medium": [
+    "1 negative : glass, dry plate ; 5 x 7 in."
+   ],
+   "medium_brief": "1 negative :",
+   "mediums": [
+    "1 negative : glass, dry plate ; 5 x 7 in."
+   ],
+   "modified": "2016-04-21 09:53:11",
+   "notes": [
+    "Title from: Wilbur & Orville Wright, pictorial materials: a documentary guide / Arthur G. Renstrom. Washington: Library of Congress, 1982, p. 55.",
+    "Attributed to Wilbur and/or Orville Wright.",
+    "Reference copy in LOT 11512.",
+    "Forms part of: Glass negatives from the Papers of Wilbur and Orville Wright."
+   ],
+   "number_former_id": [
+    "https://www.loc.gov/item/2001696262",
+    "https://www.loc.gov/item/12275327"
+   ],
+   "part_of": "Glass negatives from the Papers of Wilbur and Orville Wright",
+   "place": [
+    {
+     "latitude": "",
+     "link": "//www.loc.gov/pictures/related/?fi=place&q=North%20Carolina--Kitty%20Hawk&co=wri",
+     "longitude": "",
+     "title": "North Carolina--Kitty Hawk"
+    }
+   ],
+   "repository": "Library of Congress Prints and Photographs Division Washington, D.C. 20540 USA",
+   "reproduction_number": "LC-DIG-ppprs-00599 (digital file from original)\nLC-W861-8 (b&w film copy neg.)",
+   "resource_links": [
+    "//hdl.loc.gov/loc.pnp/ppprs.00599"
+   ],
+   "rights_advisory": "No known restrictions.",
+   "rights_information": "No known restrictions.",
+   "service_low": "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00599_150px.jpg",
+   "service_medium": "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00599r.jpg",
+   "sort_date": "1902",
+   "source_collection": [
+    "Glass negatives from the Papers of Wilbur and Orville Wright"
+   ],
+   "source_created": "2001-01-10 00:00:00",
+   "source_modified": "2014-04-11 16:39:39",
+   "subject_headings": [
+    "Wright, Orville,--1871-1948.",
+    "Gliders--North Carolina--Kitty Hawk--1900-1910.",
+    "Flight testing--North Carolina--Kitty Hawk--1900-1910.",
+    "North Carolina--Kitty Hawk"
+   ],
+   "subjects": [
+    "Wright, Orville,--1871-1948",
+    "Gliders--North Carolina--Kitty Hawk--1900-1910",
+    "Flight testing--North Carolina--Kitty Hawk--1900-1910"
+   ],
+   "thumb_gallery": "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00599_150px.jpg",
+   "title": "[Orville making right turn, showing warping of wings, hill visible in front of him; Kitty Hawk, North Carolina]"
+  },
+  "language": [
+   "english"
+  ],
+  "languages": [
+   {
+    "english": "https://www.loc.gov/search/?fa=language:english&fo=json"
+   }
+  ],
+  "latlong": [
+   36.0647222222,
+   -75.7058333333
+  ],
+  "library_of_congress_control_number": "2001696262",
+  "link": "//www.loc.gov/pictures/item/2001696262/",
+  "location": [
+   "north carolina",
+   "kitty hawk"
+  ],
+  "location_str": "",
+  "locations": [
+   {
+    "kitty hawk": "https://www.loc.gov/search/?fa=location:kitty+hawk&fo=json"
+   },
+   {
+    "north carolina": "https://www.loc.gov/search/?fa=location:north+carolina&fo=json"
+   }
+  ],
+  "locations_str": [
+   null
+  ],
+  "lonlat": [
+   -75.7058333333,
+   36.0647222222
+  ],
+  "marc": "//www.loc.gov/pictures/item/2001696262/marc/",
+  "medium": [
+   "1 negative : glass, dry plate ; 5 x 7 in."
+  ],
+  "medium_brief": "1 negative :",
+  "mime_type": [
+   "image/gif",
+   "image/jpg",
+   "image/tif"
+  ],
+  "modified": "2016-04-21 09:53:11",
+  "notes": [
+   "Title from: Wilbur & Orville Wright, pictorial materials: a documentary guide / Arthur G. Renstrom. Washington: Library of Congress, 1982, p. 55.",
+   "Attributed to Wilbur and/or Orville Wright.",
+   "Reference copy in LOT 11512.",
+   "Forms part of: Glass negatives from the Papers of Wilbur and Orville Wright."
+  ],
+  "number": [
+   "http://www.loc.gov/item/2001696262",
+   "http://www.loc.gov/item/12275327",
+   "2001696262",
+   "2014-04-11t16:39:39"
+  ],
+  "number_former_id": [
+   "http://www.loc.gov/item/2001696262",
+   "http://www.loc.gov/item/12275327"
+  ],
+  "number_lccn": [
+   "2001696262"
+  ],
+  "number_source_modified": [
+   "2014-04-11t16:39:39"
+  ],
+  "online_format": [
+   "image"
+  ],
+  "original_format": [
+   "photo, print, drawing"
+  ],
+  "other_formats": [
+   {
+    "label": "MARCXML Record",
+    "link": "https://lccn.loc.gov/2001696262/marcxml"
+   },
+   {
+    "label": "MODS Record",
+    "link": "https://lccn.loc.gov/2001696262/mods"
+   },
+   {
+    "label": "Dublin Core Record",
+    "link": "https://lccn.loc.gov/2001696262/dc"
+   }
+  ],
+  "partof": [
+   {
+    "count": 307,
+    "title": "wright brothers negatives",
+    "url": "https://www.loc.gov/collections/wright-brothers-negatives/?fo=json"
+   },
+   {
+    "count": 910393,
+    "title": "prints & photographs online catalog (library of congress)",
+    "url": "https://www.loc.gov/search/?fa=partof:prints+%26+photographs+online+catalog+%28library+of+congress%29&fo=json"
+   },
+   {
+    "count": 1162965,
+    "title": "prints and photographs division",
+    "url": "https://www.loc.gov/search/?fa=partof:prints+and+photographs+division&fo=json"
+   },
+   {
+    "count": 1907931,
+    "title": "catalog",
+    "url": "https://www.loc.gov/search/?fa=partof:catalog&fo=json"
+   }
+  ],
+  "place": [
+   {
+    "latitude": "",
+    "link": "//www.loc.gov/pictures/related/?fi=place&q=North%20Carolina--Kitty%20Hawk&co=wri",
+    "longitude": "",
+    "title": "North Carolina--Kitty Hawk"
+   }
+  ],
+  "related": {
+   "neighbors": "//www.loc.gov/pictures/related/?&co=wri&pk=2001696262&st=gallery&sb=call_number#focus"
+  },
+  "repository": [
+   "Library of Congress Prints and Photographs Division Washington, D.C. 20540 USA"
+  ],
+  "reproduction_number": "LC-DIG-ppprs-00599 (digital file from original)\nLC-W861-8 (b&w film copy neg.)",
+  "reproductions": [],
+  "resource_links": [
+   "//hdl.loc.gov/loc.pnp/ppprs.00599"
+  ],
+  "resources": [
+   {
+    "caption": "digital file from  original",
+    "files": 1,
+    "image": "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00599_150px.jpg",
+    "url": "https://www.loc.gov/resource/ppprs.00599/"
+   }
+  ],
+  "rights": [
+   "<p>The Library of Congress does not&nbsp;own rights to material  in its collections. Therefore, it does not license or charge permission fees  for use of such material and cannot grant or deny permission to publish or  otherwise distribute the material. </p>\n<p>Ultimately, it is the researcher's obligation to assess copyright or other use restrictions and  obtain permission from third parties when necessary before publishing or  otherwise distributing materials found in the Library's collections. </p>\n<p>For information about reproducing,  publishing, and citing material from this collection, as well as access to the  original items, see: <a href=\"https://www.loc.gov/rr/print/res/269_wri.html\">Wright Brothers Photographs - Rights and Restrictions Information</a> </p>\n\n"
+  ],
+  "rights_advisory": "No known restrictions.",
+  "rights_information": "No known restrictions.",
+  "score": 19.469982,
+  "shard": "00",
+  "shelf_id": "LC-W86- 8 [P&P]",
+  "site": [
+   "pictures",
+   "catalog"
+  ],
+  "sort_date": "1902",
+  "source_collection": "Glass negatives from the Papers of Wilbur and Orville Wright",
+  "source_created": "2001-01-10 00:00:00",
+  "source_modified": "2014-04-11 16:39:39",
+  "subject": [
+   "gliders",
+   "kitty hawk",
+   "dry plate negatives",
+   "wright, orville",
+   "flight testing",
+   "north carolina"
+  ],
+  "subject_headings": [
+   "Wright, Orville,--1871-1948",
+   "Gliders--North Carolina--Kitty Hawk--1900-1910",
+   "Flight testing--North Carolina--Kitty Hawk--1900-1910"
+  ],
+  "subjects": [
+   {
+    "dry plate negatives": "https://www.loc.gov/search/?fa=subject:dry+plate+negatives&fo=json"
+   },
+   {
+    "flight testing": "https://www.loc.gov/search/?fa=subject:flight+testing&fo=json"
+   },
+   {
+    "gliders": "https://www.loc.gov/search/?fa=subject:gliders&fo=json"
+   },
+   {
+    "kitty hawk": "https://www.loc.gov/search/?fa=subject:kitty+hawk&fo=json"
+   },
+   {
+    "north carolina": "https://www.loc.gov/search/?fa=subject:north+carolina&fo=json"
+   },
+   {
+    "wright, orville": "https://www.loc.gov/search/?fa=subject:wright,+orville&fo=json"
+   }
+  ],
+  "thumb_gallery": "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00599_150px.jpg",
+  "timestamp": "2023-01-04T16:12:54.157Z",
+  "title": "[Orville making right turn, showing warping of wings, hill visible in front of him; Kitty Hawk, North Carolina]",
+  "type": [
+   "still image"
+  ],
+  "unrestricted": true,
+  "url": "https://www.loc.gov/item/2001696262/"
+ },
+ "locations": [
+  [
+   {
+    "geometry": {
+     "coordinates": [
+      -75.70583333333333,
+      36.06472222222222
+     ],
+     "type": "Point"
+    },
+    "properties": {
+     "admin": [
+      {
+       "alternate_names": "United States of America U.S.A. USA United States of America",
+       "feature_code": "ADM0",
+       "id": "d227a216b468aba1",
+       "name": "United States"
+      },
+      {
+       "alternate_names": "",
+       "feature_code": "ADM1",
+       "id": "8dde945547559360",
+       "name": "North Carolina"
+      },
+      {
+       "alternate_names": "Dare County",
+       "feature_code": "ADM2",
+       "id": "e4aed0895450df8c",
+       "name": "Dare"
+      }
+     ],
+     "alternate": [],
+     "area": null,
+     "feature_code": "PPL",
+     "feature_code_name": "populated place",
+     "id": "aa0480e9434ba4f6",
+     "importance": null,
+     "is_composite": null,
+     "is_primary": true,
+     "name": "Kitty Hawk (N.C.)",
+     "population": null,
+     "timeframe": {},
+     "uris": [
+      "http://id.loc.gov/authorities/names/n82081595"
+     ]
+    },
+    "type": "Feature"
+   }
+  ]
+ ],
+ "more_like_this": [
+  {
+   "access_restricted": false,
+   "aka": [
+    "http://www.loc.gov/pictures/collection/wri/item/2001696450/",
+    "http://www.loc.gov/item/2001696450/",
+    "http://www.loc.gov/pictures/item/2001696450/",
+    "https://hdl.loc.gov/loc.pnp/ppprs.00556",
+    "http://www.loc.gov/resource/ppprs.00556/",
+    "http://lccn.loc.gov/2001696450"
+   ],
+   "campaigns": [],
+   "contributor": [
+    "wright, orville",
+    "wright, wilbur"
+   ],
+   "date": "1900-01-01",
+   "description": [
+    "1 negative : glass, dry plate ; 4 x 5 in."
+   ],
+   "digitized": true,
+   "extract_timestamp": "2021-09-01T23:13:48.724Z",
+   "group": [
+    "wri",
+    "catalog-split-01",
+    "catalog",
+    "wright-brothers-negatives",
+    "main-catalog-split-01",
+    "main-catalog"
+   ],
+   "hassegments": false,
+   "id": "http://www.loc.gov/item/2001696450/",
+   "image_url": [
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00556_150px.jpg#h=120&w=150",
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00556t.gif#h=120&w=150",
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00556r.jpg#h=511&w=640",
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00556v.jpg#h=817&w=1024"
+   ],
+   "index": 1,
+   "language": [
+    "english"
+   ],
+   "latlong": [
+    36.0647222222,
+    -75.7058333333
+   ],
+   "location": [
+    "north carolina",
+    "kitty hawk"
+   ],
+   "location_str": "",
+   "lonlat": [
+    -75.7058333333,
+    36.0647222222
+   ],
+   "mime_type": [
+    "image/gif",
+    "image/jpg",
+    "image/tif"
+   ],
+   "number": [
+    "http://www.loc.gov/item/2001696450",
+    "2014-04-11t16:32:06",
+    "http://www.loc.gov/item/12358218",
+    "2001696450"
+   ],
+   "online_format": [
+    "image"
+   ],
+   "original_format": [
+    "photo, print, drawing"
+   ],
+   "partof": [
+    "catalog",
+    "wright brothers negatives",
+    "prints and photographs division",
+    "prints & photographs online catalog (library of congress)"
+   ],
+   "score": 73.507195,
+   "shelf_id": "LC-W85- 96 [P&P]",
+   "site": [
+    "pictures",
+    "catalog"
+   ],
+   "subject": [
+    "gliders",
+    "kitty hawk",
+    "wright, wilbur",
+    "dry plate negatives",
+    "wright, orville",
+    "flight testing",
+    "north carolina"
+   ],
+   "timestamp": "2023-01-04T16:13:03.821Z",
+   "title": "[Left side view of the 1900 Wright glider before installation of forward horizontal control surface, flying as a kite, tipped forward; Kitty Hawk Lifesaving Station and Weather Bureau buildings in background to the left]",
+   "type": [
+    "still image"
+   ],
+   "url": "https://www.loc.gov/item/2001696450/"
+  },
+  {
+   "access_restricted": false,
+   "aka": [
+    "http://www.loc.gov/pictures/collection/wri/item/2001696451/",
+    "http://www.loc.gov/item/2001696451/",
+    "http://www.loc.gov/pictures/item/2001696451/",
+    "https://hdl.loc.gov/loc.pnp/ppprs.00555",
+    "http://www.loc.gov/resource/ppprs.00555/",
+    "http://lccn.loc.gov/2001696451"
+   ],
+   "campaigns": [],
+   "contributor": [
+    "wright, orville",
+    "wright, wilbur"
+   ],
+   "date": "1900-01-01",
+   "description": [
+    "1 negative : glass, dry plate ; 4 x 5 in."
+   ],
+   "digitized": true,
+   "extract_timestamp": "2021-09-01T23:13:48.724Z",
+   "group": [
+    "wri",
+    "catalog-split-02",
+    "catalog",
+    "wright-brothers-negatives",
+    "main-catalog-split-02",
+    "main-catalog"
+   ],
+   "hassegments": false,
+   "id": "http://www.loc.gov/item/2001696451/",
+   "image_url": [
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00555_150px.jpg#h=121&w=150",
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00555t.gif#h=121&w=150",
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00555r.jpg#h=514&w=640",
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00555v.jpg#h=823&w=1024"
+   ],
+   "index": 2,
+   "language": [
+    "english"
+   ],
+   "latlong": [
+    36.0647222222,
+    -75.7058333333
+   ],
+   "location": [
+    "north carolina",
+    "kitty hawk"
+   ],
+   "location_str": "",
+   "lonlat": [
+    -75.7058333333,
+    36.0647222222
+   ],
+   "mime_type": [
+    "image/gif",
+    "image/jpg",
+    "image/tif"
+   ],
+   "number": [
+    "2001696451",
+    "2014-04-11t16:32:10",
+    "http://www.loc.gov/item/12358225",
+    "http://www.loc.gov/item/2001696451"
+   ],
+   "online_format": [
+    "image"
+   ],
+   "original_format": [
+    "photo, print, drawing"
+   ],
+   "partof": [
+    "catalog",
+    "wright brothers negatives",
+    "prints and photographs division",
+    "prints & photographs online catalog (library of congress)"
+   ],
+   "score": 73.507195,
+   "shelf_id": "LC-W85- 97 [P&P]",
+   "site": [
+    "pictures",
+    "catalog"
+   ],
+   "subject": [
+    "gliders",
+    "kitty hawk",
+    "wright, wilbur",
+    "dry plate negatives",
+    "wright, orville",
+    "flight testing",
+    "north carolina"
+   ],
+   "timestamp": "2023-01-04T16:13:03.821Z",
+   "title": "[Left side view of glider flying as a kite, in level flight, Kitty Hawk, North Carolina]",
+   "type": [
+    "still image"
+   ],
+   "url": "https://www.loc.gov/item/2001696451/"
+  },
+  {
+   "access_restricted": false,
+   "aka": [
+    "http://www.loc.gov/pictures/collection/wri/item/2001696465/",
+    "http://www.loc.gov/item/2001696465/",
+    "http://www.loc.gov/pictures/item/2001696465/",
+    "https://hdl.loc.gov/loc.pnp/ppprs.00570",
+    "http://www.loc.gov/resource/ppprs.00570/",
+    "http://lccn.loc.gov/2001696465"
+   ],
+   "campaigns": [],
+   "contributor": [
+    "wright, orville",
+    "wright, wilbur"
+   ],
+   "date": "1901-01-01",
+   "description": [
+    "1 negative : glass, dry plate ; 4 x 5 in."
+   ],
+   "digitized": true,
+   "extract_timestamp": "2021-09-01T23:13:48.724Z",
+   "group": [
+    "wri",
+    "catalog-split-07",
+    "catalog",
+    "wright-brothers-negatives",
+    "main-catalog-split-07",
+    "main-catalog"
+   ],
+   "hassegments": false,
+   "id": "http://www.loc.gov/item/2001696465/",
+   "image_url": [
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00570_150px.jpg#h=120&w=150",
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00570t.gif#h=120&w=150",
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00570r.jpg#h=510&w=640",
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00570v.jpg#h=817&w=1024"
+   ],
+   "index": 3,
+   "language": [
+    "english"
+   ],
+   "latlong": [
+    36.0647222222,
+    -75.7058333333
+   ],
+   "location": [
+    "north carolina",
+    "kitty hawk"
+   ],
+   "location_str": "",
+   "lonlat": [
+    -75.7058333333,
+    36.0647222222
+   ],
+   "mime_type": [
+    "image/gif",
+    "image/jpg",
+    "image/tif"
+   ],
+   "number": [
+    "http://www.loc.gov/item/2001696465",
+    "2001696465",
+    "http://www.loc.gov/item/12363176",
+    "2014-04-11t16:47:39"
+   ],
+   "online_format": [
+    "image"
+   ],
+   "original_format": [
+    "photo, print, drawing"
+   ],
+   "partof": [
+    "catalog",
+    "wright brothers negatives",
+    "prints and photographs division",
+    "prints & photographs online catalog (library of congress)"
+   ],
+   "score": 73.507195,
+   "shelf_id": "LC-W85- 111 [P&P]",
+   "site": [
+    "pictures",
+    "catalog"
+   ],
+   "subject": [
+    "gliders",
+    "kitty hawk",
+    "wright, wilbur",
+    "dry plate negatives",
+    "wright, orville",
+    "flight testing",
+    "north carolina"
+   ],
+   "timestamp": "2023-01-04T16:13:03.821Z",
+   "title": "[Wilbur Wright in prone position on glider just after landing, its skid marks visible behind it and, in the foreground, skid marks from a previous landing; Kitty Hawk, North Carolina]",
+   "type": [
+    "still image"
+   ],
+   "url": "https://www.loc.gov/item/2001696465/"
+  },
+  {
+   "access_restricted": false,
+   "aka": [
+    "http://www.loc.gov/pictures/collection/wri/item/2001696466/",
+    "http://www.loc.gov/item/2001696466/",
+    "http://www.loc.gov/pictures/item/2001696466/",
+    "https://hdl.loc.gov/loc.pnp/ppprs.00571",
+    "http://www.loc.gov/resource/ppprs.00571/",
+    "http://lccn.loc.gov/2001696466"
+   ],
+   "campaigns": [],
+   "contributor": [
+    "wright, orville",
+    "wright, wilbur"
+   ],
+   "date": "1901-01-01",
+   "description": [
+    "1 negative : glass, dry plate ; 4 x 5 in."
+   ],
+   "digitized": true,
+   "extract_timestamp": "2021-09-01T23:13:48.724Z",
+   "group": [
+    "wri",
+    "catalog-split-08",
+    "catalog",
+    "wright-brothers-negatives",
+    "main-catalog-split-08",
+    "main-catalog"
+   ],
+   "hassegments": false,
+   "id": "http://www.loc.gov/item/2001696466/",
+   "image_url": [
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00571_150px.jpg#h=120&w=150",
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00571t.gif#h=120&w=150",
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00571r.jpg#h=514&w=640",
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00571v.jpg#h=822&w=1024"
+   ],
+   "index": 4,
+   "language": [
+    "english"
+   ],
+   "latlong": [
+    36.0647222222,
+    -75.7058333333
+   ],
+   "location": [
+    "north carolina",
+    "kitty hawk"
+   ],
+   "location_str": "",
+   "lonlat": [
+    -75.7058333333,
+    36.0647222222
+   ],
+   "mime_type": [
+    "image/gif",
+    "image/jpg",
+    "image/tif"
+   ],
+   "number": [
+    "2014-04-09t08:46:33",
+    "http://www.loc.gov/item/2001696466",
+    "2001696466",
+    "http://www.loc.gov/item/12363190"
+   ],
+   "online_format": [
+    "image"
+   ],
+   "original_format": [
+    "photo, print, drawing"
+   ],
+   "partof": [
+    "catalog",
+    "wright brothers negatives",
+    "prints and photographs division",
+    "prints & photographs online catalog (library of congress)"
+   ],
+   "score": 73.507195,
+   "shelf_id": "LC-W85- 112 [P&P]",
+   "site": [
+    "pictures",
+    "catalog"
+   ],
+   "subject": [
+    "gliders",
+    "kitty hawk",
+    "wright, wilbur",
+    "dry plate negatives",
+    "wright, orville",
+    "flight testing",
+    "north carolina"
+   ],
+   "timestamp": "2023-01-04T16:13:03.821Z",
+   "title": "[1901 glider being flown as a kite, Wilbur at left side, Orville at right; Kitty Hawk, North Carolina]",
+   "type": [
+    "still image"
+   ],
+   "url": "https://www.loc.gov/item/2001696466/"
+  },
+  {
+   "access_restricted": false,
+   "aka": [
+    "http://www.loc.gov/pictures/collection/wri/item/2001696467/",
+    "http://www.loc.gov/item/2001696467/",
+    "http://www.loc.gov/pictures/item/2001696467/",
+    "https://hdl.loc.gov/loc.pnp/ppprs.00572",
+    "http://www.loc.gov/resource/ppprs.00572/",
+    "http://lccn.loc.gov/2001696467"
+   ],
+   "campaigns": [],
+   "contributor": [
+    "wright, orville",
+    "wright, wilbur"
+   ],
+   "date": "1901-01-01",
+   "description": [
+    "1 negative : glass, dry plate ; 4 x 5 in."
+   ],
+   "digitized": true,
+   "extract_timestamp": "2021-09-01T23:13:48.724Z",
+   "group": [
+    "wri",
+    "catalog-split-09",
+    "catalog",
+    "wright-brothers-negatives",
+    "main-catalog-split-09",
+    "main-catalog"
+   ],
+   "hassegments": false,
+   "id": "http://www.loc.gov/item/2001696467/",
+   "image_url": [
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00572_150px.jpg#h=120&w=150",
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00572t.gif#h=120&w=150",
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00572r.jpg#h=514&w=640",
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00572v.jpg#h=822&w=1024"
+   ],
+   "index": 5,
+   "language": [
+    "english"
+   ],
+   "latlong": [
+    36.0647222222,
+    -75.7058333333
+   ],
+   "location": [
+    "north carolina",
+    "kitty hawk"
+   ],
+   "location_str": "",
+   "lonlat": [
+    -75.7058333333,
+    36.0647222222
+   ],
+   "mime_type": [
+    "image/gif",
+    "image/jpg",
+    "image/tif"
+   ],
+   "number": [
+    "http://www.loc.gov/item/2001696467",
+    "2014-04-11t16:47:45",
+    "http://www.loc.gov/item/12363214",
+    "2001696467"
+   ],
+   "online_format": [
+    "image"
+   ],
+   "original_format": [
+    "photo, print, drawing"
+   ],
+   "partof": [
+    "catalog",
+    "wright brothers negatives",
+    "prints and photographs division",
+    "prints & photographs online catalog (library of congress)"
+   ],
+   "score": 73.507195,
+   "shelf_id": "LC-W85- 113 [P&P]",
+   "site": [
+    "pictures",
+    "catalog"
+   ],
+   "subject": [
+    "gliders",
+    "kitty hawk",
+    "wright, wilbur",
+    "dry plate negatives",
+    "wright, orville",
+    "flight testing",
+    "north carolina"
+   ],
+   "timestamp": "2023-01-04T16:13:03.821Z",
+   "title": "[Wilbur Wright gliding, Kitty Hawk, North Carolina]",
+   "type": [
+    "still image"
+   ],
+   "url": "https://www.loc.gov/item/2001696467/"
+  },
+  {
+   "access_restricted": false,
+   "aka": [
+    "http://www.loc.gov/pictures/collection/wri/item/2001696469/",
+    "http://www.loc.gov/item/2001696469/",
+    "http://www.loc.gov/pictures/item/2001696469/",
+    "https://hdl.loc.gov/loc.pnp/ppprs.00595",
+    "http://www.loc.gov/resource/ppprs.00595/",
+    "http://lccn.loc.gov/2001696469"
+   ],
+   "campaigns": [],
+   "contributor": [
+    "wright, orville",
+    "wright, wilbur"
+   ],
+   "date": "1902-01-01",
+   "description": [
+    "1 negative : glass, dry plate ; 5 x 7 in."
+   ],
+   "digitized": true,
+   "extract_timestamp": "2021-09-01T23:13:48.724Z",
+   "group": [
+    "wri",
+    "catalog-split-11",
+    "catalog",
+    "wright-brothers-negatives",
+    "main-catalog-split-11",
+    "main-catalog"
+   ],
+   "hassegments": false,
+   "id": "http://www.loc.gov/item/2001696469/",
+   "image_url": [
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00595_150px.jpg#h=108&w=150",
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00595t.gif#h=108&w=150",
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00595r.jpg#h=462&w=640",
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00595v.jpg#h=740&w=1024"
+   ],
+   "index": 6,
+   "language": [
+    "english"
+   ],
+   "latlong": [
+    36.0647222222,
+    -75.7058333333
+   ],
+   "location": [
+    "north carolina",
+    "kitty hawk"
+   ],
+   "location_str": "",
+   "lonlat": [
+    -75.7058333333,
+    36.0647222222
+   ],
+   "mime_type": [
+    "image/gif",
+    "image/jpg",
+    "image/tif"
+   ],
+   "number": [
+    "http://www.loc.gov/item/2001696469",
+    "2001696469",
+    "2014-04-11t16:08:16",
+    "http://www.loc.gov/item/12363258"
+   ],
+   "online_format": [
+    "image"
+   ],
+   "original_format": [
+    "photo, print, drawing"
+   ],
+   "partof": [
+    "catalog",
+    "wright brothers negatives",
+    "prints and photographs division",
+    "prints & photographs online catalog (library of congress)"
+   ],
+   "score": 73.507195,
+   "shelf_id": "LC-W86- 4 [P&P]",
+   "site": [
+    "pictures",
+    "catalog"
+   ],
+   "subject": [
+    "gliders",
+    "kitty hawk",
+    "wright, wilbur",
+    "dry plate negatives",
+    "wright, orville",
+    "flight testing",
+    "north carolina"
+   ],
+   "timestamp": "2023-01-04T16:13:03.821Z",
+   "title": "[Gliding; Kitty Hawk, North Carolina]",
+   "type": [
+    "still image"
+   ],
+   "url": "https://www.loc.gov/item/2001696469/"
+  }
+ ],
+ "options": {
+  "access_group": [
+   ""
+  ],
+  "access_group_raw": "",
+  "all": null,
+  "api_version": "1",
+  "app_context": null,
+  "application_shim": null,
+  "application_version": "$Revision$",
+  "attribute": null,
+  "attribute!": null,
+  "attribute_map": null,
+  "cache_tags": [
+   "wri",
+   "catalog-split-02",
+   "catalog",
+   "wright-brothers-negatives",
+   "main-catalog-split-02",
+   "main-catalog",
+   "catalog-split-01",
+   "main-catalog-split-01",
+   "catalog-split-07",
+   "main-catalog-split-07",
+   "catalog-split-08",
+   "main-catalog-split-08",
+   "catalog-split-09",
+   "main-catalog-split-09",
+   "catalog-split-11",
+   "main-catalog-split-11",
+   "catalog-split-00",
+   "main-catalog-split-00",
+   "cms",
+   "managed-content",
+   "ndnp/dlc-2020_now",
+   "library-of-congress-washington-dc-awardee-8",
+   "mcc",
+   "words-and-deeds"
+  ],
+  "callback": null,
+  "clip": null,
+  "clip_image_width": null,
+  "clip_rotation": null,
+  "content_filter": null,
+  "content_replacement": "",
+  "count": null,
+  "dates": null,
+  "default_count": 25,
+  "delimiter": null,
+  "digital_id": null,
+  "display_level": null,
+  "distance": null,
+  "downloadOption": null,
+  "duration": 0.6283121109008789,
+  "embed": [],
+  "embed!": [],
+  "error_response_status": null,
+  "excludeTerms": null,
+  "facetLimits": "",
+  "facetPrefix": null,
+  "facet_count": null,
+  "facet_style": null,
+  "field": null,
+  "format": "json",
+  "host": "www.loc.gov",
+  "ical": false,
+  "id": "2001696262/",
+  "iiif": false,
+  "index": null,
+  "inputEncoding": "UTF-8",
+  "item": null,
+  "items": null,
+  "keys": null,
+  "language": null,
+  "latlong": null,
+  "method": "GET",
+  "newSearch": null,
+  "new_clip_url": false,
+  "onsite": false,
+  "operator": null,
+  "outputEncoding": "UTF-8",
+  "page_campaigns": [],
+  "path_info": "/item/2001696262/",
+  "port": "443",
+  "proxypath": null,
+  "query_string": "fo=json",
+  "redirect_proxy": false,
+  "redirect_to_item": null,
+  "referer": "",
+  "region": "",
+  "release_id": 123456789,
+  "request_host": "www.loc.gov",
+  "request_params": {
+   "fo": [
+    "json"
+   ]
+  },
+  "request_url": "https://www.loc.gov/item/2001696262/?fo=json",
+  "resource": "",
+  "resource_sequence": null,
+  "scheme": "https",
+  "searchIn": null,
+  "searchTerms": "",
+  "segments": null,
+  "shards": [
+   "00"
+  ],
+  "site_id": null,
+  "site_type": null,
+  "solrQuery": "",
+  "sortBy": null,
+  "sortOrder": null,
+  "startPage": null,
+  "style": null,
+  "suggested": null,
+  "target": null,
+  "template": "layouts/item/layout",
+  "timestamp": 1793550037.4303951,
+  "tz_aware": null,
+  "unionFacets": "",
+  "webcast_permalink": null
+ },
+ "related": {
+  "group_record": null,
+  "lot_link": null,
+  "neighbors": "//www.loc.gov/pictures/related/?&co=wri&pk=2001696262&st=gallery&sb=call_number#focus",
+  "survey_link": null
+ },
+ "related_items": [
+  {
+   "access_restricted": false,
+   "aka": [
+    "http://lccn.loc.gov/mm78046706",
+    "http://www.loc.gov/item/mm78046706/",
+    "https://hdl.loc.gov/loc.mss/collmss.ms000022"
+   ],
+   "campaigns": [],
+   "contributor": [
+    "wright, wilbur",
+    "wright, milton",
+    "wright, orville",
+    "united states. national advisory committee for aeronautics",
+    "wright cycle company",
+    "wright and wright",
+    "mcfarland, marvin wilks"
+   ],
+   "description": [
+    "Correspondence, diaries, minutes, notebooks, writings, reports, business and legal papers, genealogical material, printed matter, patents, blueprints, photographs, and other papers relating primarily to the invention of the airplane and the development of aviation.  Documents the lives and work of the Wright brothers who designed, built, and piloted the first machine to achieve powered, sustained flight in 1903 and the first practical airplane in 1905. The papers include scientific data, formulas, and computations related to aerodynamic and design factors and describe the brothers' experimentation with flight at Kitty Hawk, N.C., 1900-1903, at College Park, Md., in 1909, and at Montgomery, Ala., in 1910, and their trips abroad making flight demonstrations.  Subjects include the sale of the Wright airplane to the U.S. Army and others; business concerns involving the Wright Company, Flint and Company, Brewer and Son, Thierry Brothers, and companies established in Great Britain, France, and Germany to produce and sell Wright aircraft; the Wright brothers' patents in the U.S. and abroad as well as airplane patents by others; and the brothers' dispute with Smithsonian Institution over whether S.P. Langley had created an aircraft capable of flight prior to the Wrights' flight in December 1903. Also includes journals and ledgers from Wright and Wright printing company and Wright Cycle Company; records of the U.S. National Advisory Committee for Aeronautics; typescripts, research material, and photographs collected for The Papers of Wilbur and Orville Wright, edited by Marvin Wilks McFarland and published in 1953; and Wright family papers including transcripts of Milton Wright's diaries, 1901-1907.  The 2019 Addition includes a 1919 letter from Orville Wright concerning his test flight of the first military airplane, Signal Corps No. 1, on July 30, 1909. Wright family correspondents include Katharine Wright Haskell, Lorin Wright, Milton Wright, and Reuchlin Wright.  Other correspondents include Henry Harley Arnold, Hart O. Berg, Griffith Brewer, Octave Chanute, Robert J. Collier, Earl N. Findley, Benjamin D. Foulois, Fred C. Kelly, Roy Knabenshue, Frank Purdy Lahm, Charles A. Lindbergh, Grover Cleveland Loening, Glenn L. Martin, Charles Stewart Rolls, G.A. Spratt, Paul Tissandier, Harry A. Toulmin, and Pliny W. Williamson."
+   ],
+   "digitized": true,
+   "extract_timestamp": "2025-04-30T05:56:07.865Z",
+   "group": [
+    "catalog-split-00",
+    "catalog",
+    "main-catalog-split-00"
+   ],
+   "hassegments": false,
+   "id": "http://lccn.loc.gov/mm78046706",
+   "image_url": [],
+   "index": 1,
+   "language": [
+    "french",
+    "german",
+    "english"
+   ],
+   "location": [
+    "maryland",
+    "france",
+    "montgomery",
+    "kitty hawk",
+    "alabama",
+    "college park",
+    "dayton",
+    "great britain",
+    "ohio",
+    "united states",
+    "north carolina",
+    "germany"
+   ],
+   "number": [
+    "2025-04-28t11:22:12",
+    "mm78046706"
+   ],
+   "original_format": [
+    "manuscript/mixed material",
+    "collection"
+   ],
+   "other_title": [
+    "Wilbur and Orville Wright papers",
+    "Wilbur Wright papers",
+    "Orville Wright papers"
+   ],
+   "partof": [
+    "catalog",
+    "manuscript division"
+   ],
+   "score": 21.23332,
+   "shelf_id": "http://lccn.loc.gov/mm78046706",
+   "site": [
+    "catalog"
+   ],
+   "subject": [
+    "kelly, fred c.",
+    "signal corps no. 1 (airplane)",
+    "flight",
+    "samuel pierpont)",
+    "glenn luther)",
+    "fred charters)",
+    "brewer, griffith",
+    "wright family",
+    "bicycle industry",
+    "wright, lorin",
+    "college park (md.)",
+    "tissandier, paul",
+    "montgomery (ala.)",
+    "kitty hawk (n.c.)",
+    "procurement",
+    "army",
+    "spratt, g. a.",
+    "chanute, octave",
+    "dayton",
+    "flint and company",
+    "martin, glenn l.",
+    "great britain",
+    "loening, grover",
+    "toulmin, harry a.",
+    "germany",
+    "airplanes",
+    "harry aubrey)",
+    "george alexander)",
+    "wright, milton",
+    "lahm, frank purdy",
+    "correspondence",
+    "history",
+    "wright flyer (airplane)",
+    "findley, earl n.",
+    "berg, hart o.",
+    "united states",
+    "smithsonian institution",
+    "robert joseph)",
+    "collier, robert j.",
+    "brewer and son",
+    "haskell, katharine wright",
+    "france",
+    "patents",
+    "rolls, charles stewart",
+    "printing",
+    "wright, reuchlin",
+    "charles augustus)",
+    "ohio",
+    "aircraft industry",
+    "wright company",
+    "williamson, pliny w.",
+    "aeronautics",
+    "earl nelson)",
+    "lindbergh, charles a.",
+    "knabenshue, roy",
+    "foulois, benjamin d.",
+    "thierry brothers",
+    "langley, s. p.",
+    "arnold, henry harley"
+   ],
+   "timestamp": "2025-04-30T05:58:59.353Z",
+   "title": "Wilbur Wright and Orville Wright papers, 1809-1979",
+   "type": [
+    "manuscript"
+   ],
+   "url": "//lccn.loc.gov/mm78046706"
+  },
+  {
+   "access_restricted": false,
+   "aka": [
+    "http://www.loc.gov/collections/wilbur-and-orville-wright-papers/articles-and-essays/photography-and-the-wright-brothers/"
+   ],
+   "campaigns": [],
+   "date": "1881",
+   "dates": [
+    "[1881 TO 1943]"
+   ],
+   "description": [
+    "Among the materials acquired by the Library of Congress in 1949 from the estate of Orville Wright were 303 negative photographic plates. Nearly all these glass plate negatives were taken and developed by the Wrights themselves between 1898 and 1911. The images are as important as the Wrights' diaries, notebooks, and letters to knowledge and understanding of the brothers' historic accomplishments. Rarely in the history of science and technology is it possible to see, analyze, and study a crucial technology as it was developed, and the value of the Wrights' materials can be judged by imagining how historical understanding would be enlarged if photographs existed of ancient Roman, Renaissance, or even eighteenth-century technologies as they were being developed."
+   ],
+   "digitized": true,
+   "extract_timestamp": "2026-11-01T09:24:37.101Z",
+   "group": [
+    "cms",
+    "managed-content"
+   ],
+   "hassegments": false,
+   "id": "http://www.loc.gov/collections/wilbur-and-orville-wright-papers/articles-and-essays/photography-and-the-wright-brothers/",
+   "image_url": [
+    "https://www.loc.gov/static/collections/wilbur-and-orville-wright-papers/images/0058.jpg"
+   ],
+   "index": 2,
+   "language": [
+    "english"
+   ],
+   "location": [
+    "north carolina",
+    "kitty hawk"
+   ],
+   "mime_type": [
+    "image/jpg"
+   ],
+   "online_format": [
+    "image"
+   ],
+   "original_format": [
+    "web page"
+   ],
+   "partof": [
+    "wilbur and orville wright papers at the library of congress"
+   ],
+   "score": 18.906916,
+   "shelf_id": "~/collections/wilbur-and-orville-wright-papers/articles-and-essays/photography-and-the-wright-brothers/",
+   "site": [
+    "cms"
+   ],
+   "subject": [
+    "flight",
+    "wright, wilbur",
+    "chanute, octave",
+    "wright, orville",
+    "wright glider"
+   ],
+   "timestamp": "2026-11-01T10:51:12.771Z",
+   "title": "Photography and the Wright Brothers | Articles and Essays | Wilbur and Orville Wright Papers at the Library of Congress | Digital Collections",
+   "type": [
+    "web page"
+   ],
+   "url": "https://www.loc.gov/collections/wilbur-and-orville-wright-papers/articles-and-essays/photography-and-the-wright-brothers/"
+  },
+  {
+   "access_restricted": false,
+   "aka": [
+    "http://www.loc.gov/item/sn84025826/1899-12-21/ed-1/",
+    "http://www.loc.gov/resource/sn84025826/1899-12-21/ed-1/"
+   ],
+   "batch": [
+    "dlc_bigstone_ver02"
+   ],
+   "campaigns": [],
+   "contributor": [
+    "library of congress, washington, dc"
+   ],
+   "date": "1899-12-21",
+   "dates": [
+    "1899-12-21"
+   ],
+   "description": [
+    "Wilmington, N.C."
+   ],
+   "digitized": true,
+   "extract_timestamp": "2026-06-21T17:45:41.532Z",
+   "group": [
+    "ndnp/dlc-2020_now",
+    "library-of-congress-washington-dc-awardee-8"
+   ],
+   "hassegments": true,
+   "id": "http://www.loc.gov/item/sn84025826/1899-12-21/ed-1/",
+   "image_url": [
+    "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_bigstone_ver02:data:sn84025826:00220720457:1899122101:0001/full/pct:3.125/0/default.jpg#h=283&w=197",
+    "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_bigstone_ver02:data:sn84025826:00220720457:1899122101:0001/full/pct:6.25/0/default.jpg#h=566&w=394",
+    "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_bigstone_ver02:data:sn84025826:00220720457:1899122101:0001/full/pct:12.5/0/default.jpg#h=1133&w=789"
+   ],
+   "index": 3,
+   "language": [
+    "english"
+   ],
+   "location": [
+    "mecklenburg",
+    "charlotte",
+    "wilmington",
+    "mecklenburg county",
+    "new hanover",
+    "united states",
+    "north carolina",
+    "new hanover county"
+   ],
+   "mime_type": [
+    "image/jp2",
+    "application/pdf",
+    "text/xml",
+    "image/jpeg"
+   ],
+   "number": [
+    "sn84025826",
+    "1",
+    "00220720457"
+   ],
+   "numeric_shelf_id": 189912211,
+   "online_format": [
+    "image",
+    "pdf",
+    "online text"
+   ],
+   "original_format": [
+    "newspaper"
+   ],
+   "partof": [
+    "serial and government publications division",
+    "africo-american presbyterian (wilmington, n.c.) 1879-1938",
+    "chronicling america"
+   ],
+   "publication_frequency": [
+    "weekly"
+   ],
+   "score": 16.08372,
+   "shelf_id": "sn84025826, 1899-12-21, Edition 1",
+   "site": [
+    "chroniclingamerica"
+   ],
+   "subject": [
+    "mecklenburg",
+    "african american presbyterians",
+    "african americans",
+    "charlotte (n.c.)",
+    "new hanover county (n.c.)",
+    "new hanover county",
+    "african american newspapers",
+    "charlotte",
+    "presbyterian church",
+    "mecklenburg county",
+    "united states",
+    "wilmington (n.c.)",
+    "presbyterians",
+    "mecklenburg county (n.c.)",
+    "wilmington",
+    "african american",
+    "new hanover",
+    "north carolina",
+    "newspapers"
+   ],
+   "timestamp": "2026-06-21T17:46:37.232Z",
+   "title": "Africo-American Presbyterian (Wilmington, N.C.), December 21, 1899",
+   "type": [
+    "issue"
+   ],
+   "url": "https://www.loc.gov/item/sn84025826/1899-12-21/ed-1/"
+  },
+  {
+   "access_restricted": false,
+   "aka": [
+    "http://www.loc.gov/item/sn83025842/1884-05-22/ed-1/",
+    "http://www.loc.gov/resource/sn83025842/1884-05-22/ed-1/"
+   ],
+   "batch": [
+    "dlc_fairview_ver01"
+   ],
+   "campaigns": [],
+   "contributor": [
+    "library of congress, washington, dc"
+   ],
+   "date": "1884-05-22",
+   "dates": [
+    "1884-05-22"
+   ],
+   "description": [
+    "Weldon, N.C."
+   ],
+   "digitized": true,
+   "extract_timestamp": "2023-08-07T20:31:23.113Z",
+   "group": [
+    "ndnp/dlc-2020_now",
+    "library-of-congress-washington-dc-awardee-8"
+   ],
+   "hassegments": true,
+   "id": "http://www.loc.gov/item/sn83025842/1884-05-22/ed-1/",
+   "image_url": [
+    "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_fairview_ver01:data:sn83025842:00220720408:1884052201:0001/full/pct:3.125/0/default.jpg#h=301&w=222",
+    "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_fairview_ver01:data:sn83025842:00220720408:1884052201:0001/full/pct:6.25/0/default.jpg#h=602&w=445"
+   ],
+   "index": 4,
+   "language": [
+    "english"
+   ],
+   "location": [
+    "north carolina",
+    "united states",
+    "weldon",
+    "halifax"
+   ],
+   "mime_type": [
+    "image/jp2",
+    "application/pdf",
+    "text/xml",
+    "image/jpeg"
+   ],
+   "number": [
+    "1",
+    "sn83025842",
+    "00220720408"
+   ],
+   "numeric_shelf_id": 188405221,
+   "online_format": [
+    "image",
+    "pdf",
+    "online text"
+   ],
+   "original_format": [
+    "newspaper"
+   ],
+   "other_title": [
+    "North Carolina Republican, and civil rights advocate"
+   ],
+   "partof": [
+    "chronicling america",
+    "serial and government publications division",
+    "the n.c. republican, and civil rights advocate (weldon, n.c.) 1884-1???"
+   ],
+   "publication_frequency": [
+    "weekly"
+   ],
+   "score": 16.08372,
+   "shelf_id": "sn83025842, 1884-05-22, Edition 1",
+   "site": [
+    "chroniclingamerica"
+   ],
+   "subject": [
+    "african american",
+    "african americans",
+    "weldon (n.c.)",
+    "united states",
+    "halifax",
+    "north carolina",
+    "african american newspapers",
+    "newspapers",
+    "weldon"
+   ],
+   "timestamp": "2023-08-08T05:57:57.864Z",
+   "title": "The N.C. Republican, and civil rights advocate (Weldon, N.C.), May 22, 1884",
+   "type": [
+    "issue"
+   ],
+   "url": "https://www.loc.gov/item/sn83025842/1884-05-22/ed-1/"
+  },
+  {
+   "access_restricted": false,
+   "aka": [
+    "http://www.loc.gov/item/sn83025849/1900-07-25/ed-1/",
+    "http://www.loc.gov/resource/sn83025849/1900-07-25/ed-1/"
+   ],
+   "batch": [
+    "dlc_fairview_ver01"
+   ],
+   "campaigns": [],
+   "contributor": [
+    "library of congress, washington, dc"
+   ],
+   "date": "1900-07-25",
+   "dates": [
+    "1900-07-25"
+   ],
+   "description": [
+    "Littleton, N.C."
+   ],
+   "digitized": true,
+   "extract_timestamp": "2023-08-07T20:31:23.113Z",
+   "group": [
+    "ndnp/dlc-2020_now",
+    "library-of-congress-washington-dc-awardee-8"
+   ],
+   "hassegments": true,
+   "id": "http://www.loc.gov/item/sn83025849/1900-07-25/ed-1/",
+   "image_url": [
+    "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_fairview_ver01:data:sn83025849:00220720408:1900072501:0001/full/pct:3.125/0/default.jpg#h=274&w=181",
+    "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_fairview_ver01:data:sn83025849:00220720408:1900072501:0001/full/pct:6.25/0/default.jpg#h=548&w=362",
+    "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_fairview_ver01:data:sn83025849:00220720408:1900072501:0001/full/pct:12.5/0/default.jpg#h=1096&w=725"
+   ],
+   "index": 5,
+   "language": [
+    "english"
+   ],
+   "location": [
+    "littleton",
+    "united states",
+    "north carolina",
+    "halifax"
+   ],
+   "mime_type": [
+    "image/jp2",
+    "application/pdf",
+    "text/xml",
+    "image/jpeg"
+   ],
+   "number": [
+    "1",
+    "sn83025849",
+    "00220720408"
+   ],
+   "numeric_shelf_id": 190007251,
+   "online_format": [
+    "image",
+    "pdf",
+    "online text"
+   ],
+   "original_format": [
+    "newspaper"
+   ],
+   "partof": [
+    "serial and government publications division",
+    "the true reformer (littleton, n.c.) 1899-19??",
+    "chronicling america"
+   ],
+   "publication_frequency": [
+    "weekly"
+   ],
+   "score": 16.08372,
+   "shelf_id": "sn83025849, 1900-07-25, Edition 1",
+   "site": [
+    "chroniclingamerica"
+   ],
+   "subject": [
+    "littleton",
+    "littleton (n.c.)",
+    "african american",
+    "african americans",
+    "united states",
+    "halifax",
+    "north carolina",
+    "african american newspapers",
+    "newspapers"
+   ],
+   "timestamp": "2023-08-08T05:57:57.864Z",
+   "title": "The true reformer (Littleton, N.C.), July 25, 1900",
+   "type": [
+    "issue"
+   ],
+   "url": "https://www.loc.gov/item/sn83025849/1900-07-25/ed-1/"
+  },
+  {
+   "access_restricted": false,
+   "aka": [
+    "http://www.loc.gov/item/mcc00087/",
+    "http://www.loc.gov/resource/mcc.061/",
+    "http://www.loc.gov/item/mcc.061/"
+   ],
+   "campaigns": [],
+   "date": "1903-12-17",
+   "dates": [
+    "1903-12-17"
+   ],
+   "digitized": true,
+   "extract_timestamp": "2023-11-08T18:42:39.986Z",
+   "group": [
+    "mcc",
+    "words-and-deeds"
+   ],
+   "hassegments": false,
+   "id": "http://www.loc.gov/item/mcc.061/",
+   "image_url": [
+    "https://tile.loc.gov/image-services/iiif/service:mss:mssmcc:061:0001/full/pct:12.5/0/default.jpg#h=273&w=418",
+    "https://tile.loc.gov/image-services/iiif/service:mss:mssmcc:061:0001/full/pct:25/0/default.jpg#h=547&w=836",
+    "https://tile.loc.gov/image-services/iiif/service:mss:mssmcc:061:0001/full/pct:50/0/default.jpg#h=1095&w=1672",
+    "https://tile.loc.gov/image-services/iiif/service:mss:mssmcc:061:0001/full/pct:100/0/default.jpg#h=2190&w=3344"
+   ],
+   "index": 6,
+   "language": [
+    "english"
+   ],
+   "mime_type": [
+    "application/pdf",
+    "image/tiff",
+    "image/jpeg",
+    "image/jp2"
+   ],
+   "online_format": [
+    "pdf",
+    "image"
+   ],
+   "original_format": [
+    "manuscript/mixed material"
+   ],
+   "partof": [
+    "wright brothers papers",
+    "manuscript division",
+    "words and deeds in american history: selected documents celebrating the manuscript division's first 100 years"
+   ],
+   "score": 11.956762,
+   "shelf_id": "mcc00087",
+   "subject": [
+    "manuscripts",
+    "wright, orville",
+    "telegrams",
+    "inventors",
+    "aeronautics",
+    "kitty hawk (n.c.)",
+    "north carolina",
+    "airplanes",
+    "inventions"
+   ],
+   "timestamp": "2023-11-08T18:43:26.290Z",
+   "title": "Telegram, Orville Wright to Bishop Milton Wright announcing the first successful powered flight, 17 December [1903].",
+   "type": [
+    "Manuscript"
+   ],
+   "url": "https://www.loc.gov/item/mcc.061/"
+  }
+ ],
+ "reproductions": "<p>If an image is displaying, you can download it yourself. (Some images \r\ndisplay only as thumbnails outside the Library of Congress because of rights \r\nconsiderations, but you have access to larger size images on site.)\r\n</p>\r\n\r\n<p>  \r\nAlternatively, you can purchase copies of various types through Library \r\nof Congress Duplication Services</a>.\r\n</p>\r\n\r\n<p> \r\n<ol>\r\n<p>\r\n<li><strong>If a digital image is displaying:</strong> The qualities of the digital image \r\npartially depend on whether it was made from the original or an \r\nintermediate such as a copy negative or transparency. If the Reproduction \r\nNumber field above includes a reproduction number that starts with \r\nLC-DIG..., then there is a digital image that was made directly \r\nfrom the original and is of sufficient resolution for most publication\r\n purposes.\r\n</li> \r\n</p>\r\n\r\n<li><strong>If there is information listed in the Reproduction Number field above:</strong> \r\nYou can use the reproduction number to purchase a copy from Duplication \r\nServices.  It will be made from the source listed in the parentheses after\r\n the number.  \r\n<p> \r\nIf only black-and-white (&quot;b&w&quot;) sources are listed and you \r\n desire a copy showing color or tint (assuming the original has any), \r\n you can generally purchase a quality copy of the original in color by \r\n citing the Call Number listed above and including the catalog record \r\n (&quot;About This Item&quot;) with your request.\r\n </p>\r\n</li>\r\n\r\n<li><strong>If there is no information listed in the Reproduction Number field \r\nabove:</strong> You can generally purchase a quality copy through \r\nDuplication Services. Cite the Call Number listed above and include the catalog record (&quot;About This Item&quot;) with \r\n your request.\r\n</li>\r\n</ol>\r\n</p>\r\n\r\n<p> \r\nPrice lists, contact information, and order forms are available on the\r\n <a href=\"//lcweb.loc.gov/preserv/pds/\">Duplication Services Web site</a>.  \r\n</p>\r\n\r\n\r\n\r\n",
+ "resources": [
+  {
+   "caption": "digital file from  original",
+   "files": [
+    [
+     {
+      "height": 0,
+      "levels": 1,
+      "mimetype": "image/tiff",
+      "size": 18117524,
+      "url": "https://tile.loc.gov/storage-services/master/pnp/ppprs/00500/00599u.tif",
+      "width": 0
+     },
+     {
+      "height": 0,
+      "levels": 1,
+      "mimetype": "image/tiff",
+      "size": 244573770,
+      "url": "https://tile.loc.gov/storage-services/master/pnp/ppprs/00500/00599a.tif",
+      "width": 0
+     },
+     {
+      "height": 109,
+      "levels": 1,
+      "mimetype": "image/jpeg",
+      "size": 4376,
+      "url": "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00599_150px.jpg",
+      "width": 150
+     },
+     {
+      "height": 109,
+      "levels": 1,
+      "mimetype": "image/gif",
+      "size": 16369,
+      "url": "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00599t.gif",
+      "width": 150
+     },
+     {
+      "height": 464,
+      "levels": 1,
+      "mimetype": "image/jpeg",
+      "size": 45842,
+      "url": "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00599r.jpg",
+      "width": 640
+     },
+     {
+      "height": 742,
+      "levels": 1,
+      "mimetype": "image/jpeg",
+      "size": 265238,
+      "url": "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00599v.jpg",
+      "width": 1024
+     }
+    ]
+   ],
+   "image": "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00599_150px.jpg",
+   "url": "https://www.loc.gov/resource/ppprs.00599/"
+  }
+ ],
+ "thesaurus_entry": null,
+ "timestamp": 1793550038059,
+ "unrestricted": true
+}

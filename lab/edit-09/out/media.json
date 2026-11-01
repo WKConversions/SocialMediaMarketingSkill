@@ -1,0 +1,155 @@
+{
+ "photo": {
+  "file": "/home/user/SocialMediaMarketingSkill/lab/edit-09/broll/photos/01_first_flight_1903/first_flight_1903_LC-DIG-ppprs-00626.jpg",
+  "kind": "image",
+  "crop": [
+   0.2,
+   0.08,
+   0.97,
+   0.8
+  ],
+  "mode": "fit",
+  "zoom": 1.3,
+  "y": 0.43,
+  "center": [
+   0.53,
+   0.5
+  ],
+  "focus": [
+   0.52,
+   0.4
+  ],
+  "push": 0.07,
+  "label": "17 December 1903",
+  "source": "https://www.loc.gov/item/2001626183/",
+  "licence": "Library of Congress: No known restrictions on publication",
+  "callback": {
+   "mode": "fill",
+   "crop": null,
+   "zoom": 0.5,
+   "center": [
+    0.52,
+    0.47
+   ],
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "push": 0.05,
+   "label": null
+  },
+  "record": "[First flight, 120 feet in 12 seconds, 10:35 a.m.; Kitty Hawk, North Carolina] [1903 Dec. 17], LC-DIG-ppprs-00626"
+ },
+ "brothers": {
+  "files": [
+   "/home/user/SocialMediaMarketingSkill/lab/edit-09/broll/photos/02_wilbur_portrait_1905/wilbur_wright_c1905_LC-DIG-ppprs-00683.jpg",
+   "/home/user/SocialMediaMarketingSkill/lab/edit-09/broll/photos/03_orville_portrait_1905/orville_wright_1905_LC-DIG-ppprs-00680.jpg"
+  ],
+  "crops": [
+   [
+    0.18,
+    0.24,
+    0.84,
+    0.82
+   ],
+   [
+    0.24,
+    0.3,
+    0.86,
+    0.86
+   ]
+  ],
+  "kind": "image",
+  "focus": [
+   0.5,
+   0.5
+  ],
+  "push": 0.04,
+  "label": "Wilbur and Orville Wright",
+  "licence": "Library of Congress: No known restrictions",
+  "record": "LC-DIG-ppprs-00683 (Wilbur, about 1905) and LC-DIG-ppprs-00680 (Orville, 1905)"
+ },
+ "glider": {
+  "file": "/home/user/SocialMediaMarketingSkill/lab/edit-09/broll/photos/05_glider_1902_wilbur_level/glider_1902-10-17_wilbur_level_LC-DIG-ppprs-00601.jpg",
+  "kind": "image",
+  "mode": "fit",
+  "center": [
+   0.63,
+   0.5
+  ],
+  "focus": [
+   0.55,
+   0.45
+  ],
+  "push": 0.05,
+  "label": "Kitty Hawk, 1902",
+  "record": "[Wilbur gliding in level flight, single rear rudder clearly visible; Kitty Hawk, North Carolina] [1902 Oct. 17], LC-DIG-ppprs-00601",
+  "licence": "Library of Congress, Wright Brothers Negatives: No known restrictions",
+  "zoom": 1.6,
+  "y": 0.42
+ },
+ "flyer_camp": {
+  "file": "/home/user/SocialMediaMarketingSkill/lab/edit-09/broll/photos/08_flyer_1903_front_view/flyer_1903_front_view_LC-DIG-ppprs-00615.jpg",
+  "kind": "image",
+  "mode": "fit",
+  "crop": [
+   0.03,
+   0.1,
+   0.97,
+   0.8
+  ],
+  "zoom": 1.5,
+  "center": [
+   0.5,
+   0.5
+  ],
+  "y": 0.43,
+  "focus": [
+   0.5,
+   0.42
+  ],
+  "push": 0.06,
+  "label": "The 1903 machine",
+  "record": "[1903 machine, front view] [1903], LC-DIG-ppprs-00615",
+  "licence": "Library of Congress, Wright Brothers Negatives: No known restrictions"
+ },
+ "patent": {
+  "file": "/home/user/SocialMediaMarketingSkill/lab/edit-09/broll/photos/09_patent_US821393_sheet1/US821393-drawings-page-1.png",
+  "kind": "image",
+  "mode": "fill",
+  "center": [
+   0.5,
+   0.5
+  ],
+  "focus": [
+   0.5,
+   0.45
+  ],
+  "push": 0.06,
+  "gain": 0.8,
+  "label": null,
+  "record": "O. & W. Wright, Flying-Machine, US Patent 821,393 (filed 23 March 1903, patented 22 May 1906), drawing sheet 1",
+  "licence": "Public domain: US patent published 1906"
+ },
+ "film": {
+  "file": "/home/user/SocialMediaMarketingSkill/lab/edit-09/broll/film/nara_111-H-1185_fortmyer_1908-1909/source.mp4",
+  "kind": "video",
+  "src": 256.6,
+  "crop": [
+   0.115,
+   0.005,
+   0.885,
+   0.99
+  ],
+  "mode": "fit",
+  "zoom": 1.35,
+  "center": [
+   0.5,
+   0.5
+  ],
+  "y": 0.43,
+  "label": "Fort Myer, 1908–1909",
+  "placeholder": true,
+  "record": "NARA 111-H-1185 (NAID 24690), First Army Aeroplane Flight, Fort Myer, Virginia; PENDING fact-check"
+ }
+}

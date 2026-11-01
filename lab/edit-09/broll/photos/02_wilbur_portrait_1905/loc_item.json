@@ -1,0 +1,1527 @@
+{
+ "articles_and_essays": [
+  {
+   "score": 12.864709,
+   "title": "Wright Brothers Negatives",
+   "url": "https://www.loc.gov/collections/wright-brothers-negatives/about-this-collection/"
+  }
+ ],
+ "cite_this": {
+  "apa": "Wright, W. &amp; Wright, O., photographer. (1905) <cite>Wilbur Wright, age 38, head and shoulders, about ; one of the earliest published photographs of him</cite>. , 1905. [Photograph] Retrieved from the Library of Congress, https://www.loc.gov/item/2001696613/.",
+  "chicago": "Wright, Wilbur, and Orville Wright, photographer. <cite>Wilbur Wright, age 38, head and shoulders, about ; one of the earliest published photographs of him</cite>. , 1905. Photograph. https://www.loc.gov/item/2001696613/.",
+  "mla": "Wright, Wilbur, and Orville Wright, photographer. <cite>Wilbur Wright, age 38, head and shoulders, about ; one of the earliest published photographs of him</cite>. Photograph. Retrieved from the Library of Congress, &lt;www.loc.gov/item/2001696613/&gt;."
+ },
+ "item": {
+  "_version_": 1754109096348352512,
+  "access_restricted": false,
+  "aka": [
+   "http://www.loc.gov/pictures/collection/wri/item/2001696613/",
+   "http://www.loc.gov/item/2001696613/",
+   "http://www.loc.gov/pictures/item/2001696613/",
+   "https://hdl.loc.gov/loc.pnp/ppprs.00683",
+   "http://www.loc.gov/resource/ppprs.00683/",
+   "http://lccn.loc.gov/2001696613"
+  ],
+  "call_number": "LC-W86- 92 [P&P]",
+  "campaigns": [],
+  "contributor_names": [
+   "Wright, Wilbur, 1867-1912, photographer",
+   "Wright, Orville, 1871-1948, photographer"
+  ],
+  "contributors": [
+   {
+    "wright, orville": "https://www.loc.gov/search/?fa=contributor:wright,+orville&fo=json"
+   },
+   {
+    "wright, wilbur": "https://www.loc.gov/search/?fa=contributor:wright,+wilbur&fo=json"
+   }
+  ],
+  "control_number": "",
+  "created": "2016-04-20 23:04:19",
+  "created_published": [
+   "[1905]"
+  ],
+  "created_published_date": "[1905]",
+  "date": "1905-01-01",
+  "dates": [
+   {
+    "1905": "https://www.loc.gov/search/?dates=1905/1905&fo=json"
+   }
+  ],
+  "description": [
+   "1 negative : glass, dry plate ; 5 x 7 in."
+  ],
+  "digital_id": [
+   "ppprs 00683 //hdl.loc.gov/loc.pnp/ppprs.00683"
+  ],
+  "digitized": true,
+  "display_offsite": true,
+  "extract_timestamp": "2021-09-01T23:13:49.109Z",
+  "extract_urls": [
+   "http://www.loc.gov/pictures/collection/wri/item/2001696613/#wri",
+   "http://lccn.loc.gov/2001696613#catalog-split-02"
+  ],
+  "format": [
+   {
+    "photo, print, drawing": "https://www.loc.gov/search/?fa=original_format:photo,+print,+drawing&fo=json"
+   }
+  ],
+  "format_headings": [
+   "Dry plate negatives--1900-1910.",
+   "Portrait photographs--1900-1910."
+  ],
+  "genre": [
+   "Portrait photographs--1900-1910",
+   "Dry plate negatives--1900-1910"
+  ],
+  "group": [
+   "wri",
+   "catalog-split-02",
+   "catalog",
+   "wright-brothers-negatives",
+   "main-catalog-split-02",
+   "main-catalog"
+  ],
+  "hassegments": false,
+  "id": "http://www.loc.gov/item/2001696613/",
+  "image_url": [
+   "https://tile.loc.gov/storage-services/service/pnp/ppprs/00600/00683_150px.jpg#h=150&w=109",
+   "https://tile.loc.gov/storage-services/service/pnp/ppprs/00600/00683t.gif#h=150&w=109",
+   "https://tile.loc.gov/storage-services/service/pnp/ppprs/00600/00683r.jpg#h=640&w=465",
+   "https://tile.loc.gov/storage-services/service/pnp/ppprs/00600/00683v.jpg#h=1024&w=744"
+  ],
+  "index": 1,
+  "item": {
+   "call_number": "LC-W86- 92 [P&P]",
+   "contributor_names": [
+    "Wright, Wilbur, 1867-1912, photographer ",
+    "Wright, Orville, 1871-1948, photographer "
+   ],
+   "contributors": [
+    "Wright, Wilbur, 1867-1912, photographer.",
+    "Wright, Orville, 1871-1948, photographer."
+   ],
+   "control_number": "2001696613",
+   "created": "2016-04-20 23:04:19",
+   "created_published": "[1905]",
+   "created_published_date": "[1905]",
+   "creators": [
+    {
+     "link": "//www.loc.gov/pictures/related/?fi=name&q=Wright%2C%20Wilbur%2C%201867-1912&co=wri",
+     "role": "photographer",
+     "title": "Wright, Wilbur, 1867-1912"
+    },
+    {
+     "link": "//www.loc.gov/pictures/related/?fi=name&q=Wright%2C%20Orville%2C%201871-1948&co=wri",
+     "role": "photographer",
+     "title": "Wright, Orville, 1871-1948"
+    }
+   ],
+   "date": "[1905]",
+   "digital_id": [
+    "ppprs 00683 //hdl.loc.gov/loc.pnp/ppprs.00683"
+   ],
+   "display_offsite": true,
+   "format": [
+    "still image"
+   ],
+   "formats": [
+    {
+     "link": "//www.loc.gov/pictures/related/?fi=format&q=Dry%20plate%20negatives--1900-1910.&co=wri",
+     "title": "Dry plate negatives--1900-1910."
+    },
+    {
+     "link": "//www.loc.gov/pictures/related/?fi=format&q=Portrait%20photographs--1900-1910.&co=wri",
+     "title": "Portrait photographs--1900-1910."
+    }
+   ],
+   "genre": [
+    "Portrait photographs--1900-1910",
+    "Dry plate negatives--1900-1910"
+   ],
+   "id": "2001696613",
+   "language": [
+    "eng"
+   ],
+   "link": "//www.loc.gov/pictures/item/2001696613/",
+   "marc": "//www.loc.gov/pictures/item/2001696613/marc/",
+   "medium": [
+    "1 negative : glass, dry plate ; 5 x 7 in."
+   ],
+   "medium_brief": "1 negative :",
+   "mediums": [
+    "1 negative : glass, dry plate ; 5 x 7 in."
+   ],
+   "modified": "2016-04-20 23:04:19",
+   "notes": [
+    "Title based on: Wilbur & Orville Wright, pictorial materials: a documentary guide / Arthur G. Renstrom. Washington: Library of Congress, 1982, p. 11.",
+    "Attributed to Wilbur and/or Orville Wright.",
+    "Reference copy in LOT 11512.",
+    "Forms part of: Glass negatives from the Papers of Wilbur and Orville Wright."
+   ],
+   "number_former_id": [
+    "https://www.loc.gov/item/2001696613",
+    "https://www.loc.gov/item/12374960"
+   ],
+   "part_of": "Glass negatives from the Papers of Wilbur and Orville Wright",
+   "repository": "Library of Congress Prints and Photographs Division Washington, D.C. 20540 USA",
+   "reproduction_number": "LC-DIG-ppprs-00683 (digital file from original)\nLC-W861-92 (b&w film copy neg.)",
+   "resource_links": [
+    "//hdl.loc.gov/loc.pnp/ppprs.00683"
+   ],
+   "rights_advisory": "No known restrictions.",
+   "rights_information": "No known restrictions.",
+   "service_low": "https://tile.loc.gov/storage-services/service/pnp/ppprs/00600/00683_150px.jpg",
+   "service_medium": "https://tile.loc.gov/storage-services/service/pnp/ppprs/00600/00683r.jpg",
+   "sort_date": "1905",
+   "source_collection": [
+    "Glass negatives from the Papers of Wilbur and Orville Wright"
+   ],
+   "source_created": "2001-04-10 00:00:00",
+   "source_modified": "2014-04-11 16:48:03",
+   "subject_headings": [
+    "Wright, Wilbur,--1867-1912.",
+    "Men--1900-1910."
+   ],
+   "subjects": [
+    "Wright, Wilbur,--1867-1912",
+    "Men--1900-1910"
+   ],
+   "thumb_gallery": "https://tile.loc.gov/storage-services/service/pnp/ppprs/00600/00683_150px.jpg",
+   "title": "[Wilbur Wright, age 38, head and shoulders, about 1905; one of the earliest published photographs of him]"
+  },
+  "language": [
+   "english"
+  ],
+  "languages": [
+   {
+    "english": "https://www.loc.gov/search/?fa=language:english&fo=json"
+   }
+  ],
+  "library_of_congress_control_number": "2001696613",
+  "link": "//www.loc.gov/pictures/item/2001696613/",
+  "marc": "//www.loc.gov/pictures/item/2001696613/marc/",
+  "medium": [
+   "1 negative : glass, dry plate ; 5 x 7 in."
+  ],
+  "medium_brief": "1 negative :",
+  "mime_type": [
+   "image/gif",
+   "image/jpg",
+   "image/tif"
+  ],
+  "modified": "2016-04-20 23:04:19",
+  "notes": [
+   "Title based on: Wilbur & Orville Wright, pictorial materials: a documentary guide / Arthur G. Renstrom. Washington: Library of Congress, 1982, p. 11.",
+   "Attributed to Wilbur and/or Orville Wright.",
+   "Reference copy in LOT 11512.",
+   "Forms part of: Glass negatives from the Papers of Wilbur and Orville Wright."
+  ],
+  "number": [
+   "http://www.loc.gov/item/12374960",
+   "2014-04-11t16:48:03",
+   "http://www.loc.gov/item/2001696613",
+   "2001696613"
+  ],
+  "number_former_id": [
+   "http://www.loc.gov/item/2001696613",
+   "http://www.loc.gov/item/12374960"
+  ],
+  "number_lccn": [
+   "2001696613"
+  ],
+  "number_source_modified": [
+   "2014-04-11t16:48:03"
+  ],
+  "online_format": [
+   "image"
+  ],
+  "original_format": [
+   "photo, print, drawing"
+  ],
+  "other_formats": [
+   {
+    "label": "MARCXML Record",
+    "link": "https://lccn.loc.gov/2001696613/marcxml"
+   },
+   {
+    "label": "MODS Record",
+    "link": "https://lccn.loc.gov/2001696613/mods"
+   },
+   {
+    "label": "Dublin Core Record",
+    "link": "https://lccn.loc.gov/2001696613/dc"
+   }
+  ],
+  "partof": [
+   {
+    "count": 307,
+    "title": "wright brothers negatives",
+    "url": "https://www.loc.gov/collections/wright-brothers-negatives/?fo=json"
+   },
+   {
+    "count": 910393,
+    "title": "prints & photographs online catalog (library of congress)",
+    "url": "https://www.loc.gov/search/?fa=partof:prints+%26+photographs+online+catalog+%28library+of+congress%29&fo=json"
+   },
+   {
+    "count": 1162965,
+    "title": "prints and photographs division",
+    "url": "https://www.loc.gov/search/?fa=partof:prints+and+photographs+division&fo=json"
+   },
+   {
+    "count": 1907931,
+    "title": "catalog",
+    "url": "https://www.loc.gov/search/?fa=partof:catalog&fo=json"
+   }
+  ],
+  "related": {
+   "neighbors": "//www.loc.gov/pictures/related/?&co=wri&pk=2001696613&st=gallery&sb=call_number#focus"
+  },
+  "repository": [
+   "Library of Congress Prints and Photographs Division Washington, D.C. 20540 USA"
+  ],
+  "reproduction_number": "LC-DIG-ppprs-00683 (digital file from original)\nLC-W861-92 (b&w film copy neg.)",
+  "reproductions": [],
+  "resource_links": [
+   "//hdl.loc.gov/loc.pnp/ppprs.00683"
+  ],
+  "resources": [
+   {
+    "caption": "digital file from  original",
+    "files": 1,
+    "image": "https://tile.loc.gov/storage-services/service/pnp/ppprs/00600/00683_150px.jpg",
+    "url": "https://www.loc.gov/resource/ppprs.00683/"
+   }
+  ],
+  "rights": [
+   "<p>The Library of Congress does not&nbsp;own rights to material  in its collections. Therefore, it does not license or charge permission fees  for use of such material and cannot grant or deny permission to publish or  otherwise distribute the material. </p>\n<p>Ultimately, it is the researcher's obligation to assess copyright or other use restrictions and  obtain permission from third parties when necessary before publishing or  otherwise distributing materials found in the Library's collections. </p>\n<p>For information about reproducing,  publishing, and citing material from this collection, as well as access to the  original items, see: <a href=\"https://www.loc.gov/rr/print/res/269_wri.html\">Wright Brothers Photographs - Rights and Restrictions Information</a> </p>\n\n"
+  ],
+  "rights_advisory": "No known restrictions.",
+  "rights_information": "No known restrictions.",
+  "score": 19.469982,
+  "shard": "00",
+  "shelf_id": "LC-W86- 92 [P&P]",
+  "site": [
+   "pictures",
+   "catalog"
+  ],
+  "sort_date": "1905",
+  "source_collection": "Glass negatives from the Papers of Wilbur and Orville Wright",
+  "source_created": "2001-04-10 00:00:00",
+  "source_modified": "2014-04-11 16:48:03",
+  "subject": [
+   "wright, wilbur",
+   "men",
+   "portrait photographs",
+   "dry plate negatives"
+  ],
+  "subject_headings": [
+   "Wright, Wilbur,--1867-1912",
+   "Men--1900-1910"
+  ],
+  "subjects": [
+   {
+    "dry plate negatives": "https://www.loc.gov/search/?fa=subject:dry+plate+negatives&fo=json"
+   },
+   {
+    "men": "https://www.loc.gov/search/?fa=subject:men&fo=json"
+   },
+   {
+    "portrait photographs": "https://www.loc.gov/search/?fa=subject:portrait+photographs&fo=json"
+   },
+   {
+    "wright, wilbur": "https://www.loc.gov/search/?fa=subject:wright,+wilbur&fo=json"
+   }
+  ],
+  "thumb_gallery": "https://tile.loc.gov/storage-services/service/pnp/ppprs/00600/00683_150px.jpg",
+  "timestamp": "2023-01-04T16:13:13.259Z",
+  "title": "[Wilbur Wright, age 38, head and shoulders, about 1905; one of the earliest published photographs of him]",
+  "type": [
+   "still image"
+  ],
+  "unrestricted": true,
+  "url": "https://www.loc.gov/item/2001696613/"
+ },
+ "more_like_this": [
+  {
+   "access_restricted": false,
+   "aka": [
+    "http://www.loc.gov/collections/wright-brothers-negatives/about-this-collection/",
+    "http://www.loc.gov/collections/wri/",
+    "https://lccn.loc.gov/00649999",
+    "https://www.loc.gov/item/00649999",
+    "http://lccn.loc.gov/00649999",
+    "http://www.loc.gov/item/00649999/",
+    "https://search.catalog.loc.gov/instances/9702878d-ac03-57b1-bb58-5f73e29bb5c3",
+    "https://hdl.loc.gov/loc.pnp/pp.wri"
+   ],
+   "campaigns": [],
+   "contributor": [
+    "wright, wilbur",
+    "wright, orville"
+   ],
+   "count": 307,
+   "date": "1897",
+   "dates": [
+    "[1897 TO 1928]",
+    "1897"
+   ],
+   "description": [
+    "The first powered flight was made by Orville Wright at Kitty Hawk, N.C., on December 17, 1903, the result of years of experiments and design by the Wright brothers, who were operators of a bicycle repair shop and factory in Dayton, Ohio. The brothers continued their flying experiments in Ohio and in Fort Myer, Va., and were granted a patent for the plane in 1906. In 1908 and 1909 they traveled to Europe and drew attention to their invention by flying in France, Italy, England, and Germany. In that same year they started a company to manufacture Wright airplanes, and began their successful fight against patent suits by Glenn Curtiss and other competitors. Wilbur died of typhoid fever in 1912 and Orville sold his interest in the Wright airplane company in 1915."
+   ],
+   "digitized": true,
+   "extract_timestamp": "2026-11-01T08:54:05.329Z",
+   "group": [
+    "collections-portal"
+   ],
+   "hassegments": false,
+   "id": "http://www.loc.gov/collections/wright-brothers-negatives/about-this-collection/",
+   "image_url": [
+    "https://www.loc.gov/static/collections/wright-brothers-negatives/500_500.jpg"
+   ],
+   "index": 1,
+   "items": "https://www.loc.gov/collections/wright-brothers-negatives/",
+   "language": [
+    "english"
+   ],
+   "location": [
+    "north carolina",
+    "dayton",
+    "ohio",
+    "united states",
+    "kitty hawk"
+   ],
+   "number": [
+    "http://www.loc.gov/item/11955167",
+    "2025-06-30t01:33:48.700000",
+    "sheet",
+    "http://www.loc.gov/item/00649999",
+    "00649999"
+   ],
+   "original_format": [
+    "collection",
+    "photo, print, drawing"
+   ],
+   "other_title": [
+    "Glass negatives from the Papers of Wilbur and Orville Wright",
+    "Visual materials from the Papers of Wilbur and Orville Wright"
+   ],
+   "partof": [
+    "wright brothers negatives",
+    "prints and photographs division",
+    "digital collections"
+   ],
+   "score": 43.94361,
+   "shelf_id": "~/collections/wright-brothers-negatives/about-this-collection/",
+   "subject": [
+    "airplanes",
+    "science, technology and business",
+    "wright, wilbur",
+    "aviation",
+    "group portraits",
+    "prints",
+    "portrait photographs",
+    "american history and civilization",
+    "landscape photographs",
+    "progressive era to new era",
+    "arts and culture",
+    "glass negatives",
+    "photographs, prints & posters",
+    "wright, orville",
+    "negatives",
+    "photographs",
+    "science & technology",
+    "american history",
+    "flight",
+    "transportation",
+    "nitrate negatives",
+    "local history & folklife"
+   ],
+   "timestamp": "2026-11-01T10:44:33.457Z",
+   "title": "Wright Brothers Negatives",
+   "type": [
+    "collection"
+   ],
+   "url": "https://www.loc.gov/collections/wright-brothers-negatives/about-this-collection/"
+  },
+  {
+   "access_restricted": false,
+   "aka": [
+    "http://www.loc.gov/pictures/collection/wri/item/2001696277/",
+    "http://www.loc.gov/item/2001696277/",
+    "http://www.loc.gov/pictures/item/2001696277/",
+    "https://hdl.loc.gov/loc.pnp/ppprs.00481",
+    "http://www.loc.gov/resource/ppprs.00481/",
+    "http://lccn.loc.gov/2001696277"
+   ],
+   "campaigns": [],
+   "contributor": [
+    "wright, wilbur",
+    "wright, orville"
+   ],
+   "date": "1901-01-01",
+   "dates": [
+    "1901"
+   ],
+   "description": [
+    "1 negative : glass, dry plate ; 4 x 5 in."
+   ],
+   "digitized": true,
+   "extract_timestamp": "2021-09-01T23:13:48.229Z",
+   "group": [
+    "wri",
+    "catalog-split-08",
+    "catalog",
+    "wright-brothers-negatives",
+    "main-catalog-split-08",
+    "main-catalog"
+   ],
+   "hassegments": false,
+   "id": "http://www.loc.gov/item/2001696277/",
+   "image_url": [
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00400/00481_150px.jpg#h=150&w=120",
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00400/00481t.gif#h=150&w=120",
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00400/00481r.jpg#h=640&w=512",
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00400/00481v.jpg#h=1024&w=819"
+   ],
+   "index": 2,
+   "language": [
+    "english"
+   ],
+   "mime_type": [
+    "image/gif",
+    "image/jpg",
+    "image/tif"
+   ],
+   "number": [
+    "2014-04-11t16:43:03",
+    "http://www.loc.gov/item/12332185",
+    "2001696277",
+    "http://www.loc.gov/item/2001696277"
+   ],
+   "online_format": [
+    "image"
+   ],
+   "original_format": [
+    "photo, print, drawing"
+   ],
+   "partof": [
+    "prints & photographs online catalog (library of congress)",
+    "wright brothers negatives",
+    "prints and photographs division",
+    "catalog"
+   ],
+   "score": 43.61205,
+   "shelf_id": "LC-W85- 22 [P&P]",
+   "site": [
+    "pictures",
+    "catalog"
+   ],
+   "subject": [
+    "wright, orville",
+    "wright, wilbur",
+    "men",
+    "portrait photographs",
+    "family",
+    "dry plate negatives"
+   ],
+   "timestamp": "2023-01-04T16:12:54.157Z",
+   "title": "[Reuchlin Wright, brother of Wilbur and Orville, age 40, head and shoulders]",
+   "type": [
+    "still image"
+   ],
+   "url": "https://www.loc.gov/item/2001696277/"
+  },
+  {
+   "access_restricted": false,
+   "aka": [
+    "http://www.loc.gov/pictures/collection/wri/item/2001696278/",
+    "http://www.loc.gov/item/2001696278/",
+    "http://www.loc.gov/pictures/item/2001696278/",
+    "https://hdl.loc.gov/loc.pnp/ppprs.00482",
+    "http://www.loc.gov/resource/ppprs.00482/",
+    "http://lccn.loc.gov/2001696278"
+   ],
+   "campaigns": [],
+   "contributor": [
+    "wright, wilbur",
+    "wright, orville"
+   ],
+   "date": "1901-01-01",
+   "dates": [
+    "1901"
+   ],
+   "description": [
+    "1 negative : glass, dry plate ; 4 x 5 in."
+   ],
+   "digitized": true,
+   "extract_timestamp": "2021-09-01T23:13:48.229Z",
+   "group": [
+    "wri",
+    "catalog-split-09",
+    "catalog",
+    "wright-brothers-negatives",
+    "main-catalog-split-09",
+    "main-catalog"
+   ],
+   "hassegments": false,
+   "id": "http://www.loc.gov/item/2001696278/",
+   "image_url": [
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00400/00482_150px.jpg#h=150&w=121",
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00400/00482t.gif#h=150&w=121",
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00400/00482r.jpg#h=640&w=516",
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00400/00482v.jpg#h=1024&w=826"
+   ],
+   "index": 3,
+   "language": [
+    "english"
+   ],
+   "mime_type": [
+    "image/gif",
+    "image/jpg",
+    "image/tif"
+   ],
+   "number": [
+    "http://www.loc.gov/item/12332192",
+    "2001696278",
+    "2014-04-11t16:43:07",
+    "http://www.loc.gov/item/2001696278"
+   ],
+   "online_format": [
+    "image"
+   ],
+   "original_format": [
+    "photo, print, drawing"
+   ],
+   "partof": [
+    "prints & photographs online catalog (library of congress)",
+    "wright brothers negatives",
+    "prints and photographs division",
+    "catalog"
+   ],
+   "score": 43.61205,
+   "shelf_id": "LC-W85- 23 [P&P]",
+   "site": [
+    "pictures",
+    "catalog"
+   ],
+   "subject": [
+    "wright, orville",
+    "wright, wilbur",
+    "men",
+    "portrait photographs",
+    "family",
+    "dry plate negatives"
+   ],
+   "timestamp": "2023-01-04T16:12:54.157Z",
+   "title": "[Reuchlin Wright, brother of Wilbur and Orville, age 40, head and shoulders]",
+   "type": [
+    "still image"
+   ],
+   "url": "https://www.loc.gov/item/2001696278/"
+  },
+  {
+   "access_restricted": false,
+   "aka": [
+    "http://www.loc.gov/pictures/collection/wri/item/2001696290/",
+    "http://www.loc.gov/item/2001696290/",
+    "http://www.loc.gov/pictures/item/2001696290/",
+    "https://hdl.loc.gov/loc.pnp/ppprs.00494",
+    "http://www.loc.gov/resource/ppprs.00494/",
+    "http://lccn.loc.gov/2001696290"
+   ],
+   "campaigns": [],
+   "contributor": [
+    "wright, wilbur",
+    "wright, orville"
+   ],
+   "date": "1898-01-01",
+   "dates": [
+    "1898"
+   ],
+   "description": [
+    "1 negative : glass, dry plate ; 4 x 5 in. | Group photograph shows (seated, left to right): Frank Gilbert, William Andrews, Joe Boyd, and Lorin Wright. Standing: Wilbur Landis, Reuchlin Wright, Wilbur Wright, Charles Olinger, and Ed Ellis."
+   ],
+   "digitized": true,
+   "extract_timestamp": "2021-09-01T23:13:48.229Z",
+   "group": [
+    "wri",
+    "catalog-split-03",
+    "catalog",
+    "wright-brothers-negatives",
+    "main-catalog-split-03",
+    "main-catalog"
+   ],
+   "hassegments": false,
+   "id": "http://www.loc.gov/item/2001696290/",
+   "image_url": [
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00400/00494_150px.jpg#h=120&w=150",
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00400/00494t.gif#h=120&w=150",
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00400/00494r.jpg#h=510&w=640",
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00400/00494v.jpg#h=816&w=1024"
+   ],
+   "index": 4,
+   "language": [
+    "english"
+   ],
+   "mime_type": [
+    "image/gif",
+    "image/jpg",
+    "image/tif"
+   ],
+   "number": [
+    "2001696290",
+    "http://www.loc.gov/item/2001696290",
+    "2014-04-11t16:40:13",
+    "http://www.loc.gov/item/12345922"
+   ],
+   "online_format": [
+    "image"
+   ],
+   "original_format": [
+    "photo, print, drawing"
+   ],
+   "partof": [
+    "prints & photographs online catalog (library of congress)",
+    "wright brothers negatives",
+    "prints and photographs division",
+    "catalog"
+   ],
+   "score": 43.61205,
+   "shelf_id": "LC-W85- 35 [P&P]",
+   "site": [
+    "pictures",
+    "catalog"
+   ],
+   "subject": [
+    "wright, wilbur",
+    "group portraits",
+    "men",
+    "mustaches",
+    "friends & associates",
+    "portrait photographs",
+    "dry plate negatives"
+   ],
+   "timestamp": "2023-01-04T16:12:54.157Z",
+   "title": "[Nine of the ten Dayton boys]",
+   "type": [
+    "still image"
+   ],
+   "url": "https://www.loc.gov/item/2001696290/"
+  },
+  {
+   "access_restricted": false,
+   "aka": [
+    "http://www.loc.gov/pictures/collection/wri/item/2001696291/",
+    "http://www.loc.gov/item/2001696291/",
+    "http://www.loc.gov/pictures/item/2001696291/",
+    "https://hdl.loc.gov/loc.pnp/ppprs.00495",
+    "http://www.loc.gov/resource/ppprs.00495/",
+    "http://lccn.loc.gov/2001696291"
+   ],
+   "campaigns": [],
+   "contributor": [
+    "wright, wilbur",
+    "wright, orville"
+   ],
+   "date": "1900-01-01",
+   "dates": [
+    "1900"
+   ],
+   "description": [
+    "1 negative : glass, dry plate ; 4 x 5 in. | Wilbur Wright (no mustache) is in center of back row; Reuchlin Wright next to him, on the left; Lorin Wright is seated lower left."
+   ],
+   "digitized": true,
+   "extract_timestamp": "2021-09-01T23:13:48.229Z",
+   "group": [
+    "wri",
+    "catalog-split-04",
+    "catalog",
+    "wright-brothers-negatives",
+    "main-catalog-split-04",
+    "main-catalog"
+   ],
+   "hassegments": false,
+   "id": "http://www.loc.gov/item/2001696291/",
+   "image_url": [
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00400/00495_150px.jpg#h=121&w=150",
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00400/00495t.gif#h=121&w=150",
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00400/00495r.jpg#h=518&w=640",
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00400/00495v.jpg#h=828&w=1024"
+   ],
+   "index": 5,
+   "language": [
+    "english"
+   ],
+   "mime_type": [
+    "image/gif",
+    "image/jpg",
+    "image/tif"
+   ],
+   "number": [
+    "2001696291",
+    "2014-04-11t16:07:00",
+    "http://www.loc.gov/item/2001696291",
+    "http://www.loc.gov/item/12345931"
+   ],
+   "online_format": [
+    "image"
+   ],
+   "original_format": [
+    "photo, print, drawing"
+   ],
+   "partof": [
+    "prints & photographs online catalog (library of congress)",
+    "wright brothers negatives",
+    "prints and photographs division",
+    "catalog"
+   ],
+   "score": 43.61205,
+   "shelf_id": "LC-W85- 36 [P&P]",
+   "site": [
+    "pictures",
+    "catalog"
+   ],
+   "subject": [
+    "wright, orville",
+    "wright, wilbur",
+    "group portraits",
+    "men",
+    "mustaches",
+    "friends & associates",
+    "portrait photographs",
+    "dry plate negatives"
+   ],
+   "timestamp": "2023-01-04T16:12:54.157Z",
+   "title": "[Group including the Wright brothers]",
+   "type": [
+    "still image"
+   ],
+   "url": "https://www.loc.gov/item/2001696291/"
+  },
+  {
+   "access_restricted": false,
+   "aka": [
+    "http://www.loc.gov/pictures/collection/wri/item/2001696432/",
+    "http://www.loc.gov/item/2001696432/",
+    "http://www.loc.gov/pictures/item/2001696432/",
+    "https://hdl.loc.gov/loc.pnp/ppprs.00537",
+    "http://www.loc.gov/resource/ppprs.00537/",
+    "http://lccn.loc.gov/2001696432"
+   ],
+   "campaigns": [],
+   "contributor": [
+    "wright, wilbur",
+    "wright, orville"
+   ],
+   "date": "1897-01-01",
+   "dates": [
+    "1897"
+   ],
+   "description": [
+    "1 negative : glass, dry plate ; 4 x 5 in."
+   ],
+   "digitized": true,
+   "extract_timestamp": "2021-09-01T23:13:48.229Z",
+   "group": [
+    "wri",
+    "catalog-split-01",
+    "catalog",
+    "wright-brothers-negatives",
+    "main-catalog-split-01",
+    "main-catalog"
+   ],
+   "hassegments": false,
+   "id": "http://www.loc.gov/item/2001696432/",
+   "image_url": [
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00537_150px.jpg#h=150&w=121",
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00537t.gif#h=150&w=121",
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00537r.jpg#h=640&w=517",
+    "https://tile.loc.gov/storage-services/service/pnp/ppprs/00500/00537v.jpg#h=1024&w=828"
+   ],
+   "index": 6,
+   "language": [
+    "english"
+   ],
+   "mime_type": [
+    "image/gif",
+    "image/jpg",
+    "image/tif"
+   ],
+   "number": [
+    "http://www.loc.gov/item/2001696432",
+    "2001696432",
+    "http://www.loc.gov/item/12355178",
+    "2014-04-11t16:48:14"
+   ],
+   "online_format": [
+    "image"
+   ],
+   "original_format": [
+    "photo, print, drawing"
+   ],
+   "partof": [
+    "prints & photographs online catalog (library of congress)",
+    "wright brothers negatives",
+    "prints and photographs division",
+    "catalog"
+   ],
+   "score": 43.61205,
+   "shelf_id": "LC-W85- 78 [P&P]",
+   "site": [
+    "pictures",
+    "catalog"
+   ],
+   "subject": [
+    "wright, wilbur",
+    "men",
+    "portrait photographs",
+    "dry plate negatives"
+   ],
+   "timestamp": "2023-01-04T16:12:54.157Z",
+   "title": "[Wilbur Wright, age 30, seated facing right, half-length side view]",
+   "type": [
+    "still image"
+   ],
+   "url": "https://www.loc.gov/item/2001696432/"
+  }
+ ],
+ "options": {
+  "access_group": [
+   ""
+  ],
+  "access_group_raw": "",
+  "all": null,
+  "api_version": "1",
+  "app_context": null,
+  "application_shim": null,
+  "application_version": "$Revision$",
+  "attribute": null,
+  "attribute!": null,
+  "attribute_map": null,
+  "cache_tags": [
+   "wri",
+   "catalog-split-02",
+   "catalog",
+   "wright-brothers-negatives",
+   "main-catalog-split-02",
+   "main-catalog",
+   "collections-portal",
+   "catalog-split-08",
+   "main-catalog-split-08",
+   "catalog-split-09",
+   "main-catalog-split-09",
+   "catalog-split-03",
+   "main-catalog-split-03",
+   "catalog-split-04",
+   "main-catalog-split-04",
+   "catalog-split-01",
+   "main-catalog-split-01",
+   "catalog-split-00",
+   "main-catalog-split-00",
+   "hiddentreasures",
+   "hidden-treasures-at-the-library-of-congress",
+   "cms",
+   "managed-content"
+  ],
+  "callback": null,
+  "clip": null,
+  "clip_image_width": null,
+  "clip_rotation": null,
+  "content_filter": null,
+  "content_replacement": "",
+  "count": null,
+  "dates": null,
+  "default_count": 25,
+  "delimiter": null,
+  "digital_id": null,
+  "display_level": null,
+  "distance": null,
+  "downloadOption": null,
+  "duration": 0.976142168045044,
+  "embed": [],
+  "embed!": [],
+  "error_response_status": null,
+  "excludeTerms": null,
+  "facetLimits": "",
+  "facetPrefix": null,
+  "facet_count": null,
+  "facet_style": null,
+  "field": null,
+  "format": "json",
+  "host": "www.loc.gov",
+  "ical": false,
+  "id": "2001696613/",
+  "iiif": false,
+  "index": null,
+  "inputEncoding": "UTF-8",
+  "item": null,
+  "items": null,
+  "keys": null,
+  "language": null,
+  "latlong": null,
+  "method": "GET",
+  "newSearch": null,
+  "new_clip_url": false,
+  "onsite": false,
+  "operator": null,
+  "outputEncoding": "UTF-8",
+  "page_campaigns": [],
+  "path_info": "/item/2001696613/",
+  "port": "443",
+  "proxypath": null,
+  "query_string": "fo=json",
+  "redirect_proxy": false,
+  "redirect_to_item": null,
+  "referer": "",
+  "region": "",
+  "release_id": 123456789,
+  "request_host": "www.loc.gov",
+  "request_params": {
+   "fo": [
+    "json"
+   ]
+  },
+  "request_url": "https://www.loc.gov/item/2001696613/?fo=json",
+  "resource": "",
+  "resource_sequence": null,
+  "scheme": "https",
+  "searchIn": null,
+  "searchTerms": "",
+  "segments": null,
+  "shards": [
+   "00"
+  ],
+  "site_id": null,
+  "site_type": null,
+  "solrQuery": "",
+  "sortBy": null,
+  "sortOrder": null,
+  "startPage": null,
+  "style": null,
+  "suggested": null,
+  "target": null,
+  "template": "layouts/item/layout",
+  "timestamp": 1793549934.8592906,
+  "tz_aware": null,
+  "unionFacets": "",
+  "webcast_permalink": null
+ },
+ "related": {
+  "group_record": null,
+  "lot_link": null,
+  "neighbors": "//www.loc.gov/pictures/related/?&co=wri&pk=2001696613&st=gallery&sb=call_number#focus",
+  "survey_link": null
+ },
+ "related_items": [
+  {
+   "access_restricted": false,
+   "aka": [
+    "http://lccn.loc.gov/mm78046706",
+    "http://www.loc.gov/item/mm78046706/",
+    "https://hdl.loc.gov/loc.mss/collmss.ms000022"
+   ],
+   "campaigns": [],
+   "contributor": [
+    "wright, orville",
+    "wright, wilbur",
+    "united states. national advisory committee for aeronautics",
+    "mcfarland, marvin wilks",
+    "wright cycle company",
+    "wright, milton",
+    "wright and wright"
+   ],
+   "description": [
+    "Correspondence, diaries, minutes, notebooks, writings, reports, business and legal papers, genealogical material, printed matter, patents, blueprints, photographs, and other papers relating primarily to the invention of the airplane and the development of aviation.  Documents the lives and work of the Wright brothers who designed, built, and piloted the first machine to achieve powered, sustained flight in 1903 and the first practical airplane in 1905. The papers include scientific data, formulas, and computations related to aerodynamic and design factors and describe the brothers' experimentation with flight at Kitty Hawk, N.C., 1900-1903, at College Park, Md., in 1909, and at Montgomery, Ala., in 1910, and their trips abroad making flight demonstrations.  Subjects include the sale of the Wright airplane to the U.S. Army and others; business concerns involving the Wright Company, Flint and Company, Brewer and Son, Thierry Brothers, and companies established in Great Britain, France, and Germany to produce and sell Wright aircraft; the Wright brothers' patents in the U.S. and abroad as well as airplane patents by others; and the brothers' dispute with Smithsonian Institution over whether S.P. Langley had created an aircraft capable of flight prior to the Wrights' flight in December 1903. Also includes journals and ledgers from Wright and Wright printing company and Wright Cycle Company; records of the U.S. National Advisory Committee for Aeronautics; typescripts, research material, and photographs collected for The Papers of Wilbur and Orville Wright, edited by Marvin Wilks McFarland and published in 1953; and Wright family papers including transcripts of Milton Wright's diaries, 1901-1907.  The 2019 Addition includes a 1919 letter from Orville Wright concerning his test flight of the first military airplane, Signal Corps No. 1, on July 30, 1909. Wright family correspondents include Katharine Wright Haskell, Lorin Wright, Milton Wright, and Reuchlin Wright.  Other correspondents include Henry Harley Arnold, Hart O. Berg, Griffith Brewer, Octave Chanute, Robert J. Collier, Earl N. Findley, Benjamin D. Foulois, Fred C. Kelly, Roy Knabenshue, Frank Purdy Lahm, Charles A. Lindbergh, Grover Cleveland Loening, Glenn L. Martin, Charles Stewart Rolls, G.A. Spratt, Paul Tissandier, Harry A. Toulmin, and Pliny W. Williamson."
+   ],
+   "digitized": true,
+   "extract_timestamp": "2025-04-30T05:56:07.865Z",
+   "group": [
+    "catalog-split-00",
+    "catalog",
+    "main-catalog-split-00"
+   ],
+   "hassegments": false,
+   "id": "http://lccn.loc.gov/mm78046706",
+   "image_url": [],
+   "index": 1,
+   "language": [
+    "english",
+    "french",
+    "german"
+   ],
+   "location": [
+    "north carolina",
+    "dayton",
+    "ohio",
+    "maryland",
+    "united states",
+    "france",
+    "great britain",
+    "college park",
+    "montgomery",
+    "germany",
+    "alabama",
+    "kitty hawk"
+   ],
+   "number": [
+    "mm78046706",
+    "2025-04-28t11:22:12"
+   ],
+   "original_format": [
+    "manuscript/mixed material",
+    "collection"
+   ],
+   "other_title": [
+    "Wilbur and Orville Wright papers",
+    "Wilbur Wright papers",
+    "Orville Wright papers"
+   ],
+   "partof": [
+    "manuscript division",
+    "catalog"
+   ],
+   "score": 11.842119,
+   "shelf_id": "http://lccn.loc.gov/mm78046706",
+   "site": [
+    "catalog"
+   ],
+   "subject": [
+    "wright family",
+    "airplanes",
+    "aeronautics",
+    "samuel pierpont)",
+    "printing",
+    "smithsonian institution",
+    "correspondence",
+    "berg, hart o.",
+    "germany",
+    "bicycle industry",
+    "wright, lorin",
+    "kitty hawk (n.c.)",
+    "rolls, charles stewart",
+    "army",
+    "williamson, pliny w.",
+    "patents",
+    "dayton",
+    "ohio",
+    "france",
+    "thierry brothers",
+    "lahm, frank purdy",
+    "toulmin, harry a.",
+    "martin, glenn l.",
+    "aircraft industry",
+    "earl nelson)",
+    "collier, robert j.",
+    "brewer, griffith",
+    "langley, s. p.",
+    "procurement",
+    "brewer and son",
+    "lindbergh, charles a.",
+    "wright, reuchlin",
+    "signal corps no. 1 (airplane)",
+    "arnold, henry harley",
+    "knabenshue, roy",
+    "united states",
+    "great britain",
+    "charles augustus)",
+    "foulois, benjamin d.",
+    "kelly, fred c.",
+    "glenn luther)",
+    "george alexander)",
+    "college park (md.)",
+    "history",
+    "montgomery (ala.)",
+    "flint and company",
+    "robert joseph)",
+    "tissandier, paul",
+    "chanute, octave",
+    "findley, earl n.",
+    "wright flyer (airplane)",
+    "spratt, g. a.",
+    "loening, grover",
+    "fred charters)",
+    "flight",
+    "wright, milton",
+    "haskell, katharine wright",
+    "wright company",
+    "harry aubrey)"
+   ],
+   "timestamp": "2025-04-30T05:58:59.353Z",
+   "title": "Wilbur Wright and Orville Wright papers, 1809-1979",
+   "type": [
+    "manuscript"
+   ],
+   "url": "//lccn.loc.gov/mm78046706"
+  },
+  {
+   "access_restricted": false,
+   "aka": [
+    "http://www.loc.gov/item/myloc24/",
+    "http://www.loc.gov/resource/media_service.myloc24/",
+    "http://www.loc.gov/item/media_service.myloc24/",
+    "http://www.loc.gov/resource/myloc24/"
+   ],
+   "campaigns": [],
+   "contributor": [
+    "bruno, leonard"
+   ],
+   "digitized": true,
+   "extract_timestamp": "2023-12-05T16:59:53.507Z",
+   "group": [
+    "hiddentreasures",
+    "hidden-treasures-at-the-library-of-congress"
+   ],
+   "hassegments": false,
+   "id": "http://www.loc.gov/item/myloc24/",
+   "image_url": [],
+   "index": 2,
+   "language": [
+    "english"
+   ],
+   "mime_type": [
+    "application/x-video"
+   ],
+   "online_format": [
+    "video"
+   ],
+   "original_format": [
+    "film, video"
+   ],
+   "partof": [
+    "hidden treasures at the library of congress",
+    "manuscript division"
+   ],
+   "score": 8.514474,
+   "shelf_id": "myloc24",
+   "subject": [
+    "wright, wilbur",
+    "wright, orville",
+    "motion pictures"
+   ],
+   "timestamp": "2023-12-05T17:00:29.567Z",
+   "title": "Two Brothers and a Dream",
+   "type": [
+    "moving image"
+   ],
+   "url": "https://www.loc.gov/item/myloc24/"
+  },
+  {
+   "access_restricted": false,
+   "aka": [
+    "http://www.loc.gov/collections/wilbur-and-orville-wright-papers/about-this-collection/",
+    "http://www.loc.gov/collections/wright/",
+    "https://lccn.loc.gov/2003557136",
+    "https://www.loc.gov/item/2003557136"
+   ],
+   "campaigns": [],
+   "count": 1179,
+   "date": "1900",
+   "dates": [
+    "[1900 TO 1940]"
+   ],
+   "description": [
+    "This selection of Wilbur and Orville Wright’s papers at the Library of Congress comprises about 10,121 items (approximately 49,084 digital images) documenting the lives of the Wright brothers and their pioneering work leading to the world's first powered, controlled and sustained flight. Included in the collection are diaries and notebooks, correspondence, scrapbooks, drawings, printed matter, and other documents, largely from 1900 to 1940, as well as the Wrights' collection of 303 glass-plate photographic negatives. The Wright brothers' letters to aviation pioneer and mentor Octave Chanute, from the Octave Chanute Papers, are also included."
+   ],
+   "digitized": true,
+   "extract_timestamp": "2026-11-01T08:54:05.329Z",
+   "group": [
+    "collections-portal"
+   ],
+   "hassegments": false,
+   "id": "http://www.loc.gov/collections/wilbur-and-orville-wright-papers/about-this-collection/",
+   "image_url": [
+    "https://www.loc.gov/static/collections/wilbur-and-orville-wright-papers/500_500.jpg"
+   ],
+   "index": 3,
+   "items": "https://www.loc.gov/collections/wilbur-and-orville-wright-papers/",
+   "location": [
+    "united states"
+   ],
+   "original_format": [
+    "collection",
+    "manuscript/mixed material"
+   ],
+   "partof": [
+    "wilbur and orville wright papers at the library of congress",
+    "manuscript division",
+    "digital collections"
+   ],
+   "score": 8.514474,
+   "shelf_id": "~/collections/wilbur-and-orville-wright-papers/about-this-collection/",
+   "subject": [
+    "science & technology",
+    "american history",
+    "wright, orville",
+    "clippings",
+    "science, technology and business",
+    "wright, wilbur",
+    "aviation",
+    "flight",
+    "american history and civilization",
+    "correspondence",
+    "inventors & innovations",
+    "technology",
+    "progressive era to new era"
+   ],
+   "timestamp": "2026-11-01T10:44:33.457Z",
+   "title": "Wilbur and Orville Wright Papers at the Library of Congress",
+   "type": [
+    "collection"
+   ],
+   "url": "https://www.loc.gov/collections/wilbur-and-orville-wright-papers/about-this-collection/"
+  },
+  {
+   "access_restricted": false,
+   "aka": [
+    "http://www.loc.gov/collections/wilbur-and-orville-wright-papers/articles-and-essays/collection-highlights/"
+   ],
+   "campaigns": [],
+   "date": "1881",
+   "dates": [
+    "[1881 TO 1943]"
+   ],
+   "description": [
+    "Collection Highlights The Brothers' Boyhood Postcard from Orville Wright to Milton Wright, 1881 It is no coincidence that the earliest communication found from either Wilbur or Orville is this postcard, written by nine-year-old Orville to"
+   ],
+   "digitized": true,
+   "extract_timestamp": "2026-11-01T09:24:37.101Z",
+   "group": [
+    "cms",
+    "managed-content"
+   ],
+   "hassegments": false,
+   "id": "http://www.loc.gov/collections/wilbur-and-orville-wright-papers/articles-and-essays/collection-highlights/",
+   "image_url": [
+    "https://www.loc.gov/static/collections/wilbur-and-orville-wright-papers/images/1r.jpg"
+   ],
+   "index": 4,
+   "language": [
+    "english"
+   ],
+   "location": [
+    "united states"
+   ],
+   "mime_type": [
+    "image/jpg"
+   ],
+   "online_format": [
+    "image"
+   ],
+   "original_format": [
+    "web page"
+   ],
+   "partof": [
+    "wilbur and orville wright papers at the library of congress"
+   ],
+   "score": 8.514474,
+   "shelf_id": "~/collections/wilbur-and-orville-wright-papers/articles-and-essays/collection-highlights/",
+   "site": [
+    "cms"
+   ],
+   "subject": [
+    "wright, orville",
+    "clippings",
+    "wright, wilbur",
+    "aviation",
+    "flight",
+    "correspondence"
+   ],
+   "timestamp": "2026-11-01T10:51:12.771Z",
+   "title": "Collection Highlights | Articles and Essays | Wilbur and Orville Wright Papers at the Library of Congress | Digital Collections",
+   "type": [
+    "web page"
+   ],
+   "url": "https://www.loc.gov/collections/wilbur-and-orville-wright-papers/articles-and-essays/collection-highlights/"
+  },
+  {
+   "access_restricted": false,
+   "aka": [
+    "http://www.loc.gov/collections/wilbur-and-orville-wright-papers/articles-and-essays/photography-and-the-wright-brothers/"
+   ],
+   "campaigns": [],
+   "date": "1881",
+   "dates": [
+    "[1881 TO 1943]"
+   ],
+   "description": [
+    "Among the materials acquired by the Library of Congress in 1949 from the estate of Orville Wright were 303 negative photographic plates. Nearly all these glass plate negatives were taken and developed by the Wrights themselves between 1898 and 1911. The images are as important as the Wrights' diaries, notebooks, and letters to knowledge and understanding of the brothers' historic accomplishments. Rarely in the history of science and technology is it possible to see, analyze, and study a crucial technology as it was developed, and the value of the Wrights' materials can be judged by imagining how historical understanding would be enlarged if photographs existed of ancient Roman, Renaissance, or even eighteenth-century technologies as they were being developed."
+   ],
+   "digitized": true,
+   "extract_timestamp": "2026-11-01T09:24:37.101Z",
+   "group": [
+    "cms",
+    "managed-content"
+   ],
+   "hassegments": false,
+   "id": "http://www.loc.gov/collections/wilbur-and-orville-wright-papers/articles-and-essays/photography-and-the-wright-brothers/",
+   "image_url": [
+    "https://www.loc.gov/static/collections/wilbur-and-orville-wright-papers/images/0058.jpg"
+   ],
+   "index": 5,
+   "language": [
+    "english"
+   ],
+   "location": [
+    "kitty hawk",
+    "north carolina"
+   ],
+   "mime_type": [
+    "image/jpg"
+   ],
+   "online_format": [
+    "image"
+   ],
+   "original_format": [
+    "web page"
+   ],
+   "partof": [
+    "wilbur and orville wright papers at the library of congress"
+   ],
+   "score": 8.514474,
+   "shelf_id": "~/collections/wilbur-and-orville-wright-papers/articles-and-essays/photography-and-the-wright-brothers/",
+   "site": [
+    "cms"
+   ],
+   "subject": [
+    "chanute, octave",
+    "wright, orville",
+    "wright, wilbur",
+    "flight",
+    "wright glider"
+   ],
+   "timestamp": "2026-11-01T10:51:12.771Z",
+   "title": "Photography and the Wright Brothers | Articles and Essays | Wilbur and Orville Wright Papers at the Library of Congress | Digital Collections",
+   "type": [
+    "web page"
+   ],
+   "url": "https://www.loc.gov/collections/wilbur-and-orville-wright-papers/articles-and-essays/photography-and-the-wright-brothers/"
+  },
+  {
+   "access_restricted": false,
+   "aka": [
+    "http://www.loc.gov/collections/wilbur-and-orville-wright-papers/articles-and-essays/the-belief-that-flight-is-possible-to-man/"
+   ],
+   "campaigns": [],
+   "date": "1900",
+   "dates": [
+    "[1900 TO 1910]"
+   ],
+   "description": [
+    "On May 13, 1900, Wilbur Wright wrote one of the most remarkable letters in the history of science. In his letter to Octave Chanute, a wealthy businessman and successful engineer, Wilbur seems not at all hindered by the fact that an essentially unknown person from Ohio is addressing an aeronautical authority with a worldwide reputation. Nothing about Wilbur's letter is ordinary or predictable and that fact alone must have held Chanute's attention. In fact, it does not even begin as most letters do, with some form of polite introduction. Instead, Wilbur jumps in with both feet with his very first sentence:"
+   ],
+   "digitized": true,
+   "extract_timestamp": "2026-11-01T09:24:37.101Z",
+   "group": [
+    "cms",
+    "managed-content"
+   ],
+   "hassegments": false,
+   "id": "http://www.loc.gov/collections/wilbur-and-orville-wright-papers/articles-and-essays/the-belief-that-flight-is-possible-to-man/",
+   "image_url": [
+    "https://www.loc.gov/static/collections/wilbur-and-orville-wright-papers/images/chanute.jpg"
+   ],
+   "index": 6,
+   "language": [
+    "english"
+   ],
+   "location": [
+    "united states"
+   ],
+   "mime_type": [
+    "image/jpg"
+   ],
+   "online_format": [
+    "image"
+   ],
+   "original_format": [
+    "web page"
+   ],
+   "partof": [
+    "wilbur and orville wright papers at the library of congress"
+   ],
+   "score": 8.514474,
+   "shelf_id": "~/collections/wilbur-and-orville-wright-papers/articles-and-essays/the-belief-that-flight-is-possible-to-man/",
+   "site": [
+    "cms"
+   ],
+   "subject": [
+    "chanute, octave",
+    "wright, orville",
+    "wright, wilbur",
+    "flight",
+    "octave chanute papers"
+   ],
+   "timestamp": "2026-11-01T10:51:12.771Z",
+   "title": "\"The Belief that Flight is Possible to Man\" | Articles and Essays | Wilbur and Orville Wright Papers at the Library of Congress | Digital Collections",
+   "type": [
+    "web page"
+   ],
+   "url": "https://www.loc.gov/collections/wilbur-and-orville-wright-papers/articles-and-essays/the-belief-that-flight-is-possible-to-man/"
+  }
+ ],
+ "reproductions": "<p>If an image is displaying, you can download it yourself. (Some images \r\ndisplay only as thumbnails outside the Library of Congress because of rights \r\nconsiderations, but you have access to larger size images on site.)\r\n</p>\r\n\r\n<p>  \r\nAlternatively, you can purchase copies of various types through Library \r\nof Congress Duplication Services</a>.\r\n</p>\r\n\r\n<p> \r\n<ol>\r\n<p>\r\n<li><strong>If a digital image is displaying:</strong> The qualities of the digital image \r\npartially depend on whether it was made from the original or an \r\nintermediate such as a copy negative or transparency. If the Reproduction \r\nNumber field above includes a reproduction number that starts with \r\nLC-DIG..., then there is a digital image that was made directly \r\nfrom the original and is of sufficient resolution for most publication\r\n purposes.\r\n</li> \r\n</p>\r\n\r\n<li><strong>If there is information listed in the Reproduction Number field above:</strong> \r\nYou can use the reproduction number to purchase a copy from Duplication \r\nServices.  It will be made from the source listed in the parentheses after\r\n the number.  \r\n<p> \r\nIf only black-and-white (&quot;b&w&quot;) sources are listed and you \r\n desire a copy showing color or tint (assuming the original has any), \r\n you can generally purchase a quality copy of the original in color by \r\n citing the Call Number listed above and including the catalog record \r\n (&quot;About This Item&quot;) with your request.\r\n </p>\r\n</li>\r\n\r\n<li><strong>If there is no information listed in the Reproduction Number field \r\nabove:</strong> You can generally purchase a quality copy through \r\nDuplication Services. Cite the Call Number listed above and include the catalog record (&quot;About This Item&quot;) with \r\n your request.\r\n</li>\r\n</ol>\r\n</p>\r\n\r\n<p> \r\nPrice lists, contact information, and order forms are available on the\r\n <a href=\"//lcweb.loc.gov/preserv/pds/\">Duplication Services Web site</a>.  \r\n</p>\r\n\r\n\r\n\r\n",
+ "resources": [
+  {
+   "caption": "digital file from  original",
+   "files": [
+    [
+     {
+      "height": 0,
+      "levels": 1,
+      "mimetype": "image/tiff",
+      "size": 18177516,
+      "url": "https://tile.loc.gov/storage-services/master/pnp/ppprs/00600/00683u.tif",
+      "width": 0
+     },
+     {
+      "height": 0,
+      "levels": 1,
+      "mimetype": "image/tiff",
+      "size": 245370298,
+      "url": "https://tile.loc.gov/storage-services/master/pnp/ppprs/00600/00683a.tif",
+      "width": 0
+     },
+     {
+      "height": 150,
+      "levels": 1,
+      "mimetype": "image/jpeg",
+      "size": 3456,
+      "url": "https://tile.loc.gov/storage-services/service/pnp/ppprs/00600/00683_150px.jpg",
+      "width": 109
+     },
+     {
+      "height": 150,
+      "levels": 1,
+      "mimetype": "image/gif",
+      "size": 13786,
+      "url": "https://tile.loc.gov/storage-services/service/pnp/ppprs/00600/00683t.gif",
+      "width": 109
+     },
+     {
+      "height": 640,
+      "levels": 1,
+      "mimetype": "image/jpeg",
+      "size": 32139,
+      "url": "https://tile.loc.gov/storage-services/service/pnp/ppprs/00600/00683r.jpg",
+      "width": 465
+     },
+     {
+      "height": 1024,
+      "levels": 1,
+      "mimetype": "image/jpeg",
+      "size": 206090,
+      "url": "https://tile.loc.gov/storage-services/service/pnp/ppprs/00600/00683v.jpg",
+      "width": 744
+     }
+    ]
+   ],
+   "image": "https://tile.loc.gov/storage-services/service/pnp/ppprs/00600/00683_150px.jpg",
+   "url": "https://www.loc.gov/resource/ppprs.00683/"
+  }
+ ],
+ "thesaurus_entry": null,
+ "timestamp": 1793549935835,
+ "unrestricted": true
+}

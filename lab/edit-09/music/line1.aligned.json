@@ -1,0 +1,56 @@
+[
+ {
+  "word": "come",
+  "start": 1.585,
+  "end": 2.066,
+  "score": 1.0
+ },
+ {
+  "word": "fly",
+  "start": 2.246,
+  "end": 2.788,
+  "score": 1.0
+ },
+ {
+  "word": "with",
+  "start": 2.908,
+  "end": 3.129,
+  "score": 1.0
+ },
+ {
+  "word": "me",
+  "start": 3.249,
+  "end": 3.41,
+  "score": 1.0
+ },
+ {
+  "word": "let's",
+  "start": 3.791,
+  "end": 4.072,
+  "score": 0.996
+ },
+ {
+  "word": "fly",
+  "start": 4.152,
+  "end": 4.834,
+  "score": 0.991
+ },
+ {
+  "word": "let's",
+  "start": 4.994,
+  "end": 5.255,
+  "score": 0.99
+ },
+ {
+  "word": "fly",
+  "start": 5.335,
+  "end": 5.897,
+  "score": 1.0
+ },
+ {
+  "word": "away",
+  "start": 6.077,
+  "end": 6.599,
+  "score": 0.997
+ }
+]
