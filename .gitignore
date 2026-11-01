@@ -39,3 +39,4 @@ lab/**/broll/**/*.svg
 lab/**/broll/**/_api/
 lab/**/broll/_verify/
 *.gif
+*.jp2
