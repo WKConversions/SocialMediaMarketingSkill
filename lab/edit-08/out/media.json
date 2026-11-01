@@ -1,1 +1,14 @@
-{}
+{
+ "mine": {
+  "file": "/home/user/SocialMediaMarketingSkill/lab/edit-08/broll/context/rijks_luyken_bergwercker_1694/rijks_luyken_bergwercker_1694.jpg",
+  "colour": false,
+  "mode": "fill",
+  "center": [
+   0.5,
+   0.33
+  ],
+  "zoom": 0.52,
+  "move": "push",
+  "source": "Jan Luyken, De Bergwercker (The Miner), 1694, Rijksmuseum (CC0; record pending)"
+ }
+}

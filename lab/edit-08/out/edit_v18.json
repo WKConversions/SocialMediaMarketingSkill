@@ -3,8 +3,18 @@
  "views": [
   {
    "start": 0.0,
-   "end": 2.73,
+   "end": 1.25,
    "view": "wide"
+  },
+  {
+   "start": 1.25,
+   "end": 2.08,
+   "view": "wide"
+  },
+  {
+   "start": 2.08,
+   "end": 2.73,
+   "view": "medium"
   },
   {
    "start": 2.73,
@@ -28,8 +38,28 @@
   },
   {
    "start": 7.56,
-   "end": 13.708,
+   "end": 8.042,
    "view": "close"
+  },
+  {
+   "start": 8.042,
+   "end": 8.89,
+   "view": "wide"
+  },
+  {
+   "start": 8.89,
+   "end": 11.417,
+   "view": "medium"
+  },
+  {
+   "start": 11.417,
+   "end": 11.69,
+   "view": "wide"
+  },
+  {
+   "start": 11.69,
+   "end": 13.708,
+   "view": "medium"
   },
   {
    "start": 13.708,
@@ -43,19 +73,35 @@
   },
   {
    "start": 15.7,
-   "end": 19.2917,
+   "end": 16.708,
    "view": "medium"
-  }
- ],
- "inserts": [],
- "canvases": [
-  {
-   "start": 8.042,
-   "end": 13.708,
-   "kind": "engine"
   },
   {
    "start": 16.708,
+   "end": 19.2917,
+   "view": "wide"
+  }
+ ],
+ "inserts": [
+  {
+   "start": 12.49,
+   "end": 13.708,
+   "slot": "mine",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-08/broll/context/rijks_luyken_bergwercker_1694/rijks_luyken_bergwercker_1694.jpg",
+   "colour": false,
+   "mode": "fill",
+   "center": [
+    0.5,
+    0.33
+   ],
+   "zoom": 0.52,
+   "move": "push",
+   "source": "Jan Luyken, De Bergwercker (The Miner), 1694, Rijksmuseum (CC0; record pending)"
+  }
+ ],
+ "canvases": [
+  {
+   "start": 17.15,
    "end": 19.292,
    "kind": "untangle"
   }
@@ -307,30 +353,30 @@
  "negative_frames": [
   0,
   1,
+  30,
+  50,
   66,
   82,
   124,
   162,
   181,
   193,
+  213,
+  274,
+  281,
+  300,
   329,
   360,
   377,
   401,
+  412,
   463,
   464
  ],
  "end_card_s": 1.3,
  "beats": {
-  "engine_title": 195,
-  "draw": 213,
-  "steam": 236,
-  "condense": 252,
-  "rise": 256,
-  "push": 263,
-  "purpose": 318,
-  "untangle_title": 403,
-  "tangle": 413,
+  "untangle_title": 414,
+  "tangle": 414,
   "straight": 444
  },
  "logo": "/home/user/SocialMediaMarketingSkill/lab/edit-05/broll/wkc/logo.png"

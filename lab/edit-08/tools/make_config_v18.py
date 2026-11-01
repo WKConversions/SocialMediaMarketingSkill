@@ -19,14 +19,17 @@ CAPTIONS = [  # (text, index of its first word in edl["words"], class, fill)
     ("Motion Design", 43, "script", "PINK"), ("does for", 45, "sans", ""), ("businesses", 47, "sans", ""),
     ("it makes", 48, "sans", ""), ("Complexity", 50, "script", ""), ("easier to", 51, "sans", ""), ("Understand", 53, "script", ""),
 ]
-VIEW_PLAN = [(0.0, "wide"), (2.73, "wide"), (3.43, "medium"), (5.167, "wide"), (6.73, "medium"), (7.56, "close"),
-             (13.708, "wide"), (15.02, "close"), (15.70, "medium")]
+# client: mostly the speaker talking with captions, then real images from the time, then (least) motion design
+VIEW_PLAN = [(0.0, "wide"), (1.25, "wide"), (2.08, "medium"), (2.73, "wide"), (3.43, "medium"), (5.167, "wide"),
+             (6.73, "medium"), (7.56, "close"), (8.042, "wide"), (8.89, "medium"), (11.417, "wide"), (11.69, "medium"),
+             (13.708, "wide"), (15.02, "close"), (15.70, "medium"), (16.708, "wide")]
 SLOTS = [  # (start, end, slot): filled from out/media.json
-    (0.0, 1.68, "hook"),            # "In 1698": the engine engraving (The Miner's Friend, 1702)
-    (1.68, 2.73, "title"),          # "Thomas Savery": the title page with his name (no authentic portrait is known)
+    (0.0, 1.25, "hook"),            # "In 1698": the engine engraving (The Miner's Friend, 1702)
     (4.11, 5.167, "philtrans"),     # "powered by steam": the 1699 Royal Society figure of his engine
+    (9.83, 11.417, "engine_detail"),    # "how steam could move water": moving across the engine engraving
+    (12.49, 13.708, "mine"),        # "had a purpose": a miner, 1694 (his engine was meant to drain mines)
 ]
-CANVASES = [(8.042, 13.708, "engine"), (16.708, 19.292, "untangle")]
+CANVASES = [(17.15, 19.292, "untangle")]   # the one motion-design moment: "complexity easier to understand"
 END_CARD = 1.3
 
 
@@ -52,12 +55,7 @@ def main():
     canvases = [dict(start=s, end=e, kind=k) for s, e, k in CANVASES]
     # the engine animation follows the words: draw on "demonstrated", steam on "steam", vacuum + water up on "move",
     # water pushed up and out on "water", the purpose label on "purpose"
-    beats = dict(
-        engine_title=int(round(8.042 * FPS)) + 2,
-        draw=word_frame(26), steam=word_frame(28), condense=word_frame(30) - 4, rise=word_frame(30), push=word_frame(31),
-        purpose=frame_of("Purpose") + 2,
-        untangle_title=int(round(16.708 * FPS)) + 2, tangle=frame_of("Complexity") + 2, straight=word_frame(53),
-    )
+    beats = dict(untangle_title=int(round(17.15 * FPS)) + 2, tangle=frame_of("Complexity") + 3, straight=word_frame(53))
     switches = sorted({round(x, 3) for x in [v["start"] for v in views] + [i["start"] for i in inserts] + [i["end"] for i in inserts]
                        + [c["start"] for c in canvases] + [c["end"] for c in canvases] + [speech_end]})
     neg = set()
@@ -77,9 +75,9 @@ def main():
     edges = {round(c["start"], 3) for c in canvases} | {round(c["end"], 3) for c in canvases}
     ev += [{"t": s, "type": "flash"} for s in switches if 0 < s < speech_end and s not in edges]
     ev += [{"t": t, "type": "whoosh"} for t in sorted(edges)]
-    ev += [{"t": beats["engine_title"] / FPS, "type": "glitch"}, {"t": beats["untangle_title"] / FPS, "type": "glitch"}]
-    ev += [{"t": beats["steam"] / FPS, "type": "hiss", "length": 0.7}, {"t": beats["push"] / FPS, "type": "hiss", "length": 0.9}]
-    ev += [{"t": f / FPS, "type": "click"} for f in (beats["draw"] + 2, beats["purpose"], beats["straight"] + 2)]
+    ev += [{"t": beats["untangle_title"] / FPS, "type": "glitch"}]
+    ev += [{"t": 9.83, "type": "hiss", "length": 0.9}]                                        # steam, under the engine engraving
+    ev += [{"t": (beats["straight"] + 2) / FPS, "type": "click"}]
     ev += [{"t": frame_of("Motion Design") / FPS, "type": "riser", "length": 0.9}]
     ev += [{"t": speech_end, "type": "hit", "size": 1.3}, {"t": speech_end, "type": "glitch"}]
     json.dump(sorted(ev, key=lambda e: e["t"]), open(f"{E}/out/v18_events.json", "w"), indent=1)
