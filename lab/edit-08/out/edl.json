@@ -1,0 +1,605 @@
+{
+ "fps": 24,
+ "segments": [
+  {
+   "clip": "7001",
+   "src_start": 0.1667,
+   "src_end": 5.3333,
+   "out_start": 0.0,
+   "out_end": 5.1667
+  },
+  {
+   "clip": "7003",
+   "src_start": 0.0,
+   "src_end": 2.875,
+   "out_start": 5.1667,
+   "out_end": 8.0417
+  },
+  {
+   "clip": "7004",
+   "src_start": 0.3333,
+   "src_end": 3.7083,
+   "out_start": 8.0417,
+   "out_end": 11.4167
+  },
+  {
+   "clip": "7005",
+   "src_start": 0.125,
+   "src_end": 0.9167,
+   "out_start": 11.4167,
+   "out_end": 12.2083
+  },
+  {
+   "clip": "7005",
+   "src_start": 1.125,
+   "src_end": 2.625,
+   "out_start": 12.2083,
+   "out_end": 13.7083
+  },
+  {
+   "clip": "7006",
+   "src_start": 0.25,
+   "src_end": 3.25,
+   "out_start": 13.7083,
+   "out_end": 16.7083
+  },
+  {
+   "clip": "7007",
+   "src_start": 0.0417,
+   "src_end": 2.625,
+   "out_start": 16.7083,
+   "out_end": 19.2917
+  }
+ ],
+ "words": [
+  {
+   "word": "in",
+   "clip": "7001",
+   "idx": 0,
+   "score": 1.0,
+   "src_start": 0.261,
+   "src_end": 0.321,
+   "start": 0.0943,
+   "end": 0.1543
+  },
+  {
+   "word": "sixteen",
+   "clip": "7001",
+   "idx": 1,
+   "score": 0.99,
+   "src_start": 0.462,
+   "src_end": 0.884,
+   "start": 0.2953,
+   "end": 0.7173
+  },
+  {
+   "word": "ninety",
+   "clip": "7001",
+   "idx": 2,
+   "score": 1.0,
+   "src_start": 0.964,
+   "src_end": 1.306,
+   "start": 0.7973,
+   "end": 1.1393
+  },
+  {
+   "word": "eight",
+   "clip": "7001",
+   "idx": 3,
+   "score": 0.996,
+   "src_start": 1.386,
+   "src_end": 1.567,
+   "start": 1.2193,
+   "end": 1.4003
+  },
+  {
+   "word": "thomas",
+   "clip": "7001",
+   "idx": 4,
+   "score": 0.774,
+   "src_start": 1.848,
+   "src_end": 2.21,
+   "start": 1.6813,
+   "end": 2.0433
+  },
+  {
+   "word": "savery",
+   "clip": "7001",
+   "idx": 5,
+   "score": 0.979,
+   "src_start": 2.25,
+   "src_end": 2.752,
+   "start": 2.0833,
+   "end": 2.5853
+  },
+  {
+   "word": "invented",
+   "clip": "7001",
+   "idx": 6,
+   "score": 1.0,
+   "src_start": 2.893,
+   "src_end": 3.375,
+   "start": 2.7263,
+   "end": 3.2083
+  },
+  {
+   "word": "a",
+   "clip": "7001",
+   "idx": 7,
+   "score": 1.0,
+   "src_start": 3.495,
+   "src_end": 3.515,
+   "start": 3.3283,
+   "end": 3.3483
+  },
+  {
+   "word": "machine",
+   "clip": "7001",
+   "idx": 8,
+   "score": 1.0,
+   "src_start": 3.596,
+   "src_end": 3.957,
+   "start": 3.4293,
+   "end": 3.7903
+  },
+  {
+   "word": "that's",
+   "clip": "7001",
+   "idx": 9,
+   "score": 0.838,
+   "src_start": 3.997,
+   "src_end": 4.218,
+   "start": 3.8303,
+   "end": 4.0513
+  },
+  {
+   "word": "powered",
+   "clip": "7001",
+   "idx": 10,
+   "score": 0.99,
+   "src_start": 4.278,
+   "src_end": 4.6,
+   "start": 4.1113,
+   "end": 4.4333
+  },
+  {
+   "word": "by",
+   "clip": "7001",
+   "idx": 11,
+   "score": 1.0,
+   "src_start": 4.64,
+   "src_end": 4.761,
+   "start": 4.4733,
+   "end": 4.5943
+  },
+  {
+   "word": "steam",
+   "clip": "7001",
+   "idx": 12,
+   "score": 1.0,
+   "src_start": 4.881,
+   "src_end": 5.243,
+   "start": 4.7143,
+   "end": 5.0763
+  },
+  {
+   "word": "at",
+   "clip": "7003",
+   "idx": 0,
+   "score": 1.0,
+   "src_start": 0.1,
+   "src_end": 0.201,
+   "start": 5.2667,
+   "end": 5.3677
+  },
+  {
+   "word": "the",
+   "clip": "7003",
+   "idx": 1,
+   "score": 0.98,
+   "src_start": 0.241,
+   "src_end": 0.321,
+   "start": 5.4077,
+   "end": 5.4877
+  },
+  {
+   "word": "time",
+   "clip": "7003",
+   "idx": 2,
+   "score": 1.0,
+   "src_start": 0.401,
+   "src_end": 0.682,
+   "start": 5.5677,
+   "end": 5.8487
+  },
+  {
+   "word": "the",
+   "clip": "7003",
+   "idx": 3,
+   "score": 1.0,
+   "src_start": 0.743,
+   "src_end": 0.843,
+   "start": 5.9097,
+   "end": 6.0097
+  },
+  {
+   "word": "idea",
+   "clip": "7003",
+   "idx": 4,
+   "score": 1.0,
+   "src_start": 0.984,
+   "src_end": 1.224,
+   "start": 6.1507,
+   "end": 6.3907
+  },
+  {
+   "word": "was",
+   "clip": "7003",
+   "idx": 5,
+   "score": 1.0,
+   "src_start": 1.285,
+   "src_end": 1.445,
+   "start": 6.4517,
+   "end": 6.6117
+  },
+  {
+   "word": "very",
+   "clip": "7003",
+   "idx": 6,
+   "score": 1.0,
+   "src_start": 1.566,
+   "src_end": 1.867,
+   "start": 6.7327,
+   "end": 7.0337
+  },
+  {
+   "word": "hard",
+   "clip": "7003",
+   "idx": 7,
+   "score": 1.0,
+   "src_start": 1.927,
+   "src_end": 2.108,
+   "start": 7.0937,
+   "end": 7.2747
+  },
+  {
+   "word": "to",
+   "clip": "7003",
+   "idx": 8,
+   "score": 1.0,
+   "src_start": 2.168,
+   "src_end": 2.268,
+   "start": 7.3347,
+   "end": 7.4347
+  },
+  {
+   "word": "imagine",
+   "clip": "7003",
+   "idx": 9,
+   "score": 1.0,
+   "src_start": 2.389,
+   "src_end": 2.75,
+   "start": 7.5557,
+   "end": 7.9167
+  },
+  {
+   "word": "so",
+   "clip": "7004",
+   "idx": 0,
+   "score": 1.0,
+   "src_start": 0.421,
+   "src_end": 0.521,
+   "start": 8.1293,
+   "end": 8.2293
+  },
+  {
+   "word": "he",
+   "clip": "7004",
+   "idx": 1,
+   "score": 0.999,
+   "src_start": 0.601,
+   "src_end": 0.682,
+   "start": 8.3093,
+   "end": 8.3903
+  },
+  {
+   "word": "first",
+   "clip": "7004",
+   "idx": 2,
+   "score": 1.0,
+   "src_start": 0.762,
+   "src_end": 1.043,
+   "start": 8.4703,
+   "end": 8.7513
+  },
+  {
+   "word": "demonstrated",
+   "clip": "7004",
+   "idx": 3,
+   "score": 1.0,
+   "src_start": 1.183,
+   "src_end": 1.804,
+   "start": 8.8913,
+   "end": 9.5123
+  },
+  {
+   "word": "how",
+   "clip": "7004",
+   "idx": 4,
+   "score": 1.0,
+   "src_start": 1.865,
+   "src_end": 1.965,
+   "start": 9.5733,
+   "end": 9.6733
+  },
+  {
+   "word": "steam",
+   "clip": "7004",
+   "idx": 5,
+   "score": 1.0,
+   "src_start": 2.125,
+   "src_end": 2.446,
+   "start": 9.8333,
+   "end": 10.1543
+  },
+  {
+   "word": "could",
+   "clip": "7004",
+   "idx": 6,
+   "score": 1.0,
+   "src_start": 2.586,
+   "src_end": 2.787,
+   "start": 10.2943,
+   "end": 10.4953
+  },
+  {
+   "word": "move",
+   "clip": "7004",
+   "idx": 7,
+   "score": 1.0,
+   "src_start": 2.947,
+   "src_end": 3.148,
+   "start": 10.6553,
+   "end": 10.8563
+  },
+  {
+   "word": "water",
+   "clip": "7004",
+   "idx": 8,
+   "score": 1.0,
+   "src_start": 3.248,
+   "src_end": 3.609,
+   "start": 10.9563,
+   "end": 11.3173
+  },
+  {
+   "word": "and",
+   "clip": "7005",
+   "idx": 0,
+   "score": 1.0,
+   "src_start": 0.202,
+   "src_end": 0.302,
+   "start": 11.4937,
+   "end": 11.5937
+  },
+  {
+   "word": "suddenly",
+   "clip": "7005",
+   "idx": 1,
+   "score": 1.0,
+   "src_start": 0.403,
+   "src_end": 0.826,
+   "start": 11.6947,
+   "end": 12.1177
+  },
+  {
+   "word": "the",
+   "clip": "7005",
+   "idx": 2,
+   "score": 0.999,
+   "src_start": 1.209,
+   "src_end": 1.31,
+   "start": 12.2923,
+   "end": 12.3933
+  },
+  {
+   "word": "invention",
+   "clip": "7005",
+   "idx": 3,
+   "score": 0.857,
+   "src_start": 1.411,
+   "src_end": 1.793,
+   "start": 12.4943,
+   "end": 12.8763
+  },
+  {
+   "word": "had",
+   "clip": "7005",
+   "idx": 4,
+   "score": 1.0,
+   "src_start": 1.854,
+   "src_end": 1.955,
+   "start": 12.9373,
+   "end": 13.0383
+  },
+  {
+   "word": "a",
+   "clip": "7005",
+   "idx": 5,
+   "score": 0.999,
+   "src_start": 2.015,
+   "src_end": 2.035,
+   "start": 13.0983,
+   "end": 13.1183
+  },
+  {
+   "word": "purpose",
+   "clip": "7005",
+   "idx": 6,
+   "score": 1.0,
+   "src_start": 2.096,
+   "src_end": 2.519,
+   "start": 13.1793,
+   "end": 13.6023
+  },
+  {
+   "word": "and",
+   "clip": "7006",
+   "idx": 0,
+   "score": 1.0,
+   "src_start": 0.361,
+   "src_end": 0.461,
+   "start": 13.8193,
+   "end": 13.9193
+  },
+  {
+   "word": "that's",
+   "clip": "7006",
+   "idx": 1,
+   "score": 0.976,
+   "src_start": 0.521,
+   "src_end": 0.761,
+   "start": 13.9793,
+   "end": 14.2193
+  },
+  {
+   "word": "exactly",
+   "clip": "7006",
+   "idx": 2,
+   "score": 1.0,
+   "src_start": 0.862,
+   "src_end": 1.282,
+   "start": 14.3203,
+   "end": 14.7403
+  },
+  {
+   "word": "what",
+   "clip": "7006",
+   "idx": 3,
+   "score": 1.0,
+   "src_start": 1.342,
+   "src_end": 1.483,
+   "start": 14.8003,
+   "end": 14.9413
+  },
+  {
+   "word": "motion",
+   "clip": "7006",
+   "idx": 4,
+   "score": 1.0,
+   "src_start": 1.563,
+   "src_end": 1.823,
+   "start": 15.0213,
+   "end": 15.2813
+  },
+  {
+   "word": "design",
+   "clip": "7006",
+   "idx": 5,
+   "score": 1.0,
+   "src_start": 1.883,
+   "src_end": 2.164,
+   "start": 15.3413,
+   "end": 15.6223
+  },
+  {
+   "word": "does",
+   "clip": "7006",
+   "idx": 6,
+   "score": 0.999,
+   "src_start": 2.244,
+   "src_end": 2.404,
+   "start": 15.7023,
+   "end": 15.8623
+  },
+  {
+   "word": "for",
+   "clip": "7006",
+   "idx": 7,
+   "score": 1.0,
+   "src_start": 2.464,
+   "src_end": 2.545,
+   "start": 15.9223,
+   "end": 16.0033
+  },
+  {
+   "word": "businesses",
+   "clip": "7006",
+   "idx": 8,
+   "score": 0.999,
+   "src_start": 2.625,
+   "src_end": 3.146,
+   "start": 16.0833,
+   "end": 16.6043
+  },
+  {
+   "word": "it",
+   "clip": "7007",
+   "idx": 0,
+   "score": 1.0,
+   "src_start": 0.121,
+   "src_end": 0.181,
+   "start": 16.7877,
+   "end": 16.8477
+  },
+  {
+   "word": "makes",
+   "clip": "7007",
+   "idx": 1,
+   "score": 0.994,
+   "src_start": 0.261,
+   "src_end": 0.442,
+   "start": 16.9277,
+   "end": 17.1087
+  },
+  {
+   "word": "complexity",
+   "clip": "7007",
+   "idx": 2,
+   "score": 1.0,
+   "src_start": 0.482,
+   "src_end": 1.105,
+   "start": 17.1487,
+   "end": 17.7717
+  },
+  {
+   "word": "easier",
+   "clip": "7007",
+   "idx": 3,
+   "score": 1.0,
+   "src_start": 1.306,
+   "src_end": 1.608,
+   "start": 17.9727,
+   "end": 18.2747
+  },
+  {
+   "word": "to",
+   "clip": "7007",
+   "idx": 4,
+   "score": 1.0,
+   "src_start": 1.668,
+   "src_end": 1.748,
+   "start": 18.3347,
+   "end": 18.4147
+  },
+  {
+   "word": "understand",
+   "clip": "7007",
+   "idx": 5,
+   "score": 1.0,
+   "src_start": 1.849,
+   "src_end": 2.291,
+   "start": 18.5157,
+   "end": 18.9577
+  }
+ ],
+ "duration": 19.2917,
+ "gaps": [
+  0.19,
+  0.213,
+  0.176,
+  0.175,
+  0.217,
+  0.183
+ ]
+}

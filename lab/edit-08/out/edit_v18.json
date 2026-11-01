@@ -1,0 +1,337 @@
+{
+ "fps": 24,
+ "views": [
+  {
+   "start": 0.0,
+   "end": 2.73,
+   "view": "wide"
+  },
+  {
+   "start": 2.73,
+   "end": 3.43,
+   "view": "wide"
+  },
+  {
+   "start": 3.43,
+   "end": 5.167,
+   "view": "medium"
+  },
+  {
+   "start": 5.167,
+   "end": 6.73,
+   "view": "wide"
+  },
+  {
+   "start": 6.73,
+   "end": 7.56,
+   "view": "medium"
+  },
+  {
+   "start": 7.56,
+   "end": 13.708,
+   "view": "close"
+  },
+  {
+   "start": 13.708,
+   "end": 15.02,
+   "view": "wide"
+  },
+  {
+   "start": 15.02,
+   "end": 15.7,
+   "view": "close"
+  },
+  {
+   "start": 15.7,
+   "end": 19.2917,
+   "view": "medium"
+  }
+ ],
+ "inserts": [],
+ "canvases": [
+  {
+   "start": 8.042,
+   "end": 13.708,
+   "kind": "engine"
+  },
+  {
+   "start": 16.708,
+   "end": 19.292,
+   "kind": "untangle"
+  }
+ ],
+ "captions": [
+  {
+   "text": "In 1698",
+   "start": 0.0943,
+   "cls": "sans",
+   "fill": "",
+   "word": "in"
+  },
+  {
+   "text": "Thomas",
+   "start": 1.6813,
+   "cls": "sans",
+   "fill": "",
+   "word": "thomas"
+  },
+  {
+   "text": "Savery",
+   "start": 2.0833,
+   "cls": "script",
+   "fill": "",
+   "word": "savery"
+  },
+  {
+   "text": "invented",
+   "start": 2.7263,
+   "cls": "sans",
+   "fill": "",
+   "word": "invented"
+  },
+  {
+   "text": "a machine",
+   "start": 3.3283,
+   "cls": "sans",
+   "fill": "",
+   "word": "a"
+  },
+  {
+   "text": "that's powered",
+   "start": 3.8303,
+   "cls": "sans",
+   "fill": "",
+   "word": "that's"
+  },
+  {
+   "text": "by Steam",
+   "start": 4.4733,
+   "cls": "script",
+   "fill": "",
+   "word": "by"
+  },
+  {
+   "text": "at the time",
+   "start": 5.2667,
+   "cls": "sans",
+   "fill": "",
+   "word": "at"
+  },
+  {
+   "text": "the idea",
+   "start": 5.9097,
+   "cls": "sans",
+   "fill": "",
+   "word": "the"
+  },
+  {
+   "text": "was very",
+   "start": 6.4517,
+   "cls": "sans",
+   "fill": "",
+   "word": "was"
+  },
+  {
+   "text": "hard to",
+   "start": 7.0937,
+   "cls": "sans",
+   "fill": "",
+   "word": "hard"
+  },
+  {
+   "text": "Imagine",
+   "start": 7.5557,
+   "cls": "script",
+   "fill": "",
+   "word": "imagine"
+  },
+  {
+   "text": "so he first",
+   "start": 8.1293,
+   "cls": "sans",
+   "fill": "",
+   "word": "so"
+  },
+  {
+   "text": "Demonstrated",
+   "start": 8.8913,
+   "cls": "script",
+   "fill": "",
+   "word": "demonstrated"
+  },
+  {
+   "text": "how steam",
+   "start": 9.5733,
+   "cls": "sans",
+   "fill": "",
+   "word": "how"
+  },
+  {
+   "text": "could move",
+   "start": 10.2943,
+   "cls": "sans",
+   "fill": "",
+   "word": "could"
+  },
+  {
+   "text": "water",
+   "start": 10.9563,
+   "cls": "sans",
+   "fill": "",
+   "word": "water"
+  },
+  {
+   "text": "and suddenly",
+   "start": 11.4937,
+   "cls": "sans",
+   "fill": "",
+   "word": "and"
+  },
+  {
+   "text": "the invention",
+   "start": 12.2923,
+   "cls": "sans",
+   "fill": "",
+   "word": "the"
+  },
+  {
+   "text": "had a",
+   "start": 12.9373,
+   "cls": "sans",
+   "fill": "",
+   "word": "had"
+  },
+  {
+   "text": "Purpose",
+   "start": 13.1793,
+   "cls": "script",
+   "fill": "",
+   "word": "purpose"
+  },
+  {
+   "text": "and that's",
+   "start": 13.8193,
+   "cls": "sans",
+   "fill": "",
+   "word": "and"
+  },
+  {
+   "text": "exactly what",
+   "start": 14.3203,
+   "cls": "sans",
+   "fill": "",
+   "word": "exactly"
+  },
+  {
+   "text": "Motion Design",
+   "start": 15.0213,
+   "cls": "script",
+   "fill": "PINK",
+   "word": "motion"
+  },
+  {
+   "text": "does for",
+   "start": 15.7023,
+   "cls": "sans",
+   "fill": "",
+   "word": "does"
+  },
+  {
+   "text": "businesses",
+   "start": 16.0833,
+   "cls": "sans",
+   "fill": "",
+   "word": "businesses"
+  },
+  {
+   "text": "it makes",
+   "start": 16.7877,
+   "cls": "sans",
+   "fill": "",
+   "word": "it"
+  },
+  {
+   "text": "Complexity",
+   "start": 17.1487,
+   "cls": "script",
+   "fill": "",
+   "word": "complexity"
+  },
+  {
+   "text": "easier to",
+   "start": 17.9727,
+   "cls": "sans",
+   "fill": "",
+   "word": "easier"
+  },
+  {
+   "text": "Understand",
+   "start": 18.5157,
+   "cls": "script",
+   "fill": "",
+   "word": "understand"
+  }
+ ],
+ "cap_frames": [
+  2,
+  40,
+  49,
+  65,
+  79,
+  91,
+  107,
+  126,
+  141,
+  154,
+  170,
+  181,
+  195,
+  213,
+  229,
+  247,
+  262,
+  275,
+  295,
+  310,
+  316,
+  331,
+  343,
+  360,
+  376,
+  385,
+  402,
+  411,
+  431,
+  444
+ ],
+ "negative_frames": [
+  0,
+  1,
+  66,
+  82,
+  124,
+  162,
+  181,
+  193,
+  329,
+  360,
+  377,
+  401,
+  463,
+  464
+ ],
+ "end_card_s": 1.3,
+ "beats": {
+  "engine_title": 195,
+  "draw": 213,
+  "steam": 236,
+  "condense": 252,
+  "rise": 256,
+  "push": 263,
+  "purpose": 318,
+  "untangle_title": 403,
+  "tangle": 413,
+  "straight": 444
+ },
+ "logo": "/home/user/SocialMediaMarketingSkill/lab/edit-05/broll/wkc/logo.png"
+}
