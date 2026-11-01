@@ -271,6 +271,11 @@ class Film:
         if self.sh.get("crop"):
             c = self.sh["crop"]
             lum = lum[int(c[1] * self.h): int(c[3] * self.h), int(c[0] * self.w): int(c[2] * self.w)]
+        # damaged frames on the old print (big black blotches) would flash: hold the last clean frame instead
+        if (lum < 0.06).mean() > 0.12 and getattr(self, "good", None) is not None:
+            lum = self.good
+        else:
+            self.good = lum
         if self.levels is None:                                                  # fixed levels (no pumping)
             self.levels = np.percentile(lum, [0.5, 99.6])
         lo, hi = self.levels

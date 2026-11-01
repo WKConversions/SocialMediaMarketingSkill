@@ -148,8 +148,9 @@
    0.5
   ],
   "y": 0.43,
-  "label": "Fort Myer, 1908–1909",
-  "placeholder": true,
-  "record": "NARA 111-H-1185 (NAID 24690), First Army Aeroplane Flight, Fort Myer, Virginia; PENDING fact-check"
+  "label": "Fort Myer, 1909",
+  "record": "NARA 111-H-1185 (NAID 24690), 'First Army Aeroplane Flight': Orville Wright's U.S. Army trials, Fort Myer, Virginia, 1909 (compiled by the Signal Corps 1935-36); shot used: source 256.25-260.6 s",
+  "licence": "NARA DocsTeach: 'Public Domain, Free of Known Copyright Restrictions'; US federal work (War Department, Signal Corps), 1909",
+  "fact_check": "keep=true; corrected date: 1909, never label it 1908"
  }
 }
