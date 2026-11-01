@@ -1,0 +1,152 @@
+{
+ "items": [
+  {
+   "id": "mf1702_plate_ia_microfilm",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-08/broll/engine/mf1702_plate_ia_microfilm/mf1702_plate_ia_microfilm.jpg",
+   "kind": "image",
+   "colour": false,
+   "title": "'The Engine for Raising Water by Fire' - engraved fold-out plate from Thomas Savery, The Miners Friend (London: S. Crouch, 1702); microfilm of an original 1702 copy",
+   "date": "1702 (plate signed 'B. Lens delin: I. Sturt sculp:'); microfilm digitised by Internet Archive 2023",
+   "use_for": "engine_plate_1702",
+   "depicts": "Full engraved plate, black and white (microfilm). Upper right: lettered title 'THE ENGINE For Raising Water BY FIRE.' Fig. 1 (centre/right): Savery's double-receiver engine - two pear-shaped receivers P.1 and P.2 hanging from a forked force-pipe S that spouts water at the top, cocks R and valves Q below, suction pipe T down to a perforated strainer box V; behind them a brick furnace with two fire-doors (B1 with flames, B2), chimney C smoking, boilers D and L, regulator handle Z, small pipes E, K, X, Y. Lower right: detail of the boiler top L with steam pipes O.1 and O.2 and regulator Z. Left, Fig. 2: cross-section of a mine shaft in brick/stone with a long pipe rising to the surface, and a small man working the engine in a gallery part-way down; lettered 'The ENGINE Working in a MINE.' Bottom right signature 'B. Lens delin: I. Sturt sculp:'. A faint embossed oval library stamp sits at bottom centre; black microfilm border around the sheet; right edge of the fold-out sheet is irregular.",
+   "evidence": "archive.org item bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702, metadata title: 'The miners friend; or, an engine to raise water by fire, described. And of the manner of fixing it in mines. .. By ... Tho. Savery Gent. 1702'; creator 'Savery, Thomas.'; date 1702; collection-catalog-number t101221 (= ESTC T101221); 'Digitized from IA40310415-87' (microfilm reel); scanner microfilm04.cebu.archive.org; ppi 800. Plate is leaf 21 (jp2 bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0021.jp2, 9313x14208 px). Lettering on the plate matches Farey (1827): 'The original, which is handsomely engraved, is marked, B. Lens, delin. J. Sturt, sculpt.' Working JPG is a 50% Lanczos downscale (4656x7104); full-resolution source.jp2 (9313x14208) kept in the same folder (microfilm-limited sharpness, so the 50% copy loses almost nothing).",
+   "source_url": "https://archive.org/details/bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702",
+   "licence": "Public domain work (printed 1702). The archive.org item states no licence and no use restriction (collection pub_eighteenth-century / bim_microfilm, contributor 'Internet Archive'); it is a faithful photographic (microfilm) reproduction of a 2-D public-domain print. FLAG: no explicit PD/CC0 statement on the item - if the edit needs a stated licence, use the Wellcome PDM impression of the same plate (mf_plate_lexicon1736_wellcome).",
+   "subject_box": [
+    0.15,
+    0.02,
+    0.88,
+    0.97
+   ],
+   "width": 4656,
+   "height": 7104
+  },
+  {
+   "id": "mf_plate_lexicon1736_wellcome",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-08/broll/engine/mf_plate_lexicon1736_wellcome/source.jpg",
+   "kind": "image",
+   "colour": true,
+   "title": "'The Engine for Raising Water by Fire' (the Miner's Friend plate, B. Lens delin., I. Sturt sculp.) - later impression bound in John Harris, Lexicon Technicum, vol. 1 (London: J. Walthoe etc., 1736)",
+   "date": "Design and engraving 1702 (same lettering and signatures as The Miner's Friend plate); this impression printed for the 1736 edition of Lexicon Technicum. LABEL AS 1736 PRINTING, NOT AS A 1702 COPY.",
+   "use_for": "engine_plate_1702",
+   "depicts": "Colour scan of the same plate on cream laid paper with foxing, a vertical fold crease and brown stains: lettered title 'THE ENGINE For Raising Water BY FIRE.', Fig. 1 (receivers P.1/P.2, forked force-pipe S spouting water, cocks R, valves Q, brick furnace with fire-doors B and B2 with flames, chimney C smoking, boiler top detail L with pipes O.1/O.2 and regulator Z), and Fig. 2 'The ENGINE Working in a MINE.' (mine-shaft section with a man at the engine in a gallery). Bottom: engraved binder's direction 'Place this at the word Engine' and signature 'B.Lens delin: I.Sturt sculp:'. Composition and lettering are identical to the 1702 microfilm plate except for the added binder's direction, i.e. it appears to be the same copperplate reused.",
+   "evidence": "Wellcome Collection work e3h2kqnn: 'Lexicon technicum: or, an universal English dictionary of arts and sciences / [John Harris].' 'London : J. Walthoe, etc., 1736.' '2 volumes : frontispiece (portrait), illustrations, plates (some folded) ; (folio)'; References 'ESTC T128553'. IIIF manifest b30457257_0001 (Vol. 1), canvas index 559, image b30457257_0001_0560.jp2, 4808x7503 px (full/full download). Facing text pages (canvases 560-561) carry the article ENGINE: 'two very useful Engines, which are the Invention of one of our own Nation, Thomas Savery, Esq; ...' and 'A Description of this Fire-Engine is as follows. See the Figure.' Farey (1827, p. 99-100) confirms Savery's description and plate were reproduced in 'Dr. Harris's Lexicon Technicum, vol. i. article Engine'.",
+   "source_url": "https://wellcomecollection.org/works/e3h2kqnn",
+   "licence": "Public Domain Mark 1.0 (Wellcome Collection IIIF manifest b30457257_0001: 'This work has been identified as being free of known restrictions under copyright law ... You can copy, modify, distribute and perform the work, even for commercial purposes, without asking permission.'). Credit: Wellcome Collection.",
+   "subject_box": [
+    0.12,
+    0.03,
+    0.85,
+    0.96
+   ],
+   "width": 4808,
+   "height": 7503
+  },
+  {
+   "id": "mf1702_titlepage_ia_microfilm",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-08/broll/engine/mf1702_titlepage_ia_microfilm/mf1702_titlepage_ia_microfilm.jpg",
+   "kind": "image",
+   "colour": false,
+   "title": "Title page of Thomas Savery, The Miners Friend; or, an Engine to Raise Water by Fire (London: S. Crouch, 1702) - microfilm of an original 1702 copy",
+   "date": "1702",
+   "use_for": "title_page",
+   "depicts": "Black-and-white microfilm of the title page inside a double-ruled border: 'The Miners Friend; OR, AN ENGINE TO RAISE WATER BY FIRE, DESCRIBED. AND Of the manner of Fixing it in MINES. WITH An Account of the several other Uses it is applicable unto; and an ANSWER To the OBJECTIONS made against it. By THO. SAVERY Gent.' Latin motto 'Pigri est ingenii contentum esse his, quae ab aliis inventa sunt. Seneca.' Imprint 'LONDON: Printed for S.Crouch at the Corner of Popes-Head-Alley in Cornhil. 1702.' Handwritten library shelf-mark at top, a pencil tick at bottom, mottled paper texture, black film border, sliver of the facing leaf at left.",
+   "evidence": "Same archive.org item bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702 (ESTC T101221; microfilm reel IA40310415-87), leaf 0 (scandata pageType 'Title'), jp2 bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0000.jp2, 4610x7392 px. Printed imprint on the page reads '1702'.",
+   "source_url": "https://archive.org/details/bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702",
+   "licence": "Public domain work (printed 1702); archive.org item carries no licence or use restriction (faithful microfilm reproduction). Same FLAG as the microfilm plate: no explicit PD/CC0 statement on the item.",
+   "subject_box": [
+    0.05,
+    0.04,
+    0.78,
+    0.87
+   ],
+   "width": 4610,
+   "height": 7392
+  },
+  {
+   "id": "pt1699_plate_loc",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-08/broll/engine/pt1699_plate_loc/pt1699_plate_loc.jpg",
+   "kind": "image",
+   "colour": false,
+   "title": "Figure of Mr. Savery's engine, Philosophical Transactions no. 253 (June 1699), vol. 21 - Library of Congress copy (b&w copy negative)",
+   "date": "1699",
+   "use_for": "phil_trans_1699",
+   "depicts": "Black-and-white photograph of the fold-out plate opened beside the issue's first page. Plate engraved 'Philos. Transact. N:253' at top left. Fig. I: two tall cylindrical vessels D with cocks C on top, valves E, a forked force pipe G rising to a spout of water at the top, and a forked suction pipe H descending into water I (with a perforated strainer). Fig. II (right): side view - a small brick furnace A with boiler B, vessel D on a stand, cocks C, the force pipe G rising and the suction pipe H ending in a basket strainer in the water. At the right edge, partly cut off, the issue's contents page: 'PHILOSO[PHICAL] TRANSAC[TIONS] For the Month ... The CON[TENTS] ... Mr. Savery's Engine, ... help of Fire.' Black film border all round.",
+   "evidence": "LoC item 2006690468. Devised title: '[The miner's friend, a pump using steam to create a vacuum to draw water from flooded mines; known as \"Mr. Savery's engine for raising water by the help of fire\"]'. Created/published '1699.' Medium '1 print : engraving.' Notes: 'Title devised by Library staff.' 'Illus. in: Philosophical transactions ... London : C. Davis, Printer to the Royal Society of London, [1665]-1775, v. 21.' Call number 'Illus. in Q41 .L8 [Rare Book RR]'. Reproduction number LC-USZ62-110446 (b&w film copy neg.). File = master TIFF 3c10446u.tif (3273x4096, greyscale) converted to JPG. NOTE: LoC's staff-devised title says 'The miner's friend', but the image is the 1699 Philosophical Transactions figure, not the 1702 book plate - do not caption it as The Miner's Friend.",
+   "source_url": "https://www.loc.gov/item/2006690468/",
+   "licence": "Library of Congress rights advisory: 'No known restrictions on publication.' (public domain, 1699)",
+   "subject_box": [
+    0.19,
+    0.11,
+    0.77,
+    0.86
+   ],
+   "width": 3273,
+   "height": 4096
+  },
+  {
+   "id": "pt1699_plate_bhl_colour",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-08/broll/engine/pt1699_plate_bhl_colour/pt1699_plate_bhl_colour.jpg",
+   "kind": "image",
+   "colour": true,
+   "title": "Fold-out plate of Savery's engine (Philos. Transact. No. 253) opened beside the first page of the June 1699 issue of Philosophical Transactions - colour scan, Natural History Museum Library copy via BHL",
+   "date": "1699",
+   "use_for": "phil_trans_1699",
+   "depicts": "Colour photograph of the bound volume: left, the fold-out engraved plate (printed sideways in this crop; 'Philos. Transact. N:253' runs up the lower left edge) showing Fig. I (two cylindrical vessels D with cocks C, valves E, forked force pipe G with water spouting, forked suction pipe H into water I) and Fig. II (furnace A, boiler B, vessel D on a stand, pipes G and H), with a faint oval library stamp in the middle; right, the issue's first page '(189) Numb. 253. PHILOSOPHICAL TRANSACTIONS. For the Month of June, 1699. The CONTENTS. ... III. An Account of Mr. Savery's Engine, for Raising Water by the help of Fire.' with signature 'Ee'. A thin vertical clear holder strip crosses the right-hand page; page edges and red binding visible at right. Companion file plate_only_upright.jpg (1475x2212) in the same folder is the plate alone, rotated upright for 9:16.",
+   "evidence": "archive.org item philosophicaltra2116roya = BHL item 184133: 'Philosophical transactions of the Royal Society of London', volume 'v.21(1699)', contributor/sponsor 'Natural History Museum Library, London'. Leaf 210 (scandata pageType 'Foldout'); file is a crop (x1226-4843, y1895-3566) of the original camera frame philosophicaltra2116roya_orig_0210.jp2 (5616x3744), so it shows the plate together with the facing first page of No. 253. The plate-only derivative is from philosophicaltra2116roya_0210.jp2 (2212x1475), rotated 90 degrees clockwise. Text p. 228 (leaf 250) explains the figure: 'Fig 1. is the Front of the Engine for Raising Water by Fire. A the Furnace. B The Boyler ...'",
+   "source_url": "https://archive.org/details/philosophicaltra2116roya",
+   "licence": "Public domain - BHL accessCondition (useAndReproduction): 'Public domain. The BHL considers that this work is no longer under copyright protection'; archive.org 'possible-copyright-status' gives the same statement. BHL item page: https://www.biodiversitylibrary.org/item/184133",
+   "subject_box": [
+    0.05,
+    0.1,
+    0.86,
+    0.95
+   ],
+   "width": 3617,
+   "height": 1671
+  },
+  {
+   "id": "pt1699_text_p228_bhl",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-08/broll/engine/pt1699_text_p228_bhl/pt1699_text_p228_bhl.jpg",
+   "kind": "image",
+   "colour": true,
+   "title": "Philosophical Transactions vol. 21, no. 253 (June 1699), p. 228: 'III. An Account of Mr Tho. Savery's Engine for raising Water by the help of Fire' - colour scan, NHM Library copy via BHL",
+   "date": "1699",
+   "use_for": "phil_trans_1699",
+   "depicts": "Colour scan of a single printed page, cream paper with light foxing: '(228)' / 'III. An Account of Mr Tho. Savery's Engine for raising Water by the help of Fire.' / 'MR Savery, June 14. 1699. Entertain'd the Royal Society with shewing a small Model of his Engine for raising Water by the help of Fire, which he set to Work before them; the Experiment succeeded according to Expectation, and to their Satisfaction.' followed by the key to the figure (A the Furnace, B The Boyler, C Two Cocks ..., D The Vessels ..., E Valves, F Cocks ..., G The Force Pipe, H The sucking Pipe, I The Water, Fig. 2 the side Prospect of the same Engine), a double rule, and the imprint 'LONDON: Printed for Sam. Smith, and Benj. Walford Printers to the Royal Society, at the Prince's Arms in St Paul's Church-yard. 1699.' This is the article's only text page.",
+   "evidence": "archive.org philosophicaltra2116roya (BHL item 184133), leaf 250 = printed page 228 (page_numbers.json); full-text search for 'Savery' hits only this leaf. JPG converted from processed philosophicaltra2116roya_0250.jp2 (2786x4125, 500 ppi). Crossref: DOI 10.1098/rstl.1699.0041, 'III. An account of Mr. Tho Savery's engine for raising water by the help of fire.', vol. 21, issue 253, p. 228. (The JSTOR copy of the same page, archive.org jstor-102623, was NOT used: its cover sheet allows redistribution only 'for non-commercial purposes'.)",
+   "source_url": "https://archive.org/details/philosophicaltra2116roya",
+   "licence": "Public domain - BHL accessCondition: 'Public domain. The BHL considers that this work is no longer under copyright protection'. BHL item page: https://www.biodiversitylibrary.org/item/184133",
+   "subject_box": [
+    0.12,
+    0.02,
+    0.98,
+    0.81
+   ],
+   "width": 2786,
+   "height": 4125
+  },
+  {
+   "id": "later_farey1827_plate1",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-08/broll/engine/later_farey1827_plate1/later_farey1827_plate1.jpg",
+   "kind": "image",
+   "colour": true,
+   "title": "LATER ENGRAVING (1826/1827): 'Plate I. Mr Savery's Patent Engine for raising water by fire 1698' from John Farey, A Treatise on the Steam Engine (London: Longman, 1827), drawn by Farey, engraved by Lowry",
+   "date": "1826 (plate imprint 'Published as the Act directs, 1826'); book published 1827. Explanatory re-drawing ~125 years after Savery.",
+   "use_for": "steam_engine_later",
+   "depicts": "Fine line engraving on cream paper with scattered foxing. Header 'PLATE I.  Mr SAVERY'S Patent ENGINE for raising water by fire 1698.  page 99.' Fig. 1 (right): the 1699 Philosophical Transactions engine (furnace A, boiler B, vessel D on a stand, pipes G and H to a basket strainer in water). Figs. 2-4 (left and centre): copies of the Miner's Friend plate - Fig. 2 the engine working in a mine (shaft section labelled 'Chimney', 'forcing pipe', 'suction pipe', a man at the engine labelled 'Engine'), Fig. 3 the double-receiver engine with receivers P1/P2, cocks R1-R4, brick furnaces A with fire-doors B1/B2, chimney C, and Fig. 4 the boiler top L with pipes O1/O2 and regulator Z. Fig. 5 (bottom centre): a Savery-type engine with a spherical boiler B over an open fire, receiver E and funnel N - per Farey this is the engine at Campden House, Kensington, after Switzer (1729), i.e. a later Savery-type installation, not Savery's own drawing. Signatures 'Farey, delin.' and 'Lowry, sculp.'; imprint 'Published as the Act directs, 1826, by Longman, Rees, Orme, Brown & Green, Paternoster Row.'",
+   "evidence": "archive.org item treatiseonsteame01fareuoft: title 'A treatise on the steam engine : historical, practical, and descriptive', date 1827, contributor 'Gerstein - University of Toronto', possible-copyright-status 'NOT_IN_COPYRIGHT'. Plate is leaf 747 (jp2 treatiseonsteame01fareuoft_0747.jp2, 3048x4256). Farey's text: 'The above is accompanied with a copper-plate figure, (see Plate I. fig. 1.)' [Phil. Trans.]; 'The copper-plate is copied in Plate I. figures, 2, 3, and 4. The original, which is handsomely engraved, is marked, B. Lens, delin. J. Sturt, sculpt.'; for Fig. 5 Farey quotes Switzer: 'I have given a design of it (See Fig 5, Plate I.) agreeable to that at Cambden-house'. List of plates: 'Plate I. Mr. Savery's Patent Engine for raising water by fire, 1698, p. 99'.",
+   "source_url": "https://archive.org/details/treatiseonsteame01fareuoft",
+   "licence": "Public domain (engraving published 1826; book 1827). archive.org item marked possible-copyright-status 'NOT_IN_COPYRIGHT'; no licence restriction stated (University of Toronto scan).",
+   "subject_box": [
+    0.02,
+    0.06,
+    0.99,
+    0.98
+   ],
+   "width": 3048,
+   "height": 4256
+  }
+ ],
+ "notes": "No portrait was collected (none requested; no authentic portrait of Savery is known). Item 1 (engine plate 1702): the only scan of an actual 1702 copy found under an open licence route is the archive.org microfilm (b&w, ESTC T101221, very high pixel count but microfilm-soft, faint library stamp); the best-looking colour scan is the Wellcome PDM impression of the same copperplate as reissued in Harris's Lexicon Technicum (1736), which adds the line 'Place this at the word Engine' - caption it as a 1736 printing of Savery's 1702 plate, not as the 1702 book. The archive.org microfilm items carry no explicit licence statement (public-domain work, faithful reproduction) - flagged; Wellcome item is explicitly PDM. Phil. Trans. 1699: LoC copy-negative (highest resolution, b&w, 'No known restrictions on publication') plus BHL/NHM colour scans (plate beside the June 1699 issue page, and the article's only text page p. 228); LoC's devised title wrongly calls the figure 'The miner's friend' - it is the 1699 Phil. Trans. figure. Rejected: JSTOR Early Journal Content copy (archive.org jstor-102623) - its cover sheet restricts redistribution to non-commercial purposes. Not found / not usable: Wellcome has no copy of The Miner's Friend or of Phil. Trans. vol. 21; Smithsonian Open Access has only catalogue records (no images) for the Phil. Trans. offprint, an 1829 reprint and a 1979 facsimile; e-rara and collections.si.edu returned bot-check/403 pages; Wikimedia Commons API returned HTTP 429 on all attempts (2 x 3 tries with 60 s back-off), so nothing was taken from Commons. Later engraving: Farey Plate I (1826/27) chosen; Fig. 5 on it is the Campden House Savery-type engine after Switzer 1729. A second 18th-c. option seen but NOT downloaded: Desaguliers, Course of Experimental Philosophy vol. 2 (1744), Wellcome b30527557 (PDM), Plate XL - but it shows Desaguliers' IMPROVED Savery-type engine, so it would need that caption. Optional extra for 'he first demonstrated': the same 1702 microfilm item has the dedication 'TO THE KING ... permit an Experiment before you at Hampton-Court of a small Modle of my Engine' at leaf 2 and 'TO THE Royal Society ... June the 14th 1699' at leaf 6 (not downloaded). Folder contents: each item folder holds the original download (source.jp2 / source.tif / source.jpg / orig.jp2) plus catalogue metadata JSON; pt1699_plate_bhl_colour also has plate_only_upright.jpg. Two files I did not create appeared during the run (mf1702_titlepage_ia_microfilm/source.jpg, a Kakadu JPG of the same title page, and pt1699_text_p228_bhl/orig.jpg, the uncropped camera frame) - probably written by another process; they are not referenced by the manifest."
+}

@@ -1,0 +1,694 @@
+{"alternate_locations":{"servers":[{"server":"dn720509.ca.archive.org","dir":"/0/items/bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702"}],"workable":[{"server":"dn720509.ca.archive.org","dir":"/0/items/bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702"}]},"created":1793502345,"d1":"ia600507.us.archive.org","d2":"ia800507.us.archive.org","dir":"/12/items/bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702","files":[{"name":"__ia_thumb.jpg","source":"original","mtime":"1783444500","size":"24655","md5":"b382d8fcd6aca61ed2003cb809ee9274","crc32":"d2e56c7c","sha1":"6da5d4c2643af1d4a95361868d99fdb827d33e6e","format":"Item Tile","rotation":"0"},{"name":"bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702.pdf","source":"derivative","pdf_module_version":"0.0.23","format":"Text PDF","original":"bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_page_numbers.json","mtime":"1691878628","size":"35681777","md5":"e4d39a68f6e59d0e24c4a4ae304f6bbc","crc32":"33ddbc06","sha1":"463260defa3ad5f7e4ef2c4662e4fa17eaccc750"},{"name":"bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_archive.torrent","source":"metadata","btih":"26cb10514f680eff4a82f07b79dc545baf91ea0c","mtime":"1783444504","size":"19634","md5":"50f6279f3118f86ffe8d79099ea1799e","crc32":"ad6a9411","sha1":"cb5c456e6bf76a0d96f030b561d689f554c50563","format":"Archive BitTorrent"},{"name":"bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_chocr.html.gz","source":"derivative","ocr":"tesseract 5.3.0-3-g9920","ocr_parameters":"lang-Fraktur;lang-enm;two-pass-disabled;pass-dpi-enabled;autonomous-mode-disabled;binarisation-method-leptonica-sauvola","ocr_module_version":"0.0.21","ocr_detected_script":"Latin","ocr_detected_script_conf":"0.7615","ocr_detected_lang":"en","ocr_detected_lang_conf":"1.0000","format":"chOCR","original":"bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_jp2.zip","mtime":"1691876911","size":"1066759","md5":"bbd701b9c330011135de857923e00af6","crc32":"7276a7f6","sha1":"64f4437c1b687c43b323c1a2daabdbff65a5ae07"},{"name":"bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_djvu.txt","source":"derivative","format":"DjVuTXT","original":"bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_djvu.xml","mtime":"1691877165","size":"67382","md5":"9786e80acb384250932044d789d3d168","crc32":"bb8f89c7","sha1":"d57f657972499119ce5c800a6d3b90ac839c2a57"},{"name":"bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_djvu.xml","source":"derivative","format":"Djvu XML","original":"bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_hocr.html","mtime":"1691877125","size":"1163371","md5":"662ec124524ce48609971777d353f11e","crc32":"1c695fd5","sha1":"45c9dbdbdcdf9752eb0f4e2be2fa0e5325ec944b"},{"name":"bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_files.xml","source":"original","format":"Metadata","md5":"f8e735d01c32967e709bfbeea5bb6f3d","summation":"md5"},{"name":"bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_frame-md.json","source":"original","mtime":"1691845658","size":"227","md5":"6f70803e95df2165bf7b3b8db7333eb2","crc32":"005681f9","sha1":"589770a6ec465f8430b93357dffa186ebb4b578d","format":"JSON"},{"name":"bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_hocr.html","source":"derivative","hocr_char_to_word_module_version":"1.2.0","hocr_char_to_word_hocr_version":"1.1.45","ocr_parameters":"lang-Fraktur;lang-enm;two-pass-disabled;pass-dpi-enabled;autonomous-mode-disabled;binarisation-method-leptonica-sauvola","ocr_module_version":"0.0.21","ocr_detected_script":"Latin","ocr_detected_script_conf":"0.7615","ocr_detected_lang":"en","ocr_detected_lang_conf":"1.0000","format":"hOCR","original":"bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_chocr.html.gz","mtime":"1691877075","size":"2459061","md5":"4728e20d320a60b084d21a9c65c8354d","crc32":"e0bbbe3a","sha1":"dfb2bc937a0df215d5ba3d10c71680f24481ade9"},{"name":"bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_hocr_pageindex.json.gz","source":"derivative","hocr_pageindex_module_version":"1.0.0","hocr_pageindex_hocr_version":"1.1.15","format":"OCR Page Index","original":"bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_hocr.html","mtime":"1691877132","size":"1114","md5":"cd9b6ace18f831b5717a8645d5184f8d","crc32":"e31830de","sha1":"55f0be8824efc2d1d88121a6e676a4eeefa7bb10"},{"name":"bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_hocr_searchtext.txt.gz","source":"derivative","hocr_fts_text_module_version":"1.1.0","hocr_fts_text_hocr_version":"1.1.15","word_conf_0_10":"250","word_conf_11_20":"149","word_conf_21_30":"214","word_conf_31_40":"321","word_conf_41_50":"439","word_conf_51_60":"481","word_conf_61_70":"546","word_conf_71_80":"669","word_conf_81_90":"1424","word_conf_91_100":"8408","format":"OCR Search Text","original":"bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_hocr.html","mtime":"1691877155","size":"27157","md5":"20353a4285af50b2d4ae05962740dd7a","crc32":"cf5f96c6","sha1":"0a8b4bbd6fbefaea50dfdc4bb14509a284ececcd"},{"name":"bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_itemimage.png","source":"original","mtime":"1691845653","size":"3487780","md5":"a48381cbbf664617229aba0bd982365b","crc32":"3c659af1","sha1":"a3f1b0b91b6c2b27dd91ffaad0b0a568a4b38fce","format":"Item Image"},{"name":"bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_jp2.zip","source":"original","mtime":"1691845641","size":"313249888","md5":"678016cf637284804f0460d267335b0c","crc32":"7e370ef4","sha1":"9d4ea55ef7e180f147c9d5ec61aac9b2e45667c6","preview-image":"n0","format":"Single Page Processed JP2 ZIP","filecount":"98"},{"name":"bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_meta.sqlite","source":"original","mtime":"1691846224","size":"49152","md5":"102af657a3e3685045ca16e8e8520ba6","crc32":"ec3e61cd","sha1":"e012f914138a71924cfe0144cd70a48d7e9a6f66","format":"Metadata"},{"name":"bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_meta.xml","source":"original","mtime":"1783444498","size":"3390","md5":"836f26691323a4df9062958f74ff4feb","crc32":"6db696d2","sha1":"5005fbece09fa5a7589c1937dcfc5af29c74dc1e","format":"Metadata"},{"name":"bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_page_numbers.json","source":"derivative","hocr_pagenumber_module_version":"1.0.3","hocr_pagenumber_hocr_version":"1.1.54","hocr_pagenumber_confidence":"0","format":"Page Numbers JSON","original":"bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_hocr.html","mtime":"1691877485","size":"16753","md5":"339872b4b8137d1fb482d32eabb101f5","crc32":"a3350c28","sha1":"5d24576b00291e3c4eb3fb560ca22c50443ee8dc"},{"name":"bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_rotations.json","source":"original","mtime":"1691845662","size":"8734","md5":"9331d56189bc5390d8c2a663968fe063","crc32":"edc38c06","sha1":"32f3ea0811b5dfc62de75903003badc4b17b905d","format":"JSON"},{"name":"bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_scandata.xml","source":"derivative","format":"Scandata","original":"bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_djvu.xml","mtime":"1691877485","size":"31668","md5":"538458bcc464b7dde73bc372b5f5a3ac","crc32":"2686b998","sha1":"2972d0755e22df8a2247212a61cb4d83216b91c5"},{"name":"header\/header_0000.jp2","source":"original","mtime":"1691845675","size":"522552","md5":"0a8873f1b3c778fae9535b1a5b740d4b","crc32":"550059de","sha1":"85ef21c040273fd9bcee0e0fdc35dca3b1735b8e","format":"JPEG 2000"},{"name":"header\/header_0001.jp2","source":"original","mtime":"1691845670","size":"5049246","md5":"bc1e020401cac3634641fc8bd6c31e7d","crc32":"fde1aea9","sha1":"96606a4ff49c391f065242fda3bfb46e6f0878b2","format":"JPEG 2000"},{"name":"header\/header_0002.jp2","source":"original","mtime":"1691845666","size":"3282276","md5":"d4a0d0731e39821abcd9c530eb8eb5f3","crc32":"78a388e5","sha1":"263e20b1eb05da5b359cf629bf364b7f0474c9fb","format":"JPEG 2000"}],"files_count":21,"frame-md":{"header": {"right_to_left": null, "frame_start": 1, "frame_end": 3}, "issue": {"right_to_left": null, "frame_start": 1246, "frame_cover": 1246, "frame_end": null, "cover_reverse_handedness": false, "split_start_frame": false}},"item_last_updated":1783444504,"item_size":366212576,"metadata":{"identifier":"bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702","adaptive_ocr":"true","auditor":"associate-jobert-apor@archive.org","betterpdf":"true","boxid":"IA40310415","canister":"IA40310415-87","collection":["pub_eighteenth-century","bim_microfilm","microfilm"],"collection-catalog-number":"t101221","contrast_max":"150","contrast_min":"3","contributor":"Internet Archive","copies":"2","creator":"Savery, Thomas.","date":"1702","derive_version":"0.0.22","description":"The miners friend; or, an engine to raise water by fire, described. And of the manner of fixing it in mines. .. By ... Tho. Savery Gent. 1702..<br />Digitized from <a href=\"https://archive.org/details/sim_raw_scan_IA40310415-87/page/n531\" rel=\"ugc nofollow\">IA40310415-87</a>.<br />Previous issue: <a href=\"https://archive.org/details/bim_eighteenth-century_the-people-called-quaker_forster-josiah_1740_0\" rel=\"ugc nofollow\">bim_eighteenth-century_the-people-called-quaker_forster-josiah_1740_0</a>.","language":"English","mediatype":"texts","metadata_operator":"associate-jannine-ompad@archive.org","ppi":"800","previous_item":"bim_eighteenth-century_the-people-called-quaker_forster-josiah_1740_0","pub_type":"Books","scanner":"microfilm04.cebu.archive.org","scanningcenter":"cebu","sim_pubid":"24073","software_version":"nextStar 4.5.0.20626","source":["IA40310415-87","microfilm"],"subject":["Language & Literature","Literary And Political Reviews","General Interest Periodicals--United Kingdom","Law","Philosophy & Religion","Fine & Performing Arts","Social Sciences","History","History--History of North And South America","Books","microfilm"],"title":"The miners friend; or, an engine to raise water by fire, described. And of the manner of fixing it in mines. .. By ... Tho. Savery Gent.  1702","uploader":"merlijn+microfilmderiver@archive.org","publicdate":"2023-08-12 13:16:27","addeddate":"2023-08-12 13:16:27","identifier-access":"http://archive.org/details/bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702","identifier-ark":"ark:/13960/s2hq05f3xm7","imagecount":"98","ocr":"tesseract 5.3.0-3-g9920","ocr_parameters":"-l Fraktur+enm","ocr_module_version":"0.0.21","ocr_detected_script":"Latin","ocr_detected_script_conf":"0.7615","ocr_detected_lang":"en","ocr_detected_lang_conf":"1.0000","page_number_confidence":"0","page_number_module_version":"1.0.3","pdf_module_version":"0.0.23"},"page_numbers":{
+    "identifier": "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702",
+    "format-version": "2",
+    "archive-hocr-tools-version": "1.1.54",
+    "confidence": 0,
+    "pages": [
+        {
+            "leafNum": 0,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 1,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 2,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 3,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 4,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 5,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 6,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 7,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 8,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 9,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 10,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 11,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 12,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 13,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 14,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 15,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 16,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 17,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 18,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 19,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 20,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 21,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 22,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 23,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 24,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 25,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 26,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 27,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 28,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 29,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 30,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 31,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 32,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 33,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 34,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 35,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 36,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 37,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 38,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 39,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 40,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 41,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 42,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 43,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 44,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 45,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 46,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 47,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 48,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 49,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 50,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 51,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 52,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 53,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 54,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 55,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 56,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 57,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 58,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 59,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 60,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 61,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 62,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 63,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 64,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 65,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 66,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 67,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 68,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 69,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 70,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 71,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 72,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 73,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 74,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 75,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 76,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 77,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 78,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 79,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 80,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 81,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 82,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 83,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 84,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 85,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 86,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 87,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 88,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 89,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 90,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 91,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 92,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 93,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 94,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 95,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 96,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 97,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        }
+    ]
+},"rotations":{"issue": {"mean": 0.20478057446808515, "std": 0.8066736997793283, "lh_mean": 0.21527346808510642, "lh_std": 0.7426045397570219, "rh_mean": 0.19428768085106385, "rh_std": 0.8658886832212818}, "pages": {"bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0000.jp2": 0.480621, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0001.jp2": null, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0002.jp2": 1.297653, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0003.jp2": -0.404948, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0004.jp2": 1.391786, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0005.jp2": 0.280414, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0006.jp2": 0.409814, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0007.jp2": -0.347372, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0008.jp2": 1.111365, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0009.jp2": -0.8625, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0010.jp2": 1.032916, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0011.jp2": 1.291767, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0012.jp2": 1.992586, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0013.jp2": -0.49602, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0014.jp2": 1.759805, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0015.jp2": -0.295836, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0016.jp2": 0.708196, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0017.jp2": -0.435704, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0018.jp2": 1.204829, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0019.jp2": 0.064002, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0020.jp2": null, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0021.jp2": -1.531847, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0022.jp2": null, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0023.jp2": 0.550096, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0024.jp2": 0.325558, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0025.jp2": 0.489072, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0026.jp2": -0.621218, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0027.jp2": 0.26312, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0028.jp2": -0.444895, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0029.jp2": 0.496595, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0030.jp2": -0.500987, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0031.jp2": 0.220324, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0032.jp2": -0.512874, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0033.jp2": 1.012539, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0034.jp2": -1.319335, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0035.jp2": 0.390829, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0036.jp2": -0.95417, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0037.jp2": 0.666729, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0038.jp2": -1.43221, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0039.jp2": 0.208773, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0040.jp2": 0.031396, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0041.jp2": -0.526412, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0042.jp2": -0.503764, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0043.jp2": -0.265959, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0044.jp2": -0.415633, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0045.jp2": 0.150712, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0046.jp2": -0.384047, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0047.jp2": -0.402, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0048.jp2": -0.401001, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0049.jp2": 0.156978, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0050.jp2": 0.064999, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0051.jp2": 1.002892, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0052.jp2": -2.045795, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0053.jp2": 1.150148, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0054.jp2": -0.781247, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0055.jp2": 1.022587, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0056.jp2": 0.27501, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0057.jp2": 0.017743, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0058.jp2": -0.339358, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0059.jp2": -0.091344, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0060.jp2": 0.11345, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0061.jp2": 0.167642, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0062.jp2": 0.882345, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0063.jp2": -0.467605, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0064.jp2": 0.321833, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0065.jp2": 0.669563, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0066.jp2": -0.045588, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0067.jp2": 1.041339, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0068.jp2": -0.600216, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0069.jp2": 0.373563, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0070.jp2": 0.324085, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0071.jp2": -0.335206, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0072.jp2": 1.553593, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0073.jp2": -1.186247, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0074.jp2": 1.205389, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0075.jp2": -0.071357, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0076.jp2": 0.242984, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0077.jp2": 0.734729, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0078.jp2": 0.635875, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0079.jp2": -0.253813, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0080.jp2": 0.840558, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0081.jp2": 1.0241, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0082.jp2": 0.37017, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0083.jp2": 1.528254, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0084.jp2": 0.846526, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0085.jp2": 0.610897, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0086.jp2": 0.526868, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0087.jp2": 2.494716, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0088.jp2": -0.763011, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0089.jp2": 0.980067, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0090.jp2": -0.144471, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0091.jp2": -0.133567, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0092.jp2": 0.577732, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0093.jp2": -0.955426, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0094.jp2": 1.19417, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0095.jp2": 0.120826, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0096.jp2": -0.380771, "bim_eighteenth-century_the-miners-friend-or-a_savery-thomas_1702_0097.jp2": null}},"server":"ia800507.us.archive.org","uniq":651479422,"workable_servers":["ia800507.us.archive.org","ia600507.us.archive.org"]}
