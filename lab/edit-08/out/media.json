@@ -4,11 +4,47 @@
   "colour": false,
   "mode": "fill",
   "center": [
-   0.5,
-   0.33
+   0.62,
+   0.42
   ],
-  "zoom": 0.52,
+  "zoom": 0.5,
   "move": "push",
   "source": "Jan Luyken, De Bergwercker (The Miner), 1694, Rijksmuseum (CC0; record pending)"
+ },
+ "hook": {
+  "file": "/home/user/SocialMediaMarketingSkill/lab/edit-08/broll/engine/pt1699_plate_loc/pt1699_plate_loc.jpg",
+  "colour": false,
+  "mode": "fill",
+  "center": [
+   0.36,
+   0.4
+  ],
+  "zoom": 0.74,
+  "move": "push",
+  "source": "Mr. Savery's Engine, Philosophical Transactions 1699, Library of Congress (no known restrictions)"
+ },
+ "philtrans": {
+  "file": "/home/user/SocialMediaMarketingSkill/lab/edit-08/broll/engine/pt1699_plate_loc/pt1699_plate_loc.jpg",
+  "colour": false,
+  "mode": "fill",
+  "center": [
+   0.68,
+   0.55
+  ],
+  "zoom": 0.36,
+  "move": "push",
+  "source": "Mr. Savery's Engine, Philosophical Transactions 1699, Library of Congress (no known restrictions) (furnace, fig. II)"
+ },
+ "engine_detail": {
+  "file": "/home/user/SocialMediaMarketingSkill/lab/edit-08/broll/engine/pt1699_plate_loc/pt1699_plate_loc.jpg",
+  "colour": false,
+  "mode": "fill",
+  "center": [
+   0.36,
+   0.5
+  ],
+  "zoom": 0.55,
+  "move": "down",
+  "source": "Mr. Savery's Engine, Philosophical Transactions 1699, Library of Congress (no known restrictions) (pipe, water to spout)"
  }
 }
