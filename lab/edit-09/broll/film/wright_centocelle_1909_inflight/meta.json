@@ -1,0 +1,29 @@
+{
+ "id": "film_ia_centocelle_1909_inflight",
+ "file": "wright_centocelle_1909_inflight/source.mp4",
+ "kind": "video",
+ "title": "First in-flight film footage from Wright flight in Italy, 1909 (Internet Archive item FirstInflightFilmFootageFromWrightFlightInItaly1909)",
+ "date": "1909-04-24 (per source record; Wilbur Wright's flights at Centocelle near Rome - the record itself says only 'Italy')",
+ "use_for": "flight_film_1908_1909",
+ "depicts": "Silent B&W film, 31.9 s, no watermark, no added music or narration (no audio stream). Very low resolution: the IA original is 320x240 MPEG-4 at 15 fps (original.mpeg4); source.mp4 is IA's H.264 derivative, 640x480 at 30 fps (upscaled from that original). Full 4:3 picture, no pillarbox. Shot 1 (0.0-4.6 s): ground-level side view of a Wright biplane (Model A type: twin uprights, front elevator, chain-driven propellers) standing on the field with several men in coats and hats at its front, one handling the machine. Hard cut at about 4.6 s to the camera on board: 4.9-7.8 s looking forward and down past the uprights and a skid at the grass field rushing below (several splices and exposure flicker), 7.8-8.4 s the horizon drops as the machine climbs; 8.4 s to end: in flight, framed between the wing struts and spars, sky filling most of the frame, horizon low; banking turn around 18-22.5 s (horizon tilts; a farm building/hut passes below at about 19.4-20.5 s; tree line); level flight over flat fields to the end. No landing shown. USABLE RANGES (s): 0.2-4.5 the Wright machine on the ground with the men around it before the flight; 4.9-8.4 on-board take-off run and climb, ground rushing past (jumpy); 8.4-13.4 BEST: steady level flight seen from the aircraft, between the struts; 18.0-22.5 BEST: banking turn with the horizon tilting and a building passing below; 26.3-31.8 level flight over the fields to the end of the clip.",
+ "evidence": "Internet Archive item 'First inflight film footage from Wright flight in Italy 1909' (identifier FirstInflightFilmFootageFromWrightFlightInItaly1909, uploaded 2011-10-12 by The Public Domain Review). Its description quotes Wikipedia: \"This film was taken in Italy on April 24, 1909. It is the first time a motion picture was ever shot from a plane in flight. The footage shows what it was like to fly on one of the early Wright craft, with Wilbur at the helm. The clip opens with the launching, then the plane climbs, levels off, and passes over the flight grounds.\" A companion IA item from the same uploader (FirstInflightFilmFromWrightFlightInItaly1909) holds the same original file (identical 606,227-byte MPEG-4) and says: \"The first in-flight film, made by a camera man flying with Wilbur Wright on 24 April 1909\". Content matches: a Wright biplane on the ground, then the view from on board through the struts during take-off and flight. Not 1903, not Kitty Hawk, and Orville is not the pilot: label it 'Wilbur Wright, Italy (Centocelle, Rome), April 1909'. The cameraman is not named and the people in the ground shot are not identified in the record. IA lists 'color: color', but the footage is plain black and white.",
+ "source_url": "https://archive.org/details/FirstInflightFilmFootageFromWrightFlightInItaly1909",
+ "file_url": "https://archive.org/download/FirstInflightFilmFootageFromWrightFlightInItaly1909/Wilbur_Wright_onboard_flight2C_Italy_1909.mp4",
+ "original_file_url": "https://archive.org/download/FirstInflightFilmFootageFromWrightFlightInItaly1909/Wilbur_Wright_onboard_flight2C_Italy_1909.mpeg4",
+ "licence": "Public Domain Mark 1.0 (http://creativecommons.org/publicdomain/mark/1.0/), as stated in the Internet Archive item's licence field. The uploader (The Public Domain Review) applied the mark, not a film archive. Basis: a film shot and shown in 1909, so public domain in the US (published before 1931). The cameraman is anonymous, so it has also been public domain in Italy since 1980 (70 years after publication).",
+ "duration_s": 31.9,
+ "width": 640,
+ "height": 480,
+ "colour": false,
+ "subject_box": [
+  0.0,
+  0.0,
+  1.0,
+  1.0
+ ],
+ "native_resolution": "320x240 @ 15 fps (original.mpeg4)",
+ "sha1": {
+  "source.mp4": "dc305545b76c6c381654ef66fdeb1c663ccb3f0d",
+  "original.mpeg4": "92f6922ec4c91b487b157df4dd1e79110c446d49"
+ }
+}
