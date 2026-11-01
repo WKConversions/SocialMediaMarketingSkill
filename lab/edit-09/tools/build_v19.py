@@ -14,7 +14,7 @@ Picture:
             rise in; the first visible frame is one frame before the word. Place/date labels in the interludes use
             the same style and spot.
   end card  the script's closing line on a warm black, the WKC logo small beneath.
-Usage: python3 build_v19.py [OUT.mp4] [--frames 0,300,...  (stills only, for checking)]
+Usage: python3 build_v19.py [OUT.mp4] [--frames 0,300,...  (stills only, for checking)] [--range A,B  (frames A..B-1 only)]
 """
 import json
 import os
@@ -402,7 +402,7 @@ def render_frame(i, views, shots, players, logo, caps):
     return np.clip(base, 0, 1)
 
 
-def main(out_path, only=None):
+def main(out_path, only=None, rng_range=None):
     shots = CFG["shots"]
     missing = [s["slot"] for s in shots if "file" not in s and "files" not in s]
     if only is None and any(s.get("placeholder") for s in shots) and "pending" not in os.path.basename(out_path):
@@ -425,7 +425,8 @@ def main(out_path, only=None):
                             "-vf", "scale=out_color_matrix=bt709", "-c:v", "libx264", "-crf", "16", "-preset", "medium",
                             "-pix_fmt", "yuv420p", "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709",
                             "-movflags", "+faststart", out_path], stdin=subprocess.PIPE)
-    for i in range(N):
+    a, b = rng_range or (0, N)
+    for i in range(a, b):
         enc.stdin.write((render_frame(i, views, shots, players, logo, caps) * 255 + 0.5).astype(np.uint8).tobytes())
         if i % 90 == 0:
             print(f"  frame {i}/{N}", flush=True)
@@ -433,7 +434,7 @@ def main(out_path, only=None):
     enc.wait()
     json.dump([{"text": c["text"], "frame": c["frame"], "label": bool(c.get("label"))} for c in caps],
               open(f"{E}/out/v19_captions.json", "w"), indent=1)
-    print(f"rendered {N} frames ({N / FPS:.2f} s) -> {out_path}")
+    print(f"rendered frames {a}-{b - 1} of {N} ({N / FPS:.2f} s) -> {out_path}")
 
 
 if __name__ == "__main__":
@@ -443,4 +444,9 @@ if __name__ == "__main__":
         j = args.index("--frames")
         only = [int(x) for x in args[j + 1].split(",")]
         args = args[:j] + args[j + 2:]
-    main(args[0] if args else f"{E}/out/v19_noaudio.mp4", only)
+    rr = None
+    if "--range" in args:                                                       # render a part (parallel renders, then concat)
+        j = args.index("--range")
+        rr = tuple(int(x) for x in args[j + 1].split(","))
+        args = args[:j] + args[j + 2:]
+    main(args[0] if args else f"{E}/out/v19_noaudio.mp4", only, rr)
