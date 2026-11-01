@@ -23,11 +23,16 @@ CAPTIONS = [  # (text, index of its first word in edl["words"], class, fill)
 VIEW_PLAN = [(0.0, "wide"), (1.25, "wide"), (2.08, "medium"), (2.73, "wide"), (3.43, "medium"), (5.167, "wide"),
              (6.73, "medium"), (7.56, "close"), (8.042, "wide"), (8.89, "medium"), (11.417, "wide"), (11.69, "medium"),
              (13.708, "wide"), (15.02, "close"), (15.70, "medium"), (16.708, "wide")]
-SLOTS = [  # (start, end, slot): filled from out/media.json
-    (0.0, 1.25, "hook"),            # "In 1698": the engine engraving (The Miner's Friend, 1702)
-    (4.11, 5.167, "philtrans"),     # "powered by steam": the 1699 Royal Society figure of his engine
-    (9.83, 11.417, "engine_detail"),    # "how steam could move water": moving across the engine engraving
-    (12.49, 13.708, "mine"),        # "had a purpose": a miner, 1694 (his engine was meant to drain mines)
+SLOTS = [  # (start, end, slot): filled from out/media.json. Client (v2): ~15% more visuals, short and spread out,
+           # always some of the speaker in between
+    (0.0, 1.25, "hook"),            # "In 1698": Savery's engine (Philosophical Transactions 1699 plate)
+    (2.08, 2.73, "title"),          # "Savery": his book's title page, "By Tho. Savery" (no authentic portrait is known)
+    (4.11, 5.167, "philtrans"),     # "powered by steam": the furnace from the 1699 plate
+    (6.45, 7.33, "mine_deep"),      # "was very hard": a deep mine in cross-section
+    (8.47, 9.20, "king"),           # "first demonstrated": King William III (Savery showed him a model in 1698)
+    (9.83, 11.417, "engine_detail"),    # "how steam could move water": up the engine's pipes
+    (12.49, 13.708, "mine"),        # "had a purpose": a miner, 1694 (the engine was meant to drain mines)
+    (15.02, 15.70, "wkc"),          # "motion design": the client's own site
 ]
 CANVASES = [(17.15, 19.292, "untangle")]   # the one motion-design moment: "complexity easier to understand"
 END_CARD = 1.3

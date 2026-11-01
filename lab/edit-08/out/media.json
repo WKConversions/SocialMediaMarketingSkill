@@ -46,5 +46,48 @@
   "zoom": 0.55,
   "move": "down",
   "source": "Mr. Savery's Engine, Philosophical Transactions 1699, Library of Congress (no known restrictions) (pipe, water to spout)"
+ },
+ "title": {
+  "file": "/home/user/SocialMediaMarketingSkill/lab/edit-08/broll/engine/mf1702_titlepage_ia_microfilm/source.jpg",
+  "colour": false,
+  "mode": "fill",
+  "center": [
+   0.5,
+   0.5
+  ],
+  "zoom": 1.0,
+  "move": "push",
+  "source": "Thomas Savery, The Miner's Friend; or, an Engine to Raise Water by Fire (London 1702), title page, Internet Archive microfilm scan"
+ },
+ "mine_deep": {
+  "file": "/home/user/SocialMediaMarketingSkill/lab/edit-08/broll/context/wellcome_mine_galleries_miners_digging/wellcome_mine_galleries_miners_digging.jpg",
+  "colour": false,
+  "mode": "fill",
+  "center": [
+   0.5,
+   0.62
+  ],
+  "zoom": 0.62,
+  "move": "push",
+  "source": "A mine: cross-sections of the galleries with miners digging, etching, 18th c., Wellcome (PDM)"
+ },
+ "king": {
+  "file": "/home/user/SocialMediaMarketingSkill/lab/edit-08/broll/context/rijks_william_iii_schalcken_1692/rijks_william_iii_schalcken_1692.jpg",
+  "colour": true,
+  "mode": "fill",
+  "center": [
+   0.5,
+   0.36
+  ],
+  "zoom": 0.62,
+  "move": "push",
+  "source": "Godfried Schalcken, Portrait of William III, c.1692-97, Rijksmuseum (PDM)"
+ },
+ "wkc": {
+  "file": "/home/user/SocialMediaMarketingSkill/lab/edit-05/broll/wkc/scroll.mp4",
+  "kind": "video",
+  "src": 1.0,
+  "raw": true,
+  "source": "wkconversions.com (the client's site)"
  }
 }

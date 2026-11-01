@@ -78,12 +78,20 @@
   "type": "shutter"
  },
  {
+  "t": 6.45,
+  "type": "flash"
+ },
+ {
   "t": 6.73,
   "type": "flash"
  },
  {
   "t": 7.083333333333333,
   "type": "shutter"
+ },
+ {
+  "t": 7.33,
+  "type": "flash"
  },
  {
   "t": 7.541666666666667,
@@ -107,6 +115,10 @@
   "type": "shutter"
  },
  {
+  "t": 8.47,
+  "type": "flash"
+ },
+ {
   "t": 8.875,
   "type": "shutter"
  },
@@ -117,6 +129,10 @@
  },
  {
   "t": 8.89,
+  "type": "flash"
+ },
+ {
+  "t": 9.2,
   "type": "flash"
  },
  {

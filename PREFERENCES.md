@@ -61,8 +61,17 @@ these on every video unless the client says otherwise for a specific project.
 - build tension into a key point or reveal: riser, peaking on the moment
 
 ## Colour
-- Keep the client's original lighting on the talking head: no colour grading on the speaker when the client films
-  with a deliberate light (e.g. the red-light videos). Archival images keep their print treatment; canvases unchanged.
+- Red-light footage: the client wants NATURAL colours, little or no red, while the face's shape, expression and
+  cheeks keep popping. Don't tint: use the red channel as the brightness (it holds the detail) and map it onto
+  natural tones (dark neutral background, skin mids, warm highlights), deeper contrast so the face pops and the wall
+  drops back (lab/edit-08/tools/grade_neutral.py). A plain "furnace"/red grade was rejected as too red.
+- Archival images keep their print treatment; canvases are unchanged.
+
+## Visual mix (story videos)
+- Mostly the speaker talking with captions, then real images from the time, then (least) motion design. Motion
+  design is a short moment, never most of the video, and the speaker stays in the panel during it.
+- Visual cuts are short (about 0.6-1.6 s) and spread out, with at least ~0.6 s of the speaker between them; the
+  Savery v2 balance (speaker ~47%, period images ~42%, motion design ~11%) is the approved amount of cuts.
 
 ## Transitions and flashes
 - Negative (inverted) flash frames, 1-3 frames, on view switches and as in-shot flicker.
