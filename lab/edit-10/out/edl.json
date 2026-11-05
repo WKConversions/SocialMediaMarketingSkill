@@ -1,0 +1,657 @@
+{
+ "fps": 30,
+ "segments": [
+  {
+   "clip": "7105",
+   "src_start": 0.0,
+   "src_end": 1.3,
+   "out_start": 0.0,
+   "out_end": 1.3
+  },
+  {
+   "clip": "7106",
+   "src_start": 0.2667,
+   "src_end": 3.4667,
+   "out_start": 1.3,
+   "out_end": 4.5
+  },
+  {
+   "clip": "7107",
+   "src_start": 0.3,
+   "src_end": 1.0667,
+   "out_start": 4.5,
+   "out_end": 5.2667
+  },
+  {
+   "clip": "7107",
+   "src_start": 1.3333,
+   "src_end": 2.4333,
+   "out_start": 5.2667,
+   "out_end": 6.3667
+  },
+  {
+   "clip": "7108",
+   "src_start": 0.1333,
+   "src_end": 1.7,
+   "out_start": 6.3667,
+   "out_end": 7.9333
+  },
+  {
+   "clip": "7109",
+   "src_start": 0.1333,
+   "src_end": 2.6,
+   "out_start": 7.9333,
+   "out_end": 10.4
+  },
+  {
+   "clip": "7110",
+   "src_start": 0.1,
+   "src_end": 3.0,
+   "out_start": 10.4,
+   "out_end": 13.3
+  },
+  {
+   "clip": "7110",
+   "src_start": 3.8667,
+   "src_end": 5.5,
+   "out_start": 13.3,
+   "out_end": 14.9333
+  },
+  {
+   "clip": "7111",
+   "src_start": 0.2333,
+   "src_end": 4.0,
+   "out_start": 14.9333,
+   "out_end": 18.7
+  },
+  {
+   "clip": "7112",
+   "src_start": 0.2333,
+   "src_end": 0.7,
+   "out_start": 18.7,
+   "out_end": 19.1667
+  },
+  {
+   "clip": "7112",
+   "src_start": 1.1333,
+   "src_end": 3.6333,
+   "out_start": 19.1667,
+   "out_end": 21.6667
+  }
+ ],
+ "words": [
+  {
+   "word": "the",
+   "clip": "7105",
+   "idx": 0,
+   "score": 0.999,
+   "src_start": 0.02,
+   "src_end": 0.121,
+   "start": 0.02,
+   "end": 0.121
+  },
+  {
+   "word": "eiffel",
+   "clip": "7105",
+   "idx": 1,
+   "score": 0.521,
+   "src_start": 0.341,
+   "src_end": 0.663,
+   "start": 0.341,
+   "end": 0.663
+  },
+  {
+   "word": "tower",
+   "clip": "7105",
+   "idx": 2,
+   "score": 1.0,
+   "src_start": 0.844,
+   "src_end": 1.205,
+   "start": 0.844,
+   "end": 1.205
+  },
+  {
+   "word": "in",
+   "clip": "7106",
+   "idx": 0,
+   "score": 1.0,
+   "src_start": 0.341,
+   "src_end": 0.401,
+   "start": 1.3743,
+   "end": 1.4343
+  },
+  {
+   "word": "eighteen",
+   "clip": "7106",
+   "idx": 1,
+   "score": 1.0,
+   "src_start": 0.602,
+   "src_end": 0.903,
+   "start": 1.6353,
+   "end": 1.9363
+  },
+  {
+   "word": "eighty",
+   "clip": "7106",
+   "idx": 2,
+   "score": 1.0,
+   "src_start": 1.043,
+   "src_end": 1.244,
+   "start": 2.0763,
+   "end": 2.2773
+  },
+  {
+   "word": "seven",
+   "clip": "7106",
+   "idx": 3,
+   "score": 1.0,
+   "src_start": 1.304,
+   "src_end": 1.564,
+   "start": 2.3373,
+   "end": 2.5973
+  },
+  {
+   "word": "paris",
+   "clip": "7106",
+   "idx": 4,
+   "score": 0.995,
+   "src_start": 1.805,
+   "src_end": 2.186,
+   "start": 2.8383,
+   "end": 3.2193
+  },
+  {
+   "word": "rejected",
+   "clip": "7106",
+   "idx": 5,
+   "score": 1.0,
+   "src_start": 2.327,
+   "src_end": 2.748,
+   "start": 3.3603,
+   "end": 3.7813
+  },
+  {
+   "word": "an",
+   "clip": "7106",
+   "idx": 6,
+   "score": 0.637,
+   "src_start": 2.888,
+   "src_end": 2.948,
+   "start": 3.9213,
+   "end": 3.9813
+  },
+  {
+   "word": "idea",
+   "clip": "7106",
+   "idx": 7,
+   "score": 1.0,
+   "src_start": 3.069,
+   "src_end": 3.37,
+   "start": 4.1023,
+   "end": 4.4033
+  },
+  {
+   "word": "a",
+   "clip": "7107",
+   "idx": 0,
+   "score": 1.0,
+   "src_start": 0.383,
+   "src_end": 0.403,
+   "start": 4.583,
+   "end": 4.603
+  },
+  {
+   "word": "giant",
+   "clip": "7107",
+   "idx": 1,
+   "score": 1.0,
+   "src_start": 0.504,
+   "src_end": 0.967,
+   "start": 4.704,
+   "end": 5.167
+  },
+  {
+   "word": "iron",
+   "clip": "7107",
+   "idx": 2,
+   "score": 1.0,
+   "src_start": 1.431,
+   "src_end": 1.672,
+   "start": 5.3643,
+   "end": 5.6053
+  },
+  {
+   "word": "tower",
+   "clip": "7107",
+   "idx": 3,
+   "score": 1.0,
+   "src_start": 1.995,
+   "src_end": 2.317,
+   "start": 5.9283,
+   "end": 6.2503
+  },
+  {
+   "word": "critics",
+   "clip": "7108",
+   "idx": 0,
+   "score": 0.998,
+   "src_start": 0.221,
+   "src_end": 0.604,
+   "start": 6.4543,
+   "end": 6.8373
+  },
+  {
+   "word": "called",
+   "clip": "7108",
+   "idx": 1,
+   "score": 0.951,
+   "src_start": 0.664,
+   "src_end": 0.885,
+   "start": 6.8973,
+   "end": 7.1183
+  },
+  {
+   "word": "it",
+   "clip": "7108",
+   "idx": 2,
+   "score": 0.999,
+   "src_start": 0.905,
+   "src_end": 0.966,
+   "start": 7.1383,
+   "end": 7.1993
+  },
+  {
+   "word": "an",
+   "clip": "7108",
+   "idx": 3,
+   "score": 0.502,
+   "src_start": 1.006,
+   "src_end": 1.046,
+   "start": 7.2393,
+   "end": 7.2793
+  },
+  {
+   "word": "eyesore",
+   "clip": "7108",
+   "idx": 4,
+   "score": 0.567,
+   "src_start": 1.087,
+   "src_end": 1.61,
+   "start": 7.3203,
+   "end": 7.8433
+  },
+  {
+   "word": "but",
+   "clip": "7109",
+   "idx": 0,
+   "score": 1.0,
+   "src_start": 0.221,
+   "src_end": 0.361,
+   "start": 8.021,
+   "end": 8.161
+  },
+  {
+   "word": "gustave",
+   "clip": "7109",
+   "idx": 1,
+   "score": 0.861,
+   "src_start": 0.461,
+   "src_end": 0.942,
+   "start": 8.261,
+   "end": 8.742
+  },
+  {
+   "word": "eiffel",
+   "clip": "7109",
+   "idx": 2,
+   "score": 0.636,
+   "src_start": 1.143,
+   "src_end": 1.423,
+   "start": 8.943,
+   "end": 9.223
+  },
+  {
+   "word": "built",
+   "clip": "7109",
+   "idx": 3,
+   "score": 1.0,
+   "src_start": 1.764,
+   "src_end": 1.945,
+   "start": 9.564,
+   "end": 9.745
+  },
+  {
+   "word": "it",
+   "clip": "7109",
+   "idx": 4,
+   "score": 1.0,
+   "src_start": 2.025,
+   "src_end": 2.085,
+   "start": 9.825,
+   "end": 9.885
+  },
+  {
+   "word": "anyway",
+   "clip": "7109",
+   "idx": 5,
+   "score": 1.0,
+   "src_start": 2.165,
+   "src_end": 2.486,
+   "start": 9.965,
+   "end": 10.286
+  },
+  {
+   "word": "and",
+   "clip": "7110",
+   "idx": 0,
+   "score": 1.0,
+   "src_start": 0.201,
+   "src_end": 0.281,
+   "start": 10.501,
+   "end": 10.581
+  },
+  {
+   "word": "when",
+   "clip": "7110",
+   "idx": 1,
+   "score": 1.0,
+   "src_start": 0.321,
+   "src_end": 0.442,
+   "start": 10.621,
+   "end": 10.742
+  },
+  {
+   "word": "people",
+   "clip": "7110",
+   "idx": 2,
+   "score": 1.0,
+   "src_start": 0.562,
+   "src_end": 0.864,
+   "start": 10.862,
+   "end": 11.164
+  },
+  {
+   "word": "saw",
+   "clip": "7110",
+   "idx": 3,
+   "score": 1.0,
+   "src_start": 0.984,
+   "src_end": 1.165,
+   "start": 11.284,
+   "end": 11.465
+  },
+  {
+   "word": "it",
+   "clip": "7110",
+   "idx": 4,
+   "score": 1.0,
+   "src_start": 1.245,
+   "src_end": 1.305,
+   "start": 11.545,
+   "end": 11.605
+  },
+  {
+   "word": "standing",
+   "clip": "7110",
+   "idx": 5,
+   "score": 1.0,
+   "src_start": 1.386,
+   "src_end": 1.787,
+   "start": 11.686,
+   "end": 12.087
+  },
+  {
+   "word": "above",
+   "clip": "7110",
+   "idx": 6,
+   "score": 1.0,
+   "src_start": 1.868,
+   "src_end": 2.169,
+   "start": 12.168,
+   "end": 12.469
+  },
+  {
+   "word": "paris",
+   "clip": "7110",
+   "idx": 7,
+   "score": 0.93,
+   "src_start": 2.51,
+   "src_end": 2.892,
+   "start": 12.81,
+   "end": 13.192
+  },
+  {
+   "word": "perceptions",
+   "clip": "7110",
+   "idx": 8,
+   "score": 0.935,
+   "src_start": 3.956,
+   "src_end": 4.478,
+   "start": 13.3893,
+   "end": 13.9113
+  },
+  {
+   "word": "started",
+   "clip": "7110",
+   "idx": 9,
+   "score": 0.999,
+   "src_start": 4.519,
+   "src_end": 4.78,
+   "start": 13.9523,
+   "end": 14.2133
+  },
+  {
+   "word": "to",
+   "clip": "7110",
+   "idx": 10,
+   "score": 1.0,
+   "src_start": 4.82,
+   "src_end": 4.92,
+   "start": 14.2533,
+   "end": 14.3533
+  },
+  {
+   "word": "change",
+   "clip": "7110",
+   "idx": 11,
+   "score": 1.0,
+   "src_start": 5.021,
+   "src_end": 5.382,
+   "start": 14.4543,
+   "end": 14.8153
+  },
+  {
+   "word": "today",
+   "clip": "7111",
+   "idx": 0,
+   "score": 0.998,
+   "src_start": 0.32,
+   "src_end": 0.641,
+   "start": 15.02,
+   "end": 15.341
+  },
+  {
+   "word": "it's",
+   "clip": "7111",
+   "idx": 1,
+   "score": 0.954,
+   "src_start": 0.721,
+   "src_end": 0.821,
+   "start": 15.421,
+   "end": 15.521
+  },
+  {
+   "word": "one",
+   "clip": "7111",
+   "idx": 2,
+   "score": 1.0,
+   "src_start": 0.941,
+   "src_end": 1.021,
+   "start": 15.641,
+   "end": 15.721
+  },
+  {
+   "word": "of",
+   "clip": "7111",
+   "idx": 3,
+   "score": 1.0,
+   "src_start": 1.061,
+   "src_end": 1.102,
+   "start": 15.761,
+   "end": 15.802
+  },
+  {
+   "word": "the",
+   "clip": "7111",
+   "idx": 4,
+   "score": 1.0,
+   "src_start": 1.162,
+   "src_end": 1.242,
+   "start": 15.862,
+   "end": 15.942
+  },
+  {
+   "word": "most",
+   "clip": "7111",
+   "idx": 5,
+   "score": 1.0,
+   "src_start": 1.282,
+   "src_end": 1.482,
+   "start": 15.982,
+   "end": 16.182
+  },
+  {
+   "word": "recognizable",
+   "clip": "7111",
+   "idx": 6,
+   "score": 0.988,
+   "src_start": 1.622,
+   "src_end": 2.423,
+   "start": 16.322,
+   "end": 17.123
+  },
+  {
+   "word": "landmarks",
+   "clip": "7111",
+   "idx": 7,
+   "score": 1.0,
+   "src_start": 2.483,
+   "src_end": 3.084,
+   "start": 17.183,
+   "end": 17.784
+  },
+  {
+   "word": "in",
+   "clip": "7111",
+   "idx": 8,
+   "score": 1.0,
+   "src_start": 3.305,
+   "src_end": 3.365,
+   "start": 18.005,
+   "end": 18.065
+  },
+  {
+   "word": "the",
+   "clip": "7111",
+   "idx": 9,
+   "score": 1.0,
+   "src_start": 3.445,
+   "src_end": 3.525,
+   "start": 18.145,
+   "end": 18.225
+  },
+  {
+   "word": "world",
+   "clip": "7111",
+   "idx": 10,
+   "score": 1.0,
+   "src_start": 3.565,
+   "src_end": 3.885,
+   "start": 18.265,
+   "end": 18.585
+  },
+  {
+   "word": "and",
+   "clip": "7112",
+   "idx": 0,
+   "score": 1.0,
+   "src_start": 0.321,
+   "src_end": 0.401,
+   "start": 18.7877,
+   "end": 18.8677
+  },
+  {
+   "word": "so",
+   "clip": "7112",
+   "idx": 1,
+   "score": 1.0,
+   "src_start": 0.482,
+   "src_end": 0.602,
+   "start": 18.9487,
+   "end": 19.0687
+  },
+  {
+   "word": "sometimes",
+   "clip": "7112",
+   "idx": 2,
+   "score": 0.985,
+   "src_start": 1.204,
+   "src_end": 1.645,
+   "start": 19.2373,
+   "end": 19.6783
+  },
+  {
+   "word": "seeing",
+   "clip": "7112",
+   "idx": 3,
+   "score": 1.0,
+   "src_start": 1.685,
+   "src_end": 2.006,
+   "start": 19.7183,
+   "end": 20.0393
+  },
+  {
+   "word": "changes",
+   "clip": "7112",
+   "idx": 4,
+   "score": 0.999,
+   "src_start": 2.227,
+   "src_end": 2.608,
+   "start": 20.2603,
+   "end": 20.6413
+  },
+  {
+   "word": "the",
+   "clip": "7112",
+   "idx": 5,
+   "score": 0.922,
+   "src_start": 2.728,
+   "src_end": 2.809,
+   "start": 20.7613,
+   "end": 20.8423
+  },
+  {
+   "word": "perception",
+   "clip": "7112",
+   "idx": 6,
+   "score": 1.0,
+   "src_start": 2.889,
+   "src_end": 3.371,
+   "start": 20.9223,
+   "end": 21.4043
+  }
+ ],
+ "duration": 21.6667,
+ "gaps": [
+  0.169,
+  0.18,
+  0.197,
+  0.204,
+  0.178,
+  0.215,
+  0.197,
+  0.205,
+  0.203,
+  0.169
+ ]
+}

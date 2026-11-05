@@ -1,0 +1,350 @@
+{
+ "fps": 30,
+ "duration": 32.0667,
+ "song_start_s": 0.481,
+ "blocks": [
+  {
+   "v0": 0.0,
+   "v1": 10.4,
+   "start": 3.6,
+   "end": 14.0
+  },
+  {
+   "v0": 10.4,
+   "v1": 14.9333,
+   "start": 16.6,
+   "end": 21.1333
+  },
+  {
+   "v0": 14.9333,
+   "v1": 21.6667,
+   "start": 23.3333,
+   "end": 30.0667
+  }
+ ],
+ "speaker": [
+  {
+   "clip": "7105",
+   "src_start": 0.0,
+   "src_end": 1.3,
+   "start": 3.6,
+   "end": 4.9,
+   "view": "wide"
+  },
+  {
+   "clip": "7106",
+   "src_start": 0.2667,
+   "src_end": 3.4667,
+   "start": 4.9,
+   "end": 8.1,
+   "view": "medium"
+  },
+  {
+   "clip": "7107",
+   "src_start": 0.3,
+   "src_end": 1.0667,
+   "start": 8.1,
+   "end": 8.8667,
+   "view": "wide"
+  },
+  {
+   "clip": "7107",
+   "src_start": 1.3333,
+   "src_end": 2.4333,
+   "start": 8.8667,
+   "end": 9.9667,
+   "view": "medium"
+  },
+  {
+   "clip": "7108",
+   "src_start": 0.1333,
+   "src_end": 1.7,
+   "start": 9.9667,
+   "end": 11.5333,
+   "view": "wide"
+  },
+  {
+   "clip": "7109",
+   "src_start": 0.1333,
+   "src_end": 2.6,
+   "start": 11.5333,
+   "end": 14.0,
+   "view": "medium"
+  },
+  {
+   "clip": "7110",
+   "src_start": 0.1,
+   "src_end": 3.0,
+   "start": 16.6,
+   "end": 19.5,
+   "view": "wide"
+  },
+  {
+   "clip": "7110",
+   "src_start": 3.8667,
+   "src_end": 5.5,
+   "start": 19.5,
+   "end": 21.1333,
+   "view": "medium"
+  },
+  {
+   "clip": "7111",
+   "src_start": 0.2333,
+   "src_end": 4.0,
+   "start": 23.3333,
+   "end": 27.1,
+   "view": "wide"
+  },
+  {
+   "clip": "7112",
+   "src_start": 0.2333,
+   "src_end": 0.7,
+   "start": 27.1,
+   "end": 27.5667,
+   "view": "medium"
+  },
+  {
+   "clip": "7112",
+   "src_start": 1.1333,
+   "src_end": 3.6333,
+   "start": 27.5667,
+   "end": 30.0667,
+   "view": "wide"
+  }
+ ],
+ "shots": [
+  {
+   "start": 0.0,
+   "end": 4.9,
+   "slot": "tower_1889",
+   "part": "I0+voice"
+  },
+  {
+   "start": 8.1,
+   "end": 9.9667,
+   "slot": "design",
+   "part": "voice"
+  },
+  {
+   "start": 11.5333,
+   "end": 13.05,
+   "slot": "eiffel",
+   "part": "voice"
+  },
+  {
+   "start": 14.0,
+   "end": 15.3,
+   "slot": "build_a",
+   "part": "I1"
+  },
+  {
+   "start": 15.3,
+   "end": 16.6,
+   "slot": "build_b",
+   "part": "I1"
+  },
+  {
+   "start": 21.1333,
+   "end": 23.3333,
+   "slot": "exposition",
+   "part": "I2"
+  },
+  {
+   "start": 25.5,
+   "end": 27.1,
+   "slot": "film",
+   "part": "voice"
+  }
+ ],
+ "captions": [
+  {
+   "text": "The Eiffel Tower",
+   "word": "the",
+   "word_t": 3.62,
+   "frame": 108,
+   "end_frame": 149,
+   "fade_out": false
+  },
+  {
+   "text": "In 1887",
+   "word": "in",
+   "word_t": 4.9743,
+   "frame": 149,
+   "end_frame": 193,
+   "fade_out": false
+  },
+  {
+   "text": "Paris rejected an idea",
+   "word": "paris",
+   "word_t": 6.4383,
+   "frame": 193,
+   "end_frame": 245,
+   "fade_out": false
+  },
+  {
+   "text": "A giant iron tower",
+   "word": "a",
+   "word_t": 8.183,
+   "frame": 245,
+   "end_frame": 301,
+   "fade_out": false
+  },
+  {
+   "text": "Critics called it",
+   "word": "critics",
+   "word_t": 10.0543,
+   "frame": 301,
+   "end_frame": 325,
+   "fade_out": false
+  },
+  {
+   "text": "an eyesore",
+   "word": "an",
+   "word_t": 10.8393,
+   "frame": 325,
+   "end_frame": 348,
+   "fade_out": false
+  },
+  {
+   "text": "But Gustave Eiffel",
+   "word": "but",
+   "word_t": 11.621,
+   "frame": 348,
+   "end_frame": 394,
+   "fade_out": false
+  },
+  {
+   "text": "built it anyway",
+   "word": "built",
+   "word_t": 13.164,
+   "frame": 394,
+   "end_frame": 426,
+   "fade_out": true
+  },
+  {
+   "text": "And when people saw it",
+   "word": "and",
+   "word_t": 16.701,
+   "frame": 501,
+   "end_frame": 536,
+   "fade_out": false
+  },
+  {
+   "text": "standing above Paris",
+   "word": "standing",
+   "word_t": 17.886,
+   "frame": 536,
+   "end_frame": 587,
+   "fade_out": false
+  },
+  {
+   "text": "perceptions started to change",
+   "word": "perceptions",
+   "word_t": 19.5893,
+   "frame": 587,
+   "end_frame": 640,
+   "fade_out": true
+  },
+  {
+   "text": "Today it's one of",
+   "word": "today",
+   "word_t": 23.42,
+   "frame": 702,
+   "end_frame": 727,
+   "fade_out": false
+  },
+  {
+   "text": "the most recognizable",
+   "word": "the",
+   "word_t": 24.262,
+   "frame": 727,
+   "end_frame": 767,
+   "fade_out": false
+  },
+  {
+   "text": "landmarks in the world",
+   "word": "landmarks",
+   "word_t": 25.583,
+   "frame": 767,
+   "end_frame": 815,
+   "fade_out": false
+  },
+  {
+   "text": "And so",
+   "word": "and",
+   "word_t": 27.1877,
+   "frame": 815,
+   "end_frame": 829,
+   "fade_out": false
+  },
+  {
+   "text": "sometimes seeing",
+   "word": "sometimes",
+   "word_t": 27.6373,
+   "frame": 829,
+   "end_frame": 859,
+   "fade_out": false
+  },
+  {
+   "text": "changes the perception",
+   "word": "changes",
+   "word_t": 28.6603,
+   "frame": 859,
+   "end_frame": 908,
+   "fade_out": true
+  }
+ ],
+ "labels": [],
+ "dissolve": {
+  "interlude": 0.6,
+  "under_voice": 0.4,
+  "within": 0.5
+ },
+ "music_ramps": [
+  {
+   "t0": 3.32,
+   "t1": 3.74,
+   "to": "voice"
+  },
+  {
+   "t0": 13.946,
+   "t1": 14.346,
+   "to": "up"
+  },
+  {
+   "t0": 16.401,
+   "t1": 16.821,
+   "to": "voice"
+  },
+  {
+   "t0": 21.0753,
+   "t1": 21.4753,
+   "to": "up"
+  },
+  {
+   "t0": 23.12,
+   "t1": 23.54,
+   "to": "voice"
+  },
+  {
+   "t0": 29.8643,
+   "t1": 30.2643,
+   "to": "up"
+  }
+ ],
+ "music": {
+  "down_lead_s": 0.3,
+  "down_len_s": 0.42,
+  "up_after_s": 0.06,
+  "up_len_s": 0.4,
+  "fade_out_s": 1.6
+ },
+ "end_card": {
+  "start": 30.0667,
+  "text": [
+   "Sometimes, seeing",
+   "changes everything"
+  ]
+ },
+ "logo": "/home/user/SocialMediaMarketingSkill/lab/edit-05/broll/wkc/logo.png"
+}

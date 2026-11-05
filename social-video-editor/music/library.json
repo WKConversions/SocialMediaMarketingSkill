@@ -74,6 +74,38 @@
         "fast hype edits",
         "paid ads or accounts where commercial music is not cleared"
       ]
+    },
+    "echoverse-les-yeux-ouverts": {
+      "title": "Les Yeux Ouverts",
+      "artist": "EchoVerse",
+      "file": "assets/music/echoverse-les-yeux-ouverts.mp3",
+      "rights": "Track supplied by the client; licence not stated. Not cleared for paid ads unless the client confirms the licence; when posting from a business account, prefer the platform's music library.",
+      "start_offset_s": 0.481,
+      "start_rule": "Client: start from the first real sound. The file is silent for 0.48 s; the first note (a D-minor chord, D-F-A) starts sharply at 0.4816 s (first sample above -60 dBFS), so trimming 0.481 s puts it on frame 0.",
+      "duration_s": 264.8,
+      "has_vocals": true,
+      "vocals": "French, sung-spoken storytelling from 1.74 s after the start ('Dans la grande salle d'un chateau...'); instrumental stretch about 10.0-19.5 s; drums fuller from ~20 s.",
+      "tempo_bpm": 92,
+      "beat_s": 0.65,
+      "mix": {
+        "scheme": "interludes",
+        "scheme_rule": "As the Sinatra track: automated, not side-chain ducked; up in the opening, interludes and end card; while he talks 12 dB under the voice with the gentle 1-3 kHz cut (it has vocals); ~0.4 s raised-cosine ramps in the pauses.",
+        "pre_gain_db": 0.0,
+        "under_voice_db": 12.0,
+        "up_vs_voice_lu": -1.5,
+        "fade_out_s": 1.6,
+        "master_to_final_lufs": true
+      },
+      "first_used_in": "Eiffel Tower 1887 -> WKC story edit (lab/edit-10), 2026-11-05.",
+      "suits": [
+        "classy, jazz/classical story edits",
+        "French or Paris stories",
+        "storytelling openings (the lyric opens like a tale)"
+      ],
+      "avoid": [
+        "a constant bed under dense talking (it has vocals)",
+        "paid ads unless the licence is confirmed"
+      ]
     }
   }
 }
