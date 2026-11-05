@@ -244,7 +244,9 @@ class Still:
         cw, ch = W * self.k / z, H * self.k / z
         cx = float(np.clip(ow / 2 + (self.focus[0] - 0.5) * ow * (z - 1) / z * 2, cw / 2, ow - cw / 2))
         cy = float(np.clip(oh / 2 + (self.focus[1] - 0.5) * oh * (z - 1) / z * 2, ch / 2, oh - ch / 2))
-        out = self.comp.resize((W, H), Image.BICUBIC, box=(cx - cw / 2, cy - ch / 2, cx + cw / 2, cy + ch / 2))
+        x0, y0 = max(0.0, cx - cw / 2), max(0.0, cy - ch / 2)                 # a window as big as the print (no push
+        x1, y1 = min(float(ow), x0 + cw), min(float(oh), y0 + ch)              # yet) must not round to -1e-13
+        out = self.comp.resize((W, H), Image.BICUBIC, box=(x0, y0, x1, y1))
         return print_colour(np.asarray(out).astype(np.float32) / 255)
 
 
