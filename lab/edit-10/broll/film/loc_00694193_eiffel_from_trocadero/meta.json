@@ -1,0 +1,68 @@
+{
+ "title": "Eiffel Tower from Trocadero Palace",
+ "date": "1900",
+ "created_published": [
+  "United States : Edison Manufacturing Co., 1900."
+ ],
+ "contributor_names": [
+  "White, James H. (James Henry), production",
+  "Thomas A. Edison, Inc",
+  "Paper Print Collection (Library of Congress)"
+ ],
+ "summary": [
+  "\"The single camera position is from the top of a building identified as the Trocadero Palace; the camera is pointed toward the Eiffel Tower. The film shows only up to the first arch of the Eiffel Tower\"--Early motion pictures."
+ ],
+ "notes": [
+  "D16387 U.S. Copyright Office",
+  "Copyright: Thomas A. Edison; 9Aug1900; D16387.",
+  "Duration: 1:11 at 16 fps.",
+  "Paper print shelf number (LC 0238) was changed when the paper prints were re-housed.",
+  "Additional holdings for this title may be available. Contact reference librarian.",
+  "Sources used: Copyright catalog, motion pictures, 1894-1912; Musser, C. Edison motion pictures 1890-1900, p. 608; Niver, K. Early motion pictures, p. 87.",
+  "Filmed July 1900, at the Paris Exposition in Paris, France.",
+  "Early motion pictures : the Paper Print Collection in the Library of Congress / by Kemp R. Niver. Library of Congress. 1985.",
+  "Viewing print (FEB 9448) missing as of 2018-10-26."
+ ],
+ "other_title": null,
+ "subject_headings": [
+  "Exposition universelle--(1900 :--Paris, France)",
+  "Tour Eiffel (Paris, France)",
+  "Towers--France--Paris"
+ ],
+ "medium": [
+  "viewing print 1 film reel of 1 (37 ft.) : si., b&w ; 16 mm.",
+  "dupe neg pic 1 film reel of 1 (37 ft.) : si., b&w ; 16 mm.",
+  "paper pos 1 roll of 1 (ca. 75 ft.) : b&w ; 35 mm.",
+  "paper pos (copy 2) 1 roll of 1 (ca. 75 ft.) : b&w ; 35 mm."
+ ],
+ "genre": [
+  "Actualities (Motion pictures)",
+  "Silent films",
+  "Short films",
+  "Nonfiction films"
+ ],
+ "call_number": [
+  "FLA 3252 (viewing print)",
+  "FRA 0574 (dupe neg pic)",
+  "Box 0848C (paper pos)",
+  "Box 5537D (paper pos, copy 2)"
+ ],
+ "repository": [
+  "Library of Congress Motion Picture, Broadcasting and Recorded Sound Division Washington, D. C. 20540 USA dcu"
+ ],
+ "source_collection": null,
+ "rights": [
+  "The Library of Congress is not aware of any U.S. copyright or other restrictions in the vast majority of motion pictures in these collections. Absent any such restrictions, these materials are free to use and reuse. In rare cases, copyrighted motion pictures are made available by special permission to the Library and may be used only for educational purposes. For example, the Gershwin home movies fall within this category. Rights assessment is your responsibility. No registration information exists for some titles, and reproduction of some titles may be restricted by privacy rights, publicity rights, licensing and trademarks. Additionally, some works may still be protected by copyright in the United States or some foreign countries. The written permission of the copyright owners in materials not in the public domain is required for distribution, reproduction, or other use of protected items beyond that allowed by fair use or other statutory exemptions. Whenever possible, we provide information that we have about copyright owners and related matters in the catalog records, finding aids and other texts that accompany collections. You should consult the catalog information that accompanies each item for specific information. This catalog data provides the details known to the Library of Congress regarding the corresponding item and may assist you in making independent assessments of the legal status of these items for their desired uses. You should also consult restrictions associated with donations to the Library. Credit Line: Library of Congress, Motion Picture, Broadcasting, and Recorded Sound Division. More about Copyright and other Restrictions . For guidance about compiling full citations consult Citing Primary Sources ."
+ ],
+ "source_url": "https://www.loc.gov/item/00694193/",
+ "handle": "https://hdl.loc.gov/loc.mbrsmi/ntscrm.01627574",
+ "file_url": "https://tile.loc.gov/storage-services/service/mbrs/ntscrm/01627574/01627574.mp4",
+ "local_files": {
+  "source.mp4": "LoC mp4 as downloaded, unaltered (includes ~13 s 'Preserved by Library of Congress' slate + title card at the head, silent AAC track)",
+  "footage.mp4": "bare film only: source.mp4 trimmed 12.958-62.542 s, video only, re-encoded H.264 High CRF14 1440x1080 24 fps (no LoC slate/title, no fades)"
+ },
+ "trim_in_source_s": [
+  12.958,
+  62.542
+ ]
+}
