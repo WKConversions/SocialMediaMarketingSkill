@@ -20,14 +20,16 @@ SONG_START_S = 0.481                    # music/library.json "echoverse-les-yeux
 
 # (voice start, voice end, video start frame): block boundaries sit in the pacing pauses between sentences
 BLOCKS = [(0.0, 10.4, 108),             # "The Eiffel Tower. In 1887 ... But Gustave Eiffel built it anyway." (after "...chateau,")
-          (10.4, 14.9333, 498),         # "And when people saw it standing above Paris, perceptions started to change."
-          (14.9333, 21.6667, 700)]      # "Today it's one of the most recognizable landmarks ... changes the perception."
+          (10.4, 14.9333, 516),         # "And when people saw it standing above Paris, perceptions started to change."
+          (14.9333, 21.6667, 718)]      # "Today it's one of the most recognizable landmarks ... changes the perception."
 END_CARD_S = 2.0
 
 # interludes (music up, visuals): start/end are filled from the blocks; slot sequence with relative weights
 INTERLUDES = [
     dict(name="I0", slots=[("tower_1889", 1.0)]),                     # the finished tower, on the opening chord and first line
-    dict(name="I1", slots=[("build_a", 1.0), ("build_b", 1.0)]),      # "...built it anyway": the tower rising (dated stages)
+    dict(name="I1", slots=[("build_1887", 1.0), ("build_1888a", 1.0), ("build_1888b", 1.0), ("build_1889", 1.0)]),
+                                                                      # "...built it anyway": Feau's prints, one viewpoint,
+                                                                      # registered: the tower rises in place (Dec 1887-Mar 1889)
     dict(name="I2", slots=[("exposition", 1.0)]),                     # "perceptions started to change": the 1889 Exposition
 ]
 # visuals under his voice (voice time)
@@ -121,7 +123,15 @@ def main():
     for sh in shots:
         if sh.get("label") and sh["part"].startswith("I"):
             f0 = int(round(sh["start"] * FPS)) + (8 if sh["start"] > 0 else 3)
-            labels.append(dict(text=sh["label"], frame=f0, end_frame=int(round(sh["end"] * FPS)) - 4, fade_out=True, label=True))
+            end = sh["end"]
+            if sh.get("label_spans_part"):                                    # one label over a whole montage
+                end = max(x["end"] for x in shots if x["part"] == sh["part"])
+            labels.append(dict(text=sh["label"], frame=f0, end_frame=int(round(end * FPS)) - 4, fade_out=True, label=True))
+    # a move shared by a montage: its span is the montage's time range
+    for sh in shots:
+        if sh.get("push_span") == "part":
+            sh["push_span"] = [min(x["start"] for x in shots if x["part"] == sh["part"]),
+                               max(x["end"] for x in shots if x["part"] == sh["part"])]
 
     # music automation: up in the interludes and end card, down under his voice, smooth ramps
     first_w = [v2t(next(w for w in words if w["start"] >= b["v0"] - 1e-6)["start"]) for b in blocks]

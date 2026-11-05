@@ -1,0 +1,173 @@
+{
+ "tower_1889": {
+  "file": "/home/user/SocialMediaMarketingSkill/lab/edit-10/broll/film/loc_00694266_panorama_eiffel_tower/footage.mp4",
+  "kind": "video",
+  "src": 42.4,
+  "mode": "fill",
+  "center": [
+   0.63,
+   0.5
+  ],
+  "label": "Paris, 1900",
+  "record": "Edison, 'Panorama of Eiffel Tower', Paris Exposition, July 1900 (LoC 00694266); upper shaft to the summit, footage 42.4-47.5 s (frame slip at 47.68 avoided)",
+  "licence": "Library of Congress, Paper Print Collection (Edison, 1900): no known restrictions / public domain"
+ },
+ "design": {
+  "file": "/home/user/SocialMediaMarketingSkill/lab/edit-10/broll/photos/pm_geniecivil_tour300m_elevation/source.jpg",
+  "kind": "image",
+  "mode": "fill",
+  "zoom": 0.82,
+  "center": [
+   0.5,
+   0.53
+  ],
+  "focus": [
+   0.5,
+   0.5
+  ],
+  "push": 0.05,
+  "gain": 0.8,
+  "record": "'Tour de 300 mètres', project elevation drawn to scale beside Notre-Dame and the Arc de Triomphe, plate from Le Génie civil, undated (pre-construction)",
+  "licence": "Paris Musées / Musée Carnavalet, CC0 (open content, commercial use allowed)"
+ },
+ "eiffel": {
+  "file": "/home/user/SocialMediaMarketingSkill/lab/edit-10/broll/photos/pm_liebert_eiffel_portrait/source.jpg",
+  "kind": "image",
+  "mode": "fill",
+  "crop": [
+   0.04,
+   0.03,
+   0.96,
+   0.87
+  ],
+  "zoom": 0.9,
+  "center": [
+   0.55,
+   0.45
+  ],
+  "focus": [
+   0.55,
+   0.35
+  ],
+  "push": 0.05,
+  "record": "Gustave Eiffel, carte-de-visite by Alphonse Liébert, between 1883 and 1890",
+  "licence": "Paris Musées / Musée Carnavalet, CC0 (open content, commercial use allowed)"
+ },
+ "build_1887": {
+  "file": "/home/user/SocialMediaMarketingSkill/lab/edit-10/broll/prepared/feau_1887-12-12_four_legs.png",
+  "kind": "image",
+  "mode": "fit",
+  "zoom": 1.0,
+  "center": [
+   0.5,
+   0.5
+  ],
+  "y": 0.437,
+  "focus": [
+   0.5,
+   0.65
+  ],
+  "push": 0.025,
+  "push_span": "part",
+  "record": "Théophile Féau, construction of the Eiffel Tower seen from the Trocadéro, 12 December 1887 (Musée Carnavalet album PH9114); cut from its mount and registered (tools/prep_feau.py)",
+  "licence": "Paris Musées / Musée Carnavalet, CC0 (open content, commercial use allowed)",
+  "label": "Paris, 1887–1889",
+  "label_spans_part": true
+ },
+ "build_1888a": {
+  "file": "/home/user/SocialMediaMarketingSkill/lab/edit-10/broll/prepared/feau_1888-03-15_first_platform.png",
+  "kind": "image",
+  "mode": "fit",
+  "zoom": 1.0,
+  "center": [
+   0.5,
+   0.5
+  ],
+  "y": 0.437,
+  "focus": [
+   0.5,
+   0.65
+  ],
+  "push": 0.025,
+  "push_span": "part",
+  "record": "Théophile Féau, construction of the Eiffel Tower seen from the Trocadéro, 15 March 1888 (Musée Carnavalet album PH9114); cut from its mount and registered (tools/prep_feau.py)",
+  "licence": "Paris Musées / Musée Carnavalet, CC0 (open content, commercial use allowed)"
+ },
+ "build_1888b": {
+  "file": "/home/user/SocialMediaMarketingSkill/lab/edit-10/broll/prepared/feau_1888-11-14_above_second_platform.png",
+  "kind": "image",
+  "mode": "fit",
+  "zoom": 1.0,
+  "center": [
+   0.5,
+   0.5
+  ],
+  "y": 0.437,
+  "focus": [
+   0.5,
+   0.65
+  ],
+  "push": 0.025,
+  "push_span": "part",
+  "record": "Théophile Féau, construction of the Eiffel Tower seen from the Trocadéro, 14 November 1888 (Musée Carnavalet album PH9114); cut from its mount and registered (tools/prep_feau.py)",
+  "licence": "Paris Musées / Musée Carnavalet, CC0 (open content, commercial use allowed)"
+ },
+ "build_1889": {
+  "file": "/home/user/SocialMediaMarketingSkill/lab/edit-10/broll/prepared/feau_1889-03-12_top_section.png",
+  "kind": "image",
+  "mode": "fit",
+  "zoom": 1.0,
+  "center": [
+   0.5,
+   0.5
+  ],
+  "y": 0.437,
+  "focus": [
+   0.5,
+   0.65
+  ],
+  "push": 0.025,
+  "push_span": "part",
+  "record": "Théophile Féau, construction of the Eiffel Tower seen from the Trocadéro, 12 March 1889 (Musée Carnavalet album PH9114); cut from its mount and registered (tools/prep_feau.py)",
+  "licence": "Paris Musées / Musée Carnavalet, CC0 (open content, commercial use allowed)"
+ },
+ "exposition": {
+  "file": "/home/user/SocialMediaMarketingSkill/lab/edit-10/broll/photos/loc_expo1889_crowds_under_tower/source.jpg",
+  "kind": "image",
+  "mode": "fit",
+  "zoom": 1.45,
+  "center": [
+   0.5,
+   0.5
+  ],
+  "y": 0.43,
+  "focus": [
+   0.5,
+   0.45
+  ],
+  "push": 0.05,
+  "label": "Exposition Universelle, 1889",
+  "record": "Under the Eiffel Tower, Exposition Universelle, Paris, 1889 (LoC, Tissandier Collection, LC-USZ62-24999)",
+  "licence": "Library of Congress: no known restrictions on publication"
+ },
+ "film": {
+  "file": "/home/user/SocialMediaMarketingSkill/lab/edit-10/broll/film/loc_00694172_champ_de_mars/footage.mp4",
+  "kind": "video",
+  "src": 48.4,
+  "crop": [
+   0.0,
+   0.016,
+   1.0,
+   0.984
+  ],
+  "mode": "fit",
+  "zoom": 1.35,
+  "center": [
+   0.5,
+   0.5
+  ],
+  "y": 0.43,
+  "record": "Edison, Champ de Mars, Paris Exposition, July 1900 (LoC 00694172): through the tower's arch, visitors walking toward the camera, footage 48.0-53.5 s",
+  "licence": "Library of Congress, Paper Print Collection (Edison, 1900): no known restrictions / public domain"
+ }
+}

@@ -1,0 +1,42 @@
+{
+ "width": 1680,
+ "height": 3954,
+ "prints": {
+  "feau_1887-12-12_four_legs": {
+   "mount_box": [
+    86,
+    83,
+    1800,
+    4186
+   ],
+   "moved_up_px": 0
+  },
+  "feau_1888-03-15_first_platform": {
+   "mount_box": [
+    102,
+    61,
+    1838,
+    4193
+   ],
+   "moved_up_px": 0
+  },
+  "feau_1888-11-14_above_second_platform": {
+   "mount_box": [
+    104,
+    74,
+    1819,
+    4168
+   ],
+   "moved_up_px": 61
+  },
+  "feau_1889-03-12_top_section": {
+   "mount_box": [
+    92,
+    76,
+    1828,
+    4187
+   ],
+   "moved_up_px": 77
+  }
+ }
+}

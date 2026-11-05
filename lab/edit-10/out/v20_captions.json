@@ -1,0 +1,102 @@
+[
+ {
+  "text": "Paris, 1900",
+  "frame": 3,
+  "label": true
+ },
+ {
+  "text": "The Eiffel Tower",
+  "frame": 108,
+  "label": false
+ },
+ {
+  "text": "In 1887",
+  "frame": 149,
+  "label": false
+ },
+ {
+  "text": "Paris rejected an idea",
+  "frame": 193,
+  "label": false
+ },
+ {
+  "text": "A giant iron tower",
+  "frame": 245,
+  "label": false
+ },
+ {
+  "text": "Critics called it",
+  "frame": 301,
+  "label": false
+ },
+ {
+  "text": "an eyesore",
+  "frame": 325,
+  "label": false
+ },
+ {
+  "text": "But Gustave Eiffel",
+  "frame": 348,
+  "label": false
+ },
+ {
+  "text": "built it anyway",
+  "frame": 394,
+  "label": false
+ },
+ {
+  "text": "Paris, 1887\u20131889",
+  "frame": 428,
+  "label": true
+ },
+ {
+  "text": "And when people saw it",
+  "frame": 519,
+  "label": false
+ },
+ {
+  "text": "standing above Paris",
+  "frame": 554,
+  "label": false
+ },
+ {
+  "text": "perceptions started to change",
+  "frame": 605,
+  "label": false
+ },
+ {
+  "text": "Exposition Universelle, 1889",
+  "frame": 660,
+  "label": true
+ },
+ {
+  "text": "Today it's one of",
+  "frame": 720,
+  "label": false
+ },
+ {
+  "text": "the most recognizable",
+  "frame": 745,
+  "label": false
+ },
+ {
+  "text": "landmarks in the world",
+  "frame": 785,
+  "label": false
+ },
+ {
+  "text": "And so",
+  "frame": 833,
+  "label": false
+ },
+ {
+  "text": "sometimes seeing",
+  "frame": 847,
+  "label": false
+ },
+ {
+  "text": "changes the perception",
+  "frame": 877,
+  "label": false
+ }
+]

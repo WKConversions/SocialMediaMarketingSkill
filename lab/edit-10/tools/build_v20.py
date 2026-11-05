@@ -234,7 +234,11 @@ class Still:
         self.push = sh.get("push", 0.06)
 
     def frame(self, t):
-        p = np.clip((t + 0.3) / (self.dur + 0.6), 0, 1)                         # the move runs through the dissolves
+        if self.sh.get("push_span"):                                            # one move across several shots (a montage
+            a, b = self.sh["push_span"]                                         # of registered prints stays registered)
+            p = np.clip((self.sh["start"] + t - a) / (b - a), 0, 1)
+        else:
+            p = np.clip((t + 0.3) / (self.dur + 0.6), 0, 1)                     # the move runs through the dissolves
         z = 1 + self.push * p
         ow, oh = self.comp.size
         cw, ch = W * self.k / z, H * self.k / z
@@ -272,8 +276,10 @@ class Film:
             c = self.sh["crop"]
             lum = lum[int(c[1] * self.h): int(c[3] * self.h), int(c[0] * self.w): int(c[2] * self.w)]
         # damaged frames on the old print (big black blotches) would flash: hold the last clean frame instead
-        if (lum < 0.06).mean() > 0.12 and getattr(self, "good", None) is not None:
-            lum = self.good
+        # (and single white flash frames: a sudden jump in very bright pixels)
+        good = getattr(self, "good", None)
+        if good is not None and ((lum < 0.06).mean() > 0.12 or (lum > 0.93).mean() - (good > 0.93).mean() > 0.03):
+            lum = good
         else:
             self.good = lum
         if self.levels is None:                                                  # fixed levels (no pumping)

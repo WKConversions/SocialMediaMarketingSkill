@@ -1,0 +1,259 @@
+{
+ "items": [
+  {
+   "id": "feau_1887-12-12_four_legs",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-10/broll/photos/feau_1887-12-12_four_legs/source.jpg",
+   "kind": "image",
+   "title": "Construction de la tour Eiffel pour l'Exposition universelle de 1889. Vue du Champs-de-Mars photographie depuis l'une des tours du palais du Trocadero, 7eme arrondissement, Paris. 12 decembre 1887. (Theophile Feau)",
+   "date": "12 December 1887 (record 'Date de production: 12-12-1887'; '12 decembre 1887' handwritten on the mount, visible in the scan)",
+   "use_for": "construction_1887",
+   "depicts": "Tall narrow albumen print on blue album mount. Hazy sky fills the upper 70%; at the bottom the four separate iron legs rising at an angle, each braced by timber scaffolding, with central scaffold towers between them; Champ-de-Mars and Ecole Militaire faint in the haze. Mount caption '12 Decembre 1887' and blue 'Ville de Paris' stamp at the bottom.",
+   "evidence": "Record (Paris Musees, Musee Carnavalet): albumen print, 24.6 x 10.4 cm, 'Photographie appartenant a un album de 20 images montrant l'evolution de la construction de la tour Eiffel' taken from one of the towers of the Trocadero palace (same viewpoint for the whole series, Ecole Militaire in the background). Photographer Theophile Feau (1839-1895). Inv. PH9114-5. Description iconographique quoted: 'Les quatres pieds de la tour Eiffel en debut de construction. L'Ecole Militaire au fond.' Handwritten date on mount checked against record: matches.",
+   "source_url": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/construction-de-la-tour-eiffel-pour-l-exposition-universelle-de-1889-vue-0",
+   "licence": "CC0 1.0 - Paris Musees Open Content (record page shows 'CC0'; free reuse incl. commercial; credit suggested: Paris Musees / Musee Carnavalet - Histoire de Paris)",
+   "width": 1891,
+   "height": 4595,
+   "colour": false,
+   "subject_box": [
+    0.1,
+    0.72,
+    0.85,
+    0.9
+   ]
+  },
+  {
+   "id": "feau_1888-03-15_first_platform",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-10/broll/photos/feau_1888-03-15_first_platform/source.jpg",
+   "kind": "image",
+   "title": "Construction de la tour Eiffel pour l'Exposition universelle de 1889. Vue du Champs-de-Mars photographie depuis l'une des tours du palais du Trocadero, 7eme arrondissement, Paris. 15 mars 1888. (Theophile Feau)",
+   "date": "15 March 1888 (record 'Date de production: 15-3-1888'; '15 Mars 1888' handwritten on the mount)",
+   "use_for": "construction_1888",
+   "depicts": "Same viewpoint as the December 1887 print: the four legs now joined by the girders of the first platform, still surrounded by scaffolding and cranes; large empty sky above; Champ-de-Mars works and buildings below. Mount caption '15 Mars 1888'.",
+   "evidence": "Record (Paris Musees, Musee Carnavalet): albumen print, 24.6 x 10.4 cm, 'Photographie appartenant a un album de 20 images montrant l'evolution de la construction de la tour Eiffel' taken from one of the towers of the Trocadero palace (same viewpoint for the whole series, Ecole Militaire in the background). Photographer Theophile Feau (1839-1895). Inv. PH9114-6. Description iconographique quoted: 'Les quatres pieds de la tour Eiffel en debut de construction et le debut du premier etage.' Handwritten date matches record.",
+   "source_url": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/construction-de-la-tour-eiffel-pour-l-exposition-universelle-de-1889-vue-1",
+   "licence": "CC0 1.0 - Paris Musees Open Content (record page shows 'CC0'; free reuse incl. commercial; credit suggested: Paris Musees / Musee Carnavalet - Histoire de Paris)",
+   "width": 1908,
+   "height": 4595,
+   "colour": false,
+   "subject_box": [
+    0.05,
+    0.7,
+    0.95,
+    0.9
+   ]
+  },
+  {
+   "id": "feau_1888-11-14_above_second_platform",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-10/broll/photos/feau_1888-11-14_above_second_platform/source.jpg",
+   "kind": "image",
+   "title": "Construction de la tour Eiffel pour l'Exposition universelle de 1889. Vue du Champs-de-Mars photographie depuis l'une des tours du palais du Trocadero, 7eme arrondissement, Paris. 14 novembre 1888. (Theophile Feau)",
+   "date": "14 November 1888 (record 'Date de production: 14-11-1888'; '14 Novembre 1888' handwritten on the mount)",
+   "use_for": "construction_1888",
+   "depicts": "Same viewpoint: first and second platforms complete, the upper shaft rising above the second platform with creeper cranes at its top; Exposition palaces under construction around the base, Ecole Militaire behind. Mount caption '14 Novembre 1888'.",
+   "evidence": "Record (Paris Musees, Musee Carnavalet): albumen print, 24.6 x 10.4 cm, 'Photographie appartenant a un album de 20 images montrant l'evolution de la construction de la tour Eiffel' taken from one of the towers of the Trocadero palace (same viewpoint for the whole series, Ecole Militaire in the background). Photographer Theophile Feau (1839-1895). Inv. PH9114-14. Description iconographique quoted: 'La tour Eiffel est construite au trois-quarts. L'Ecole militaire au fond.' Handwritten date matches record.",
+   "source_url": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/construction-de-la-tour-eiffel-pour-l-exposition-universelle-de-1889-vue-8",
+   "licence": "CC0 1.0 - Paris Musees Open Content (record page shows 'CC0'; free reuse incl. commercial; credit suggested: Paris Musees / Musee Carnavalet - Histoire de Paris)",
+   "width": 1901,
+   "height": 4559,
+   "colour": false,
+   "subject_box": [
+    0.08,
+    0.43,
+    0.93,
+    0.9
+   ]
+  },
+  {
+   "id": "feau_1889-03-12_top_section",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-10/broll/photos/feau_1889-03-12_top_section/source.jpg",
+   "kind": "image",
+   "title": "Construction de la tour Eiffel pour l'Exposition universelle de 1889. Vue du Champs-de-Mars photographie depuis l'une des tours du palais du Trocadero, 7eme arrondissement, Paris. 12 mars 1889. (Theophile Feau)",
+   "date": "12 March 1889 (record 'Date de production: 12-3-1889'; '12 Mars 1889' handwritten on the mount)",
+   "use_for": "construction_1889",
+   "depicts": "Same viewpoint: the tower almost at full height, the top section and campanile structure being finished; Exposition buildings filling the Champ-de-Mars below. Mount caption '12 Mars 1889'.",
+   "evidence": "Record (Paris Musees, Musee Carnavalet): albumen print, 24.6 x 10.4 cm, 'Photographie appartenant a un album de 20 images montrant l'evolution de la construction de la tour Eiffel' taken from one of the towers of the Trocadero palace (same viewpoint for the whole series, Ecole Militaire in the background). Photographer Theophile Feau (1839-1895). Inv. PH9114-18 (image file named carph009115-18). Description iconographique quoted: 'La tour Eiffel est en voie d'achevement, le dernier etage est en construction.' Handwritten date matches record.",
+   "source_url": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/construction-de-la-tour-eiffel-pour-l-exposition-universelle-de-1889-vue-12",
+   "licence": "CC0 1.0 - Paris Musees Open Content (record page shows 'CC0'; free reuse incl. commercial; credit suggested: Paris Musees / Musee Carnavalet - Histoire de Paris)",
+   "width": 1912,
+   "height": 4573,
+   "colour": false,
+   "subject_box": [
+    0.05,
+    0.21,
+    0.95,
+    0.91
+   ]
+  },
+  {
+   "id": "feau_1889-03-31_completed",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-10/broll/photos/feau_1889-03-31_completed/source.jpg",
+   "kind": "image",
+   "title": "Construction de la tour Eiffel pour l'Exposition universelle de 1889. Vue du Champs-de-Mars photographie depuis l'une des tours du palais du Trocadero, 7eme arrondissement, Paris. 31 mars 1889. (Theophile Feau)",
+   "date": "31 March 1889, the completion day (record 'Date de production: 31-3-1889'; '31 Mars 1889' handwritten on the mount)",
+   "use_for": "tower_complete",
+   "depicts": "Last print of the album: the finished tower seen whole and smaller in the frame (wider framing than the earlier prints), standing over the Exposition palaces and domes in a pale haze. Mount caption '31 Mars 1889'. Lower resolution than the others (2220x2993 including mount).",
+   "evidence": "Record (Paris Musees, Musee Carnavalet): albumen print, 24.6 x 10.4 cm, 'Photographie appartenant a un album de 20 images montrant l'evolution de la construction de la tour Eiffel' taken from one of the towers of the Trocadero palace (same viewpoint for the whole series, Ecole Militaire in the background). Photographer Theophile Feau (1839-1895). Inv. PH9114-19. Description iconographique quoted: 'La tour Eiffel est achevee, les batiments de l'Exposition universelle l'entourent.' Handwritten date matches record.",
+   "source_url": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/construction-de-la-tour-eiffel-pour-l-exposition-universelle-de-1889-vue-13",
+   "licence": "CC0 1.0 - Paris Musees Open Content (record page shows 'CC0'; free reuse incl. commercial; credit suggested: Paris Musees / Musee Carnavalet - Histoire de Paris)",
+   "width": 2220,
+   "height": 2993,
+   "colour": false,
+   "subject_box": [
+    0.3,
+    0.2,
+    0.75,
+    0.88
+   ]
+  },
+  {
+   "id": "pm_liebert_eiffel_portrait",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-10/broll/photos/pm_liebert_eiffel_portrait/source.jpg",
+   "kind": "image",
+   "title": "Portrait d'Alexandre-Gustave Eiffel (1832-1923), ingenieur, constructeur de la Tour Eiffel (Alphonse Liebert)",
+   "date": "Between 1883 and 1890 (record 'Date de production: Entre 1883 et 1890')",
+   "use_for": "eiffel_portrait",
+   "depicts": "Carte-de-visite albumen portrait: Gustave Eiffel, bust length, three-quarter view facing right, grey hair and full beard, dark coat with white collar and a pin; printed studio line 'L'Electro-Photographie Liebert' on the card mount below.",
+   "evidence": "Paris Musees / Musee Carnavalet, inv. PH50082, photographer Alphonse Liebert; 'Portrait carte de visite. Tirage sur papier albumine contrecollee sur carton', 9.3 x 5.9 cm; inscription 'L'Electro-Photographie Liebert'. Recto scan used (the record's second image is the verso).",
+   "source_url": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/portrait-d-alexandre-gustave-eiffel-1832-1923-ingenieur-constructeur-de-la",
+   "licence": "CC0 1.0 - Paris Musees Open Content (record page shows 'CC0'; free reuse incl. commercial; credit suggested: Paris Musees / Musee Carnavalet - Histoire de Paris)",
+   "width": 3528,
+   "height": 5675,
+   "colour": false,
+   "subject_box": [
+    0.15,
+    0.12,
+    0.95,
+    0.92
+   ]
+  },
+  {
+   "id": "loc_expo1889_crowds_under_tower",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-10/broll/photos/loc_expo1889_crowds_under_tower/source.jpg",
+   "kind": "image",
+   "title": "Paris Exposition, view from ground level of the Eiffel tower with Parisians promenading",
+   "date": "1889, during the Exposition (LoC record: '[between 1887 and 1889]', unverified caption-card data; the content shows the finished tower and the Exposition in operation)",
+   "use_for": "exposition_1889",
+   "depicts": "Wide albumen view from beneath the tower: the great lattice arch frames the Central Dome of the Exposition and Coutan's fountain; crowds of visitors, women with parasols and men in top hats and boaters stroll across the sunlit esplanade in the foreground.",
+   "evidence": "Library of Congress P&P, Tissandier collection, 1 photographic print, albumen; repro LC-USZ62-24999; rights advisory on the item: 'No known restrictions on reproduction.' High-res master TIFF 5775x4461 (source.tif) plus full-size JPEG conversion (source.jpg).",
+   "source_url": "https://www.loc.gov/item/2002723520/",
+   "licence": "No known restrictions on reproduction (Library of Congress rights advisory)",
+   "width": 5775,
+   "height": 4461,
+   "colour": false,
+   "subject_box": [
+    0.2,
+    0.0,
+    0.8,
+    1.0
+   ],
+   "source_file": "/home/user/SocialMediaMarketingSkill/lab/edit-10/broll/photos/loc_expo1889_crowds_under_tower/source.tif"
+  },
+  {
+   "id": "pm_neurdein1889_fontaine_coutan_tower",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-10/broll/photos/pm_neurdein1889_fontaine_coutan_tower/source.jpg",
+   "kind": "image",
+   "title": "Exposition Universelle de 1889. - Bassin avec sculpture devant la tour Eiffel, 7eme arrondissement, Paris. (Neurdein Freres)",
+   "date": "1889 (record 'Date de production: En 1889')",
+   "use_for": "exposition_1889",
+   "depicts": "Sepia albumen print: Coutan's sculpted fountain with figures and a winged group in the foreground basin; behind it the lower two storeys of the Eiffel Tower with the decorative arch, the old Trocadero palace seen through the arch, flags and Exposition buildings at left. The top of the tower is out of frame.",
+   "evidence": "Paris Musees / Musee Carnavalet, inv. PH13228, Neurdein Freres, 21.9 x 28 cm; inscription 'Exposition Universelle de 1889. -' and 'ND. Phot.' on the image. Description quoted: 'Les deux premiers etages de la Tour Eiffel. Au fond, l'ancien palais du Trocadero. Les fontaines lumineuses dessinees par M. Formige et sculptees par Coutan.'",
+   "source_url": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/exposition-universelle-de-1889-bassin-avec-sculpture-devant-la-tour-eiffel",
+   "licence": "CC0 1.0 - Paris Musees Open Content (record page shows 'CC0'; free reuse incl. commercial; credit suggested: Paris Musees / Musee Carnavalet - Histoire de Paris)",
+   "width": 3000,
+   "height": 2358,
+   "colour": false,
+   "subject_box": [
+    0.3,
+    0.0,
+    1.0,
+    0.8
+   ]
+  },
+  {
+   "id": "pm_geniecivil_tour300m_elevation",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-10/broll/photos/pm_geniecivil_tour300m_elevation/source.jpg",
+   "kind": "image",
+   "title": "G. Eiffel / Ingenieur constructeur a Levallois-Perret / Tour de 300 metres / Pl. XI. (Le Genie civil)",
+   "date": "Undated in the record. Plate header reads 'Tome VI - N 7, LE GENIE CIVIL, Pl. XI' (issue date not verified). It shows the project, not the built tower.",
+   "use_for": "design_drawing",
+   "depicts": "Engineering elevation of the 300 m tower in fine line on cream paper, flanked to scale by Notre-Dame and the Arc de Triomphe; legend tables of heights at both sides. Lettering: 'PROJET DE MONUMENT COMMEMORATIF A ERIGER A L'EXPOSITION UNIVERSELLE DE 1889. Presente par M. G. EIFFEL, Ingenieur-Constructeur. Projet de Messieurs E. NOUGUIER, M. KOECHLIN, Ingrs de la Maison EIFFEL et S. SAUVESTRE, Architecte'.",
+   "evidence": "Paris Musees / Musee Carnavalet, Estampe, procede photomecanique, 55.4 x 35.8 cm, authors 'Le Genie civil; Marchadier et Cie'; series 'Tour Eiffel / F'. No inventory number or date in the IIIF metadata. Credits read directly from the scan. NB: this is the Nouguier/Koechlin project as revised with Sauvestre's arches, not Koechlin's original June 1884 sketch.",
+   "source_url": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/g-eiffel-ingenieur-constructeur-a-levallois-perret-tour-de-300-metres-pl-xi",
+   "licence": "CC0 1.0 - Paris Musees Open Content (record page shows 'CC0'; free reuse incl. commercial; credit suggested: Paris Musees / Musee Carnavalet - Histoire de Paris)",
+   "width": 4464,
+   "height": 6736,
+   "colour": false,
+   "subject_box": [
+    0.14,
+    0.2,
+    0.85,
+    0.81
+   ]
+  },
+  {
+   "id": "pm_champenois_tour300m_projet",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-10/broll/photos/pm_champenois_tour300m_projet/source.jpg",
+   "kind": "image",
+   "title": "Tour de 300 metres / destinee a l'Exposition universelle de 1889 (Champenois & Cie; Stephen Sauvestre)",
+   "date": "Undated in the record. Pre-construction print of the planned tower ('destinee a l'Exposition'); no year printed in the parts read.",
+   "use_for": "design_drawing",
+   "depicts": "Colour print: a painted view of the projected tower in red-brown iron against a blue sky over the Champ-de-Mars, framed by columns of descriptive text; header 'TOUR DE 300 METRES DESTINEE A L'EXPOSITION UNIVERSELLE DE 1889 (Systeme brevete s.g.d.g. de MM. G. Eiffel, E. Nouguier et M. Koechlin)'; footer 'Projet presente par M. G. EIFFEL ... Dresse par MM. E. Nouguier, M. Koechlin, Ingenieurs de la Maison Eiffel, et S. Sauvestre, Architecte. Champenois & Cie Imprimeurs-Editeurs, 66 Boulevard St Michel, Paris'.",
+   "evidence": "Paris Musees / Musee Carnavalet, Estampe, procede photomecanique, impression en couleurs, 45.2 x 31.7 cm, authors 'Champenois & Cie; Sauvestre, Stephen'. No date or inventory in the IIIF metadata. Lettering read from the scan.",
+   "source_url": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/tour-de-300-metres-destinee-a-l-exposition-universelle-de-1889",
+   "licence": "CC0 1.0 - Paris Musees Open Content (record page shows 'CC0'; free reuse incl. commercial; credit suggested: Paris Musees / Musee Carnavalet - Histoire de Paris)",
+   "width": 4080,
+   "height": 5608,
+   "colour": true,
+   "subject_box": [
+    0.23,
+    0.12,
+    0.78,
+    0.85
+   ]
+  },
+  {
+   "id": "loc_punch1889_sambourne_eiffel_as_tower",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-10/broll/photos/loc_punch1889_sambourne_eiffel_as_tower/source.jpg",
+   "kind": "image",
+   "title": "[M. Eiffel, our artist's latest tour de force, June 29, 1889] / Linley Sambourne, del., Paris, June 18, '89.",
+   "date": "Drawn 18 June 1889; published in Punch vol. 96, p. 324, 29 June 1889",
+   "use_for": "other",
+   "depicts": "Original ink drawing: Gustave Eiffel caricatured as his tower, a smiling bearded head in a top hat on a long lattice neck, the tower's legs as trousered legs with shoes, standing over Paris domes; balloon and birds in the clouds. Editor's pencil notes in the margins ('Reduce to 6 1/4 inches in height').",
+   "evidence": "Library of Congress P&P, Tissandier collection, LC-DIG-ppmsca-02294 (digital file from original drawing); artist Linley Sambourne (1844-1910); rights advisory on the item: 'No known restrictions on publication.' Master TIFF 4110x5000 plus full-size JPEG.",
+   "source_url": "https://www.loc.gov/item/2002735680/",
+   "licence": "No known restrictions on publication (Library of Congress rights advisory); artist d. 1910, public domain",
+   "width": 4110,
+   "height": 5000,
+   "colour": false,
+   "subject_box": [
+    0.25,
+    0.15,
+    0.75,
+    0.73
+   ],
+   "source_file": "/home/user/SocialMediaMarketingSkill/lab/edit-10/broll/photos/loc_punch1889_sambourne_eiffel_as_tower/source.tif"
+  },
+  {
+   "id": "pm_vieparisienne1889_comment_on_regarde",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-10/broll/photos/pm_vieparisienne1889_comment_on_regarde/source.jpg",
+   "kind": "image",
+   "title": "Comment on regarde la tour Eiffel (La Vie parisienne)",
+   "date": "June 1889 (record 'En 6-1889'; 'Illustration pour La Vie parisienne le 1er juin 1889')",
+   "use_for": "other",
+   "depicts": "Narrow magazine page headed 'COMMENT ON REGARDE LA TOUR EIFFEL' (How people look at the Eiffel Tower): text columns with pen caricatures of the tower seen by different people: Victor Hugo in a laurel wreath, General Boulanger on horseback beside a tower lettered 'EIFFEL', and Eiffel himself flying above his tower ('M. Eiffel. - La regarde avec orgueil. C'est ma fille...').",
+   "evidence": "Paris Musees / Maison de Victor Hugo - Hauteville House, inv. 2017.0.356; illustration de periodique, procede photomecanique, 28.7 x 11 cm; author 'Anonyme; La Vie parisienne'. About the public's changing view in 1889, not the 1887 protest.",
+   "source_url": "https://www.parismuseescollections.paris.fr/fr/maison-de-victor-hugo/oeuvres/comment-on-regarde-la-tour-eiffel",
+   "licence": "CC0 1.0 - Paris Musees Open Content (record page shows 'CC0'; free reuse incl. commercial; credit suggested: Paris Musees / Maison de Victor Hugo - Hauteville House)",
+   "width": 1647,
+   "height": 3707,
+   "colour": false,
+   "subject_box": [
+    0.05,
+    0.02,
+    0.95,
+    0.95
+   ]
+  }
+ ],
+ "subject_box_format": "normalized [x0, y0, x1, y1] of the full file"
+}

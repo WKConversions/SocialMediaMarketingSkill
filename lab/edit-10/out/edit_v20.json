@@ -1,6 +1,6 @@
 {
  "fps": 30,
- "duration": 32.0667,
+ "duration": 32.6667,
  "song_start_s": 0.481,
  "blocks": [
   {
@@ -12,14 +12,14 @@
   {
    "v0": 10.4,
    "v1": 14.9333,
-   "start": 16.6,
-   "end": 21.1333
+   "start": 17.2,
+   "end": 21.7333
   },
   {
    "v0": 14.9333,
    "v1": 21.6667,
-   "start": 23.3333,
-   "end": 30.0667
+   "start": 23.9333,
+   "end": 30.6667
   }
  ],
  "speaker": [
@@ -75,40 +75,40 @@
    "clip": "7110",
    "src_start": 0.1,
    "src_end": 3.0,
-   "start": 16.6,
-   "end": 19.5,
+   "start": 17.2,
+   "end": 20.1,
    "view": "wide"
   },
   {
    "clip": "7110",
    "src_start": 3.8667,
    "src_end": 5.5,
-   "start": 19.5,
-   "end": 21.1333,
+   "start": 20.1,
+   "end": 21.7333,
    "view": "medium"
   },
   {
    "clip": "7111",
    "src_start": 0.2333,
    "src_end": 4.0,
-   "start": 23.3333,
-   "end": 27.1,
+   "start": 23.9333,
+   "end": 27.7,
    "view": "wide"
   },
   {
    "clip": "7112",
    "src_start": 0.2333,
    "src_end": 0.7,
-   "start": 27.1,
-   "end": 27.5667,
+   "start": 27.7,
+   "end": 28.1667,
    "view": "medium"
   },
   {
    "clip": "7112",
    "src_start": 1.1333,
    "src_end": 3.6333,
-   "start": 27.5667,
-   "end": 30.0667,
+   "start": 28.1667,
+   "end": 30.6667,
    "view": "wide"
   }
  ],
@@ -117,43 +117,220 @@
    "start": 0.0,
    "end": 4.9,
    "slot": "tower_1889",
-   "part": "I0+voice"
+   "part": "I0+voice",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-10/broll/film/loc_00694266_panorama_eiffel_tower/footage.mp4",
+   "kind": "video",
+   "src": 42.4,
+   "mode": "fill",
+   "center": [
+    0.63,
+    0.5
+   ],
+   "label": "Paris, 1900",
+   "record": "Edison, 'Panorama of Eiffel Tower', Paris Exposition, July 1900 (LoC 00694266); upper shaft to the summit, footage 42.4-47.5 s (frame slip at 47.68 avoided)",
+   "licence": "Library of Congress, Paper Print Collection (Edison, 1900): no known restrictions / public domain"
   },
   {
    "start": 8.1,
    "end": 9.9667,
    "slot": "design",
-   "part": "voice"
+   "part": "voice",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-10/broll/photos/pm_geniecivil_tour300m_elevation/source.jpg",
+   "kind": "image",
+   "mode": "fill",
+   "zoom": 0.82,
+   "center": [
+    0.5,
+    0.53
+   ],
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "push": 0.05,
+   "gain": 0.8,
+   "record": "'Tour de 300 m\u00e8tres', project elevation drawn to scale beside Notre-Dame and the Arc de Triomphe, plate from Le G\u00e9nie civil, undated (pre-construction)",
+   "licence": "Paris Mus\u00e9es / Mus\u00e9e Carnavalet, CC0 (open content, commercial use allowed)"
   },
   {
    "start": 11.5333,
    "end": 13.05,
    "slot": "eiffel",
-   "part": "voice"
+   "part": "voice",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-10/broll/photos/pm_liebert_eiffel_portrait/source.jpg",
+   "kind": "image",
+   "mode": "fill",
+   "crop": [
+    0.04,
+    0.03,
+    0.96,
+    0.87
+   ],
+   "zoom": 0.9,
+   "center": [
+    0.55,
+    0.45
+   ],
+   "focus": [
+    0.55,
+    0.35
+   ],
+   "push": 0.05,
+   "record": "Gustave Eiffel, carte-de-visite by Alphonse Li\u00e9bert, between 1883 and 1890",
+   "licence": "Paris Mus\u00e9es / Mus\u00e9e Carnavalet, CC0 (open content, commercial use allowed)"
   },
   {
    "start": 14.0,
-   "end": 15.3,
-   "slot": "build_a",
-   "part": "I1"
+   "end": 14.8,
+   "slot": "build_1887",
+   "part": "I1",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-10/broll/prepared/feau_1887-12-12_four_legs.png",
+   "kind": "image",
+   "mode": "fit",
+   "zoom": 1.0,
+   "center": [
+    0.5,
+    0.5
+   ],
+   "y": 0.437,
+   "focus": [
+    0.5,
+    0.65
+   ],
+   "push": 0.025,
+   "push_span": [
+    14.0,
+    17.2
+   ],
+   "record": "Th\u00e9ophile F\u00e9au, construction of the Eiffel Tower seen from the Trocad\u00e9ro, 12 December 1887 (Mus\u00e9e Carnavalet album PH9114); cut from its mount and registered (tools/prep_feau.py)",
+   "licence": "Paris Mus\u00e9es / Mus\u00e9e Carnavalet, CC0 (open content, commercial use allowed)",
+   "label": "Paris, 1887\u20131889",
+   "label_spans_part": true
   },
   {
-   "start": 15.3,
-   "end": 16.6,
-   "slot": "build_b",
-   "part": "I1"
+   "start": 14.8,
+   "end": 15.6,
+   "slot": "build_1888a",
+   "part": "I1",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-10/broll/prepared/feau_1888-03-15_first_platform.png",
+   "kind": "image",
+   "mode": "fit",
+   "zoom": 1.0,
+   "center": [
+    0.5,
+    0.5
+   ],
+   "y": 0.437,
+   "focus": [
+    0.5,
+    0.65
+   ],
+   "push": 0.025,
+   "push_span": [
+    14.0,
+    17.2
+   ],
+   "record": "Th\u00e9ophile F\u00e9au, construction of the Eiffel Tower seen from the Trocad\u00e9ro, 15 March 1888 (Mus\u00e9e Carnavalet album PH9114); cut from its mount and registered (tools/prep_feau.py)",
+   "licence": "Paris Mus\u00e9es / Mus\u00e9e Carnavalet, CC0 (open content, commercial use allowed)"
   },
   {
-   "start": 21.1333,
-   "end": 23.3333,
+   "start": 15.6,
+   "end": 16.4,
+   "slot": "build_1888b",
+   "part": "I1",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-10/broll/prepared/feau_1888-11-14_above_second_platform.png",
+   "kind": "image",
+   "mode": "fit",
+   "zoom": 1.0,
+   "center": [
+    0.5,
+    0.5
+   ],
+   "y": 0.437,
+   "focus": [
+    0.5,
+    0.65
+   ],
+   "push": 0.025,
+   "push_span": [
+    14.0,
+    17.2
+   ],
+   "record": "Th\u00e9ophile F\u00e9au, construction of the Eiffel Tower seen from the Trocad\u00e9ro, 14 November 1888 (Mus\u00e9e Carnavalet album PH9114); cut from its mount and registered (tools/prep_feau.py)",
+   "licence": "Paris Mus\u00e9es / Mus\u00e9e Carnavalet, CC0 (open content, commercial use allowed)"
+  },
+  {
+   "start": 16.4,
+   "end": 17.2,
+   "slot": "build_1889",
+   "part": "I1",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-10/broll/prepared/feau_1889-03-12_top_section.png",
+   "kind": "image",
+   "mode": "fit",
+   "zoom": 1.0,
+   "center": [
+    0.5,
+    0.5
+   ],
+   "y": 0.437,
+   "focus": [
+    0.5,
+    0.65
+   ],
+   "push": 0.025,
+   "push_span": [
+    14.0,
+    17.2
+   ],
+   "record": "Th\u00e9ophile F\u00e9au, construction of the Eiffel Tower seen from the Trocad\u00e9ro, 12 March 1889 (Mus\u00e9e Carnavalet album PH9114); cut from its mount and registered (tools/prep_feau.py)",
+   "licence": "Paris Mus\u00e9es / Mus\u00e9e Carnavalet, CC0 (open content, commercial use allowed)"
+  },
+  {
+   "start": 21.7333,
+   "end": 23.9333,
    "slot": "exposition",
-   "part": "I2"
+   "part": "I2",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-10/broll/photos/loc_expo1889_crowds_under_tower/source.jpg",
+   "kind": "image",
+   "mode": "fit",
+   "zoom": 1.45,
+   "center": [
+    0.5,
+    0.5
+   ],
+   "y": 0.43,
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "push": 0.05,
+   "label": "Exposition Universelle, 1889",
+   "record": "Under the Eiffel Tower, Exposition Universelle, Paris, 1889 (LoC, Tissandier Collection, LC-USZ62-24999)",
+   "licence": "Library of Congress: no known restrictions on publication"
   },
   {
-   "start": 25.5,
-   "end": 27.1,
+   "start": 26.1,
+   "end": 27.7,
    "slot": "film",
-   "part": "voice"
+   "part": "voice",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-10/broll/film/loc_00694172_champ_de_mars/footage.mp4",
+   "kind": "video",
+   "src": 48.4,
+   "crop": [
+    0.0,
+    0.016,
+    1.0,
+    0.984
+   ],
+   "mode": "fit",
+   "zoom": 1.35,
+   "center": [
+    0.5,
+    0.5
+   ],
+   "y": 0.43,
+   "record": "Edison, Champ de Mars, Paris Exposition, July 1900 (LoC 00694172): through the tower's arch, visitors walking toward the camera, footage 48.0-53.5 s",
+   "licence": "Library of Congress, Paper Print Collection (Edison, 1900): no known restrictions / public domain"
   }
  ],
  "captions": [
@@ -224,77 +401,99 @@
   {
    "text": "And when people saw it",
    "word": "and",
-   "word_t": 16.701,
-   "frame": 501,
-   "end_frame": 536,
+   "word_t": 17.301,
+   "frame": 519,
+   "end_frame": 554,
    "fade_out": false
   },
   {
    "text": "standing above Paris",
    "word": "standing",
-   "word_t": 17.886,
-   "frame": 536,
-   "end_frame": 587,
+   "word_t": 18.486,
+   "frame": 554,
+   "end_frame": 605,
    "fade_out": false
   },
   {
    "text": "perceptions started to change",
    "word": "perceptions",
-   "word_t": 19.5893,
-   "frame": 587,
-   "end_frame": 640,
+   "word_t": 20.1893,
+   "frame": 605,
+   "end_frame": 658,
    "fade_out": true
   },
   {
    "text": "Today it's one of",
    "word": "today",
-   "word_t": 23.42,
-   "frame": 702,
-   "end_frame": 727,
+   "word_t": 24.02,
+   "frame": 720,
+   "end_frame": 745,
    "fade_out": false
   },
   {
    "text": "the most recognizable",
    "word": "the",
-   "word_t": 24.262,
-   "frame": 727,
-   "end_frame": 767,
+   "word_t": 24.862,
+   "frame": 745,
+   "end_frame": 785,
    "fade_out": false
   },
   {
    "text": "landmarks in the world",
    "word": "landmarks",
-   "word_t": 25.583,
-   "frame": 767,
-   "end_frame": 815,
+   "word_t": 26.183,
+   "frame": 785,
+   "end_frame": 833,
    "fade_out": false
   },
   {
    "text": "And so",
    "word": "and",
-   "word_t": 27.1877,
-   "frame": 815,
-   "end_frame": 829,
+   "word_t": 27.7877,
+   "frame": 833,
+   "end_frame": 847,
    "fade_out": false
   },
   {
    "text": "sometimes seeing",
    "word": "sometimes",
-   "word_t": 27.6373,
-   "frame": 829,
-   "end_frame": 859,
+   "word_t": 28.2373,
+   "frame": 847,
+   "end_frame": 877,
    "fade_out": false
   },
   {
    "text": "changes the perception",
    "word": "changes",
-   "word_t": 28.6603,
-   "frame": 859,
-   "end_frame": 908,
+   "word_t": 29.2603,
+   "frame": 877,
+   "end_frame": 926,
    "fade_out": true
   }
  ],
- "labels": [],
+ "labels": [
+  {
+   "text": "Paris, 1900",
+   "frame": 3,
+   "end_frame": 143,
+   "fade_out": true,
+   "label": true
+  },
+  {
+   "text": "Paris, 1887\u20131889",
+   "frame": 428,
+   "end_frame": 512,
+   "fade_out": true,
+   "label": true
+  },
+  {
+   "text": "Exposition Universelle, 1889",
+   "frame": 660,
+   "end_frame": 714,
+   "fade_out": true,
+   "label": true
+  }
+ ],
  "dissolve": {
   "interlude": 0.6,
   "under_voice": 0.4,
@@ -312,23 +511,23 @@
    "to": "up"
   },
   {
-   "t0": 16.401,
-   "t1": 16.821,
+   "t0": 17.001,
+   "t1": 17.421,
    "to": "voice"
   },
   {
-   "t0": 21.0753,
-   "t1": 21.4753,
+   "t0": 21.6753,
+   "t1": 22.0753,
    "to": "up"
   },
   {
-   "t0": 23.12,
-   "t1": 23.54,
+   "t0": 23.72,
+   "t1": 24.14,
    "to": "voice"
   },
   {
-   "t0": 29.8643,
-   "t1": 30.2643,
+   "t0": 30.4643,
+   "t1": 30.8643,
    "to": "up"
   }
  ],
@@ -340,7 +539,7 @@
   "fade_out_s": 1.6
  },
  "end_card": {
-  "start": 30.0667,
+  "start": 30.6667,
   "text": [
    "Sometimes, seeing",
    "changes everything"
