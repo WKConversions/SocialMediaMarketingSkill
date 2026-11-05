@@ -16,7 +16,7 @@ import os
 
 E = "/home/user/SocialMediaMarketingSkill/lab/edit-10"
 FPS = 30
-SONG_START_S = 0.481                    # music/library.json "echoverse-les-yeux-ouverts" start_offset_s
+SONG_START_S = 0.262                    # music/library.json "trio-musette-les-yeux-ouverts" start_offset_s (the client's track)
 
 # (voice start, voice end, video start frame): block boundaries sit in the pacing pauses between sentences
 BLOCKS = [(0.0, 10.4, 108),             # "The Eiffel Tower. In 1887 ... But Gustave Eiffel built it anyway." (after "...chateau,")

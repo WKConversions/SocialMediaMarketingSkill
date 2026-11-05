@@ -105,6 +105,36 @@
       "avoid": [
         "a constant bed under dense talking (it has vocals)",
         "paid ads unless the licence is confirmed"
+      ],
+      "note": "Sent by mistake for the Eiffel edit; the client wanted Trio Musette's version (trio-musette-les-yeux-ouverts)."
+    },
+    "trio-musette-les-yeux-ouverts": {
+      "title": "Les Yeux Ouverts",
+      "artist": "Trio Musette",
+      "file": "assets/music/trio-musette-les-yeux-ouverts.mp3",
+      "rights": "Track supplied by the client; licence not stated. Not cleared for paid ads unless the client confirms the licence; when posting from a business account, prefer the platform's music library.",
+      "start_offset_s": 0.262,
+      "start_rule": "Client: start from the first real sound. 0.09-0.17 s is a soft noise burst (bellows/air, spectral flatness 0.61, not a note); the first note (G chord) attacks at ~0.266 s and is full by 0.33 s, so trimming 0.262 s puts the note's attack on frame 0.",
+      "duration_s": 169.35,
+      "has_vocals": false,
+      "mix": {
+        "scheme": "interludes",
+        "scheme_rule": "Classy style: automated, not side-chain ducked; up in the opening, interludes and end card; while he talks 10 dB under the voice (instrumental accordion musette: less than the 12 dB used for songs with vocals, still a clear swell in the interludes) with the gentle 1-3 kHz cut (the accordion sits in the voice's range).",
+        "pre_gain_db": 0.0,
+        "under_voice_db": 10.0,
+        "up_vs_voice_lu": -1.5,
+        "fade_out_s": 1.6,
+        "master_to_final_lufs": true
+      },
+      "first_used_in": "Eiffel Tower 1887 -> WKC story edit (lab/edit-10), 2026-11-05 (replaced the EchoVerse track the client sent by mistake).",
+      "suits": [
+        "Paris stories",
+        "classy, jazz/classical edits",
+        "warm, nostalgic storytelling"
+      ],
+      "avoid": [
+        "paid ads unless the licence is confirmed",
+        "fast hype edits"
       ]
     }
   }

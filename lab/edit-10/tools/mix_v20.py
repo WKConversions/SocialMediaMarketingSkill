@@ -75,7 +75,8 @@ def main(video, sfx_wav, out):
     ed = json.load(open(f"{E}/out/edit_v20.json"))
     dur = ed["duration"]
     n = int(round(dur * SR))
-    song = mix.load_music("echoverse-les-yeux-ouverts")
+    song = mix.load_music("trio-musette-les-yeux-ouverts")
+    UNDER_VOICE_DB = song["mix"].get("under_voice_db", 12.0)       # per track (songs with vocals 12, instrumentals 10)
 
     # voice: high-passed, fixed gain to the style's voice loudness, laid out in blocks on the video timeline
     gain, measured = mix.voice_gain(f"{E}/out/voice.wav", cfg)
