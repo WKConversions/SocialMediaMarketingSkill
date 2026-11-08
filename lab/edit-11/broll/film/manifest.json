@@ -1,0 +1,124 @@
+{
+ "task": "Real early Christmas film (about 1898-1915): decorated tree, family Christmas scene, or snow/Christmas atmosphere; commercial-use status recorded",
+ "items": [
+  {
+   "id": "film_loc_sleighing_scene_1898",
+   "file": "loc_sleighing_scene_1898/source.mp4",
+   "kind": "video",
+   "title": "Sleighing scene (Edison, 1898) - Library of Congress Paper Print Collection, item 00694381",
+   "date": "Photographed November 28-29, 1898, West Side Drive, Central Park, New York (per LoC record); copyright Thomas A. Edison, 16 Dec 1898",
+   "use_for": "film_christmas",
+   "depicts": "Bright winter actuality, black and white, silent: a steady stream of horse-drawn sleighs and cutters passing along a snowy drive in Central Park, low winter sun with long diagonal shadows across the snow, bare trees and onlookers behind. Not a Christmas tree; it is New York snow atmosphere of the period (Johnson's city, 16 years after 1882). FILE LAYOUT: 1440x1080 H.264, 24 fps (shot at about 15 fps, so frames repeat), 70.08 s; the film fills the whole 4:3 frame (cropdetect 1440:1080, no pillarbox inside the file). AAC audio track is silent (-91 dB). 0.0-1.5 black; 1.5-6.3 LoC 'Preserved by Library of Congress / National Audio-Visual Conservation Center' logo; 7.75-12.3 LoC added title card 'Sleighing Scene (Thomas A. Edison, Inc., 1898)'; 12.3-13.0 black; FILM 13.04-60.04; 60.04-70.08 black. Constant paper-print flicker and specks throughout. USABLE RANGES (s): 13.6-19.5 a horse and cutter sweeps across the foreground, more sleighs behind (skip 13.04-13.5: bright flash frame at 13.33); 20.6-23.0 a line of sleighs passing in the middle distance; 23.0-27.0 a woman in a long dark coat and hat walks across the foreground, sleighs behind her; 36.0-43.0 BEST: steady continuous stream of sleighs in the middle distance, sunlit snow and long shadows, nothing crosses the foreground; 49.0-52.0 quiet open snowfield with sleighs far off; 52.5-58.5 sleighs approaching toward the camera. AVOID: 20.35-20.55 heavy emulsion damage (large white blotches over the left half plus a dark diagonal scratch, about 4 frames); 28.0-33.5 a wheeled carriage (not a sleigh) passes very close, a big spoked wheel fills the frame at 32-33; 43.5-49.0 a man in a long overcoat walks right through the foreground. For 9:16: the action sits in a band at about y 0.25-0.60 across the full width; any vertical slice works in 36-43.",
+   "evidence": "LoC record https://www.loc.gov/item/00694381/ : title 'Sleighing scene'; summary quoting the Edison films catalog: \"A view taken on the West Side Drive in Central Park. Shows a continuous stream of handsome rigs and turnouts passing in both directions. Pedestrians watch the gay carnival. 50 feet\"; notes: 'Copyright: Thomas A. Edison; 16Dec1898; 73462.', 'Duration: 0:47 at 15 fps.', 'Photographed November 28-29, 1898. Location: West Side Drive, Central Park, New York, N.Y.'; contributors: White, James H. (production), Thomas A. Edison, Inc, Paper Print Collection (Library of Congress); subjects: Sleighing, Horse-drawn vehicles, Winter--New York (State)--New York, Central Park. Downloaded file is the LoC mp4 (tile.loc.gov .../ntscrm/01202820/01202820.mp4). Visible content matches the record (sleighs, Central Park drive, snow). Note it was filmed in late November, so it is winter atmosphere, not a Christmas event.",
+   "source_url": "https://www.loc.gov/item/00694381/",
+   "file_url": "https://tile.loc.gov/storage-services/service/mbrs/ntscrm/01202820/01202820.mp4",
+   "licence": "Public domain (US). LoC rights statement on the record: 'The Library of Congress is not aware of any U.S. copyright or other restrictions in the vast majority of motion pictures in these collections. Absent any such restrictions, these materials are free to use and reuse.' The record itself gives 'Copyright: Thomas A. Edison; 16Dec1898' - a US copyright that expired long ago (published 1898). Credit line asked for: 'Library of Congress, Motion Picture, Broadcasting, and Recorded Sound Division.' Do not use the LoC logo or the LoC-added title card at 0-13 s.",
+   "duration_s": 70.08,
+   "width": 1440,
+   "height": 1080,
+   "colour": false,
+   "subject_box": [
+    0.0,
+    0.25,
+    1.0,
+    0.6
+   ],
+   "usable_ranges": "13.6-19.5 foreground cutter + sleighs; 20.6-23.0 sleigh line; 23.0-27.0 woman walking through; 36.0-43.0 BEST steady stream of sleighs; 49.0-52.0 quiet snowfield; 52.5-58.5 sleighs approaching. Avoid 20.35-20.55 (damage), 28-33.5 (carriage wheel), 43.5-49 (man in foreground), 0-13.04 and 60.04-70.08 (LoC logo, title card, black).",
+   "fps": "24 (from about 15 fps original, repeated frames)",
+   "sha1": {
+    "source.mp4": "e379b2b8904dbdbcc9e78f60e433b53e9184885b"
+   }
+  },
+  {
+   "id": "film_ia_night_before_christmas_1905",
+   "file": "ia_night_before_christmas_1905/source.mp4",
+   "kind": "video",
+   "title": "The Night Before Christmas (Edison Manufacturing Co., 1905, dir. Edwin S. Porter) - Internet Archive item the-night-before-christmas-1905-directed-by-edwin-s.-porter",
+   "date": "1905 (original title card reads 'Thomas A. Edison' trademark / 'PATENTED' / 'COPYRIGHTED 1905')",
+   "use_for": "film_christmas",
+   "depicts": "Silent black-and-white Edison film of Clement Moore's poem, with its original poem intertitles. Low resolution: 524x400 H.264, 23.976 fps, 523.5 s, no audio stream; the picture fills the frame (cropdetect 524:400, no pillarbox). Shots (s): 0-3.96 original Edison main title 'THE NIGHT BEFORE CHRISTMAS'; 3.96-41.0 Santa feeding real reindeer in a wood; 41.0-85.8 Santa in his workshop; 85.8-138.3 the family gathered round a table in the parlour; 138.3-142.9 intertitle 'The stockings were hung...'; 142.9-178 hanging the stockings at the fireplace; 182.3-255 children's bedroom, pillow fight; 255-289.8 Santa at a desk with a big book; 289.8-308.8 Santa leaves with sack, sleigh and reindeer at the door; 308.8-312.9 intertitle 'Now Dasher! now Dancer!...'; 312.9-375.0 painted panorama of the sleigh flying over snowy mountains and villages, with falling snow; 375.0-379.3 intertitle 'So up to the house-top...'; 379.3-395.7 Santa on a snowy rooftop going down the chimney; 395.7-436.1 dark parlour, Santa fills the stockings; at 436.1 (stop-motion trick) a decorated tree and toys appear; 436.1-446.0 Santa beside the tree and toys; 446.0-450.2 intertitle 'He had a broad face...'; 450.2-505.8 Christmas morning: parlour with the tree (right edge of frame; tinsel garlands and ornaments, NOT lit), rocking horse, teddy bear and doll's pram; the children in nightgowns come down the stairs and the whole family celebrates; 505.8-512.5 close-up of Santa with falling snow and 'Merry Christmas to all' lettering at the bottom; 512.5-end 'THE END' card then the KINO INTERNATIONAL logo. USABLE RANGES (s): 355.0-361.0 painted snowy village under falling snow, slow pan; 361.5-367.0 BEST COSY: night town with many lit windows and a stone bridge, snow falling; 368.0-374.8 snow-laden pine forest, then a big snowy house with lit windows under the moon (372-374.8); 396.0-400.0 quiet dark parlour with the stockings hung by the fireplace, before Santa arrives; 437.0-445.5 Santa admiring the new tree and toys; 450.3-457.5 BEST TREE: Christmas-morning parlour, decorated tree at right with toys, children peeking from the staircase at left from about 452; 458.0-464.0 children run in to the tree and toys; 480.0-505.5 the family together round the tree (busy, lots of movement). For 9:16 in 450-458: tree sits at x 0.76-1.0 (cut by the frame edge), toys at x 0.5-0.9; a vertical crop at about x 0.55-1.0 holds tree + pram. AVOID: intertitles 138.3-142.9, 308.8-312.9, 375.0-379.3, 446.0-450.2; 512.5-523.5 'THE END' + Kino International logo (modern DVD branding, never use). Specks and flicker throughout; no big flash frames found in 340-380 or 395-512 besides the cuts listed.",
+   "evidence": "Internet Archive item https://archive.org/details/the-night-before-christmas-1905-directed-by-edwin-s.-porter (title 'The Night Before Christmas (1905) Directed By Edwin S. Porter', creator Edwin S. Porter, date 1905, licenseurl https://creativecommons.org/publicdomain/mark/1.0/, uploader cringeape20@gmail.com, added 2024-07-26; description copied from Wikipedia: 'a 1905 American silent short film directed by Edwin S. Porter for the Edison Manufacturing Company. It closely follows Clement Clarke Moore's 1823 poem...'). The film's own original title card shows the Thomas A. Edison trademark and 'COPYRIGHTED 1905', and the poem intertitles match the poem. PROVENANCE CAVEAT: this is a user upload, not an archive file. The file ends with a KINO INTERNATIONAL logo, so it is a rip of the Kino DVD release (probably the 'Edison: The Invention of the Movies' set), not a Library of Congress or MoMA file. No archive copy with a stated status was found online: LoC has no digitised copy (searched loc.gov film-and-videos and the Edison collection for 'christmas', 'santa', 'night before christmas'). Other copies (IA TheNightBeforeChristmas_235 has added cylinder music; IA TheNightBeforeChristmasSilentMovie and TheNightBeforeChristmas1905 are 320-384 px; Commons 'File:The Night Before Christmas (1905).webm' 960x720 is a YouTube upload of the same 523.6 s transfer, likely upscaled) are no better. The trees are not lit.",
+   "source_url": "https://archive.org/details/the-night-before-christmas-1905-directed-by-edwin-s.-porter",
+   "file_url": "https://archive.org/download/the-night-before-christmas-1905-directed-by-edwin-s.-porter/The%20Night%20Before%20Christmas%20%281905%29%20Directed%20By%20Edwin%20S.%20Porter.mp4",
+   "licence": "Public Domain Mark 1.0 (IA licence field), applied by the uploader, not by an archive. Basis: Edison film published and copyrighted in 1905, so its US copyright has long expired (before 1931); director Edwin S. Porter died 1941, so it is also public domain in the EU/NL (70 years after death, expired end of 2011). The transfer comes from a commercial DVD (Kino International). A faithful, music-free transfer of a public-domain film generally creates no new copyright (in the EU, Art. 14 of the DSM Directive), but this is a weaker provenance than the LoC item: HUMAN CHECK RECOMMENDED before commercial use. Never show the Kino logo (512.5-523.5 s).",
+   "duration_s": 523.48,
+   "width": 524,
+   "height": 400,
+   "colour": false,
+   "subject_box": [
+    0.55,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "usable_ranges": "355.0-361.0 snowy village + falling snow; 361.5-367.0 BEST night town with lit windows; 368.0-374.8 snowy pines + snowy house with lit windows; 396.0-400.0 stockings by the fireplace; 437.0-445.5 Santa with the new tree; 450.3-457.5 BEST Christmas-morning tree + toys; 458.0-464.0 children run to the tree; 480.0-505.5 family at the tree. Avoid intertitles 138.3-142.9, 308.8-312.9, 375.0-379.3, 446.0-450.2 and the Kino end 512.5-523.5.",
+   "fps": "23.976",
+   "sha1": {
+    "source.mp4": "7f13d24f158b2c02853ea73d930b8a8af2ebf736"
+   }
+  },
+  {
+   "id": "film_ia_trap_for_santa_claus_1909",
+   "file": "ia_trap_for_santa_claus_1909/source.mp4",
+   "kind": "video",
+   "title": "A Trap for Santa Claus (Biograph, 1909, dir. D. W. Griffith) - Internet Archive item a-trap-for-santa-claus-1909",
+   "date": "1909 (title card: 'Copyright, 1909, by Biograph Company, New York')",
+   "use_for": "film_christmas",
+   "depicts": "Silent black-and-white Biograph drama (poor family; the children set a trap for Santa; the runaway father returns; reunion on Christmas morning). Restored-looking transfer: heavy noise reduction, some frame-blending/ghosting on fast motion (e.g. 615.0-615.3). source.mp4 = H.264 960x720, 29.97 fps, 912.6 s, no audio, made by me (libx264 crf 14) from the IA original 960x720 VP9 webm (original.webm, kept); IA's own H.264 derivative was only 640x480. Picture fills the frame (cropdetect 960:720). Biograph-style title and intertitles with the 'AB' monogram (original style; may be reconstructed by the restorer - not verified). Most of the film (0-600 s) is a poor tenement, a saloon and the drunk father - not cosy. TREE SECTION: 600.3-616.4 parlour with a large decorated tree at left (bead garlands, glass baubles and bells; possibly small candles in holders, NOT lit), a high-backed chair and a vase of white flowers; two children in pyjamas come in and talk excitedly; 616.4-624.3 intertitle 'The children set a trap for Santa'; 624.3-635.1 children rig a curtain/trap next to the tree; 635.1-656.5 the mother tries on a Santa costume (other room); 656.5-677.2 children by the tree hiding behind the curtain; 677.2 bedroom. ENDING 895.8-912.4: parlour with the tree; mother and children, the father arrives dressed as Santa and the children hug him by the tree. USABLE RANGES (s): 600.5-606.0 tree and parlour, children entering; 606.0-610.5 BEST TREE: two children in pyjamas by the tree, small gestures; 656.6-662.0 children playing by the tree; 905.0-912.3 family embrace with Santa in front of the tree (end of film). For 9:16 in 600-616: tree at x 0.0-0.34 (y 0-0.8), children at x 0.42-0.71; a vertical crop x 0.0-0.42 shows the tree, x 0.33-0.75 the children. AVOID: intertitles at 0-8, 8-16, 64-71, 168-176, 400-416, 488-504, 616.4-624.3, 704-711 (approx., from contact sheets); 232-247 handwritten letter insert; fast-motion ghosting around 615.0-615.3.",
+   "evidence": "Internet Archive item https://archive.org/details/a-trap-for-santa-claus-1909 (title 'A Trap For Santa Claus (1909)', creator D. W. Griffith, date 1909, licenseurl https://creativecommons.org/publicdomain/mark/1.0/, uploader thedogwithoutstyle@gmail.com, added 2026-06-10; description only 'Directed by D. W. Griffith.'). The original webm (196,919,115 bytes, 912.65 s, 960x720) is byte-for-byte the same size as Wikimedia Commons 'File:A Trap for Santa Claus (1909) .webm' (PD-US, source given as YouTube video 2TMH0Y7TrGg, uploaded by Racconish). So it is a YouTube-sourced restoration of unknown origin, not an archive file. The film's own title card reads 'A Trap for Santa - Copyright, 1909, by Biograph Company, New York', and the story matches the known plot. Other IA copies have added music (ATrapForSanta, silent-hall-of-fame preview) or lower resolution.",
+   "source_url": "https://archive.org/details/a-trap-for-santa-claus-1909",
+   "file_url": "https://archive.org/download/a-trap-for-santa-claus-1909/A_Trap_for_Santa_Claus_%281909%29_.webm",
+   "licence": "Public Domain Mark 1.0 (IA licence field), applied by the uploader, not by an archive; Commons tags the same file PD-US. Basis: Biograph film published in 1909, so its US copyright has long expired; director D. W. Griffith died 1948, so it is also public domain in the EU/NL (expired end of 2018). The restoration source is unknown (YouTube): HUMAN CHECK RECOMMENDED before commercial use.",
+   "duration_s": 912.65,
+   "width": 960,
+   "height": 720,
+   "colour": false,
+   "subject_box": [
+    0.0,
+    0.0,
+    0.72,
+    0.85
+   ],
+   "usable_ranges": "600.5-606.0 tree + children entering; 606.0-610.5 BEST two children by the tree; 656.6-662.0 children by the tree; 905.0-912.3 family embrace with Santa by the tree. Avoid intertitles (616.4-624.3 etc.) and the 0-600 s tenement/saloon drama.",
+   "fps": "29.97 (transfer; blended frames on fast motion)",
+   "derived_from": "original.webm (VP9 960x720) -> source.mp4 via ffmpeg libx264 -crf 14 -preset medium -pix_fmt yuv420p, video only",
+   "sha1": {
+    "source.mp4": "d40285d1a2644dd1ffee1d463758a0fbf2f74223",
+    "original.webm": "09bb938c48e425a0b2c1dc59a39d400a5b2c241d"
+   }
+  }
+ ],
+ "rejected_or_not_downloaded": [
+  {
+   "title": "[Vitagraph paper print fragments. No. 5] (LoC 2002637998) - fragments 'Christmas in Paradise Alley' (Vitagraph, 2 Dec 1908) and 'The clown's Christmas Eve' (28 Aug 1908)",
+   "source_url": "https://www.loc.gov/item/2002637998/",
+   "reason": "Good status (LoC paper prints), but the Christmas fragments are only a few seconds each: in the 1128 s 1920x1080 file, 'Christmas in Paradise Alley' is about 934-946.5 s (LoC title card 930-934): a snowy tenement street with falling snow (934-936), a scuffle with a policeman, a girl-fairy with a star wand beside a Santa-like figure at a fireplace (939-941); shots of 1.5-3 s, no tree. 'The clown's Christmas Eve' (about 996-1025 s, LoC title card about 990-996) is a theatre stage door and a clown. Not cosy, too short. File deleted (699 MB)."
+  },
+  {
+   "title": "TR calls on neighbors at Christmas, 1917 (LoC mp76000306)",
+   "source_url": "https://www.loc.gov/item/mp76000306/",
+   "reason": "1917 (outside 1898-1915), Theodore Roosevelt (a political figure) carrying presents to a house in Oyster Bay; grey daylight, light snow. Off-message for this story. Deleted."
+  },
+  {
+   "title": "Sleighing in Central Park, New York (Edison, 1904, LoC 2016600213)",
+   "source_url": "https://www.loc.gov/item/2016600213/",
+   "reason": "Status fine, but the image is dark and murky with few sleighs; the 1898 'Sleighing scene' is much better. Deleted."
+  },
+  {
+   "title": "EYE Filmmuseum 'Ida's Christmas' (Vitagraph 1912, Europeana /08614/cat34881) and 'Broncho Billy's Christmas Dinner' (Essanay 1911, /08614/cat9313)",
+   "source_url": "https://www.europeana.eu/item/08614/cat34881",
+   "reason": "Public Domain Mark stated by the archive (EYE), and 'Ida's Christmas' is about a girl wishing for a doll at Christmas - a good candidate. But EYE's only online copy is on YouTube (https://youtu.be/0Ak410dmrgI and https://youtu.be/g_PiHS2wWAM), which refused download here (bot check). Could be fetched manually if someone has access."
+  },
+  {
+   "title": "Des Kaisers Weihnachtsfreude (1917, Bundesarchiv via filmportal.de, PDM)",
+   "source_url": "https://www.filmportal.de/node/1238594",
+   "reason": "WWI propaganda with Kaiser Wilhelm II and troops; off-message and 1917."
+  },
+  {
+   "title": "A Christmas Carol (Edison 1910) - IA 'AChristmasCarol'",
+   "source_url": "https://archive.org/details/AChristmasCarol",
+   "reason": "Licence CC BY-NC-ND (not commercial). Commons copy is from YouTube; no tree content checked."
+  }
+ ],
+ "notes": "No film with a LIT tree (candles or electric) was found. LoC has almost no digitised Christmas films online; the only LoC-provenanced keeper is the 1898 sleighing actuality (snow atmosphere). The two tree films come from Internet Archive user uploads with a Public Domain Mark: the works themselves are clearly public domain (US 1905/1909; directors died 1941/1948), but the digital transfers come from a Kino DVD and an unknown YouTube restoration, so a human should OK them before commercial use."
+}

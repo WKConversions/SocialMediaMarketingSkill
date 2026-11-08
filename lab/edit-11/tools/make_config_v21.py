@@ -26,14 +26,16 @@ END_CARD_S = 1.75
 
 # interludes (music up, visuals): start/end are filled from the blocks; slot sequence with relative weights
 INTERLUDES = [
-    dict(name="I0", slots=[("cozy_a", 1.0), ("cozy_b", 1.0)]),       # Sinatra's first line: warm period Christmas
+    dict(name="I0", slots=[("cozy_a", 1.0), ("cozy_b", 1.0)]),       # Sinatra's first line: a family Christmas (1864 painting),
+                                                                      # then a real parlour tree with candles (c. 1900)
     dict(name="I1", slots=[("lamp", 1.0)]),                           # "...a different idea": the electric lamp (in his pause)
-    dict(name="I2", slots=[("electric", 1.0)]),                       # "...he showed it": light on a Christmas tree
+    dict(name="I2", slots=[("electric", 1.0)]),                       # "...he showed it": the tradition it started (a tree of
+                                                                      # electric lights, New York 1915: labelled, not Johnson's)
 ]
 # visuals under his voice (voice time)
 UNDER_VOICE = [
-    (1.40, 4.375, "candles"),           # "Christmas trees were still lighted up by candles": a candle-lit tree
-    (9.00, 10.5417, "lights"),          # "with 80 electric lights"
+    (1.40, 4.375, "candles"),           # "Christmas trees were still lighted up by candles": Homer's tree with lit candles, 1858
+    (4.95, 6.05, "johnson"),            # "Edward Johnson": his portrait
 ]
 # speaker framing per paced segment (index into edl["segments"]): every jump cut changes the framing
 VIEWS = ["wide", "medium", "wide", "medium", "wide", "medium", "wide", "medium", "wide"]

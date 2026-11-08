@@ -182,7 +182,14 @@ def compose(lum, sh, scale_up=1.0):
     xs, xe = max(0, x0), min(ow, x0 + fw)
     part = fg[ys - y0: ye - y0, xs - x0: xe - x0]
     aa = a[ys - y0: ye - y0][:, None]
-    canvas[ys:ye, xs:xe] = canvas[ys:ye, xs:xe] * (1 - aa) + part * aa
+    if fw < ow:                                                                # narrower than the frame: feather the sides too
+        ax = np.ones(fw, np.float32)
+        fx = min(feather, fw // 4)
+        rx = smooth(np.linspace(0, 1, fx))
+        ax[:fx] = rx
+        ax[-fx:] = rx[::-1]
+        aa = aa * ax[xs - x0: xe - x0][None, :]
+    canvas[ys:ye, xs:xe] = canvas[ys:ye, xs:xe] * (1 - aa[..., None] if part.ndim == 3 else 1 - aa) + part * (aa[..., None] if part.ndim == 3 else aa)
     return canvas
 
 

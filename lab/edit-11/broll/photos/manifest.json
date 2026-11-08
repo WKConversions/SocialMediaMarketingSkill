@@ -1,0 +1,237 @@
+{
+ "destination": "/home/user/SocialMediaMarketingSkill/lab/edit-11/broll/photos",
+ "items": [
+  {
+   "id": "met_393185_homer_christmas_tree",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-11/broll/photos/met_393185_homer_christmas_tree/source.jpg",
+   "kind": "image",
+   "title": "The Christmas Tree (from \"Harper's Weekly,\" Vol. II) - Winslow Homer",
+   "date": "December 25, 1858",
+   "use_for": "candle_tree",
+   "depicts": "Full Harper's Weekly page 820 (Dec 25, 1858) on cream paper. Top engraving 'Christmas - Gathering Evergreens' (men cutting a fir, couple in the woods). Bottom engraving 'The Christmas-Tree': a parlour where children dance in a ring around a tall fir hung with ornaments and small candles drawn with lit flames (radiating strokes), a bearded man raising a glass, a man reaching up to the top of the tree, women in crinolines watching. Monochrome wood engraving; the bottom panel is the usable shot.",
+   "evidence": "Met record title 'The Christmas Tree (from \"Harper's Weekly,\" Vol. II)', artist Winslow Homer, date 'December 25, 1858', medium 'Wood engraving', accession 36.13.5(2), isPublicDomain = true. Lit candles confirmed by looking at a crop of the tree. Note: 1858, just before the 1860s window.",
+   "source_url": "https://www.metmuseum.org/art/collection/search/393185",
+   "licence": "CC0 1.0 (The Met Open Access, public domain)",
+   "width": 2521,
+   "height": 3643,
+   "colour": false,
+   "subject_box": [
+    0.065,
+    0.56,
+    0.955,
+    0.93
+   ]
+  },
+  {
+   "id": "loc_2003654310_pastime_christmas_tree_1881",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-11/broll/photos/loc_2003654310_pastime_christmas_tree_1881/source.jpg",
+   "kind": "image",
+   "title": "Pastime for little fingers. The Christmas tree",
+   "date": "1881 (copyrighted Dec. 1881)",
+   "use_for": "candle_tree",
+   "depicts": "Colour chromolithograph cut-out sheet. Central scene: a big fir tree hung with white wax candles burning with small flames, white parcels and baubles; father in a dark suit and mother in a blue bodice with a red bow beside a table with a bottle and glass. Several figures (children, a baby, a woman) are left as blank white silhouettes because this is a paper-doll game; the matching cut-out pieces (children, candles with flames, a sword, a trumpet, balls, a chair) are printed in the top and right margins. Printed 'THE CHRISTMAS TREE.' below, 'Copyrighted Dec. 1881, by C. F. King' and 'Published by Pastime Publishing Co., Boston, Mass.'; blue copyright stamp top left.",
+   "evidence": "LoC record: title 'Pastime for little fingers. The Christmas tree'; 'Boston, Mass. : Published by Pastime Publishing Co., [1881]'; medium '1 print : chromolithograph ; sheet 27.7 x 36 cm.'; reproduction LC-DIG-pga-11850 (digital file from original print). Rights: 'No known restrictions on publication.' Master TIFF also saved as source.tif.",
+   "source_url": "https://www.loc.gov/item/2003654310/",
+   "licence": "No known restrictions on publication (Library of Congress); public domain, published 1881",
+   "width": 5960,
+   "height": 4656,
+   "colour": true,
+   "subject_box": [
+    0.078,
+    0.2375,
+    0.796,
+    0.931
+   ]
+  },
+  {
+   "id": "loc_2001696400_wright_home_tree_1900",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-11/broll/photos/loc_2001696400_wright_home_tree_1900/source.jpg",
+   "kind": "image",
+   "title": "[Christmas tree in the Wright home, 7 Hawthorn Street, Dayton, Ohio]",
+   "date": "[1900]",
+   "use_for": "candle_tree",
+   "depicts": "Black-and-white glass-negative photo of a parlour: a tall tree reaching the patterned ceiling, draped with popcorn garlands, glass baubles, small paper baskets, a doll and an angel; small UNLIT white wax candles are clipped to the branch tips. Wrapped parcels tied with string, books, a toy box and a doll pram with two dolls under the tree; a gas chandelier top left, lace curtain right, a door behind. A little edge damage and spots on the negative.",
+   "evidence": "LoC record: title '[Christmas tree in the Wright home, 7 Hawthorn Street, Dayton, Ohio]', '[1900]', contributors 'Wright, Wilbur, 1867-1912, photographer' / 'Wright, Orville, 1871-1948, photographer', note 'Attributed to Wilbur and/or Orville Wright.', medium '1 negative : glass, dry plate ; 4 x 5 in.', LC-DIG-ppprs-00505. Rights: 'No known restrictions.' The record does not mention candles; they are visible on close inspection. A near-identical second exposure exists (LoC 2001696299, ppprs-00504).",
+   "source_url": "https://www.loc.gov/item/2001696400/",
+   "licence": "No known restrictions (Library of Congress)",
+   "width": 3970,
+   "height": 5000,
+   "colour": false,
+   "subject_box": [
+    0.25,
+    0.12,
+    0.8,
+    0.95
+   ]
+  },
+  {
+   "id": "loc_2004667726_edison_associates_johnson",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-11/broll/photos/loc_2004667726_edison_associates_johnson/source.jpg",
+   "kind": "image",
+   "title": "Thomas Alva Edison and his most important pioneer associates: Francis R. Upton, Charles Batchelor, John Kruesi and Edward H. Johnson",
+   "date": "c1929 (composite of earlier cabinet photographs, 1880s)",
+   "use_for": "johnson_portrait",
+   "depicts": "Black-and-white composite of five mounted portraits: Edison in the centre (inscribed 'To my friend Hammer / Thomas A. Edison'), Upton top left, Batchelor top right, Kruesi bottom left and EDWARD H. JOHNSON bottom right: a young man with a centre-parted hairstyle and a handlebar moustache, in a jacket, with the signature 'Edw. H. Johnson' and the studio mark 'Falk, 949 Broadway, N.Y.'. A ready crop of Johnson alone is saved as johnson_crop.jpg (400x600 px) in the same folder. LOW RESOLUTION: the whole file is 1536x1242, from a b&w film copy negative.",
+   "evidence": "LoC record title names 'Edward H. Johnson'; note 'Composite of 5 photoprints, copyrighted by William J. Hammer.' and 'No copyright renewal.'; reproduction LC-USZ62-67880 (b&w film copy neg.). Rights: 'No known restrictions on publication.' The bottom-right panel carries Johnson's own signature. No higher-resolution licence-clear portrait was found (the Commons file 'Edward Hibberd Johnson.png', from the National Cyclopaedia of American Biography, 1896, is public domain but only 165x227 px).",
+   "source_url": "https://www.loc.gov/item/2004667726/",
+   "licence": "No known restrictions on publication (Library of Congress); copyright not renewed",
+   "width": 1536,
+   "height": 1242,
+   "colour": false,
+   "subject_box": [
+    0.719,
+    0.487,
+    0.98,
+    0.97
+   ]
+  },
+  {
+   "id": "si_nmah_edison_nye_lamp_1879",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-11/broll/photos/si_nmah_edison_nye_lamp_1879/source.jpg",
+   "kind": "image",
+   "title": "Edison \"New Year's Eve\" Lamp (NMAH EM.181797)",
+   "date": "1879 (demonstration of 31 December 1879)",
+   "use_for": "edison_lamp",
+   "depicts": "Colour museum photo on a white background: a clear, round, hand-blown glass bulb with a pointed exhaust tip on top, a thin carbon filament with platinum lead-in wires, the inventory number '181' written on the glass, and a long glass neck with a metal contact at the bottom. No screw base.",
+   "evidence": "Smithsonian NMAH record nmah_704361 'Edison \"New Year's Eve\" Lamp', dates 1879 / 1879-12-31: 'Thomas Edison used this carbon-filament bulb in the first public demonstration of his most famous invention, the first practical electric incandescent lamp, which took place at his Menlo Park, New Jersey, laboratory on New Year's Eve, 1879.' Image NMAH-JN2014-3624, usage CC0.",
+   "source_url": "https://n2t.net/ark:/65665/ng49ca746a5-3705-704b-e053-15f76fa0b4fa",
+   "licence": "CC0 1.0 (Smithsonian Open Access)",
+   "width": 3006,
+   "height": 4008,
+   "colour": true,
+   "subject_box": [
+    0.18,
+    0.04,
+    0.82,
+    0.97
+   ]
+  },
+  {
+   "id": "si_nmah_edison_stopper_lamp_1881",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-11/broll/photos/si_nmah_edison_stopper_lamp_1881/source.jpg",
+   "kind": "image",
+   "title": "Edison \"Stopper\" lamp (patent model, NMAH EM.252624)",
+   "date": "1881",
+   "use_for": "edison_lamp",
+   "depicts": "Colour museum photo on a white background: a pale green-tinted glass bulb with a single loop of bamboo filament, a long fluted glass neck and a dark hard-rubber collar at the base. Clean, elegant silhouette.",
+   "evidence": "Smithsonian NMAH record nmah_710411, date 1881: 'A model to accompany the application for US Patent #239373, \"Electric Lamp,\" filed 7 August 1880, issued 29 March 1881 to Thomas A. Edison. A hard rubber base-collar, single-arch bamboo filament...' and '...Edison never put this lamp design into production.' So it shows the Edison lamp of the period, but it is a patent model, not one of the bulbs on Johnson's tree. Image NMAH-JN2015-5072, usage CC0.",
+   "source_url": "https://n2t.net/ark:/65665/ng49ca746ab-65cf-704b-e053-15f76fa0b4fa",
+   "licence": "CC0 1.0 (Smithsonian Open Access)",
+   "width": 4956,
+   "height": 6608,
+   "colour": true,
+   "subject_box": [
+    0.2,
+    0.03,
+    0.8,
+    0.98
+   ]
+  },
+  {
+   "id": "loc_2014700648_madison_sq_tree_night_1915",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-11/broll/photos/loc_2014700648_madison_sq_tree_night_1915/source.jpg",
+   "kind": "image",
+   "title": "Xmas Tree, Madison Sq., 1915",
+   "date": "1915",
+   "use_for": "early_electric_tree",
+   "depicts": "Black-and-white night photo: a tall outdoor fir covered top to bottom in hundreds of small glowing lights, with a bright star at the top, against a black sky; a bare tree on the right, a searchlight beam crossing diagonally, a crowd in hats and coats behind an iron railing in the foreground. Bain's handwritten negative caption 'XMAS TREE, MADISON SQ.' and number '3711-14' are at the very top (crop them out).",
+   "evidence": "LoC record: title 'Xmas Tree, Madison Sq., 1915', Bain News Service, '1 negative : glass ; 5 x 7 in. or smaller', LC-DIG-ggbain-20714. Rights: 'No known restrictions on publication.' The record does not say the lights are electric; an outdoor tree lit this densely at night can only be electric bulbs. This is New York's public community tree in Madison Square Park, NOT Johnson's tree.",
+   "source_url": "https://www.loc.gov/item/2014700648/",
+   "licence": "No known restrictions on publication (Library of Congress, Bain Collection)",
+   "width": 3291,
+   "height": 4834,
+   "colour": false,
+   "subject_box": [
+    0.03,
+    0.09,
+    0.97,
+    0.97
+   ]
+  },
+  {
+   "id": "met_11258_blodgett_family",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-11/broll/photos/met_11258_blodgett_family/source.jpg",
+   "kind": "image",
+   "title": "Christmas-Time, The Blodgett Family - Eastman Johnson",
+   "date": "1864",
+   "use_for": "victorian_christmas",
+   "depicts": "Warm, dark oil painting of a wood-panelled parlour at Christmas: a coal fire glowing in the fireplace at left, a tall window letting in daylight, the father standing with his hands behind his back, the mother seated, a small girl in a white dress, a boy in knickerbockers showing a small dancing toy on a table with a red cloth, and an older girl leaning on the table; a small decorated Christmas tree in the dark right corner and a wreath above the door. Very cozy. Thin frame/edge visible.",
+   "evidence": "Met record: title 'Christmas-Time, The Blodgett Family', artist Eastman Johnson, 1864, oil on canvas, 30 x 25 in., accession 1983.486, isPublicDomain = true. CAUTION: the painter Eastman Johnson is a different person from Edward H. Johnson; do not caption it as related to him.",
+   "source_url": "https://www.metmuseum.org/art/collection/search/11258",
+   "licence": "CC0 1.0 (The Met Open Access, public domain)",
+   "width": 3332,
+   "height": 4000,
+   "colour": true,
+   "subject_box": [
+    0.02,
+    0.02,
+    0.98,
+    0.98
+   ]
+  },
+  {
+   "id": "loc_95503313_christmas_day_morning_1889",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-11/broll/photos/loc_95503313_christmas_day_morning_1889/source.jpg",
+   "kind": "image",
+   "title": "Christmas day in the morning",
+   "date": "c1889",
+   "use_for": "victorian_christmas",
+   "depicts": "Sepia stereograph on an orange card (two near-identical frames side by side). A tree in a parlour corner by shuttered windows, decorated with crossed American flags, a doll at the top, garlands, a drum, a toy train, a sailing boat and ABC blocks; three children in white on the carpet (a girl on a rocking horse, a girl at a toy piano, a small boy). Printed 'Christmas Day in the morning. (See back.) Copyright 1889, by Geo. Barker' and 'GEO. BARKER, PHOTOGRAPHER, NIAGARA FALLS, NEW YORK' on the card. No candles are clearly visible. Use one frame (left frame box given).",
+   "evidence": "LoC record: title 'Christmas day in the morning', 'Niagara Falls, N.Y. : Geo. Barker, c1889.', photographer 'Barker, George, 1844-1894', '1 photographic print on stereo card : stereograph.', LC-DIG-stereo-1s43989. Rights: 'No known restrictions on publication.'",
+   "source_url": "https://www.loc.gov/item/95503313/",
+   "licence": "No known restrictions on publication (Library of Congress)",
+   "width": 5956,
+   "height": 3087,
+   "colour": true,
+   "subject_box": [
+    0.093,
+    0.085,
+    0.5,
+    0.895
+   ]
+  },
+  {
+   "id": "loc_2018694688_good_morning_merry_christmas_1892",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-11/broll/photos/loc_2018694688_good_morning_merry_christmas_1892/source.jpg",
+   "kind": "image",
+   "title": "\"Good morning (Merry Christmas)\"",
+   "date": "c1892",
+   "use_for": "christmas_card",
+   "depicts": "Tall colour chromolithograph: a smiling little girl with blonde curls in a white nightgown and white bonnet, a peach sash over her shoulders, holding up her gown, standing on a fur rug at the foot of a staircase with a deep red carpet and red wallpaper. Warm reds and creams, Christmas-morning mood.",
+   "evidence": "LoC record: title '\"Good morning (Merry Christmas)\"', 'New York : [publisher not transcribed], c1892', '1 print : chromolithograph', notes 'Great American Tea Company, copyright claimant.' and 'Category designation on original folder: Advertising, Tradecards.' Rights: 'No known restrictions on publication.' Strictly a Christmas advertising print, not a mailed card.",
+   "source_url": "https://www.loc.gov/item/2018694688/",
+   "licence": "No known restrictions on publication (Library of Congress, Popular Graphic Arts)",
+   "width": 4238,
+   "height": 8532,
+   "colour": true,
+   "subject_box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "id": "loc_2015651613_kitten_palette_christmas_card",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-11/broll/photos/loc_2015651613_kitten_palette_christmas_card/source.jpg",
+   "kind": "image",
+   "title": "A Merry Christmas and a Happy New Year",
+   "date": "[between 1880 and 1890]",
+   "use_for": "christmas_card",
+   "depicts": "Colour Victorian Christmas card cut in the shape of a painter's palette (with a thumb hole), golden-olive ground with dabs of pink, yellow, orange, white, blue, green and brown paint, a tabby kitten's head, and the gold text 'A MERRY CHRISTMAS AND A HAPPY NEW YEAR'. Photographed on a black background.",
+   "evidence": "LoC record: title 'A Merry Christmas and a Happy New Year', '[between 1880 and 1890]', '1 print : chromolithograph ; sheet (irregular shape) 10.5 x 7.5 cm.', 'Printed on bottom: A Merry Christmas and a Happy New Year.', Marian S. Carson collection, LC-DIG-ppmsca-39628. Rights: 'No known restrictions on publication.'",
+   "source_url": "https://www.loc.gov/item/2015651613/",
+   "licence": "No known restrictions on publication (Library of Congress)",
+   "width": 3091,
+   "height": 2884,
+   "colour": true,
+   "subject_box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ]
+  }
+ ],
+ "notes": "11 images, all licence-clear for commercial use (Met CC0 x2, Smithsonian CC0 x2, LoC 'No known restrictions' x7); no Wikimedia files used. Each folder has source.jpg (q95) plus meta.json; LoC folders also keep the master source.tif. JOHNSON'S 1882 TREE: no image found whose catalogue record identifies it as Johnson's 1882 tree (or his 1883-84 trees) in LoC Prints & Photographs, the Met, Smithsonian Open Access or the Rijksmuseum, so none is supplied. Do not caption any image as Johnson's tree; the Madison Square 1915 photo is New York's public community tree. Chronicling America searches for 1882-86 gave only OCR text pages, nothing visual. JOHNSON PORTRAIT: the only licence-clear one is the signed panel in Hammer's c1929 composite (LoC). It is low-res (Johnson crop 400x600, johnson_crop.jpg), so use it small or framed, or push in on the full composite. CAUTIONS: the Blodgett painting is by Eastman Johnson, who is unrelated to Edward H. Johnson. The Stopper lamp is an 1881 patent model that was never produced. The Homer engraving (1858) and the Wright tree (1900) sit just outside the 1860s-1890s window; Pastime (1881) is inside it. Candles in the Wright photo are visible but not mentioned in the record. Candidates rejected: Windsor Castle tree 1848 (LoC 96522234, fine licence but early and stiff), Rijksmuseum stereo RP-F-F09864 (candles are on candelabra not the tree, uncanny masked children), an overexposed Bain indoor tree, daytime Madison Sq/Capitol trees, the Vedder 1881 Prang card (not Christmassy). The Smithsonian API DEMO_KEY is rate-limited (10/hour) and Commons returned HTTP 429, so neither was searched further."
+}

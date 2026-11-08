@@ -101,37 +101,164 @@
    "start": 0.0,
    "end": 3.125,
    "slot": "cozy_a",
-   "part": "I0"
+   "part": "I0",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-11/broll/photos/met_11258_blodgett_family/source.jpg",
+   "kind": "image",
+   "keep_colour": true,
+   "mode": "fill",
+   "crop": [
+    0.03,
+    0.03,
+    0.97,
+    0.97
+   ],
+   "zoom": 0.92,
+   "center": [
+    0.56,
+    0.55
+   ],
+   "focus": [
+    0.55,
+    0.6
+   ],
+   "push": 0.05,
+   "label": "Christmas-Time, 1864",
+   "record": "Eastman Johnson, 'Christmas-Time, The Blodgett Family', 1864, oil on canvas (The Met 11258)",
+   "licence": "CC0 (The Met Open Access)"
   },
   {
    "start": 3.125,
    "end": 6.25,
    "slot": "cozy_b",
-   "part": "I0"
+   "part": "I0",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-11/broll/photos/loc_2001696400_wright_home_tree_1900/source.jpg",
+   "kind": "image",
+   "mode": "fill",
+   "crop": [
+    0.03,
+    0.03,
+    0.97,
+    0.97
+   ],
+   "zoom": 0.9,
+   "center": [
+    0.56,
+    0.5
+   ],
+   "focus": [
+    0.55,
+    0.5
+   ],
+   "push": 0.05,
+   "record": "[Christmas tree in the Wright home, 7 Hawthorn Street, Dayton, Ohio] [1900], LC-DIG-ppprs-00505 (candles clipped to the branches)",
+   "licence": "Library of Congress: no known restrictions on publication"
   },
   {
    "start": 7.65,
    "end": 10.625,
    "slot": "candles",
-   "part": "voice"
+   "part": "voice",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-11/broll/photos/met_393185_homer_christmas_tree/source.jpg",
+   "kind": "image",
+   "mode": "fill",
+   "crop": [
+    0.065,
+    0.56,
+    0.955,
+    0.93
+   ],
+   "zoom": 1.0,
+   "center": [
+    0.3,
+    0.5
+   ],
+   "focus": [
+    0.3,
+    0.4
+   ],
+   "push": 0.06,
+   "gain": 0.92,
+   "record": "Winslow Homer, 'The Christmas-Tree', Harper's Weekly, 25 December 1858 (The Met 393185); lit candles on the tree",
+   "licence": "CC0 (The Met Open Access)"
+  },
+  {
+   "start": 11.2,
+   "end": 12.3,
+   "slot": "johnson",
+   "part": "voice",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-11/broll/photos/loc_2004667726_edison_associates_johnson/johnson_crop.jpg",
+   "kind": "image",
+   "mode": "fit",
+   "crop": [
+    0.0,
+    0.0,
+    1.0,
+    0.78
+   ],
+   "zoom": 0.8,
+   "y": 0.4,
+   "center": [
+    0.5,
+    0.5
+   ],
+   "focus": [
+    0.5,
+    0.42
+   ],
+   "push": 0.04,
+   "record": "Edward H. Johnson, from 'Thomas Alva Edison and his most important pioneer associates' (composite, LC-USZ62-67880); portrait by Falk, New York",
+   "licence": "Library of Congress: no known restrictions on publication; copyright not renewed"
   },
   {
    "start": 13.25,
    "end": 14.875,
    "slot": "lamp",
-   "part": "I1"
-  },
-  {
-   "start": 16.875,
-   "end": 18.4167,
-   "slot": "lights",
-   "part": "voice"
+   "part": "I1",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-11/broll/photos/si_nmah_edison_nye_lamp_1879/source.jpg",
+   "kind": "image",
+   "mode": "fill",
+   "zoom": 1.0,
+   "center": [
+    0.5,
+    0.48
+   ],
+   "focus": [
+    0.5,
+    0.35
+   ],
+   "push": 0.06,
+   "gain": 0.8,
+   "label": "Edison's lamp, 1879",
+   "record": "Edison 'New Year's Eve' lamp, Menlo Park demonstration of 31 December 1879 (Smithsonian NMAH EM.181797)",
+   "licence": "CC0 (Smithsonian Open Access)"
   },
   {
    "start": 21.5417,
    "end": 23.5417,
    "slot": "electric",
-   "part": "I2"
+   "part": "I2",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-11/broll/photos/loc_2014700648_madison_sq_tree_night_1915/source.jpg",
+   "kind": "image",
+   "mode": "fill",
+   "crop": [
+    0.0,
+    0.1,
+    1.0,
+    1.0
+   ],
+   "zoom": 1.0,
+   "center": [
+    0.52,
+    0.5
+   ],
+   "focus": [
+    0.5,
+    0.35
+   ],
+   "push": 0.06,
+   "label": "New York, 1915",
+   "record": "Xmas tree, Madison Sq., 1915 (Bain News Service; LoC 2014700648)",
+   "licence": "Library of Congress: no known restrictions on publication"
   }
  ],
  "captions": [
@@ -272,7 +399,29 @@
    "fade_out": true
   }
  ],
- "labels": [],
+ "labels": [
+  {
+   "text": "Christmas-Time, 1864",
+   "frame": 3,
+   "end_frame": 71,
+   "fade_out": true,
+   "label": true
+  },
+  {
+   "text": "Edison's lamp, 1879",
+   "frame": 326,
+   "end_frame": 353,
+   "fade_out": true,
+   "label": true
+  },
+  {
+   "text": "New York, 1915",
+   "frame": 525,
+   "end_frame": 561,
+   "fade_out": true,
+   "label": true
+  }
+ ],
  "dissolve": {
   "interlude": 0.6,
   "under_voice": 0.4,
