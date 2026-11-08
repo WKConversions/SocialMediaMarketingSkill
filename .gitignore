@@ -48,3 +48,4 @@ lab/**/broll/**/*.pdf
 lab/**/broll/**/*.html
 # transcripts of commercial song lyrics (copyrighted text): keep local
 lab/**/music/*.whisper.json
+lab/**/music/*.aligned.json

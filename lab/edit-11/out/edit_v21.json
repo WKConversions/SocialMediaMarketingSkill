@@ -1,0 +1,328 @@
+{
+ "fps": 24,
+ "duration": 31.0,
+ "song_start_s": 16.2,
+ "blocks": [
+  {
+   "v0": 0.0,
+   "v1": 7.0,
+   "start": 6.25,
+   "end": 13.25
+  },
+  {
+   "v0": 7.0,
+   "v1": 13.6667,
+   "start": 14.875,
+   "end": 21.5417
+  },
+  {
+   "v0": 13.6667,
+   "v1": 19.375,
+   "start": 23.5417,
+   "end": 29.25
+  }
+ ],
+ "speaker": [
+  {
+   "clip": "7145",
+   "src_start": 0.0,
+   "src_end": 4.375,
+   "start": 6.25,
+   "end": 10.625,
+   "view": "wide"
+  },
+  {
+   "clip": "7146",
+   "src_start": 0.0,
+   "src_end": 0.625,
+   "start": 10.625,
+   "end": 11.25,
+   "view": "medium"
+  },
+  {
+   "clip": "7146",
+   "src_start": 0.8333,
+   "src_end": 2.8333,
+   "start": 11.25,
+   "end": 13.25,
+   "view": "wide"
+  },
+  {
+   "clip": "7147",
+   "src_start": 0.0,
+   "src_end": 3.5417,
+   "start": 14.875,
+   "end": 18.4167,
+   "view": "medium"
+  },
+  {
+   "clip": "7148",
+   "src_start": 0.0833,
+   "src_end": 2.5417,
+   "start": 18.4167,
+   "end": 20.875,
+   "view": "wide"
+  },
+  {
+   "clip": "7148",
+   "src_start": 3.0,
+   "src_end": 3.6667,
+   "start": 20.875,
+   "end": 21.5417,
+   "view": "medium"
+  },
+  {
+   "clip": "7149",
+   "src_start": 0.0417,
+   "src_end": 3.625,
+   "start": 23.5417,
+   "end": 27.125,
+   "view": "wide"
+  },
+  {
+   "clip": "7150",
+   "src_start": 0.0,
+   "src_end": 0.3333,
+   "start": 27.125,
+   "end": 27.4583,
+   "view": "medium"
+  },
+  {
+   "clip": "7150",
+   "src_start": 0.8333,
+   "src_end": 2.625,
+   "start": 27.4583,
+   "end": 29.25,
+   "view": "wide"
+  }
+ ],
+ "shots": [
+  {
+   "start": 0.0,
+   "end": 3.125,
+   "slot": "cozy_a",
+   "part": "I0"
+  },
+  {
+   "start": 3.125,
+   "end": 6.25,
+   "slot": "cozy_b",
+   "part": "I0"
+  },
+  {
+   "start": 7.65,
+   "end": 10.625,
+   "slot": "candles",
+   "part": "voice"
+  },
+  {
+   "start": 13.25,
+   "end": 14.875,
+   "slot": "lamp",
+   "part": "I1"
+  },
+  {
+   "start": 16.875,
+   "end": 18.4167,
+   "slot": "lights",
+   "part": "voice"
+  },
+  {
+   "start": 21.5417,
+   "end": 23.5417,
+   "slot": "electric",
+   "part": "I2"
+  }
+ ],
+ "captions": [
+  {
+   "text": "In 1882",
+   "word": "in",
+   "word_t": 6.31,
+   "frame": 151,
+   "end_frame": 185,
+   "fade_out": false
+  },
+  {
+   "text": "Christmas trees were",
+   "word": "christmas",
+   "word_t": 7.732,
+   "frame": 185,
+   "end_frame": 209,
+   "fade_out": false
+  },
+  {
+   "text": "still lighted up by candles",
+   "word": "still",
+   "word_t": 8.714,
+   "frame": 209,
+   "end_frame": 257,
+   "fade_out": false
+  },
+  {
+   "text": "But then",
+   "word": "but",
+   "word_t": 10.726,
+   "frame": 257,
+   "end_frame": 271,
+   "fade_out": false
+  },
+  {
+   "text": "Edward Johnson",
+   "word": "edward",
+   "word_t": 11.3237,
+   "frame": 271,
+   "end_frame": 292,
+   "fade_out": false
+  },
+  {
+   "text": "had a different idea",
+   "word": "had",
+   "word_t": 12.1697,
+   "frame": 292,
+   "end_frame": 324,
+   "fade_out": true
+  },
+  {
+   "text": "He decorated",
+   "word": "he",
+   "word_t": 14.875,
+   "frame": 356,
+   "end_frame": 376,
+   "fade_out": false
+  },
+  {
+   "text": "a Christmas tree",
+   "word": "a",
+   "word_t": 15.699,
+   "frame": 376,
+   "end_frame": 396,
+   "fade_out": false
+  },
+  {
+   "text": "with 80 electric lights",
+   "word": "with",
+   "word_t": 16.522,
+   "frame": 396,
+   "end_frame": 444,
+   "fade_out": false
+  },
+  {
+   "text": "Rather than explaining",
+   "word": "rather",
+   "word_t": 18.5143,
+   "frame": 444,
+   "end_frame": 471,
+   "fade_out": false
+  },
+  {
+   "text": "the potential of the product",
+   "word": "the",
+   "word_t": 19.6583,
+   "frame": 471,
+   "end_frame": 502,
+   "fade_out": false
+  },
+  {
+   "text": "he showed it",
+   "word": "he",
+   "word_t": 20.947,
+   "frame": 502,
+   "end_frame": 523,
+   "fade_out": true
+  },
+  {
+   "text": "A simple demonstration",
+   "word": "a",
+   "word_t": 23.64,
+   "frame": 567,
+   "end_frame": 592,
+   "fade_out": false
+  },
+  {
+   "text": "that helped a lasting",
+   "word": "that",
+   "word_t": 24.682,
+   "frame": 592,
+   "end_frame": 620,
+   "fade_out": false
+  },
+  {
+   "text": "inspiring Christmas",
+   "word": "inspiring",
+   "word_t": 25.844,
+   "frame": 620,
+   "end_frame": 652,
+   "fade_out": false
+  },
+  {
+   "text": "So, some ideas",
+   "word": "so",
+   "word_t": 27.185,
+   "frame": 652,
+   "end_frame": 676,
+   "fade_out": false
+  },
+  {
+   "text": "speak for themselves",
+   "word": "speak",
+   "word_t": 28.19,
+   "frame": 676,
+   "end_frame": 708,
+   "fade_out": true
+  }
+ ],
+ "labels": [],
+ "dissolve": {
+  "interlude": 0.6,
+  "under_voice": 0.4,
+  "within": 0.5
+ },
+ "music_ramps": [
+  {
+   "t0": 6.01,
+   "t1": 6.43,
+   "to": "voice"
+  },
+  {
+   "t0": 13.2167,
+   "t1": 13.6167,
+   "to": "up"
+  },
+  {
+   "t0": 14.575,
+   "t1": 14.995,
+   "to": "voice"
+  },
+  {
+   "t0": 21.509,
+   "t1": 21.909,
+   "to": "up"
+  },
+  {
+   "t0": 23.34,
+   "t1": 23.76,
+   "to": "voice"
+  },
+  {
+   "t0": 28.992,
+   "t1": 29.392,
+   "to": "up"
+  }
+ ],
+ "music": {
+  "down_lead_s": 0.3,
+  "down_len_s": 0.42,
+  "up_after_s": 0.06,
+  "up_len_s": 0.4,
+  "fade_out_s": 1.6
+ },
+ "end_card": {
+  "start": 29.25,
+  "text": [
+   "Some ideas speak",
+   "for themselves"
+  ]
+ },
+ "logo": "/home/user/SocialMediaMarketingSkill/lab/edit-05/broll/wkc/logo.png"
+}

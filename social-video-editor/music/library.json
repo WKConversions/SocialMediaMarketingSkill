@@ -136,6 +136,36 @@
         "paid ads unless the licence is confirmed",
         "fast hype edits"
       ]
+    },
+    "sinatra-in-the-wee-small-hours": {
+      "title": "In the Wee Small Hours of the Morning (Remastered 1998)",
+      "artist": "Frank Sinatra",
+      "file": "assets/music/sinatra-in-the-wee-small-hours.mp3",
+      "rights": "Commercial recording supplied by the client. Not cleared for paid ads; business accounts may get it muted. Prefer adding it through the platform's music library when posting from a business account.",
+      "start_offset_s": 16.2,
+      "start_rule": "Client: start the moment he sings 'In the wee small...'. The vocal attack of 'In' starts at 16.23 s (voice band 1-6 kHz rises from -51 to -32 dB between 16.23 and 16.29 s; forced alignment of the line agrees within 0.3 s, Whisper's 15.34 s is early); starting at 16.20 s puts the attack on the first frame. The line 'In the wee small hours of the morning' runs to ~22.4 s (video ~6.2 s); 'While the whole wide world...' starts at 23.72 s.",
+      "duration_s": 181.03,
+      "has_vocals": true,
+      "mix": {
+        "scheme": "interludes",
+        "scheme_rule": "As the other classy edits: automated, not side-chain ducked; the opening line in full, up in the interludes and end card; 12 dB under the voice while he talks (vocals) with the gentle 1-3 kHz cut.",
+        "pre_gain_db": 0.0,
+        "under_voice_db": 12.0,
+        "up_vs_voice_lu": -1.5,
+        "fade_out_s": 1.6,
+        "master_to_final_lufs": true
+      },
+      "first_used_in": "Edward Johnson 1882 Christmas tree -> WKC story edit (lab/edit-11), 2026-11-08.",
+      "suits": [
+        "cozy, warm, nostalgic story edits",
+        "Christmas and winter stories",
+        "classy, jazz/classical edits"
+      ],
+      "avoid": [
+        "a constant bed under dense talking (it has vocals)",
+        "fast hype edits",
+        "paid ads"
+      ]
     }
   }
 }

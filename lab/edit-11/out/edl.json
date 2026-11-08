@@ -1,0 +1,631 @@
+{
+ "fps": 24,
+ "segments": [
+  {
+   "clip": "7145",
+   "src_start": 0.0,
+   "src_end": 4.375,
+   "out_start": 0.0,
+   "out_end": 4.375
+  },
+  {
+   "clip": "7146",
+   "src_start": 0.0,
+   "src_end": 0.625,
+   "out_start": 4.375,
+   "out_end": 5.0
+  },
+  {
+   "clip": "7146",
+   "src_start": 0.8333,
+   "src_end": 2.8333,
+   "out_start": 5.0,
+   "out_end": 7.0
+  },
+  {
+   "clip": "7147",
+   "src_start": 0.0,
+   "src_end": 3.5417,
+   "out_start": 7.0,
+   "out_end": 10.5417
+  },
+  {
+   "clip": "7148",
+   "src_start": 0.0833,
+   "src_end": 2.5417,
+   "out_start": 10.5417,
+   "out_end": 13.0
+  },
+  {
+   "clip": "7148",
+   "src_start": 3.0,
+   "src_end": 3.6667,
+   "out_start": 13.0,
+   "out_end": 13.6667
+  },
+  {
+   "clip": "7149",
+   "src_start": 0.0417,
+   "src_end": 3.625,
+   "out_start": 13.6667,
+   "out_end": 17.25
+  },
+  {
+   "clip": "7150",
+   "src_start": 0.0,
+   "src_end": 0.3333,
+   "out_start": 17.25,
+   "out_end": 17.5833
+  },
+  {
+   "clip": "7150",
+   "src_start": 0.8333,
+   "src_end": 2.625,
+   "out_start": 17.5833,
+   "out_end": 19.375
+  }
+ ],
+ "words": [
+  {
+   "word": "in",
+   "clip": "7145",
+   "idx": 0,
+   "score": 0.999,
+   "src_start": 0.06,
+   "src_end": 0.14,
+   "start": 0.06,
+   "end": 0.14
+  },
+  {
+   "word": "eighteen",
+   "clip": "7145",
+   "idx": 1,
+   "score": 1.0,
+   "src_start": 0.461,
+   "src_end": 0.761,
+   "start": 0.461,
+   "end": 0.761
+  },
+  {
+   "word": "eighty",
+   "clip": "7145",
+   "idx": 2,
+   "score": 1.0,
+   "src_start": 0.881,
+   "src_end": 1.102,
+   "start": 0.881,
+   "end": 1.102
+  },
+  {
+   "word": "two",
+   "clip": "7145",
+   "idx": 3,
+   "score": 1.0,
+   "src_start": 1.162,
+   "src_end": 1.322,
+   "start": 1.162,
+   "end": 1.322
+  },
+  {
+   "word": "christmas",
+   "clip": "7145",
+   "idx": 4,
+   "score": 1.0,
+   "src_start": 1.482,
+   "src_end": 1.863,
+   "start": 1.482,
+   "end": 1.863
+  },
+  {
+   "word": "trees",
+   "clip": "7145",
+   "idx": 5,
+   "score": 0.999,
+   "src_start": 1.923,
+   "src_end": 2.203,
+   "start": 1.923,
+   "end": 2.203
+  },
+  {
+   "word": "were",
+   "clip": "7145",
+   "idx": 6,
+   "score": 0.999,
+   "src_start": 2.263,
+   "src_end": 2.404,
+   "start": 2.263,
+   "end": 2.404
+  },
+  {
+   "word": "still",
+   "clip": "7145",
+   "idx": 7,
+   "score": 1.0,
+   "src_start": 2.464,
+   "src_end": 2.724,
+   "start": 2.464,
+   "end": 2.724
+  },
+  {
+   "word": "lighted",
+   "clip": "7145",
+   "idx": 8,
+   "score": 1.0,
+   "src_start": 2.824,
+   "src_end": 3.125,
+   "start": 2.824,
+   "end": 3.125
+  },
+  {
+   "word": "up",
+   "clip": "7145",
+   "idx": 9,
+   "score": 1.0,
+   "src_start": 3.205,
+   "src_end": 3.305,
+   "start": 3.205,
+   "end": 3.305
+  },
+  {
+   "word": "by",
+   "clip": "7145",
+   "idx": 10,
+   "score": 1.0,
+   "src_start": 3.425,
+   "src_end": 3.605,
+   "start": 3.425,
+   "end": 3.605
+  },
+  {
+   "word": "candles",
+   "clip": "7145",
+   "idx": 11,
+   "score": 0.865,
+   "src_start": 3.746,
+   "src_end": 4.266,
+   "start": 3.746,
+   "end": 4.266
+  },
+  {
+   "word": "but",
+   "clip": "7146",
+   "idx": 0,
+   "score": 1.0,
+   "src_start": 0.101,
+   "src_end": 0.242,
+   "start": 4.476,
+   "end": 4.617
+  },
+  {
+   "word": "then",
+   "clip": "7146",
+   "idx": 1,
+   "score": 1.0,
+   "src_start": 0.302,
+   "src_end": 0.504,
+   "start": 4.677,
+   "end": 4.879
+  },
+  {
+   "word": "edward",
+   "clip": "7146",
+   "idx": 2,
+   "score": 1.0,
+   "src_start": 0.907,
+   "src_end": 1.229,
+   "start": 5.0737,
+   "end": 5.3957
+  },
+  {
+   "word": "johnson",
+   "clip": "7146",
+   "idx": 3,
+   "score": 0.999,
+   "src_start": 1.289,
+   "src_end": 1.712,
+   "start": 5.4557,
+   "end": 5.8787
+  },
+  {
+   "word": "had",
+   "clip": "7146",
+   "idx": 4,
+   "score": 1.0,
+   "src_start": 1.753,
+   "src_end": 1.874,
+   "start": 5.9197,
+   "end": 6.0407
+  },
+  {
+   "word": "a",
+   "clip": "7146",
+   "idx": 5,
+   "score": 0.999,
+   "src_start": 1.934,
+   "src_end": 1.954,
+   "start": 6.1007,
+   "end": 6.1207
+  },
+  {
+   "word": "different",
+   "clip": "7146",
+   "idx": 6,
+   "score": 1.0,
+   "src_start": 1.994,
+   "src_end": 2.317,
+   "start": 6.1607,
+   "end": 6.4837
+  },
+  {
+   "word": "idea",
+   "clip": "7146",
+   "idx": 7,
+   "score": 1.0,
+   "src_start": 2.458,
+   "src_end": 2.74,
+   "start": 6.6247,
+   "end": 6.9067
+  },
+  {
+   "word": "he",
+   "clip": "7147",
+   "idx": 0,
+   "score": 1.0,
+   "src_start": 0.0,
+   "src_end": 0.06,
+   "start": 7.0,
+   "end": 7.06
+  },
+  {
+   "word": "decorated",
+   "clip": "7147",
+   "idx": 1,
+   "score": 1.0,
+   "src_start": 0.181,
+   "src_end": 0.703,
+   "start": 7.181,
+   "end": 7.703
+  },
+  {
+   "word": "a",
+   "clip": "7147",
+   "idx": 2,
+   "score": 1.0,
+   "src_start": 0.824,
+   "src_end": 0.844,
+   "start": 7.824,
+   "end": 7.844
+  },
+  {
+   "word": "christmas",
+   "clip": "7147",
+   "idx": 3,
+   "score": 0.999,
+   "src_start": 0.884,
+   "src_end": 1.246,
+   "start": 7.884,
+   "end": 8.246
+  },
+  {
+   "word": "tree",
+   "clip": "7147",
+   "idx": 4,
+   "score": 0.993,
+   "src_start": 1.306,
+   "src_end": 1.507,
+   "start": 8.306,
+   "end": 8.507
+  },
+  {
+   "word": "with",
+   "clip": "7147",
+   "idx": 5,
+   "score": 1.0,
+   "src_start": 1.647,
+   "src_end": 1.788,
+   "start": 8.647,
+   "end": 8.788
+  },
+  {
+   "word": "eighty",
+   "clip": "7147",
+   "idx": 6,
+   "score": 0.992,
+   "src_start": 2.029,
+   "src_end": 2.371,
+   "start": 9.029,
+   "end": 9.371
+  },
+  {
+   "word": "electric",
+   "clip": "7147",
+   "idx": 7,
+   "score": 1.0,
+   "src_start": 2.571,
+   "src_end": 3.013,
+   "start": 9.571,
+   "end": 10.013
+  },
+  {
+   "word": "lights",
+   "clip": "7147",
+   "idx": 8,
+   "score": 1.0,
+   "src_start": 3.094,
+   "src_end": 3.415,
+   "start": 10.094,
+   "end": 10.415
+  },
+  {
+   "word": "rather",
+   "clip": "7148",
+   "idx": 0,
+   "score": 1.0,
+   "src_start": 0.181,
+   "src_end": 0.482,
+   "start": 10.6393,
+   "end": 10.9403
+  },
+  {
+   "word": "than",
+   "clip": "7148",
+   "idx": 1,
+   "score": 1.0,
+   "src_start": 0.562,
+   "src_end": 0.703,
+   "start": 11.0203,
+   "end": 11.1613
+  },
+  {
+   "word": "explaining",
+   "clip": "7148",
+   "idx": 2,
+   "score": 1.0,
+   "src_start": 0.803,
+   "src_end": 1.285,
+   "start": 11.2613,
+   "end": 11.7433
+  },
+  {
+   "word": "the",
+   "clip": "7148",
+   "idx": 3,
+   "score": 1.0,
+   "src_start": 1.325,
+   "src_end": 1.405,
+   "start": 11.7833,
+   "end": 11.8633
+  },
+  {
+   "word": "potential",
+   "clip": "7148",
+   "idx": 4,
+   "score": 1.0,
+   "src_start": 1.445,
+   "src_end": 1.887,
+   "start": 11.9033,
+   "end": 12.3453
+  },
+  {
+   "word": "of",
+   "clip": "7148",
+   "idx": 5,
+   "score": 0.999,
+   "src_start": 1.947,
+   "src_end": 1.988,
+   "start": 12.4053,
+   "end": 12.4463
+  },
+  {
+   "word": "the",
+   "clip": "7148",
+   "idx": 6,
+   "score": 1.0,
+   "src_start": 2.028,
+   "src_end": 2.108,
+   "start": 12.4863,
+   "end": 12.5663
+  },
+  {
+   "word": "product",
+   "clip": "7148",
+   "idx": 7,
+   "score": 1.0,
+   "src_start": 2.148,
+   "src_end": 2.449,
+   "start": 12.6063,
+   "end": 12.9073
+  },
+  {
+   "word": "he",
+   "clip": "7148",
+   "idx": 8,
+   "score": 1.0,
+   "src_start": 3.072,
+   "src_end": 3.152,
+   "start": 13.072,
+   "end": 13.152
+  },
+  {
+   "word": "showed",
+   "clip": "7148",
+   "idx": 9,
+   "score": 0.999,
+   "src_start": 3.212,
+   "src_end": 3.453,
+   "start": 13.212,
+   "end": 13.453
+  },
+  {
+   "word": "it",
+   "clip": "7148",
+   "idx": 10,
+   "score": 1.0,
+   "src_start": 3.493,
+   "src_end": 3.574,
+   "start": 13.493,
+   "end": 13.574
+  },
+  {
+   "word": "a",
+   "clip": "7149",
+   "idx": 0,
+   "score": 1.0,
+   "src_start": 0.14,
+   "src_end": 0.16,
+   "start": 13.765,
+   "end": 13.785
+  },
+  {
+   "word": "simple",
+   "clip": "7149",
+   "idx": 1,
+   "score": 1.0,
+   "src_start": 0.22,
+   "src_end": 0.501,
+   "start": 13.845,
+   "end": 14.126
+  },
+  {
+   "word": "demonstration",
+   "clip": "7149",
+   "idx": 2,
+   "score": 1.0,
+   "src_start": 0.561,
+   "src_end": 1.142,
+   "start": 14.186,
+   "end": 14.767
+  },
+  {
+   "word": "that",
+   "clip": "7149",
+   "idx": 3,
+   "score": 1.0,
+   "src_start": 1.182,
+   "src_end": 1.302,
+   "start": 14.807,
+   "end": 14.927
+  },
+  {
+   "word": "helped",
+   "clip": "7149",
+   "idx": 4,
+   "score": 1.0,
+   "src_start": 1.362,
+   "src_end": 1.643,
+   "start": 14.987,
+   "end": 15.268
+  },
+  {
+   "word": "a",
+   "clip": "7149",
+   "idx": 5,
+   "score": 0.999,
+   "src_start": 1.703,
+   "src_end": 1.723,
+   "start": 15.328,
+   "end": 15.348
+  },
+  {
+   "word": "lasting",
+   "clip": "7149",
+   "idx": 6,
+   "score": 1.0,
+   "src_start": 1.803,
+   "src_end": 2.264,
+   "start": 15.428,
+   "end": 15.889
+  },
+  {
+   "word": "inspiring",
+   "clip": "7149",
+   "idx": 7,
+   "score": 1.0,
+   "src_start": 2.344,
+   "src_end": 3.025,
+   "start": 15.969,
+   "end": 16.65
+  },
+  {
+   "word": "christmas",
+   "clip": "7149",
+   "idx": 8,
+   "score": 1.0,
+   "src_start": 3.085,
+   "src_end": 3.526,
+   "start": 16.71,
+   "end": 17.151
+  },
+  {
+   "word": "so",
+   "clip": "7150",
+   "idx": 0,
+   "score": 1.0,
+   "src_start": 0.06,
+   "src_end": 0.221,
+   "start": 17.31,
+   "end": 17.471
+  },
+  {
+   "word": "some",
+   "clip": "7150",
+   "idx": 1,
+   "score": 1.0,
+   "src_start": 0.923,
+   "src_end": 1.123,
+   "start": 17.673,
+   "end": 17.873
+  },
+  {
+   "word": "ideas",
+   "clip": "7150",
+   "idx": 2,
+   "score": 0.846,
+   "src_start": 1.284,
+   "src_end": 1.525,
+   "start": 18.034,
+   "end": 18.275
+  },
+  {
+   "word": "speak",
+   "clip": "7150",
+   "idx": 3,
+   "score": 1.0,
+   "src_start": 1.565,
+   "src_end": 1.725,
+   "start": 18.315,
+   "end": 18.475
+  },
+  {
+   "word": "for",
+   "clip": "7150",
+   "idx": 4,
+   "score": 1.0,
+   "src_start": 1.785,
+   "src_end": 1.866,
+   "start": 18.535,
+   "end": 18.616
+  },
+  {
+   "word": "themselves",
+   "clip": "7150",
+   "idx": 5,
+   "score": 0.974,
+   "src_start": 1.906,
+   "src_end": 2.307,
+   "start": 18.656,
+   "end": 19.057
+  }
+ ],
+ "duration": 19.375,
+ "gaps": [
+  0.21,
+  0.195,
+  0.093,
+  0.224,
+  0.165,
+  0.191,
+  0.159,
+  0.202
+ ]
+}
