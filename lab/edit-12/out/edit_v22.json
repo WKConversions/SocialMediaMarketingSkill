@@ -287,73 +287,341 @@
    "start": 0.0,
    "end": 6.75,
    "slot": "london",
-   "part": "I0+voice"
+   "part": "I0+voice",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-12/broll/photos/london_winter_evening_1859_nast_loc/london_winter_evening_1859_nast_loc.jpg",
+   "kind": "image",
+   "mode": "fit",
+   "crop": [
+    0.01,
+    0.02,
+    0.97,
+    0.93
+   ],
+   "zoom": 1.3,
+   "center": [
+    0.5,
+    0.5
+   ],
+   "y": 0.43,
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "push": 0.06,
+   "label": "London, 1859",
+   "record": "Thomas Nast, 'Street scene in London - winter evening', Harper's Weekly, 2 April 1859 (LoC)",
+   "licence": "Library of Congress: no known restrictions on publication"
   },
   {
    "start": 15.1667,
    "end": 17.0,
    "slot": "cole",
-   "part": "voice"
+   "part": "voice",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-12/broll/photos/cole_portrait_1852_nlw/cole_portrait_1852_nlw.jpg",
+   "kind": "image",
+   "mode": "fill",
+   "crop": [
+    0.05,
+    0.2,
+    0.8,
+    0.8
+   ],
+   "zoom": 0.95,
+   "center": [
+    0.5,
+    0.45
+   ],
+   "focus": [
+    0.5,
+    0.35
+   ],
+   "push": 0.05,
+   "record": "Henry Cole, Executive Commissioner, wood engraving, 1852 (National Library of Wales PD01043)",
+   "licence": "Public Domain Mark 1.0 (National Library of Wales)"
   },
   {
    "start": 17.0,
    "end": 20.25,
    "slot": "letters",
-   "part": "I1"
+   "part": "I1",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-12/broll/photos/mulready_envelope_1840_npm/mulready_envelope_1840_npm.jpg",
+   "kind": "image",
+   "keep_colour": true,
+   "mode": "fit",
+   "crop": [
+    0.02,
+    0.03,
+    0.98,
+    0.95
+   ],
+   "zoom": 1.2,
+   "center": [
+    0.5,
+    0.5
+   ],
+   "y": 0.43,
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "push": 0.06,
+   "label": "The penny post, 1840",
+   "record": "Mulready penny envelope, posted 6 May 1840 (first day of use) (Smithsonian National Postal Museum)",
+   "licence": "CC0 (Smithsonian Open Access)"
   },
   {
    "start": 28.4167,
    "end": 31.2083,
    "slot": "horsley",
-   "part": "voice"
+   "part": "voice",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-12/broll/photos/horsley_portrait_met/horsley_portrait_met.jpg",
+   "kind": "image",
+   "mode": "fill",
+   "crop": [
+    0.12,
+    0.1,
+    0.95,
+    0.8
+   ],
+   "zoom": 0.95,
+   "center": [
+    0.55,
+    0.42
+   ],
+   "focus": [
+    0.55,
+    0.35
+   ],
+   "push": 0.05,
+   "record": "John Callcott Horsley, carte de visite by John Watkins, London, inscribed June 1871 (The Met 1970.659.420)",
+   "licence": "CC0 (The Met Open Access)"
   },
   {
    "start": 33.6667,
    "end": 36.9167,
    "slot": "cozy",
-   "part": "I2"
+   "part": "I2",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-12/broll/photos/xmas_decorating_holly_wellcome/xmas_decorating_holly_wellcome.jpg",
+   "kind": "image",
+   "keep_colour": true,
+   "mode": "fill",
+   "crop": [
+    0.08,
+    0.1,
+    0.92,
+    0.92
+   ],
+   "zoom": 0.95,
+   "center": [
+    0.5,
+    0.5
+   ],
+   "focus": [
+    0.5,
+    0.4
+   ],
+   "push": 0.06,
+   "record": "Decorating with holly for Christmas, 19th-century British coloured print (Wellcome Collection; Public Domain Mark)",
+   "licence": "Public Domain Mark (Wellcome Collection)"
   },
   {
    "start": 41.25,
    "end": 47.75,
    "slot": "card",
-   "part": "voice+I3"
+   "part": "voice+I3",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-12/broll/photos/first_card_copy_loc_npcc/first_card_copy_loc_npcc.jpg",
+   "kind": "image",
+   "mode": "fit",
+   "crop": [
+    0.07,
+    0.115,
+    0.905,
+    0.865
+   ],
+   "zoom": 1.12,
+   "center": [
+    0.5,
+    0.5
+   ],
+   "y": 0.42,
+   "focus": [
+    0.5,
+    0.42
+   ],
+   "push": 0.07,
+   "label": "London, 1843",
+   "record": "The first Christmas card, designed by J. C. Horsley for Henry Cole (1843 design); LoC 2016850925, National Photo Company copy negative of a printed reproduction (its caption's '1846' is cropped out)",
+   "licence": "Library of Congress: no known restrictions on publication"
   },
   {
    "start": 47.75,
    "end": 49.4583,
    "slot": "card_family",
-   "part": "voice"
+   "part": "voice",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-12/broll/photos/first_card_copy_loc_npcc/first_card_copy_loc_npcc.jpg",
+   "kind": "image",
+   "mode": "fit",
+   "crop": [
+    0.29,
+    0.16,
+    0.71,
+    0.58
+   ],
+   "zoom": 1.25,
+   "center": [
+    0.5,
+    0.5
+   ],
+   "y": 0.42,
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "push": 0.05,
+   "record": "The first Christmas card, designed by J. C. Horsley for Henry Cole (1843 design); LoC 2016850925, National Photo Company copy negative of a printed reproduction (its caption's '1846' is cropped out)",
+   "licence": "Library of Congress: no known restrictions on publication"
   },
   {
    "start": 49.4583,
    "end": 52.75,
    "slot": "card_kindness",
-   "part": "voice"
+   "part": "voice",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-12/broll/photos/first_card_copy_loc_npcc/first_card_copy_loc_npcc.jpg",
+   "kind": "image",
+   "mode": "fill",
+   "crop": [
+    0.1,
+    0.13,
+    0.31,
+    0.57
+   ],
+   "zoom": 1.0,
+   "center": [
+    0.5,
+    0.5
+   ],
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "push": 0.06,
+   "record": "The first Christmas card, designed by J. C. Horsley for Henry Cole (1843 design); LoC 2016850925, National Photo Company copy negative of a printed reproduction (its caption's '1846' is cropped out)",
+   "licence": "Library of Congress: no known restrictions on publication"
   },
   {
    "start": 55.75,
    "end": 58.1667,
    "slot": "card_words",
-   "part": "voice"
+   "part": "voice",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-12/broll/photos/first_card_copy_loc_npcc/first_card_copy_loc_npcc.jpg",
+   "kind": "image",
+   "mode": "fit",
+   "crop": [
+    0.31,
+    0.57,
+    0.7,
+    0.82
+   ],
+   "zoom": 1.15,
+   "center": [
+    0.5,
+    0.5
+   ],
+   "y": 0.42,
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "push": 0.05,
+   "record": "The first Christmas card, designed by J. C. Horsley for Henry Cole (1843 design); LoC 2016850925, National Photo Company copy negative of a printed reproduction (its caption's '1846' is cropped out)",
+   "licence": "Library of Congress: no known restrictions on publication"
   },
   {
    "start": 58.1667,
    "end": 61.4167,
    "slot": "victorian",
-   "part": "I4"
+   "part": "I4",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-12/broll/photos/iln_1848_windsor_christmas_tree_loc/iln_1848_windsor_christmas_tree_loc.jpg",
+   "kind": "image",
+   "mode": "fill",
+   "crop": [
+    0.22,
+    0.25,
+    0.78,
+    0.78
+   ],
+   "zoom": 1.0,
+   "center": [
+    0.5,
+    0.5
+   ],
+   "focus": [
+    0.5,
+    0.42
+   ],
+   "push": 0.06,
+   "label": "Windsor Castle, 1848",
+   "record": "Christmas tree at Windsor Castle, The Illustrated London News, Christmas supplement 1848 (LoC)",
+   "licence": "Library of Congress: no known restrictions on publication"
   },
   {
    "start": 67.5,
    "end": 72.3333,
    "slot": "cards_a",
-   "part": "voice+I5"
+   "part": "voice+I5",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-12/broll/photos/xmas_card_1874_holly_cart_met/xmas_card_1874_holly_cart_met.jpg",
+   "kind": "image",
+   "keep_colour": true,
+   "mode": "fit",
+   "crop": [
+    0.02,
+    0.02,
+    0.98,
+    0.98
+   ],
+   "zoom": 1.25,
+   "center": [
+    0.5,
+    0.5
+   ],
+   "y": 0.43,
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "push": 0.06,
+   "label": "Christmas card, 1874",
+   "record": "Victorian Christmas card, 1874 (The Met)",
+   "licence": "CC0 (The Met Open Access)"
   },
   {
    "start": 72.3333,
    "end": 74.3333,
    "slot": "cards_b",
-   "part": "I5"
+   "part": "I5",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-12/broll/photos/xmas_card_c1890_children_cooks_cooperhewitt/xmas_card_c1890_children_cooks_cooperhewitt.jpg",
+   "kind": "image",
+   "keep_colour": true,
+   "mode": "fit",
+   "crop": [
+    0.02,
+    0.03,
+    0.98,
+    0.97
+   ],
+   "zoom": 1.2,
+   "center": [
+    0.5,
+    0.5
+   ],
+   "y": 0.43,
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "push": 0.06,
+   "record": "American Christmas card, c. 1890 (Cooper Hewitt, Smithsonian Design Museum)",
+   "licence": "CC0 (Smithsonian Open Access)"
   }
  ],
  "captions": [
@@ -774,7 +1042,43 @@
    "fade_out": true
   }
  ],
- "labels": [],
+ "labels": [
+  {
+   "text": "London, 1859",
+   "frame": 3,
+   "end_frame": 110,
+   "fade_out": true,
+   "label": true
+  },
+  {
+   "text": "The penny post, 1840",
+   "frame": 416,
+   "end_frame": 482,
+   "fade_out": true,
+   "label": true
+  },
+  {
+   "text": "London, 1843",
+   "frame": 1058,
+   "end_frame": 1142,
+   "fade_out": true,
+   "label": true
+  },
+  {
+   "text": "Windsor Castle, 1848",
+   "frame": 1404,
+   "end_frame": 1470,
+   "fade_out": true,
+   "label": true
+  },
+  {
+   "text": "Christmas card, 1874",
+   "frame": 1696,
+   "end_frame": 1732,
+   "fade_out": true,
+   "label": true
+  }
+ ],
  "dissolve": {
   "interlude": 0.6,
   "under_voice": 0.4,

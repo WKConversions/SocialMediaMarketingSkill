@@ -128,7 +128,7 @@ def main(video, sfx_wav, out):
     for k, (a, b) in enumerate(regions):                                       # each up stretch to the same loudness
         core = slice(a, b)
         write_f32(f"{E}/out/v22_tmp_up.wav", m[core])
-        g_up[k] = float(np.clip(target_up - loudness(f"{E}/out/v22_tmp_up.wav")["lufs"], -12, 6))
+        g_up[k] = float(np.clip(target_up - loudness(f"{E}/out/v22_tmp_up.wav")["lufs"], -12, 10))   # soft passages of the song may need up to +10 dB to rise like the others
     g_voice = np.array([float(np.median(g_up)) - 12.0] * len(blocks))
 
     def music_track():

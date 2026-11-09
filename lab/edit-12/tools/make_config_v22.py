@@ -142,10 +142,15 @@ def main():
         c["fade_out"] = nxt is None
     # place labels in the interludes (same font, same spot); text comes from the fact-checked media record
     labels = []
+    gap_of = {il["name"]: g for il, g in zip(INTERLUDES, gaps)}
     for sh in shots:
-        if sh.get("label") and sh["part"].startswith("I"):
-            f0 = int(round(sh["start"] * FPS)) + (8 if sh["start"] > 0 else 3)
-            end = sh["end"]
+        parts = sh["part"].split("+")
+        ipart = next((q for q in parts if q.startswith("I")), None)
+        if sh.get("label") and ipart:
+            g0, g1 = gap_of[ipart]                                             # the label lives in the interlude part
+            s0 = max(sh["start"], g0)
+            f0 = int(round(s0 * FPS)) + (8 if s0 > 0 else 3)
+            end = min(sh["end"], g1) if len(parts) > 1 else sh["end"]
             if sh.get("label_spans_part"):                                    # one label over a whole montage
                 end = max(x["end"] for x in shots if x["part"] == sh["part"])
             labels.append(dict(text=sh["label"], frame=f0, end_frame=int(round(end * FPS)) - 4, fade_out=True, label=True))

@@ -1,0 +1,158 @@
+{
+	"@context": "http://iiif.io/api/presentation/2/context.json",
+	"@type": "sc:Manifest",
+	"@id": "https://iiif.llyfrgell.cymru/manifests/2.0/4669700/manifest.json",
+	"label": "Henry Cole Esqr., evecutive commisioner",
+	"metadata": [
+		{
+			"label": [
+				{
+					"@value": "Title",
+					"@language": "en"
+				},
+				{
+					"@value": "Teitl",
+					"@language": "cy-GB"
+				}
+			],
+			"value": "Henry Cole Esqr., evecutive commisioner"
+		},
+		{
+			"label": [
+				{
+					"@value": "Date",
+					"@language": "en"
+				},
+				{
+					"@value": "Dyddiad",
+					"@language": "cy-GB"
+				}
+			],
+			"value": "1852"
+		},
+		{
+			"label": [
+				{
+					"@value": "Physical description",
+					"@language": "en"
+				},
+				{
+					"@value": "Disgrifiad ffisegol",
+					"@language": "cy-GB"
+				}
+			],
+			"value": "1 print : wood engraving, b&w; 138 x 101 mm."
+		},
+		{
+			"label": "",
+			"value": [
+				{
+					"@value": "<a href=\"http://id.library.wales/9911403302419\">View full catalogue record</a>",
+					"@language": "en"
+				},
+				{
+					"@value": "<a href=\"http://id.llyfrgell.cymru/9911403302419\">Gweld y cofnod catalog llawn</a>",
+					"@language": "cy-GB"
+				}
+			]
+		},
+		{
+			"label": [
+				{
+					"@value": "Permalink",
+					"@language": "en"
+				},
+				{
+					"@value": "Dolen barhaol",
+					"@language": "cy-GB"
+				}
+			],
+			"value": "<a href=\"http://hdl.handle.net/10107/4669700\">http://hdl.handle.net/10107/4669700</a>"
+		},
+		{
+			"label": [
+				{
+					"@value": "Repository",
+					"@language": "en"
+				},
+				{
+					"@value": "Ystorfa",
+					"@language": "cy-GB"
+				}
+			],
+			"value": [
+				{
+					"@value": "This content has been digitised by The National Library of Wales",
+					"@language": "en"
+				},
+				{
+					"@value": "Digidwyd y cynnwys hwn gan Lyfrgell Genedlaethol Cymru",
+					"@language": "cy-GB"
+				}
+			]
+		}
+	],
+	"description": "Civil servant. Director of the South Kensington Museum.",
+	"license": "http://creativecommons.org/publicdomain/mark/1.0/",
+	"logo": {
+		"@id": "https://iiif.llyfrgell.cymru/iiif/logo/full/400,/0/default.jpg",
+		"service": {
+			"@context": "http://iiif.io/api/image/2/context.json",
+			"@id": "https://iiif.llyfrgell.cymru/iiif/logo",
+			"profile": "http://iiif.io/api/image/2/level1.json"
+		}
+	},
+	"attribution": "Llyfrgell Genedlaethol Cymru – The National Library of Wales",
+	"sequences": [
+		{
+			"@id": "https://damsssl.llgc.org.uk/iiif/2.0/4669700/sequence/Physical.json",
+			"@type": "sc:Sequence",
+			"label": "Current Page Order",
+			"viewingDirection": "left-to-right",
+			"viewingHint": "paged",
+			"canvases": [
+				{
+					"@id": "https://damsssl.llgc.org.uk/iiif/2.0/4669700/canvas/4669700.json",
+					"@type": "sc:Canvas",
+					"label": "PD01043",
+					"height": 2514,
+					"width": 1728,
+					"images": [
+						{
+							"@id": "https://damsssl.llgc.org.uk/iiif/2.0/4669700/annotation/4669700.json",
+							"@type": "oa:Annotation",
+							"motivation": "sc:painting",
+							"resource": {
+								"@id": "https://damsssl.llgc.org.uk/iiif/2.0/4669700/res/4669700.jpg",
+								"@type": "dctypes:Image",
+								"format": "image/jpeg",
+								"service": {
+									"@context": "http://iiif.io/api/image/2/context.json",
+									"@id": "https://iiif.llyfrgell.cymru/iiif/4669700",
+									"profile": "http://iiif.io/api/image/2/level1.json",
+									"height": 2514,
+									"width": 1728,
+									"tiles": [
+										{
+											"width": 256,
+											"scaleFactors": [
+												1,
+												2,
+												4,
+												8,
+												16
+											]
+										}
+									]
+								},
+								"height": 2514,
+								"width": 1728
+							},
+							"on": "https://damsssl.llgc.org.uk/iiif/2.0/4669700/canvas/4669700.json"
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -51,7 +51,7 @@ def main(final, captions_path, shutter_only, voice):
         ok = -0.5 / FPS <= lead <= 2.5 / FPS
         bad += not ok
         print(f"{c['text']:30s} f{c['frame']:4d}   {ws:6.3f}s   {lead * 1000:+5.0f} ms {'' if ok else '  <-- OUT OF RANGE'}")
-        wi += 1
+        wi += max(1, len(c["text"].split()))   # step past the caption's words ("the", "a" repeat; '1843' is 3 words: safe, it searches forward)
     fin, ref = hp(load(final)), hp(load(shutter_only))
     offs, weak = [], []
     for c in caps:

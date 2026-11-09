@@ -1,0 +1,125 @@
+{
+ "items": [
+  {
+   "id": "loc_nyc_blizzard_1902",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-12/broll/film/loc_nyc_blizzard_1902/01912444.mp4",
+   "kind": "video",
+   "title": "New York City in a blizzard",
+   "date": "1902 (catalogue: 'Probably photographed on February 17, 1902. Location: New York City.' Copyright: Thomas A. Edison; 24Feb1902; H14438)",
+   "use_for": "film_winter_christmas",
+   "depicts": "Real Edison actuality of Madison Square, New York, during a blizzard; the camera slowly pans. Visible: men in long overcoats and bowler hats standing in thick falling snow beside a snow-covered streetcar; a horse-drawn fire engine trailing smoke; crowds around horse-drawn wagons and cabs; streetcars passing close to the lens; the snow-covered park with bare trees, an ornate lamp post and a monument; then the facade of a large hotel with huge snow banks and pedestrians trudging through deep snow. Black-and-white, soft, grainy paper-print image. No people posting letters, nothing Christmas-specific: use it as the 'winter city' atmosphere shot (it is New York 1902, not London 1843).",
+   "evidence": "loc.gov catalogue summary: '\"A realistic panoramic view taken at Madison Square, New York City, on February 17, 1902. A portion of the New York Fire Department is seen trying to make their way to a fire through the immense snow drifts. A few pedestrians are bravely plodding through the immense piles of snow, and a snow plow is hard at work on the Broadway, underground trolley line, endeavoring to clear the tracks. Madison Square, Madison Square Garden, Broadway, the Fifth Avenue Hotel, and 23rd Street are all shown in succession\"--Edison films catalog.' Contributors: Thomas A. Edison, Inc; Paper Print Collection (Library of Congress). Genre: Actualities; Silent films; Nonfiction films. Downloaded file = the LoC National Screening Room mp4 linked from the item page (tile.loc.gov .../mbrs/ntscrm/01912444/01912444.mp4, 127,323,140 bytes, size matches the item record). Full record saved in loc_item_record.json / meta.json in the same folder.",
+   "source_url": "https://www.loc.gov/item/2017604954/",
+   "licence": "Public domain in the USA (US film published 1902-1904; any copyright long expired). Library of Congress rights statement on the item page: 'The Library of Congress is not aware of any U.S. copyright or other restrictions in the vast majority of motion pictures in these collections. Absent any such restrictions, these materials are free to use and reuse.' Requested credit line: 'Library of Congress, Motion Picture, Broadcasting, and Recorded Sound Division.' Commercial use OK; credit appreciated, not required.",
+   "colour": false,
+   "duration_s": 212.25,
+   "width": 1440,
+   "height": 1080,
+   "subject_box": [
+    0.22,
+    0.3,
+    0.86,
+    1.0
+   ],
+   "usable_ranges": "FILE LAYOUT: 0-6.3 s LoC logo (with a short audio sting), 6.3-7.25 black, 7.29-18.46 LoC-made title card ('NEW YORK CITY IN A BLIZZARD / Thomas A. Edison / 1902 - H14438'), 18.50 one black frame, ORIGINAL FOOTAGE 18.54-201.12 s (182.6 s), 201.17-212.25 LoC end logo. Audio is silent during the footage (-91 dB): mute it. H.264 High 1440x1080 24 fps; ACTIVE PICTURE x 2-1440, y 35-1072 (35 px black band at top, 8 px at bottom, 2 px at left) - crop/zoom in about 3% to hide the bands. Motion is a ~15 fps transfer with about 2 of every 5 frames repeated (slight cadence judder). BEST RANGES: (1) 155.0-160.4 corner of the Fifth Avenue Hotel: chest-high snow banks, men in long coats walking toward/past the camera, a covered cab behind; slow pan. Clean. (2) 161.0-167.0 pan continues along the dark hotel facade, white snow bank, pedestrians crossing; clean, a little darker. (3) 167.5-174.5 hotel corner with a mound of snow, women in long skirts and men walking past; clean (a horse and wagon enter at ~175.5). (4) 29.0-35.8 nearly static wide view in heavy falling snow: groups of men standing on the snowy square, snow-covered streetcar at right, snowfall clearly visible; clean (a horse vehicle enters ~36). (5) 112.9-115.3 snowy Madison Square park, ornate lamp post, bare trees, a group of men standing in snow and a man with an umbrella walking through the foreground; a horse-drawn sleigh/cab sweeps in from 115.5 (white hair-scratch at 112.4, so start after 112.6). (6) 99.2-103.0 park in snow with monument at top right, a horse cab crosses mid-ground; a horse and hansom cab sweep through the near foreground from ~101.0. DEFECTS: black frame at 18.50; frames 18.54-18.58 show a frame-line bar along the top and 18.54-19.75 are darker (exposure jump at 19.79) - do not start before 19.8. SPLICE/JUMP at 124.25->124.29 (frame 2982 has a hair/scratch and damaged bottom edge, then a hard cut to a streetcar close-up). Brief brightness flicker at 50.38, 98.75, 178.92-179.00, 195.62, 197.58. Streetcars and wagons pass right in front of the lens (big dark blurs) at about 51-53, 62-74, 95-98, 109-112, 121-127, 136-139, 144.8-147.5, 152-154.3. The cut to the LoC end logo is at 201.17.",
+   "footage_span_s": [
+    18.54,
+    201.12
+   ],
+   "active_picture_px": {
+    "x": [
+     2,
+     1440
+    ],
+    "y": [
+     35,
+     1072
+    ]
+   },
+   "audio": "AAC track contains only the LoC logo sting at the head and tail; silent during the footage. Strip it.",
+   "file_url": "https://tile.loc.gov/storage-services/service/mbrs/ntscrm/01912444/01912444.mp4",
+   "higher_quality_alt": "https://tile.loc.gov/storage-services/service/mbrs/ntscrm/01912444/01912444.mov (ProRes, 429 MB, same 1440x1080; not downloaded)"
+  },
+  {
+   "id": "loc_collecting_mail_1903",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-12/broll/film/loc_collecting_mail_1903/00051997.mp4",
+   "kind": "video",
+   "title": "Collecting mail, U.S.P.O.",
+   "date": "1903 (catalogue: 'Filmed August 10, 1903 in Washington, D.C.' Copyright: American Mutoscope & Biograph Company; 22Aug03; H34968. Cameraman A. E. Weed)",
+   "use_for": "letters_post",
+   "depicts": "Real Biograph actuality, a sharp, steady close shot of two US mail boxes at a street corner: a small box marked 'U.S.M.' on a pole and a large round-topped box on legs marked 'U.S. MAIL'. A man in a dark suit and derby steps up and slips a letter into the small box (the white envelope is visible at ~18 s). A letter carrier with a shoulder satchel then unlocks the small box and empties the letters into his bag, then crouches at the large box to take out the mail. Behind them: a sunny, wide street with streetcars, cyclists, horse-drawn buggies, men in straw hats, women in long skirts and with a parasol. NOTE: this is SUMMER (August, bright sun, light clothing) in Washington D.C., not winter and not London; it shows the everyday ritual of posting and collecting letters.",
+   "evidence": "loc.gov catalogue summary: '\"The subject is the movement of mail by the U.S. postal service. As the film begins, two types of mail boxes on a pole on the corner of a street can be seen. In the background, away from the camera position, are people going by on foot, as well as horse-drawn and electric streetcar transportation. At the end of the film, a man wearing the uniform of a mailman is seen approaching the mail boxes. He unlocks the boxes and removes the mail from both the small and large boxes\"--Early motion pictures.' Subjects: United States.--Post Office Department; Postal service--Washington (D.C.); Letter mail handling; Letter carriers. Biograph production no. 2467. The footage matches this description (the carrier appears at ~23 s rather than 'at the end'; his clothes do not read clearly as a uniform at this resolution). File = LoC National Screening Room mp4 from the item page (tile.loc.gov .../mbrs/ntscrm/00051997/00051997.mp4, 54,177,048 bytes, size matches the item record). Full record in loc_item_record.json / meta.json.",
+   "source_url": "https://www.loc.gov/item/00564547/",
+   "licence": "Public domain in the USA (US film published 1902-1904; any copyright long expired). Library of Congress rights statement on the item page: 'The Library of Congress is not aware of any U.S. copyright or other restrictions in the vast majority of motion pictures in these collections. Absent any such restrictions, these materials are free to use and reuse.' Requested credit line: 'Library of Congress, Motion Picture, Broadcasting, and Recorded Sound Division.' Commercial use OK; credit appreciated, not required.",
+   "colour": false,
+   "duration_s": 54.96,
+   "width": 1440,
+   "height": 1080,
+   "subject_box": [
+    0.08,
+    0.0,
+    0.52,
+    1.0
+   ],
+   "usable_ranges": "FILE LAYOUT: 0-~6.5 s 'Preserved by Library of Congress / National Audio-Visual Conservation Center' logo, ~7.5-12.5 LoC-made title card 'Collecting Mail, U.S.P.O. (American Mutoscope & Biograph, 1903)', black to 13.00, ORIGINAL FOOTAGE 13.04-53.92 s (40.9 s), black 53.96-54.96. Audio track silent (mute). H.264 High 1440x1080 24 fps; ACTIVE PICTURE = full frame (no pillarbox/letterbox; LoC has already cropped the image to fill 4:3). ~15 fps transfer with about 2 of every 5 frames repeated. BEST RANGES: (1) 16.8-20.2 a man in a dark suit and derby at the small 'U.S.M.' box raises his hand and posts a letter (white envelope visible 17.9-18.9), then turns and leaves left; for 9:16 centre the crop at x ~0.28 of the frame (subject_box). From 15.6-16.6 his back passes very close and out of focus at right - start after 16.6. (2) 23.5-29.5 the letter carrier with a satchel steps up, opens the small box and scoops letters into his bag; a buggy and a cyclist pass behind; crop centre x ~0.30. (3) 29.5-34.5 carrier keeps emptying the small box; a man walks past at right 33.5-34.5. (4) 37.0-42.5 the carrier crouches at the large 'U.S. MAIL' box taking out the mail while a woman in a long skirt and straw hat and other pedestrians pass; crop centre x ~0.55. (5) 43.5-48.0 crouching carrier, a white horse with a buggy trots by behind; (6) 50.5-53.8 women with a parasol and in a black dress walk past the boxes, horse and carriage behind (ends at 53.92, hard cut to black). DEFECTS: no splices, flash frames or intertitles inside the footage; constant light dust specks and fine vertical scratches typical of paper prints; slight brightness dip around 52.0-52.3; the first footage frame is 13.04 (hard cut in from black).",
+   "footage_span_s": [
+    13.04,
+    53.92
+   ],
+   "active_picture_px": {
+    "x": [
+     0,
+     1440
+    ],
+    "y": [
+     0,
+     1080
+    ]
+   },
+   "audio": "AAC track is silent (-91 dB). Strip it.",
+   "file_url": "https://tile.loc.gov/storage-services/service/mbrs/ntscrm/00051997/00051997.mp4",
+   "higher_quality_alt": "https://tile.loc.gov/storage-services/service/mbrs/ntscrm/00051997/00051997.mov (ProRes LT, ~147 MB, same 1440x1080; not downloaded)"
+  },
+  {
+   "id": "loc_sleighing_central_park_1904",
+   "file": "/home/user/SocialMediaMarketingSkill/lab/edit-12/broll/film/loc_sleighing_central_park_1904/01964773.mp4",
+   "kind": "video",
+   "title": "Sleighing in Central Park, New York",
+   "date": "1904 (catalogue: 'Photographed February 8, 1904 in Central Park, New York, N.Y.' Camera: Edwin S. Porter. Copyright: Thomas A. Edison; 4Mar1904; H43006)",
+   "use_for": "film_winter_christmas",
+   "depicts": "Real Edison actuality: a snow-covered meadow/drive in Central Park with a dark band of bare and evergreen trees under a pale sky; one- and two-horse sleighs (including a pair with one white horse) glide across and come close past the camera, one wheeled carriage also passes; a long dark line of spectators/skaters stands along the far edge. Static camera, mostly wide. Black-and-white, fairly dark and contrasty, with flicker. Winter mood rather than street life; New York 1904, not London.",
+   "evidence": "loc.gov catalogue summary: '\"Showing a large number of people enjoying this favorite Winter pastime in Central Park. This scene was taken close by a large lake, and shows thousands of people skating in the background. A most interesting subject. 100 ft.\"--Edison films catalog no. 288.' Subjects: Sleighing--New York; Skating; Winter--New York (State)--New York; Central Park (New York, N.Y.). Contributors: Porter, Edwin S., camera; Thomas A. Edison, Inc; Paper Print Collection. (The skaters are only a dark line of figures in the distance in this transfer.) File = LoC National Screening Room mp4 from the item page (tile.loc.gov .../mbrs/ntscrm/01964773/01964773.mp4, 70,302,426 bytes, size matches the item record). Full record in loc_item_record.json / meta.json.",
+   "source_url": "https://www.loc.gov/item/2016600213/",
+   "licence": "Public domain in the USA (US film published 1902-1904; any copyright long expired). Library of Congress rights statement on the item page: 'The Library of Congress is not aware of any U.S. copyright or other restrictions in the vast majority of motion pictures in these collections. Absent any such restrictions, these materials are free to use and reuse.' Requested credit line: 'Library of Congress, Motion Picture, Broadcasting, and Recorded Sound Division.' Commercial use OK; credit appreciated, not required.",
+   "colour": false,
+   "duration_s": 119.125,
+   "width": 1440,
+   "height": 1080,
+   "subject_box": [
+    0.0,
+    0.25,
+    1.0,
+    0.95
+   ],
+   "usable_ranges": "FILE LAYOUT: 0-~6.2 s LoC logo (with a short audio sting), ~6.2-7.25 black, ORIGINAL FOOTAGE 7.29-108.00 s (100.7 s; no title card), black 108.04-~109.5, LoC end logo ~109.5-117, black to 119.1. Audio silent during the footage: mute it. H.264 High 1440x1080 24 fps; ACTIVE PICTURE = full frame (only a 1-2 px dark line at the left edge; corners are darkly vignetted). ~15 fps transfer with about 2 of every 5 frames repeated. BEST RANGES: (1) 30.0-34.6 a two-horse sleigh (one white, one dark horse) enters from the left and sweeps close past the camera (31.5-34.3); a wheeled carriage follows 34.5-37 (not a sleigh). Flash frames 29.17-29.71 just before - start at 29.8 or later. (2) 23.0-27.6 a one-horse sleigh comes out of the left background and passes close to the camera at 25.5-27; light flicker at 24.5, 25.2, 25.8. (3) 78.0-83.5 a two-horse sleigh approaches from the far background, grows large and exits right at ~83 (white dust speck at 77.2, just before). (4) 66.5-71.0 a sleigh approaches and passes close at right 69-70.6. (5) 95.5-100.5 sleighs glide sideways along the far side in front of the dense line of spectators (white dust speck ~96.6); end before 101. DEFECTS: paper-print exposure flicker throughout (2-3 frame brightness pops of +10-20 luma, e.g. 12.75, 16.6, 37.4, 40.1, 41.1, 53.1, 55.2, 61.5, 89.6-89.9, 97.1-97.2); density drop at 13.75; FLASH FRAMES 29.17-29.71, 102.04-102.17 and 104.71-105.50 (a very bright frame at 104.71) - avoid 101-108; first frames 7.29-8.3 a little brighter than what follows; faint vertical scratch lines and white dust specks. No splices or intertitles inside the footage. Image is dark: lift the mids in grading.",
+   "footage_span_s": [
+    7.29,
+    108.0
+   ],
+   "active_picture_px": {
+    "x": [
+     2,
+     1440
+    ],
+    "y": [
+     0,
+     1080
+    ]
+   },
+   "audio": "AAC track contains only the LoC logo sting at the head/tail; silent during the footage. Strip it.",
+   "file_url": "https://tile.loc.gov/storage-services/service/mbrs/ntscrm/01964773/01964773.mp4",
+   "higher_quality_alt": "https://tile.loc.gov/storage-services/service/mbrs/ntscrm/01964773/01964773.mov (ProRes, 276 MB, same 1440x1080; not downloaded)"
+  }
+ ],
+ "notes": "All three are Library of Congress Paper Print Collection actualities (Edison 1902 and 1904, Biograph 1903) downloaded from tile.loc.gov as linked from each loc.gov item page, at the best mp4 offered (1440x1080 H.264, 4:3). Each mp4 is kept whole, so it still has the LoC logos and LoC-made title cards at the head and tail: use only the 'footage_span_s' part. There is no added music, narration or watermark inside the footage. None of the footage shows London or the 1840s, and none is a Christmas scene: it is US footage from about 60 years after 1843, so present it as period atmosphere (winter streets, posting letters), not as Cole's London. Rejected: 'Post man delivering mail, U.S.P.O.' (1903, https://www.loc.gov/item/00564566/). Its LoC video shows a postman climbing the steps of a stone townhouse, but the catalogue describes a rural two-horse 'U.S. Mail' wagon and a woman buying stamps, so the record and the footage disagree. I deleted that download. Not found at LoC for 1896-1910: a bare-footage London winter scene or a Christmas scene without intertitles."
+}
