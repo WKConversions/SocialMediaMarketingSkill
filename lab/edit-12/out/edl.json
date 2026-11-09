@@ -1,0 +1,2249 @@
+{
+ "fps": 24,
+ "segments": [
+  {
+   "clip": "f01",
+   "src_start": 0.375,
+   "src_end": 2.375,
+   "out_start": 0.0,
+   "out_end": 2.0
+  },
+  {
+   "clip": "f01",
+   "src_start": 2.6667,
+   "src_end": 6.4167,
+   "out_start": 2.0,
+   "out_end": 5.75
+  },
+  {
+   "clip": "f02",
+   "src_start": 0.3333,
+   "src_end": 1.375,
+   "out_start": 5.75,
+   "out_end": 6.7917
+  },
+  {
+   "clip": "f02",
+   "src_start": 1.7083,
+   "src_end": 5.3333,
+   "out_start": 6.7917,
+   "out_end": 10.4167
+  },
+  {
+   "clip": "f02",
+   "src_start": 6.0,
+   "src_end": 7.8333,
+   "out_start": 10.4167,
+   "out_end": 12.25
+  },
+  {
+   "clip": "f03",
+   "src_start": 0.1667,
+   "src_end": 2.0417,
+   "out_start": 12.25,
+   "out_end": 14.125
+  },
+  {
+   "clip": "f04",
+   "src_start": 0.4167,
+   "src_end": 3.0833,
+   "out_start": 14.125,
+   "out_end": 16.7917
+  },
+  {
+   "clip": "f04",
+   "src_start": 3.5833,
+   "src_end": 5.1667,
+   "out_start": 16.7917,
+   "out_end": 18.375
+  },
+  {
+   "clip": "f04",
+   "src_start": 5.3333,
+   "src_end": 6.2083,
+   "out_start": 18.375,
+   "out_end": 19.25
+  },
+  {
+   "clip": "f05",
+   "src_start": 0.2917,
+   "src_end": 1.4583,
+   "out_start": 19.25,
+   "out_end": 20.4167
+  },
+  {
+   "clip": "f05",
+   "src_start": 1.9167,
+   "src_end": 4.7083,
+   "out_start": 20.4167,
+   "out_end": 23.2083
+  },
+  {
+   "clip": "f06",
+   "src_start": 0.0,
+   "src_end": 2.4583,
+   "out_start": 23.2083,
+   "out_end": 25.6667
+  },
+  {
+   "clip": "f07",
+   "src_start": 0.1667,
+   "src_end": 3.3333,
+   "out_start": 25.6667,
+   "out_end": 28.8333
+  },
+  {
+   "clip": "f08",
+   "src_start": 0.0417,
+   "src_end": 3.7083,
+   "out_start": 28.8333,
+   "out_end": 32.5
+  },
+  {
+   "clip": "f09",
+   "src_start": 0.1667,
+   "src_end": 1.875,
+   "out_start": 32.5,
+   "out_end": 34.2083
+  },
+  {
+   "clip": "f09",
+   "src_start": 2.125,
+   "src_end": 5.4167,
+   "out_start": 34.2083,
+   "out_end": 37.5
+  },
+  {
+   "clip": "f10",
+   "src_start": 0.0,
+   "src_end": 3.0,
+   "out_start": 37.5,
+   "out_end": 40.5
+  },
+  {
+   "clip": "f11",
+   "src_start": 0.1667,
+   "src_end": 2.5833,
+   "out_start": 40.5,
+   "out_end": 42.9167
+  },
+  {
+   "clip": "f12",
+   "src_start": 0.0417,
+   "src_end": 1.4583,
+   "out_start": 42.9167,
+   "out_end": 44.3333
+  },
+  {
+   "clip": "f12",
+   "src_start": 2.1667,
+   "src_end": 3.0833,
+   "out_start": 44.3333,
+   "out_end": 45.25
+  },
+  {
+   "clip": "f12",
+   "src_start": 3.75,
+   "src_end": 4.8333,
+   "out_start": 45.25,
+   "out_end": 46.3333
+  },
+  {
+   "clip": "f12",
+   "src_start": 5.4167,
+   "src_end": 6.0417,
+   "out_start": 46.3333,
+   "out_end": 46.9583
+  },
+  {
+   "clip": "f12",
+   "src_start": 6.5833,
+   "src_end": 7.125,
+   "out_start": 46.9583,
+   "out_end": 47.5
+  },
+  {
+   "clip": "f13",
+   "src_start": 0.0,
+   "src_end": 4.3333,
+   "out_start": 47.5,
+   "out_end": 51.8333
+  },
+  {
+   "clip": "f14",
+   "src_start": 0.5417,
+   "src_end": 1.2917,
+   "out_start": 51.8333,
+   "out_end": 52.5833
+  },
+  {
+   "clip": "f14",
+   "src_start": 1.5833,
+   "src_end": 3.1667,
+   "out_start": 52.5833,
+   "out_end": 54.1667
+  },
+  {
+   "clip": "f15",
+   "src_start": 0.0417,
+   "src_end": 2.2083,
+   "out_start": 54.1667,
+   "out_end": 56.3333
+  },
+  {
+   "clip": "f15",
+   "src_start": 2.375,
+   "src_end": 3.375,
+   "out_start": 56.3333,
+   "out_end": 57.3333
+  },
+  {
+   "clip": "f16",
+   "src_start": 0.0417,
+   "src_end": 2.5833,
+   "out_start": 57.3333,
+   "out_end": 59.875
+  },
+  {
+   "clip": "f17",
+   "src_start": 0.0833,
+   "src_end": 3.6667,
+   "out_start": 59.875,
+   "out_end": 63.4583
+  }
+ ],
+ "words": [
+  {
+   "word": "in",
+   "clip": "f01",
+   "idx": 0,
+   "score": 1.0,
+   "src_start": 0.481,
+   "src_end": 0.521,
+   "start": 0.106,
+   "end": 0.146
+  },
+  {
+   "word": "the",
+   "clip": "f01",
+   "idx": 1,
+   "score": 1.0,
+   "src_start": 0.582,
+   "src_end": 0.662,
+   "start": 0.207,
+   "end": 0.287
+  },
+  {
+   "word": "winter",
+   "clip": "f01",
+   "idx": 2,
+   "score": 1.0,
+   "src_start": 0.702,
+   "src_end": 1.003,
+   "start": 0.327,
+   "end": 0.628
+  },
+  {
+   "word": "of",
+   "clip": "f01",
+   "idx": 3,
+   "score": 1.0,
+   "src_start": 1.083,
+   "src_end": 1.143,
+   "start": 0.708,
+   "end": 0.768
+  },
+  {
+   "word": "eighteen",
+   "clip": "f01",
+   "idx": 4,
+   "score": 1.0,
+   "src_start": 1.324,
+   "src_end": 1.604,
+   "start": 0.949,
+   "end": 1.229
+  },
+  {
+   "word": "forty",
+   "clip": "f01",
+   "idx": 5,
+   "score": 1.0,
+   "src_start": 1.685,
+   "src_end": 1.985,
+   "start": 1.31,
+   "end": 1.61
+  },
+  {
+   "word": "three",
+   "clip": "f01",
+   "idx": 6,
+   "score": 1.0,
+   "src_start": 2.046,
+   "src_end": 2.246,
+   "start": 1.671,
+   "end": 1.871
+  },
+  {
+   "word": "the",
+   "clip": "f01",
+   "idx": 7,
+   "score": 1.0,
+   "src_start": 2.748,
+   "src_end": 2.828,
+   "start": 2.0813,
+   "end": 2.1613
+  },
+  {
+   "word": "london",
+   "clip": "f01",
+   "idx": 8,
+   "score": 1.0,
+   "src_start": 2.888,
+   "src_end": 3.209,
+   "start": 2.2213,
+   "end": 2.5423
+  },
+  {
+   "word": "streets",
+   "clip": "f01",
+   "idx": 9,
+   "score": 1.0,
+   "src_start": 3.289,
+   "src_end": 3.67,
+   "start": 2.6223,
+   "end": 3.0033
+  },
+  {
+   "word": "were",
+   "clip": "f01",
+   "idx": 10,
+   "score": 1.0,
+   "src_start": 3.77,
+   "src_end": 3.911,
+   "start": 3.1033,
+   "end": 3.2443
+  },
+  {
+   "word": "filled",
+   "clip": "f01",
+   "idx": 11,
+   "score": 1.0,
+   "src_start": 4.011,
+   "src_end": 4.352,
+   "start": 3.3443,
+   "end": 3.6853
+  },
+  {
+   "word": "with",
+   "clip": "f01",
+   "idx": 12,
+   "score": 1.0,
+   "src_start": 4.432,
+   "src_end": 4.593,
+   "start": 3.7653,
+   "end": 3.9263
+  },
+  {
+   "word": "the",
+   "clip": "f01",
+   "idx": 13,
+   "score": 1.0,
+   "src_start": 4.653,
+   "src_end": 4.753,
+   "start": 3.9863,
+   "end": 4.0863
+  },
+  {
+   "word": "charm",
+   "clip": "f01",
+   "idx": 14,
+   "score": 1.0,
+   "src_start": 4.833,
+   "src_end": 5.214,
+   "start": 4.1663,
+   "end": 4.5473
+  },
+  {
+   "word": "of",
+   "clip": "f01",
+   "idx": 15,
+   "score": 0.998,
+   "src_start": 5.475,
+   "src_end": 5.595,
+   "start": 4.8083,
+   "end": 4.9283
+  },
+  {
+   "word": "christmas",
+   "clip": "f01",
+   "idx": 16,
+   "score": 1.0,
+   "src_start": 5.796,
+   "src_end": 6.297,
+   "start": 5.1293,
+   "end": 5.6303
+  },
+  {
+   "word": "behind",
+   "clip": "f02",
+   "idx": 0,
+   "score": 1.0,
+   "src_start": 0.421,
+   "src_end": 0.782,
+   "start": 5.8377,
+   "end": 6.1987
+  },
+  {
+   "word": "the",
+   "clip": "f02",
+   "idx": 1,
+   "score": 0.213,
+   "src_start": 0.822,
+   "src_end": 0.922,
+   "start": 6.2387,
+   "end": 6.3387
+  },
+  {
+   "word": "desk",
+   "clip": "f02",
+   "idx": 2,
+   "score": 1.0,
+   "src_start": 0.962,
+   "src_end": 1.283,
+   "start": 6.3787,
+   "end": 6.6997
+  },
+  {
+   "word": "sat",
+   "clip": "f02",
+   "idx": 3,
+   "score": 1.0,
+   "src_start": 1.804,
+   "src_end": 1.964,
+   "start": 6.8873,
+   "end": 7.0473
+  },
+  {
+   "word": "a",
+   "clip": "f02",
+   "idx": 4,
+   "score": 0.997,
+   "src_start": 2.064,
+   "src_end": 2.084,
+   "start": 7.1473,
+   "end": 7.1673
+  },
+  {
+   "word": "gentleman",
+   "clip": "f02",
+   "idx": 5,
+   "score": 0.898,
+   "src_start": 2.165,
+   "src_end": 2.666,
+   "start": 7.2483,
+   "end": 7.7493
+  },
+  {
+   "word": "surrounded",
+   "clip": "f02",
+   "idx": 6,
+   "score": 1.0,
+   "src_start": 3.006,
+   "src_end": 3.548,
+   "start": 8.0893,
+   "end": 8.6313
+  },
+  {
+   "word": "by",
+   "clip": "f02",
+   "idx": 7,
+   "score": 1.0,
+   "src_start": 3.628,
+   "src_end": 3.788,
+   "start": 8.7113,
+   "end": 8.8713
+  },
+  {
+   "word": "envelopes",
+   "clip": "f02",
+   "idx": 8,
+   "score": 1.0,
+   "src_start": 4.029,
+   "src_end": 4.61,
+   "start": 9.1123,
+   "end": 9.6933
+  },
+  {
+   "word": "and",
+   "clip": "f02",
+   "idx": 9,
+   "score": 1.0,
+   "src_start": 4.73,
+   "src_end": 4.79,
+   "start": 9.8133,
+   "end": 9.8733
+  },
+  {
+   "word": "letters",
+   "clip": "f02",
+   "idx": 10,
+   "score": 1.0,
+   "src_start": 4.87,
+   "src_end": 5.211,
+   "start": 9.9533,
+   "end": 10.2943
+  },
+  {
+   "word": "his",
+   "clip": "f02",
+   "idx": 11,
+   "score": 1.0,
+   "src_start": 6.073,
+   "src_end": 6.193,
+   "start": 10.4897,
+   "end": 10.6097
+  },
+  {
+   "word": "name",
+   "clip": "f02",
+   "idx": 12,
+   "score": 1.0,
+   "src_start": 6.273,
+   "src_end": 6.474,
+   "start": 10.6897,
+   "end": 10.8907
+  },
+  {
+   "word": "was",
+   "clip": "f02",
+   "idx": 13,
+   "score": 1.0,
+   "src_start": 6.514,
+   "src_end": 6.634,
+   "start": 10.9307,
+   "end": 11.0507
+  },
+  {
+   "word": "sir",
+   "clip": "f02",
+   "idx": 14,
+   "score": 1.0,
+   "src_start": 6.734,
+   "src_end": 6.935,
+   "start": 11.1507,
+   "end": 11.3517
+  },
+  {
+   "word": "henry",
+   "clip": "f02",
+   "idx": 15,
+   "score": 0.999,
+   "src_start": 7.055,
+   "src_end": 7.356,
+   "start": 11.4717,
+   "end": 11.7727
+  },
+  {
+   "word": "cole",
+   "clip": "f02",
+   "idx": 16,
+   "score": 0.773,
+   "src_start": 7.416,
+   "src_end": 7.716,
+   "start": 11.8327,
+   "end": 12.1327
+  },
+  {
+   "word": "he",
+   "clip": "f03",
+   "idx": 0,
+   "score": 1.0,
+   "src_start": 0.261,
+   "src_end": 0.361,
+   "start": 12.3443,
+   "end": 12.4443
+  },
+  {
+   "word": "had",
+   "clip": "f03",
+   "idx": 1,
+   "score": 1.0,
+   "src_start": 0.422,
+   "src_end": 0.542,
+   "start": 12.5053,
+   "end": 12.6253
+  },
+  {
+   "word": "a",
+   "clip": "f03",
+   "idx": 2,
+   "score": 1.0,
+   "src_start": 0.643,
+   "src_end": 0.663,
+   "start": 12.7263,
+   "end": 12.7463
+  },
+  {
+   "word": "rather",
+   "clip": "f03",
+   "idx": 3,
+   "score": 1.0,
+   "src_start": 0.723,
+   "src_end": 1.004,
+   "start": 12.8063,
+   "end": 13.0873
+  },
+  {
+   "word": "simple",
+   "clip": "f03",
+   "idx": 4,
+   "score": 1.0,
+   "src_start": 1.104,
+   "src_end": 1.486,
+   "start": 13.1873,
+   "end": 13.5693
+  },
+  {
+   "word": "problem",
+   "clip": "f03",
+   "idx": 5,
+   "score": 1.0,
+   "src_start": 1.606,
+   "src_end": 1.928,
+   "start": 13.6893,
+   "end": 14.0113
+  },
+  {
+   "word": "there",
+   "clip": "f04",
+   "idx": 0,
+   "score": 1.0,
+   "src_start": 0.522,
+   "src_end": 0.642,
+   "start": 14.2303,
+   "end": 14.3503
+  },
+  {
+   "word": "are",
+   "clip": "f04",
+   "idx": 1,
+   "score": 0.998,
+   "src_start": 0.682,
+   "src_end": 0.763,
+   "start": 14.3903,
+   "end": 14.4713
+  },
+  {
+   "word": "so",
+   "clip": "f04",
+   "idx": 2,
+   "score": 1.0,
+   "src_start": 0.803,
+   "src_end": 0.903,
+   "start": 14.5113,
+   "end": 14.6113
+  },
+  {
+   "word": "many",
+   "clip": "f04",
+   "idx": 3,
+   "score": 1.0,
+   "src_start": 1.003,
+   "src_end": 1.164,
+   "start": 14.7113,
+   "end": 14.8723
+  },
+  {
+   "word": "people",
+   "clip": "f04",
+   "idx": 4,
+   "score": 1.0,
+   "src_start": 1.224,
+   "src_end": 1.485,
+   "start": 14.9323,
+   "end": 15.1933
+  },
+  {
+   "word": "he",
+   "clip": "f04",
+   "idx": 5,
+   "score": 0.682,
+   "src_start": 1.525,
+   "src_end": 1.585,
+   "start": 15.2333,
+   "end": 15.2933
+  },
+  {
+   "word": "wanted",
+   "clip": "f04",
+   "idx": 6,
+   "score": 0.999,
+   "src_start": 1.626,
+   "src_end": 1.826,
+   "start": 15.3343,
+   "end": 15.5343
+  },
+  {
+   "word": "to",
+   "clip": "f04",
+   "idx": 7,
+   "score": 0.999,
+   "src_start": 1.866,
+   "src_end": 1.927,
+   "start": 15.5743,
+   "end": 15.6353
+  },
+  {
+   "word": "wish",
+   "clip": "f04",
+   "idx": 8,
+   "score": 0.996,
+   "src_start": 1.967,
+   "src_end": 2.107,
+   "start": 15.6753,
+   "end": 15.8153
+  },
+  {
+   "word": "a",
+   "clip": "f04",
+   "idx": 9,
+   "score": 0.256,
+   "src_start": 2.188,
+   "src_end": 2.208,
+   "start": 15.8963,
+   "end": 15.9163
+  },
+  {
+   "word": "merry",
+   "clip": "f04",
+   "idx": 10,
+   "score": 0.807,
+   "src_start": 2.268,
+   "src_end": 2.529,
+   "start": 15.9763,
+   "end": 16.2373
+  },
+  {
+   "word": "christmas",
+   "clip": "f04",
+   "idx": 11,
+   "score": 1.0,
+   "src_start": 2.569,
+   "src_end": 2.99,
+   "start": 16.2773,
+   "end": 16.6983
+  },
+  {
+   "word": "but",
+   "clip": "f04",
+   "idx": 12,
+   "score": 0.999,
+   "src_start": 3.673,
+   "src_end": 3.733,
+   "start": 16.8813,
+   "end": 16.9413
+  },
+  {
+   "word": "he",
+   "clip": "f04",
+   "idx": 13,
+   "score": 0.944,
+   "src_start": 3.773,
+   "src_end": 3.833,
+   "start": 16.9813,
+   "end": 17.0413
+  },
+  {
+   "word": "had",
+   "clip": "f04",
+   "idx": 14,
+   "score": 0.997,
+   "src_start": 3.873,
+   "src_end": 3.954,
+   "start": 17.0813,
+   "end": 17.1623
+  },
+  {
+   "word": "so",
+   "clip": "f04",
+   "idx": 15,
+   "score": 0.999,
+   "src_start": 4.074,
+   "src_end": 4.235,
+   "start": 17.2823,
+   "end": 17.4433
+  },
+  {
+   "word": "little",
+   "clip": "f04",
+   "idx": 16,
+   "score": 1.0,
+   "src_start": 4.375,
+   "src_end": 4.616,
+   "start": 17.5833,
+   "end": 17.8243
+  },
+  {
+   "word": "time",
+   "clip": "f04",
+   "idx": 17,
+   "score": 1.0,
+   "src_start": 4.716,
+   "src_end": 5.037,
+   "start": 17.9243,
+   "end": 18.2453
+  },
+  {
+   "word": "to",
+   "clip": "f04",
+   "idx": 18,
+   "score": 1.0,
+   "src_start": 5.419,
+   "src_end": 5.499,
+   "start": 18.4607,
+   "end": 18.5407
+  },
+  {
+   "word": "write",
+   "clip": "f04",
+   "idx": 19,
+   "score": 0.774,
+   "src_start": 5.539,
+   "src_end": 5.74,
+   "start": 18.5807,
+   "end": 18.7817
+  },
+  {
+   "word": "them",
+   "clip": "f04",
+   "idx": 20,
+   "score": 1.0,
+   "src_start": 5.78,
+   "src_end": 5.88,
+   "start": 18.8217,
+   "end": 18.9217
+  },
+  {
+   "word": "all",
+   "clip": "f04",
+   "idx": 21,
+   "score": 1.0,
+   "src_start": 5.981,
+   "src_end": 6.101,
+   "start": 19.0227,
+   "end": 19.1427
+  },
+  {
+   "word": "so",
+   "clip": "f05",
+   "idx": 0,
+   "score": 1.0,
+   "src_start": 0.381,
+   "src_end": 0.482,
+   "start": 19.3393,
+   "end": 19.4403
+  },
+  {
+   "word": "he",
+   "clip": "f05",
+   "idx": 1,
+   "score": 1.0,
+   "src_start": 0.542,
+   "src_end": 0.602,
+   "start": 19.5003,
+   "end": 19.5603
+  },
+  {
+   "word": "turned",
+   "clip": "f05",
+   "idx": 2,
+   "score": 1.0,
+   "src_start": 0.642,
+   "src_end": 0.843,
+   "start": 19.6003,
+   "end": 19.8013
+  },
+  {
+   "word": "to",
+   "clip": "f05",
+   "idx": 3,
+   "score": 1.0,
+   "src_start": 0.883,
+   "src_end": 0.923,
+   "start": 19.8413,
+   "end": 19.8813
+  },
+  {
+   "word": "his",
+   "clip": "f05",
+   "idx": 4,
+   "score": 1.0,
+   "src_start": 0.984,
+   "src_end": 1.064,
+   "start": 19.9423,
+   "end": 20.0223
+  },
+  {
+   "word": "friend",
+   "clip": "f05",
+   "idx": 5,
+   "score": 1.0,
+   "src_start": 1.104,
+   "src_end": 1.345,
+   "start": 20.0623,
+   "end": 20.3033
+  },
+  {
+   "word": "an",
+   "clip": "f05",
+   "idx": 6,
+   "score": 1.0,
+   "src_start": 2.027,
+   "src_end": 2.067,
+   "start": 20.527,
+   "end": 20.567
+  },
+  {
+   "word": "artist",
+   "clip": "f05",
+   "idx": 7,
+   "score": 1.0,
+   "src_start": 2.208,
+   "src_end": 2.589,
+   "start": 20.708,
+   "end": 21.089
+  },
+  {
+   "word": "named",
+   "clip": "f05",
+   "idx": 8,
+   "score": 1.0,
+   "src_start": 2.77,
+   "src_end": 3.031,
+   "start": 21.27,
+   "end": 21.531
+  },
+  {
+   "word": "john",
+   "clip": "f05",
+   "idx": 9,
+   "score": 0.998,
+   "src_start": 3.171,
+   "src_end": 3.412,
+   "start": 21.671,
+   "end": 21.912
+  },
+  {
+   "word": "callcott",
+   "clip": "f05",
+   "idx": 10,
+   "score": 0.625,
+   "src_start": 3.613,
+   "src_end": 4.095,
+   "start": 22.113,
+   "end": 22.595
+  },
+  {
+   "word": "horsley",
+   "clip": "f05",
+   "idx": 11,
+   "score": 0.983,
+   "src_start": 4.155,
+   "src_end": 4.596,
+   "start": 22.655,
+   "end": 23.096
+  },
+  {
+   "word": "together",
+   "clip": "f06",
+   "idx": 0,
+   "score": 1.0,
+   "src_start": 0.04,
+   "src_end": 0.442,
+   "start": 23.2483,
+   "end": 23.6503
+  },
+  {
+   "word": "they",
+   "clip": "f06",
+   "idx": 1,
+   "score": 1.0,
+   "src_start": 0.562,
+   "src_end": 0.703,
+   "start": 23.7703,
+   "end": 23.9113
+  },
+  {
+   "word": "came",
+   "clip": "f06",
+   "idx": 2,
+   "score": 1.0,
+   "src_start": 0.763,
+   "src_end": 0.924,
+   "start": 23.9713,
+   "end": 24.1323
+  },
+  {
+   "word": "up",
+   "clip": "f06",
+   "idx": 3,
+   "score": 0.999,
+   "src_start": 0.984,
+   "src_end": 1.084,
+   "start": 24.1923,
+   "end": 24.2923
+  },
+  {
+   "word": "with",
+   "clip": "f06",
+   "idx": 4,
+   "score": 1.0,
+   "src_start": 1.165,
+   "src_end": 1.305,
+   "start": 24.3733,
+   "end": 24.5133
+  },
+  {
+   "word": "a",
+   "clip": "f06",
+   "idx": 5,
+   "score": 1.0,
+   "src_start": 1.385,
+   "src_end": 1.405,
+   "start": 24.5933,
+   "end": 24.6133
+  },
+  {
+   "word": "lovely",
+   "clip": "f06",
+   "idx": 6,
+   "score": 1.0,
+   "src_start": 1.546,
+   "src_end": 1.887,
+   "start": 24.7543,
+   "end": 25.0953
+  },
+  {
+   "word": "idea",
+   "clip": "f06",
+   "idx": 7,
+   "score": 1.0,
+   "src_start": 2.048,
+   "src_end": 2.349,
+   "start": 25.2563,
+   "end": 25.5573
+  },
+  {
+   "word": "instead",
+   "clip": "f07",
+   "idx": 0,
+   "score": 1.0,
+   "src_start": 0.261,
+   "src_end": 0.583,
+   "start": 25.761,
+   "end": 26.083
+  },
+  {
+   "word": "of",
+   "clip": "f07",
+   "idx": 1,
+   "score": 0.999,
+   "src_start": 0.643,
+   "src_end": 0.703,
+   "start": 26.143,
+   "end": 26.203
+  },
+  {
+   "word": "writing",
+   "clip": "f07",
+   "idx": 2,
+   "score": 1.0,
+   "src_start": 0.784,
+   "src_end": 1.166,
+   "start": 26.284,
+   "end": 26.666
+  },
+  {
+   "word": "a",
+   "clip": "f07",
+   "idx": 3,
+   "score": 0.998,
+   "src_start": 1.246,
+   "src_end": 1.266,
+   "start": 26.746,
+   "end": 26.766
+  },
+  {
+   "word": "different",
+   "clip": "f07",
+   "idx": 4,
+   "score": 1.0,
+   "src_start": 1.326,
+   "src_end": 1.648,
+   "start": 26.826,
+   "end": 27.148
+  },
+  {
+   "word": "letter",
+   "clip": "f07",
+   "idx": 5,
+   "score": 1.0,
+   "src_start": 1.688,
+   "src_end": 1.889,
+   "start": 27.188,
+   "end": 27.389
+  },
+  {
+   "word": "to",
+   "clip": "f07",
+   "idx": 6,
+   "score": 1.0,
+   "src_start": 1.949,
+   "src_end": 2.03,
+   "start": 27.449,
+   "end": 27.53
+  },
+  {
+   "word": "every",
+   "clip": "f07",
+   "idx": 7,
+   "score": 1.0,
+   "src_start": 2.231,
+   "src_end": 2.512,
+   "start": 27.731,
+   "end": 28.012
+  },
+  {
+   "word": "single",
+   "clip": "f07",
+   "idx": 8,
+   "score": 1.0,
+   "src_start": 2.592,
+   "src_end": 2.874,
+   "start": 28.092,
+   "end": 28.374
+  },
+  {
+   "word": "friend",
+   "clip": "f07",
+   "idx": 9,
+   "score": 1.0,
+   "src_start": 2.934,
+   "src_end": 3.215,
+   "start": 28.434,
+   "end": 28.715
+  },
+  {
+   "word": "why",
+   "clip": "f08",
+   "idx": 0,
+   "score": 1.0,
+   "src_start": 0.141,
+   "src_end": 0.282,
+   "start": 28.9327,
+   "end": 29.0737
+  },
+  {
+   "word": "not",
+   "clip": "f08",
+   "idx": 1,
+   "score": 0.999,
+   "src_start": 0.322,
+   "src_end": 0.443,
+   "start": 29.1137,
+   "end": 29.2347
+  },
+  {
+   "word": "send",
+   "clip": "f08",
+   "idx": 2,
+   "score": 0.764,
+   "src_start": 0.483,
+   "src_end": 0.664,
+   "start": 29.2747,
+   "end": 29.4557
+  },
+  {
+   "word": "an",
+   "clip": "f08",
+   "idx": 3,
+   "score": 0.99,
+   "src_start": 0.725,
+   "src_end": 0.785,
+   "start": 29.5167,
+   "end": 29.5767
+  },
+  {
+   "word": "illustration",
+   "clip": "f08",
+   "idx": 4,
+   "score": 1.0,
+   "src_start": 0.825,
+   "src_end": 1.51,
+   "start": 29.6167,
+   "end": 30.3017
+  },
+  {
+   "word": "carrying",
+   "clip": "f08",
+   "idx": 5,
+   "score": 1.0,
+   "src_start": 1.812,
+   "src_end": 2.234,
+   "start": 30.6037,
+   "end": 31.0257
+  },
+  {
+   "word": "the",
+   "clip": "f08",
+   "idx": 6,
+   "score": 1.0,
+   "src_start": 2.295,
+   "src_end": 2.375,
+   "start": 31.0867,
+   "end": 31.1667
+  },
+  {
+   "word": "warmth",
+   "clip": "f08",
+   "idx": 7,
+   "score": 1.0,
+   "src_start": 2.456,
+   "src_end": 2.858,
+   "start": 31.2477,
+   "end": 31.6497
+  },
+  {
+   "word": "of",
+   "clip": "f08",
+   "idx": 8,
+   "score": 0.999,
+   "src_start": 2.999,
+   "src_end": 3.06,
+   "start": 31.7907,
+   "end": 31.8517
+  },
+  {
+   "word": "christmas",
+   "clip": "f08",
+   "idx": 9,
+   "score": 1.0,
+   "src_start": 3.14,
+   "src_end": 3.583,
+   "start": 31.9317,
+   "end": 32.3747
+  },
+  {
+   "word": "horsley",
+   "clip": "f09",
+   "idx": 0,
+   "score": 0.873,
+   "src_start": 0.241,
+   "src_end": 0.582,
+   "start": 32.5743,
+   "end": 32.9153
+  },
+  {
+   "word": "painted",
+   "clip": "f09",
+   "idx": 1,
+   "score": 1.0,
+   "src_start": 0.642,
+   "src_end": 0.903,
+   "start": 32.9753,
+   "end": 33.2363
+  },
+  {
+   "word": "a",
+   "clip": "f09",
+   "idx": 2,
+   "score": 0.998,
+   "src_start": 0.963,
+   "src_end": 0.983,
+   "start": 33.2963,
+   "end": 33.3163
+  },
+  {
+   "word": "family",
+   "clip": "f09",
+   "idx": 3,
+   "score": 1.0,
+   "src_start": 1.024,
+   "src_end": 1.325,
+   "start": 33.3573,
+   "end": 33.6583
+  },
+  {
+   "word": "gathering",
+   "clip": "f09",
+   "idx": 4,
+   "score": 1.0,
+   "src_start": 1.365,
+   "src_end": 1.746,
+   "start": 33.6983,
+   "end": 34.0793
+  },
+  {
+   "word": "with",
+   "clip": "f09",
+   "idx": 5,
+   "score": 1.0,
+   "src_start": 2.228,
+   "src_end": 2.368,
+   "start": 34.3113,
+   "end": 34.4513
+  },
+  {
+   "word": "a",
+   "clip": "f09",
+   "idx": 6,
+   "score": 0.993,
+   "src_start": 2.429,
+   "src_end": 2.449,
+   "start": 34.5123,
+   "end": 34.5323
+  },
+  {
+   "word": "lot",
+   "clip": "f09",
+   "idx": 7,
+   "score": 1.0,
+   "src_start": 2.509,
+   "src_end": 2.629,
+   "start": 34.5923,
+   "end": 34.7123
+  },
+  {
+   "word": "of",
+   "clip": "f09",
+   "idx": 8,
+   "score": 1.0,
+   "src_start": 2.669,
+   "src_end": 2.73,
+   "start": 34.7523,
+   "end": 34.8133
+  },
+  {
+   "word": "kindness",
+   "clip": "f09",
+   "idx": 9,
+   "score": 1.0,
+   "src_start": 2.79,
+   "src_end": 3.211,
+   "start": 34.8733,
+   "end": 35.2943
+  },
+  {
+   "word": "and",
+   "clip": "f09",
+   "idx": 10,
+   "score": 1.0,
+   "src_start": 3.452,
+   "src_end": 3.553,
+   "start": 35.5353,
+   "end": 35.6363
+  },
+  {
+   "word": "warmth",
+   "clip": "f09",
+   "idx": 11,
+   "score": 1.0,
+   "src_start": 3.653,
+   "src_end": 4.034,
+   "start": 35.7363,
+   "end": 36.1173
+  },
+  {
+   "word": "from",
+   "clip": "f09",
+   "idx": 12,
+   "score": 1.0,
+   "src_start": 4.255,
+   "src_end": 4.436,
+   "start": 36.3383,
+   "end": 36.5193
+  },
+  {
+   "word": "either",
+   "clip": "f09",
+   "idx": 13,
+   "score": 1.0,
+   "src_start": 4.656,
+   "src_end": 4.897,
+   "start": 36.7393,
+   "end": 36.9803
+  },
+  {
+   "word": "side",
+   "clip": "f09",
+   "idx": 14,
+   "score": 1.0,
+   "src_start": 5.018,
+   "src_end": 5.319,
+   "start": 37.1013,
+   "end": 37.4023
+  },
+  {
+   "word": "and",
+   "clip": "f10",
+   "idx": 0,
+   "score": 1.0,
+   "src_start": 0.02,
+   "src_end": 0.101,
+   "start": 37.52,
+   "end": 37.601
+  },
+  {
+   "word": "beneath",
+   "clip": "f10",
+   "idx": 1,
+   "score": 1.0,
+   "src_start": 0.181,
+   "src_end": 0.523,
+   "start": 37.681,
+   "end": 38.023
+  },
+  {
+   "word": "the",
+   "clip": "f10",
+   "idx": 2,
+   "score": 1.0,
+   "src_start": 0.664,
+   "src_end": 0.785,
+   "start": 38.164,
+   "end": 38.285
+  },
+  {
+   "word": "illustration",
+   "clip": "f10",
+   "idx": 3,
+   "score": 1.0,
+   "src_start": 0.865,
+   "src_end": 1.509,
+   "start": 38.365,
+   "end": 39.009
+  },
+  {
+   "word": "were",
+   "clip": "f10",
+   "idx": 4,
+   "score": 1.0,
+   "src_start": 1.75,
+   "src_end": 1.871,
+   "start": 39.25,
+   "end": 39.371
+  },
+  {
+   "word": "the",
+   "clip": "f10",
+   "idx": 5,
+   "score": 1.0,
+   "src_start": 1.911,
+   "src_end": 1.972,
+   "start": 39.411,
+   "end": 39.472
+  },
+  {
+   "word": "written",
+   "clip": "f10",
+   "idx": 6,
+   "score": 1.0,
+   "src_start": 2.032,
+   "src_end": 2.314,
+   "start": 39.532,
+   "end": 39.814
+  },
+  {
+   "word": "words",
+   "clip": "f10",
+   "idx": 7,
+   "score": 1.0,
+   "src_start": 2.435,
+   "src_end": 2.897,
+   "start": 39.935,
+   "end": 40.397
+  },
+  {
+   "word": "a",
+   "clip": "f11",
+   "idx": 0,
+   "score": 0.996,
+   "src_start": 0.261,
+   "src_end": 0.281,
+   "start": 40.5943,
+   "end": 40.6143
+  },
+  {
+   "word": "merry",
+   "clip": "f11",
+   "idx": 1,
+   "score": 0.924,
+   "src_start": 0.442,
+   "src_end": 0.703,
+   "start": 40.7753,
+   "end": 41.0363
+  },
+  {
+   "word": "christmas",
+   "clip": "f11",
+   "idx": 2,
+   "score": 1.0,
+   "src_start": 0.743,
+   "src_end": 1.185,
+   "start": 41.0763,
+   "end": 41.5183
+  },
+  {
+   "word": "and",
+   "clip": "f11",
+   "idx": 3,
+   "score": 0.92,
+   "src_start": 1.306,
+   "src_end": 1.366,
+   "start": 41.6393,
+   "end": 41.6993
+  },
+  {
+   "word": "a",
+   "clip": "f11",
+   "idx": 4,
+   "score": 0.061,
+   "src_start": 1.386,
+   "src_end": 1.406,
+   "start": 41.7193,
+   "end": 41.7393
+  },
+  {
+   "word": "happy",
+   "clip": "f11",
+   "idx": 5,
+   "score": 0.996,
+   "src_start": 1.446,
+   "src_end": 1.727,
+   "start": 41.7793,
+   "end": 42.0603
+  },
+  {
+   "word": "new",
+   "clip": "f11",
+   "idx": 6,
+   "score": 1.0,
+   "src_start": 1.788,
+   "src_end": 1.888,
+   "start": 42.1213,
+   "end": 42.2213
+  },
+  {
+   "word": "year",
+   "clip": "f11",
+   "idx": 7,
+   "score": 0.999,
+   "src_start": 1.948,
+   "src_end": 2.109,
+   "start": 42.2813,
+   "end": 42.4423
+  },
+  {
+   "word": "to",
+   "clip": "f11",
+   "idx": 8,
+   "score": 0.999,
+   "src_start": 2.189,
+   "src_end": 2.29,
+   "start": 42.5223,
+   "end": 42.6233
+  },
+  {
+   "word": "you",
+   "clip": "f11",
+   "idx": 9,
+   "score": 0.999,
+   "src_start": 2.37,
+   "src_end": 2.491,
+   "start": 42.7033,
+   "end": 42.8243
+  },
+  {
+   "word": "it",
+   "clip": "f12",
+   "idx": 0,
+   "score": 0.999,
+   "src_start": 0.12,
+   "src_end": 0.18,
+   "start": 42.995,
+   "end": 43.055
+  },
+  {
+   "word": "was",
+   "clip": "f12",
+   "idx": 1,
+   "score": 0.999,
+   "src_start": 0.22,
+   "src_end": 0.36,
+   "start": 43.095,
+   "end": 43.235
+  },
+  {
+   "word": "a",
+   "clip": "f12",
+   "idx": 2,
+   "score": 0.986,
+   "src_start": 0.461,
+   "src_end": 0.481,
+   "start": 43.336,
+   "end": 43.356
+  },
+  {
+   "word": "small",
+   "clip": "f12",
+   "idx": 3,
+   "score": 1.0,
+   "src_start": 0.541,
+   "src_end": 0.781,
+   "start": 43.416,
+   "end": 43.656
+  },
+  {
+   "word": "gesture",
+   "clip": "f12",
+   "idx": 4,
+   "score": 1.0,
+   "src_start": 0.881,
+   "src_end": 1.342,
+   "start": 43.756,
+   "end": 44.217
+  },
+  {
+   "word": "a",
+   "clip": "f12",
+   "idx": 5,
+   "score": 0.999,
+   "src_start": 2.263,
+   "src_end": 2.283,
+   "start": 44.4297,
+   "end": 44.4497
+  },
+  {
+   "word": "piece",
+   "clip": "f12",
+   "idx": 6,
+   "score": 0.935,
+   "src_start": 2.323,
+   "src_end": 2.523,
+   "start": 44.4897,
+   "end": 44.6897
+  },
+  {
+   "word": "of",
+   "clip": "f12",
+   "idx": 7,
+   "score": 0.999,
+   "src_start": 2.584,
+   "src_end": 2.624,
+   "start": 44.7507,
+   "end": 44.7907
+  },
+  {
+   "word": "paper",
+   "clip": "f12",
+   "idx": 8,
+   "score": 1.0,
+   "src_start": 2.684,
+   "src_end": 2.964,
+   "start": 44.8507,
+   "end": 45.1307
+  },
+  {
+   "word": "a",
+   "clip": "f12",
+   "idx": 9,
+   "score": 0.998,
+   "src_start": 3.825,
+   "src_end": 3.845,
+   "start": 45.325,
+   "end": 45.345
+  },
+  {
+   "word": "small",
+   "clip": "f12",
+   "idx": 10,
+   "score": 1.0,
+   "src_start": 3.905,
+   "src_end": 4.106,
+   "start": 45.405,
+   "end": 45.606
+  },
+  {
+   "word": "illustration",
+   "clip": "f12",
+   "idx": 11,
+   "score": 1.0,
+   "src_start": 4.146,
+   "src_end": 4.706,
+   "start": 45.646,
+   "end": 46.206
+  },
+  {
+   "word": "and",
+   "clip": "f12",
+   "idx": 12,
+   "score": 1.0,
+   "src_start": 5.528,
+   "src_end": 5.608,
+   "start": 46.4447,
+   "end": 46.5247
+  },
+  {
+   "word": "a",
+   "clip": "f12",
+   "idx": 13,
+   "score": 0.983,
+   "src_start": 5.668,
+   "src_end": 5.688,
+   "start": 46.5847,
+   "end": 46.6047
+  },
+  {
+   "word": "few",
+   "clip": "f12",
+   "idx": 14,
+   "score": 0.999,
+   "src_start": 5.728,
+   "src_end": 5.928,
+   "start": 46.6447,
+   "end": 46.8447
+  },
+  {
+   "word": "words",
+   "clip": "f12",
+   "idx": 15,
+   "score": 1.0,
+   "src_start": 6.689,
+   "src_end": 7.03,
+   "start": 47.064,
+   "end": 47.405
+  },
+  {
+   "word": "yet",
+   "clip": "f13",
+   "idx": 0,
+   "score": 1.0,
+   "src_start": 0.06,
+   "src_end": 0.221,
+   "start": 47.56,
+   "end": 47.721
+  },
+  {
+   "word": "that",
+   "clip": "f13",
+   "idx": 1,
+   "score": 0.96,
+   "src_start": 0.281,
+   "src_end": 0.422,
+   "start": 47.781,
+   "end": 47.922
+  },
+  {
+   "word": "gesture",
+   "clip": "f13",
+   "idx": 2,
+   "score": 0.998,
+   "src_start": 0.482,
+   "src_end": 0.924,
+   "start": 47.982,
+   "end": 48.424
+  },
+  {
+   "word": "became",
+   "clip": "f13",
+   "idx": 3,
+   "score": 0.999,
+   "src_start": 1.045,
+   "src_end": 1.386,
+   "start": 48.545,
+   "end": 48.886
+  },
+  {
+   "word": "a",
+   "clip": "f13",
+   "idx": 4,
+   "score": 0.998,
+   "src_start": 1.446,
+   "src_end": 1.466,
+   "start": 48.946,
+   "end": 48.966
+  },
+  {
+   "word": "tradition",
+   "clip": "f13",
+   "idx": 5,
+   "score": 1.0,
+   "src_start": 1.507,
+   "src_end": 1.989,
+   "start": 49.007,
+   "end": 49.489
+  },
+  {
+   "word": "for",
+   "clip": "f13",
+   "idx": 6,
+   "score": 0.974,
+   "src_start": 2.089,
+   "src_end": 2.23,
+   "start": 49.589,
+   "end": 49.73
+  },
+  {
+   "word": "millions",
+   "clip": "f13",
+   "idx": 7,
+   "score": 1.0,
+   "src_start": 2.39,
+   "src_end": 2.852,
+   "start": 49.89,
+   "end": 50.352
+  },
+  {
+   "word": "of",
+   "clip": "f13",
+   "idx": 8,
+   "score": 1.0,
+   "src_start": 2.953,
+   "src_end": 3.013,
+   "start": 50.453,
+   "end": 50.513
+  },
+  {
+   "word": "people",
+   "clip": "f13",
+   "idx": 9,
+   "score": 1.0,
+   "src_start": 3.114,
+   "src_end": 3.415,
+   "start": 50.614,
+   "end": 50.915
+  },
+  {
+   "word": "around",
+   "clip": "f13",
+   "idx": 10,
+   "score": 1.0,
+   "src_start": 3.535,
+   "src_end": 3.797,
+   "start": 51.035,
+   "end": 51.297
+  },
+  {
+   "word": "the",
+   "clip": "f13",
+   "idx": 11,
+   "score": 1.0,
+   "src_start": 3.857,
+   "src_end": 3.937,
+   "start": 51.357,
+   "end": 51.437
+  },
+  {
+   "word": "world",
+   "clip": "f13",
+   "idx": 12,
+   "score": 1.0,
+   "src_start": 3.957,
+   "src_end": 4.218,
+   "start": 51.457,
+   "end": 51.718
+  },
+  {
+   "word": "and",
+   "clip": "f14",
+   "idx": 0,
+   "score": 1.0,
+   "src_start": 0.644,
+   "src_end": 0.724,
+   "start": 51.9357,
+   "end": 52.0157
+  },
+  {
+   "word": "perhaps",
+   "clip": "f14",
+   "idx": 1,
+   "score": 1.0,
+   "src_start": 0.825,
+   "src_end": 1.187,
+   "start": 52.1167,
+   "end": 52.4787
+  },
+  {
+   "word": "that's",
+   "clip": "f14",
+   "idx": 2,
+   "score": 0.968,
+   "src_start": 1.689,
+   "src_end": 1.87,
+   "start": 52.689,
+   "end": 52.87
+  },
+  {
+   "word": "what",
+   "clip": "f14",
+   "idx": 3,
+   "score": 1.0,
+   "src_start": 1.891,
+   "src_end": 2.031,
+   "start": 52.891,
+   "end": 53.031
+  },
+  {
+   "word": "makes",
+   "clip": "f14",
+   "idx": 4,
+   "score": 1.0,
+   "src_start": 2.092,
+   "src_end": 2.313,
+   "start": 53.092,
+   "end": 53.313
+  },
+  {
+   "word": "it",
+   "clip": "f14",
+   "idx": 5,
+   "score": 1.0,
+   "src_start": 2.373,
+   "src_end": 2.434,
+   "start": 53.373,
+   "end": 53.434
+  },
+  {
+   "word": "so",
+   "clip": "f14",
+   "idx": 6,
+   "score": 1.0,
+   "src_start": 2.514,
+   "src_end": 2.595,
+   "start": 53.514,
+   "end": 53.595
+  },
+  {
+   "word": "special",
+   "clip": "f14",
+   "idx": 7,
+   "score": 1.0,
+   "src_start": 2.695,
+   "src_end": 3.037,
+   "start": 53.695,
+   "end": 54.037
+  },
+  {
+   "word": "sometimes",
+   "clip": "f15",
+   "idx": 0,
+   "score": 1.0,
+   "src_start": 0.121,
+   "src_end": 0.624,
+   "start": 54.246,
+   "end": 54.749
+  },
+  {
+   "word": "the",
+   "clip": "f15",
+   "idx": 1,
+   "score": 1.0,
+   "src_start": 0.664,
+   "src_end": 0.744,
+   "start": 54.789,
+   "end": 54.869
+  },
+  {
+   "word": "most",
+   "clip": "f15",
+   "idx": 2,
+   "score": 1.0,
+   "src_start": 0.785,
+   "src_end": 0.946,
+   "start": 54.91,
+   "end": 55.071
+  },
+  {
+   "word": "meaningful",
+   "clip": "f15",
+   "idx": 3,
+   "score": 0.997,
+   "src_start": 1.106,
+   "src_end": 1.549,
+   "start": 55.231,
+   "end": 55.674
+  },
+  {
+   "word": "messages",
+   "clip": "f15",
+   "idx": 4,
+   "score": 1.0,
+   "src_start": 1.65,
+   "src_end": 2.112,
+   "start": 55.775,
+   "end": 56.237
+  },
+  {
+   "word": "aren't",
+   "clip": "f15",
+   "idx": 5,
+   "score": 0.972,
+   "src_start": 2.474,
+   "src_end": 2.676,
+   "start": 56.4323,
+   "end": 56.6343
+  },
+  {
+   "word": "the",
+   "clip": "f15",
+   "idx": 6,
+   "score": 0.999,
+   "src_start": 2.736,
+   "src_end": 2.796,
+   "start": 56.6943,
+   "end": 56.7543
+  },
+  {
+   "word": "longest",
+   "clip": "f15",
+   "idx": 7,
+   "score": 1.0,
+   "src_start": 2.857,
+   "src_end": 3.259,
+   "start": 56.8153,
+   "end": 57.2173
+  },
+  {
+   "word": "they",
+   "clip": "f16",
+   "idx": 0,
+   "score": 1.0,
+   "src_start": 0.141,
+   "src_end": 0.282,
+   "start": 57.4327,
+   "end": 57.5737
+  },
+  {
+   "word": "are",
+   "clip": "f16",
+   "idx": 1,
+   "score": 0.668,
+   "src_start": 0.323,
+   "src_end": 0.403,
+   "start": 57.6147,
+   "end": 57.6947
+  },
+  {
+   "word": "the",
+   "clip": "f16",
+   "idx": 2,
+   "score": 1.0,
+   "src_start": 0.464,
+   "src_end": 0.545,
+   "start": 57.7557,
+   "end": 57.8367
+  },
+  {
+   "word": "ones",
+   "clip": "f16",
+   "idx": 3,
+   "score": 0.75,
+   "src_start": 0.686,
+   "src_end": 0.888,
+   "start": 57.9777,
+   "end": 58.1797
+  },
+  {
+   "word": "that",
+   "clip": "f16",
+   "idx": 4,
+   "score": 1.0,
+   "src_start": 0.948,
+   "src_end": 1.13,
+   "start": 58.2397,
+   "end": 58.4217
+  },
+  {
+   "word": "make",
+   "clip": "f16",
+   "idx": 5,
+   "score": 1.0,
+   "src_start": 1.251,
+   "src_end": 1.453,
+   "start": 58.5427,
+   "end": 58.7447
+  },
+  {
+   "word": "us",
+   "clip": "f16",
+   "idx": 6,
+   "score": 1.0,
+   "src_start": 1.533,
+   "src_end": 1.614,
+   "start": 58.8247,
+   "end": 58.9057
+  },
+  {
+   "word": "feel",
+   "clip": "f16",
+   "idx": 7,
+   "score": 1.0,
+   "src_start": 1.735,
+   "src_end": 1.957,
+   "start": 59.0267,
+   "end": 59.2487
+  },
+  {
+   "word": "something",
+   "clip": "f16",
+   "idx": 8,
+   "score": 1.0,
+   "src_start": 2.058,
+   "src_end": 2.481,
+   "start": 59.3497,
+   "end": 59.7727
+  },
+  {
+   "word": "because",
+   "clip": "f17",
+   "idx": 0,
+   "score": 1.0,
+   "src_start": 0.161,
+   "src_end": 0.463,
+   "start": 59.9527,
+   "end": 60.2547
+  },
+  {
+   "word": "a",
+   "clip": "f17",
+   "idx": 1,
+   "score": 0.999,
+   "src_start": 0.523,
+   "src_end": 0.543,
+   "start": 60.3147,
+   "end": 60.3347
+  },
+  {
+   "word": "picture",
+   "clip": "f17",
+   "idx": 2,
+   "score": 1.0,
+   "src_start": 0.604,
+   "src_end": 0.946,
+   "start": 60.3957,
+   "end": 60.7377
+  },
+  {
+   "word": "can",
+   "clip": "f17",
+   "idx": 3,
+   "score": 1.0,
+   "src_start": 1.026,
+   "src_end": 1.167,
+   "start": 60.8177,
+   "end": 60.9587
+  },
+  {
+   "word": "say",
+   "clip": "f17",
+   "idx": 4,
+   "score": 1.0,
+   "src_start": 1.268,
+   "src_end": 1.449,
+   "start": 61.0597,
+   "end": 61.2407
+  },
+  {
+   "word": "what",
+   "clip": "f17",
+   "idx": 5,
+   "score": 1.0,
+   "src_start": 1.63,
+   "src_end": 1.751,
+   "start": 61.4217,
+   "end": 61.5427
+  },
+  {
+   "word": "a",
+   "clip": "f17",
+   "idx": 6,
+   "score": 0.999,
+   "src_start": 1.851,
+   "src_end": 1.871,
+   "start": 61.6427,
+   "end": 61.6627
+  },
+  {
+   "word": "thousand",
+   "clip": "f17",
+   "idx": 7,
+   "score": 1.0,
+   "src_start": 1.952,
+   "src_end": 2.374,
+   "start": 61.7437,
+   "end": 62.1657
+  },
+  {
+   "word": "words",
+   "clip": "f17",
+   "idx": 8,
+   "score": 1.0,
+   "src_start": 2.435,
+   "src_end": 2.696,
+   "start": 62.2267,
+   "end": 62.4877
+  },
+  {
+   "word": "cannot",
+   "clip": "f17",
+   "idx": 9,
+   "score": 1.0,
+   "src_start": 2.777,
+   "src_end": 3.079,
+   "start": 62.5687,
+   "end": 62.8707
+  },
+  {
+   "word": "say",
+   "clip": "f17",
+   "idx": 10,
+   "score": 1.0,
+   "src_start": 3.159,
+   "src_end": 3.36,
+   "start": 62.9507,
+   "end": 63.1517
+  }
+ ],
+ "duration": 63.4583,
+ "gaps": [
+  0.21,
+  0.207,
+  0.188,
+  0.195,
+  0.212,
+  0.219,
+  0.183,
+  0.215,
+  0.197,
+  0.224,
+  0.152,
+  0.204,
+  0.218,
+  0.2,
+  0.232,
+  0.118,
+  0.197,
+  0.171,
+  0.213,
+  0.194,
+  0.239,
+  0.219,
+  0.155,
+  0.218,
+  0.21,
+  0.209,
+  0.195,
+  0.215,
+  0.18
+ ]
+}

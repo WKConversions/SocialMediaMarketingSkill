@@ -1,0 +1,861 @@
+{
+ "fps": 24,
+ "duration": 88.7083,
+ "song_start_s": 45.8,
+ "blocks": [
+  {
+   "v0": 0.0,
+   "v1": 12.25,
+   "start": 4.75,
+   "end": 17.0
+  },
+  {
+   "v0": 12.25,
+   "v1": 25.6667,
+   "start": 20.25,
+   "end": 33.6667
+  },
+  {
+   "v0": 25.6667,
+   "v1": 32.5,
+   "start": 36.9167,
+   "end": 43.75
+  },
+  {
+   "v0": 32.5,
+   "v1": 42.9167,
+   "start": 47.75,
+   "end": 58.1667
+  },
+  {
+   "v0": 42.9167,
+   "v1": 51.8333,
+   "start": 61.4167,
+   "end": 70.3333
+  },
+  {
+   "v0": 51.8333,
+   "v1": 63.4583,
+   "start": 74.3333,
+   "end": 85.9583
+  }
+ ],
+ "speaker": [
+  {
+   "clip": "f01",
+   "src_start": 0.375,
+   "src_end": 2.375,
+   "start": 4.75,
+   "end": 6.75,
+   "view": "wide"
+  },
+  {
+   "clip": "f01",
+   "src_start": 2.6667,
+   "src_end": 6.4167,
+   "start": 6.75,
+   "end": 10.5,
+   "view": "medium"
+  },
+  {
+   "clip": "f02",
+   "src_start": 0.3333,
+   "src_end": 1.375,
+   "start": 10.5,
+   "end": 11.5417,
+   "view": "wide"
+  },
+  {
+   "clip": "f02",
+   "src_start": 1.7083,
+   "src_end": 5.3333,
+   "start": 11.5417,
+   "end": 15.1667,
+   "view": "medium"
+  },
+  {
+   "clip": "f02",
+   "src_start": 6.0,
+   "src_end": 7.8333,
+   "start": 15.1667,
+   "end": 17.0,
+   "view": "wide"
+  },
+  {
+   "clip": "f03",
+   "src_start": 0.1667,
+   "src_end": 2.0417,
+   "start": 20.25,
+   "end": 22.125,
+   "view": "medium"
+  },
+  {
+   "clip": "f04",
+   "src_start": 0.4167,
+   "src_end": 3.0833,
+   "start": 22.125,
+   "end": 24.7917,
+   "view": "wide"
+  },
+  {
+   "clip": "f04",
+   "src_start": 3.5833,
+   "src_end": 5.1667,
+   "start": 24.7917,
+   "end": 26.375,
+   "view": "medium"
+  },
+  {
+   "clip": "f04",
+   "src_start": 5.3333,
+   "src_end": 6.2083,
+   "start": 26.375,
+   "end": 27.25,
+   "view": "wide"
+  },
+  {
+   "clip": "f05",
+   "src_start": 0.2917,
+   "src_end": 1.4583,
+   "start": 27.25,
+   "end": 28.4167,
+   "view": "medium"
+  },
+  {
+   "clip": "f05",
+   "src_start": 1.9167,
+   "src_end": 4.7083,
+   "start": 28.4167,
+   "end": 31.2083,
+   "view": "wide"
+  },
+  {
+   "clip": "f06",
+   "src_start": 0.0,
+   "src_end": 2.4583,
+   "start": 31.2083,
+   "end": 33.6667,
+   "view": "medium"
+  },
+  {
+   "clip": "f07",
+   "src_start": 0.1667,
+   "src_end": 3.3333,
+   "start": 36.9167,
+   "end": 40.0833,
+   "view": "wide"
+  },
+  {
+   "clip": "f08",
+   "src_start": 0.0417,
+   "src_end": 3.7083,
+   "start": 40.0833,
+   "end": 43.75,
+   "view": "medium"
+  },
+  {
+   "clip": "f09",
+   "src_start": 0.1667,
+   "src_end": 1.875,
+   "start": 47.75,
+   "end": 49.4583,
+   "view": "wide"
+  },
+  {
+   "clip": "f09",
+   "src_start": 2.125,
+   "src_end": 5.4167,
+   "start": 49.4583,
+   "end": 52.75,
+   "view": "medium"
+  },
+  {
+   "clip": "f10",
+   "src_start": 0.0,
+   "src_end": 3.0,
+   "start": 52.75,
+   "end": 55.75,
+   "view": "wide"
+  },
+  {
+   "clip": "f11",
+   "src_start": 0.1667,
+   "src_end": 2.5833,
+   "start": 55.75,
+   "end": 58.1667,
+   "view": "medium"
+  },
+  {
+   "clip": "f12",
+   "src_start": 0.0417,
+   "src_end": 1.4583,
+   "start": 61.4167,
+   "end": 62.8333,
+   "view": "wide"
+  },
+  {
+   "clip": "f12",
+   "src_start": 2.1667,
+   "src_end": 3.0833,
+   "start": 62.8333,
+   "end": 63.75,
+   "view": "medium"
+  },
+  {
+   "clip": "f12",
+   "src_start": 3.75,
+   "src_end": 4.8333,
+   "start": 63.75,
+   "end": 64.8333,
+   "view": "wide"
+  },
+  {
+   "clip": "f12",
+   "src_start": 5.4167,
+   "src_end": 6.0417,
+   "start": 64.8333,
+   "end": 65.4583,
+   "view": "medium"
+  },
+  {
+   "clip": "f12",
+   "src_start": 6.5833,
+   "src_end": 7.125,
+   "start": 65.4583,
+   "end": 66.0,
+   "view": "wide"
+  },
+  {
+   "clip": "f13",
+   "src_start": 0.0,
+   "src_end": 4.3333,
+   "start": 66.0,
+   "end": 70.3333,
+   "view": "medium"
+  },
+  {
+   "clip": "f14",
+   "src_start": 0.5417,
+   "src_end": 1.2917,
+   "start": 74.3333,
+   "end": 75.0833,
+   "view": "wide"
+  },
+  {
+   "clip": "f14",
+   "src_start": 1.5833,
+   "src_end": 3.1667,
+   "start": 75.0833,
+   "end": 76.6667,
+   "view": "medium"
+  },
+  {
+   "clip": "f15",
+   "src_start": 0.0417,
+   "src_end": 2.2083,
+   "start": 76.6667,
+   "end": 78.8333,
+   "view": "wide"
+  },
+  {
+   "clip": "f15",
+   "src_start": 2.375,
+   "src_end": 3.375,
+   "start": 78.8333,
+   "end": 79.8333,
+   "view": "medium"
+  },
+  {
+   "clip": "f16",
+   "src_start": 0.0417,
+   "src_end": 2.5833,
+   "start": 79.8333,
+   "end": 82.375,
+   "view": "wide"
+  },
+  {
+   "clip": "f17",
+   "src_start": 0.0833,
+   "src_end": 3.6667,
+   "start": 82.375,
+   "end": 85.9583,
+   "view": "medium"
+  }
+ ],
+ "shots": [
+  {
+   "start": 0.0,
+   "end": 6.75,
+   "slot": "london",
+   "part": "I0+voice"
+  },
+  {
+   "start": 15.1667,
+   "end": 17.0,
+   "slot": "cole",
+   "part": "voice"
+  },
+  {
+   "start": 17.0,
+   "end": 20.25,
+   "slot": "letters",
+   "part": "I1"
+  },
+  {
+   "start": 28.4167,
+   "end": 31.2083,
+   "slot": "horsley",
+   "part": "voice"
+  },
+  {
+   "start": 33.6667,
+   "end": 36.9167,
+   "slot": "cozy",
+   "part": "I2"
+  },
+  {
+   "start": 41.25,
+   "end": 47.75,
+   "slot": "card",
+   "part": "voice+I3"
+  },
+  {
+   "start": 47.75,
+   "end": 49.4583,
+   "slot": "card_family",
+   "part": "voice"
+  },
+  {
+   "start": 49.4583,
+   "end": 52.75,
+   "slot": "card_kindness",
+   "part": "voice"
+  },
+  {
+   "start": 55.75,
+   "end": 58.1667,
+   "slot": "card_words",
+   "part": "voice"
+  },
+  {
+   "start": 58.1667,
+   "end": 61.4167,
+   "slot": "victorian",
+   "part": "I4"
+  },
+  {
+   "start": 67.5,
+   "end": 72.3333,
+   "slot": "cards_a",
+   "part": "voice+I5"
+  },
+  {
+   "start": 72.3333,
+   "end": 74.3333,
+   "slot": "cards_b",
+   "part": "I5"
+  }
+ ],
+ "captions": [
+  {
+   "text": "In the winter of 1843",
+   "word": "in",
+   "word_t": 4.856,
+   "frame": 116,
+   "end_frame": 163,
+   "fade_out": false
+  },
+  {
+   "text": "the London streets were filled",
+   "word": "the",
+   "word_t": 6.8313,
+   "frame": 163,
+   "end_frame": 204,
+   "fade_out": false
+  },
+  {
+   "text": "with the charm of Christmas",
+   "word": "with",
+   "word_t": 8.5153,
+   "frame": 204,
+   "end_frame": 254,
+   "fade_out": false
+  },
+  {
+   "text": "Behind the desk sat a gentleman",
+   "word": "behind",
+   "word_t": 10.5877,
+   "frame": 254,
+   "end_frame": 308,
+   "fade_out": false
+  },
+  {
+   "text": "surrounded by envelopes",
+   "word": "surrounded",
+   "word_t": 12.8393,
+   "frame": 308,
+   "end_frame": 349,
+   "fade_out": false
+  },
+  {
+   "text": "and letters",
+   "word": "and",
+   "word_t": 14.5633,
+   "frame": 349,
+   "end_frame": 365,
+   "fade_out": false
+  },
+  {
+   "text": "His name was",
+   "word": "his",
+   "word_t": 15.2397,
+   "frame": 365,
+   "end_frame": 381,
+   "fade_out": false
+  },
+  {
+   "text": "Sir Henry Cole",
+   "word": "sir",
+   "word_t": 15.9007,
+   "frame": 381,
+   "end_frame": 414,
+   "fade_out": true
+  },
+  {
+   "text": "He had a rather simple problem",
+   "word": "he",
+   "word_t": 20.3443,
+   "frame": 488,
+   "end_frame": 533,
+   "fade_out": false
+  },
+  {
+   "text": "There are so many people",
+   "word": "there",
+   "word_t": 22.2303,
+   "frame": 533,
+   "end_frame": 557,
+   "fade_out": false
+  },
+  {
+   "text": "he wanted to wish",
+   "word": "he",
+   "word_t": 23.2333,
+   "frame": 557,
+   "end_frame": 573,
+   "fade_out": false
+  },
+  {
+   "text": "a Merry Christmas",
+   "word": "a",
+   "word_t": 23.8963,
+   "frame": 573,
+   "end_frame": 597,
+   "fade_out": false
+  },
+  {
+   "text": "but he had so little time",
+   "word": "but",
+   "word_t": 24.8813,
+   "frame": 597,
+   "end_frame": 635,
+   "fade_out": false
+  },
+  {
+   "text": "to write them all",
+   "word": "to",
+   "word_t": 26.4607,
+   "frame": 635,
+   "end_frame": 656,
+   "fade_out": false
+  },
+  {
+   "text": "So he turned to his friend",
+   "word": "so",
+   "word_t": 27.3393,
+   "frame": 656,
+   "end_frame": 684,
+   "fade_out": false
+  },
+  {
+   "text": "an artist named",
+   "word": "an",
+   "word_t": 28.527,
+   "frame": 684,
+   "end_frame": 712,
+   "fade_out": false
+  },
+  {
+   "text": "John Callcott Horsley",
+   "word": "john",
+   "word_t": 29.671,
+   "frame": 712,
+   "end_frame": 749,
+   "fade_out": false
+  },
+  {
+   "text": "Together they came up",
+   "word": "together",
+   "word_t": 31.2483,
+   "frame": 749,
+   "end_frame": 776,
+   "fade_out": false
+  },
+  {
+   "text": "with a lovely idea",
+   "word": "with",
+   "word_t": 32.3733,
+   "frame": 776,
+   "end_frame": 814,
+   "fade_out": true
+  },
+  {
+   "text": "Instead of writing",
+   "word": "instead",
+   "word_t": 37.011,
+   "frame": 888,
+   "end_frame": 911,
+   "fade_out": false
+  },
+  {
+   "text": "a different letter",
+   "word": "a",
+   "word_t": 37.996,
+   "frame": 911,
+   "end_frame": 928,
+   "fade_out": false
+  },
+  {
+   "text": "to every single friend",
+   "word": "to",
+   "word_t": 38.699,
+   "frame": 928,
+   "end_frame": 964,
+   "fade_out": false
+  },
+  {
+   "text": "why not send an illustration",
+   "word": "why",
+   "word_t": 40.1827,
+   "frame": 964,
+   "end_frame": 1004,
+   "fade_out": false
+  },
+  {
+   "text": "carrying the warmth",
+   "word": "carrying",
+   "word_t": 41.8537,
+   "frame": 1004,
+   "end_frame": 1032,
+   "fade_out": false
+  },
+  {
+   "text": "of Christmas",
+   "word": "of",
+   "word_t": 43.0407,
+   "frame": 1032,
+   "end_frame": 1056,
+   "fade_out": true
+  },
+  {
+   "text": "Horsley painted",
+   "word": "horsley",
+   "word_t": 47.8243,
+   "frame": 1147,
+   "end_frame": 1165,
+   "fade_out": false
+  },
+  {
+   "text": "a family gathering",
+   "word": "a",
+   "word_t": 48.5463,
+   "frame": 1165,
+   "end_frame": 1189,
+   "fade_out": false
+  },
+  {
+   "text": "with a lot of kindness",
+   "word": "with",
+   "word_t": 49.5613,
+   "frame": 1189,
+   "end_frame": 1218,
+   "fade_out": false
+  },
+  {
+   "text": "and warmth",
+   "word": "and",
+   "word_t": 50.7853,
+   "frame": 1218,
+   "end_frame": 1238,
+   "fade_out": false
+  },
+  {
+   "text": "from either side",
+   "word": "from",
+   "word_t": 51.5883,
+   "frame": 1238,
+   "end_frame": 1266,
+   "fade_out": false
+  },
+  {
+   "text": "And beneath the illustration",
+   "word": "and",
+   "word_t": 52.77,
+   "frame": 1266,
+   "end_frame": 1307,
+   "fade_out": false
+  },
+  {
+   "text": "were the written words",
+   "word": "were",
+   "word_t": 54.5,
+   "frame": 1307,
+   "end_frame": 1340,
+   "fade_out": false
+  },
+  {
+   "text": "A Merry Christmas",
+   "word": "a",
+   "word_t": 55.8443,
+   "frame": 1340,
+   "end_frame": 1365,
+   "fade_out": false
+  },
+  {
+   "text": "and a Happy New Year",
+   "word": "and",
+   "word_t": 56.8893,
+   "frame": 1365,
+   "end_frame": 1386,
+   "fade_out": false
+  },
+  {
+   "text": "to you",
+   "word": "to",
+   "word_t": 57.7723,
+   "frame": 1386,
+   "end_frame": 1402,
+   "fade_out": true
+  },
+  {
+   "text": "It was a small gesture",
+   "word": "it",
+   "word_t": 61.495,
+   "frame": 1475,
+   "end_frame": 1510,
+   "fade_out": false
+  },
+  {
+   "text": "a piece of paper",
+   "word": "a",
+   "word_t": 62.9297,
+   "frame": 1510,
+   "end_frame": 1531,
+   "fade_out": false
+  },
+  {
+   "text": "a small illustration",
+   "word": "a",
+   "word_t": 63.825,
+   "frame": 1531,
+   "end_frame": 1558,
+   "fade_out": false
+  },
+  {
+   "text": "and a few words",
+   "word": "and",
+   "word_t": 64.9447,
+   "frame": 1558,
+   "end_frame": 1585,
+   "fade_out": false
+  },
+  {
+   "text": "Yet that gesture became",
+   "word": "yet",
+   "word_t": 66.06,
+   "frame": 1585,
+   "end_frame": 1618,
+   "fade_out": false
+  },
+  {
+   "text": "a tradition for millions",
+   "word": "a",
+   "word_t": 67.446,
+   "frame": 1618,
+   "end_frame": 1654,
+   "fade_out": false
+  },
+  {
+   "text": "of people around the world",
+   "word": "of",
+   "word_t": 68.953,
+   "frame": 1654,
+   "end_frame": 1694,
+   "fade_out": true
+  },
+  {
+   "text": "And perhaps that's what",
+   "word": "and",
+   "word_t": 74.4357,
+   "frame": 1786,
+   "end_frame": 1814,
+   "fade_out": false
+  },
+  {
+   "text": "makes it so special",
+   "word": "makes",
+   "word_t": 75.592,
+   "frame": 1814,
+   "end_frame": 1841,
+   "fade_out": false
+  },
+  {
+   "text": "Sometimes the most",
+   "word": "sometimes",
+   "word_t": 76.746,
+   "frame": 1841,
+   "end_frame": 1865,
+   "fade_out": false
+  },
+  {
+   "text": "meaningful messages",
+   "word": "meaningful",
+   "word_t": 77.731,
+   "frame": 1865,
+   "end_frame": 1894,
+   "fade_out": false
+  },
+  {
+   "text": "aren't the longest",
+   "word": "aren't",
+   "word_t": 78.9323,
+   "frame": 1894,
+   "end_frame": 1918,
+   "fade_out": false
+  },
+  {
+   "text": "They are the ones",
+   "word": "they",
+   "word_t": 79.9327,
+   "frame": 1918,
+   "end_frame": 1937,
+   "fade_out": false
+  },
+  {
+   "text": "that make us feel something",
+   "word": "that",
+   "word_t": 80.7397,
+   "frame": 1937,
+   "end_frame": 1978,
+   "fade_out": false
+  },
+  {
+   "text": "Because a picture can say",
+   "word": "because",
+   "word_t": 82.4527,
+   "frame": 1978,
+   "end_frame": 2014,
+   "fade_out": false
+  },
+  {
+   "text": "what a thousand words",
+   "word": "what",
+   "word_t": 83.9217,
+   "frame": 2014,
+   "end_frame": 2041,
+   "fade_out": false
+  },
+  {
+   "text": "cannot say",
+   "word": "cannot",
+   "word_t": 85.0687,
+   "frame": 2041,
+   "end_frame": 2069,
+   "fade_out": true
+  }
+ ],
+ "labels": [],
+ "dissolve": {
+  "interlude": 0.6,
+  "under_voice": 0.4,
+  "within": 0.5
+ },
+ "music_ramps": [
+  {
+   "t0": 4.556,
+   "t1": 4.976,
+   "to": "voice"
+  },
+  {
+   "t0": 16.9427,
+   "t1": 17.3427,
+   "to": "up"
+  },
+  {
+   "t0": 20.0443,
+   "t1": 20.4643,
+   "to": "voice"
+  },
+  {
+   "t0": 33.6173,
+   "t1": 34.0173,
+   "to": "up"
+  },
+  {
+   "t0": 36.711,
+   "t1": 37.131,
+   "to": "voice"
+  },
+  {
+   "t0": 43.6847,
+   "t1": 44.0847,
+   "to": "up"
+  },
+  {
+   "t0": 47.5243,
+   "t1": 47.9443,
+   "to": "voice"
+  },
+  {
+   "t0": 58.1343,
+   "t1": 58.5343,
+   "to": "up"
+  },
+  {
+   "t0": 61.195,
+   "t1": 61.615,
+   "to": "voice"
+  },
+  {
+   "t0": 70.278,
+   "t1": 70.678,
+   "to": "up"
+  },
+  {
+   "t0": 74.1357,
+   "t1": 74.5557,
+   "to": "voice"
+  },
+  {
+   "t0": 85.7117,
+   "t1": 86.1117,
+   "to": "up"
+  }
+ ],
+ "music": {
+  "down_lead_s": 0.3,
+  "down_len_s": 0.42,
+  "up_after_s": 0.06,
+  "up_len_s": 0.4,
+  "fade_out_s": 1.6
+ },
+ "end_card": {
+  "start": 85.9583,
+  "text": [
+   "A picture can say",
+   "what a thousand",
+   "words cannot"
+  ]
+ },
+ "logo": "/home/user/SocialMediaMarketingSkill/lab/edit-05/broll/wkc/logo.png"
+}

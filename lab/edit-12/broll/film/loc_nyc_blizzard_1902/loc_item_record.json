@@ -1,0 +1,317 @@
+{
+ "_version_": 1873882631650672640,
+ "access_restricted": false,
+ "aka": [
+  "http://lccn.loc.gov/2017604954",
+  "http://www.loc.gov/item/2017604954/",
+  "https://search.catalog.loc.gov/instances/24dfc552-4ee1-5569-b8cf-0efc5905353c",
+  "https://hdl.loc.gov/loc.mbrsmi/ntscrm.01912444",
+  "http://www.loc.gov/resource/ntscrm.01912444/"
+ ],
+ "call_number": [
+  "FLA 5114 (viewing print)",
+  "FRA 2069 (dupe neg pic)",
+  "Box 0023C (paper pos)",
+  "Box 5035D (paper pos, copy 2)"
+ ],
+ "campaigns": [],
+ "contributor_names": [
+  "Thomas A. Edison, Inc",
+  "Paper Print Collection (Library of Congress)"
+ ],
+ "contributors": [
+  {
+   "paper print collection (library of congress)": "https://www.loc.gov/search/?fa=contributor:paper+print+collection+%28library+of+congress%29&fo=json"
+  },
+  {
+   "thomas a. edison, inc": "https://www.loc.gov/search/?fa=contributor:thomas+a.+edison,+inc&fo=json"
+  }
+ ],
+ "control_number": "",
+ "created_published": [
+  "United States : Thomas A. Edison, Inc., 1902."
+ ],
+ "date": "1902",
+ "dates": [
+  {
+   "1902": "https://www.loc.gov/search/?dates=1902/1902&fo=json"
+  }
+ ],
+ "description": [
+  "\"A realistic panoramic view taken at Madison Square, New York City, on February 17, 1902. A portion of the New York Fire Department is seen trying to make their way to a fire through the immense snow drifts. A few pedestrians are bravely plodding through the immense piles of snow, and a snow plow is hard at work on the Broadway, underground trolley line, endeavoring to clear the tracks. Madison Square, Madison Square Garden, Broadway, the Fifth Avenue Hotel, and 23rd Street are all shown in succession\"--Edison films catalog."
+ ],
+ "digital_id": [
+  "https://hdl.loc.gov/loc.mbrsmi/ntscrm.01912444"
+ ],
+ "digitized": true,
+ "display_offsite": true,
+ "extract_timestamp": "2026-08-18T17:18:34.011Z",
+ "extract_urls": [
+  "http://lccn.loc.gov/2017604954#nsr",
+  "http://lccn.loc.gov/2017604954#catalog-split-06"
+ ],
+ "format": [
+  {
+   "film, video": "https://www.loc.gov/search/?fa=original_format:film,+video&fo=json"
+  }
+ ],
+ "genre": [
+  "Actualities (Motion pictures)",
+  "Silent films",
+  "Short films",
+  "Nonfiction films"
+ ],
+ "group": [
+  "nsr",
+  "catalog-split-06",
+  "catalog",
+  "national-screening-room",
+  "main-catalog-split-06"
+ ],
+ "hassegments": false,
+ "id": "http://www.loc.gov/item/2017604954/",
+ "image_url": [
+  "https://tile.loc.gov/storage-services/service/mbrs/ntscrm/01912444/01912444.gif"
+ ],
+ "index": 1,
+ "item": {
+  "call_number": [
+   "FLA 5114 (viewing print)",
+   "FRA 2069 (dupe neg pic)",
+   "Box 0023C (paper pos)",
+   "Box 5035D (paper pos, copy 2)"
+  ],
+  "contributors": [
+   "Thomas A. Edison, Inc",
+   "Paper Print Collection (Library of Congress)"
+  ],
+  "created_published": [
+   "United States : Thomas A. Edison, Inc., 1902."
+  ],
+  "date": "1902",
+  "digital_id": [
+   "https://hdl.loc.gov/loc.mbrsmi/ntscrm.01912444"
+  ],
+  "format": [
+   "moving image"
+  ],
+  "genre": [
+   "Actualities (Motion pictures)",
+   "Silent films",
+   "Short films",
+   "Nonfiction films"
+  ],
+  "language": [
+   "eng"
+  ],
+  "location": [
+   "New York (State)--New York",
+   "Madison Square Park (New York, N.Y.)"
+  ],
+  "medium": [
+   "viewing print 1 film reel of 1 (78 ft.) : si., b&w ; 16 mm.",
+   "dupe neg pic 1 film reel of 1 (78 ft.) : si., b&w ; 16 mm.",
+   "paper pos 1 roll of 1 (ca. 180 ft.) : b&w ; 35 mm.",
+   "paper pos (copy 2) 1 roll of 1 (ca. 180 ft.) : b&w ; 35 mm."
+  ],
+  "notes": [
+   "H14438 U.S. Copyright Office",
+   "Copyright: Thomas A. Edison; 24Feb1902; H14438.",
+   "This title was omitted from Niver's Early motion pictures : the Paper Print Collection in the Library of Congress, but a typed description of the film is attached to page 221 of some LC copies of the printed catalog.",
+   "Paper print shelf number (LC 2100) was changed when the paper prints were re-housed.",
+   "Sources used: Niver, K. Early motion pictures : the Paper Print Collection in the Library of Congress (LC copy); American Film Institute catalog, film beginnings, 1893-1910, p. 730; Edison films catalog, no. 135, September, 1902, p. 104.",
+   "Probably photographed on February 17, 1902. Location: New York City."
+  ],
+  "subjects": [
+   "Blizzards--New York (State)--New York",
+   "Snow removal--New York (State)--New York",
+   "Fire engines",
+   "City and town life--New York (State)--New York",
+   "Madison Square Park (New York, N.Y.)"
+  ],
+  "summary": [
+   "\"A realistic panoramic view taken at Madison Square, New York City, on February 17, 1902. A portion of the New York Fire Department is seen trying to make their way to a fire through the immense snow drifts. A few pedestrians are bravely plodding through the immense piles of snow, and a snow plow is hard at work on the Broadway, underground trolley line, endeavoring to clear the tracks. Madison Square, Madison Square Garden, Broadway, the Fifth Avenue Hotel, and 23rd Street are all shown in succession\"--Edison films catalog."
+  ],
+  "title": "New York City in a blizzard"
+ },
+ "language": [
+  "english"
+ ],
+ "languages": [
+  {
+   "english": "https://www.loc.gov/search/?fa=language:english&fo=json"
+  }
+ ],
+ "library_of_congress_control_number": "2017604954",
+ "location": [
+  "madison square park",
+  "new york"
+ ],
+ "locations": [
+  {
+   "madison square park": "https://www.loc.gov/search/?fa=location:madison+square+park&fo=json"
+  },
+  {
+   "new york": "https://www.loc.gov/search/?fa=location:new+york&fo=json"
+  }
+ ],
+ "medium": [
+  "viewing print 1 film reel of 1 (78 ft.) : si., b&w ; 16 mm.",
+  "dupe neg pic 1 film reel of 1 (78 ft.) : si., b&w ; 16 mm.",
+  "paper pos 1 roll of 1 (ca. 180 ft.) : b&w ; 35 mm.",
+  "paper pos (copy 2) 1 roll of 1 (ca. 180 ft.) : b&w ; 35 mm."
+ ],
+ "mime_type": [
+  "image/gif",
+  "video/mp4",
+  "image/jpeg",
+  "video/quicktime",
+  "application/x-video"
+ ],
+ "notes": [
+  "H14438 U.S. Copyright Office",
+  "Copyright: Thomas A. Edison; 24Feb1902; H14438.",
+  "This title was omitted from Niver's Early motion pictures : the Paper Print Collection in the Library of Congress, but a typed description of the film is attached to page 221 of some LC copies of the printed catalog.",
+  "Paper print shelf number (LC 2100) was changed when the paper prints were re-housed.",
+  "Sources used: Niver, K. Early motion pictures : the Paper Print Collection in the Library of Congress (LC copy); American Film Institute catalog, film beginnings, 1893-1910, p. 730; Edison films catalog, no. 135, September, 1902, p. 104.",
+  "Probably photographed on February 17, 1902. Location: New York City."
+ ],
+ "number": [
+  "2018-07-06t10:45:31",
+  "film reel",
+  "2017604954",
+  "2025-06-07t07:50:34.700000"
+ ],
+ "number_carrier_type": [
+  "film reel"
+ ],
+ "number_lccn": [
+  "2017604954"
+ ],
+ "number_source_modified": [
+  "2025-06-07t07:50:34.700000",
+  "2018-07-06t10:45:31"
+ ],
+ "online_format": [
+  "image",
+  "video"
+ ],
+ "original_format": [
+  "film, video"
+ ],
+ "other_formats": [
+  {
+   "label": "MARCXML Record",
+   "link": "https://lccn.loc.gov/2017604954/marcxml"
+  },
+  {
+   "label": "MODS Record",
+   "link": "https://lccn.loc.gov/2017604954/mods"
+  },
+  {
+   "label": "Dublin Core Record",
+   "link": "https://lccn.loc.gov/2017604954/dc"
+  }
+ ],
+ "partof": [
+  {
+   "count": 1294,
+   "title": "national screening room",
+   "url": "https://www.loc.gov/collections/national-screening-room/?fo=json"
+  },
+  {
+   "count": 1904501,
+   "title": "catalog",
+   "url": "https://www.loc.gov/search/?fa=partof:catalog&fo=json"
+  }
+ ],
+ "resources": [
+  {
+   "duration": 212,
+   "files": 1,
+   "height": 1080,
+   "image": "https://tile.loc.gov/storage-services/service/mbrs/ntscrm/01912444/01912444.gif",
+   "info": "https://tile.loc.gov/streaming-services/iiif/service:mbrs:ntscrm:01912444:01912444/info.json",
+   "media_object_id": "6EF04342609A0100E0538C93F1160100",
+   "poster": "https://tile.loc.gov/storage-services/service/mbrs/ntscrm/01912444/01912444.jpg",
+   "url": "https://www.loc.gov/resource/ntscrm.01912444/",
+   "video": "https://tile.loc.gov/storage-services/service/mbrs/ntscrm/01912444/01912444.mp4",
+   "video_stream": "https://tile.loc.gov/streaming-services/iiif/service:mbrs:ntscrm:01912444:01912444/full/full/0/full/default.m3u8",
+   "width": 1440
+  }
+ ],
+ "rights": [
+  "<p>The Library of Congress is not aware of any U.S. copyright or other restrictions in the vast majority of motion pictures in these collections. Absent any such restrictions, these materials are free to use and reuse.</p>\r\n<p>In rare cases, copyrighted motion pictures are made available by special permission to the Library and may be used only for educational purposes. For example, the Gershwin home movies fall within this category. Rights assessment is your responsibility. No registration information exists for some titles, and reproduction of some titles may be restricted by privacy rights, publicity rights, licensing and trademarks. Additionally, some works may still be protected by copyright in the United States or some foreign countries. The written permission of the copyright owners in materials not in the public domain is required for distribution, reproduction, or other use of protected items beyond that allowed by fair use or other statutory exemptions.</p>\r\n<p>Whenever possible, we provide information that we have about copyright owners and related matters in the catalog records, finding aids and other texts that accompany collections. You should consult the catalog information that accompanies each item for specific information. This catalog data provides the details known to the Library of Congress regarding the corresponding item and may assist you in making independent assessments of the legal status of these items for their desired uses. You should also consult restrictions associated with donations to the Library.</p>\r\n<p>Credit Line: Library of Congress, Motion Picture, Broadcasting, and Recorded Sound Division.</p>\r\n<p>More about <a href=\"/legal/\">Copyright and other Restrictions</a>.</p>\r\n<p>For guidance about compiling full citations consult <a href=\"https://www.loc.gov/teachers/usingprimarysources/citing.html\">Citing Primary Sources</a>.</p>"
+ ],
+ "score": 16.251848,
+ "shard": "01",
+ "shelf_id": "FLA 5114 (viewing print) FRA 2069 (dupe neg pic) Box 0023C (paper pos) Box 5035D (paper pos, copy 2)",
+ "site": [
+  "catalog"
+ ],
+ "source_modified": "2000-01-01T12:00:00Z",
+ "subject": [
+  "city and town life",
+  "nonfiction films",
+  "new york (state)",
+  "fire engines",
+  "actualities (motion pictures)",
+  "snow removal",
+  "silent films",
+  "new york",
+  "blizzards",
+  "madison square park (new york, n.y.)",
+  "short films"
+ ],
+ "subject_headings": [
+  "Blizzards--New York (State)--New York",
+  "Snow removal--New York (State)--New York",
+  "Fire engines",
+  "City and town life--New York (State)--New York",
+  "Madison Square Park (New York, N.Y.)"
+ ],
+ "subjects": [
+  {
+   "actualities (motion pictures)": "https://www.loc.gov/search/?fa=subject:actualities+%28motion+pictures%29&fo=json"
+  },
+  {
+   "blizzards": "https://www.loc.gov/search/?fa=subject:blizzards&fo=json"
+  },
+  {
+   "city and town life": "https://www.loc.gov/search/?fa=subject:city+and+town+life&fo=json"
+  },
+  {
+   "fire engines": "https://www.loc.gov/search/?fa=subject:fire+engines&fo=json"
+  },
+  {
+   "madison square park (new york, n.y.)": "https://www.loc.gov/search/?fa=subject:madison+square+park+%28new+york,+n.y.%29&fo=json"
+  },
+  {
+   "new york": "https://www.loc.gov/search/?fa=subject:new+york&fo=json"
+  },
+  {
+   "new york (state)": "https://www.loc.gov/search/?fa=subject:new+york+%28state%29&fo=json"
+  },
+  {
+   "nonfiction films": "https://www.loc.gov/search/?fa=subject:nonfiction+films&fo=json"
+  },
+  {
+   "short films": "https://www.loc.gov/search/?fa=subject:short+films&fo=json"
+  },
+  {
+   "silent films": "https://www.loc.gov/search/?fa=subject:silent+films&fo=json"
+  },
+  {
+   "snow removal": "https://www.loc.gov/search/?fa=subject:snow+removal&fo=json"
+  }
+ ],
+ "summary": [
+  "\"A realistic panoramic view taken at Madison Square, New York City, on February 17, 1902. A portion of the New York Fire Department is seen trying to make their way to a fire through the immense snow drifts. A few pedestrians are bravely plodding through the immense piles of snow, and a snow plow is hard at work on the Broadway, underground trolley line, endeavoring to clear the tracks. Madison Square, Madison Square Garden, Broadway, the Fifth Avenue Hotel, and 23rd Street are all shown in succession\"--Edison films catalog."
+ ],
+ "timestamp": "2026-08-18T17:22:17.608Z",
+ "title": "New York City in a blizzard",
+ "type": [
+  "moving image"
+ ],
+ "url": "https://www.loc.gov/item/2017604954/"
+}

@@ -1,0 +1,374 @@
+{
+ "_version_": 1873882631632846848,
+ "access_restricted": false,
+ "aka": [
+  "http://lccn.loc.gov/2016600213",
+  "http://www.loc.gov/item/2016600213/",
+  "https://search.catalog.loc.gov/instances/0e430d14-881d-53eb-8d59-832068240087",
+  "https://hdl.loc.gov/loc.mbrsmi/ntscrm.01964773",
+  "http://www.loc.gov/resource/ntscrm.01964773/"
+ ],
+ "call_number": [
+  "FLA 4883 (viewing print)",
+  "FLA 0662 (viewing print, copy 2)",
+  "FEB 9833 (viewing print)",
+  "FRA 1888 (dupe neg pic)",
+  "FRD 0635 (dupe neg pic, copy 2)",
+  "FZA 0905 (dupe neg pic)",
+  "FRB 0760 (master pos pic)",
+  "Box 0090J (paper pos)",
+  "Box 5091D (paper pos, copy 2)"
+ ],
+ "campaigns": [],
+ "contributor_names": [
+  "Porter, Edwin S., camera",
+  "Thomas A. Edison, Inc",
+  "Paper Print Collection (Library of Congress)",
+  "Ernst (Louise) Collection (Library of Congress)",
+  "Niver (Kemp) Collection (Library of Congress)"
+ ],
+ "contributors": [
+  {
+   "ernst (louise) collection (library of congress)": "https://www.loc.gov/search/?fa=contributor:ernst+%28louise%29+collection+%28library+of+congress%29&fo=json"
+  },
+  {
+   "niver (kemp) collection (library of congress)": "https://www.loc.gov/search/?fa=contributor:niver+%28kemp%29+collection+%28library+of+congress%29&fo=json"
+  },
+  {
+   "paper print collection (library of congress)": "https://www.loc.gov/search/?fa=contributor:paper+print+collection+%28library+of+congress%29&fo=json"
+  },
+  {
+   "porter, edwin s.": "https://www.loc.gov/search/?fa=contributor:porter,+edwin+s.&fo=json"
+  },
+  {
+   "thomas a. edison, inc": "https://www.loc.gov/search/?fa=contributor:thomas+a.+edison,+inc&fo=json"
+  }
+ ],
+ "control_number": "",
+ "created_published": [
+  "United States : Thomas A. Edison, Inc., 1904."
+ ],
+ "date": "1904",
+ "dates": [
+  {
+   "1904": "https://www.loc.gov/search/?dates=1904/1904&fo=json"
+  }
+ ],
+ "description": [
+  "\"Showing a large number of people enjoying this favorite Winter pastime in Central Park. This scene was taken close by a large lake, and shows thousands of people skating in the background. A most interesting subject. 100 ft.\"--Edison films catalog no. 288."
+ ],
+ "digital_id": [
+  "http://hdl.loc.gov/loc.mbrsmi/ntscrm.01964773"
+ ],
+ "digitized": true,
+ "display_offsite": true,
+ "extract_timestamp": "2026-08-18T17:18:34.961Z",
+ "extract_urls": [
+  "http://lccn.loc.gov/2016600213#nsr",
+  "http://lccn.loc.gov/2016600213#catalog-split-05"
+ ],
+ "format": [
+  {
+   "film, video": "https://www.loc.gov/search/?fa=original_format:film,+video&fo=json"
+  }
+ ],
+ "genre": [
+  "Actualities (Motion pictures)",
+  "Silent films",
+  "Short films",
+  "Nonfiction films"
+ ],
+ "group": [
+  "nsr",
+  "catalog-split-05",
+  "catalog",
+  "national-screening-room",
+  "main-catalog-split-05"
+ ],
+ "hassegments": false,
+ "id": "http://www.loc.gov/item/2016600213/",
+ "image_url": [
+  "https://tile.loc.gov/storage-services/service/mbrs/ntscrm/01964773/01964773.gif"
+ ],
+ "index": 1,
+ "item": {
+  "call_number": [
+   "FLA 4883 (viewing print)",
+   "FLA 0662 (viewing print, copy 2)",
+   "FEB 9833 (viewing print)",
+   "FRA 1888 (dupe neg pic)",
+   "FRD 0635 (dupe neg pic, copy 2)",
+   "FZA 0905 (dupe neg pic)",
+   "FRB 0760 (master pos pic)",
+   "Box 0090J (paper pos)",
+   "Box 5091D (paper pos, copy 2)"
+  ],
+  "contributors": [
+   "Porter, Edwin S., camera",
+   "Thomas A. Edison, Inc",
+   "Paper Print Collection (Library of Congress)",
+   "Ernst (Louise) Collection (Library of Congress)",
+   "Niver (Kemp) Collection (Library of Congress)"
+  ],
+  "created_published": [
+   "United States : Thomas A. Edison, Inc., 1904."
+  ],
+  "date": "1904",
+  "digital_id": [
+   "http://hdl.loc.gov/loc.mbrsmi/ntscrm.01964773"
+  ],
+  "format": [
+   "moving image"
+  ],
+  "genre": [
+   "Actualities (Motion pictures)",
+   "Silent films",
+   "Short films",
+   "Nonfiction films"
+  ],
+  "language": [
+   "eng"
+  ],
+  "location": [
+   "New York (State)--New York",
+   "Central Park (New York, N.Y.)"
+  ],
+  "medium": [
+   "viewing print 1 film reel of 1 (46 ft.) : si., b&w ; 16 mm.",
+   "viewing print (copy 2) 1 film reel of 1 (inc.) (16 ft.) : si., b&w ; 16 mm.",
+   "viewing print 1 film reel of 1 (ca. 75 ft.) : si., b&w ; 35 mm.",
+   "dupe neg pic 1 film reel of 1 (46 ft.) : si., b&w ; 16 mm.",
+   "dupe neg pic (copy 2) 1 film reel of 1 (inc.) (16 ft.) : si., b&w ; 16 mm.",
+   "dupe neg pic 1 film reel of 1 (ca. 75 ft.) : si., b&w ; 35 mm.",
+   "master pos pic 1 film reel of 1 (ca. 45 ft.) : si., b&w ; 16 mm.",
+   "paper pos 1 roll of 1 (ca. 75 ft.) : b&w ; 35 mm.",
+   "paper pos (copy 2) 1 roll of 1 (ca. 75 ft.) : b&w ; 35 mm."
+  ],
+  "notes": [
+   "H43006 U.S. Copyright Office",
+   "Copyright: Thomas A. Edison; 4Mar1904; H43006.",
+   "Incomplete: copy 2 viewing print and dupe neg in Ernst Collection: parts of picture lacking.",
+   "Paper print shelf number (LC 1869) was changed when the paper prints were re-housed.",
+   "Additional holdings for this title may be available. Contact reference librarian.",
+   "Sources used: Niver, K. Early motion pictures, p. 301; American Film Institute catalog, film beginnings, 1893-1910, p. 989; Edison films catalog, no. 288, July, 1906, p. 106; M/B/RS Film & television catalog card.",
+   "Camera, Edwin S. Porter.",
+   "Photographed February 8, 1904 in Central Park, New York, N.Y.",
+   "Early motion pictures : the Paper Print Collection in the Library of Congress / by Kemp R. Niver. Library of  Congress. 1985.",
+   "16 mm dupe neg pic (copy 2) renumbered: FLA 0661 to FRD 0635.",
+   "35 mm dupe neg pic renumbered: FPE 5577 to FZA 0905."
+  ],
+  "other_title": [
+   "Title in Edison films catalog no. 288: Sleighing, Central Park, New York"
+  ],
+  "subjects": [
+   "Sleighing--New York (State)--New York",
+   "Skating--New York (State)--New York",
+   "Skaters--New York (State)--New York",
+   "City and town life--New York (State)--New York",
+   "Winter--New York (State)--New York",
+   "Central Park (New York, N.Y.)"
+  ],
+  "summary": [
+   "\"Showing a large number of people enjoying this favorite Winter pastime in Central Park. This scene was taken close by a large lake, and shows thousands of people skating in the background. A most interesting subject. 100 ft.\"--Edison films catalog no. 288."
+  ],
+  "title": "Sleighing in Central Park, New York"
+ },
+ "language": [
+  "english"
+ ],
+ "languages": [
+  {
+   "english": "https://www.loc.gov/search/?fa=language:english&fo=json"
+  }
+ ],
+ "library_of_congress_control_number": "2016600213",
+ "location": [
+  "new york",
+  "central park"
+ ],
+ "locations": [
+  {
+   "central park": "https://www.loc.gov/search/?fa=location:central+park&fo=json"
+  },
+  {
+   "new york": "https://www.loc.gov/search/?fa=location:new+york&fo=json"
+  }
+ ],
+ "medium": [
+  "viewing print 1 film reel of 1 (46 ft.) : si., b&w ; 16 mm.",
+  "viewing print (copy 2) 1 film reel of 1 (inc.) (16 ft.) : si., b&w ; 16 mm.",
+  "viewing print 1 film reel of 1 (ca. 75 ft.) : si., b&w ; 35 mm.",
+  "dupe neg pic 1 film reel of 1 (46 ft.) : si., b&w ; 16 mm.",
+  "dupe neg pic (copy 2) 1 film reel of 1 (inc.) (16 ft.) : si., b&w ; 16 mm.",
+  "dupe neg pic 1 film reel of 1 (ca. 75 ft.) : si., b&w ; 35 mm.",
+  "master pos pic 1 film reel of 1 (ca. 45 ft.) : si., b&w ; 16 mm.",
+  "paper pos 1 roll of 1 (ca. 75 ft.) : b&w ; 35 mm.",
+  "paper pos (copy 2) 1 roll of 1 (ca. 75 ft.) : b&w ; 35 mm."
+ ],
+ "mime_type": [
+  "image/gif",
+  "video/mp4",
+  "image/jpeg",
+  "video/quicktime",
+  "application/x-video"
+ ],
+ "notes": [
+  "H43006 U.S. Copyright Office",
+  "Copyright: Thomas A. Edison; 4Mar1904; H43006.",
+  "Incomplete: copy 2 viewing print and dupe neg in Ernst Collection: parts of picture lacking.",
+  "Paper print shelf number (LC 1869) was changed when the paper prints were re-housed.",
+  "Additional holdings for this title may be available. Contact reference librarian.",
+  "Sources used: Niver, K. Early motion pictures, p. 301; American Film Institute catalog, film beginnings, 1893-1910, p. 989; Edison films catalog, no. 288, July, 1906, p. 106; M/B/RS Film & television catalog card.",
+  "Camera, Edwin S. Porter.",
+  "Photographed February 8, 1904 in Central Park, New York, N.Y.",
+  "Early motion pictures : the Paper Print Collection in the Library of Congress / by Kemp R. Niver. Library of  Congress. 1985.",
+  "16 mm dupe neg pic (copy 2) renumbered: FLA 0661 to FRD 0635.",
+  "35 mm dupe neg pic renumbered: FPE 5577 to FZA 0905."
+ ],
+ "number": [
+  "2025-06-07t07:20:03.600000",
+  "film reel",
+  "2023-10-13t09:42:43",
+  "2016600213"
+ ],
+ "number_carrier_type": [
+  "film reel"
+ ],
+ "number_lccn": [
+  "2016600213"
+ ],
+ "number_source_modified": [
+  "2025-06-07t07:20:03.600000",
+  "2023-10-13t09:42:43"
+ ],
+ "online_format": [
+  "image",
+  "video"
+ ],
+ "original_format": [
+  "film, video"
+ ],
+ "other_formats": [
+  {
+   "label": "MARCXML Record",
+   "link": "https://lccn.loc.gov/2016600213/marcxml"
+  },
+  {
+   "label": "MODS Record",
+   "link": "https://lccn.loc.gov/2016600213/mods"
+  },
+  {
+   "label": "Dublin Core Record",
+   "link": "https://lccn.loc.gov/2016600213/dc"
+  }
+ ],
+ "other_title": [
+  "Title in Edison films catalog no. 288: Sleighing, Central Park, New York"
+ ],
+ "partof": [
+  {
+   "count": 1294,
+   "title": "national screening room",
+   "url": "https://www.loc.gov/collections/national-screening-room/?fo=json"
+  },
+  {
+   "count": 1904501,
+   "title": "catalog",
+   "url": "https://www.loc.gov/search/?fa=partof:catalog&fo=json"
+  }
+ ],
+ "resources": [
+  {
+   "duration": 119,
+   "files": 1,
+   "height": 1080,
+   "image": "https://tile.loc.gov/storage-services/service/mbrs/ntscrm/01964773/01964773.gif",
+   "info": "https://tile.loc.gov/streaming-services/iiif/service:mbrs:ntscrm:01964773:01964773/info.json",
+   "media_object_id": "6414DF92D17F0150E0538C93F1160150",
+   "poster": "https://tile.loc.gov/storage-services/service/mbrs/ntscrm/01964773/01964773.jpg",
+   "url": "https://www.loc.gov/resource/ntscrm.01964773/",
+   "video": "https://tile.loc.gov/storage-services/service/mbrs/ntscrm/01964773/01964773.mp4",
+   "video_stream": "https://tile.loc.gov/streaming-services/iiif/service:mbrs:ntscrm:01964773:01964773/full/full/0/full/default.m3u8",
+   "width": 1440
+  }
+ ],
+ "rights": [
+  "<p>The Library of Congress is not aware of any U.S. copyright or other restrictions in the vast majority of motion pictures in these collections. Absent any such restrictions, these materials are free to use and reuse.</p>\r\n<p>In rare cases, copyrighted motion pictures are made available by special permission to the Library and may be used only for educational purposes. For example, the Gershwin home movies fall within this category. Rights assessment is your responsibility. No registration information exists for some titles, and reproduction of some titles may be restricted by privacy rights, publicity rights, licensing and trademarks. Additionally, some works may still be protected by copyright in the United States or some foreign countries. The written permission of the copyright owners in materials not in the public domain is required for distribution, reproduction, or other use of protected items beyond that allowed by fair use or other statutory exemptions.</p>\r\n<p>Whenever possible, we provide information that we have about copyright owners and related matters in the catalog records, finding aids and other texts that accompany collections. You should consult the catalog information that accompanies each item for specific information. This catalog data provides the details known to the Library of Congress regarding the corresponding item and may assist you in making independent assessments of the legal status of these items for their desired uses. You should also consult restrictions associated with donations to the Library.</p>\r\n<p>Credit Line: Library of Congress, Motion Picture, Broadcasting, and Recorded Sound Division.</p>\r\n<p>More about <a href=\"/legal/\">Copyright and other Restrictions</a>.</p>\r\n<p>For guidance about compiling full citations consult <a href=\"https://www.loc.gov/teachers/usingprimarysources/citing.html\">Citing Primary Sources</a>.</p>"
+ ],
+ "score": 16.251848,
+ "shard": "01",
+ "shelf_id": "FLA 4883 (viewing print) FLA 0662 (viewing print, copy 2) FEB 9833 (viewing print) FRA 1888 (dupe neg pic) FRD 0635 (dupe neg pic, copy 2) FZA 0905 (dupe neg pic) FRB 0760 (master pos pic) Box 0090J (paper pos) Box 5091D (paper pos, copy 2)",
+ "site": [
+  "catalog"
+ ],
+ "source_modified": "2000-01-01T12:00:00Z",
+ "subject": [
+  "city and town life",
+  "skaters",
+  "central park (new york, n.y.)",
+  "new york (state)",
+  "nonfiction films",
+  "actualities (motion pictures)",
+  "sleighing",
+  "silent films",
+  "new york",
+  "skating",
+  "winter",
+  "short films"
+ ],
+ "subject_headings": [
+  "Sleighing--New York (State)--New York",
+  "Skating--New York (State)--New York",
+  "Skaters--New York (State)--New York",
+  "City and town life--New York (State)--New York",
+  "Winter--New York (State)--New York",
+  "Central Park (New York, N.Y.)"
+ ],
+ "subjects": [
+  {
+   "actualities (motion pictures)": "https://www.loc.gov/search/?fa=subject:actualities+%28motion+pictures%29&fo=json"
+  },
+  {
+   "central park (new york, n.y.)": "https://www.loc.gov/search/?fa=subject:central+park+%28new+york,+n.y.%29&fo=json"
+  },
+  {
+   "city and town life": "https://www.loc.gov/search/?fa=subject:city+and+town+life&fo=json"
+  },
+  {
+   "new york": "https://www.loc.gov/search/?fa=subject:new+york&fo=json"
+  },
+  {
+   "new york (state)": "https://www.loc.gov/search/?fa=subject:new+york+%28state%29&fo=json"
+  },
+  {
+   "nonfiction films": "https://www.loc.gov/search/?fa=subject:nonfiction+films&fo=json"
+  },
+  {
+   "short films": "https://www.loc.gov/search/?fa=subject:short+films&fo=json"
+  },
+  {
+   "silent films": "https://www.loc.gov/search/?fa=subject:silent+films&fo=json"
+  },
+  {
+   "skaters": "https://www.loc.gov/search/?fa=subject:skaters&fo=json"
+  },
+  {
+   "skating": "https://www.loc.gov/search/?fa=subject:skating&fo=json"
+  },
+  {
+   "sleighing": "https://www.loc.gov/search/?fa=subject:sleighing&fo=json"
+  },
+  {
+   "winter": "https://www.loc.gov/search/?fa=subject:winter&fo=json"
+  }
+ ],
+ "summary": [
+  "\"Showing a large number of people enjoying this favorite Winter pastime in Central Park. This scene was taken close by a large lake, and shows thousands of people skating in the background. A most interesting subject. 100 ft.\"--Edison films catalog no. 288."
+ ],
+ "timestamp": "2026-08-18T17:22:17.608Z",
+ "title": "Sleighing in Central Park, New York",
+ "type": [
+  "moving image"
+ ],
+ "url": "https://www.loc.gov/item/2016600213/"
+}

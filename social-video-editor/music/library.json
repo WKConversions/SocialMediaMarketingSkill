@@ -166,6 +166,36 @@
         "fast hype edits",
         "paid ads"
       ]
+    },
+    "sinatra-it-had-to-be-you": {
+      "title": "It Had To Be You",
+      "artist": "Frank Sinatra",
+      "file": "assets/music/sinatra-it-had-to-be-you.mp3",
+      "rights": "Commercial recording supplied by the client. Not cleared for paid ads; business accounts may get it muted. Prefer adding it through the platform's music library when posting from a business account.",
+      "start_offset_s": 45.8,
+      "start_rule": "Client: start half a second before the very first 'It had to be you'. The track opens with the verse ('Why do I do just as you say...'); the first chorus line starts at 46.30 s: a steady baritone pitch (93-121 Hz) begins at 46.28-46.30, the 2-6 kHz voice band rises from 46.34, 'had' follows at 47.34 (pitch jump; forced alignment 47.33). The 255-295 Hz tone at 45.86-46.15 is an instrumental lead-in, not the voice. Start = 46.30 - 0.50 = 45.80 s.",
+      "duration_s": 234.76,
+      "has_vocals": true,
+      "mix": {
+        "scheme": "interludes",
+        "scheme_rule": "As the other classy edits: automated, not side-chain ducked; up in the opening, interludes and end card; 12 dB under the voice while he talks (vocals) with the gentle 1-3 kHz cut.",
+        "pre_gain_db": 0.0,
+        "under_voice_db": 12.0,
+        "up_vs_voice_lu": -1.5,
+        "fade_out_s": 2.0,
+        "master_to_final_lufs": true
+      },
+      "first_used_in": "Henry Cole 1843 first Christmas card -> WKC story edit (lab/edit-12), 2026-11-09.",
+      "suits": [
+        "warm, romantic or nostalgic story edits",
+        "Christmas and winter stories",
+        "classy, jazz edits"
+      ],
+      "avoid": [
+        "a constant bed under dense talking (it has vocals)",
+        "fast hype edits",
+        "paid ads"
+      ]
     }
   }
 }
