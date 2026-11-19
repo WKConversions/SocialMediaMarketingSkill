@@ -1,0 +1,26 @@
+<!doctype html><html><head><meta charset="utf-8">
+<script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js","three/addons/":"./node_modules/three/examples/jsm/"}}</script>
+<style>html,body{margin:0;width:1080px;height:1920px;background:#030813}</style></head><body><canvas id="gl" width="1080" height="1920"></canvas>
+<script type="module">
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import * as L from './lib4.js';
+let READY; window.__ready = new Promise(r => READY = r);
+const R = new THREE.WebGLRenderer({ canvas: document.getElementById('gl'), antialias: true, preserveDrawingBuffer: true }); R.setSize(1080, 1920, false);
+R.outputColorSpace = THREE.SRGBColorSpace; R.toneMapping = THREE.ACESFilmicToneMapping;
+const scene = new THREE.Scene(), cam = new THREE.PerspectiveCamera(30, 1080 / 1920, 0.01, 100);
+scene.add(new THREE.HemisphereLight(0xffffff, 0x223344, 1.2)); const d = new THREE.DirectionalLight(0xffffff, 2.5); d.position.set(2, 3, 4); scene.add(d);
+const files = ['Extravehicular_Mobility_Unit', 'Astronaut', 'Z2_Spacesuit', 'International_Space_Station_ISS_B'];
+const info = [];
+for (let i = 0; i < files.length; i++) {
+  const g = (await new GLTFLoader().loadAsync(`img/models/${files[i]}.glb`)).scene; const box = new THREE.Box3().setFromObject(g), s = box.getSize(new THREE.Vector3());
+  let tris = 0; g.traverse(o => { if (o.isMesh) tris += (o.geometry.index ? o.geometry.index.count : o.geometry.attributes.position.count) / 3; });
+  info.push(files[i] + ' size ' + s.toArray().map(v => v.toFixed(2)).join('x') + ' tris ' + Math.round(tris));
+  g.position.sub(box.getCenter(new THREE.Vector3())); const grp = new THREE.Group(); grp.add(g); grp.scale.setScalar(1.6 / Math.max(s.x, s.y, s.z));
+  const holo = i % 2 === 1; if (holo) { const hm = L.holoMaterial({ y0: -0.8, y1: 0.8, scan: 40, fill: 0.06 }); const em = new THREE.LineBasicMaterial({ color: 0x8fb0ff, transparent: true, opacity: 0.35, blending: THREE.AdditiveBlending, depthWrite: false });
+    g.traverse(o => { if (o.isMesh) { const e = new THREE.LineSegments(new THREE.EdgesGeometry(o.geometry, 30), em); o.add(e); o.material = hm; } }); }
+  grp.position.set(i % 2 ? 0.55 : -0.55, i < 2 ? 1.0 : -1.0, 0); grp.rotation.y = 0.5; scene.add(grp);
+}
+window.INFO = info; cam.position.set(0, 0, 8); cam.lookAt(0, 0, 0);
+window.render = f => R.render(scene, cam); window.render(0); READY();
+</script></body></html>

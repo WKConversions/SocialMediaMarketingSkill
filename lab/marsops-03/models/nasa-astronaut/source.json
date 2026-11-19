@@ -1,0 +1,18 @@
+{
+  "source_page": "https://science.nasa.gov/3d-resources/astronaut/",
+  "files": [
+    {
+      "file": "Astronaut.glb",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/model/astronaut/Astronaut.glb",
+      "bytes": 762988
+    }
+  ],
+  "licence": "NASA 3D Resources: no copyright / US public domain (NASA content generally not subject to copyright); no NASA endorsement may be implied, no NASA insignia in commercial use",
+  "licence_quotes": {
+    "catalog_page_quote": "The 3D Resources hub stores 3D models related to NASA's various missions. Some of these models are 3D printable! All of these assets are free to download and use. They are also mirrored on GitHub. Refer to the NASA Images and Media Usage Guidelines. (https://science.nasa.gov/3d-resources/)",
+    "github_readme_quote": "These assets are free and without copyright. (https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/README.md)",
+    "nasa_usage_guidelines_quote": "NASA content - images, audio, video, related media and files used in the rendition of 3-dimensional models, such as texture maps and polygon data in any format - generally are not subject to copyright in the United States. [...] If the NASA material is to be used for commercial purposes, including advertisements, it must not explicitly or implicitly convey NASA's endorsement of commercial goods or services. (https://www.nasa.gov/nasa-brand-center/images-and-media/)"
+  },
+  "retrieved": "2026-11-19",
+  "page_source_field": "DigitalSpace Corporation"
+}
