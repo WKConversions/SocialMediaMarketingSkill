@@ -1,0 +1,35 @@
+{
+ "bpm": 120,
+ "key": "D",
+ "mode": "minor",
+ "length": 15.0,
+ "vibe": "cinematic-pulse",
+ "progression": [
+  "i",
+  "VI",
+  "III",
+  "VII"
+ ],
+ "sections": [
+  [
+   0,
+   0
+  ],
+  [
+   2,
+   1
+  ],
+  [
+   4,
+   2
+  ],
+  [
+   5,
+   3
+  ],
+  [
+   6,
+   "end"
+  ]
+ ]
+}
