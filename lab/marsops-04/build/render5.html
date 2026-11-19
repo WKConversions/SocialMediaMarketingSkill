@@ -44,7 +44,7 @@ const quadScene = new THREE.Scene(), quadCam = new THREE.OrthographicCamera(-1, 
 quadScene.add(new THREE.Mesh(new THREE.PlaneGeometry(2, 2), mixMat));
 const tl = new THREE.TextureLoader(), gl = new GLTFLoader(); { const d = new DRACOLoader(); d.setDecoderPath('./node_modules/three/examples/jsm/libs/draco/gltf/'); gl.setDRACOLoader(d); }
 const tex = async u => { const t = await tl.loadAsync(u); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 4; return t; };
-async function model(file, size) { const g = (await gl.loadAsync(file)).scene, box = new THREE.Box3().setFromObject(g), s = box.getSize(V());
+async function model(file, size) { const g = (await gl.loadAsync(file)).scene; g.traverse(o => { if (o.isMesh && o.material) { o.material.transmission = 0; o.material.transparent = false; o.material.opacity = 1; } }); const box = new THREE.Box3().setFromObject(g), s = box.getSize(V());
   g.position.sub(box.getCenter(V())); const o = new THREE.Group(); o.add(g); o.scale.setScalar(size / Math.max(s.x, s.y, s.z)); o.userData.size = s; return o; }
 // a few stars, crisp, on deep blue (the brief: "deep blue space with only a few stars")
 function stars(n, r, seed) { const rr = L.rng(seed), p = new Float32Array(n * 3), c = new Float32Array(n * 3);
@@ -58,7 +58,7 @@ const clay = () => new THREE.MeshStandardMaterial({ color: 0xe9ecf2, roughness: 
 function asClay(o) { o.traverse(m => { if (m.isMesh) m.material = clay(); }); return o; }
 
 
-const SUN = V(-1.0, 0.25, -0.35).normalize();          // where the Sun is, for every scene
+const SUN = V(-0.35, 0.3, 1.0).normalize();          // where the Sun is, for every scene
 let EARTH_T = null;
 async function earthTex() { if (!EARTH_T) EARTH_T = { day: await tex('img/earth_day.jpg'), night: await tex('img/earth_night.jpg'), clouds: await tex('img/earth_clouds.jpg'), spec: await tex('img/earth_spec.jpg') }; return EARTH_T; }
 async function makeEarth(seg_ = 160) {
@@ -116,7 +116,23 @@ async function build() {
       fragmentShader: `uniform sampler2D map; uniform float u; varying vec2 vUv; void main(){ vec3 c = texture2D(map, vUv).rgb; float l = dot(c, vec3(.3,.59,.11));
         float ink = smoothstep(0.30, 0.10, l); vec3 blue = mix(vec3(0.016,0.043,0.098), vec3(0.62,0.76,1.0), ink); gl_FragColor = vec4(mix(c * 0.92, blue, u), 1.0); }`, toneMapped: false });
     const page = new THREE.Mesh(new THREE.PlaneGeometry(aspect * 3, 3), mat); s.add(page);
-    SC.push({ t0: 13.4, t1: 21.2, s, cam, up: tt => { mat.uniforms.u.value = SIG(seg(tt, 16.6, 18.6)); cam.position.set(0.15 - (tt - 13.8) * 0.02, 0.15 + (tt - 13.8) * 0.01, 1.55 - (tt - 13.8) * 0.04); cam.lookAt(0.1, 0.18, 0); } }); }
+    // Leonardo's aerial screw rises out of the page as a 3D drawing: helical sail, mast, platform, struts
+    const pw = aspect * 3, cx0 = (0.533 - 0.5) * pw, cy0 = (0.5 - 0.53) * 3, R0 = 0.155 * pw;
+    const scr = new THREE.Group(); scr.position.set(cx0, cy0, 0.002); scr.rotation.x = -Math.PI / 2; s.add(scr);   // local y = up out of the page
+    const ink = new THREE.LineBasicMaterial({ color: 0x3a2614, transparent: true, opacity: 0.9 });
+    const lines = []; const addLine = (pts, t0) => { const ln = new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), ink); ln.userData = { n: pts.length, t0 }; scr.add(ln); lines.push(ln); };
+    { const P = []; for (let i = 0; i <= 400; i++) { const a = i / 400 * Math.PI * 2 * 1.6, r = R0 * (1 - 0.18 * i / 400); P.push(V(r * Math.cos(a), 0.08 + 0.42 * i / 400, r * Math.sin(a))); } addLine(P, 14.3);
+      const P2 = []; for (let i = 0; i <= 400; i++) { const a = i / 400 * Math.PI * 2 * 1.6, r = R0 * 0.18 * (1 - i / 400) + 0.01; P2.push(V(r * Math.cos(a), 0.08 + 0.42 * i / 400, r * Math.sin(a))); } addLine(P2, 14.6); }
+    addLine([V(0, -0.02, 0), V(0, 0.62, 0)], 14.0);
+    { const P = []; for (let i = 0; i <= 96; i++) { const a = i / 96 * Math.PI * 2; P.push(V(R0 * 0.55 * Math.cos(a), 0.0, R0 * 0.55 * Math.sin(a))); } addLine(P, 14.2); }
+    for (let k = 0; k < 8; k++) { const a = k / 8 * Math.PI * 2; addLine([V(R0 * 0.55 * Math.cos(a), 0, R0 * 0.55 * Math.sin(a)), V(0, 0.18, 0)], 14.4 + k * 0.05);
+      const b = a + 0.9; addLine([V(R0 * Math.cos(a) * 0.95, 0.1 + 0.42 * (a / 6.283) / 1.6, R0 * Math.sin(a) * 0.95), V(0, 0.1 + 0.42 * (a / 6.283) / 1.6, 0)], 14.8 + k * 0.05); }
+    SC.push({ t0: 13.4, t1: 21.2, s, cam, up: tt => { const bp = SIG(seg(tt, 16.6, 18.6)); mat.uniforms.u.value = bp;
+      ink.color.setRGB(lerp(0.23, 0.62, bp), lerp(0.15, 0.78, bp), lerp(0.08, 1.0, bp));
+      lines.forEach(ln => ln.geometry.setDrawRange(0, Math.floor(ln.userData.n * L.bez(.45, .05, .35, 1)(seg(tt, ln.userData.t0, ln.userData.t0 + 1.4)))));
+      const rise = INOUT(seg(tt, 15.2, 17.4)); scr.scale.set(1, Math.max(0.001, rise), 1); scr.rotation.y = 0; scr.children.forEach(c => c.rotation.y = tt * 0.35 * rise);
+      const u = INOUT(seg(tt, 13.4, 21.2)), az = lerp(-0.15, 0.55, u), el = lerp(1.35, 0.62, u), d = lerp(1.25, 1.05, u);
+      cam.position.set(cx0 + Math.sin(az) * Math.cos(el) * d, cy0 - Math.cos(az) * Math.cos(el) * d, Math.sin(el) * d); cam.up.set(0, 0, 1); cam.lookAt(cx0, cy0, 0.12 * rise); } }); }
   console.log("STAGE D", performance.now()|0);
   // D. MARSOPS, and the Moon for "explorers who go farther"
   { const s = new THREE.Scene(); space(s); lights(s, 3.4); const cam = new THREE.PerspectiveCamera(30, W / H, 0.01, 200);
@@ -133,14 +149,14 @@ async function build() {
   // ground on the Moon for the habitat and the rover: lunar colour map, low Sun, long shadows
   const moonGround = async (s) => { const tx = await tex('img/moon.jpg'); tx.wrapS = tx.wrapT = THREE.RepeatWrapping; tx.repeat.set(3, 1.5);
     const g = new THREE.Mesh(new THREE.PlaneGeometry(60, 60, 1, 1), new THREE.MeshStandardMaterial({ map: tx, roughness: 1, color: 0xb8b4ad })); g.rotation.x = -Math.PI / 2; g.receiveShadow = true; s.add(g);
-    const d = new THREE.DirectionalLight(0xfff0dc, 5.5); d.position.set(-8, 2.6, -3); d.castShadow = true; d.shadow.mapSize.set(2048, 2048); Object.assign(d.shadow.camera, { left: -6, right: 6, top: 6, bottom: -6, near: 0.5, far: 30 }); d.shadow.bias = -0.0005; s.add(d);
+    const d = new THREE.DirectionalLight(0xfff0dc, 5.5); d.position.set(-6, 3.4, 5); d.castShadow = true; d.shadow.mapSize.set(2048, 2048); Object.assign(d.shadow.camera, { left: -6, right: 6, top: 6, bottom: -6, near: 0.5, far: 30 }); d.shadow.bias = -0.0005; s.add(d);
     s.add(new THREE.HemisphereLight(0xbfd0ff, 0x1a1a1a, 0.18)); const rim = new THREE.DirectionalLight(0x2f73ff, 1.0); rim.position.set(5, 3, 5); s.add(rim); return g; };
   R.shadowMap.enabled = true; R.shadowMap.type = THREE.PCFSoftShadowMap;
   const shadows = o => o.traverse(m => { if (m.isMesh) { m.castShadow = true; m.receiveShadow = true; } });
   // F. Habitats: the two halves of NASA's habitat unit come together on the lunar surface; the Earth hangs above
   { const s = new THREE.Scene(); space(s); const cam = new THREE.PerspectiveCamera(30, W / H, 0.01, 300); await moonGround(s);
     const p1 = await model('img/models/Habitat_Demonstration_Unit_part_1.glb', 2.6), p2 = await model('img/models/Habitat_Demonstration_Unit_part_2.glb', 2.6);
-    const hb = new THREE.Group(); hb.add(p1, p2); shadows(hb); s.add(hb);
+    const hb = new THREE.Group(); hb.add(p1, p2); hb.traverse(o => { if (o.isMesh) o.material = new THREE.MeshStandardMaterial({ color: 0xe6e2da, roughness: 0.6, metalness: 0.1 }); }); shadows(hb); s.add(hb);   // plain finish: the unit's texture carries NASA insignia
     const box = new THREE.Box3().setFromObject(hb); hb.position.y = -box.min.y;
     const earth = await makeEarth(96); earth.scale.setScalar(2.2); earth.position.set(6, 9, -24); s.add(earth);
     SC.push({ t0: 28.5, t1: 31.7, s, cam, up: t => { const u = INOUT(seg(t, 28.6, 31.2)); p2.position.x = lerp(0.9, 0, SIG(seg(t, 28.7, 30.2)));
