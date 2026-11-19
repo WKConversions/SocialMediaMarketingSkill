@@ -1,0 +1,60 @@
+<!doctype html><html><head><meta charset="utf-8">
+<script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js","three/addons/":"./node_modules/three/examples/jsm/"}}</script>
+<style>html,body{margin:0;width:1080px;height:1920px;overflow:hidden;background:#030813} canvas{position:absolute;left:0;top:0}</style></head>
+<body><canvas id="gl" width="1080" height="1920"></canvas>
+<script type="module">
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+import * as L from './lib4.js';
+let READY; window.__ready = new Promise(r => READY = r);
+const W = 1080, H = 1920, scn = new URLSearchParams(location.search).get('scene') || 'space';
+const R = new THREE.WebGLRenderer({ canvas: document.getElementById('gl'), antialias: true, preserveDrawingBuffer: true });
+R.setSize(W, H, false); R.setPixelRatio(1); R.outputColorSpace = THREE.SRGBColorSpace; R.toneMapping = THREE.ACESFilmicToneMapping; R.toneMappingExposure = 1.15;
+const scene = new THREE.Scene(), cam = new THREE.PerspectiveCamera(32, W / H, 0.05, 200);
+const comp = new EffectComposer(R); comp.addPass(new RenderPass(scene, cam));
+const bloom = new UnrealBloomPass(new THREE.Vector2(W / 2, H / 2), 0.55, 0.5, 0.78); comp.addPass(bloom); comp.addPass(new OutputPass());
+scene.add(new THREE.HemisphereLight(0xffe2cc, 0x080404, .32));
+const key = new THREE.DirectionalLight(0xffd2b0, 5.5); key.position.set(-4, 4, 5); scene.add(key);
+const rim = new THREE.DirectionalLight(0xbc321a, 3.2); rim.position.set(5, -1, -3); scene.add(rim);
+const tl = new THREE.TextureLoader();
+const sky = L.makeSky(await tl.loadAsync('img/milky-way-6k.jpg'), 0.5); scene.add(sky);
+const S = {};
+if (scn === 'space') {
+  const g = (await new GLTFLoader().loadAsync('img/mars.glb')).scene; const box = new THREE.Box3().setFromObject(g), s = box.getSize(new THREE.Vector3());
+  g.position.sub(box.getCenter(new THREE.Vector3())); const mars = new THREE.Group(); mars.add(g); mars.scale.setScalar(2 / Math.max(s.x, s.y, s.z)); scene.add(mars); S.mars = mars;
+  scene.add(L.atmosphere(1.045, new THREE.Color(1.0, 0.45, 0.25), 4.0, 0.55));
+  const sh = new THREE.Mesh(new THREE.SphereGeometry(1.45, 96, 64), L.shieldMaterial()); scene.add(sh); S.sh = sh;
+  const wind = L.solarWind(500, { x0: -6, x1: 6, y0: -3, y1: 3, z0: -2, z1: 1.5 }); scene.add(wind); S.wind = wind;
+  cam.position.set(0.6, 0.2, 7.4); cam.lookAt(0, 0, 0);
+} else if (scn === 'holo') {
+  const hm = L.holoMaterial({ y0: -3.1, y1: 3.1, scan: 14, fill: 0.06 });
+  const em = new THREE.LineBasicMaterial({ color: 0x5b8fff, transparent: true, opacity: 0.55, blending: THREE.AdditiveBlending, depthWrite: false });
+  const st = L.station(hm, em); scene.add(st); S.st = st; S.hm = hm;
+  const ringG = new THREE.Group(); for (let i = 0; i < 3; i++) { const r = new THREE.Mesh(new THREE.TorusGeometry(2.4 + i * 0.25, 0.008, 6, 128), new THREE.MeshBasicMaterial({ color: 0x2f73ff, transparent: true, opacity: 0.6 - i * 0.15, blending: THREE.AdditiveBlending }));
+    r.rotation.x = Math.PI / 2; r.position.y = -3.3; ringG.add(r); } scene.add(ringG);
+  const cone = new THREE.Mesh(new THREE.CylinderGeometry(2.6, 0.6, 3.2, 64, 1, true), new THREE.ShaderMaterial({ transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, side: THREE.DoubleSide,
+    vertexShader: `varying float vY; void main(){ vY = position.y; gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.0); }`,
+    fragmentShader: `varying float vY; void main(){ float a = smoothstep(1.6, -1.6, vY) * 0.10; gl_FragColor = vec4(vec3(0.18,0.45,1.0)*a, 1.0); }` }));
+  cone.position.y = -1.7; cone.rotation.x = Math.PI; scene.add(cone);
+  cam.position.set(0, 0.4, 11); cam.lookAt(0, -0.3, 0);
+} else if (scn === 'morph') {
+  const n = 26000, r = L.rng(2), sph = new Float32Array(n * 3);
+  for (let i = 0; i < n; i++) { const u = r() * 2 - 1, a = r() * 6.283, s = Math.sqrt(1 - u * u); sph[i * 3] = s * Math.cos(a) * 1.6; sph[i * 3 + 1] = u * 1.6; sph[i * 3 + 2] = s * Math.sin(a) * 1.6; }
+  await document.fonts.load('800 160px Mont');
+  const logo = L.textPoints('MARSOPS', '800 160px Mont', n, 2.1);
+  const pts = L.morphPoints([sph, logo, sph, sph], n, 0xa9c2ff, 9.0); scene.add(pts); S.pts = pts;
+  cam.position.set(0, 0, 9); cam.lookAt(0, 0, 0);
+}
+window.render = f => { const t = f / 30;
+  if (S.mars) { S.mars.rotation.set(0.14, -0.65 + 0.05 * t, -0.08); const sm = S.sh.material.uniforms; sm.uTime.value = t; sm.uReveal.value = L.seg(t, 0, 1.2);
+    for (let i = 0; i < 12; i++) { const th = i * 2.4; sm.uHits.value[i].set(-1, Math.sin(th) * 0.5, Math.cos(th) * 0.5 + 0.4, 0.1 * i); }
+    S.wind.userData.update(t, 3.0, { c: new THREE.Vector3(0, 0, 0), r: 1.45, on: 1 }); }
+  if (S.st) { S.hm.uniforms.uTime.value = t; S.hm.uniforms.uReveal.value = L.seg(t, 0, 2); S.st.rotation.set(0.35, 0.6 + 0.3 * t, 0.1); }
+  if (S.pts) { const u = S.pts.material.uniforms; u.uA.value = 0; u.uB.value = 1; u.uU.value = L.seg(t, 0, 2); u.uTime.value = t; S.pts.rotation.y = 0.0; }
+  comp.render(); };
+window.render(0); READY();
+</script></body></html>

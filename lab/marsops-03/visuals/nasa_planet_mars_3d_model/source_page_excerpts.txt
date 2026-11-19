@@ -1,0 +1,32 @@
+Source: https://science.nasa.gov/resource/planet-mars-3d-model/ (fetched 2026-11-19; saved as science_nasa_planet-mars-3d-model.html)
+Planet Mars, 3D Model
+Unable to render the provided source
+April 27, 2019
+ Credit
+ NASA/JPL-Caltech
+ Language
+english
+Click (or touch) and drag to interact with this 3D model of Mars.
+ Downloads 
+glTF File (3D Model)
+Mar 8, 2024
+ (3.85 MB)
+USDZ File (3D Model)
+Mar 8, 2024
+ (862.14 KB)
+National Aeronautics and Space Administration
+
+Source: https://science.nasa.gov/3d-resources/ (saved as 3d-resources_index.html)
+The 3D Resources hub stores 3D models related to NASA's various missions. Some of these models are 3D printable! All of these assets are free to download and use. They are also mirrored on GitHub. Refer to the NASA Images and Media Usage Guidelines.
+
+Source: https://science.nasa.gov/3d-resources/mars/ (saved as 3d-resources_mars.html)
+Mars Image Texture
+Image texture for 3D models.
+From Viking images processed at the USGS. From the database of JPL/Caltech generated planetary maps.
+Credit: NASA/Jet Propulsion Laboratory & Caltech
+Mars.jpg
+Jun 2, 2025
+JPEG (950.09 KB)
+Mars.tif
+Jun 2, 2025
+TIFF (2.99 MB)

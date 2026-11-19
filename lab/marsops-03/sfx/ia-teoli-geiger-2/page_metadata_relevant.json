@@ -1,0 +1,35 @@
+{
+ "metadata": {
+  "identifier": "geiger-counter-sounds-1",
+  "mediatype": "audio",
+  "collection": [
+   "danieldteolijr",
+   "individual-image-collections"
+  ],
+  "creator": "D.D.Teoli Jr. A.C.",
+  "description": "5 field recordings made from different Geiger counters off of radioactive thorite mineral specimens.<div><br /></div><div><div>Contributed to the Internet Archive in Honor and Memory of Leni Riefenstahl &amp; Howard R. Hughes Jr.</div><div><br /></div><div>Daniel D. Teoli Jr. Archival Collection</div><div>Daniel D. Teoli Jr. Small Gauge Film Archive</div><div>Daniel D. Teoli Jr. Advertising Archive</div><div>Daniel D. Teoli Jr. VHS Video Archive</div><div>Daniel D. Teoli Jr. Popular Culture Archive</div><div>Daniel D. Teoli Jr. Audio Archive</div><div>Daniel D. Teoli Jr. Social Documentary Photography</div><div><br /></div><div><br /></div><div><br /></div><div><br /></div></div>",
+  "licenseurl": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "scanner": "Internet Archive HTML5 Uploader 1.7.0",
+  "subject": "mining;minerals;radioactive;thorium;D.D.Teoli Jr. A.C.;uranium;geology;nuclear;thorite;yellow cake;Geiger counter;field recording;foley;sound effects;mineral specimen",
+  "title": "Geiger Counter Sounds Collection D.D.Teoli Jr. A.C.",
+  "publicdate": "2023-07-24 22:59:15",
+  "addeddate": "2023-07-24 22:59:15",
+  "curation": "[curator]validator@archive.org[/curator][date]20230724225950[/date][comment]checked for malware[/comment]",
+  "collection_added": "individual-image-collections"
+ },
+ "file": {
+  "name": "Geiger counter sounds (2).mp3",
+  "source": "original",
+  "mtime": "1690239558",
+  "size": "295414",
+  "md5": "eb70a3f29882e20556291e0dd486b750",
+  "crc32": "557203a1",
+  "sha1": "fda9bd9ebf05f8120d188628631f627259bd5f80",
+  "format": "VBR MP3",
+  "length": "18.21",
+  "title": "210303_0618",
+  "creator": "My Recording",
+  "track": "02",
+  "artist": "My Recording"
+ }
+}

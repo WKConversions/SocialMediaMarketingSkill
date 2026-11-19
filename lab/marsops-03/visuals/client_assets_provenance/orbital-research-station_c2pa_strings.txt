@@ -1,0 +1,41 @@
+C2PA manifest strings embedded in site_assets/orbital-research-station.png (sha256 425104440b7d3e2ae0f64726dbbb797d6e63ee609a07a11ff53631b99843610e), extracted 2026-11-19 with 'strings' (no C2PA validator available; signature not cryptographically verified):
+jumdc2pa
+c2pa
+urn:c2pa:0ac432cb-52d9-4e35-be6d-b563eabb9e99
+c2pa.assertions
+c2pa.icon
+c2pa.actions.v2
+factionlc2pa.createddwhen
+2026-11-15T19:07:46.950892680ZmsoftwareAgent
+dnamegChatGPTgversionigpt-imageqdigitalSourceTypexFhttp://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia
+factionnc2pa.converteddwhen
+2026-11-15T19:07:46.950899626Z
+c2pa.watermarked.unbounddwhen
+2026-11-15T19:07:46.947489476ZrallActionsIncluded
+c2pa.hash.data
+c2pa.claim.v2
+jinstanceIDx,xmp:iid:4eb0c886-d346-47a6-943b-0b40389733aatclaim_generator_info
+OpenAI Media Service APIdicon
+curlx$self#jumbf=c2pa.assertions/c2pa.icondhashX u
+*kspecVersione2.2.0worg.contentauth.c2pa_rsf0.79.2isignaturexMself#jumbf=/c2pa/urn:c2pa:0ac432cb-52d9-4e35-be6d-b563eabb9e99/c2pa.signaturercreated_assertions
+curlx$self#jumbf=c2pa.assertions/c2pa.icondhashX u
+curlx*self#jumbf=c2pa.assertions/c2pa.actions.v2dhashX 
+curlx)self#jumbf=c2pa.assertions/c2pa.hash.datadhashX 
+c2pa.signature
+Trufo Inc.1
+ca@trufo.ai1+0)
+"Trufo C2PA Claim Signing CA (2025)0
+OpenAI OpCo, LLC1
+OpenAI Media Service0Y0
+https://ocsp.trufo.ai0+
+https://ca.trufo.ai/c2pa-ca.crt03
+Trufo Inc.1
+ca@trufo.ai1,0*
+#Trufo C2PA Root CA (2025, ECC P384)0
+Trufo Inc.1
+ca@trufo.ai1+0)
+"Trufo C2PA Claim Signing CA (2025)0v0
+https://trufo.ai/cpcps0^
+https://ocsp.trufo.ai0+
+https://ca.trufo.ai/root-ca.crt0
+OpenAI OpCo, LLC1

@@ -1,0 +1,37 @@
+Source: https://www.eso.org/public/images/eso0932a/ (fetched 2026-11-19; full page saved as eso0932a_page.html)
+The Milky Way panorama
+This magnificent 360-degree panoramic image, covering the entire southern and northern celestial sphere, reveals the cosmic landscape that surrounds our tiny blue planet. This gorgeous starscape serves as the first of three extremely high-resolution images featured in the GigaGalaxy Zoom project, launched by ESO within the framework of the International Year of Astronomy 2009 (IYA2009). The plane of our Milky Way Galaxy, which we see edge-on from our perspective on Earth, cuts a luminous swath across the image. The projection used in GigaGalaxy Zoom place the viewer in front of our Galaxy with the Galactic Plane running horizontally through the image — almost as if we were looking at the Milky Way from the outside. From this vantage point, the general components of our spiral galaxy come clearly into view, including its disc, marbled with both dark and glowing nebulae, which harbours bright, young stars, as well as the Galaxy’s central bulge and its satellite galaxies. As filming extended over several months, objects from the Solar System came and went through the star fields, with bright planets such as Venus and Jupiter. For copyright reasons, we cannot provide here the full 800-million-pixel original image, which can be requested from Serge Brunier. The high resolution image provided here contains 18 million pixels.Credit:
+ESO/S. Brunier
+Usage of ESO images, videos, web texts and music
+This material is not AI generated
+About the Image
+Id:eso0932a
+Type:Photographic
+Release date:14 September 2009
+Related releases:eso0932
+Size:6000 x 3000 px
+About the Object
+Name:Milky Way
+Type:Milky Way
+Distance:25000 light years
+Category:360 Panorama
+Galaxies
+Image Formats
+Fullsize Original
+ 27.7 MB
+Large JPEG
+ 7.8 MB
+Publication TIFF 4K
+ 12.9 MB
+Publication JPEG
+ 4.6 MB
+Screensize JPEG
+ 152.2 KB
+Zoomable
+Zoomable
+Wallpapers
+1024x768
+ 289.8 KB
+1280x1024
+
+Byte check 2026-11-19: https://cdn.eso.org/images/large/eso0932a.jpg (8,228,817 bytes, sha256 60400c92c54b7c1bd12299c69e83b16e5b6256e7dabacc478c021758ecd28179) is byte-identical to site_assets/milky-way-6k.jpg; duplicate download deleted.

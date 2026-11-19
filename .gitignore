@@ -72,3 +72,5 @@ lab/**/build/fonts/*.ttf
 lab/**/build/fonts/*.woff2
 lab/**/build/test/
 lab/**/build/qc_*/
+lab/marsops-03/build/fonts/fonts
+lab/marsops-03/build/img/img

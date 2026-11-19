@@ -1,0 +1,290 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<!-- MARSOPS showcase teaser v4 (15 s, 1080x1920, 30 fps): one 3D world (three.js), in the client site's style.
+     Mars (the site's model) on ESO's Milky Way; the Sun (NASA SDO 304 A film) and solar wind in 3D; a holographic
+     astronaut scanned into view inside a hexagonal shield that the wind breaks on; the astronaut's points re-form as a
+     holographic station with 3D-tracked callouts; every point streams into the MARSOPS logo, which settles clean.
+     Frame-pure render(f). -->
+<script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js","three/addons/":"./node_modules/three/examples/jsm/"}}</script>
+<style>
+@font-face { font-family: Man; src: url(fonts/Manrope.woff2) format('woff2'); font-weight: 200 800; }
+@font-face { font-family: Mont; src: url(fonts/Montserrat.ttf); font-weight: 100 900; }
+html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #030813; }
+.abs { position: absolute; left: 0; top: 0; }
+#gl { width: 1080px; height: 1920px; }
+#shade { width: 1080px; height: 1920px; background: linear-gradient(180deg, rgba(0,3,10,.55) 0%, rgba(0,3,10,.18) 32%, rgba(0,3,10,0) 55%, rgba(0,3,10,.25) 100%); }
+.mask { position: absolute; left: 0; width: 1080px; overflow: hidden; }
+.h { position: absolute; left: 66px; top: 0; font-family: Man; font-weight: 400; font-size: 140px; line-height: 160px; letter-spacing: -0.065em; color: #fff; white-space: nowrap; }
+.eyebrow { position: absolute; left: 66px; font-family: Man; font-weight: 500; font-size: 32px; color: #aeb8ca; white-space: nowrap; }
+.eyebrow i { display: inline-block; width: 12px; height: 12px; border-radius: 6px; background: #2f73ff; margin-right: 22px; vertical-align: 5px; }
+.body { position: absolute; left: 66px; width: 820px; padding-left: 30px; font-family: Man; font-weight: 400; font-size: 38px; line-height: 1.5; letter-spacing: -0.02em; color: #aeb8ca; }
+.rule { position: absolute; left: 66px; width: 3px; background: #2f73ff; transform-origin: 0 0; }
+.call { position: absolute; font-family: Man; font-weight: 500; font-size: 44px; letter-spacing: -0.03em; color: #f6f8ff; white-space: nowrap; }
+.call small { display: block; font-size: 24px; font-weight: 500; letter-spacing: 0.14em; color: #8fb0ff; margin-bottom: 6px; }
+.hudt { position: absolute; font-family: Man; font-weight: 600; font-size: 22px; letter-spacing: 0.22em; color: #8fb0ff; white-space: nowrap; }
+#logo { position: absolute; left: 0; width: 1080px; text-align: center; font-family: Mont; font-weight: 800; color: #fff; letter-spacing: 0.1em; text-indent: 0.1em; white-space: nowrap; }
+</style></head>
+<body>
+<canvas id="gl" class="abs" width="1080" height="1920"></canvas>
+<div id="shade" class="abs"></div>
+<div id="navy" class="abs" style="width:1080px;height:1920px;background:#040b19;opacity:0"></div>
+<svg id="flare" class="abs" width="1080" height="1920" viewBox="0 0 1080 1920" style="mix-blend-mode:screen"></svg>
+<svg id="hud" class="abs" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
+<div id="text" class="abs"></div>
+<svg id="grainS" class="abs" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence id="grainT" type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="1"/>
+    <feColorMatrix type="matrix" values="0 0 0 0 0.85  0 0 0 0 0.9  0 0 0 0 1  0 0 0 0.045 0"/></filter>
+  <rect width="1080" height="1920" filter="url(#grain)"/>
+</svg>
+<script src="img/meta.js"></script>
+<script type="module">
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
+import * as L from './lib4.js';
+const { seg, lerp, clamp, SIG, INOUT, EIN } = L;
+let READY; window.__ready = new Promise(r => READY = r);
+const FPS = 30, W = 1080, H = 1920, NS = 'http://www.w3.org/2000/svg', $ = id => document.getElementById(id);
+const V = (x, y, z) => new THREE.Vector3(x, y, z);
+
+// ------------------------------------------------------------------ renderer, post
+const R = new THREE.WebGLRenderer({ canvas: $('gl'), antialias: true, preserveDrawingBuffer: true });
+R.setSize(W, H, false); R.setPixelRatio(1); R.outputColorSpace = THREE.SRGBColorSpace; R.toneMapping = THREE.ACESFilmicToneMapping; R.toneMappingExposure = 1.15;
+const scene = new THREE.Scene(), cam = new THREE.PerspectiveCamera(32, W / H, 0.05, 300);
+const comp = new EffectComposer(R); comp.addPass(new RenderPass(scene, cam));
+const bloom = new UnrealBloomPass(new THREE.Vector2(W / 2, H / 2), 0.6, 0.5, 0.78); comp.addPass(bloom);
+const glitch = new ShaderPass({ uniforms: { tDiffuse: { value: null }, uAmt: { value: 0 }, uSeed: { value: 0 } },
+  vertexShader: `varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.0); }`,
+  fragmentShader: `uniform sampler2D tDiffuse; uniform float uAmt, uSeed; varying vec2 vUv; float h(float n){ return fract(sin(n * 91.7 + uSeed * 13.1) * 43758.5); }
+    void main(){ float band = floor(vUv.y * 48.0); float on = step(0.72, h(band)); float off = (h(band + 7.0) - 0.5) * 0.06 * uAmt * on;
+      vec2 uv = vUv + vec2(off, 0.0); float ca = 0.006 * uAmt;
+      gl_FragColor = vec4(texture2D(tDiffuse, uv + vec2(ca, 0.0)).r, texture2D(tDiffuse, uv).g, texture2D(tDiffuse, uv - vec2(ca, 0.0)).b, 1.0); }` });
+comp.addPass(glitch); comp.addPass(new OutputPass());
+scene.add(new THREE.HemisphereLight(0xffe2cc, 0x080404, .32));
+const key = new THREE.DirectionalLight(0xffd2b0, 5.5); key.position.set(-4, 4, 5); scene.add(key);
+const rimL = new THREE.DirectionalLight(0xbc321a, 3.2); rimL.position.set(5, -1, -3); scene.add(rimL);
+
+// ------------------------------------------------------------------ the world
+const S = {};
+const A = V(2.3, 0.55, 2.5);                 // where the astronaut floats (in orbit, between Mars and us)
+const AC = A.clone().add(V(0, 0.92, 0));     // its centre
+const CAM_KEYS = [
+  { t: 0.0, p: [0.0, 2.4, 8.8], q: [0.0, 5.2, -4.0], fov: 36 },
+  { t: 2.3, p: [0.25, 0.55, 6.2], q: [0.0, 1.05, 0.0], fov: 32, ease: L.bez(.5, 0, .2, 1) },
+  { t: 2.75, p: [0.2, 0.5, 6.0], q: [0.0, 1.0, 0.0], fov: 32, ease: x => x },
+  { t: 5.45, p: [-2.4, 1.1, 5.4], q: [-0.4, 0.95, 0.0], fov: 34, ease: L.bez(.45, 0, .55, 1) },
+  { t: 7.1, p: [AC.x + 0.35, AC.y + 0.75, AC.z + 7.2], q: [AC.x, AC.y + 0.55, AC.z], fov: 30, ease: L.bez(.7, 0, .2, 1) },
+  { t: 8.85, p: [AC.x - 1.0, AC.y + 0.85, AC.z + 6.9], q: [AC.x, AC.y + 0.52, AC.z], fov: 30, ease: x => x },
+  { t: 10.4, p: [AC.x + 1.5, AC.y + 1.6, AC.z + 8.1], q: [AC.x, AC.y + 0.25, AC.z], fov: 32, ease: L.bez(.45, 0, .3, 1) },
+  { t: 11.55, p: [AC.x + 1.9, AC.y + 1.5, AC.z + 8.3], q: [AC.x, AC.y - 0.15, AC.z], fov: 32, ease: L.bez(.4, 0, .4, 1) },
+  { t: 15.0, p: [AC.x + 1.8, AC.y + 1.42, AC.z + 7.9], q: [AC.x, AC.y - 0.15, AC.z], fov: 32, ease: x => x },
+];
+function setCam(t) { const c = L.cameraAt(CAM_KEYS, t); cam.position.set(...c.p); cam.fov = c.fov; cam.updateProjectionMatrix(); cam.up.set(0, 1, 0); cam.lookAt(...c.q); cam.updateMatrixWorld(); }
+function project(v) { const p = v.clone().project(cam); return [(p.x + 1) / 2 * W, (1 - p.y) / 2 * H, p.z]; }
+
+async function build() {
+  const tl = new THREE.TextureLoader();
+  S.sky = L.makeSky(await tl.loadAsync('img/milky-way-6k.jpg'), 0.5); scene.add(S.sky);
+  // Mars (the site's model) and a thin atmosphere
+  const g = (await new GLTFLoader().loadAsync('img/mars.glb')).scene, box = new THREE.Box3().setFromObject(g), sz = box.getSize(V());
+  S.marsMats = []; g.traverse(o => { if (o.isMesh) { o.material.transparent = true; S.marsMats.push(o.material); } });
+  g.position.sub(box.getCenter(V())); S.mars = new THREE.Group(); S.mars.add(g); S.mars.scale.setScalar(2 / Math.max(sz.x, sz.y, sz.z)); scene.add(S.mars);
+  S.atm = L.atmosphere(1.045, new THREE.Color(1.0, 0.45, 0.25), 4.0, 0.55); scene.add(S.atm);
+  // orbits around Mars, drawn by draw range; a small holographic station rides the first
+  S.orbits = [];
+  [[1.55, 0.42, 0.25], [1.95, -0.3, 0.9], [2.4, 0.18, 2.2]].forEach(([r, tilt, yaw], i) => {
+    const pts = []; for (let k = 0; k <= 256; k++) { const a = k / 256 * Math.PI * 2; pts.push(V(r * Math.cos(a), 0, r * Math.sin(a))); }
+    const geo = new THREE.BufferGeometry().setFromPoints(pts), m = new THREE.LineBasicMaterial({ color: 0x5b8fff, transparent: true, opacity: 0.5 - i * 0.1, blending: THREE.AdditiveBlending, depthWrite: false });
+    const ln = new THREE.Line(geo, m); ln.rotation.set(tilt, yaw, 0); scene.add(ln); S.orbits.push({ ln, r, t0: 0.9 + i * 0.25 }); });
+  S.holoMini = L.holoMaterial({ y0: -3, y1: 3, scan: 30, fill: 0.15 });
+  S.mini = L.station(S.holoMini, null); S.mini.scale.setScalar(0.07); scene.add(S.mini);
+  // the Sun: SDO 304 A frames on a billboard far away, up and to the left of the radiation beat's view
+  S.sunC = document.createElement('canvas'); S.sunC.width = S.sunC.height = 760; S.sunX = S.sunC.getContext('2d');
+  S.sunTex = new THREE.CanvasTexture(S.sunC); S.sunTex.colorSpace = THREE.SRGBColorSpace;
+  const sunMat = new THREE.ShaderMaterial({ transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, uniforms: { map: { value: S.sunTex }, uO: { value: 0 },
+    uC: { value: new THREE.Vector2(META.sun.cx / 760, 1 - META.sun.cy / 760) }, uR: { value: META.sun.r / 760 } },
+    vertexShader: `varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.0); }`,
+    fragmentShader: `uniform sampler2D map; uniform float uO, uR; uniform vec2 uC; varying vec2 vUv; void main(){ vec3 c = texture2D(map, vUv).rgb;
+      float d = distance(vUv, uC) / uR; float m = smoothstep(1.06, 0.99, d); float glow = exp(-max(d - 1.0, 0.0) * 6.0) * 0.45 * smoothstep(0.98, 1.02, d) * smoothstep(1.5, 1.2, d);
+      gl_FragColor = vec4((c * m * 1.1 + vec3(1.0, 0.32, 0.1) * glow) * uO, 1.0); }` });
+  S.sun = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), sunMat); scene.add(S.sun);
+  { setCam(5.45); const dir = V(); cam.getWorldDirection(dir); const right = V().crossVectors(dir, cam.up).normalize(), up = V().crossVectors(right, dir).normalize();
+    S.sunPos = cam.position.clone().add(dir.multiplyScalar(60)).add(right.multiplyScalar(9.5)).add(up.multiplyScalar(13.5)); S.sun.position.copy(S.sunPos); S.sun.scale.setScalar(15); }
+  S.sunFrames = await Promise.all(Array.from({ length: META.sun.frames }, (_, i) => { const im = new Image(); im.src = `img/sun/f${String(i + 1).padStart(3, '0')}.jpg`; return im.decode().then(() => im); }));
+  // solar wind: streaks from the Sun's direction through the region of Mars and the astronaut
+  S.windDir = AC.clone().sub(S.sunPos).normalize();
+  S.wind = L.solarWind(700, { x0: -7, x1: 7, y0: -3.2, y1: 3.2, z0: -3.2, z1: 3.2 }, 21);
+  S.windG = new THREE.Group(); S.windG.add(S.wind); S.windG.position.copy(AC.clone().multiplyScalar(0.55));
+  S.windG.quaternion.setFromUnitVectors(V(1, 0, 0), S.windDir); scene.add(S.windG); S.windG.updateMatrixWorld(true);
+  S.shieldLocal = S.windG.worldToLocal(AC.clone());
+  // the holographic astronaut (procedural; a scanned reveal from the boots up) and its solid "clay" twin
+  S.holoA = L.holoMaterial({ y0: A.y - 0.05, y1: A.y + 1.85, scan: 26, fill: 0.08 });
+  S.edgeA = new THREE.LineBasicMaterial({ color: 0x8fb0ff, transparent: true, opacity: 0.0, blending: THREE.AdditiveBlending, depthWrite: false });
+  S.astro = L.astronaut(S.holoA, S.edgeA); S.astro.position.copy(A); S.astro.rotation.y = -0.35; scene.add(S.astro);
+  // the hologram projector under the astronaut: three rings and a soft light cone
+  S.proj = new THREE.Group(); S.proj.position.copy(A).add(V(0, -0.12, 0));
+  for (let i = 0; i < 3; i++) { const rg = new THREE.Mesh(new THREE.TorusGeometry(0.55 + i * 0.14, 0.006 + (i === 0 ? 0.006 : 0), 6, 128), new THREE.MeshBasicMaterial({ color: 0x5b8fff, transparent: true, opacity: 0, blending: THREE.AdditiveBlending, depthWrite: false }));
+    rg.rotation.x = Math.PI / 2; S.proj.add(rg); }
+  S.cone = new THREE.Mesh(new THREE.CylinderGeometry(1.0, 0.5, 2.0, 64, 1, true), new THREE.ShaderMaterial({ transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, side: THREE.DoubleSide, uniforms: { uO: { value: 0 } },
+    vertexShader: `varying float vY; void main(){ vY = position.y; gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.0); }`,
+    fragmentShader: `uniform float uO; varying float vY; void main(){ float a = smoothstep(1.0, -1.0, vY) * smoothstep(-1.0, -0.8, vY) * 0.055 * uO; gl_FragColor = vec4(vec3(0.2,0.45,1.0)*a, 1.0); }` }));
+  S.cone.position.y = 1.0; S.proj.add(S.cone); scene.add(S.proj);
+  // the shield
+  S.shield = new THREE.Mesh(new THREE.SphereGeometry(1, 96, 64), L.shieldMaterial()); S.shield.position.copy(AC); scene.add(S.shield);
+  S.hits = []; const r = L.rng(4);
+  for (let t = 7.95; t < 11.6; t += 0.11 + r() * 0.12) { const d = S.windDir.clone().negate().add(V(r() - 0.5, r() - 0.5, r() - 0.5).multiplyScalar(0.9)).normalize(); S.hits.push({ t, d }); }
+  // the station (assembled from the astronaut's points), as a hologram with edges
+  S.holoS = L.holoMaterial({ y0: AC.y - 1.3, y1: AC.y + 1.3, scan: 20, fill: 0.07 });
+  S.edgeS = new THREE.LineBasicMaterial({ color: 0x8fb0ff, transparent: true, opacity: 0.0, blending: THREE.AdditiveBlending, depthWrite: false });
+  S.station = L.station(S.holoS, S.edgeS); S.station.scale.setScalar(0.42); S.station.position.copy(AC); S.station.rotation.set(0.5, 0.4, 0.15); scene.add(S.station);
+  // points: astronaut -> station -> logo
+  const N = 22000;
+  const clayA = L.astronaut(new THREE.MeshBasicMaterial()); clayA.position.copy(A); clayA.rotation.y = -0.35;
+  const clayS = L.station(new THREE.MeshBasicMaterial()); clayS.scale.setScalar(0.42); clayS.position.copy(AC); clayS.rotation.set(0.5, 0.4, 0.15);
+  const pA = L.sampleMesh(clayA, N, 1), pS = L.sampleMesh(clayS, N, 2);
+  await document.fonts.load('800 160px Mont');
+  const lp = L.textPoints('MARSOPS', '800 160px Mont', N, 1.0);
+  setCam(13.0); const cd = V(); cam.getWorldDirection(cd); const right = V().crossVectors(cd, cam.up).normalize(), up = V().crossVectors(right, cd).normalize();
+  const D = 3.2, o = cam.position.clone().add(cd.clone().multiplyScalar(D));
+  const halfW = D * Math.tan(THREE.MathUtils.degToRad(cam.fov / 2)) * (W / H), sc = halfW * 2 * 0.574;     // the logo spans 57% of the frame width
+  const pL = new Float32Array(N * 3); for (let i = 0; i < N; i++) { const x = lp[i * 3] * sc, y = lp[i * 3 + 1] * sc;
+    const w = o.clone().add(right.clone().multiplyScalar(x)).add(up.clone().multiplyScalar(y)); pL[i * 3] = w.x; pL[i * 3 + 1] = w.y; pL[i * 3 + 2] = w.z; }
+  S.pts = L.morphPoints([pA, pS, pL, pL], N, 0xc4d6ff, 4.2); S.pts.frustumCulled = false; scene.add(S.pts);
+
+  // ---------------------------------------------------------------- type, HUD, callouts
+  const T = $('text'); S.lines = [];
+  const line = (txt, top, tin, tout, k, h = 172) => { const m = document.createElement('div'); m.className = 'mask'; m.style.top = top + 'px'; m.style.height = h + 'px';
+    const d = document.createElement('div'); d.className = 'h'; d.textContent = txt; m.appendChild(d); T.appendChild(m); S.lines.push({ d, tin, tout, k, h }); };
+  const eb = document.createElement('div'); eb.className = 'eyebrow'; eb.innerHTML = '<i></i>Human spaceflight'; eb.style.top = '322px'; T.appendChild(eb); S.eyebrow = eb;
+  line('Engineering', 372, 0.55, 2.7, 0); line('the Final', 504, 0.63, 2.7, 1); line('Frontier', 636, 0.71, 2.7, 2);
+  line('Radiation', 300, 3.15, 5.45, 0); line('never stops.', 432, 3.23, 5.45, 1);
+  line('Protecting', 300, 6.35, 8.75, 0); line('every crew.', 432, 6.43, 8.75, 1);
+  S.bodies = [];
+  const body = (html, top, tin, tout) => { const r = document.createElement('div'); r.className = 'rule'; r.style.top = (top + 10) + 'px'; T.appendChild(r);
+    const b = document.createElement('div'); b.className = 'body'; b.style.top = top + 'px'; b.innerHTML = html; T.appendChild(b); r.style.height = (b.offsetHeight - 20) + 'px'; S.bodies.push({ r, b, tin, tout }); };
+  body('One of the most persistent<br>challenges beyond Earth.', 640, 3.55, 5.45);
+  body('Systems that protect people as<br>missions travel farther and last longer.', 640, 6.75, 8.75);
+  // callouts pinned to the station (3D anchors, projected every frame)
+  S.calls = [];
+  const hud = $('hud');
+  [['Safer missions', 'SHIELD', V(0.0, 0.62, 0.0), 9.35], ['Longer stays', 'HABITAT', V(1.3, 0.0, 0.0), 9.75], ['Sustainable presence', 'POWER', V(-1.75, -1.15, 0.0), 10.15]].forEach(([txt, tag, loc, tin], i) => {
+    const d = document.createElement('div'); d.className = 'call'; d.innerHTML = `<small>${tag}</small>${txt}`; T.appendChild(d);
+    const ln = document.createElementNS(NS, 'polyline'); ln.setAttribute('fill', 'none'); ln.setAttribute('stroke', '#5b8fff'); ln.setAttribute('stroke-width', '2'); hud.appendChild(ln);
+    const dot = document.createElementNS(NS, 'circle'); dot.setAttribute('r', '7'); dot.setAttribute('fill', '#2f73ff'); hud.appendChild(dot);
+    const ring = document.createElementNS(NS, 'circle'); ring.setAttribute('fill', 'none'); ring.setAttribute('stroke', '#8fb0ff'); ring.setAttribute('stroke-width', '1.5'); hud.appendChild(ring);
+    S.calls.push({ d, ln, dot, ring, loc, tin, i }); });
+  // the radiation HUD around Mars (beat 2)
+  S.hudG = document.createElementNS(NS, 'g'); hud.appendChild(S.hudG);
+  S.hudRing = document.createElementNS(NS, 'circle'); S.hudRing.setAttribute('fill', 'none'); S.hudRing.setAttribute('stroke', 'rgba(143,176,255,.55)'); S.hudRing.setAttribute('stroke-width', '1.5'); S.hudG.appendChild(S.hudRing);
+  S.hudTicks = document.createElementNS(NS, 'g'); S.hudG.appendChild(S.hudTicks);
+  for (let k = 0; k < 120; k++) { const t = document.createElementNS(NS, 'line'); t.setAttribute('stroke', k % 10 ? 'rgba(143,176,255,.35)' : '#8fb0ff'); t.setAttribute('stroke-width', k % 10 ? 1.2 : 2.2); t.dataset.k = k; S.hudTicks.appendChild(t); }
+  S.hudArc = document.createElementNS(NS, 'path'); S.hudArc.setAttribute('fill', 'none'); S.hudArc.setAttribute('stroke', '#2f73ff'); S.hudArc.setAttribute('stroke-width', '5'); S.hudArc.setAttribute('stroke-linecap', 'round'); S.hudG.appendChild(S.hudArc);
+  S.hudWave = document.createElementNS(NS, 'path'); S.hudWave.setAttribute('fill', 'none'); S.hudWave.setAttribute('stroke', '#ffd9c2'); S.hudWave.setAttribute('stroke-width', '2'); S.hudG.appendChild(S.hudWave);
+  S.scan = document.createElement('div'); S.scan.className = 'hudt'; T.appendChild(S.scan);
+  S.hudLabel = document.createElement('div'); S.hudLabel.className = 'hudt'; S.hudLabel.textContent = 'SPACE RADIATION  ·  CONTINUOUS'; T.appendChild(S.hudLabel);
+  // the lens flare
+  S.flare = []; const fl = $('flare');
+  [[0.0, 120, 'rgba(255,170,120,0.22)'], [0.35, 34, 'rgba(255,200,160,0.18)'], [0.62, 70, 'rgba(120,160,255,0.12)'], [0.9, 20, 'rgba(160,190,255,0.25)'], [1.25, 110, 'rgba(91,143,255,0.10)'], [1.55, 46, 'rgba(255,190,150,0.14)']].forEach(([k, r, c]) => {
+    const e = document.createElementNS(NS, 'circle'); e.setAttribute('r', r); e.setAttribute('fill', c); fl.appendChild(e); S.flare.push({ e, k }); });
+  // the logo
+  const cv = document.createElement('canvas').getContext('2d'); cv.font = '800 100px Mont'; let ws = 0; for (const ch of 'MARSOPS') ws += cv.measureText(ch).width;
+  const fs = 100 * 620 / (ws + 0.1 * 100 * 6);
+  S.logo = document.createElement('div'); S.logo.id = 'logo'; S.logo.textContent = 'MARSOPS'; S.logo.style.fontSize = fs.toFixed(2) + 'px'; S.logo.style.lineHeight = fs.toFixed(2) + 'px'; S.logo.style.top = (960 - fs / 2) + 'px'; T.appendChild(S.logo);
+}
+
+// ------------------------------------------------------------------ render(f)
+function arcPath(cx, cy, r, a0, a1) { const p0 = [cx + r * Math.cos(a0), cy + r * Math.sin(a0)], p1 = [cx + r * Math.cos(a1), cy + r * Math.sin(a1)];
+  return `M${p0[0].toFixed(1)} ${p0[1].toFixed(1)}A${r.toFixed(1)} ${r.toFixed(1)} 0 ${a1 - a0 > Math.PI ? 1 : 0} 1 ${p1[0].toFixed(1)} ${p1[1].toFixed(1)}`; }
+function render(f) {
+  const t = f / FPS;
+  setCam(t);
+  S.sky.rotation.y = 0.35 + 0.012 * t;
+  { const k = 1 - 0.75 * SIG(seg(t, 11.6, 12.5)); S.sky.material.color.setRGB(0.40 * k, 0.47 * k, 0.62 * k);   // the Milky Way toned toward the site's navy           // the world recedes behind the forming logo
+    const mo = 1 - SIG(seg(t, 11.6, 12.4)); S.marsMats.forEach(m => { m.opacity = mo; }); S.mars.visible = mo > 0.002; S.atm.material.uniforms.uOpacity.value = mo; }
+  // Mars, atmosphere, orbits
+  S.mars.rotation.set(0.14, -0.65 + 0.05 * t, -0.08);
+  for (const o of S.orbits) { const u = SIG(seg(t, o.t0, o.t0 + 1.4)); o.ln.geometry.setDrawRange(0, Math.floor(257 * u)); o.ln.material.opacity = (0.5 - 0.1 * S.orbits.indexOf(o)) * (1 - seg(t, 5.6, 6.4)); }
+  { const a = 0.4 + t * 0.55, o = S.orbits[0]; const p = V(o.r * Math.cos(a), 0, o.r * Math.sin(a)).applyEuler(o.ln.rotation); S.mini.position.copy(p); S.mini.rotation.set(t * 0.4, t * 0.7, 0);
+    S.holoMini.uniforms.uTime.value = t; S.holoMini.uniforms.uOpacity.value = seg(t, 1.2, 1.8) * (1 - seg(t, 5.4, 6.0)); }
+  // the Sun
+  { const o = SIG(seg(t, 2.9, 3.8)) * (1 - seg(t, 7.6, 8.6)); S.sun.material.uniforms.uO.value = o; S.sun.lookAt(cam.position);
+    const fi = clamp(Math.floor((t - 2.9) * FPS), 0, S.sunFrames.length - 1); if (o > 0 && S.sunCur !== fi) { S.sunX.drawImage(S.sunFrames[fi], 0, 0); S.sunTex.needsUpdate = true; S.sunCur = fi; } }
+  // solar wind: from 3.0; once the shield is up it breaks around it
+  { const shOn = SIG(seg(t, 7.5, 8.2)); S.wind.visible = t > 3.0 && t < 12.0;
+    S.wind.userData.update(t, 4.2, { c: S.shieldLocal, r: lerp(1.25, 1.6, SIG(seg(t, 9.0, 10.0))), on: shOn }, [1.0, 0.86, 0.72], seg(t, 3.0, 3.6) * (1 - seg(t, 11.2, 11.9))); }
+  // the astronaut: scanned in from the boots, edges, then dissolves into points
+  { const rev = seg(t, 6.1, 7.4), out = seg(t, 8.9, 9.25); S.holoA.uniforms.uTime.value = t; S.holoA.uniforms.uReveal.value = rev; S.holoA.uniforms.uOpacity.value = (1 - out) * (rev > 0 ? 1 : 0);
+    S.edgeA.opacity = 0.55 * seg(t, 6.8, 7.6) * (1 - out); S.astro.visible = t > 6.0 && t < 9.3; S.astro.rotation.y = -0.35 + 0.12 * (t - 6); }
+  { const a = SIG(seg(t, 5.9, 6.5)) * (1 - seg(t, 8.9, 9.3)); S.proj.visible = a > 0; S.proj.children.forEach((c, i) => { if (c.isMesh && c !== S.cone) { c.material.opacity = a * (0.7 - i * 0.18); c.rotation.z = t * (0.4 + i * 0.3) * (i % 2 ? -1 : 1); } });
+    S.cone.material.uniforms.uO.value = a * seg(t, 6.0, 6.8); }
+  // the shield: builds from below, ripples where the wind hits; grows to hold the station
+  { const u = S.shield.material.uniforms, rad = lerp(1.25, 1.6, SIG(seg(t, 9.0, 10.0)));
+    S.shield.scale.setScalar(rad); u.uTime.value = t; u.uReveal.value = SIG(seg(t, 7.4, 8.3)); u.uOpacity.value = lerp(0.9, 0.45, seg(t, 8.9, 9.6)) * (1 - seg(t, 11.4, 11.9)); S.shield.visible = t > 7.35 && t < 11.95;
+    let k = 0; for (const h of S.hits) { if (h.t <= t && t - h.t < 1.2) { if (k < 12) u.uHits.value[k++].set(h.d.x, h.d.y, h.d.z, h.t); } } for (; k < 12; k++) u.uHits.value[k].set(0, 0, 1, -99); }
+  // the station: points settle into it, it lights up, holds; then gives its points to the logo
+  { const ip = seg(t, 9.0, 10.2), on = seg(t, 9.9, 10.5), out = seg(t, 11.55, 11.9);
+    S.holoS.uniforms.uTime.value = t; S.holoS.uniforms.uReveal.value = 1; S.holoS.uniforms.uOpacity.value = on * (1 - out); S.edgeS.opacity = 0.5 * on * (1 - out);
+    S.station.visible = on > 0 && out < 1; S.station.rotation.set(0.5, 0.4 + 0.18 * (t - 9), 0.15); }
+  // points
+  { const u = S.pts.material.uniforms; u.uTime.value = t;
+    if (t < 11.5) { u.uA.value = 0; u.uB.value = 1; u.uU.value = seg(t, 8.95, 10.3); u.uSpread.value = 0.5; }
+    else { u.uA.value = 1; u.uB.value = 2; u.uU.value = seg(t, 11.5, 12.55); u.uSpread.value = 0.7; }
+    u.uDrift.value = t < 11.5 ? 0.02 : lerp(0.02, 0.0012, seg(t, 11.9, 12.6));
+    const vis = (t < 11.5 ? seg(t, 8.9, 9.1) * (1 - 0.75 * seg(t, 10.1, 10.6)) : lerp(0.3, 1.0, seg(t, 11.45, 12.2))) * (1 - seg(t, 13.05, 13.6));
+    u.uSize.value = t < 11.5 ? 4.2 : lerp(4.2, 1.7, seg(t, 11.5, 12.6));
+    u.uOpacity.value = vis; S.pts.visible = vis > 0.001; }
+  // post: the bloom swells with the logo
+  bloom.strength = 0.6 - 0.25 * seg(t, 11.8, 12.6);
+  { const k = (a, b) => (t >= a && t < b) ? Math.sin(Math.PI * (t - a) / (b - a)) : 0;            // hologram power-on glitches
+    glitch.uniforms.uAmt.value = Math.max(k(6.05, 6.4), k(8.92, 9.12) * 0.8, k(11.5, 11.68) * 0.7); glitch.uniforms.uSeed.value = f; glitch.enabled = glitch.uniforms.uAmt.value > 0.001; }
+  comp.render();
+
+  { const o = S.sun.material.uniforms.uO.value, [sx, sy, sz] = project(S.sunPos); const on = o * (sz < 1 ? 1 : 0) * clamp(1 - Math.hypot(sx - 540, sy - 960) / 1500);
+    for (const g of S.flare) { g.e.setAttribute('cx', (sx + (540 - sx) * g.k * 1.15).toFixed(1)); g.e.setAttribute('cy', (sy + (960 - sy) * g.k * 1.15).toFixed(1)); g.e.setAttribute('opacity', on.toFixed(3)); } }
+  // HUD around Mars (beat 2)
+  { const a = SIG(seg(t, 3.0, 3.7)) * (1 - seg(t, 5.3, 5.8)); S.hudG.setAttribute('opacity', a.toFixed(3)); S.hudLabel.style.opacity = a.toFixed(3);
+    if (a > 0) { const [cx, cy] = project(V(0, 0, 0)), edge = project(V(0, 1, 0).applyQuaternion(cam.quaternion)), r = Math.hypot(edge[0] - cx, edge[1] - cy) * 1.16;
+      S.hudRing.setAttribute('cx', cx); S.hudRing.setAttribute('cy', cy); S.hudRing.setAttribute('r', r);
+      const rot = t * 0.25; for (const tk of S.hudTicks.children) { const k = +tk.dataset.k, ang = k / 120 * Math.PI * 2 + rot, l = k % 10 ? 10 : 22, vis = k / 120 < SIG(seg(t, 3.0, 3.9)) ? 1 : 0;
+        tk.setAttribute('x1', cx + (r + 8) * Math.cos(ang)); tk.setAttribute('y1', cy + (r + 8) * Math.sin(ang)); tk.setAttribute('x2', cx + (r + 8 + l) * Math.cos(ang)); tk.setAttribute('y2', cy + (r + 8 + l) * Math.sin(ang)); tk.setAttribute('opacity', vis); }
+      const sweep = SIG(seg(t, 3.2, 4.4)) * 1.6; S.hudArc.setAttribute('d', arcPath(cx, cy, r - 14, -Math.PI / 2 - 0.9 + t * 0.6, -Math.PI / 2 - 0.9 + t * 0.6 + Math.max(0.01, sweep)));
+      let d = ''; for (let i = 0; i <= 80; i++) { const x = 66 + i * 6.2, n = Math.sin(i * 0.9 + t * 9) * Math.sin(i * 0.23 + t * 3.1) * 26 * (0.5 + 0.5 * Math.sin(i * 0.11 + t * 2)); d += (i ? 'L' : 'M') + x.toFixed(1) + ' ' + (Math.max(880, cy - r - 70) + n).toFixed(1); }
+      S.hudWave.setAttribute('d', d); S.hudLabel.style.left = '66px'; S.hudLabel.style.top = (Math.max(880, cy - r - 70) - 78) + 'px'; } }
+  { const rev = seg(t, 6.1, 7.4), a = SIG(seg(t, 6.05, 6.35)) * (1 - seg(t, 7.9, 8.3));
+    S.scan.style.opacity = a.toFixed(3); S.scan.textContent = rev < 1 ? `HOLOGRAPHIC SCAN  ${String(Math.round(rev * 100)).padStart(3, '0')}%` : 'SCAN COMPLETE  ·  SHIELD ONLINE';
+    const [px, py] = project(A.clone().add(V(0, -0.2, 0))); S.scan.style.left = Math.round(px - 230) + 'px'; S.scan.style.top = Math.round(Math.min(1840, py + 26)) + 'px'; }
+  // callouts
+  for (const c of S.calls) { const a = SIG(seg(t, c.tin, c.tin + 0.6)), o = seg(t, 11.45, 11.75), vis = a * (1 - o);
+    const wpos = c.loc.clone().applyMatrix4(S.station.matrixWorld); const [ax, ay] = project(wpos);
+    const side = c.i === 2 ? -1 : 1, ex = c.i === 0 ? 560 : (c.i === 1 ? 640 : 300), ey = c.i === 0 ? 470 : (c.i === 1 ? 1530 : 1660);
+    const ex2 = c.i === 2 ? 66 : 1014, mx = ex, my = ey;
+    const L1 = SIG(seg(t, c.tin, c.tin + 0.45));
+    const pts = [[ax, ay], [lerp(ax, mx, L1), lerp(ay, my, L1)], [lerp(mx, ex2, SIG(seg(t, c.tin + 0.3, c.tin + 0.7))), my]];
+    c.ln.setAttribute('points', pts.map(p => p.map(v => v.toFixed(1)).join(',')).join(' ')); c.ln.setAttribute('opacity', vis.toFixed(3));
+    c.dot.setAttribute('cx', ax); c.dot.setAttribute('cy', ay); c.dot.setAttribute('opacity', vis.toFixed(3));
+    const q = ((t - c.tin) % 1.4) / 1.4; c.ring.setAttribute('cx', ax); c.ring.setAttribute('cy', ay); c.ring.setAttribute('r', (8 + 26 * q).toFixed(1)); c.ring.setAttribute('opacity', (vis * (1 - q)).toFixed(3));
+    const tx = c.i === 2 ? 66 : 1014; c.d.style.opacity = SIG(seg(t, c.tin + 0.35, c.tin + 0.8)) * (1 - o);
+    c.d.style.left = (c.i === 2 ? tx : tx - c.d.offsetWidth) + 'px'; c.d.style.top = (my - 118) + 'px';
+    c.d.style.transform = `translateY(${((1 - SIG(seg(t, c.tin + 0.35, c.tin + 0.8))) * 16).toFixed(2)}px)`; }
+  // type
+  for (const Ln of S.lines) { const a = SIG(seg(t, Ln.tin, Ln.tin + 0.7)), o = SIG(seg(t, Ln.tout + 0.05 * Ln.k, Ln.tout + 0.05 * Ln.k + 0.4));
+    Ln.d.style.transform = `translateY(${((1 - a) * Ln.h - o * 30).toFixed(2)}px)`; Ln.d.style.opacity = (1 - o).toFixed(3); }
+  { const a = SIG(seg(t, 0.45, 1.05)), o = SIG(seg(t, 2.65, 3.05)); S.eyebrow.style.opacity = (a * (1 - o)).toFixed(3); S.eyebrow.style.transform = `translateY(${((1 - a) * 16 - o * 20).toFixed(2)}px)`; }
+  for (const B of S.bodies) { const r = SIG(seg(t, B.tin, B.tin + 0.5)), a = SIG(seg(t, B.tin + 0.15, B.tin + 0.75)), o = SIG(seg(t, B.tout + 0.1, B.tout + 0.5));
+    B.r.style.transform = `scaleY(${r.toFixed(4)})`; B.r.style.opacity = (1 - o).toFixed(3); B.b.style.opacity = (a * (1 - o)).toFixed(3); B.b.style.transform = `translateY(${((1 - a) * 18 - o * 24).toFixed(2)}px)`; }
+  // the logo: the particle logo hands over to the clean wordmark, which holds
+  { const a = SIG(seg(t, 13.0, 13.55)); S.logo.style.opacity = a.toFixed(3); S.logo.style.filter = `blur(${((1 - a) * 6).toFixed(2)}px)`;
+    S.logo.style.transform = `scale(${(1.0 + 0.012 * seg(t, 13.55, 15)).toFixed(5)})`; }
+  $('shade').style.opacity = (1 - 0.6 * seg(t, 11.6, 12.4)).toFixed(3);
+  $('navy').style.opacity = SIG(seg(t, 13.05, 13.6)).toFixed(3);   // the world recedes: the logo ends alone on navy
+  $('grainT').setAttribute('seed', String(1 + (Math.floor(f / 1.25) % 40)));
+}
+window.render = render;
+await build(); render(0); READY();
+window.CUES = { lines: S.lines.map(l => l.tin), hits: S.hits.map(h => h.t), shieldUp: 7.4, morph: [8.95, 11.5], logo: 12.75 };
+</script>
+</body></html>

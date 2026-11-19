@@ -1,0 +1,43 @@
+{
+ "title": "Voxscape",
+ "creator": "Eugenio Mininni",
+ "source_page_url": "https://mixkit.co/free-stock-music/discover/voxscape/",
+ "download_url": "https://assets.mixkit.co/music/571/571.mp3",
+ "local_file": "/home/user/SocialMediaMarketingSkill/lab/marsops-03/music/voxscape-mixkit-571/voxscape-mixkit-571.mp3",
+ "sha256": "926b63a89893778d5f1f04662f46ac08405cef5a9bc361253dc660061e029394",
+ "bytes": 9585775,
+ "licence_name": "Mixkit Stock Music Free License",
+ "licence_url": "https://mixkit.co/license/#musicFree",
+ "licence_modal_url": "https://mixkit.co/license/modal/musicFree/",
+ "licence_verbatim": "Stock Music Free License\nAllowed \nPodcasts \nSocial Media video posts \nOnline marketing ads \nEducational Purposes \nYouTube videos * \nNot Allowed \nCDs & DVDs \nTV & Radio Broadcasts \nVideo Games \nItems under the Mixkit Stock Music Free License can be used in your commercial and non-commercial projects for free. \nYou’re permitted to download, copy, modify, distribute and publicly perform the Music Items on any web or social media platform, including internet-based video on demand services, podcasts and advertisements. \nYou’re not allowed to use them in CDs or DVDs, video games or tv or radio broadcast. You’re also not allowed to remix them (or incorporate in a music-only track), claim them as your own or register them on any rights management service. \nThere are some important limits to these rights, described in our User Terms . \n * If you receive a claim, please forward the details to team@mixkit.co for assistance.",
+ "per_track_metadata_verbatim": {
+  "@id": "Voxscape",
+  "@type": "MusicRecording",
+  "name": "Voxscape",
+  "genre": "Ambient",
+  "byArtist": "Eugenio Mininni",
+  "duration": "PT5M0S",
+  "url": "https://assets.mixkit.co/music/571/571.mp3",
+  "waveformUrl": "https://assets.mixkit.co/music/571/571-waveform.json",
+  "copyrightNotice": "Mixkit Stock Music Free License",
+  "encodingFormat": "audio/mpeg",
+  "isAccessibleForFree": true,
+  "license": "https://mixkit.co/license/#musicFree",
+  "publisher": {
+   "@id": "https://mixkit.co/#organization"
+  },
+  "datePublished": "2020-01-28"
+ },
+ "mixkit_tags": [
+  "Ambient",
+  "Atmospheric",
+  "Mystical",
+  "Bass",
+  "Synth",
+  "Background",
+  "Relaxation"
+ ],
+ "listed_duration": "5:00",
+ "credit_line": "none needed (Mixkit licence: free for commercial use, no attribution required)",
+ "listing_page_url": "https://mixkit.co/free-stock-music/ambient/"
+}

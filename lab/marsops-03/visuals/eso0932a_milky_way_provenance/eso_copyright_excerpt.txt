@@ -1,0 +1,39 @@
+Source: https://www.eso.org/public/copyright/ (fetched 2026-11-19; full page saved as eso_copyright.html)
+Usage of images, videos, music and web texts
+Summary
+Unless specifically noted, the images, videos, and music distributed on the public ESO website, along with the texts of press releases, announcements, pictures of the week, blog posts and captions, are licensed under a Creative Commons Attribution 4.0 International License, and may on a non-exclusive basis be reproduced without fee provided the credit is clear and visible. The license allows adaptation of the material, but any adaptations do not affect or impair the use of the original ESO material by others under Creative Commons license. Details on how to interpret this are given below for those who need further explanation.
+Conditions
+If you want to use our materials without having to pay, the full image or footage credit must be presented in a clear and readable manner to all users, with the wording unaltered (for example: "ESO/José Francisco (josefrancisco.org)". The credit should not be hidden or disassociated from the image footage. Links should be active if the credit is online. See the "Usage rights Q&A" section on this page for guidance.
+The text of press releases, announcements, pictures of the week and captions should be credited to ESO or, when used by the media, ESO should be mentioned in the article or piece. 
+ESO materials, images and videos may not be used to state or imply the endorsement by ESO or any ESO employee of a commercial product or service;
+We welcome a copy of the product sent to us to be indexed in our archive;
+If an image includes a picture of an identifiable person, using that image for commercial purposes is not permitted.
+The license allows to modify ESO material, provided that you indicate what those modifications are. In particular, you must clearly indicate if you have used AI to modify our content.
+Notes
+Note that this general permission does not extend to the use of ESO's logo, which shall remain protected and may not be used or reproduced without prior and individual written consent of ESO. Owners of external websites wishing to link to the ESO website may use ESO's logo for the link, provided they have obtained prior authorisation from the ESO Department of Communication and on the condition that such use is clearly identifiable as a web link.
+Also note that music, scientific papers, code, and text other than press releases, announcements, pictures of the week, blog posts and captions on this site are not released under the Creative Commons Attribution 4.0 International License and can not be used for non-ESO products. An exception for this is the Music Archive which are released under Creative Commons Attribution 4.0 International License.
+By reproducing ESO material, in part or in full, the user acknowledges the terms on which such use is permitted.
+The European Southern Observatory is an intergovernmental organisation with its Headquarters in Germany. As an international organisation ESO has a legal personality of international law and enjoys certain privileges and immunities.
+Please note that the images on the pages under http://www.eso.org/public/outreach/eduoff/vt-2004/ are copyright of their owners and they are not released under ESO's usual Creative Commons license.
+For information on how Artificial Intelligence (AI) is used in text, images and videos produced by ESO's Department of Communication, please check our AI Disclaimer
+Usage rights Q&A
+Our basic intention is to encourage the use of our images, videos, press releases, announcements, pictures of the week and captions and we take a common-sense approach to crediting: our only concern is that you credit clearly, visibly and unambiguously and that the credit is not separated from the image/footage/text. We understand that the most appropriate way of doing so may vary from case to case. See the Q&A below for some common examples.
+Q: I want to use the footage in a YouTube video. Is it OK just to put the credit in the text description?
+A: No, as this is hidden inside a tab and therefore not visible as we request. Also it is not visible if the video is embedded in another website. In the special case where you cannot credit the video visibly, please include the credit line ‘burned in’ or overlaid on the video, or clearly visible as a credit at the end.
+Q: I want to upload an ESO show to my YouTube channel, or embed this in my blog. Do I need to add a credit ‘burned in’ or overlaid on the video?
+A: If the video in question (e.g. ELT Update or ESO Chasing Starlight) already has a credit at the end, so you do not need to edit it.
+Q: I am a producer for a TV programme and wish to use your images and footage. Do I need to overlay the credit on the image?
+A: You do not need to, provided the credit is clearly visible and reproduced in full at the end of the programme.
+Q: I am making an electronic game. Where should I place the credit?
+A: As long as the credit is clearly visible to all users and reproduced in full, for instance in a splashscreen, all is fine.
+Q: I am a picture editor for a newspaper/magazine. Some of your credits are kind of long. Can’t I just use the first part of the credit?
+A: No. Please reproduce the credit in full. This should normally be on the page which the picture is presented on, or on the facing page.
+Q: I am a picture editor for a News Agency. We prefer to use our own name as credit for the images and not tell anyone from where we got them. Is that ok?
+A: No. Please reproduce the credit in full. This should normally be on the page which the picture is presented on, or on the facing page.
+Q: I want to use a picture on the cover of a book/magazine. Does the credit have to appear on the cover?
+A: No. Provided it is clearly visible and identified as being the credit for the cover image, the credit can appear in another prominent place in your publication. This could, for example, be the back cover, the inside front cover or the editorial page.
+Q: Do I need to contact all the people named in the credit line for permission to use an image or video?
+A: No. Images and videos published on eso.org are, unless explicitly stated otherwise, cleared for reuse without needing to contact the individuals or organisations listed. Their names must not be removed from the credit, however.
+Q: I am an artist and I have produced artwork based on ESO images. Can I sell my artwork for my profit?
+A: Yes, artwork you produced based on ESO images may be sold for your own profit as long as you credit clearly and visibly.
+If you have further questions, or are in any doubt, please contact information@eso.org
