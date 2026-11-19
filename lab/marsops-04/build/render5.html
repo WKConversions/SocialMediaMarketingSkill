@@ -24,6 +24,7 @@ html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; backgro
 <canvas id="gl" class="abs" width="1920" height="1080"></canvas>
 <div id="text" class="abs"></div>
 <svg id="flare" class="abs" width="1920" height="1080" viewBox="0 0 1920 1080" style="mix-blend-mode:screen"><defs><radialGradient id="gw"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset=".25" stop-color="#ffe6c8" stop-opacity=".55"/><stop offset="1" stop-color="#ffb070" stop-opacity="0"/></radialGradient></defs><circle id="g0" r="160" fill="url(#gw)" opacity="0"/><rect id="g1" width="900" height="3" fill="#fff4e6" opacity="0"/></svg>
+<svg id="calls" class="abs" width="1920" height="1080" viewBox="0 0 1920 1080"></svg>
 <div id="credit"></div>
 <script type="module">
 import * as THREE from 'three';
@@ -83,7 +84,7 @@ async function makeEarth(seg_ = 160) {
 }
 function sunLights(scene, k = 5) { scene.add(new THREE.HemisphereLight(0xbfd0ff, 0x05070c, 0.12)); const d = new THREE.DirectionalLight(0xfff0dc, k); d.position.copy(SUN).multiplyScalar(10); scene.add(d);
   const rim = new THREE.DirectionalLight(0x2f73ff, 1.6); rim.position.set(4, 1.5, 4); scene.add(rim); return d; }
-const GLINTS = [];   // {scene, cam, pos: () => Vector3, k: (t) => number}
+const GLINTS = [], CALL = [];   // {scene, cam, pos: () => Vector3, k: (t) => number}
 const SC = [];
 async function build() {
   console.log("STAGE A", performance.now()|0);
@@ -138,14 +139,16 @@ async function build() {
   { const s = new THREE.Scene(); space(s); lights(s, 3.4); const cam = new THREE.PerspectiveCamera(30, W / H, 0.01, 200);
     const moon = new THREE.Mesh(new THREE.SphereGeometry(1, 128, 64), new THREE.MeshStandardMaterial({ map: await tex('img/moon.jpg'), roughness: 1 })); moon.position.set(0, -1.62, 0); s.add(moon);
     SC.push({ t0: 20.4, t1: 26.9, s, cam, up: t => { moon.rotation.y = t * 0.025; cam.position.set(0, lerp(0.15, -0.05, seg(t, 20.9, 26.3)), lerp(4.6, 3.9, seg(t, 20.9, 26.3))); cam.lookAt(0, -0.25, 0); } }); }
-  // E. Spacesuit: NASA's EMU in its own colours, drifting above the Earth; the Sun glints across the visor
-  { const s = new THREE.Scene(); space(s); sunLights(s, 5.5); const cam = new THREE.PerspectiveCamera(28, W / H, 0.01, 200);
-    const suit = await model('img/models/Extravehicular_Mobility_Unit.glb', 2.0); s.add(suit);
-    const earth = await makeEarth(160); earth.scale.setScalar(9); earth.position.set(2, -11.2, -9); s.add(earth);
-    const head = V(0, 0.72, 0.18);
-    GLINTS.push({ s, cam, pos: () => head.clone().applyMatrix4(suit.matrixWorld), k: t => Math.pow(Math.max(0, Math.sin((t - 26.1) / 2.6 * Math.PI)), 3) });
-    SC.push({ t0: 26.0, t1: 29.4, s, cam, up: t => { const u = seg(t, 26.1, 28.9); suit.rotation.set(0.12, 2.3 + u * 0.9, 0.06); suit.position.y = 0.04 * Math.sin(t * 0.9);
-      earth.userData.e.rotation.y = earth.userData.c.rotation.y = 4.0 + t * 0.01; cam.position.set(lerp(-1.4, -0.7, u), lerp(0.55, 0.35, u), lerp(4.9, 4.4, u)); cam.lookAt(-0.95, 0.15, 0); } }); }
+  // E. Spacesuit: NASA's Z-2 suit on its own in space, turning slowly; the Sun glints across the visor; labels explain
+  { const s = new THREE.Scene(); space(s); sunLights(s, 5.0); s.add(new THREE.DirectionalLight(0xbfd0ff, 0.8)); const cam = new THREE.PerspectiveCamera(26, W / H, 0.01, 200);
+    const suit = await model('img/models/Z2_Spacesuit.glb', 2.0); s.add(suit); { const f = new THREE.DirectionalLight(0xffffff, 2.2); f.position.set(1, 1, 6); s.add(f); }
+    const head = V(0, 0.78, 0.12);
+    GLINTS.push({ s, cam, pos: () => head.clone().applyMatrix4(suit.matrixWorld), k: t => Math.pow(Math.max(0, Math.sin((t - 26.6) / 2.4 * Math.PI)), 3) });
+    CALL.push({ s, cam, obj: suit, p: V(0, 0.78, 0.15), txt: 'Helmet and visor', tin: 26.5, tout: 29.0, dx: 260, dy: -90 });
+    CALL.push({ s, cam, obj: suit, p: V(0, 0.3, 0.2), txt: 'Radiation protection', tin: 26.9, tout: 29.0, dx: 300, dy: 10 });
+    CALL.push({ s, cam, obj: suit, p: V(0.35, -0.1, 0.1), txt: 'Life support', tin: 27.3, tout: 29.0, dx: 280, dy: 110 });
+    SC.push({ t0: 26.0, t1: 29.4, s, cam, up: t => { const u = seg(t, 26.0, 29.4); suit.rotation.set(0.06, -0.55 + u * 0.75, 0.03); suit.position.y = 0.035 * Math.sin(t * 0.9);
+      cam.position.set(lerp(-0.4, -0.1, u), lerp(0.35, 0.2, u), lerp(5.4, 4.8, u)); cam.lookAt(-0.75, 0.1, 0); } }); }
   // ground on the Moon for the habitat and the rover: lunar colour map, low Sun, long shadows
   const moonGround = async (s) => { const tx = await tex('img/moon.jpg'); tx.wrapS = tx.wrapT = THREE.RepeatWrapping; tx.repeat.set(3, 1.5);
     const g = new THREE.Mesh(new THREE.PlaneGeometry(60, 60, 1, 1), new THREE.MeshStandardMaterial({ map: tx, roughness: 1, color: 0xb8b4ad })); g.rotation.x = -Math.PI / 2; g.receiveShadow = true; s.add(g);
@@ -158,24 +161,26 @@ async function build() {
     const p1 = await model('img/models/Habitat_Demonstration_Unit_part_1.glb', 2.6), p2 = await model('img/models/Habitat_Demonstration_Unit_part_2.glb', 2.6);
     const hb = new THREE.Group(); hb.add(p1, p2); hb.traverse(o => { if (o.isMesh) o.material = new THREE.MeshStandardMaterial({ color: 0xe6e2da, roughness: 0.6, metalness: 0.1 }); }); shadows(hb); s.add(hb);   // plain finish: the unit's texture carries NASA insignia
     const box = new THREE.Box3().setFromObject(hb); hb.position.y = -box.min.y;
+    CALL.push({ s, cam, obj: hb, p: V(0, 1.6, 0), txt: 'Radiation-protected habitat', tin: 29.2, tout: 31.6, dx: 320, dy: -120 });
     const earth = await makeEarth(96); earth.scale.setScalar(2.2); earth.position.set(6, 9, -24); s.add(earth);
     SC.push({ t0: 28.5, t1: 31.7, s, cam, up: t => { const u = INOUT(seg(t, 28.6, 31.2)); p2.position.x = lerp(0.9, 0, SIG(seg(t, 28.7, 30.2)));
       const a = lerp(-0.7, -0.25, u); cam.position.set(Math.sin(a) * 6.2, lerp(1.0, 1.5, u), Math.cos(a) * 6.2); cam.lookAt(0, 0.95, 0); } }); }
   // G. Rovers: the pressurised rover drives slowly across the regolith, the camera tracking alongside
   { const s = new THREE.Scene(); space(s); const cam = new THREE.PerspectiveCamera(30, W / H, 0.01, 300); await moonGround(s);
-    const rv = await model('img/models/Space_Exploration_Vehicle.glb', 2.6); shadows(rv); s.add(rv); const box = new THREE.Box3().setFromObject(rv); const y0 = -box.min.y;
+    const rv = await model('img/models/Space_Exploration_Vehicle.glb', 2.6); shadows(rv); s.add(rv); { const f = new THREE.DirectionalLight(0xe6ecff, 3.2); f.position.set(6, 3, 5); s.add(f); s.add(new THREE.AmbientLight(0x8090a8, 0.6)); }
+    CALL.push({ s, cam, obj: rv, p: V(0, 1.1, 0), txt: 'Pressurised cabin', tin: 31.4, tout: 33.6, dx: -340, dy: -140 }); const box = new THREE.Box3().setFromObject(rv); const y0 = -box.min.y;
     SC.push({ t0: 30.8, t1: 33.7, s, cam, up: t => { const u = seg(t, 30.9, 33.2); rv.position.set(0, y0 + 0.008 * Math.sin(t * 9), lerp(-0.6, 0.9, u)); rv.rotation.y = 0.05;
       cam.position.set(lerp(4.4, 3.6, u), lerp(1.0, 0.75, u), lerp(2.6, 3.4, u)); cam.lookAt(0, 0.7, rv.position.z + 0.2); } }); }
   // H. "Each one designed around the human inside": the real suit scans away into a hologram, showing the person inside
   { const s = new THREE.Scene(); space(s); sunLights(s, 5); const cam = new THREE.PerspectiveCamera(28, W / H, 0.01, 200);
-    const suit = await model('img/models/Extravehicular_Mobility_Unit.glb', 2.0); s.add(suit);
+    const suit = await model('img/models/Z2_Spacesuit.glb', 2.0); s.add(suit);
     const cut_ = { uCutY: { value: 2 }, uCutW: { value: 0.05 } }; suit.traverse(o => { if (o.isMesh) L.scanCut(o.material, cut_); });
-    const ghost = await model('img/models/Extravehicular_Mobility_Unit.glb', 2.0), hm = L.holoMaterial({ y0: -1.0, y1: 1.0, scan: 30, fill: 0.05 });
+    const ghost = await model('img/models/Z2_Spacesuit.glb', 2.0), hm = L.holoMaterial({ y0: -1.0, y1: 1.0, scan: 30, fill: 0.05 });
     const em = new THREE.LineBasicMaterial({ color: 0x8fb0ff, transparent: true, opacity: 0.28, blending: THREE.AdditiveBlending, depthWrite: false });
     ghost.traverse(o => { if (o.isMesh) { o.add(new THREE.LineSegments(new THREE.EdgesGeometry(o.geometry, 35), em)); o.material = hm; } }); s.add(ghost);
-    const person = await model('img/models/Astronaut.glb', 1.62); s.add(person);
+    const person = await model('img/models/Astronaut.glb', 1.4); s.add(person);
     { const sb = new THREE.Box3().setFromObject(suit), pb = new THREE.Box3().setFromObject(person); const sc = sb.getCenter(V()), pc = pb.getCenter(V()); person.position.add(sc.sub(pc)); person.position.y -= 0.04; }
-    SC.push({ t0: 32.8, t1: 37.0, s, cam, up: t => { const r = 3.3 + (t - 32.9) * 0.16; suit.rotation.y = ghost.rotation.y = person.rotation.y = r;
+    SC.push({ t0: 32.8, t1: 37.0, s, cam, up: t => { const r = -0.3 + (t - 32.9) * 0.16; suit.rotation.y = ghost.rotation.y = person.rotation.y = r;
       const cy = lerp(1.05, -1.05, INOUT(seg(t, 33.3, 35.0))); cut_.uCutY.value = cy; hm.uniforms.uTime.value = t; hm.uniforms.uY0.value = -99; hm.uniforms.uReveal.value = 1;
       ghost.visible = true; hm.uniforms.uOpacity.value = seg(t, 33.3, 33.8); person.visible = cy < 1.0;
       cam.position.set(Math.sin(-0.2 + (t - 32.9) * 0.06) * 4.8, 0.25, Math.cos(-0.2 + (t - 32.9) * 0.06) * 4.8); cam.lookAt(-0.9, 0.05, 0); } }); }
@@ -213,6 +218,15 @@ function render(f) {
       const p = gl_.pos().project(gl_.cam), x = (p.x + 1) / 2 * W, y = (1 - p.y) / 2 * H;
       $('g0').setAttribute('cx', x); $('g0').setAttribute('cy', y); $('g0').setAttribute('r', 90 + 110 * k); $('g0').setAttribute('opacity', (0.9 * k).toFixed(3));
       $('g1').setAttribute('x', x - 450); $('g1').setAttribute('y', y - 1.5); $('g1').setAttribute('opacity', (0.5 * k).toFixed(3)); } }
+  { const g = $('calls'); if (!g.dataset.init) { g.dataset.init = 1; for (const c of CALL) { c.ln = document.createElementNS('http://www.w3.org/2000/svg', 'polyline'); c.ln.setAttribute('fill', 'none'); c.ln.setAttribute('stroke', '#5b8fff'); c.ln.setAttribute('stroke-width', '2');
+      c.dot = document.createElementNS('http://www.w3.org/2000/svg', 'circle'); c.dot.setAttribute('r', 6); c.dot.setAttribute('fill', '#2f73ff'); c.tx = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      c.tx.setAttribute('font-family', 'Man'); c.tx.setAttribute('font-size', '30'); c.tx.setAttribute('fill', '#f6f8ff'); c.tx.textContent = c.txt; g.append(c.ln, c.dot, c.tx); } }
+    for (const c of CALL) { const sc = SC.find(x => x.s === c.s); const live = sc && t >= sc.t0 && t < sc.t1; const v = live ? SIG(seg(t, c.tin, c.tin + 0.6)) * (1 - seg(t, c.tout - 0.4, c.tout)) : 0;
+      [c.ln, c.dot, c.tx].forEach(e => e.setAttribute('opacity', v.toFixed(3))); if (!v) continue;
+      const q = c.p.clone().add(c.obj.position).project(c.cam), x = (q.x + 1) / 2 * W, y = (1 - q.y) / 2 * H;
+      const ex = x + c.dx * SIG(seg(t, c.tin, c.tin + 0.6)), ey = y + c.dy, ex2 = ex + Math.sign(c.dx) * 60;
+      c.ln.setAttribute('points', `${x},${y} ${ex},${ey} ${ex2},${ey}`); c.dot.setAttribute('cx', x); c.dot.setAttribute('cy', y);
+      c.tx.setAttribute('x', c.dx > 0 ? ex2 + 14 : ex2 - 14); c.tx.setAttribute('y', ey + 10); c.tx.setAttribute('text-anchor', c.dx > 0 ? 'start' : 'end'); } }
   for (const l of LABS) { const i = SIG(seg(t, l.tin, l.tin + 0.8)), o = seg(t, l.tout - 0.5, l.tout); l.d.style.opacity = (i * (1 - o)).toFixed(3); l.d.style.transform = `translateY(${((1 - i) * 14).toFixed(2)}px)`; }
   // the name appears on the narrator's "MARSOPS" (22.6 s) over the Moon, and returns at the end
   { const n1 = SIG(seg(t, 22.5, 23.4)) * (1 - seg(t, 25.4, 26.1)), n2 = SIG(seg(t, 40.9, 41.9)), n = Math.max(n1, n2);

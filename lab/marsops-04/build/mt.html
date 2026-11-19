@@ -1,0 +1,13 @@
+<!doctype html><html><head><meta charset="utf-8"><script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js","three/addons/":"./node_modules/three/examples/jsm/"}}</script></head><body style="margin:0;background:#040b19"><canvas id="c" width="1920" height="1080"></canvas>
+<script type="module">
+import * as THREE from 'three'; import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'; import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
+let RD; window.__ready = new Promise(r => RD = r);
+const R = new THREE.WebGLRenderer({ canvas: document.getElementById('c'), antialias: true, preserveDrawingBuffer: true }); R.setSize(1920,1080,false); R.outputColorSpace = THREE.SRGBColorSpace; R.toneMapping = THREE.ACESFilmicToneMapping;
+const s = new THREE.Scene(); s.background = new THREE.Color(0x040b19); const cam = new THREE.PerspectiveCamera(28, 16/9, 0.01, 100);
+s.add(new THREE.HemisphereLight(0xdfe8ff, 0x101010, 0.6)); const d = new THREE.DirectionalLight(0xfff0dc, 4); d.position.set(-3, 3, 4); s.add(d); const r2 = new THREE.DirectionalLight(0x2f73ff, 2); r2.position.set(4, 1, -3); s.add(r2);
+const gl = new GLTFLoader(); const dr = new DRACOLoader(); dr.setDecoderPath('./node_modules/three/examples/jsm/libs/draco/gltf/'); gl.setDRACOLoader(dr);
+const F = ['Z2_Spacesuit','Mark_III_Spacesuit','Advanced_Crew_Escape_Suit','Extravehicular_Mobility_Unit'];
+for (let i = 0; i < 4; i++) { const g = (await gl.loadAsync(`img/models/${F[i]}.glb`)).scene; g.traverse(o => { if (o.isMesh) { o.material.transmission = 0; } });
+  const b = new THREE.Box3().setFromObject(g), z = b.getSize(new THREE.Vector3()); g.position.sub(b.getCenter(new THREE.Vector3())); const q = new THREE.Group(); q.add(g); q.scale.setScalar(1.8 / Math.max(z.x, z.y, z.z)); q.position.x = -3 + i * 2; q.rotation.y = 0.5; s.add(q); }
+cam.position.set(0, 0, 9); cam.lookAt(0,0,0); window.render = () => R.render(s, cam); render(); RD();
+</script></body></html>
