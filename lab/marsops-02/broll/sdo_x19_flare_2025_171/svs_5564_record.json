@@ -1,0 +1,638 @@
+{
+    "id": 5564,
+    "url": "http://svs.gsfc.nasa.gov/5564/",
+    "page_type": "Visualization",
+    "title": "An X1.9 flare from AR 14114 - June 19, 2025",
+    "description": "An X1.9 flare from AR 14114 on June 19, 2025.",
+    "release_date": "2025-07-14T10:00:00-04:00",
+    "update_date": "2025-06-30T14:49:39.528440-04:00",
+    "main_image": {
+        "id": 1156636,
+        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a005500/a005564/Flares_20250619_AR14114X19_AIA.0131A.noPSF_000305.jpg",
+        "filename": "Flares_20250619_AR14114X19_AIA.0131A.noPSF_000305.jpg",
+        "media_type": "Image",
+        "alt_text": "Active Region 14114 launches an X1.9 flare in this view through the SDO AIA 131 ångstrom filter. PSF deconvolution has not been applied to these images to reduce the dark artifacting around the flare location.",
+        "width": 1024,
+        "height": 1024,
+        "pixels": 1048576
+    },
+    "main_video": {
+        "id": 1156613,
+        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a005500/a005564/20250619_AR14114X19_AIA.0131A_noPSF_stamped_1024p30.mp4",
+        "filename": "20250619_AR14114X19_AIA.0131A_noPSF_stamped_1024p30.mp4",
+        "media_type": "Movie",
+        "alt_text": "Active Region 14114 launches an X1.9 flare in this view through the SDO AIA 131 ångstrom filter. PSF deconvolution has not been applied to these images to reduce the dark artifacting around the flare location.",
+        "width": 1024,
+        "height": 1024,
+        "pixels": 1048576
+    },
+    "main_credits": {},
+    "progress": "Complete",
+    "media_groups": [
+        {
+            "id": 378515,
+            "url": "http://svs.gsfc.nasa.gov/5564/#media_group_378515",
+            "widget": "Raw HTML",
+            "title": "",
+            "caption": "",
+            "description": "Solar Dynamics Observatory (SDO) operates in a geosynchronous orbit around Earth to obtain a continuous view of the Sun. The particular instrument in this visualization records imagery in the ultraviolet portion of the spectrum at wavelengths normally absorbed by Earth's atmosphere - so we need to observe them from space.<br><br>\r\nActive Region 14114 launches an X1.9 flare on June 19, 2025.   For more details see the <a href=\"https://kauai.ccmc.gsfc.nasa.gov/DONKI/view/FLR/39625/2\" _target='blank'>Space Weather Database entry</a>.<br><br>\r\nFor more information on the classification of solar flares, see <a href=\"https://svs.gsfc.nasa.gov/10109\" _target='blank'>X-Class: A Guide to Solar Flares</a>. The point-spread function correction (PSF) has been applied to some of this imagery.",
+            "items": [],
+            "extra_data": {}
+        },
+        {
+            "id": 378417,
+            "url": "http://svs.gsfc.nasa.gov/5564/#media_group_378417",
+            "widget": "Video player",
+            "title": "",
+            "caption": "Active Region 14114 launches an X1.9 flare in this view through the SDO AIA 131 ångstrom filter. PSF deconvolution has not been applied to these images to reduce the dark artifacting around the flare location.",
+            "description": "",
+            "items": [
+                {
+                    "id": 488743,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": "",
+                    "instance": {
+                        "id": 1156613,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a005500/a005564/20250619_AR14114X19_AIA.0131A_noPSF_stamped_1024p30.mp4",
+                        "filename": "20250619_AR14114X19_AIA.0131A_noPSF_stamped_1024p30.mp4",
+                        "media_type": "Movie",
+                        "alt_text": "Active Region 14114 launches an X1.9 flare in this view through the SDO AIA 131 ångstrom filter. PSF deconvolution has not been applied to these images to reduce the dark artifacting around the flare location.",
+                        "width": 1024,
+                        "height": 1024,
+                        "pixels": 1048576
+                    }
+                },
+                {
+                    "id": 488744,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": "",
+                    "instance": {
+                        "id": 1156614,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a005500/a005564/20250619_AR14114X19_AIA.0131A_noPSF_stamped_2048p30.mp4",
+                        "filename": "20250619_AR14114X19_AIA.0131A_noPSF_stamped_2048p30.mp4",
+                        "media_type": "Movie",
+                        "alt_text": "Active Region 14114 launches an X1.9 flare in this view through the SDO AIA 131 ångstrom filter. PSF deconvolution has not been applied to these images to reduce the dark artifacting around the flare location.",
+                        "width": 2048,
+                        "height": 2048,
+                        "pixels": 4194304
+                    }
+                },
+                {
+                    "id": 488745,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": "",
+                    "instance": {
+                        "id": 1156615,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a005500/a005564/Flares_20250619_AR14114X19_AIA.0131A.noPSF_2048p30.mp4",
+                        "filename": "Flares_20250619_AR14114X19_AIA.0131A.noPSF_2048p30.mp4",
+                        "media_type": "Movie",
+                        "alt_text": "Active Region 14114 launches an X1.9 flare in this view through the SDO AIA 131 ångstrom filter. PSF deconvolution has not been applied to these images to reduce the dark artifacting around the flare location.",
+                        "width": 2048,
+                        "height": 2048,
+                        "pixels": 4194304
+                    }
+                },
+                {
+                    "id": 488746,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": "",
+                    "instance": {
+                        "id": 1156616,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a005500/a005564/frames/4096x4096_1x1_30p/AIA.0131A-Frames.noPSF/",
+                        "filename": "AIA.0131A-Frames.noPSF",
+                        "media_type": "Frames",
+                        "alt_text": "Active Region 14114 launches an X1.9 flare in this view through the SDO AIA 131 ångstrom filter. PSF deconvolution has not been applied to these images to reduce the dark artifacting around the flare location.",
+                        "width": 4096,
+                        "height": 4096,
+                        "pixels": 16777216
+                    }
+                },
+                {
+                    "id": 488747,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": "",
+                    "instance": {
+                        "id": 1156617,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a005500/a005564/frames/4096x4096_1x1_30p/AIA.0131A-Frames.noPSF_stamped/",
+                        "filename": "AIA.0131A-Frames.noPSF_stamped",
+                        "media_type": "Frames",
+                        "alt_text": "Active Region 14114 launches an X1.9 flare in this view through the SDO AIA 131 ångstrom filter. PSF deconvolution has not been applied to these images to reduce the dark artifacting around the flare location.",
+                        "width": 4096,
+                        "height": 4096,
+                        "pixels": 16777216
+                    }
+                },
+                {
+                    "id": 488748,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": "",
+                    "instance": {
+                        "id": 1156618,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a005500/a005564/frames/4096x4096_1x1_30p/AIA.0131A-Time.noPSF/",
+                        "filename": "AIA.0131A-Time.noPSF",
+                        "media_type": "Frames",
+                        "alt_text": "Active Region 14114 launches an X1.9 flare in this view through the SDO AIA 131 ångstrom filter. PSF deconvolution has not been applied to these images to reduce the dark artifacting around the flare location.",
+                        "width": 4096,
+                        "height": 4096,
+                        "pixels": 16777216
+                    }
+                },
+                {
+                    "id": 488766,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": "",
+                    "instance": {
+                        "id": 1156636,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a005500/a005564/Flares_20250619_AR14114X19_AIA.0131A.noPSF_000305.jpg",
+                        "filename": "Flares_20250619_AR14114X19_AIA.0131A.noPSF_000305.jpg",
+                        "media_type": "Image",
+                        "alt_text": "Active Region 14114 launches an X1.9 flare in this view through the SDO AIA 131 ångstrom filter. PSF deconvolution has not been applied to these images to reduce the dark artifacting around the flare location.",
+                        "width": 1024,
+                        "height": 1024,
+                        "pixels": 1048576
+                    }
+                }
+            ],
+            "extra_data": {}
+        },
+        {
+            "id": 378446,
+            "url": "http://svs.gsfc.nasa.gov/5564/#media_group_378446",
+            "widget": "Video player",
+            "title": "",
+            "caption": "Active Region 14114 launches an X1.9 flare in this view through the SDO AIA 171 ångstrom filter. PSF deconvolution has been applied to these images to improve the contrast of structures on the disk.",
+            "description": "",
+            "items": [
+                {
+                    "id": 488749,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": "",
+                    "instance": {
+                        "id": 1156619,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a005500/a005564/20250619_AR14114X19_AIA.0171A_PSF_stamped_1024p30.mp4",
+                        "filename": "20250619_AR14114X19_AIA.0171A_PSF_stamped_1024p30.mp4",
+                        "media_type": "Movie",
+                        "alt_text": "Active Region 14114 launches an X1.9 flare in this view through the SDO AIA 171 ångstrom filter. PSF deconvolution has been applied to these images to improve the contrast of structures on the disk.",
+                        "width": 1024,
+                        "height": 1024,
+                        "pixels": 1048576
+                    }
+                },
+                {
+                    "id": 488750,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": "",
+                    "instance": {
+                        "id": 1156620,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a005500/a005564/20250619_AR14114X19_AIA.0171A_PSF_stamped_2048p30.mp4",
+                        "filename": "20250619_AR14114X19_AIA.0171A_PSF_stamped_2048p30.mp4",
+                        "media_type": "Movie",
+                        "alt_text": "Active Region 14114 launches an X1.9 flare in this view through the SDO AIA 171 ångstrom filter. PSF deconvolution has been applied to these images to improve the contrast of structures on the disk.",
+                        "width": 2048,
+                        "height": 2048,
+                        "pixels": 4194304
+                    }
+                },
+                {
+                    "id": 488751,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": "",
+                    "instance": {
+                        "id": 1156621,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a005500/a005564/Flares_20250619_AR14114X19_AIA.0171A.PSF_2048p30.mp4",
+                        "filename": "Flares_20250619_AR14114X19_AIA.0171A.PSF_2048p30.mp4",
+                        "media_type": "Movie",
+                        "alt_text": "Active Region 14114 launches an X1.9 flare in this view through the SDO AIA 171 ångstrom filter. PSF deconvolution has been applied to these images to improve the contrast of structures on the disk.",
+                        "width": 2048,
+                        "height": 2048,
+                        "pixels": 4194304
+                    }
+                },
+                {
+                    "id": 488752,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": "",
+                    "instance": {
+                        "id": 1156622,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a005500/a005564/frames/4096x4096_1x1_30p/AIA.0171A-Frames.PSF/",
+                        "filename": "AIA.0171A-Frames.PSF",
+                        "media_type": "Frames",
+                        "alt_text": "Active Region 14114 launches an X1.9 flare in this view through the SDO AIA 171 ångstrom filter. PSF deconvolution has been applied to these images to improve the contrast of structures on the disk.",
+                        "width": 4094,
+                        "height": 4094,
+                        "pixels": 16760836
+                    }
+                },
+                {
+                    "id": 488753,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": "",
+                    "instance": {
+                        "id": 1156623,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a005500/a005564/frames/4096x4096_1x1_30p/AIA.0171A-Frames.PSF_stamped/",
+                        "filename": "AIA.0171A-Frames.PSF_stamped",
+                        "media_type": "Frames",
+                        "alt_text": "Active Region 14114 launches an X1.9 flare in this view through the SDO AIA 171 ångstrom filter. PSF deconvolution has been applied to these images to improve the contrast of structures on the disk.",
+                        "width": 4094,
+                        "height": 4094,
+                        "pixels": 16760836
+                    }
+                },
+                {
+                    "id": 488754,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": "",
+                    "instance": {
+                        "id": 1156624,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a005500/a005564/frames/4096x4096_1x1_30p/AIA.0171A-Time.PSF/",
+                        "filename": "AIA.0171A-Time.PSF",
+                        "media_type": "Frames",
+                        "alt_text": "Active Region 14114 launches an X1.9 flare in this view through the SDO AIA 171 ångstrom filter. PSF deconvolution has been applied to these images to improve the contrast of structures on the disk.",
+                        "width": 4094,
+                        "height": 4094,
+                        "pixels": 16760836
+                    }
+                },
+                {
+                    "id": 488767,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": "",
+                    "instance": {
+                        "id": 1156637,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a005500/a005564/Flares_20250619_AR14114X19_AIA.0171A.PSF_000305.jpg",
+                        "filename": "Flares_20250619_AR14114X19_AIA.0171A.PSF_000305.jpg",
+                        "media_type": "Image",
+                        "alt_text": "Active Region 14114 launches an X1.9 flare in this view through the SDO AIA 171 ångstrom filter. PSF deconvolution has been applied to these images to improve the contrast of structures on the disk.",
+                        "width": 1024,
+                        "height": 1024,
+                        "pixels": 1048576
+                    }
+                }
+            ],
+            "extra_data": {}
+        },
+        {
+            "id": 378447,
+            "url": "http://svs.gsfc.nasa.gov/5564/#media_group_378447",
+            "widget": "Video player",
+            "title": "",
+            "caption": "Active Region 14114 launches an X1.9 flare in this view through the SDO AIA 304 ångstrom filter. PSF deconvolution has been applied to these images to improve the contrast of structures on the disk.",
+            "description": "",
+            "items": [
+                {
+                    "id": 488755,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": "",
+                    "instance": {
+                        "id": 1156627,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a005500/a005564/20250619_AR14114X19_AIA.0304A_PSF_stamped_1024p30.mp4",
+                        "filename": "20250619_AR14114X19_AIA.0304A_PSF_stamped_1024p30.mp4",
+                        "media_type": "Movie",
+                        "alt_text": "Active Region 14114 launches an X1.9 flare in this view through the SDO AIA 304 ångstrom filter. PSF deconvolution has been applied to these images to improve the contrast of structures on the disk.",
+                        "width": 1024,
+                        "height": 1024,
+                        "pixels": 1048576
+                    }
+                },
+                {
+                    "id": 488756,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": "",
+                    "instance": {
+                        "id": 1156628,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a005500/a005564/20250619_AR14114X19_AIA.0304A_PSF_stamped_2048p30.mp4",
+                        "filename": "20250619_AR14114X19_AIA.0304A_PSF_stamped_2048p30.mp4",
+                        "media_type": "Movie",
+                        "alt_text": "Active Region 14114 launches an X1.9 flare in this view through the SDO AIA 304 ångstrom filter. PSF deconvolution has been applied to these images to improve the contrast of structures on the disk.",
+                        "width": 2048,
+                        "height": 2048,
+                        "pixels": 4194304
+                    }
+                },
+                {
+                    "id": 488757,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": "",
+                    "instance": {
+                        "id": 1156629,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a005500/a005564/Flares_20250619_AR14114X19_AIA.0304A.PSF_2048p30.mp4",
+                        "filename": "Flares_20250619_AR14114X19_AIA.0304A.PSF_2048p30.mp4",
+                        "media_type": "Movie",
+                        "alt_text": "Active Region 14114 launches an X1.9 flare in this view through the SDO AIA 304 ångstrom filter. PSF deconvolution has been applied to these images to improve the contrast of structures on the disk.",
+                        "width": 2048,
+                        "height": 2048,
+                        "pixels": 4194304
+                    }
+                },
+                {
+                    "id": 488760,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": "",
+                    "instance": {
+                        "id": 1156630,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a005500/a005564/frames/4096x4096_1x1_30p/AIA.0304A-Frames.PSF/",
+                        "filename": "AIA.0304A-Frames.PSF",
+                        "media_type": "Frames",
+                        "alt_text": "Active Region 14114 launches an X1.9 flare in this view through the SDO AIA 304 ångstrom filter. PSF deconvolution has been applied to these images to improve the contrast of structures on the disk.",
+                        "width": 4096,
+                        "height": 4096,
+                        "pixels": 16777216
+                    }
+                },
+                {
+                    "id": 488761,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": "",
+                    "instance": {
+                        "id": 1156631,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a005500/a005564/frames/4096x4096_1x1_30p/AIA.0304A-Frames.PSF_stamped/",
+                        "filename": "AIA.0304A-Frames.PSF_stamped",
+                        "media_type": "Frames",
+                        "alt_text": "Active Region 14114 launches an X1.9 flare in this view through the SDO AIA 304 ångstrom filter. PSF deconvolution has been applied to these images to improve the contrast of structures on the disk.",
+                        "width": 4096,
+                        "height": 4096,
+                        "pixels": 16777216
+                    }
+                },
+                {
+                    "id": 488762,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": "",
+                    "instance": {
+                        "id": 1156632,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a005500/a005564/frames/4096x4096_1x1_30p/AIA.0304A-Time.PSF/",
+                        "filename": "AIA.0304A-Time.PSF",
+                        "media_type": "Frames",
+                        "alt_text": "Active Region 14114 launches an X1.9 flare in this view through the SDO AIA 304 ångstrom filter. PSF deconvolution has been applied to these images to improve the contrast of structures on the disk.",
+                        "width": 4096,
+                        "height": 4096,
+                        "pixels": 16777216
+                    }
+                },
+                {
+                    "id": 488768,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": "",
+                    "instance": {
+                        "id": 1156638,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a005500/a005564/Flares_20250619_AR14114X19_AIA.0304A.PSF_000305.jpg",
+                        "filename": "Flares_20250619_AR14114X19_AIA.0304A.PSF_000305.jpg",
+                        "media_type": "Image",
+                        "alt_text": "Active Region 14114 launches an X1.9 flare in this view through the SDO AIA 304 ångstrom filter. PSF deconvolution has been applied to these images to improve the contrast of structures on the disk.",
+                        "width": 1024,
+                        "height": 1024,
+                        "pixels": 1048576
+                    }
+                }
+            ],
+            "extra_data": {}
+        },
+        {
+            "id": 378516,
+            "url": "http://svs.gsfc.nasa.gov/5564/#media_group_378516",
+            "widget": "Raw HTML",
+            "title": "",
+            "caption": "",
+            "description": "<h2>What is the PSF (Point Spread-Function)?</h2>Many telescopes, especially reflecting telescopes such as the ones used on SDO (<a href=\"https://en.wikipedia.org/wiki/Reflecting_telescope\" target=\"_blank\">Wikipedia</a>), have internal structures that support various optical components. These components can result in incoming light being scattered to other parts of the image. This can appear in the image as a faint haze, brightening dark areas and dimming bright areas. The point-spread function (<a href=\"https://en.wikipedia.org/wiki/Point_spread_function\" target=\"_blank\">Wikipedia</a>) is a measure of how light that would normally be received by a single camera pixel, gets scattered onto other pixels. This is often seen as the \"spikes\" seen in images of bright stars. For SDO, it manifests as a double-X shape centered over a bright flare (see <a href=\"https://svs.gsfc.nasa.gov/11383\" target=\"_blank\">Sun Emits Third Solar Flare in Two Days</a>). The effect of this scattered light can be computed, and removed, by a process called deconvolution (<a href=\"https://en.wikipedia.org/wiki/Deconvolution\" target=\"_blank\">Wikipedia</a>). This is often a very compute-intensive process which can be sped up by using a computers graphics-processing unit (GPU) for the computation.",
+            "items": [],
+            "extra_data": {}
+        },
+        {
+            "id": 378448,
+            "url": "http://svs.gsfc.nasa.gov/5564/#media_group_378448",
+            "widget": "Single image",
+            "title": "",
+            "caption": "Time slates for the multiple movies above, for custom compositing. Make sure to match the event and frame tag for the SDO frames you are using.",
+            "description": "",
+            "items": [
+                {
+                    "id": 488763,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": "",
+                    "instance": {
+                        "id": 1156633,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a005500/a005564/frames/4096x4096_1x1_30p/AIA.0131A-Slates/",
+                        "filename": "AIA.0131A-Slates",
+                        "media_type": "Frames",
+                        "alt_text": "Time slates for the multiple movies above, for custom compositing. Make sure to match the event and frame tag for the SDO frames you are using.",
+                        "width": 1340,
+                        "height": 125,
+                        "pixels": 167500
+                    }
+                },
+                {
+                    "id": 488764,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": "",
+                    "instance": {
+                        "id": 1156634,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a005500/a005564/frames/4096x4096_1x1_30p/AIA.0171A-Slates/",
+                        "filename": "AIA.0171A-Slates",
+                        "media_type": "Frames",
+                        "alt_text": "Time slates for the multiple movies above, for custom compositing. Make sure to match the event and frame tag for the SDO frames you are using.",
+                        "width": 1340,
+                        "height": 125,
+                        "pixels": 167500
+                    }
+                },
+                {
+                    "id": 488765,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": "",
+                    "instance": {
+                        "id": 1156635,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a005500/a005564/frames/4096x4096_1x1_30p/AIA.0304A-Slates/",
+                        "filename": "AIA.0304A-Slates",
+                        "media_type": "Frames",
+                        "alt_text": "Time slates for the multiple movies above, for custom compositing. Make sure to match the event and frame tag for the SDO frames you are using.",
+                        "width": 1340,
+                        "height": 125,
+                        "pixels": 167500
+                    }
+                },
+                {
+                    "id": 488769,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": "",
+                    "instance": {
+                        "id": 1156639,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a005500/a005564/slate_Flares_20250619_AR14114X19_AIA.0131A_000305.jpg",
+                        "filename": "slate_Flares_20250619_AR14114X19_AIA.0131A_000305.jpg",
+                        "media_type": "Image",
+                        "alt_text": "Time slates for the multiple movies above, for custom compositing. Make sure to match the event and frame tag for the SDO frames you are using.",
+                        "width": 1340,
+                        "height": 125,
+                        "pixels": 167500
+                    }
+                }
+            ],
+            "extra_data": {}
+        }
+    ],
+    "studio": "svs",
+    "funding_sources": [
+        "NASA Heliophysics"
+    ],
+    "credits": [
+        {
+            "role": "Data visualizer",
+            "people": [
+                {
+                    "name": "Tom Bridgman",
+                    "employer": "Global Science and Technology, Inc."
+                }
+            ]
+        },
+        {
+            "role": "Producer",
+            "people": [
+                {
+                    "name": "Scott Wiessinger",
+                    "employer": "eMITS"
+                }
+            ]
+        },
+        {
+            "role": "Technical support",
+            "people": [
+                {
+                    "name": "Laurence Schuler",
+                    "employer": "ADNET Systems, Inc."
+                },
+                {
+                    "name": "Ian Jones",
+                    "employer": "ADNET Systems, Inc."
+                },
+                {
+                    "name": "Ella Kaplan",
+                    "employer": "Global Science and Technology, Inc."
+                }
+            ]
+        }
+    ],
+    "missions": [
+        "SDO"
+    ],
+    "series": [
+        "SDO - Footage"
+    ],
+    "tapes": [],
+    "papers": [],
+    "datasets": [
+        {
+            "name": "131 Filter",
+            "common_name": "AIA 131",
+            "platform": "SDO",
+            "sensor": "AIA",
+            "type": "Other",
+            "organizations": [
+                "JOINT SCIENCE OPERATIONS CENTER "
+            ],
+            "description": "",
+            "credit": "",
+            "url": "http://jsoc.stanford.edu/",
+            "date_range": "2025-06-19T22:50:00 TAI to 2025-06-20T04:50:00 TAI"
+        },
+        {
+            "name": "171 Filter",
+            "common_name": "AIA 171",
+            "platform": "SDO",
+            "sensor": "AIA",
+            "type": "Other",
+            "organizations": [
+                "JOINT SCIENCE OPERATIONS CENTER "
+            ],
+            "description": "",
+            "credit": "",
+            "url": "http://jsoc.stanford.edu/",
+            "date_range": "2025-06-19T22:50:00 TAI to 2025-06-20T04:50:00 TAI"
+        },
+        {
+            "name": "304 Filter",
+            "common_name": "AIA 304",
+            "platform": "SDO",
+            "sensor": "AIA",
+            "type": "Other",
+            "organizations": [
+                "JOINT SCIENCE OPERATIONS CENTER "
+            ],
+            "description": "",
+            "credit": "",
+            "url": "http://jsoc.stanford.edu/",
+            "date_range": "2025-06-19T22:50:00 TAI to 2025-06-20T04:50:00 TAI"
+        }
+    ],
+    "nasa_science_categories": [
+        "Sun"
+    ],
+    "keywords": [
+        "Corona",
+        "EUV Imaging",
+        "Extreme Ultraviolet Imaging",
+        "Heliophysics",
+        "Point-Spread-Function (PSF)",
+        "SDO",
+        "Solar Active Regions",
+        "Solar Activity",
+        "Solar Cycle 25",
+        "Solar Dynamics Observatory",
+        "Space Weather"
+    ],
+    "recommended_pages": [],
+    "related": [],
+    "sources": [],
+    "products": [],
+    "newer_versions": [],
+    "older_versions": [],
+    "alternate_versions": []
+}

@@ -1,0 +1,253 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<!-- MARSOPS launch teaser v2 (15 s, 1080x1920, 30 fps): the story videos' old style (real archival images, toned, slow
+     push, dissolves, one classy caption line) with blueprint lines drawn over them. One frame-pure render(f).
+     Thread object: the circle (drawn around Leonardo's aerial screw -> the limb of Mars -> the limb of the Sun -> it
+     returns around the name). Neon blue only for protection (the shield, the shell, the line under MARSOPS).
+     See ../storyboard/plan.md. -->
+<style>
+@font-face { font-family: Mont; src: url(fonts/Montserrat.ttf); font-weight: 100 900; }
+@font-face { font-family: Play; src: url(fonts/PlayfairItalic.ttf); font-weight: 400 900; font-style: italic; }
+html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #071022; }
+svg { position: absolute; left: 0; top: 0; }
+.cap { position: absolute; left: 0; top: 0; width: 1080px; text-align: center; font-family: Play; font-style: italic;
+       font-weight: 500; font-size: 68px; line-height: 90px; color: #f4ecdd; white-space: nowrap; opacity: 0;
+       text-shadow: 0 3px 18px rgba(0, 0, 0, 0.72); }
+</style></head>
+<body>
+<svg id="art" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <defs>
+    <!-- luminance (stretched to each image's own range), then toned: cyanotype (Prussian blue to paper white) or
+         its negative (the blueprint: white lines on blue) -->
+    <filter id="cyanMars" color-interpolation-filters="sRGB" x="0" y="0" width="100%" height="100%">
+      <feColorMatrix type="matrix" values=".354 1.192 .120 0 0  .354 1.192 .120 0 0  .354 1.192 .120 0 0  0 0 0 1 0"/>
+      <feComponentTransfer><feFuncR type="table" tableValues=".027 .06 .20 .55 .93"/><feFuncG type="table" tableValues=".063 .14 .38 .72 .95"/><feFuncB type="table" tableValues=".133 .30 .60 .86 .97"/></feComponentTransfer>
+    </filter>
+    <filter id="cyanSun" color-interpolation-filters="sRGB" x="0" y="0" width="100%" height="100%">
+      <feColorMatrix type="matrix" values=".343 1.154 .116 0 0  .343 1.154 .116 0 0  .343 1.154 .116 0 0  0 0 0 1 0"/>
+      <feComponentTransfer><feFuncR type="table" tableValues=".027 .06 .20 .55 .93"/><feFuncG type="table" tableValues=".063 .14 .38 .72 .95"/><feFuncB type="table" tableValues=".133 .30 .60 .86 .97"/></feComponentTransfer>
+    </filter>
+    <filter id="cyanHab" color-interpolation-filters="sRGB" x="0" y="0" width="100%" height="100%">
+      <feColorMatrix type="matrix" values=".425 1.430 .144 0 -.2  .425 1.430 .144 0 -.2  .425 1.430 .144 0 -.2  0 0 0 1 0"/>
+      <feComponentTransfer><feFuncR type="table" tableValues=".027 .06 .20 .55 .93"/><feFuncG type="table" tableValues=".063 .14 .38 .72 .95"/><feFuncB type="table" tableValues=".133 .30 .60 .86 .97"/></feComponentTransfer>
+    </filter>
+    <filter id="negLeo" color-interpolation-filters="sRGB" x="0" y="0" width="100%" height="100%">
+      <feColorMatrix type="matrix" values=".625 2.103 .212 0 -1.18  .625 2.103 .212 0 -1.18  .625 2.103 .212 0 -1.18  0 0 0 1 0"/>
+      <feComponentTransfer><feFuncR type="table" tableValues=".93 .82 .55 .25 .07 .027"/><feFuncG type="table" tableValues=".95 .87 .66 .38 .14 .063"/><feFuncB type="table" tableValues=".97 .93 .80 .58 .27 .133"/></feComponentTransfer>
+    </filter>
+    <filter id="negEmu" color-interpolation-filters="sRGB" x="0" y="0" width="100%" height="100%">
+      <feColorMatrix type="matrix" values=".2126 .7152 .0722 0 0  .2126 .7152 .0722 0 0  .2126 .7152 .0722 0 0  0 0 0 1 0"/>
+      <feComponentTransfer><feFuncR type="table" tableValues=".93 .82 .55 .25 .07 .027"/><feFuncG type="table" tableValues=".95 .87 .66 .38 .14 .063"/><feFuncB type="table" tableValues=".97 .93 .80 .58 .27 .133"/></feComponentTransfer>
+    </filter>
+    <filter id="negPac" color-interpolation-filters="sRGB" x="0" y="0" width="100%" height="100%">
+      <feColorMatrix type="matrix" values=".322 1.084 .109 0 -.303  .322 1.084 .109 0 -.303  .322 1.084 .109 0 -.303  0 0 0 1 0"/>
+      <feComponentTransfer><feFuncR type="table" tableValues=".93 .82 .55 .25 .07 .027"/><feFuncG type="table" tableValues=".95 .87 .66 .38 .14 .063"/><feFuncB type="table" tableValues=".97 .93 .80 .58 .27 .133"/></feComponentTransfer>
+    </filter>
+    <filter id="glow" filterUnits="userSpaceOnUse" x="-600" y="-600" width="2280" height="3120">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="marsClip"><circle cx="540" cy="800" r="400"/></clipPath>
+    <radialGradient id="sunFade" gradientUnits="userSpaceOnUse" cx="540" cy="800" r="445">
+      <stop offset="0.80" stop-color="#fff"/><stop offset="1" stop-color="#000"/>
+    </radialGradient>
+    <mask id="sunMask" maskUnits="userSpaceOnUse" x="0" y="0" width="1080" height="1920">
+      <circle cx="540" cy="800" r="445" fill="url(#sunFade)"/>
+    </mask>
+    <linearGradient id="habFade" gradientUnits="userSpaceOnUse" x1="0" y1="136" x2="0" y2="1343">
+      <stop offset="0" stop-color="#000"/><stop offset="0.24" stop-color="#fff"/><stop offset="0.78" stop-color="#fff"/><stop offset="1" stop-color="#000"/>
+    </linearGradient>
+    <mask id="habMask" maskUnits="userSpaceOnUse" x="-800" y="0" width="2800" height="1920">
+      <rect x="-800" y="136" width="2800" height="1207" fill="url(#habFade)"/>
+    </mask>
+    <mask id="waveMask" maskUnits="userSpaceOnUse" x="-3000" y="-3000" width="7000" height="8000">
+      <rect x="-3000" y="-3000" width="7000" height="8000" fill="#fff"/>
+      <path id="waveHole" fill="#000" d=""/>
+    </mask>
+  </defs>
+  <g id="cam"></g>
+</svg>
+<svg id="over" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <defs>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence id="grainT" type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="1"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.9  0 0 0 0 0.92  0 0 0 0 1  0 0 0 0.075 0"/>
+    </filter>
+    <radialGradient id="vig" cx="50%" cy="44%" r="78%">
+      <stop offset="55%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#000" stop-opacity="0.5"/>
+    </radialGradient>
+    <linearGradient id="band" gradientUnits="userSpaceOnUse" x1="0" y1="1112" x2="0" y2="1712"></linearGradient>
+  </defs>
+  <rect id="bandR" x="0" y="1112" width="1080" height="600" fill="url(#band)"/>
+  <rect width="1080" height="1920" fill="url(#vig)"/>
+  <rect width="1080" height="1920" filter="url(#grain)"/>
+</svg>
+<div id="text"></div>
+<script>
+const FPS = 30, W = 1080, H = 1920, N = 450, NS = 'http://www.w3.org/2000/svg';
+const INK = '#efe6d2', NEON = '#45bdff', SEPIA = [58, 38, 20], IVORY = [239, 230, 210];
+const CX = 540, CY = 800, K = 1, R = 400;            // the circle: centre and radius for the whole film (page coordinates)
+</script>
+<script src="img/meta.js"></script>
+<script src="helpers.js"></script>
+<script>
+const S = {};
+const camS = t => 1 + 0.10 * (t / 15);                 // the camera only breathes: a slow, even push over the whole film
+function img(parent, href, x, y, w, h, attrs = {}) { return el('image', Object.assign({ href, x, y, width: w, height: h, preserveAspectRatio: 'none' }, attrs), parent); }
+function lerpPts(A, B, u) { return A.map((a, i) => [lerp(a[0], B[i][0], u), lerp(a[1], B[i][1], u)]); }
+function evenly(pts, n) {                              // n points evenly spaced along a closed polyline, from pts[0]
+  const P = pts.concat([pts[0]]), cum = [0];
+  for (let i = 1; i < P.length; i++) cum.push(cum[i - 1] + Math.hypot(P[i][0] - P[i - 1][0], P[i][1] - P[i - 1][1]));
+  const L = cum[cum.length - 1], out = []; let j = 0;
+  for (let k = 0; k < n; k++) { const d = L * k / n; while (cum[j + 1] < d) j++;
+    const u = (d - cum[j]) / (cum[j + 1] - cum[j] || 1); out.push([lerp(P[j][0], P[j + 1][0], u), lerp(P[j][1], P[j + 1][1], u)]); }
+  return out;
+}
+function measure(txt, wght, px, track) {
+  const c = document.createElement('canvas').getContext('2d'); c.font = `${wght} ${px}px Mont`;
+  let w = 0; for (const ch of txt) w += c.measureText(ch).width; return w + track * px * (txt.length - 1);
+}
+
+function build() {
+  // ===== the archival images (bottom to top); opacity envelopes are the dissolves
+  // Leonardo, aerial screw (Ms B f. 83v, Ravaisson-Mollien facsimile 1883): the screw centred on the circle
+  const LEO = [-564, -752.5, 2070, 2993];
+  S.leoWarm = env(img(CAM, 'img/leo.jpg', ...LEO), -1, -0.5, 3.0, 3.4);
+  S.leoBlue = env(img(CAM, 'img/leo.jpg', ...LEO, { filter: 'url(#negLeo)' }), 3.0, 3.4, 3.75, 4.25);
+  // Mars (Viking mosaic): its limb is the circle
+  S.mars = env(grp(CAM, { 'clip-path': 'url(#marsClip)' }), 3.4, 3.85, 5.0, 5.45);
+  img(S.mars, 'img/mars.jpg', 140, 400, 800, 800, { filter: 'url(#cyanMars)' });
+  // the Sun's X1.9 flare (SDO, 171 A): its limb is the circle; the frames play at film speed
+  S.sun = env(grp(CAM, { mask: 'url(#sunMask)' }), 5.0, 5.45, 6.8, 7.2);
+  const sunG = grp(S.sun, { filter: 'url(#cyanSun)' });
+  S.sunF = [];
+  for (let i = 1; i <= META.sdo_frames; i++) S.sunF.push(img(sunG, `img/sdo/f${String(i).padStart(3, '0')}.jpg`, 95, 355, 890, 890, { visibility: 'hidden' }));
+  // the spacesuit (NASA's Shuttle EMU drawing), as a blueprint
+  S.emu = env(img(CAM, 'img/emu.jpg', 34.5, 40, 1011, 1700, { filter: 'url(#negEmu)' }), 6.8, 7.25, 9.2, 9.7);
+  // a Mars base (NASA concept), a band across the frame, feathered into the blue
+  S.hab = env(grp(CAM, { mask: 'url(#habMask)' }), 9.2, 9.7, 10.9, 11.5);
+  img(S.hab, 'img/hab.jpg', -720, 136, 2400, 1207, { filter: 'url(#cyanHab)' });
+
+  // ===== blueprint lines
+  S.leoLines = grp(CAM, { color: 'rgb(58,38,20)' });                    // drawn in ink on the paper; turn white with it
+  S.gCircle = env(grp(S.leoLines), -1, -0.5, 6.85, 7.15);
+  stroke(S.gCircle, arc(CX, CY, R, R, Math.PI, 3 * Math.PI, 180), 0.25, 1.35, { w: 2.0, op: 0.85, col: 'currentColor', e0: 0, e1: 0 });
+  S.gAxisV = env(grp(S.leoLines), -1, -0.5, 5.0, 5.4);
+  stroke(S.gAxisV, line(CX, CY - R - 70, CX, CY + R + 70), 0.85, 0.8, { w: 1.4, op: 0.7, col: 'currentColor' });
+  S.gAxisH = env(grp(S.leoLines), -1, -0.5, 3.5, 3.8);
+  stroke(S.gAxisH, line(CX - R - 70, CY, CX + R + 70, CY), 1.15, 0.75, { w: 1.4, op: 0.7, col: 'currentColor' });
+  const d45 = R * Math.SQRT1_2;
+  stroke(S.gAxisH, line(CX - d45, CY - d45, CX + d45, CY + d45), 1.6, 0.6, { w: 1.0, op: 0.45, col: 'currentColor', pass: false });
+  stroke(S.gAxisH, line(CX + d45, CY - d45, CX - d45, CY + d45), 1.8, 0.6, { w: 1.0, op: 0.45, col: 'currentColor', pass: false });
+  // Mars: meridians and parallels drawn on the globe
+  S.gGlobe = env(grp(CAM), -1, -0.5, 5.0, 5.4);
+  [[30, 3.9], [60, 4.05]].forEach(([lam, t0]) => { const rx = R * Math.sin(lam * Math.PI / 180);
+    stroke(S.gGlobe, arc(CX, CY, rx, R, -Math.PI / 2, Math.PI / 2, 90), t0, 0.7, { w: 1.2, op: 0.55, pass: false, e0: 0, e1: 0 });
+    stroke(S.gGlobe, arc(CX, CY, rx, R, Math.PI / 2, 1.5 * Math.PI, 90), t0 + 0.1, 0.7, { w: 1.2, op: 0.55, pass: false, e0: 0, e1: 0 }); });
+  stroke(S.gGlobe, arc(CX, CY, R, 48, 0, Math.PI, 120), 3.75, 0.7, { w: 1.3, op: 0.6, pass: false, e0: 0, e1: 0 });
+  [[-30, 4.3], [30, 4.4]].forEach(([phi, t0]) => { const y = CY - R * Math.sin(phi * Math.PI / 180), rx = R * Math.cos(phi * Math.PI / 180);
+    stroke(S.gGlobe, arc(CX, y, rx, rx * 0.12, 0, Math.PI, 90), t0, 0.6, { w: 1.0, op: 0.45, pass: false, e0: 0, e1: 0 }); });
+
+  // ===== radiation: dashed wavefronts, from the Sun's limb, then from the Sun off the top right; held out by the shield
+  S.waveG = grp(CAM, { mask: 'url(#waveMask)' });
+  S.waves = [];
+  for (let ti = 5.25; ti < 10.4; ti += 0.36) {
+    const a = ti < 6.85;
+    const c = el('circle', { fill: 'none', stroke: INK, 'stroke-width': a ? 2.0 : 2.4, 'stroke-dasharray': a ? '14 11' : '18 14', opacity: 0 }, S.waveG);
+    S.waves.push({ c, ti, a, cx: a ? CX : 1350, cy: a ? CY : -380, r0: a ? R + 6 : 700, v: a ? 330 : 720, life: a ? 1.7 : 2.6, peak: a ? 0.42 : 0.40 });
+    c.setAttribute('cx', S.waves[S.waves.length - 1].cx); c.setAttribute('cy', S.waves[S.waves.length - 1].cy);
+  }
+  S.waveHole = document.getElementById('waveHole');
+
+  // ===== the shield: drawn around the suit by two pens from the top; carried over the base as its shell; flattened
+  //       into the line under the name
+  const shP = META.emu_shield.map(([x, y]) => [34.5 + x * 1011, 40 + y * 1700]);
+  const M = 360;
+  S.A = evenly(catmull(shP, true, 14).slice(0, -1), M);
+  const hx = 555, hb = 1045, hrx = 440, hry = 370, shell = [];
+  for (let i = 0; i <= 90; i++) { const a = -Math.PI / 2 + (Math.PI / 2) * i / 90; shell.push([hx + hrx * Math.cos(a), hb + hry * Math.sin(a)]); }
+  for (let i = 1; i < 60; i++) shell.push([hx + hrx - 2 * hrx * i / 60, hb]);
+  for (let i = 0; i < 90; i++) { const a = Math.PI + (Math.PI / 2) * i / 90; shell.push([hx + hrx * Math.cos(a), hb + hry * Math.sin(a)]); }
+  S.B = evenly(shell, M);
+  S.shT0 = 7.35; S.shT1 = 8.65;
+  S.shieldG = grp(CAM, { filter: 'url(#glow)', opacity: 0 });
+  S.shield = el('path', { fill: 'none', stroke: NEON, 'stroke-width': 3.2, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, S.shieldG);
+
+  // ===== the outro: the logo alone (the client's note: "een simpelere outro, puur het logo"): the wordmark rebuilt as
+  //       live type (Montserrat 800, tracking 0.10 em, measured on the supplied raster), white on the blue, centred
+  const WM = 600, fsz = 100 * WM / measure('MARSOPS', 800, 100, 0.1);
+  S.logo = el('text', { x: CX - WM / 2, y: 945 + 0.35 * fsz, 'font-family': 'Mont', 'font-weight': 800, 'font-size': fsz.toFixed(2),
+    'letter-spacing': (0.1 * fsz).toFixed(2), fill: '#ffffff', opacity: 0 }, CAM);
+  S.logo.textContent = 'MARSOPS';
+
+  // ===== captions: the story videos' style (Playfair Display Italic, warm ivory, one line at y 1412, 4-frame fade + 6 px rise)
+  const T = document.getElementById('text');
+  S.caps = [];
+  [['Every great leap', 0.45, 1.60], ['began as a drawing.', 1.65, 3.20], ['Mars is the next one.', 3.55, 5.00],
+   ['Its radiation never stops.', 5.20, 6.85], ['So we draw the shield', 7.10, 9.05], ['for every astronaut.', 9.30, 11.0]]
+    .forEach(([txt, tin, tout]) => { const d = document.createElement('div'); d.className = 'cap'; d.textContent = txt; T.appendChild(d);
+      S.caps.push({ d, tin, tout }); });
+  // the soft darkening behind the caption line (the story videos' text band): a Gaussian, never a box
+  const band = document.getElementById('band');
+  for (let k = 0; k <= 12; k++) { const y = -300 + 50 * k, a = 0.38 * 1.4 * Math.exp(-((y / 150) ** 2));   // at full strength (the paper); 1/1.8 of it on the blue
+    const s = document.createElementNS(NS, 'stop'); s.setAttribute('offset', (k / 12).toFixed(4)); s.setAttribute('stop-color', '#000'); s.setAttribute('stop-opacity', a.toFixed(4)); band.appendChild(s); }
+  S.bandR = document.getElementById('bandR'); S.grainT = document.getElementById('grainT');
+}
+
+// ------------------------------------------------------------------ render(f)
+function render(f) {
+  const t = f / FPS;
+  const s = camS(t);
+  CAM.setAttribute('transform', `translate(${CX} ${CY}) scale(${s.toFixed(5)}) translate(${-CX} ${-CY})`);
+  for (const st of STROKES) {
+    const p = clamp((t - st.t0) / st.dur);
+    if (st.L === undefined) { st.L = st.p.getTotalLength(); st.p.setAttribute('stroke-dasharray', `${st.L} ${st.L}`); }
+    st.p.setAttribute('stroke-dashoffset', (st.L * (1 - st.ease(p))).toFixed(2));
+    st.p.style.visibility = p > 0 ? 'visible' : 'hidden';
+  }
+  for (const [g, a, b, c, d] of ENV) g.setAttribute('opacity', (clamp((t - a) / (b - a)) * (1 - clamp((t - c) / (d - c)))).toFixed(3));
+  // the ink lines turn white as the paper turns to blueprint
+  { const u = clamp((t - 3.0) / 0.4), c = SEPIA.map((v, i) => Math.round(lerp(v, IVORY[i], u)));
+    S.leoLines.setAttribute('color', `rgb(${c.join(',')})`); }
+  // the Sun's film
+  { const fi = clamp(Math.floor((t - 4.95) * FPS), 0, S.sunF.length - 1);
+    if (S.sunCur !== fi) { if (S.sunCur !== undefined) S.sunF[S.sunCur].setAttribute('visibility', 'hidden'); S.sunF[fi].setAttribute('visibility', 'visible'); S.sunCur = fi; } }
+  // the shield
+  let P = null;
+  if (t >= S.shT0 && t < S.shT1) {
+    const p = PEN(clamp((t - S.shT0) / (S.shT1 - S.shT0))), n = S.A.length, k = Math.max(2, Math.round(n / 2 * p));
+    const right = S.A.slice(0, k + 1), left = [S.A[0]].concat(S.A.slice(n - k).reverse());
+    S.shield.setAttribute('d', dstr(right) + dstr(left)); S.shieldG.setAttribute('opacity', 1);
+  } else if (t >= S.shT1) {
+    P = t < 9.25 ? S.A : lerpPts(S.A, S.B, SIG(clamp((t - 9.25) / 0.8)));
+    S.shield.setAttribute('d', dstr(P) + 'Z'); S.shieldG.setAttribute('opacity', (1 - clamp((t - 10.9) / 0.6)).toFixed(3));   // leaves with the base
+  } else S.shieldG.setAttribute('opacity', 0);
+  { const pulse = Math.exp(-Math.max(0, t - S.shT1) / 0.3) * (t >= S.shT1 ? 1 : 0);
+    S.shield.setAttribute('stroke-width', (3.2 + 2.4 * pulse).toFixed(2)); }
+  // radiation wavefronts; once the shield is closed, they stop at it
+  S.waveHole.setAttribute('d', P ? dstr(P) + 'Z' : '');
+  S.waveHole.setAttribute('opacity', clamp((t - S.shT1) / 0.2).toFixed(3));
+  const wOut = 1 - clamp((t - 10.6) / 0.4);
+  for (const w of S.waves) {
+    const u = (t - w.ti) / w.life;
+    if (u < 0 || u > 1) { w.c.setAttribute('opacity', 0); continue; }
+    w.c.setAttribute('r', (w.r0 + w.v * (t - w.ti)).toFixed(1));
+    w.c.setAttribute('opacity', (w.peak * clamp(u / 0.08) * (1 - u) ** 1.4 * wOut).toFixed(3));
+  }
+  // the logo: one dissolve on the music's peak, then it holds while the camera breathes
+  S.logo.setAttribute('opacity', SIG(clamp((t - 11.55) / 0.55)).toFixed(3));
+  // captions
+  for (const c of S.caps) {
+    const a = clamp((t - c.tin) / (4 / 24)), o = clamp((t - c.tout) / 0.12), g = a * a * (3 - 2 * a);
+    c.d.style.opacity = (g * (1 - o)).toFixed(3);
+    c.d.style.transform = `translateY(${(1412 - 45 + (1 - g) * 6).toFixed(2)}px)`;
+  }
+  S.bandR.setAttribute('opacity', (lerp(1, 1 / 1.4, clamp((t - 3.4) / 0.4)) * (1 - clamp((t - 11.0) / 0.3))).toFixed(3));
+  S.grainT.setAttribute('seed', String(1 + (Math.floor(f / 1.25) % 40)));       // the grain moves (24 grains a second)
+}
+window.render = render;
+window.__ready = document.fonts.load('800 100px Mont').then(() => document.fonts.load('500 30px Mont'))
+  .then(() => document.fonts.load('italic 500 68px Play')).then(() => { build(); render(0);
+    window.CUES = { captions: S.caps.map(c => c.tin), shieldClose: S.shT1, flare: 4.95 + 39 / FPS, logo: 12.0 }; });
+</script>
+</body></html>

@@ -1,0 +1,870 @@
+{
+    "id": 3838,
+    "url": "http://svs.gsfc.nasa.gov/3838/",
+    "page_type": "Visualization",
+    "title": "Incredible Solar Flare, Prominence Eruption and CME Event (304 angstroms)",
+    "description": "On June 7, 2011, an M-2 flare occurred on the Sun which released a very large coronal mass ejection (CME). Much of the ejected material is much cooler (less than about 80,000K) and therefore appears dark against the brighter solar disk.Material which does not reach solar escape velocity can be seen falling back and striking the solar surface, sometimes triggering smaller events.This image sequence is captured at one minute intervals and designed to play synchronously with animations 3839 (171 Ångstroms), 3840 (211 Ångstroms) and 3841 (1700 Ångstroms). || ",
+    "release_date": "2011-07-01T10:00:00-04:00",
+    "update_date": "2025-03-09T00:00:56.850075-05:00",
+    "main_image": {
+        "id": 484932,
+        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003800/a003838/SDO304FullDisk_1080HD_web.png",
+        "filename": "SDO304FullDisk_1080HD_web.png",
+        "media_type": "Image",
+        "alt_text": "These movies present the six hour interval around the event, a one minute per animation frame.",
+        "width": 320,
+        "height": 180,
+        "pixels": 57600
+    },
+    "main_video": null,
+    "main_credits": {
+        "Visualizations by": [
+            {
+                "name": "Tom Bridgman",
+                "employer": "Global Science and Technology, Inc."
+            }
+        ],
+        "Produced by": [
+            {
+                "name": "Scott Wiessinger",
+                "employer": "USRA"
+            }
+        ],
+        "Scientific consulting by": [
+            {
+                "name": "William D. Pesnell",
+                "employer": "NASA/GSFC"
+            }
+        ]
+    },
+    "progress": "Complete",
+    "media_groups": [
+        {
+            "id": 351629,
+            "url": "http://svs.gsfc.nasa.gov/3838/#media_group_351629",
+            "widget": "Basic text with HTML",
+            "title": "",
+            "caption": "",
+            "description": "On June 7, 2011, an <a href=\"http://www.spaceweather.com/glossary/flareclasses.html\">M-2 flare</a> occurred on the Sun which released a very large coronal mass ejection (CME). Much of the ejected material is much cooler (less than about 80,000K) and therefore appears dark against the brighter solar disk.<p><p>Material which does not reach solar escape velocity can be seen falling back and striking the solar surface, sometimes triggering smaller events.<p><p>This image sequence is captured at one minute intervals and designed to play synchronously with animations <a href=\"/3839\">3839</a> (171 Ångstroms), <a href=\"/3840\">3840</a> (211 Ångstroms) and <a href=\"/3841\">3841</a> (1700 Ångstroms).",
+            "items": [],
+            "extra_data": {}
+        },
+        {
+            "id": 351630,
+            "url": "http://svs.gsfc.nasa.gov/3838/#media_group_351630",
+            "widget": "Video player",
+            "title": "",
+            "caption": "",
+            "description": "These movies present the six hour interval around the event, a one minute per animation frame.",
+            "items": [
+                {
+                    "id": 329539,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": null,
+                    "instance": {
+                        "id": 484935,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003800/a003838/SDO304Full_stand.HD1080i.00000.jpg",
+                        "filename": "SDO304Full_stand.HD1080i.00000.jpg",
+                        "media_type": "Image",
+                        "alt_text": "These movies present the six hour interval around the event, a one minute per animation frame.",
+                        "width": 1920,
+                        "height": 1080,
+                        "pixels": 2073600
+                    }
+                },
+                {
+                    "id": 329537,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": null,
+                    "instance": {
+                        "id": 484931,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003800/a003838/SDO304Full_stand.HD1080i.00100_thm.png",
+                        "filename": "SDO304Full_stand.HD1080i.00100_thm.png",
+                        "media_type": "Image",
+                        "alt_text": "These movies present the six hour interval around the event, a one minute per animation frame.",
+                        "width": 80,
+                        "height": 40,
+                        "pixels": 3200
+                    }
+                },
+                {
+                    "id": 329538,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": null,
+                    "instance": {
+                        "id": 484932,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003800/a003838/SDO304FullDisk_1080HD_web.png",
+                        "filename": "SDO304FullDisk_1080HD_web.png",
+                        "media_type": "Image",
+                        "alt_text": "These movies present the six hour interval around the event, a one minute per animation frame.",
+                        "width": 320,
+                        "height": 180,
+                        "pixels": 57600
+                    }
+                },
+                {
+                    "id": 329535,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": null,
+                    "instance": {
+                        "id": 484930,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003800/a003838/SDO304FullDisk_1080HD.mov",
+                        "filename": "SDO304FullDisk_1080HD.mov",
+                        "media_type": "Movie",
+                        "alt_text": "These movies present the six hour interval around the event, a one minute per animation frame.",
+                        "width": 1920,
+                        "height": 1080,
+                        "pixels": 2073600
+                    }
+                },
+                {
+                    "id": 329536,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": null,
+                    "instance": {
+                        "id": 484929,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003800/a003838/frames/1920x1080_16x9_30p/",
+                        "filename": "1920x1080_16x9_30p",
+                        "media_type": "Frames",
+                        "alt_text": "These movies present the six hour interval around the event, a one minute per animation frame.",
+                        "width": 1920,
+                        "height": 1080,
+                        "pixels": 2073600
+                    }
+                },
+                {
+                    "id": 329540,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": null,
+                    "instance": {
+                        "id": 484936,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003800/a003838/SDO304FullDisk_1080HD.webmhd.webm",
+                        "filename": "SDO304FullDisk_1080HD.webmhd.webm",
+                        "media_type": "Movie",
+                        "alt_text": "These movies present the six hour interval around the event, a one minute per animation frame.",
+                        "width": 960,
+                        "height": 540,
+                        "pixels": 518400
+                    }
+                },
+                {
+                    "id": 329541,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": null,
+                    "instance": {
+                        "id": 484934,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003800/a003838/our_incredibl_sSun_304_angstroms.key",
+                        "filename": "our_incredibl_sSun_304_angstroms.key",
+                        "media_type": "Presentation",
+                        "alt_text": "These movies present the six hour interval around the event, a one minute per animation frame.",
+                        "width": 0,
+                        "height": 0,
+                        "pixels": 0
+                    }
+                },
+                {
+                    "id": 329542,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": null,
+                    "instance": {
+                        "id": 484933,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003800/a003838/our_incredibl_sSun_304_angstroms.pptx",
+                        "filename": "our_incredibl_sSun_304_angstroms.pptx",
+                        "media_type": "Presentation",
+                        "alt_text": "These movies present the six hour interval around the event, a one minute per animation frame.",
+                        "width": 0,
+                        "height": 0,
+                        "pixels": 0
+                    }
+                }
+            ],
+            "extra_data": {}
+        },
+        {
+            "id": 351631,
+            "url": "http://svs.gsfc.nasa.gov/3838/#media_group_351631",
+            "widget": "Video player",
+            "title": "",
+            "caption": "",
+            "description": "These are 4Kx4K frames with coded colors.",
+            "items": [
+                {
+                    "id": 329545,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": null,
+                    "instance": {
+                        "id": 484940,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003800/a003838/MonsterFilament_304A.0200_print.jpg",
+                        "filename": "MonsterFilament_304A.0200_print.jpg",
+                        "media_type": "Image",
+                        "alt_text": "These are 4Kx4K frames with coded colors.",
+                        "width": 1024,
+                        "height": 1024,
+                        "pixels": 1048576
+                    }
+                },
+                {
+                    "id": 329544,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": null,
+                    "instance": {
+                        "id": 484938,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003800/a003838/MonsterFilament_304A.0200_web.png",
+                        "filename": "MonsterFilament_304A.0200_web.png",
+                        "media_type": "Image",
+                        "alt_text": "These are 4Kx4K frames with coded colors.",
+                        "width": 320,
+                        "height": 320,
+                        "pixels": 102400
+                    }
+                },
+                {
+                    "id": 329546,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": null,
+                    "instance": {
+                        "id": 484941,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003800/a003838/MonsterFilament_304A-1.webm",
+                        "filename": "MonsterFilament_304A-1.webm",
+                        "media_type": "Movie",
+                        "alt_text": "These are 4Kx4K frames with coded colors.",
+                        "width": 1080,
+                        "height": 1080,
+                        "pixels": 1166400
+                    }
+                },
+                {
+                    "id": 329547,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": null,
+                    "instance": {
+                        "id": 484939,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003800/a003838/MonsterFilament_304A-1.mp4",
+                        "filename": "MonsterFilament_304A-1.mp4",
+                        "media_type": "Movie",
+                        "alt_text": "These are 4Kx4K frames with coded colors.",
+                        "width": 1080,
+                        "height": 1080,
+                        "pixels": 1166400
+                    }
+                },
+                {
+                    "id": 329543,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": null,
+                    "instance": {
+                        "id": 484937,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003800/a003838/frames/4096x4096_1x1_1p/",
+                        "filename": "4096x4096_1x1_1p",
+                        "media_type": "Frames",
+                        "alt_text": "These are 4Kx4K frames with coded colors.",
+                        "width": 4096,
+                        "height": 4096,
+                        "pixels": 16777216
+                    }
+                },
+                {
+                    "id": 329548,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": null,
+                    "instance": {
+                        "id": 551962,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003800/a003838/MonsterFilament_304A_4096p30_h265.mp4",
+                        "filename": "MonsterFilament_304A_4096p30_h265.mp4",
+                        "media_type": "Movie",
+                        "alt_text": "These are 4Kx4K frames with coded colors.",
+                        "width": 4096,
+                        "height": 4096,
+                        "pixels": 16777216
+                    }
+                }
+            ],
+            "extra_data": {}
+        },
+        {
+            "id": 351632,
+            "url": "http://svs.gsfc.nasa.gov/3838/#media_group_351632",
+            "widget": "Single image",
+            "title": "",
+            "caption": "",
+            "description": "Hyperwall files",
+            "items": [
+                {
+                    "id": 329550,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": null,
+                    "instance": {
+                        "id": 484943,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003800/a003838/MonsterFilament_304A.0200_3x3_hw_print.jpg",
+                        "filename": "MonsterFilament_304A.0200_3x3_hw_print.jpg",
+                        "media_type": "Image",
+                        "alt_text": "Hyperwall files",
+                        "width": 1024,
+                        "height": 1024,
+                        "pixels": 1048576
+                    }
+                },
+                {
+                    "id": 329549,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": null,
+                    "instance": {
+                        "id": 484942,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003800/a003838/MonsterFilament.304A.0200_08_web.png",
+                        "filename": "MonsterFilament.304A.0200_08_web.png",
+                        "media_type": "Image",
+                        "alt_text": "Hyperwall files",
+                        "width": 320,
+                        "height": 179,
+                        "pixels": 57280
+                    }
+                },
+                {
+                    "id": 329565,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": null,
+                    "instance": {
+                        "id": 484958,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003800/a003838/frames/1368x768_16x9_30p/c5/",
+                        "filename": "c5",
+                        "media_type": "Frames",
+                        "alt_text": "Hyperwall files",
+                        "width": 1368,
+                        "height": 768,
+                        "pixels": 1050624
+                    }
+                },
+                {
+                    "id": 329564,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": null,
+                    "instance": {
+                        "id": 484957,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003800/a003838/frames/1368x768_16x9_30p/c4/",
+                        "filename": "c4",
+                        "media_type": "Frames",
+                        "alt_text": "Hyperwall files",
+                        "width": 1368,
+                        "height": 768,
+                        "pixels": 1050624
+                    }
+                },
+                {
+                    "id": 329563,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": null,
+                    "instance": {
+                        "id": 484956,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003800/a003838/frames/1368x768_16x9_30p/c3/",
+                        "filename": "c3",
+                        "media_type": "Frames",
+                        "alt_text": "Hyperwall files",
+                        "width": 1368,
+                        "height": 768,
+                        "pixels": 1050624
+                    }
+                },
+                {
+                    "id": 329562,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": null,
+                    "instance": {
+                        "id": 484955,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003800/a003838/frames/1368x768_16x9_30p/c2/",
+                        "filename": "c2",
+                        "media_type": "Frames",
+                        "alt_text": "Hyperwall files",
+                        "width": 1368,
+                        "height": 768,
+                        "pixels": 1050624
+                    }
+                },
+                {
+                    "id": 329561,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": null,
+                    "instance": {
+                        "id": 484954,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003800/a003838/frames/1368x768_16x9_30p/c1/",
+                        "filename": "c1",
+                        "media_type": "Frames",
+                        "alt_text": "Hyperwall files",
+                        "width": 1368,
+                        "height": 768,
+                        "pixels": 1050624
+                    }
+                },
+                {
+                    "id": 329560,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": null,
+                    "instance": {
+                        "id": 484953,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003800/a003838/frames/1368x768_16x9_30p/b5/",
+                        "filename": "b5",
+                        "media_type": "Frames",
+                        "alt_text": "Hyperwall files",
+                        "width": 1368,
+                        "height": 768,
+                        "pixels": 1050624
+                    }
+                },
+                {
+                    "id": 329559,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": null,
+                    "instance": {
+                        "id": 484952,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003800/a003838/frames/1368x768_16x9_30p/b4/",
+                        "filename": "b4",
+                        "media_type": "Frames",
+                        "alt_text": "Hyperwall files",
+                        "width": 1368,
+                        "height": 768,
+                        "pixels": 1050624
+                    }
+                },
+                {
+                    "id": 329558,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": null,
+                    "instance": {
+                        "id": 484951,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003800/a003838/frames/1368x768_16x9_30p/b3/",
+                        "filename": "b3",
+                        "media_type": "Frames",
+                        "alt_text": "Hyperwall files",
+                        "width": 1368,
+                        "height": 768,
+                        "pixels": 1050624
+                    }
+                },
+                {
+                    "id": 329557,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": null,
+                    "instance": {
+                        "id": 484950,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003800/a003838/frames/1368x768_16x9_30p/b2/",
+                        "filename": "b2",
+                        "media_type": "Frames",
+                        "alt_text": "Hyperwall files",
+                        "width": 1368,
+                        "height": 768,
+                        "pixels": 1050624
+                    }
+                },
+                {
+                    "id": 329556,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": null,
+                    "instance": {
+                        "id": 484949,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003800/a003838/frames/1368x768_16x9_30p/b1/",
+                        "filename": "b1",
+                        "media_type": "Frames",
+                        "alt_text": "Hyperwall files",
+                        "width": 1368,
+                        "height": 768,
+                        "pixels": 1050624
+                    }
+                },
+                {
+                    "id": 329555,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": null,
+                    "instance": {
+                        "id": 484948,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003800/a003838/frames/1368x768_16x9_30p/a5/",
+                        "filename": "a5",
+                        "media_type": "Frames",
+                        "alt_text": "Hyperwall files",
+                        "width": 1368,
+                        "height": 768,
+                        "pixels": 1050624
+                    }
+                },
+                {
+                    "id": 329554,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": null,
+                    "instance": {
+                        "id": 484947,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003800/a003838/frames/1368x768_16x9_30p/a4/",
+                        "filename": "a4",
+                        "media_type": "Frames",
+                        "alt_text": "Hyperwall files",
+                        "width": 1368,
+                        "height": 768,
+                        "pixels": 1050624
+                    }
+                },
+                {
+                    "id": 329553,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": null,
+                    "instance": {
+                        "id": 484946,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003800/a003838/frames/1368x768_16x9_30p/a3/",
+                        "filename": "a3",
+                        "media_type": "Frames",
+                        "alt_text": "Hyperwall files",
+                        "width": 1368,
+                        "height": 768,
+                        "pixels": 1050624
+                    }
+                },
+                {
+                    "id": 329552,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": null,
+                    "instance": {
+                        "id": 484945,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003800/a003838/frames/1368x768_16x9_30p/a2/",
+                        "filename": "a2",
+                        "media_type": "Frames",
+                        "alt_text": "Hyperwall files",
+                        "width": 1368,
+                        "height": 768,
+                        "pixels": 1050624
+                    }
+                },
+                {
+                    "id": 329551,
+                    "type": "media",
+                    "extra_data": null,
+                    "title": null,
+                    "caption": null,
+                    "instance": {
+                        "id": 484944,
+                        "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003800/a003838/frames/1368x768_16x9_30p/a1/",
+                        "filename": "a1",
+                        "media_type": "Frames",
+                        "alt_text": "Hyperwall files",
+                        "width": 1368,
+                        "height": 768,
+                        "pixels": 1050624
+                    }
+                }
+            ],
+            "extra_data": {}
+        }
+    ],
+    "studio": "svs",
+    "funding_sources": [
+        "NASA Heliophysics"
+    ],
+    "credits": [
+        {
+            "role": "Animator",
+            "people": [
+                {
+                    "name": "Tom Bridgman",
+                    "employer": "Global Science and Technology, Inc."
+                }
+            ]
+        },
+        {
+            "role": "Producer",
+            "people": [
+                {
+                    "name": "Scott Wiessinger",
+                    "employer": "USRA"
+                }
+            ]
+        },
+        {
+            "role": "Scientist",
+            "people": [
+                {
+                    "name": "William D. Pesnell",
+                    "employer": "NASA/GSFC"
+                }
+            ]
+        }
+    ],
+    "missions": [
+        "SDO"
+    ],
+    "series": [
+        "Solar Dynamics Observatory: Year 2"
+    ],
+    "tapes": [],
+    "papers": [],
+    "datasets": [
+        {
+            "name": "304 Filter",
+            "common_name": "AIA 304",
+            "platform": "SDO",
+            "sensor": "AIA",
+            "type": "Other",
+            "organizations": [
+                "JOINT SCIENCE OPERATIONS CENTER "
+            ],
+            "description": "",
+            "credit": "",
+            "url": "http://jsoc.stanford.edu/",
+            "date_range": "2011/06/07T06:00:00 - 2011/06/07T12:00:00"
+        }
+    ],
+    "nasa_science_categories": [
+        "Sun"
+    ],
+    "keywords": [
+        "Coronal Mass Ejections",
+        "Earth Science",
+        "EUV Imaging",
+        "Extreme Ultraviolet Imaging",
+        "Hyperwall",
+        "Presentation",
+        "SDO",
+        "Solar Active Regions",
+        "Solar Activity",
+        "Solar Dynamics Observatory",
+        "Solar Events",
+        "Solar Filaments",
+        "Solar Flares",
+        "Solar Prominences",
+        "Sun-earth Interactions"
+    ],
+    "recommended_pages": [],
+    "related": [
+        {
+            "id": 4352,
+            "url": "http://svs.gsfc.nasa.gov/4352/",
+            "page_type": "Visualization",
+            "title": "Incredible Solar Flare, Prominence Eruption and CME Event (SDO/HMI visible light)",
+            "description": "These movies present the six hour interval around the event, a one minute per animation frame. || MonsterFilament_HMI_stand.HD1080i.00100_print.jpg (1024x576) [40.8 KB] || MonsterFilament_HMI_stand.HD1080i.00100_searchweb.png (320x180) [21.8 KB] || MonsterFilament_HMI_stand.HD1080i.00100_thm.png (80x40) [2.7 KB] || MonsterFilament_HMI_stand.HD1080i.00100_web.png (320x180) [21.8 KB] || 1920x1080_16x9_30p (1920x1080) [0 Item(s)] || MonsterFilament_HMI.HD1080i_p30.mp4 (1920x1080) [12.1 MB] || MonsterFilament_HMI.HD1080i_p30.webm (1920x1080) [1.2 MB] || MonsterFilament_HMI.HD1080i_p30.mp4.hwshow [197 bytes] || ",
+            "release_date": "2017-08-20T10:00:00-04:00",
+            "update_date": "2025-02-02T22:22:15.115122-05:00",
+            "main_image": {
+                "id": 412328,
+                "url": "http://svs.gsfc.nasa.gov/vis/a000000/a004300/a004352/MonsterFilament_HMI.00100_print.jpg",
+                "filename": "MonsterFilament_HMI.00100_print.jpg",
+                "media_type": "Image",
+                "alt_text": "These are 4Kx4K frames with coded colors.",
+                "width": 1024,
+                "height": 1024,
+                "pixels": 1048576
+            }
+        },
+        {
+            "id": 3839,
+            "url": "http://svs.gsfc.nasa.gov/3839/",
+            "page_type": "Visualization",
+            "title": "Incredible Solar Flare, Prominence Eruption and CME Event (171 angstroms)",
+            "description": "On June 7, 2011, an M-2 flare occurred on the Sun which released a very large coronal mass ejection (CME). Much of the ejected material is much cooler (less than about 80,000K) and therefore appears dark against the brighter solar disk.Material which does not reach solar escape velocity can be seen falling back and striking the solar surface, sometimes triggering smaller events.This image sequence is captured at one minute intervals and designed to play synchronously with animations 3838 (304 Ångstroms), 3840 (211 Ångstroms) and 3841 (1700 Ångstroms). || ",
+            "release_date": "2011-07-01T10:00:00-04:00",
+            "update_date": "2025-02-02T00:01:24.120933-05:00",
+            "main_image": {
+                "id": 484965,
+                "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003800/a003839/SDO171Full_stand.HD1080i.00100.jpg",
+                "filename": "SDO171Full_stand.HD1080i.00100.jpg",
+                "media_type": "Image",
+                "alt_text": "These movies present the six hour interval around the event, a one minute per animation frame.",
+                "width": 1920,
+                "height": 1080,
+                "pixels": 2073600
+            }
+        },
+        {
+            "id": 3840,
+            "url": "http://svs.gsfc.nasa.gov/3840/",
+            "page_type": "Visualization",
+            "title": "Incredible Solar Flare, Prominence Eruption and CME Event (211 angstroms)",
+            "description": "On June 7, 2011, an M-2 flare occurred on the Sun which released a very large coronal mass ejection (CME). Much of the ejected material is much cooler (less than about 80,000K) and therefore appears dark against the brighter solar disk.Material which does not reach solar escape velocity can be seen falling back and striking the solar surface, sometimes triggering smaller events.This image sequence is captured at one minute intervals and designed to play synchronously with animations 3839 (171 Ångstroms), 3838 (304 Ångstroms) and 3841 (1700 Ångstroms). || ",
+            "release_date": "2011-07-01T10:00:00-04:00",
+            "update_date": "2025-02-02T22:02:50.495232-05:00",
+            "main_image": {
+                "id": 484994,
+                "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003800/a003840/SDO211Full_stand.HD1080i.00100.jpg",
+                "filename": "SDO211Full_stand.HD1080i.00100.jpg",
+                "media_type": "Image",
+                "alt_text": "These movies present the six hour interval around the event, a one minute per animation frame.",
+                "width": 1920,
+                "height": 1080,
+                "pixels": 2073600
+            }
+        },
+        {
+            "id": 3841,
+            "url": "http://svs.gsfc.nasa.gov/3841/",
+            "page_type": "Visualization",
+            "title": "Incredible Solar Flare, Prominence Eruption and CME Event (1700 angstroms)",
+            "description": "On June 7, 2011, an M-2 flare occurred on the Sun which released a very large coronal mass ejection (CME). At this wavelength, very little of the ejected material is visible. However, it is possible to see locations where some of the material is falling back and striking the solar surface.This image sequence is captured at one minute intervals and designed to play synchronously with animations 3839 (171 Ångstroms), 3840 (211 Ångstroms) and 3838 (304 Ångstroms). || ",
+            "release_date": "2011-07-01T10:00:00-04:00",
+            "update_date": "2025-02-02T22:02:51.740327-05:00",
+            "main_image": {
+                "id": 485027,
+                "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003800/a003841/SDO1700Full_stand.HD1080i.00100.jpg",
+                "filename": "SDO1700Full_stand.HD1080i.00100.jpg",
+                "media_type": "Image",
+                "alt_text": "These movies present the six hour interval around the event, a one minute per animation frame.",
+                "width": 1920,
+                "height": 1080,
+                "pixels": 2073600
+            }
+        }
+    ],
+    "sources": [],
+    "products": [
+        {
+            "id": 30710,
+            "url": "http://svs.gsfc.nasa.gov/30710/",
+            "page_type": "Hyperwall Visual",
+            "title": "Our Solar System",
+            "description": "The 8 planets plus Pluto with planetary axis tilt || planets3x3_pluto_colorMercury_axis_tilt_1080p.00001_print.jpg (1024x576) [75.1 KB] || planets3x3_pluto_colorMercury_axis_tilt_1080p.00001_searchweb.png (320x180) [49.6 KB] || planets3x3_pluto_colorMercury_axis_tilt_1080p.00001_thm.png (80x40) [5.0 KB] || planets3x3_pluto_colorMercury_axis_tilt_720p.00001_web.png (320x180) [50.6 KB] || planets3x3_pluto_colorMercury_axis_tilt_720p.00001_thm.png (80x40) [5.0 KB] || planets3x3_pluto_colorMercury_axis_tilt_1080p.mp4 (1920x1080) [9.2 MB] || planets3x3_pluto_colorMercury_axis_tilt_720p.mp4 (1280x720) [4.7 MB] || planets3x3_pluto_colorMercury_axis_tilt_1080p.webm (1920x1080) [2.7 MB] || planets3x3_pluto_colorMercury_axis_tilt_2160p.mp4 (3840x2160) [28.7 MB] || 3x3_pluto_tilt (4104x2304) [0 Item(s)] || 100-science-overview-001.hwshow || ",
+            "release_date": "2016-03-15T12:00:00-04:00",
+            "update_date": "2025-03-10T00:22:19.106978-04:00",
+            "main_image": {
+                "id": 427299,
+                "url": "http://svs.gsfc.nasa.gov/vis/a030000/a030700/a030710/planets3x3_pluto_colorMercury_axis_tilt_1080p.00001_print.jpg",
+                "filename": "planets3x3_pluto_colorMercury_axis_tilt_1080p.00001_print.jpg",
+                "media_type": "Image",
+                "alt_text": "The 8 planets plus Pluto with planetary axis tilt",
+                "width": 1024,
+                "height": 576,
+                "pixels": 589824
+            }
+        },
+        {
+            "id": 3952,
+            "url": "http://svs.gsfc.nasa.gov/3952/",
+            "page_type": "Visualization",
+            "title": "Heliophysics Presentation at NASM 2011",
+            "description": "The Maryland Space Business Roundtable sponsored their 12th annual event at the National Air and Space Museum the evening of September 14, 2011. The event is held in support of the roundtable's programs in education for students in science, technology, engineering and math. This year's event, Earth and Space: A Journey of Wonder & Discovery, with remarks from Goddard Center Director Rob Strain and NASA Administrator Charlie Bolden, included a program featuring a 5-panel member of scientists: Dr. Waleed Abdalati, NASA Chief Scientist; Dr. Arthur Hou, GPM Mission Scientist; Dr. Jim Garvin, Chief Scientist, NASA Goddard; Dr. Holly Gilbert, Goddard Solar Physics Laboratory Chief; and Dr. Amber Straughn, Research Astrophysicist. Miles O'Brien, space and science broadcast news veteran moderated the panel. || ",
+            "release_date": "2012-05-10T00:00:00-04:00",
+            "update_date": "2015-12-03T11:56:05.906158-05:00",
+            "main_image": {
+                "id": 435351,
+                "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003900/a003952/Helio-2011NASM_00001.png",
+                "filename": "Helio-2011NASM_00001.png",
+                "media_type": "Image",
+                "alt_text": "Movie used in the NASM presentation.",
+                "width": 1280,
+                "height": 720,
+                "pixels": 921600
+            }
+        },
+        {
+            "id": 10966,
+            "url": "http://svs.gsfc.nasa.gov/10966/",
+            "page_type": "Produced Video",
+            "title": "SDO: Year 2",
+            "description": "April 21, 2012 marks the two-year anniversary of the Solar Dynamics Observatory (SDO) First Light press conference, where NASA revealed the first images taken by the spacecraft. This video highlights just some of the amazing events witnessed in SDO's second year. || ",
+            "release_date": "2012-04-20T08:00:00-04:00",
+            "update_date": "2025-03-09T00:14:31.380313-05:00",
+            "main_image": {
+                "id": 476549,
+                "url": "http://svs.gsfc.nasa.gov/vis/a010000/a010900/a010966/y2.180.png",
+                "filename": "y2.180.png",
+                "media_type": "Image",
+                "alt_text": "For complete transcript, click here.",
+                "width": 320,
+                "height": 180,
+                "pixels": 57600
+            }
+        },
+        {
+            "id": 10921,
+            "url": "http://svs.gsfc.nasa.gov/10921/",
+            "page_type": "Produced Video",
+            "title": "Across The Universe",
+            "description": "The NASA Visualization Explorer app is broadening its scope to highlight the astonishing findings and features of the universe beamed back to our planet from NASA's entire fleet of satellites, spacecraft and space telescopes. Expect to see more fascinating views of the sun and planets, along with stunning shots of distant galaxies and star clusters located light-years away, such as the one above captured by the legendary Hubble Space Telescope. Look forward to even more world premiere visualizations and animations, including never-before-seen footage of Earth, as NASA continues to explore our home planet and beyond. Excited? We are too! Check out the media gallery below for a sneak peek at what's to come. || ",
+            "release_date": "2012-03-13T00:00:00-04:00",
+            "update_date": "2023-05-03T13:53:12.911341-04:00",
+            "main_image": {
+                "id": 477841,
+                "url": "http://svs.gsfc.nasa.gov/vis/a010000/a010900/a010921/potw1205a_1024x576.jpg",
+                "filename": "potw1205a_1024x576.jpg",
+                "media_type": "Image",
+                "alt_text": "It's a big place out there. Now you can explore it all right here.",
+                "width": 1024,
+                "height": 576,
+                "pixels": 589824
+            }
+        },
+        {
+            "id": 3832,
+            "url": "http://svs.gsfc.nasa.gov/3832/",
+            "page_type": "Visualization",
+            "title": "Extreme Solar Eruption Caught On Camera",
+            "description": "A massive spray of high-energy particles blasted from the sun and shot into space during a magnificent solar eruption captured by NASA's Solar Dynamics Observatory (SDO) satellite. The spectacular event took place on June 7, 2011 over a period of six hours when an M-2 class (medium-sized) solar flare, a large prominence eruption, and a coronal mass ejection were observed from sunspot complex 1226-1227. Scientists estimate hot plasma and powerful X-rays burst into the sun's atmosphere and exited the corona at speeds over 3 million mph. Trapped particles unable to reach escape velocity traversed the solar sky in evanescent arcs, some traveling more than 215,000 miles, and showered the surface in a speckled array of bright flashes as the fiery sphere reheated the slightly cooled material. The Atmospheric Imaging Assembly instrument on SDO recorded the event at multiple wavelengths using its extreme UV sensor and transmitted the images to Earth in awesome 16.8 mega-pixel resolution. Watch a time-lapse video of the eruption below and relive the moment. || ",
+            "release_date": "2011-08-02T00:00:00-04:00",
+            "update_date": "2023-05-03T13:53:42.610339-04:00",
+            "main_image": {
+                "id": 484527,
+                "url": "http://svs.gsfc.nasa.gov/vis/a000000/a003800/a003832/a01080_1304_4k_Sun_1024x576.jpg",
+                "filename": "a01080_1304_4k_Sun_1024x576.jpg",
+                "media_type": "Image",
+                "alt_text": "Hot plasma leaps from the sun in stunning HD.",
+                "width": 1024,
+                "height": 576,
+                "pixels": 589824
+            }
+        }
+    ],
+    "newer_versions": [],
+    "older_versions": [],
+    "alternate_versions": []
+}
