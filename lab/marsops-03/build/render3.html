@@ -1,0 +1,319 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<!-- MARSOPS launch teaser v3 (15 s, 1080x1920, 30 fps), in the language of the client's site
+     (beyond-earth-mars-hero.wkconversions.chatgpt.site): navy, white Manrope headlines, one electric blue, the site's own
+     3D Mars. One frame-pure render(f). See ../storyboard/plan.md. Radiation is warm white (the environment), protection
+     is electric blue (MARSOPS). -->
+<script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js","three/addons/":"./node_modules/three/examples/jsm/"}}</script>
+<style>
+@font-face { font-family: Man; src: url(fonts/Manrope.woff2) format('woff2'); font-weight: 200 800; }
+@font-face { font-family: Mont; src: url(fonts/Montserrat.ttf); font-weight: 100 900; }
+html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #030813; }
+.abs { position: absolute; left: 0; top: 0; }
+#bg { width: 1080px; height: 1920px; background: linear-gradient(155deg, #030813 0%, #050c1c 58%, #071530 100%); }
+#stars { width: 1400px; height: 2480px; transform-origin: 700px 1240px; }
+#shade { width: 1080px; height: 1920px;
+  background: linear-gradient(180deg, rgba(0,3,10,.62) 0%, rgba(0,3,10,.38) 30%, rgba(0,3,10,.12) 55%, rgba(0,3,10,.35) 100%),
+              radial-gradient(circle at 74% 86%, rgba(190,60,30,.16), rgba(0,0,0,0) 38%); }
+#glowB { width: 1080px; height: 1920px; background: radial-gradient(circle at 70% 64%, rgba(12,86,255,.20), rgba(0,0,0,0) 42%); opacity: 0; }
+#gl, #fx { width: 1080px; height: 1920px; }
+#sun { width: 760px; height: 760px; transform-origin: 0 0; }
+#card { width: 420px; height: 690px; background: linear-gradient(155deg, #0a1e45, #061229 78%); border: 1px solid rgba(143,176,255,.22);
+        box-shadow: 0 40px 90px rgba(0,0,0,.5); transform-origin: 210px 345px; }
+#card img { position: absolute; left: 18px; top: 28px; width: 384px; height: 634px; object-fit: cover; }
+#hab { width: 1080px; height: 1500px; transform-origin: 540px 900px; }
+#habShade { width: 1080px; height: 1920px; background: linear-gradient(180deg, rgba(4,11,25,.55) 0%, rgba(4,11,25,0) 22%, rgba(4,11,25,0) 52%, rgba(4,11,25,.85) 72%, #040b19 78%); }
+#habDark { width: 1080px; height: 1920px; background: #040b19; opacity: 0; }
+.mask { position: absolute; left: 0; width: 1080px; overflow: hidden; }
+.h { position: absolute; left: 66px; top: 0; font-family: Man; font-weight: 400; font-size: 140px; line-height: 160px;
+     letter-spacing: -0.065em; color: #ffffff; white-space: nowrap; }
+.eyebrow { position: absolute; left: 66px; font-family: Man; font-weight: 500; font-size: 32px; color: #aeb8ca; white-space: nowrap; }
+.eyebrow i { display: inline-block; width: 12px; height: 12px; border-radius: 6px; background: #2f73ff; margin-right: 22px; vertical-align: 5px; }
+.body { position: absolute; left: 66px; width: 800px; padding-left: 30px; font-family: Man; font-weight: 400; font-size: 38px; line-height: 1.5;
+        letter-spacing: -0.02em; color: #aeb8ca; }
+.rule { position: absolute; left: 66px; width: 3px; background: #2f73ff; transform-origin: 0 0; }
+.li { position: absolute; left: 112px; top: 0; font-family: Man; font-weight: 400; font-size: 70px; line-height: 96px; letter-spacing: -0.045em; color: #f6f8ff; white-space: nowrap; }
+.dot { position: absolute; left: 66px; width: 12px; height: 12px; border-radius: 6px; background: #2f73ff; }
+.div { position: absolute; left: 66px; width: 948px; height: 1px; background: rgba(246,248,255,.16); transform-origin: 0 0; }
+#logo { position: absolute; left: 0; width: 1080px; text-align: center; font-family: Mont; font-weight: 800; color: #ffffff;
+        letter-spacing: 0.1em; text-indent: 0.1em; white-space: nowrap; }
+</style></head>
+<body>
+<div id="bg" class="abs"></div>
+<img id="stars" class="abs" src="img/stars.jpg">
+<div id="shade" class="abs"></div>
+<div id="glowB" class="abs"></div>
+<svg id="back" class="abs" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
+<canvas id="sun" class="abs" width="760" height="760"></canvas>
+<canvas id="gl" class="abs" width="1080" height="1920"></canvas>
+<img id="hab" class="abs" src="img/hab.jpg">
+<div id="habShade" class="abs"></div>
+<div id="card" class="abs"><img src="img/spacesuit-prototype.jpeg"></div>
+<canvas id="fx" class="abs" width="1080" height="1920"></canvas>
+<svg id="front" class="abs" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <defs>
+    <filter id="glow" filterUnits="userSpaceOnUse" x="-200" y="-200" width="1480" height="2320"><feGaussianBlur stdDeviation="9"/></filter>
+  </defs>
+</svg>
+<div id="habDark" class="abs"></div>
+<div id="text" class="abs"></div>
+<svg id="grainS" class="abs" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <filter id="grain" x="0" y="0" width="100%" height="100%">
+    <feTurbulence id="grainT" type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="1"/>
+    <feColorMatrix type="matrix" values="0 0 0 0 0.85  0 0 0 0 0.9  0 0 0 0 1  0 0 0 0.05 0"/>
+  </filter>
+  <rect width="1080" height="1920" filter="url(#grain)"/>
+</svg>
+<script src="img/meta.js"></script>
+<script type="module">
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+const FPS = 30, W = 1080, H = 1920, NS = 'http://www.w3.org/2000/svg';
+const $ = id => document.getElementById(id);
+const clamp = (x, a = 0, b = 1) => Math.max(a, Math.min(b, x));
+const lerp = (a, b, u) => a + (b - a) * u;
+function bez(x1, y1, x2, y2) { return x => { if (x <= 0) return 0; if (x >= 1) return 1; let t = x;
+  for (let i = 0; i < 7; i++) { const cx = 3 * x1 * t * (1 - t) ** 2 + 3 * x2 * t * t * (1 - t) + t ** 3 - x;
+    const d = 3 * x1 * (1 - t) ** 2 + 6 * (x2 - x1) * t * (1 - t) + 3 * (1 - x2) * t * t; if (Math.abs(d) < 1e-6) break; t -= cx / d; }
+  return 3 * y1 * t * (1 - t) ** 2 + 3 * y2 * t * t * (1 - t) + t ** 3; }; }
+const SIG = bez(.22, 1, .36, 1);          // the signature curve (arrive)
+const INOUT = bez(.6, 0, .3, 1);          // objects that leave: accelerate, then glide out
+const PEN = bez(.45, .05, .35, 1);        // a pen drawing a line
+const seg = (t, a, b) => clamp((t - a) / (b - a));
+let seed = 7;
+const rnd = () => { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed);
+  t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; };
+const el = (tag, attrs, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); parent.appendChild(e); return e; };
+const dstr = P => 'M' + P.map(p => p[0].toFixed(1) + ' ' + p[1].toFixed(1)).join('L');
+function evenly(pts, n, closed = true) {
+  const P = closed ? pts.concat([pts[0]]) : pts, cum = [0];
+  for (let i = 1; i < P.length; i++) cum.push(cum[i - 1] + Math.hypot(P[i][0] - P[i - 1][0], P[i][1] - P[i - 1][1]));
+  const L = cum[cum.length - 1], out = []; let j = 0;
+  for (let k = 0; k < n; k++) { const d = L * k / (closed ? n : n - 1); while (j < cum.length - 2 && cum[j + 1] < d) j++;
+    const u = (d - cum[j]) / (cum[j + 1] - cum[j] || 1); out.push([lerp(P[j][0], P[j + 1][0], u), lerp(P[j][1], P[j + 1][1], u)]); }
+  return out;
+}
+
+// ------------------------------------------------------------------ Mars (the site's own model and lighting)
+const renderer = new THREE.WebGLRenderer({ canvas: $('gl'), antialias: true, alpha: true, preserveDrawingBuffer: true });
+renderer.setSize(W, H, false); renderer.setPixelRatio(1);
+renderer.outputColorSpace = THREE.SRGBColorSpace; renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.15;
+const scene = new THREE.Scene(), cam = new THREE.PerspectiveCamera(28, W / H, .1, 100); cam.position.set(0, 0, 8.8);
+scene.add(new THREE.HemisphereLight(0xffe2cc, 0x080404, .32));
+const key = new THREE.DirectionalLight(0xffd2b0, 5.5); key.position.set(-4, 4, 5); scene.add(key);
+const rim = new THREE.DirectionalLight(0xbc321a, 3.2); rim.position.set(5, -1, -3); scene.add(rim);
+const planet = new THREE.Group(); scene.add(planet);
+const F = (H / 2) / Math.tan(14 * Math.PI / 180);           // focal length in px
+function placeMars(cx, cy, R) {                              // a sphere seen at (cx, cy) with radius R px
+  const d = 8.8, r = R * d / Math.sqrt(F * F + R * R);
+  planet.position.set((cx - W / 2) / F * d, -(cy - H / 2) / F * d, 0); planet.scale.setScalar(r);
+}
+function marsAt(t) {                                          // where Mars is on screen at time t
+  let cx = 820, cy = 1640 - 14 * SIG(seg(t, 0, 3)), R = 600;
+  const a = SIG(seg(t, 3.0, 4.4)); cx = lerp(cx, 760, a); cy = lerp(cy, 1800, a); R = lerp(R, 760, a);
+  const b = INOUT(seg(t, 6.1, 7.05)); cy = lerp(cy, 2900, b);
+  return [cx, cy, R];
+}
+
+// ------------------------------------------------------------------ the film
+const S = {};
+function build(model) {
+  const box = new THREE.Box3().setFromObject(model), c = box.getCenter(new THREE.Vector3()), s = box.getSize(new THREE.Vector3());
+  model.position.sub(c); const inner = new THREE.Group(); inner.add(model); inner.scale.setScalar(2 / Math.max(s.x, s.y, s.z));
+  planet.add(inner); S.inner = inner;
+
+  // the Sun: SDO 304 A frames drawn into a canvas; the disk's centre at (30, 1010), radius 300
+  S.sunK = 300 / META.sun.r;
+  const sc = $('sun'); S.sunX = 30 - META.sun.cx * S.sunK; S.sunY = 1010 - META.sun.cy * S.sunK;
+  const mr = META.sun.r;
+  sc.style.webkitMaskImage = sc.style.maskImage = `radial-gradient(circle at ${META.sun.cx}px ${META.sun.cy}px, #000 ${mr * 1.06}px, rgba(0,0,0,0) ${mr * 1.2}px)`;
+  S.sunCtx = sc.getContext('2d');
+
+  // radiation: warm-white streaks; beat 2 from the Sun's limb onto Mars, beat 3 from the left onto the card / shield
+  S.parts = [];
+  for (let t = 3.5; t < 5.9; t += 0.022 + rnd() * 0.02) {
+    const th = (-38 + rnd() * 80) * Math.PI / 180, ox = 30 + 312 * Math.cos(th), oy = 1010 + 312 * Math.sin(th);
+    const v = 1500 + rnd() * 700;
+    const phi = (238 + rnd() * 58) * Math.PI / 180, dep = 0.94 + rnd() * 0.05;
+    S.parts.push({ kind: 'mars', t0: t, ox, oy, phi, dep, v, len: 200 + rnd() * 260, w: 2.2 + rnd() * 2.2 });
+  }
+  // the card and its shield (rotated -4 deg around the card centre)
+  S.cardC = [560, 1290]; S.cardRot = -4 * Math.PI / 180;
+  const rot = ([x, y]) => { const c = Math.cos(S.cardRot), s = Math.sin(S.cardRot), dx = x - S.cardC[0], dy = y - S.cardC[1];
+    return [S.cardC[0] + dx * c - dy * s, S.cardC[1] + dx * s + dy * c]; };
+  function rrect(w, h, r) {                                   // rounded rectangle, clockwise from the top centre
+    const P = [], cx = S.cardC[0], cy = S.cardC[1], x0 = cx - w / 2, x1 = cx + w / 2, y0 = cy - h / 2, y1 = cy + h / 2;
+    const arc = (ax, ay, a0, a1) => { for (let i = 0; i <= 12; i++) { const a = a0 + (a1 - a0) * i / 12; P.push([ax + r * Math.cos(a), ay + r * Math.sin(a)]); } };
+    P.push([cx, y0]); arc(x1 - r, y0 + r, -Math.PI / 2, 0); arc(x1 - r, y1 - r, 0, Math.PI / 2); arc(x0 + r, y1 - r, Math.PI / 2, Math.PI); arc(x0 + r, y0 + r, Math.PI, 1.5 * Math.PI);
+    return P.map(rot);
+  }
+  const NM = 420, ell = [];
+  for (let i = 0; i < 360; i++) { const a = -Math.PI / 2 + 2 * Math.PI * i / 360; ell.push(rot([S.cardC[0] + 325 * Math.cos(a), S.cardC[1] + 490 * Math.sin(a)])); }
+  S.shieldP = evenly(ell, NM);
+  S.cardEdge = evenly(rrect(420, 690, 2), NM);
+  // the dome over the base: from its top, clockwise (the shield's start maps to the dome's top)
+  const hx = 540, hg = META.hab.ground + 28, hrx = 500, hry = 400, dome = [];
+  for (let i = 0; i <= 90; i++) { const a = -Math.PI / 2 + (Math.PI / 2) * i / 90; dome.push([hx + hrx * Math.cos(a), hg + hry * Math.sin(a)]); }
+  for (let i = 1; i < 60; i++) dome.push([hx + hrx - 2 * hrx * i / 60, hg]);
+  for (let i = 0; i < 90; i++) { const a = Math.PI + (Math.PI / 2) * i / 90; dome.push([hx + hrx * Math.cos(a), hg + hry * Math.sin(a)]); }
+  S.domeP = evenly(dome, NM);
+  S.shT0 = 7.35; S.shT1 = 8.45;
+  for (let t = 7.35; t < 9.0; t += 0.04 + rnd() * 0.04) {
+    const oy = 620 + rnd() * 700, k = Math.floor(NM * (0.55 + rnd() * 0.42)) % NM, v0 = 1500;
+    // the card's edge while the shield is not yet closed; the shield once it is (decided by the arrival time)
+    const Pc = S.cardEdge[k], after = t + Math.hypot(Pc[0] + 80, Pc[1] - oy) / v0 > S.shT1 - 0.05, P = after ? S.shieldP[k] : Pc;
+    S.parts.push({ kind: after ? 'shield' : 'card', t0: t, ox: -80, oy, tx: P[0], ty: P[1], v: v0, len: 200 + rnd() * 240, w: 2.2 + rnd() * 2.0 });
+  }
+  for (const p of S.parts) {                                  // when each streak arrives
+    if (p.kind === 'mars') {                                  // aim where Mars will be (iterate on the arrival time)
+      let ta = p.t0 + 0.3;
+      for (let i = 0; i < 4; i++) { const [cx, cy, R] = marsAt(ta); p.tx = cx + R * p.dep * Math.cos(p.phi); p.ty = cy + R * p.dep * Math.sin(p.phi);
+        ta = p.t0 + Math.hypot(p.tx - p.ox, p.ty - p.oy) / p.v; }
+      p.ta = ta;
+    } else p.ta = p.t0 + Math.hypot(p.tx - p.ox, p.ty - p.oy) / p.v;
+  }
+  S.fx = $('fx').getContext('2d');
+
+  // back: faint grid, a large orbit circle, the outline words (the site's mission backdrop)
+  const back = $('back');
+  S.grid = el('g', { opacity: 0 }, back);
+  for (let x = 66; x < W; x += 106) el('line', { x1: x, y1: 0, x2: x, y2: H, stroke: 'rgba(120,150,255,.07)', 'stroke-width': 1 }, S.grid);
+  for (let y = 40; y < H; y += 106) el('line', { x1: 0, y1: y, x2: W, y2: y, stroke: 'rgba(120,150,255,.07)', 'stroke-width': 1 }, S.grid);
+  S.words = el('g', { opacity: 0 }, back);
+  ['HUMAN', 'SPACE', 'FLIGHT'].forEach((wd, i) => { const tx = el('text', { x: -24, y: 960 + i * 250, 'font-family': 'Man', 'font-weight': 600, 'font-size': 300,
+    'letter-spacing': -27, fill: 'none', stroke: 'rgba(78,129,255,.16)', 'stroke-width': 1.6 }, S.words); tx.textContent = wd; });
+  S.orbit = el('circle', { cx: S.cardC[0], cy: S.cardC[1], r: 600, fill: 'none', stroke: 'rgba(78,129,255,.20)', 'stroke-width': 1.5 }, back);
+  S.orbitL = 2 * Math.PI * 600; S.orbit.setAttribute('stroke-dasharray', `${S.orbitL} ${S.orbitL}`);
+  S.orbit.setAttribute('transform', `rotate(200 ${S.cardC[0]} ${S.cardC[1]})`);
+
+  // front: the shield (glow + line), sparks
+  const front = $('front');
+  S.shG = el('g', { opacity: 0 }, front);
+  S.shGlow = el('path', { fill: 'none', stroke: '#0c56ff', 'stroke-width': 10, opacity: 0.75, filter: 'url(#glow)', 'stroke-linejoin': 'round', 'stroke-linecap': 'round' }, S.shG);
+  S.shLine = el('path', { fill: 'none', stroke: '#5b8fff', 'stroke-width': 3, 'stroke-linejoin': 'round', 'stroke-linecap': 'round' }, S.shG);
+
+  // type
+  const T = $('text');
+  S.lines = [];   // {el, tin, tout, k}
+  const line = (txt, top, tin, tout, k, cls = 'h', h = 172) => {
+    const m = document.createElement('div'); m.className = 'mask'; m.style.top = top + 'px'; m.style.height = h + 'px';
+    const d = document.createElement('div'); d.className = cls; d.textContent = txt; m.appendChild(d); T.appendChild(m);
+    S.lines.push({ m, d, tin, tout, k, h }); return d; };
+  const eb = document.createElement('div'); eb.className = 'eyebrow'; eb.innerHTML = '<i></i>Human spaceflight'; eb.style.top = '322px'; T.appendChild(eb);
+  S.eyebrow = eb;
+  line('Engineering', 372, 0.35, 2.85, 0); line('the Final', 504, 0.43, 2.85, 1); line('Frontier', 636, 0.51, 2.85, 2);
+  line('Radiation', 300, 3.35, 6.15, 0); line('never stops.', 432, 3.43, 6.15, 1);
+  line('Protecting', 300, 6.75, 9.4, 0); line('every crew.', 432, 6.83, 9.4, 1);
+  S.bodies = [];
+  const body = (txt, top, tin, tout) => { const r = document.createElement('div'); r.className = 'rule'; r.style.top = (top + 10) + 'px'; T.appendChild(r);
+    const b = document.createElement('div'); b.className = 'body'; b.style.top = top + 'px'; b.innerHTML = txt; T.appendChild(b);
+    r.style.height = (b.offsetHeight - 20) + 'px'; S.bodies.push({ r, b, tin, tout }); };
+  body('One of the most persistent<br>challenges beyond Earth.', 640, 3.75, 6.15);
+  body('Systems that protect people as<br>missions travel farther and last longer.', 640, 7.15, 9.4);
+  // the three pillars (the site's list): dots, dividers drawn from the left
+  S.divs = []; S.dots = [];
+  [1330, 1450, 1570, 1690].forEach((y, i) => { const d = document.createElement('div'); d.className = 'div'; d.style.top = y + 'px'; T.appendChild(d); S.divs.push({ d, t: 9.95 + 0.22 * i }); });
+  ['Safer missions', 'Longer stays', 'Sustainable presence'].forEach((txt, i) => {
+    line(txt, 1342 + 120 * i, 10.1 + 0.25 * i, 11.45, i, 'li', 108);
+    const dt = document.createElement('div'); dt.className = 'dot'; dt.style.top = (1342 + 120 * i + 47) + 'px'; T.appendChild(dt); S.dots.push({ d: dt, t: 10.1 + 0.25 * i }); });
+  // the logo: the wordmark as live type (Montserrat 800, tracking 0.10 em, measured on the client's logo), 620 px wide
+  const cv = document.createElement('canvas').getContext('2d'); cv.font = '800 100px Mont';
+  let wsum = 0; for (const ch of 'MARSOPS') wsum += cv.measureText(ch).width;
+  const fs = 100 * 620 / (wsum + 0.1 * 100 * 6);
+  S.logo = document.createElement('div'); S.logo.id = 'logo'; S.logo.textContent = 'MARSOPS'; S.logo.style.fontSize = fs.toFixed(2) + 'px';
+  S.logo.style.lineHeight = fs.toFixed(2) + 'px'; S.logo.style.top = (960 - fs / 2) + 'px'; T.appendChild(S.logo);
+}
+
+// ------------------------------------------------------------------ render(f)
+function render(f) {
+  const t = f / FPS;
+  // background: the stars drift; how much of them shows depends on the beat
+  $('stars').style.transform = `translate(${(-160 + 18 * t / 15).toFixed(2)}px, ${(-280 - 30 * t / 15).toFixed(2)}px) scale(${(1 + 0.04 * t / 15).toFixed(5)})`;
+  const starOp = t < 3 ? 1 : t < 6.4 ? lerp(1, 0.75, seg(t, 3, 4)) : t < 12 ? lerp(0.75, 0.32, seg(t, 6.4, 7.4)) : lerp(0.32, 0.5, seg(t, 12, 13.5));
+  $('stars').style.opacity = starOp.toFixed(3);
+  $('glowB').style.opacity = (seg(t, 6.6, 7.6) * (1 - seg(t, 9.8, 10.4)) + 0.6 * SIG(seg(t, 12.0, 13.0))).toFixed(3);
+
+  // Mars
+  const [mx, my, mR] = marsAt(t);
+  placeMars(mx, my, mR); S.inner.rotation.set(.14, -.65 + 0.05 * t, -.08);
+  $('gl').style.opacity = t < 7.1 ? 1 : 0;
+  renderer.render(scene, cam);
+
+  // the Sun
+  { const a = SIG(seg(t, 3.15, 3.85)), o = 1 - seg(t, 6.1, 6.7), sc = S.sunK * (0.965 + 0.035 * a);
+    const fi = clamp(Math.floor((t - 3.15) * FPS), 0, S.sunFrames.length - 1);
+    const el_ = $('sun'); el_.style.opacity = (a * o).toFixed(3);
+    el_.style.transform = `translate(${(30 - META.sun.cx * sc).toFixed(2)}px, ${(1010 - META.sun.cy * sc).toFixed(2)}px) scale(${sc.toFixed(5)})`;
+    if (a * o > 0 && S.sunCur !== fi) { S.sunCtx.drawImage(S.sunFrames[fi], 0, 0); S.sunCur = fi; } }
+
+  // the card (rises as Mars sinks), the grid, the orbit, the outline words
+  { const a = SIG(seg(t, 6.8, 7.9)), o = seg(t, 9.4, 9.8), c = $('card');
+    c.style.opacity = (clamp(a * 1.4) * (1 - o)).toFixed(3);
+    c.style.transform = `translate(${S.cardC[0] - 210}px, ${(S.cardC[1] - 345 + (1 - a) * 160).toFixed(2)}px) rotate(${(-4 - 3 * (1 - a)).toFixed(3)}deg) scale(${(1 - 0.03 * SIG(o)).toFixed(4)})`; }
+  S.grid.setAttribute('opacity', (seg(t, 6.6, 7.4) * (1 - seg(t, 9.7, 10.2))).toFixed(3));
+  S.words.setAttribute('opacity', (seg(t, 6.7, 7.6) * (1 - seg(t, 9.6, 10.1))).toFixed(3));
+  S.words.setAttribute('transform', `translate(${(-30 * seg(t, 6.5, 10)).toFixed(2)} 0)`);
+  { const p = PEN(seg(t, 6.9, 8.6)); S.orbit.setAttribute('stroke-dashoffset', (S.orbitL * (1 - p)).toFixed(1));
+    S.orbit.setAttribute('opacity', (p > 0 ? 1 : 0) * (1 - seg(t, 9.6, 10.1))); }
+
+  // the Mars base
+  { const a = seg(t, 9.7, 10.3) * (t < 12.06 ? 1 : 0), h = $('hab'); h.style.opacity = a.toFixed(3); $('habShade').style.opacity = a.toFixed(3);
+    h.style.transform = `scale(${(1.045 - 0.045 * SIG(seg(t, 9.8, 12.0))).toFixed(5)})`; }
+  $('habDark').style.opacity = (SIG(seg(t, 11.5, 12.05)) * (1 - 0.45 * SIG(seg(t, 12.3, 14.2)))).toFixed(3);   // the stars return faintly behind the logo
+
+  // the shield: drawn by two pens from the top; holds; carried over the base as its dome; fades
+  { let d = '';
+    if (t >= S.shT0 && t < S.shT1) { const n = S.shieldP.length, k = Math.max(2, Math.round(n / 2 * PEN(seg(t, S.shT0, S.shT1))));
+      d = dstr(S.shieldP.slice(0, k + 1)) + dstr([S.shieldP[0]].concat(S.shieldP.slice(n - k).reverse())); }
+    else if (t >= S.shT1) { const u = SIG(seg(t, 9.8, 10.6)); d = dstr(S.shieldP.map((p, i) => [lerp(p[0], S.domeP[i][0], u), lerp(p[1], S.domeP[i][1], u)])) + 'Z'; }
+    S.shLine.setAttribute('d', d); S.shGlow.setAttribute('d', d);
+    const pulse = t >= S.shT1 ? Math.exp(-(t - S.shT1) / 0.35) : 0;
+    S.shG.setAttribute('opacity', (t >= S.shT0 ? 1 : 0) * (1 - seg(t, 11.45, 11.9)));
+    S.shLine.setAttribute('stroke-width', (3 + 1.4 * pulse).toFixed(2)); S.shGlow.setAttribute('opacity', (0.6 + 0.25 * pulse).toFixed(3)); }
+
+  // radiation streaks and their impacts
+  { const g = S.fx; g.clearRect(0, 0, W, H);
+    for (const p of S.parts) {
+      if (t < p.t0 || t > p.ta + 0.3) continue;
+      const L = Math.hypot(p.tx - p.ox, p.ty - p.oy), ux = (p.tx - p.ox) / L, uy = (p.ty - p.oy) / L;
+      const dist = Math.min(L, (t - p.t0) * p.v), hx = p.ox + ux * dist, hy = p.oy + uy * dist;
+      const tail = Math.max(0, Math.min(p.len, dist) - Math.max(0, (t - p.ta) * p.v));
+      if (tail > 1) { const tx = hx - ux * tail, ty = hy - uy * tail, gr = g.createLinearGradient(tx, ty, hx, hy);
+        gr.addColorStop(0, 'rgba(255,196,150,0)'); gr.addColorStop(1, 'rgba(255,240,226,0.92)');
+        g.lineCap = 'round'; g.globalAlpha = 0.22; g.strokeStyle = gr; g.lineWidth = p.w * 4; g.beginPath(); g.moveTo(tx, ty); g.lineTo(hx, hy); g.stroke();
+        g.globalAlpha = 1; g.lineWidth = p.w; g.beginPath(); g.moveTo(tx, ty); g.lineTo(hx, hy); g.stroke(); }
+      if (t >= p.ta) { const q = (t - p.ta) / 0.3, r = 3 + 16 * SIG(q), a = (1 - q) ** 1.5;
+        const blue = p.kind === 'shield';
+        g.strokeStyle = blue ? `rgba(120,165,255,${(0.9 * a).toFixed(3)})` : `rgba(255,226,200,${(0.8 * a).toFixed(3)})`;
+        g.lineWidth = 1.6; g.beginPath(); g.arc(p.tx, p.ty, r, 0, 2 * Math.PI); g.stroke();
+        g.fillStyle = blue ? `rgba(160,195,255,${(0.9 * a).toFixed(3)})` : `rgba(255,240,226,${(0.9 * a).toFixed(3)})`;
+        g.beginPath(); g.arc(p.tx, p.ty, 2.4 * a + 0.5, 0, 2 * Math.PI); g.fill(); }
+    } }
+
+  // type: each line rises out of its mask; leaves upward and fades
+  for (const L of S.lines) { const a = SIG(seg(t, L.tin, L.tin + 0.7)), o = SIG(seg(t, L.tout + 0.05 * L.k, L.tout + 0.05 * L.k + 0.4));
+    L.d.style.transform = `translateY(${((1 - a) * L.h - o * 30).toFixed(2)}px)`; L.d.style.opacity = (1 - o).toFixed(3); }
+  { const a = SIG(seg(t, 0.25, 0.85)), o = SIG(seg(t, 2.8, 3.2)); S.eyebrow.style.opacity = (a * (1 - o)).toFixed(3);
+    S.eyebrow.style.transform = `translateY(${((1 - a) * 16 - o * 20).toFixed(2)}px)`; }
+  for (const B of S.bodies) { const r = SIG(seg(t, B.tin, B.tin + 0.5)), a = SIG(seg(t, B.tin + 0.15, B.tin + 0.75)), o = SIG(seg(t, B.tout + 0.1, B.tout + 0.5));
+    B.r.style.transform = `scaleY(${r.toFixed(4)})`; B.r.style.opacity = (1 - o).toFixed(3);
+    B.b.style.opacity = (a * (1 - o)).toFixed(3); B.b.style.transform = `translateY(${((1 - a) * 18 - o * 24).toFixed(2)}px)`; }
+  for (const D of S.divs) { const a = SIG(seg(t, D.t, D.t + 0.6)), o = seg(t, 11.45, 11.8); D.d.style.transform = `scaleX(${a.toFixed(4)})`; D.d.style.opacity = (1 - o).toFixed(3); }
+  for (const D of S.dots) { const a = SIG(seg(t, D.t, D.t + 0.4)), o = seg(t, 11.45, 11.8); D.d.style.opacity = (a * (1 - o)).toFixed(3); D.d.style.transform = `scale(${a.toFixed(3)})`; }
+  // the logo: one dissolve on the lift, then it holds and breathes
+  { const a = SIG(seg(t, 11.95, 12.75)); S.logo.style.opacity = a.toFixed(3);
+    S.logo.style.filter = `blur(${((1 - a) * 14).toFixed(2)}px)`;
+    S.logo.style.transform = `scale(${(1.035 - 0.035 * a + 0.015 * seg(t, 12.75, 15)).toFixed(5)})`; }
+  $('grainT').setAttribute('seed', String(1 + (Math.floor(f / 1.25) % 40)));
+}
+window.render = render;
+window.__ready = (async () => {
+  await document.fonts.load('400 140px Man'); await document.fonts.load('500 32px Man'); await document.fonts.load('800 100px Mont');
+  S.sunFrames = await Promise.all(Array.from({ length: META.sun.frames }, (_, i) => { const im = new Image(); im.src = `img/sun/f${String(i + 1).padStart(3, '0')}.jpg`; return im.decode().then(() => im); }));
+  await Promise.all([...document.images].map(im => im.decode().catch(() => {})));
+  const gltf = await new GLTFLoader().loadAsync('./img/mars.glb');
+  build(gltf.scene); render(0);
+  window.CUES = { lines: S.lines.map(l => l.tin), parts: S.parts.map(p => ({ t: p.ta, kind: p.kind })), shield: [S.shT0, S.shT1], logo: 11.95 };
+})();
+</script>
+</body></html>

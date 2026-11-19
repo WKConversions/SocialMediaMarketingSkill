@@ -54,3 +54,21 @@ lab/**/build/node_modules/
 lab/**/build/frames/
 lab/**/build/test/
 lab/**/build/qc_*/
+# third-party media and client assets (public repo): never in git
+*.ogg
+*.flac
+*.aif
+*.aiff
+*.jpeg
+*.webp
+*.tif
+*.tiff
+*.glb
+*.gltf
+*.zip
+lab/**/site_assets/
+lab/**/_packs/
+lab/**/build/fonts/*.ttf
+lab/**/build/fonts/*.woff2
+lab/**/build/test/
+lab/**/build/qc_*/
