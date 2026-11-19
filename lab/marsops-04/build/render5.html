@@ -23,6 +23,7 @@ html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; backgro
 <body>
 <canvas id="gl" class="abs" width="1920" height="1080"></canvas>
 <div id="text" class="abs"></div>
+<svg id="flare" class="abs" width="1920" height="1080" viewBox="0 0 1920 1080" style="mix-blend-mode:screen"><defs><radialGradient id="gw"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset=".25" stop-color="#ffe6c8" stop-opacity=".55"/><stop offset="1" stop-color="#ffb070" stop-opacity="0"/></radialGradient></defs><circle id="g0" r="160" fill="url(#gw)" opacity="0"/><rect id="g1" width="900" height="3" fill="#fff4e6" opacity="0"/></svg>
 <div id="credit"></div>
 <script type="module">
 import * as THREE from 'three';
@@ -56,30 +57,57 @@ function lights(scene, k = 4.5) { scene.add(new THREE.HemisphereLight(0xdfe8ff, 
 const clay = () => new THREE.MeshStandardMaterial({ color: 0xe9ecf2, roughness: 0.7, metalness: 0.05 });
 function asClay(o) { o.traverse(m => { if (m.isMesh) m.material = clay(); }); return o; }
 
-const SC = [];        // {t0, t1, scene, cam, update(t)}
+
+const SUN = V(-1.0, 0.25, -0.35).normalize();          // where the Sun is, for every scene
+let EARTH_T = null;
+async function earthTex() { if (!EARTH_T) EARTH_T = { day: await tex('img/earth_day.jpg'), night: await tex('img/earth_night.jpg'), clouds: await tex('img/earth_clouds.jpg'), spec: await tex('img/earth_spec.jpg') }; return EARTH_T; }
+async function makeEarth(seg_ = 160) {
+  const T = await earthTex(), g = new THREE.Group();
+  const m = new THREE.ShaderMaterial({ uniforms: { day: { value: T.day }, night: { value: T.night }, spec: { value: T.spec }, sun: { value: SUN.clone() } },
+    vertexShader: `varying vec2 vUv; varying vec3 vN; varying vec3 vV; void main(){ vUv = uv; vec4 w = modelMatrix * vec4(position, 1.0); vN = normalize(mat3(modelMatrix) * normal); vV = normalize(cameraPosition - w.xyz); gl_Position = projectionMatrix * viewMatrix * w; }`,
+    fragmentShader: `uniform sampler2D day, night, spec; uniform vec3 sun; varying vec2 vUv; varying vec3 vN; varying vec3 vV;
+      void main(){ float d = dot(vN, sun); float lit = smoothstep(-0.12, 0.22, d);
+        vec3 D = texture2D(day, vUv).rgb, Nn = texture2D(night, vUv).rgb; float sp = texture2D(spec, vUv).r;
+        vec3 h = normalize(sun + vV); float gl = pow(max(dot(vN, h), 0.0), 60.0) * sp * 1.4;
+        vec3 c = D * (0.04 + 1.25 * max(d, 0.0)) * lit + Nn * vec3(1.0, 0.75, 0.45) * 1.6 * (1.0 - lit) + vec3(1.0, 0.92, 0.8) * gl * lit;
+        float rimD = pow(1.0 - max(dot(vN, vV), 0.0), 3.0); c += vec3(0.25, 0.5, 1.0) * rimD * 0.5 * smoothstep(-0.3, 0.3, d);
+        gl_FragColor = vec4(c, 1.0); }` });
+  const e = new THREE.Mesh(new THREE.SphereGeometry(1, seg_, seg_ / 2), m); g.add(e);
+  const cm = new THREE.ShaderMaterial({ transparent: true, depthWrite: false, uniforms: { map: { value: T.clouds }, sun: { value: SUN.clone() } },
+    vertexShader: `varying vec2 vUv; varying vec3 vN; void main(){ vUv = uv; vN = normalize(mat3(modelMatrix) * normal); gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }`,
+    fragmentShader: `uniform sampler2D map; uniform vec3 sun; varying vec2 vUv; varying vec3 vN; void main(){ float a = texture2D(map, vUv).r; float d = dot(vN, sun);
+      gl_FragColor = vec4(vec3(1.0) * (0.03 + 1.1 * max(d, 0.0)), a * 0.9 * smoothstep(-0.25, 0.1, d)); }` });
+  const c = new THREE.Mesh(new THREE.SphereGeometry(1.006, seg_, seg_ / 2), cm); g.add(c);
+  const atm = L.atmosphere(1.035, new THREE.Color(0.32, 0.58, 1.0), 3.2, 1.1); g.add(atm);
+  g.userData = { e, c }; return g;
+}
+function sunLights(scene, k = 5) { scene.add(new THREE.HemisphereLight(0xbfd0ff, 0x05070c, 0.12)); const d = new THREE.DirectionalLight(0xfff0dc, k); d.position.copy(SUN).multiplyScalar(10); scene.add(d);
+  const rim = new THREE.DirectionalLight(0x2f73ff, 1.6); rim.position.set(4, 1.5, 4); scene.add(rim); return d; }
+const GLINTS = [];   // {scene, cam, pos: () => Vector3, k: (t) => number}
+const SC = [];
 async function build() {
   console.log("STAGE A", performance.now()|0);
-  // A. Earth from orbit: "Beyond our atmosphere, space is silent and hostile."
-  { const s = new THREE.Scene(); space(s); lights(s, 3.2); const cam = new THREE.PerspectiveCamera(30, W / H, 0.01, 200);
-    const earth = new THREE.Mesh(new THREE.SphereGeometry(1, 128, 64), new THREE.MeshStandardMaterial({ map: await tex('img/earth.jpg'), roughness: 0.9 })); s.add(earth);
-    s.add(L.atmosphere(1.03, new THREE.Color(0.3, 0.55, 1.0), 3.5, 1.0));
-    SC.push({ t0: 0, t1: 7.2, s, cam, up: t => { earth.rotation.y = 2.6 + t * 0.02; cam.position.set(0.25 - t * 0.012, 1.42 - t * 0.008, 2.3); cam.lookAt(-0.2, 0.55, 0); } }); }
-  console.log("STAGE B", performance.now()|0);
-  // B. The magnetic shield and the radiation that passes it
-  { const s = new THREE.Scene(); space(s); { const d = lights(s, 3.4); d.position.set(3, 2, 8); } const cam = new THREE.PerspectiveCamera(32, W / H, 0.01, 300);
-    const earth = new THREE.Mesh(new THREE.SphereGeometry(1, 96, 48), new THREE.MeshStandardMaterial({ map: SC[0].s.children.find(o => o.isMesh).material.map, roughness: 0.9 })); s.add(earth);
-    s.add(L.atmosphere(1.03, new THREE.Color(0.3, 0.55, 1.0), 3.5, 0.9));
-    const field = [], fm = new THREE.LineBasicMaterial({ color: 0x5b8fff, transparent: true, opacity: 0.55, blending: THREE.AdditiveBlending, depthWrite: false });
+  // A+B. One continuous shot: from the Earth's sunlit horizon the camera eases back until the magnetic field and the
+  //      radiation streaming past it are visible, then drifts toward an astronaut beyond the shield
+  { const s = new THREE.Scene(); space(s); sunLights(s, 4); const cam = new THREE.PerspectiveCamera(30, W / H, 0.01, 300);
+    const earth = await makeEarth(192); s.add(earth);
+    const field = [], fm = new THREE.LineBasicMaterial({ color: 0x5b8fff, transparent: true, opacity: 0.5, blending: THREE.AdditiveBlending, depthWrite: false });
     for (let k = 0; k < 10; k++) for (const Lr of [2.0, 3.0, 4.4]) { const ph = k / 10 * Math.PI * 2, pts = [];
       for (let i = 0; i <= 120; i++) { const th = 0.12 + (Math.PI - 0.24) * i / 120, r = Lr * Math.sin(th) ** 2; if (r < 1.02) continue; pts.push(V(r * Math.sin(th) * Math.cos(ph), r * Math.cos(th), r * Math.sin(th) * Math.sin(ph))); }
-      const ln = new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), fm.clone()); ln.userData.n = pts.length; s.add(ln); field.push(ln); }
+      const ln = new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), fm); ln.userData.n = pts.length; s.add(ln); field.push(ln); }
     const wind = L.solarWind(500, { x0: -14, x1: 10, y0: -5, y1: 5, z0: -4, z1: 3 }, 3); s.add(wind);
-    const astro = asClay(await model('img/models/Astronaut.glb', 0.9)); astro.position.set(3.3, -0.35, 1.6); s.add(astro);
-    SC.push({ t0: 6.6, t1: 14.0, s, cam, up: t => { earth.rotation.y = 1.2 + t * 0.03;
-      field.forEach((ln, i) => { ln.geometry.setDrawRange(0, Math.floor(ln.userData.n * SIG(seg(t, 6.7 + (i % 10) * 0.05, 8.4 + (i % 10) * 0.05)))); });
-      wind.userData.update(t, 3.2, { c: V(0, 0, 0), r: 3.4, on: 1 - 0.85 * seg(t, 8.8, 9.6) * (1 - 0) }, [1, 0.86, 0.72], seg(t, 7.0, 7.8));
-      astro.rotation.set(0.2, -0.6 + t * 0.04, 0.15);
-      cam.position.set(lerp(1.0, 2.6, INOUT(seg(t, 6.6, 14))), 0.9, lerp(10.5, 6.2, INOUT(seg(t, 6.6, 14)))); cam.lookAt(lerp(0.4, 2.2, INOUT(seg(t, 8.5, 13))), 0.1, 0.4); } }); }
+    const astro = await model('img/models/Astronaut.glb', 0.9); astro.position.set(3.4, -0.3, 1.7); s.add(astro);
+    // camera path: close on the limb -> wide on the field -> toward the astronaut (one eased curve, no cuts)
+    const P = new THREE.CatmullRomCurve3([V(1.05, 0.95, 1.25), V(1.6, 1.1, 2.6), V(1.6, 1.0, 6.5), V(1.9, 0.8, 10.0), V(3.0, 0.7, 8.6), V(3.9, 0.45, 6.4)]);
+    const Q = new THREE.CatmullRomCurve3([V(-0.55, 0.6, 0), V(-0.4, 0.45, 0), V(0, 0.2, 0), V(0.4, 0.1, 0.3), V(1.8, 0.0, 0.9), V(3.2, -0.2, 1.6)]);
+    const ease = L.bez(.42, 0, .58, 1);
+    SC.push({ t0: 0, t1: 14.0, s, cam, up: t => { const u = ease(seg(t, 0, 14.0));
+      earth.userData.e.rotation.y = 3.9 + t * 0.012; earth.userData.c.rotation.y = 3.9 + t * 0.016;
+      field.forEach((ln, i) => ln.geometry.setDrawRange(0, Math.floor(ln.userData.n * SIG(seg(t, 5.2 + (i % 10) * 0.06, 7.6 + (i % 10) * 0.06)))));
+      fm.opacity = 0.5 * seg(t, 5.0, 6.0); wind.visible = t > 6.0;
+      wind.userData.update(t, 3.2, { c: V(0, 0, 0), r: 3.4, on: 1 }, [1, 0.86, 0.72], seg(t, 6.2, 7.6));
+      astro.rotation.set(0.2, -0.6 + t * 0.04, 0.15); astro.visible = t > 7;
+      cam.position.copy(P.getPoint(u)); cam.lookAt(Q.getPoint(u)); } }); }
   console.log("STAGE C", performance.now()|0);
   // C. Irene Schneider: the Renaissance scientist. Leonardo's page (1883 facsimile) cooling into a blueprint
   { const s = new THREE.Scene(); s.background = new THREE.Color(0x040b19); const cam = new THREE.PerspectiveCamera(30, W / H, 0.01, 50);
@@ -88,46 +116,69 @@ async function build() {
       fragmentShader: `uniform sampler2D map; uniform float u; varying vec2 vUv; void main(){ vec3 c = texture2D(map, vUv).rgb; float l = dot(c, vec3(.3,.59,.11));
         float ink = smoothstep(0.30, 0.10, l); vec3 blue = mix(vec3(0.016,0.043,0.098), vec3(0.62,0.76,1.0), ink); gl_FragColor = vec4(mix(c * 0.92, blue, u), 1.0); }`, toneMapped: false });
     const page = new THREE.Mesh(new THREE.PlaneGeometry(aspect * 3, 3), mat); s.add(page);
-    SC.push({ t0: 13.8, t1: 21.2, s, cam, up: tt => { mat.uniforms.u.value = SIG(seg(tt, 16.6, 18.6)); cam.position.set(0.15 - (tt - 13.8) * 0.02, 0.15 + (tt - 13.8) * 0.01, 1.55 - (tt - 13.8) * 0.04); cam.lookAt(0.1, 0.18, 0); } }); }
+    SC.push({ t0: 13.4, t1: 21.2, s, cam, up: tt => { mat.uniforms.u.value = SIG(seg(tt, 16.6, 18.6)); cam.position.set(0.15 - (tt - 13.8) * 0.02, 0.15 + (tt - 13.8) * 0.01, 1.55 - (tt - 13.8) * 0.04); cam.lookAt(0.1, 0.18, 0); } }); }
   console.log("STAGE D", performance.now()|0);
   // D. MARSOPS, and the Moon for "explorers who go farther"
   { const s = new THREE.Scene(); space(s); lights(s, 3.4); const cam = new THREE.PerspectiveCamera(30, W / H, 0.01, 200);
     const moon = new THREE.Mesh(new THREE.SphereGeometry(1, 128, 64), new THREE.MeshStandardMaterial({ map: await tex('img/moon.jpg'), roughness: 1 })); moon.position.set(0, -1.62, 0); s.add(moon);
-    SC.push({ t0: 20.9, t1: 26.3, s, cam, up: t => { moon.rotation.y = t * 0.025; cam.position.set(0, lerp(0.15, -0.05, seg(t, 20.9, 26.3)), lerp(4.6, 3.9, seg(t, 20.9, 26.3))); cam.lookAt(0, -0.25, 0); } }); }
-  // E/F/G. Spacesuits, habitats, rovers: NASA public-domain models as clay studies, turning slowly
-  const study = async (file, size, t0, t1, y = 0) => { const s = new THREE.Scene(); space(s); lights(s, 4.2); const cam = new THREE.PerspectiveCamera(28, W / H, 0.01, 200);
-    const m = asClay(await model(file, size)); m.position.y = y; s.add(m);
-    const floor = new THREE.Mesh(new THREE.CircleGeometry(2.4, 96), new THREE.MeshBasicMaterial({ color: 0x2f73ff, transparent: true, opacity: 0.06 })); floor.rotation.x = -Math.PI / 2; floor.position.y = y - size * 0.52; s.add(floor);
-    SC.push({ t0, t1, s, cam, up: t => { m.rotation.y = -0.8 + (t - t0) * 0.32; cam.position.set(-0.6, 0.4, 5.6 - (t - t0) * 0.1); cam.lookAt(-1.1, 0.0, 0); } }); };
-  await study('img/models/Extravehicular_Mobility_Unit.glb', 2.1, 26.1, 28.7);
-  await study('img/models/Habitat_Demonstration_Unit_part_1.glb', 2.4, 28.5, 31.0);
-  await study('img/models/Space_Exploration_Vehicle.glb', 2.5, 30.8, 33.0);
-  console.log("STAGE H", performance.now()|0);
-  // H. "Each one designed around the human inside": the suit as a hologram, the person inside solid
-  { const s = new THREE.Scene(); space(s); lights(s, 4.0); const cam = new THREE.PerspectiveCamera(28, W / H, 0.01, 200);
-    const suit = await model('img/models/Extravehicular_Mobility_Unit.glb', 2.1), hm = L.holoMaterial({ y0: -1.1, y1: 1.1, scan: 30, fill: 0.05 });
-    const em = new THREE.LineBasicMaterial({ color: 0x8fb0ff, transparent: true, opacity: 0.3, blending: THREE.AdditiveBlending, depthWrite: false });
-    suit.traverse(o => { if (o.isMesh) { o.add(new THREE.LineSegments(new THREE.EdgesGeometry(o.geometry, 35), em)); o.material = hm; } }); s.add(suit);
-    const person = asClay(await model('img/models/Astronaut.glb', 1.6)); person.position.set(0, -0.12, 0.05); s.add(person);
-    SC.push({ t0: 32.8, t1: 36.4, s, cam, up: t => { hm.uniforms.uTime.value = t; hm.uniforms.uReveal.value = 1; suit.rotation.y = person.rotation.y = 0.3 + (t - 32.8) * 0.2;
-      person.traverse(o => { if (o.isMesh) { o.material.transparent = true; o.material.opacity = 0.35 + 0.65 * seg(t, 33.8, 34.6); } });
-      cam.position.set(0, 0.2, lerp(5.2, 4.5, seg(t, 32.8, 36.4))); cam.lookAt(-0.9, 0.05, 0); } }); }
+    SC.push({ t0: 20.4, t1: 26.9, s, cam, up: t => { moon.rotation.y = t * 0.025; cam.position.set(0, lerp(0.15, -0.05, seg(t, 20.9, 26.3)), lerp(4.6, 3.9, seg(t, 20.9, 26.3))); cam.lookAt(0, -0.25, 0); } }); }
+  // E. Spacesuit: NASA's EMU in its own colours, drifting above the Earth; the Sun glints across the visor
+  { const s = new THREE.Scene(); space(s); sunLights(s, 5.5); const cam = new THREE.PerspectiveCamera(28, W / H, 0.01, 200);
+    const suit = await model('img/models/Extravehicular_Mobility_Unit.glb', 2.0); s.add(suit);
+    const earth = await makeEarth(160); earth.scale.setScalar(9); earth.position.set(2, -11.2, -9); s.add(earth);
+    const head = V(0, 0.72, 0.18);
+    GLINTS.push({ s, cam, pos: () => head.clone().applyMatrix4(suit.matrixWorld), k: t => Math.pow(Math.max(0, Math.sin((t - 26.1) / 2.6 * Math.PI)), 3) });
+    SC.push({ t0: 26.0, t1: 29.4, s, cam, up: t => { const u = seg(t, 26.1, 28.9); suit.rotation.set(0.12, -1.05 + u * 0.9, 0.06); suit.position.y = 0.04 * Math.sin(t * 0.9);
+      earth.userData.e.rotation.y = earth.userData.c.rotation.y = 4.0 + t * 0.01; cam.position.set(lerp(-1.4, -0.7, u), lerp(0.55, 0.35, u), lerp(4.9, 4.4, u)); cam.lookAt(-0.95, 0.15, 0); } }); }
+  // ground on the Moon for the habitat and the rover: lunar colour map, low Sun, long shadows
+  const moonGround = async (s) => { const tx = await tex('img/moon.jpg'); tx.wrapS = tx.wrapT = THREE.RepeatWrapping; tx.repeat.set(3, 1.5);
+    const g = new THREE.Mesh(new THREE.PlaneGeometry(60, 60, 1, 1), new THREE.MeshStandardMaterial({ map: tx, roughness: 1, color: 0xb8b4ad })); g.rotation.x = -Math.PI / 2; g.receiveShadow = true; s.add(g);
+    const d = new THREE.DirectionalLight(0xfff0dc, 5.5); d.position.set(-8, 2.6, -3); d.castShadow = true; d.shadow.mapSize.set(2048, 2048); Object.assign(d.shadow.camera, { left: -6, right: 6, top: 6, bottom: -6, near: 0.5, far: 30 }); d.shadow.bias = -0.0005; s.add(d);
+    s.add(new THREE.HemisphereLight(0xbfd0ff, 0x1a1a1a, 0.18)); const rim = new THREE.DirectionalLight(0x2f73ff, 1.0); rim.position.set(5, 3, 5); s.add(rim); return g; };
+  R.shadowMap.enabled = true; R.shadowMap.type = THREE.PCFSoftShadowMap;
+  const shadows = o => o.traverse(m => { if (m.isMesh) { m.castShadow = true; m.receiveShadow = true; } });
+  // F. Habitats: the two halves of NASA's habitat unit come together on the lunar surface; the Earth hangs above
+  { const s = new THREE.Scene(); space(s); const cam = new THREE.PerspectiveCamera(30, W / H, 0.01, 300); await moonGround(s);
+    const p1 = await model('img/models/Habitat_Demonstration_Unit_part_1.glb', 2.6), p2 = await model('img/models/Habitat_Demonstration_Unit_part_2.glb', 2.6);
+    const hb = new THREE.Group(); hb.add(p1, p2); shadows(hb); s.add(hb);
+    const box = new THREE.Box3().setFromObject(hb); hb.position.y = -box.min.y;
+    const earth = await makeEarth(96); earth.scale.setScalar(2.2); earth.position.set(6, 9, -24); s.add(earth);
+    SC.push({ t0: 28.5, t1: 31.7, s, cam, up: t => { const u = INOUT(seg(t, 28.6, 31.2)); p2.position.x = lerp(0.9, 0, SIG(seg(t, 28.7, 30.2)));
+      const a = lerp(-0.7, -0.25, u); cam.position.set(Math.sin(a) * 6.2, lerp(1.0, 1.5, u), Math.cos(a) * 6.2); cam.lookAt(0, 0.95, 0); } }); }
+  // G. Rovers: the pressurised rover drives slowly across the regolith, the camera tracking alongside
+  { const s = new THREE.Scene(); space(s); const cam = new THREE.PerspectiveCamera(30, W / H, 0.01, 300); await moonGround(s);
+    const rv = await model('img/models/Space_Exploration_Vehicle.glb', 2.6); shadows(rv); s.add(rv); const box = new THREE.Box3().setFromObject(rv); const y0 = -box.min.y;
+    SC.push({ t0: 30.8, t1: 33.7, s, cam, up: t => { const u = seg(t, 30.9, 33.2); rv.position.set(0, y0 + 0.008 * Math.sin(t * 9), lerp(-0.6, 0.9, u)); rv.rotation.y = 0.05;
+      cam.position.set(lerp(4.4, 3.6, u), lerp(1.0, 0.75, u), lerp(2.6, 3.4, u)); cam.lookAt(0, 0.7, rv.position.z + 0.2); } }); }
+  // H. "Each one designed around the human inside": the real suit scans away into a hologram, showing the person inside
+  { const s = new THREE.Scene(); space(s); sunLights(s, 5); const cam = new THREE.PerspectiveCamera(28, W / H, 0.01, 200);
+    const suit = await model('img/models/Extravehicular_Mobility_Unit.glb', 2.0); s.add(suit);
+    const cut_ = { uCutY: { value: 2 }, uCutW: { value: 0.05 } }; suit.traverse(o => { if (o.isMesh) L.scanCut(o.material, cut_); });
+    const ghost = await model('img/models/Extravehicular_Mobility_Unit.glb', 2.0), hm = L.holoMaterial({ y0: -1.0, y1: 1.0, scan: 30, fill: 0.05 });
+    const em = new THREE.LineBasicMaterial({ color: 0x8fb0ff, transparent: true, opacity: 0.28, blending: THREE.AdditiveBlending, depthWrite: false });
+    ghost.traverse(o => { if (o.isMesh) { o.add(new THREE.LineSegments(new THREE.EdgesGeometry(o.geometry, 35), em)); o.material = hm; } }); s.add(ghost);
+    const person = await model('img/models/Astronaut.glb', 1.62); s.add(person);
+    { const sb = new THREE.Box3().setFromObject(suit), pb = new THREE.Box3().setFromObject(person); const sc = sb.getCenter(V()), pc = pb.getCenter(V()); person.position.add(sc.sub(pc)); person.position.y -= 0.04; }
+    SC.push({ t0: 32.8, t1: 37.0, s, cam, up: t => { const r = 0.4 + (t - 32.9) * 0.16; suit.rotation.y = ghost.rotation.y = person.rotation.y = r;
+      const cy = lerp(1.05, -1.05, INOUT(seg(t, 33.3, 35.0))); cut_.uCutY.value = cy; hm.uniforms.uTime.value = t; hm.uniforms.uY0.value = -99; hm.uniforms.uReveal.value = 1;
+      ghost.visible = true; hm.uniforms.uOpacity.value = seg(t, 33.3, 33.8); person.visible = cy < 1.0;
+      cam.position.set(Math.sin(-0.2 + (t - 32.9) * 0.06) * 4.8, 0.25, Math.cos(-0.2 + (t - 32.9) * 0.06) * 4.8); cam.lookAt(-0.9, 0.05, 0); } }); }
   console.log("STAGE I", performance.now()|0);
   // I. "The next giant leap will be made by people": Mars, wide and slow
   { const s = new THREE.Scene(); space(s); lights(s, 6.0); const cam = new THREE.PerspectiveCamera(30, W / H, 0.01, 200);
     const mars = await model('img/mars.glb', 2.0); s.add(mars); s.add(L.atmosphere(1.045, new THREE.Color(1, 0.45, 0.25), 4, 0.5));
-    SC.push({ t0: 36.2, t1: 41.0, s, cam, up: t => { mars.rotation.set(0.14, -0.4 + t * 0.03, -0.08); cam.position.set(1.4, 0.2, lerp(5.4, 4.6, seg(t, 36.2, 41))); cam.lookAt(-0.6, 0.1, 0); } }); }
+    SC.push({ t0: 36.0, t1: 41.7, s, cam, up: t => { const u = INOUT(seg(t, 36.2, 41)); mars.rotation.set(0.14, -0.4 + t * 0.03, -0.08); cam.position.set(lerp(1.3, 0.8, u), lerp(0.35, 0.15, u), lerp(3.6, 3.0, u)); cam.lookAt(lerp(-0.9, -0.75, u), 0.05, 0); } }); }
   console.log("STAGE J", performance.now()|0);
   // J. The name and the tagline
   { const s = new THREE.Scene(); space(s); const cam = new THREE.PerspectiveCamera(30, W / H, 0.01, 200);
-    SC.push({ t0: 40.6, t1: 46.0, s, cam, up: t => { cam.position.set(0, 0, 1); cam.lookAt(0, 0, -1); cam.rotation.z = 0; } }); }
+    SC.push({ t0: 40.5, t1: 46.0, s, cam, up: t => { cam.position.set(0, 0, 1); cam.lookAt(0, 0, -1); cam.rotation.z = 0; } }); }
 
   // labels (lower left, documentary style), the name, the tagline
   const T = $('text'); const lab = (k, v, s, x, y, tin, tout) => { const d = document.createElement('div'); d.className = 'lab'; d.style.left = x + 'px'; d.style.top = y + 'px';
     d.innerHTML = `<div class="r"></div>${k ? `<div class="k">${k}</div>` : ''}<div class="v">${v}</div>${s ? `<div class="s">${s}</div>` : ''}`; T.appendChild(d); LABS.push({ d, tin, tout }); };
   lab('FOUNDER &amp; CEO', 'Irene Schneider', 'Physicist and astrobiologist', 150, 760, 15.6, 20.7);
   lab('', '14+ years', 'of NASA-funded research', 1280, 790, 18.0, 20.7);
-  lab('01', 'Spacesuits', '', 150, 820, 26.6, 28.4);
+  lab('01', 'Spacesuits', 'for inside the cabin and for spacewalks', 150, 800, 26.6, 28.5);
   lab('02', 'Habitats', 'for orbit and the Moon', 150, 800, 28.9, 30.7);
   lab('03', 'Rovers', 'for new worlds', 150, 800, 31.1, 32.8);
   $('name').style.top = '410px'; $('tag').style.top = '600px';
@@ -141,12 +192,17 @@ function render(f) {
   a.up(t); R.setRenderTarget(rtA); R.render(a.s, a.cam);
   let u = 0; if (b) { b.up(t); R.setRenderTarget(rtB); R.render(b.s, b.cam); u = SIG(seg(t, b.t0, a.t1)); }
   mixMat.uniforms.u.value = u; R.setRenderTarget(null); R.render(quadScene, quadCam);
+  { $('g0').setAttribute('opacity', 0); $('g1').setAttribute('opacity', 0);
+    for (const gl_ of GLINTS) { const sc = SC.find(x => x.s === gl_.s); if (!(sc && t >= sc.t0 && t < sc.t1)) continue; const k = gl_.k(t) * (b && b.s === gl_.s ? u : (b ? 1 - u : 1));
+      const p = gl_.pos().project(gl_.cam), x = (p.x + 1) / 2 * W, y = (1 - p.y) / 2 * H;
+      $('g0').setAttribute('cx', x); $('g0').setAttribute('cy', y); $('g0').setAttribute('r', 90 + 110 * k); $('g0').setAttribute('opacity', (0.9 * k).toFixed(3));
+      $('g1').setAttribute('x', x - 450); $('g1').setAttribute('y', y - 1.5); $('g1').setAttribute('opacity', (0.5 * k).toFixed(3)); } }
   for (const l of LABS) { const i = SIG(seg(t, l.tin, l.tin + 0.8)), o = seg(t, l.tout - 0.5, l.tout); l.d.style.opacity = (i * (1 - o)).toFixed(3); l.d.style.transform = `translateY(${((1 - i) * 14).toFixed(2)}px)`; }
   // the name appears on the narrator's "MARSOPS" (22.6 s) over the Moon, and returns at the end
   { const n1 = SIG(seg(t, 22.5, 23.4)) * (1 - seg(t, 25.4, 26.1)), n2 = SIG(seg(t, 40.9, 41.9)), n = Math.max(n1, n2);
     $('name').style.opacity = n.toFixed(3); $('name').style.top = (t < 30 ? 300 : 410) + 'px'; $('name').style.filter = `blur(${((1 - n) * 8).toFixed(2)}px)`;
     $('tag').style.opacity = SIG(seg(t, 42.0, 42.9)).toFixed(3); $('tag').style.transform = `translateY(${((1 - SIG(seg(t, 42.0, 42.9))) * 12).toFixed(2)}px)`; }
-  $('credit').textContent = t < 14 ? 'Earth: NASA Visible Earth · Moon: NASA/GSFC SVS (LRO) · Models: NASA 3D Resources' : (t > 13.8 && t < 21.2 ? 'Leonardo da Vinci, Ms B (1883 facsimile), public domain' : (t > 36 && t < 41 ? 'Mars: NASA/JPL-Caltech' : ''));
+  $('credit').textContent = t < 14 ? 'Earth textures: Solar System Scope (CC BY 4.0) · Moon: NASA/GSFC SVS (LRO)' : (t > 13.8 && t < 21.2 ? 'Leonardo da Vinci, Ms B (1883 facsimile), public domain' : (t > 36 && t < 41 ? 'Mars: NASA/JPL-Caltech' : (t > 26 && t < 36.5 ? 'Models: NASA 3D Resources (suit, habitat unit, exploration vehicle)' : '')));
 }
 window.render = render;
 await document.fonts.load('700 132px Orb'); await document.fonts.load('400 54px Man');
