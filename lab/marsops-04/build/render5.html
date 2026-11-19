@@ -1,0 +1,147 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<!-- MARSOPS documentary film (16:9, 1920x1080, 30 fps, 46 s), National Geographic pacing: calm narration, long held
+     shots that turn on the narrator's phrases, slow drift, dissolves. One frame-pure render(f). Scenes are separate
+     three.js scenes blended by a dissolve shader. -->
+<script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js","three/addons/":"./node_modules/three/examples/jsm/"}}</script>
+<style>
+@font-face { font-family: Man; src: url(fonts/Manrope.woff2) format('woff2'); font-weight: 200 800; }
+@font-face { font-family: Orb; src: url(fonts/Orbitron.woff2) format('woff2'); font-weight: 700; }
+@font-face { font-family: Mont; src: url(fonts/Montserrat.ttf); font-weight: 100 900; }
+html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #030813; }
+.abs { position: absolute; left: 0; top: 0; }
+.lab { position: absolute; font-family: Man; color: #f6f8ff; white-space: nowrap; opacity: 0; }
+.lab .k { font-weight: 600; font-size: 22px; letter-spacing: .28em; color: #8fb0ff; margin-bottom: 14px; }
+.lab .v { font-weight: 400; font-size: 54px; letter-spacing: -0.03em; line-height: 1.05; }
+.lab .s { font-weight: 400; font-size: 28px; color: #aeb8ca; margin-top: 12px; letter-spacing: -0.01em; }
+.lab .r { position: absolute; left: -28px; top: 4px; bottom: 4px; width: 3px; background: #2f73ff; }
+#name { position: absolute; left: 0; width: 1920px; text-align: center; font-family: Orb; font-weight: 700; font-size: 132px;
+        letter-spacing: .14em; text-indent: .14em; color: #bcd2ff; text-shadow: 0 0 18px rgba(47,115,255,.95), 0 0 46px rgba(12,86,255,.8), 0 0 90px rgba(12,86,255,.5); opacity: 0; }
+#tag { position: absolute; left: 0; width: 1920px; text-align: center; font-family: Man; font-weight: 400; font-size: 34px; letter-spacing: .02em; color: #f6f8ff; opacity: 0; }
+#credit { position: absolute; right: 28px; bottom: 18px; font-family: Man; font-size: 15px; color: rgba(174,184,202,.55); }
+</style></head>
+<body>
+<canvas id="gl" class="abs" width="1920" height="1080"></canvas>
+<div id="text" class="abs"></div>
+<div id="credit"></div>
+<script type="module">
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import * as L from './lib4.js';
+const { seg, lerp, clamp, SIG, INOUT } = L;
+let READY; window.__ready = new Promise(r => READY = r);
+const FPS = 30, W = 1920, H = 1080, V = (x, y, z) => new THREE.Vector3(x, y, z), $ = id => document.getElementById(id);
+const R = new THREE.WebGLRenderer({ canvas: $('gl'), antialias: true, preserveDrawingBuffer: true });
+R.setSize(W, H, false); R.setPixelRatio(1); R.outputColorSpace = THREE.SRGBColorSpace; R.toneMapping = THREE.ACESFilmicToneMapping; R.toneMappingExposure = 1.1;
+const rtA = new THREE.WebGLRenderTarget(W, H, { samples: 4, colorSpace: THREE.SRGBColorSpace }), rtB = rtA.clone();
+const mixMat = new THREE.ShaderMaterial({ uniforms: { a: { value: rtA.texture }, b: { value: rtB.texture }, u: { value: 0 }, vig: { value: 0.35 } },
+  vertexShader: `varying vec2 vUv; void main(){ vUv = uv; gl_Position = vec4(position.xy, 0.0, 1.0); }`,
+  fragmentShader: `uniform sampler2D a, b; uniform float u, vig; varying vec2 vUv; void main(){ vec4 c = mix(texture2D(a, vUv), texture2D(b, vUv), u);
+    float d = distance(vUv, vec2(0.5)); c.rgb *= 1.0 - vig * smoothstep(0.35, 0.85, d); gl_FragColor = c; }`, toneMapped: false });
+const quadScene = new THREE.Scene(), quadCam = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
+quadScene.add(new THREE.Mesh(new THREE.PlaneGeometry(2, 2), mixMat));
+const tl = new THREE.TextureLoader(), gl = new GLTFLoader();
+const tex = async u => { const t = await tl.loadAsync(u); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 4; return t; };
+async function model(file, size) { const g = (await gl.loadAsync(file)).scene, box = new THREE.Box3().setFromObject(g), s = box.getSize(V());
+  g.position.sub(box.getCenter(V())); const o = new THREE.Group(); o.add(g); o.scale.setScalar(size / Math.max(s.x, s.y, s.z)); o.userData.size = s; return o; }
+// a few stars, crisp, on deep blue (the brief: "deep blue space with only a few stars")
+function stars(n, r, seed) { const rr = L.rng(seed), p = new Float32Array(n * 3), c = new Float32Array(n * 3);
+  for (let i = 0; i < n; i++) { const u = rr() * 2 - 1, a = rr() * 6.283, s = Math.sqrt(1 - u * u); p.set([s * Math.cos(a) * r, u * r, s * Math.sin(a) * r], i * 3); const b = 0.35 + 0.65 * rr() ** 3; c.set([b, b, b * 1.05], i * 3); }
+  const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.BufferAttribute(p, 3)); g.setAttribute('color', new THREE.BufferAttribute(c, 3));
+  return new THREE.Points(g, new THREE.PointsMaterial({ size: 2.2, sizeAttenuation: false, vertexColors: true, depthWrite: false })); }
+function space(scene) { scene.background = new THREE.Color(0x040b19); scene.add(stars(900, 80, 7)); }
+function lights(scene, k = 4.5) { scene.add(new THREE.HemisphereLight(0xdfe8ff, 0x05070c, 0.25)); const d = new THREE.DirectionalLight(0xfff1e2, k); d.position.set(-5, 2.5, 4); scene.add(d);
+  const rim = new THREE.DirectionalLight(0x2f73ff, 2.2); rim.position.set(5, 1, -4); scene.add(rim); return d; }
+const clay = () => new THREE.MeshStandardMaterial({ color: 0xe9ecf2, roughness: 0.7, metalness: 0.05 });
+function asClay(o) { o.traverse(m => { if (m.isMesh) m.material = clay(); }); return o; }
+
+const SC = [];        // {t0, t1, scene, cam, update(t)}
+async function build() {
+  // A. Earth from orbit: "Beyond our atmosphere, space is silent and hostile."
+  { const s = new THREE.Scene(); space(s); lights(s, 3.2); const cam = new THREE.PerspectiveCamera(30, W / H, 0.01, 200);
+    const earth = new THREE.Mesh(new THREE.SphereGeometry(1, 128, 64), new THREE.MeshStandardMaterial({ map: await tex('img/earth.jpg'), roughness: 0.9 })); s.add(earth);
+    s.add(L.atmosphere(1.03, new THREE.Color(0.3, 0.55, 1.0), 3.5, 1.0));
+    SC.push({ t0: 0, t1: 7.2, s, cam, up: t => { earth.rotation.y = 2.6 + t * 0.02; cam.position.set(0.25 - t * 0.012, 1.42 - t * 0.008, 2.3); cam.lookAt(-0.2, 0.55, 0); } }); }
+  // B. The magnetic shield and the radiation that passes it
+  { const s = new THREE.Scene(); space(s); lights(s, 3.0); const cam = new THREE.PerspectiveCamera(32, W / H, 0.01, 300);
+    const earth = new THREE.Mesh(new THREE.SphereGeometry(1, 96, 48), new THREE.MeshStandardMaterial({ map: SC[0].s.children.find(o => o.isMesh).material.map, roughness: 0.9 })); s.add(earth);
+    s.add(L.atmosphere(1.03, new THREE.Color(0.3, 0.55, 1.0), 3.5, 0.9));
+    const field = [], fm = new THREE.LineBasicMaterial({ color: 0x5b8fff, transparent: true, opacity: 0.55, blending: THREE.AdditiveBlending, depthWrite: false });
+    for (let k = 0; k < 10; k++) for (const Lr of [2.0, 3.0, 4.4]) { const ph = k / 10 * Math.PI * 2, pts = [];
+      for (let i = 0; i <= 120; i++) { const th = 0.12 + (Math.PI - 0.24) * i / 120, r = Lr * Math.sin(th) ** 2; if (r < 1.02) continue; pts.push(V(r * Math.sin(th) * Math.cos(ph), r * Math.cos(th), r * Math.sin(th) * Math.sin(ph))); }
+      const ln = new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), fm.clone()); ln.userData.n = pts.length; s.add(ln); field.push(ln); }
+    const wind = L.solarWind(500, { x0: -14, x1: 10, y0: -5, y1: 5, z0: -4, z1: 3 }, 3); s.add(wind);
+    const astro = asClay(await model('img/models/Astronaut.glb', 0.9)); astro.position.set(3.3, -0.35, 1.6); s.add(astro);
+    SC.push({ t0: 6.6, t1: 14.0, s, cam, up: t => { earth.rotation.y = 1.2 + t * 0.03;
+      field.forEach((ln, i) => { ln.geometry.setDrawRange(0, Math.floor(ln.userData.n * SIG(seg(t, 6.7 + (i % 10) * 0.05, 8.4 + (i % 10) * 0.05)))); });
+      wind.userData.update(t, 3.2, { c: V(0, 0, 0), r: 3.4, on: 1 - 0.85 * seg(t, 8.8, 9.6) * (1 - 0) }, [1, 0.86, 0.72], seg(t, 7.0, 7.8));
+      astro.rotation.set(0.2, -0.6 + t * 0.04, 0.15);
+      cam.position.set(lerp(1.0, 2.6, INOUT(seg(t, 6.6, 14))), 0.9, lerp(10.5, 6.2, INOUT(seg(t, 6.6, 14)))); cam.lookAt(lerp(0.4, 2.2, INOUT(seg(t, 8.5, 13))), 0.1, 0.4); } }); }
+  // C. Irene Schneider: the Renaissance scientist. Leonardo's page (1883 facsimile) cooling into a blueprint
+  { const s = new THREE.Scene(); s.background = new THREE.Color(0x040b19); const cam = new THREE.PerspectiveCamera(30, W / H, 0.01, 50);
+    const t = await tex('img/leo.jpg'); const aspect = t.image.width / t.image.height;
+    const mat = new THREE.ShaderMaterial({ uniforms: { map: { value: t }, u: { value: 0 } }, vertexShader: `varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.0); }`,
+      fragmentShader: `uniform sampler2D map; uniform float u; varying vec2 vUv; void main(){ vec3 c = texture2D(map, vUv).rgb; float l = dot(c, vec3(.3,.59,.11));
+        float ink = smoothstep(0.62, 0.38, l); vec3 blue = mix(vec3(0.016,0.043,0.098), vec3(0.62,0.76,1.0), ink); gl_FragColor = vec4(mix(c * 0.92, blue, u), 1.0); }`, toneMapped: false });
+    const page = new THREE.Mesh(new THREE.PlaneGeometry(aspect * 3, 3), mat); s.add(page);
+    SC.push({ t0: 13.8, t1: 21.2, s, cam, up: tt => { mat.uniforms.u.value = SIG(seg(tt, 16.6, 18.6)); cam.position.set(0.55 - (tt - 13.8) * 0.02, -0.1 + (tt - 13.8) * 0.012, 2.15 - (tt - 13.8) * 0.06); cam.lookAt(0.25, 0.05, 0); } }); }
+  // D. MARSOPS, and the Moon for "explorers who go farther"
+  { const s = new THREE.Scene(); space(s); lights(s, 3.4); const cam = new THREE.PerspectiveCamera(30, W / H, 0.01, 200);
+    const moon = new THREE.Mesh(new THREE.SphereGeometry(1, 128, 64), new THREE.MeshStandardMaterial({ map: await tex('img/moon.jpg'), roughness: 1 })); moon.position.set(0, -1.62, 0); s.add(moon);
+    SC.push({ t0: 20.9, t1: 26.3, s, cam, up: t => { moon.rotation.y = t * 0.025; cam.position.set(0, lerp(0.15, -0.05, seg(t, 20.9, 26.3)), lerp(4.6, 3.9, seg(t, 20.9, 26.3))); cam.lookAt(0, -0.25, 0); } }); }
+  // E/F/G. Spacesuits, habitats, rovers: NASA public-domain models as clay studies, turning slowly
+  const study = async (file, size, t0, t1, y = 0) => { const s = new THREE.Scene(); space(s); lights(s, 4.2); const cam = new THREE.PerspectiveCamera(28, W / H, 0.01, 200);
+    const m = asClay(await model(file, size)); m.position.y = y; s.add(m);
+    const floor = new THREE.Mesh(new THREE.CircleGeometry(2.4, 96), new THREE.MeshBasicMaterial({ color: 0x2f73ff, transparent: true, opacity: 0.06 })); floor.rotation.x = -Math.PI / 2; floor.position.y = y - size * 0.52; s.add(floor);
+    SC.push({ t0, t1, s, cam, up: t => { m.rotation.y = -0.8 + (t - t0) * 0.32; cam.position.set(0.4, 0.35, 4.3 - (t - t0) * 0.08); cam.lookAt(0.55, 0.05, 0); } }); };
+  await study('img/models/Extravehicular_Mobility_Unit.glb', 2.1, 26.1, 28.7);
+  await study('img/models/Habitat_Demonstration_Unit_part_1.glb', 2.4, 28.5, 31.0);
+  await study('img/models/Space_Exploration_Vehicle.glb', 2.5, 30.8, 33.0);
+  // H. "Each one designed around the human inside": the suit as a hologram, the person inside solid
+  { const s = new THREE.Scene(); space(s); lights(s, 4.0); const cam = new THREE.PerspectiveCamera(28, W / H, 0.01, 200);
+    const suit = await model('img/models/Extravehicular_Mobility_Unit.glb', 2.1), hm = L.holoMaterial({ y0: -1.1, y1: 1.1, scan: 30, fill: 0.05 });
+    const em = new THREE.LineBasicMaterial({ color: 0x8fb0ff, transparent: true, opacity: 0.3, blending: THREE.AdditiveBlending, depthWrite: false });
+    suit.traverse(o => { if (o.isMesh) { o.add(new THREE.LineSegments(new THREE.EdgesGeometry(o.geometry, 35), em)); o.material = hm; } }); s.add(suit);
+    const person = asClay(await model('img/models/Astronaut.glb', 1.75)); s.add(person);
+    SC.push({ t0: 32.8, t1: 36.4, s, cam, up: t => { hm.uniforms.uTime.value = t; hm.uniforms.uReveal.value = 1; suit.rotation.y = person.rotation.y = 0.3 + (t - 32.8) * 0.2;
+      person.traverse(o => { if (o.isMesh) { o.material.transparent = true; o.material.opacity = 0.35 + 0.65 * seg(t, 33.8, 34.6); } });
+      cam.position.set(0, 0.2, lerp(4.4, 3.7, seg(t, 32.8, 36.4))); cam.lookAt(0, 0.05, 0); } }); }
+  // I. "The next giant leap will be made by people": Mars, wide and slow
+  { const s = new THREE.Scene(); space(s); lights(s, 4.5); const cam = new THREE.PerspectiveCamera(30, W / H, 0.01, 200);
+    const mars = await model('img/mars.glb', 2.0); s.add(mars); s.add(L.atmosphere(1.045, new THREE.Color(1, 0.45, 0.25), 4, 0.5));
+    SC.push({ t0: 36.2, t1: 41.0, s, cam, up: t => { mars.rotation.set(0.14, -0.4 + t * 0.03, -0.08); cam.position.set(1.4, 0.2, lerp(5.4, 4.6, seg(t, 36.2, 41))); cam.lookAt(-0.6, 0.1, 0); } }); }
+  // J. The name and the tagline
+  { const s = new THREE.Scene(); space(s); const cam = new THREE.PerspectiveCamera(30, W / H, 0.01, 200);
+    SC.push({ t0: 40.6, t1: 46.0, s, cam, up: t => { cam.position.set(0, 0, 1); cam.lookAt(0, 0, -1); cam.rotation.z = 0; } }); }
+
+  // labels (lower left, documentary style), the name, the tagline
+  const T = $('text'); const lab = (k, v, s, x, y, tin, tout) => { const d = document.createElement('div'); d.className = 'lab'; d.style.left = x + 'px'; d.style.top = y + 'px';
+    d.innerHTML = `<div class="r"></div>${k ? `<div class="k">${k}</div>` : ''}<div class="v">${v}</div>${s ? `<div class="s">${s}</div>` : ''}`; T.appendChild(d); LABS.push({ d, tin, tout }); };
+  lab('FOUNDER &amp; CEO', 'Irene Schneider', 'Physicist and astrobiologist', 150, 760, 15.6, 20.7);
+  lab('', '14+ years', 'of NASA-funded research', 1280, 790, 18.0, 20.7);
+  lab('01', 'Spacesuits', '', 150, 820, 26.6, 28.4);
+  lab('02', 'Habitats', 'for orbit and the Moon', 150, 800, 28.9, 30.7);
+  lab('03', 'Rovers', 'for new worlds', 150, 800, 31.1, 32.8);
+  $('name').style.top = '410px'; $('tag').style.top = '600px';
+}
+const LABS = [];
+document.getElementById('text').insertAdjacentHTML('beforeend', '<div id="name">MARSOPS</div><div id="tag">Enabling Sustainable &amp; Safe Human Space Flight</div>');
+function render(f) {
+  const t = f / FPS;
+  const act = SC.filter(s => t >= s.t0 && t < s.t1);
+  const a = act[0], b = act[1];
+  a.up(t); R.setRenderTarget(rtA); R.render(a.s, a.cam);
+  let u = 0; if (b) { b.up(t); R.setRenderTarget(rtB); R.render(b.s, b.cam); u = SIG(seg(t, b.t0, a.t1)); }
+  mixMat.uniforms.u.value = u; R.setRenderTarget(null); R.render(quadScene, quadCam);
+  for (const l of LABS) { const i = SIG(seg(t, l.tin, l.tin + 0.8)), o = seg(t, l.tout - 0.5, l.tout); l.d.style.opacity = (i * (1 - o)).toFixed(3); l.d.style.transform = `translateY(${((1 - i) * 14).toFixed(2)}px)`; }
+  // the name appears on the narrator's "MARSOPS" (22.6 s) over the Moon, and returns at the end
+  { const n1 = SIG(seg(t, 22.5, 23.4)) * (1 - seg(t, 25.4, 26.1)), n2 = SIG(seg(t, 40.9, 41.9)), n = Math.max(n1, n2);
+    $('name').style.opacity = n.toFixed(3); $('name').style.top = (t < 30 ? 300 : 410) + 'px'; $('name').style.filter = `blur(${((1 - n) * 8).toFixed(2)}px)`;
+    $('tag').style.opacity = SIG(seg(t, 42.0, 42.9)).toFixed(3); $('tag').style.transform = `translateY(${((1 - SIG(seg(t, 42.0, 42.9))) * 12).toFixed(2)}px)`; }
+  $('credit').textContent = t < 14 ? 'Earth: NASA Visible Earth · Moon: NASA/GSFC SVS (LRO) · Models: NASA 3D Resources' : (t > 13.8 && t < 21.2 ? 'Leonardo da Vinci, Ms B (1883 facsimile), public domain' : (t > 36 && t < 41 ? 'Mars: NASA/JPL-Caltech' : ''));
+}
+window.render = render;
+await document.fonts.load('700 132px Orb'); await document.fonts.load('400 54px Man');
+await build(); render(0); READY();
+</script>
+</body></html>
