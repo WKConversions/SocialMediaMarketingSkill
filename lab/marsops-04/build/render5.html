@@ -202,7 +202,7 @@ async function build() {
 const LABS = [];
 document.getElementById('text').insertAdjacentHTML('beforeend', '<div id="name">MARSOPS</div><div id="tag">Enabling Sustainable &amp; Safe Human Space Flight</div>');
 function render(f) {
-  const t = f / FPS;
+  const t = Math.min(45.99, Math.max(0, f / FPS));
   const act = SC.filter(s => t >= s.t0 && t < s.t1);
   const a = act[0], b = act[1];
   a.up(t); R.setRenderTarget(rtA); R.render(a.s, a.cam);
