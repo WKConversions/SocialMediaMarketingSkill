@@ -35,7 +35,7 @@ let READY; window.__ready = new Promise(r => READY = r);
 const FPS = 30, W = 1920, H = 1080, V = (x, y, z) => new THREE.Vector3(x, y, z), $ = id => document.getElementById(id);
 const R = new THREE.WebGLRenderer({ canvas: $('gl'), antialias: true, preserveDrawingBuffer: true });
 R.setSize(W, H, false); R.setPixelRatio(1); R.outputColorSpace = THREE.SRGBColorSpace; R.toneMapping = THREE.ACESFilmicToneMapping; R.toneMappingExposure = 1.1;
-const rtA = new THREE.WebGLRenderTarget(W, H, { samples: 4, colorSpace: THREE.SRGBColorSpace }), rtB = rtA.clone();
+const rtA = new THREE.WebGLRenderTarget(W, H, { samples: 0, colorSpace: THREE.SRGBColorSpace }), rtB = rtA.clone();
 const mixMat = new THREE.ShaderMaterial({ uniforms: { a: { value: rtA.texture }, b: { value: rtB.texture }, u: { value: 0 }, vig: { value: 0.35 } },
   vertexShader: `varying vec2 vUv; void main(){ vUv = uv; gl_Position = vec4(position.xy, 0.0, 1.0); }`,
   fragmentShader: `uniform sampler2D a, b; uniform float u, vig; varying vec2 vUv; void main(){ vec4 c = mix(texture2D(a, vUv), texture2D(b, vUv), u);
