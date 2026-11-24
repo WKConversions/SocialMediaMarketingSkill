@@ -29,7 +29,7 @@ clk = load(f"{FX}/mixkit-2577-interface-device-click/mixkit-2577-interface-devic
 air = load(f"{FX}/mixkit-168-fast-air-sweep-transition/mixkit-168-fast-air-sweep-transition.wav")
 for t in (0.5, 2.62, 11.85, 20.6): put(fx, fade(sel), t - pk(sel), -27)
 for k in range(5): put(fx, tick, 1.9 + k * 0.07, -31)                                              # the agencies turn into question marks                                      # a card appears
-for t in (4.74, 7.1, 13.87, 23.23): put(fx, fade(air, 0.02, 0.2), t - pk(air) + 0.12, -30)       # the backdrop / panel moves in
+for t in (4.74, 7.1, 13.5, 23.23): put(fx, fade(air, 0.02, 0.2), t - pk(air) + 0.12, -30)       # the backdrop / panel moves in
 for t in (6.3, 12.05, 14.6, 16.05, 17.8, 22.55): put(fx, fade(clk), t - pk(clk), -24)                           # the cursor clicks
 for k in range(6): put(fx, tick, 8.3 + k * 0.17, -30)                                             # the timer running up
 put(fx, fade(tone), 9.36 - pk(tone), -26); put(fx, fade(tone), 19.0 - pk(tone), -23)              # the timer lands; the result
