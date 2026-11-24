@@ -27,9 +27,10 @@ v = load(f"{E}/build/voice.wav"); vo[:len(v)] += v; vo *= db(-16 - lufs(vo))    
 tick = load(f"{FX}/kenney-interface-sounds-tick-002/tick_002.ogg"); sel = lp(load(f"{FX}/mixkit-3124-modern-technology-select/mixkit-3124-modern-technology-select.wav"), 8000)
 clk = load(f"{FX}/mixkit-2577-interface-device-click/mixkit-2577-interface-device-click.wav"); tone = lp(load(f"{FX}/mixkit-2568-cool-interface-click-tone/mixkit-2568-cool-interface-click-tone.wav"), 9000)
 air = load(f"{FX}/mixkit-168-fast-air-sweep-transition/mixkit-168-fast-air-sweep-transition.wav")
-for t in (2.55, 11.85): put(fx, fade(sel), t - pk(sel), -27)                                      # a card appears
-for t in (4.74, 7.1, 14.52, 20.5): put(fx, fade(air, 0.02, 0.2), t - pk(air) + 0.12, -30)       # the backdrop / panel moves in
-for t in (6.3, 15.1, 17.15, 18.5): put(fx, fade(clk), t - pk(clk), -24)                           # the cursor clicks
+for t in (0.5, 2.62, 11.85): put(fx, fade(sel), t - pk(sel), -27)
+for k in range(5): put(fx, tick, 1.9 + k * 0.07, -31)                                              # the agencies turn into question marks                                      # a card appears
+for t in (4.74, 7.1, 13.87, 20.5): put(fx, fade(air, 0.02, 0.2), t - pk(air) + 0.12, -30)       # the backdrop / panel moves in
+for t in (6.3, 12.05, 14.6, 16.05, 17.8): put(fx, fade(clk), t - pk(clk), -24)                           # the cursor clicks
 for k in range(6): put(fx, tick, 8.3 + k * 0.17, -30)                                             # the timer running up
 put(fx, fade(tone), 9.36 - pk(tone), -26); put(fx, fade(tone), 19.0 - pk(tone), -23)              # the timer lands; the result
 if len(sys.argv) > 2:
