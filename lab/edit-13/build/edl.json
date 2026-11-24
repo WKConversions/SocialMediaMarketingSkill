@@ -36,6 +36,13 @@
    "frames": 182,
    "out_frame": 404,
    "out_s": 13.467
+  },
+  {
+   "seg": "outro",
+   "src": 0.67,
+   "frames": 88,
+   "image_frame": 586,
+   "out_s": 20.3
   }
  ],
  "offset_s": -0.3262

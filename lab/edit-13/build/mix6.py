@@ -4,7 +4,7 @@ sounds: Mixkit free licence, Kenney CC0; none synthesised here), optional backgr
 import json, subprocess, sys, wave
 import numpy as np
 from scipy.signal import butter, sosfilt
-SR, DUR = 48000, 23.2; N = int(SR * DUR); OUT = sys.argv[1]
+SR, DUR = 48000, 26.0; N = int(SR * DUR); OUT = sys.argv[1]
 E = "/home/user/SocialMediaMarketingSkill/lab/edit-13"; FX = "/home/user/SocialMediaMarketingSkill/lab/marsops-03/sfx"
 def load(p, s=0.0, d=None):
     c = ["ffmpeg", "-v", "error", "-ss", str(s)] + (["-t", str(d)] if d else []) + ["-i", p, "-ac", "2", "-ar", str(SR), "-f", "f32le", "-"]
@@ -23,14 +23,14 @@ def lufs(x):
     r = subprocess.run(["ffmpeg", "-v", "info", "-i", tmp, "-af", "ebur128", "-f", "null", "-"], capture_output=True, text=True).stderr
     return float(r[r.rindex("I:"):].split()[1])
 vo = np.zeros((N, 2), np.float32); fx = np.zeros((N, 2), np.float32); mu = np.zeros((N, 2), np.float32)
-v = load(f"{E}/build/voice.wav"); vo[:len(v)] += v; vo *= db(-16 - lufs(vo))                       # voice to -16 LUFS
+v = load(f"{E}/build/voice.wav"); vo[:len(v)] += v; put(vo, load(f"{E}/build/outro.wav"), 20.3, 0); vo *= db(-16 - lufs(vo))                       # voice to -16 LUFS
 tick = load(f"{FX}/kenney-interface-sounds-tick-002/tick_002.ogg"); sel = lp(load(f"{FX}/mixkit-3124-modern-technology-select/mixkit-3124-modern-technology-select.wav"), 8000)
 clk = load(f"{FX}/mixkit-2577-interface-device-click/mixkit-2577-interface-device-click.wav"); tone = lp(load(f"{FX}/mixkit-2568-cool-interface-click-tone/mixkit-2568-cool-interface-click-tone.wav"), 9000)
 air = load(f"{FX}/mixkit-168-fast-air-sweep-transition/mixkit-168-fast-air-sweep-transition.wav")
-for t in (0.5, 2.62, 11.85): put(fx, fade(sel), t - pk(sel), -27)
+for t in (0.5, 2.62, 11.85, 20.6): put(fx, fade(sel), t - pk(sel), -27)
 for k in range(5): put(fx, tick, 1.9 + k * 0.07, -31)                                              # the agencies turn into question marks                                      # a card appears
-for t in (4.74, 7.1, 13.87, 20.5): put(fx, fade(air, 0.02, 0.2), t - pk(air) + 0.12, -30)       # the backdrop / panel moves in
-for t in (6.3, 12.05, 14.6, 16.05, 17.8): put(fx, fade(clk), t - pk(clk), -24)                           # the cursor clicks
+for t in (4.74, 7.1, 13.87, 23.23): put(fx, fade(air, 0.02, 0.2), t - pk(air) + 0.12, -30)       # the backdrop / panel moves in
+for t in (6.3, 12.05, 14.6, 16.05, 17.8, 22.55): put(fx, fade(clk), t - pk(clk), -24)                           # the cursor clicks
 for k in range(6): put(fx, tick, 8.3 + k * 0.17, -30)                                             # the timer running up
 put(fx, fade(tone), 9.36 - pk(tone), -26); put(fx, fade(tone), 19.0 - pk(tone), -23)              # the timer lands; the result
 if len(sys.argv) > 2:
