@@ -1,0 +1,129 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<!-- K.B social explainer (vertical 1080x1920, 30 fps), edited in the style of the Doc2iXBRL reference ad: clean talking
+     head, hard cuts to soft gradient backdrops with white UI cards (blur-in + light sweep, a cursor), split layouts where
+     a gradient panel slides in next to the speaker, an end card with the mark. Colours and type from the K.B brand kit
+     (navy #172b44, light blue #99cdfc, ice #eaf5ff, Manrope). Frame-pure: render(f) is async (it waits for the frame image). -->
+<style>
+@font-face { font-family: Man; src: url(fonts/Manrope.woff2) format('woff2'); font-weight: 200 800; }
+html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #172b44; font-family: Man; color: #172b44; }
+.abs { position: absolute; left: 0; top: 0; }
+#spk { width: 1188px; height: 2112px; transform-origin: 594px 800px; }
+#ang { width: 1080px; height: 1924px; transform-origin: 540px 0; }
+.grad { background:
+  radial-gradient(70% 46% at var(--gx, 50%) var(--gy, 46%), #dcecfb 0%, rgba(153,205,252,.92) 30%, rgba(111,174,241,.55) 55%, rgba(23,43,68,0) 82%),
+  radial-gradient(60% 40% at 92% 4%, #0d1c2d 0%, rgba(13,28,45,0) 72%), radial-gradient(60% 42% at 4% 98%, #0d1c2d 0%, rgba(13,28,45,0) 72%), #2b4a70; }
+#full, #endbg { width: 1080px; height: 1920px; }
+#panel { width: 1080px; height: 1920px; }
+#endbg { background: radial-gradient(80% 40% at 50% 108%, rgba(153,205,252,.55) 0%, rgba(111,174,241,.18) 45%, rgba(23,43,68,0) 75%), #172b44; }
+.card { position: absolute; background: #fff; border-radius: 30px; box-shadow: 0 34px 90px rgba(13,28,45,.34), 0 4px 14px rgba(13,28,45,.10); overflow: hidden; }
+.sweep { position: absolute; left: 0; top: 0; width: 100%; height: 100%; pointer-events: none;
+  background: linear-gradient(105deg, rgba(255,255,255,0) 30%, rgba(234,245,255,.95) 50%, rgba(255,255,255,0) 70%); }
+.mut { color: #66768a; } .b { font-weight: 700; } .xb { font-weight: 800; letter-spacing: -0.03em; }
+.pill { display: inline-block; padding: 8px 20px; border-radius: 99px; background: #eaf5ff; color: #172b44; font-weight: 700; font-size: 26px; }
+.pill.blue { background: #99cdfc; }
+.row { display: flex; align-items: center; justify-content: space-between; }
+.ic { width: 84px; height: 84px; border-radius: 42px; background: #eaf5ff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 40px; flex: none; }
+.field { background: #f5f8fb; border: 2px solid rgba(23,43,68,.10); border-radius: 18px; }
+#cursor { width: 44px; height: 44px; }
+</style></head>
+<body>
+<img id="spk" class="abs">
+<img id="ang" class="abs">
+<div id="full" class="abs grad"></div>
+<div id="panel" class="abs grad"></div>
+<div id="cards" class="abs" style="width:1080px;height:1920px"></div>
+<svg id="cursor" class="abs" viewBox="0 0 24 24"><path d="M4 2l15 9-6.5 1.6L9 19z" fill="#0d1c2d" stroke="#fff" stroke-width="1.4" stroke-linejoin="round"/></svg>
+<div id="endbg" class="abs"></div>
+<div id="end" class="abs" style="width:1080px;height:1920px"></div>
+<script>
+const FPS = 30, NV = 586, T = { s2: 4.7333, s3: 7.0667, s4: 11.7, s5: 13.4667, endV: 19.5333, end: 20.5, total: 23.2 };
+const $ = id => document.getElementById(id), clamp = (x, a = 0, b = 1) => Math.max(a, Math.min(b, x)), lerp = (a, b, u) => a + (b - a) * u, seg = (t, a, b) => clamp((t - a) / (b - a));
+function bez(x1, y1, x2, y2) { return x => { if (x <= 0) return 0; if (x >= 1) return 1; let t = x; for (let i = 0; i < 7; i++) { const cx = 3 * x1 * t * (1 - t) ** 2 + 3 * x2 * t * t * (1 - t) + t ** 3 - x, d = 3 * x1 * (1 - t) ** 2 + 6 * (x2 - x1) * t * (1 - t) + 3 * (1 - x2) * t * t; if (Math.abs(d) < 1e-6) break; t -= cx / d; } return 3 * y1 * t * (1 - t) ** 2 + 3 * y2 * t * t * (1 - t) + t ** 3; }; }
+const OUT = bez(.22, 1, .36, 1), IO = bez(.65, 0, .35, 1);
+const C = $('cards'); const CARDS = {};
+function card(id, x, y, w, html) { const d = document.createElement('div'); d.className = 'card'; d.style.left = x + 'px'; d.style.top = y + 'px'; d.style.width = w + 'px'; d.innerHTML = html + '<div class="sweep"></div>'; C.appendChild(d); CARDS[id] = d; return d; }
+// a card arrives the way the reference's do: out of a blur, rising a little, with a light sweeping across it
+function enter(d, t, tin, tout, dy = 0, sc = 1) { const a = OUT(seg(t, tin, tin + 0.55)), o = tout ? IO(seg(t, tout, tout + 0.3)) : 0;
+  d.style.opacity = (seg(t, tin, tin + 0.25) * (1 - o)).toFixed(3); d.style.filter = a < 1 ? `blur(${((1 - a) * 14).toFixed(2)}px)` : 'none';
+  d.style.transform = `translateY(${((1 - a) * 34 + o * 26 + dy).toFixed(2)}px) scale(${((0.965 + 0.035 * a) * sc).toFixed(4)})`;
+  const s = seg(t, tin + 0.1, tin + 0.95); d.querySelector('.sweep').style.transform = `translateX(${(-110 + 220 * s).toFixed(1)}%)`; d.querySelector('.sweep').style.opacity = (s > 0 && s < 1 ? 1 : 0); }
+const typed = (txt, u) => txt.slice(0, Math.round(txt.length * clamp(u)));
+const mmss = s => String(Math.floor(s / 60)).padStart(2, '0') + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+
+// ---- 1. "what their admin actually costs": the number nobody has
+card('cost', 110, 1300, 860, `<div style="padding:38px 42px" class="row"><div class="row" style="gap:28px"><div class="ic">€</div><div><div class="mut" style="font-size:30px">Admin cost per month</div>
+  <div class="xb" style="font-size:76px;line-height:1.1">€ <span id="q">—</span></div></div></div><div class="pill" id="costPill">Not tracked</div></div>`);
+// ---- 2. "It never shows up on an invoice"
+card('inv', 100, 560, 880, `<div style="padding:44px 48px 40px"><div class="row" style="margin-bottom:26px"><div><div class="xb" style="font-size:46px">Invoice</div><div class="mut" style="font-size:26px">No. 2026-014</div></div><div class="pill">Recruitment</div></div>
+  ${[['Placement fee', '€ 4,500'], ['Job advertising', '€ 320'], ['Software licences', '€ 180']].map(([a, b], i) => `<div class="row irow" style="padding:22px 0;border-top:2px solid rgba(23,43,68,.08);font-size:33px"><span>${a}</span><span class="b">${b}</span></div>`).join('')}
+  <div class="row" id="adminRow" style="margin-top:14px;padding:22px 24px;border-radius:18px;border:3px dashed #99cdfc;font-size:33px"><span class="b">Admin time</span><span class="pill blue" id="adminPill">Not on the invoice</span></div></div>`);
+// ---- 3. "the half hour of typing after an intake call" (in the panel under the speaker)
+card('notes', 90, 1150, 900, `<div style="padding:38px 42px 40px"><div class="row" style="margin-bottom:24px"><div class="row" style="gap:20px"><div class="ic" style="width:64px;height:64px;font-size:30px">✓</div><div><div class="b" style="font-size:34px">Intake call</div><div class="mut" style="font-size:25px">Ended</div></div></div>
+  <div class="pill" id="timer" style="font-size:36px;font-variant-numeric:tabular-nums;padding:10px 26px">00:00</div></div>
+  <div class="mut" style="font-size:25px;margin-bottom:10px">Candidate notes</div><div class="field" style="height:260px;padding:22px 26px;font-size:30px;line-height:1.5"><span id="note"></span><span id="caret" style="border-left:3px solid #172b44;margin-left:2px"></span></div></div>`);
+// ---- 4. "Time one intake"
+card('watch', 190, 1320, 700, `<div style="padding:34px 40px" class="row"><div class="row" style="gap:26px"><div class="ic" style="background:#172b44;color:#fff;font-size:30px">▶</div><div><div class="mut" style="font-size:28px">Intake admin</div><div class="b" style="font-size:30px">Timer running</div></div></div>
+  <div class="xb" id="sw" style="font-size:64px;font-variant-numeric:tabular-nums">00:00</div></div>`);
+// ---- 5. "Multiply the admin minutes by your monthly candidates and your hourly costs"
+card('calc', 90, 1110, 900, `<div style="padding:40px 44px 42px"><div class="row" style="margin-bottom:22px"><div class="xb" style="font-size:42px">Admin cost</div><div class="pill">Example</div></div>
+  ${[['Admin minutes per intake', 'v1'], ['Candidates per month', 'v2'], ['Hourly cost', 'v3']].map(([a, id], i) => `<div class="row crow" style="padding:16px 0;font-size:32px"><span><span class="mut b" style="display:inline-block;width:44px">${i ? '×' : ''}</span>${a}</span><span class="field b" id="${id}" style="min-width:150px;text-align:right;padding:12px 22px;font-size:34px;font-variant-numeric:tabular-nums"></span></div>`).join('')}
+  <div class="row" id="res" style="margin-top:20px;padding:24px 28px;border-radius:20px;background:#172b44;color:#fff"><span style="font-size:32px">Admin cost per month</span><span class="xb" id="total" style="font-size:66px;font-variant-numeric:tabular-nums">€ 0</span></div></div>`);
+// ---- end card
+$('end').innerHTML = `<img id="mark" src="img/kb-mark.png" style="position:absolute;left:390px;top:560px;width:300px;height:300px;mix-blend-mode:lighten">
+  <div id="tag" style="position:absolute;left:90px;top:900px;width:900px;text-align:center;color:#fff;font-weight:800;font-size:72px;line-height:1.08;letter-spacing:-0.045em;white-space:nowrap"><div id="tg1">We build the systems</div><div id="tg2">your business runs on,</div><div id="tg3">with you</div></div>
+  <div id="cta" style="position:absolute;left:0;top:1250px;width:1080px;text-align:center"><span class="pill blue" style="font-size:34px;padding:22px 46px">Book a Free Discovery Call</span></div>`;
+
+const NOTE = 'Spoke with the candidate about the role, salary range and notice period. Available from March, prefers hybrid…';
+const imgs = { spk: $('spk'), ang: $('ang') };
+async function setImg(el, src) { if (el.dataset.src === src) return; el.dataset.src = src; el.src = src; await el.decode().catch(() => {}); }
+
+async function render(f) {
+  const t = f / FPS, vf = String(Math.min(NV - 1, Math.max(0, Math.round(f)))).padStart(4, '0');
+  const inC = t >= T.s3 && t < T.s4;
+  await setImg(imgs.spk, `v/p_${vf}.jpg`); if (inC) await setImg(imgs.ang, `v/a_${vf}.jpg`);
+  // speaker: a slow push per shot; a slightly tighter frame on "Time one intake" (hides the jump cut)
+  { let s = 1.0, x = -54, y = -96;
+    if (t < T.s2) s = 0.92 + 0.03 * t / T.s2; else if (t < T.s5) s = 1.04 + 0.02 * seg(t, T.s4, T.s5); else s = 0.94 + 0.03 * seg(t, T.s5, T.endV);
+    imgs.spk.style.transform = `translate(${x}px, ${y}px) scale(${s.toFixed(4)})`; imgs.spk.style.visibility = (t < T.s2 || t >= T.s4) ? 'visible' : 'hidden'; }
+  imgs.ang.style.visibility = inC ? 'visible' : 'hidden'; imgs.ang.style.transform = `translateY(-170px) scale(${(1.10 + 0.02 * seg(t, T.s3, T.s4)).toFixed(4)})`;
+  // backdrops: the full-screen gradient (hard cut, like the reference) and the panel that slides up under the speaker
+  const fullOn = (t >= T.s2 && t < T.s3) ? 1 : 0; const ex = IO(seg(t, 18.65, 19.2));      // the panel grows to the full frame for the result
+  $('full').style.opacity = fullOn; $('full').style.setProperty('--gx', (50 + 6 * Math.sin(t * 0.7)).toFixed(2) + '%'); $('full').style.setProperty('--gy', (44 + 4 * Math.cos(t * 0.5)).toFixed(2) + '%');
+  let py = 1920; if (inC) py = lerp(1920, 1050, OUT(seg(t, T.s3 + 0.05, T.s3 + 0.6))); else if (t >= T.s5) py = lerp(lerp(1920, 1010, OUT(seg(t, 14.5, 15.05))), 0, ex);
+  $('panel').style.transform = `translateY(${py.toFixed(2)}px)`; $('panel').style.setProperty('--gx', (50 + 5 * Math.sin(t * 0.6)).toFixed(2) + '%'); $('panel').style.setProperty('--gy', (lerp(24, 46, ex) + 2 * Math.cos(t * 0.5)).toFixed(2) + '%');
+  // 1 cost card
+  enter(CARDS.cost, t, 2.55, 4.45); $('q').textContent = Math.floor(t * 4) % 2 ? '—' : '?';
+  // 2 invoice
+  { const d = CARDS.inv; enter(d, t, T.s2 + 0.02, 0, 0, 1 + 0.03 * seg(t, T.s2, T.s3)); d.style.opacity = fullOn ? d.style.opacity : 0;
+    d.querySelectorAll('.irow').forEach((r, i) => { const a = OUT(seg(t, T.s2 + 0.25 + i * 0.13, T.s2 + 0.7 + i * 0.13)); r.style.opacity = a; r.style.transform = `translateY(${(1 - a) * 14}px)`; });
+    const a = OUT(seg(t, 5.9, 6.4)); $('adminRow').style.opacity = seg(t, 5.55, 5.9); $('adminRow').style.background = `rgba(234,245,255,${a.toFixed(3)})`; $('adminPill').style.opacity = a; $('adminPill').style.transform = `scale(${(0.8 + 0.2 * a).toFixed(3)})`; }
+  // 3 notes + timer
+  { const d = CARDS.notes; enter(d, t, T.s3 + 0.3, 0); d.style.opacity = inC ? d.style.opacity : 0;
+    $('note').textContent = typed(NOTE, seg(t, 7.75, 11.6)); $('caret').style.opacity = Math.floor(t * 2.5) % 2 ? 1 : 0.15;
+    const u = IO(seg(t, 8.25, 9.35)); $('timer').textContent = mmss(1800 * u); $('timer').style.background = u >= 1 ? '#99cdfc' : '#eaf5ff'; $('timer').style.transform = `scale(${(1 + 0.12 * Math.sin(Math.PI * seg(t, 9.3, 9.7))).toFixed(3)})`; }
+  // 4 stopwatch
+  { enter(CARDS.watch, t, 11.85, 13.2); if (t >= T.s5 || t < T.s4) CARDS.watch.style.opacity = 0; const e = Math.max(0, t - 12.0) * 21; $('sw').textContent = mmss(e); }
+  // 5 calculator: values land on the words; the result counts up as the panel takes the whole frame
+  { const d = CARDS.calc; enter(d, t, 14.75, 0, lerp(0, -470, ex), 1 + 0.07 * ex); if (t < T.s5) d.style.opacity = 0;
+    const val = (id, tin, v, pre = '') => { const a = OUT(seg(t, tin, tin + 0.45)); $(id).textContent = t < tin ? '' : pre + Math.round(v * a); $(id).style.borderColor = a > 0 && a < 1 ? '#99cdfc' : 'rgba(23,43,68,.10)'; };
+    val('v1', 14.98, 30); val('v2', 17.04, 40); val('v3', 18.4, 45, '€ ');
+    d.querySelectorAll('.crow').forEach((r, i) => { const a = OUT(seg(t, 14.9 + i * 0.12, 15.35 + i * 0.12)); r.style.opacity = a; });
+    const ra = OUT(seg(t, 18.75, 19.2)); $('res').style.opacity = ra; $('res').style.transform = `translateY(${(1 - ra) * 16}px)`; $('total').textContent = '€ ' + Math.round(900 * OUT(seg(t, 18.95, 19.75))); }
+  // cursor (dark arrow): visits the invoice's missing line, then the calculator's fields
+  { let x = 1200, y = 2000, o = 0;
+    if (t >= T.s2 && t < T.s3) { const u = IO(seg(t, 5.2, 6.15)); x = lerp(900, 250, u); y = lerp(1500, 1118, u); o = seg(t, 5.15, 5.4); }
+    else if (t >= 14.8 && t < 18.7) { const a = IO(seg(t, 14.8, 15.1)), b = IO(seg(t, 16.6, 17.1)), c = IO(seg(t, 18.0, 18.4)); x = lerp(1000, 880, a); y = lerp(1850, 1295, a) + 97 * b + 97 * c; o = seg(t, 14.8, 15.0) * (1 - seg(t, 18.55, 18.7)); }
+    const cl = Math.max(Math.sin(Math.PI * seg(t, 6.2, 6.45)), Math.sin(Math.PI * seg(t, 15.0, 15.2)), Math.sin(Math.PI * seg(t, 17.05, 17.25)), Math.sin(Math.PI * seg(t, 18.4, 18.6)));
+    $('cursor').style.transform = `translate(${x.toFixed(1)}px, ${y.toFixed(1)}px) scale(${(1 - 0.18 * cl).toFixed(3)})`; $('cursor').style.opacity = o; }
+  // end card
+  { const a = seg(t, T.end, T.end + 0.4); $('endbg').style.opacity = a; $('end').style.opacity = a;
+    const m = OUT(seg(t, T.end + 0.15, T.end + 0.9)); $('mark').style.transform = `scale(${(0.86 + 0.14 * m).toFixed(4)})`; $('mark').style.opacity = m; $('mark').style.filter = `blur(${((1 - m) * 10).toFixed(2)}px)`;
+    [['tg1', 0.45], ['tg2', 0.55], ['tg3', 0.65]].forEach(([id, dl]) => { const u = OUT(seg(t, T.end + dl, T.end + dl + 0.7)); $(id).style.opacity = u; $(id).style.transform = `translateY(${((1 - u) * 26).toFixed(2)}px)`; });
+    const c = OUT(seg(t, T.end + 0.95, T.end + 1.55)); $('cta').style.opacity = c; $('cta').style.transform = `translateY(${((1 - c) * 18).toFixed(2)}px)`; }
+}
+window.render = render;
+window.__ready = document.fonts.load('800 60px Man').then(() => document.fonts.load('400 30px Man')).then(() => document.fonts.load('700 30px Man')).then(() => document.getElementById('mark').decode()).then(() => render(0));
+window.CUES = { cards: [2.55, 11.85], cutFull: T.s2, click: [6.3, 15.1, 17.15, 18.5], panel: [T.s3, 14.5], timer: 9.35, result: 19.0, end: T.end };
+</script>
+</body></html>

@@ -1,0 +1,42 @@
+{
+ "fps": 30,
+ "frames": 586,
+ "segments": [
+  {
+   "seg": 0,
+   "src": 0.83,
+   "frames": 142,
+   "out_frame": 0,
+   "out_s": 0.0
+  },
+  {
+   "seg": 1,
+   "src": 11.69,
+   "frames": 70,
+   "out_frame": 142,
+   "out_s": 4.733
+  },
+  {
+   "seg": 2,
+   "src": 22.27,
+   "frames": 139,
+   "out_frame": 212,
+   "out_s": 7.067
+  },
+  {
+   "seg": 3,
+   "src": 38.87,
+   "frames": 53,
+   "out_frame": 351,
+   "out_s": 11.7
+  },
+  {
+   "seg": 4,
+   "src": 48.39,
+   "frames": 182,
+   "out_frame": 404,
+   "out_s": 13.467
+  }
+ ],
+ "offset_s": -0.3262
+}

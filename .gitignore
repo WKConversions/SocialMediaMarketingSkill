@@ -78,3 +78,7 @@ lab/marsops-04/dl/
 lab/**/vo/*.mp3
 lab/**/build/sb/
 lab/**/build/demo/
+lab/**/build/v/
+lab/**/src/*.mov
+lab/**/ref/*.mp4
+lab/**/brand/*.png
