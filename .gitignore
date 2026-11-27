@@ -82,3 +82,6 @@ lab/**/build/v/
 lab/**/src/*.mov
 lab/**/ref/*.mp4
 lab/**/brand/*.png
+lab/**/models/
+*.onnx
+*.npy
