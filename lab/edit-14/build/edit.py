@@ -15,7 +15,7 @@ import cv2, numpy as np
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from seg import seg
 
-E = "/home/user/SocialMediaMarketingSkill/lab/edit-14"; FPS = 30; W, H = 1080, 1920; N = 300
+E = "/home/user/SocialMediaMarketingSkill/lab/edit-14"; FPS = 30; W, H = 1080, 1920; N = 259
 MUSIC = f"{E}/music/trap-electro-vibes.mp3"; M0 = 11.98            # the drop's first kick (12.144 s) lands at 0.164 s
 G = lambda k: 0.164 + 0.32515 * k                                  # 8th-note grid (184.6 BPM double time / 92.3 BPM)
 PERSON = {"7402", "7403", "7405", "7406"}
@@ -24,16 +24,13 @@ TEXT_CLOSEUP = {"7401"}
 # lengths from 3 to 38 frames in no fixed order, bursts of 1, 3, 5 and 2 quick cuts with different clips each time, and
 # the transitions mixed: EF exposure flash; OF1/OF2/OF3 object flash with 1/2/3 white flickers; HC hard cut with a
 # one-frame black/white blink and a click; BU burst cut with a click; HX a dry cut (no click) to breathe.
-SHOTS = [(0, "7400", 0.15, 1.2, "EF"), (8, "7407", 0.10, 1.1, "HC"), (19, "7402", 0.60, 1.1, "OF2"),
-         (35, "7410", 0.50, 1.0, "BU"), (38, "7404", 1.20, 1.0, "HX"),
-         (45, "7408", 0.25, 1.0, "BU"), (48, "7401", 3.20, 1.0, "BU"), (51, "7400", 1.00, 1.0, "BU"),
-         (55, "7406", 2.60, 1.2, "EF"), (77, "7403", 1.00, 1.1, "OF1"), (89, "7408", 0.90, 1.0, "BU"),
-         (93, "7402", 3.10, 1.0, "EF"), (120, "7401", 6.20, 1.0, "BU"), (123, "7407", 0.55, 1.0, "HC"),
-         (133, "7405", 2.20, 1.1, "OF3"), (148, "7410", 2.40, 0.8, "HX"),
-         (166, "7400", 1.60, 1.0, "BU"), (169, "7404", 4.60, 1.0, "BU"), (172, "7408", 1.30, 1.0, "BU"), (175, "7401", 1.50, 1.0, "BU"), (178, "7410", 3.40, 1.0, "BU"),
-         (181, "7406", 4.20, 1.1, "EF"), (194, "7407", 0.95, 1.0, "OF2"), (203, "7402", 2.00, 1.0, "OF1"),
-         (227, "7400", 0.40, 1.0, "BU"), (231, "7410", 1.10, 1.0, "BU"), (234, "7404", 6.00, 1.0, "HX"), (243, "7408", 0.60, 1.0, "BU"),
-         (246, "7403", 3.00, 1.1, "EF"), (262, "7402", 4.00, 0.9, "OF2")]
+SHOTS = [(0, "7400", 0.15, 1.2, "EF"), (9, "7407", 0.10, 1.1, "HC"), (21, "7402", 0.60, 1.1, "OF2"),
+         (41, "7410", 0.50, 1.0, "BU"), (44, "7401", 3.20, 1.0, "BU"), (47, "7408", 0.25, 1.0, "BU"),
+         (51, "7406", 2.50, 1.2, "EF"), (77, "7403", 1.00, 1.1, "OF1"), (91, "7404", 1.20, 1.0, "HX"), (99, "7400", 1.30, 1.0, "BU"),
+         (102, "7405", 1.80, 1.1, "EF"), (124, "7407", 0.75, 1.0, "OF3"), (135, "7402", 3.20, 1.0, "OF2"),
+         (167, "7408", 1.20, 1.0, "BU"), (170, "7410", 2.60, 1.0, "BU"), (175, "7401", 6.40, 1.0, "HC"), (178, "7404", 5.20, 1.0, "HX"),
+         (188, "7406", 4.10, 1.1, "EF"), (206, "7405", 3.40, 1.1, "OF1"), (219, "7403", 2.80, 0.9, "OF2")]
+END = 259                                                           # every clip used exactly twice, then the film ends
 BU_SCALE = [1.0, 1.1, 1.04, 1.13, 1.0, 1.07, 1.12, 1.02, 1.09, 1.0, 1.06, 1.14, 1.03, 1.1]     # irregular punch sizes in bursts
 starts = [s[0] for s in SHOTS]
 shot_of = np.zeros(N, int)
@@ -225,7 +222,7 @@ for t, kind in events:
 pre = f"{OUT}/audio_pre.wav"
 with wave.open(pre, "wb") as w: w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR); w.writeframes((np.clip(bus / max(1e-6, np.abs(bus).max()) * 0.95, -1, 1) * 32767).astype(np.int16).tobytes())
 subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", pre, "-af", "alimiter=limit=0.89:level=false,aresample=48000", "-ar", "48000", f"{OUT}/audio.wav"], check=True)
-name = "flash_edit_DEMO3.mp4" if demo else "flash_edit_FINAL.mp4"
+name = "flash_edit_DEMO4.mp4" if demo else "flash_edit_FINAL_v2.mp4"
 subprocess.run(["ffmpeg", "-v", "error", "-y", "-framerate", str(FPS), "-i", f"{OUT}/frames/f%04d.jpg", "-i", f"{OUT}/audio.wav", "-map", "0:v", "-map", "1:a",
                 "-c:v", "libx264", "-preset", "medium", "-crf", "16", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "256k", "-shortest", "-movflags", "+faststart", f"{OUT}/{name}"], check=True)
 print("done", name, len(events), "flash sounds")
